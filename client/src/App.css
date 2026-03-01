@@ -232,41 +232,25 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 .speech-bubble {
   position: relative;
   background: white;
-  font-family: 'Fredoka One', 'Pacifico', cursive;
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
-  padding: 0.65rem 1.4rem;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  color: #f97316;
+  text-shadow: 2px 2px 0 #fde68a, -1px -1px 0 #ec4899;
+  padding: 0.7rem 1.6rem;
   border-radius: 999px;
   white-space: nowrap;
-  box-shadow: 0 4px 0 #f97316, 0 6px 20px rgba(249,115,22,0.35);
-  /* gradient text */
-  background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  /* white pill behind the gradient text */
-  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.12));
-}
-/* white background pill (separate from the gradient text layer) */
-.speech-bubble::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: white;
-  border-radius: 999px;
-  z-index: -1;
-  box-shadow: 0 4px 0 #f97316, 0 6px 20px rgba(249,115,22,0.3);
+  box-shadow: 0 5px 0 #c2410c, 0 8px 24px rgba(249,115,22,0.4);
 }
 .speech-bubble::before {
   content: '';
   position: absolute;
-  bottom: -12px;
+  bottom: -13px;
   left: 50%;
   transform: translateX(-50%);
-  border: 11px solid transparent;
+  border: 12px solid transparent;
   border-top-color: white;
   border-bottom: 0;
-  z-index: -1;
 }
 
 /* ─────────────────────────────────────────────

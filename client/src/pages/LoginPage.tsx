@@ -34,7 +34,7 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <div className="mascot-area">
-        <div className="speech-bubble">Let's get quizzin'! 🍕</div>
+        <div className="speech-bubble">Let's get quizzing!!! 🍕</div>
         <PizzaMascot
           mood="excited"
           size={180}
