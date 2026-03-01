@@ -34,12 +34,12 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <div className="mascot-area">
+        <div className="speech-bubble">Let's get quizzin'! 🍕</div>
         <PizzaMascot
           mood="excited"
           size={180}
           className={`mascot-${phase}`}
         />
-        <div className="speech-bubble">Let's get quizzin'! 🍕</div>
       </div>
 
       <div className="auth-container" style={{ margin: 0 }}>
