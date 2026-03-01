@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { createContext, useContext, useState, createElement, ReactNode } from 'react';
 import { api } from '../api/client';
 
 export interface User {
@@ -7,7 +7,16 @@ export interface User {
   email: string;
 }
 
-export function useAuth() {
+interface AuthContextValue {
+  user: User | null;
+  login: (email: string, password: string) => Promise<void>;
+  signup: (username: string, email: string, password: string) => Promise<void>;
+  logout: () => void;
+}
+
+const AuthContext = createContext<AuthContextValue | null>(null);
+
+export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {
     const stored = localStorage.getItem('user');
     return stored ? JSON.parse(stored) : null;
@@ -33,5 +42,11 @@ export function useAuth() {
     setUser(null);
   };
 
-  return { user, login, signup, logout };
+  return createElement(AuthContext.Provider, { value: { user, login, signup, logout } }, children);
+}
+
+export function useAuth(): AuthContextValue {
+  const ctx = useContext(AuthContext);
+  if (!ctx) throw new Error('useAuth must be used inside <AuthProvider>');
+  return ctx;
 }

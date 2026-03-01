@@ -202,7 +202,7 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
   const { questionIndex, selectedAnswer, timeTakenSeconds } = req.body;
   const userId = req.userId!;
 
-  if (questionIndex === undefined || !selectedAnswer || timeTakenSeconds === undefined) {
+  if (questionIndex === undefined || selectedAnswer === undefined || selectedAnswer === null || timeTakenSeconds === undefined) {
     res.status(400).json({ error: 'questionIndex, selectedAnswer, and timeTakenSeconds are required' });
     return;
   }
