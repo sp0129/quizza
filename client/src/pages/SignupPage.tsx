@@ -1,6 +1,7 @@
 import { useState, FormEvent } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import PizzaMascot from '../components/PizzaMascot';
 
 export default function SignupPage() {
   const { signup } = useAuth();
@@ -26,28 +27,34 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="auth-container">
-      <h1>Quizza</h1>
-      <h2>Create account</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text" placeholder="Username" value={username}
-          onChange={e => setUsername(e.target.value)} required
-        />
-        <input
-          type="email" placeholder="Email" value={email}
-          onChange={e => setEmail(e.target.value)} required
-        />
-        <input
-          type="password" placeholder="Password (min 8 chars)" value={password}
-          onChange={e => setPassword(e.target.value)} minLength={8} required
-        />
-        {error && <p className="error">{error}</p>}
-        <button type="submit" disabled={loading}>
-          {loading ? 'Creating account...' : 'Sign up'}
-        </button>
-      </form>
-      <p>Already have an account? <Link to="/login">Log in</Link></p>
+    <div className="auth-page">
+      <div className="mascot-area">
+        <PizzaMascot mood="happy" size={140} className="mascot-float" />
+      </div>
+
+      <div className="auth-container" style={{ margin: 0 }}>
+        <h1>Quizza</h1>
+        <h2>Create account</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text" placeholder="Username" value={username}
+            onChange={e => setUsername(e.target.value)} required
+          />
+          <input
+            type="email" placeholder="Email" value={email}
+            onChange={e => setEmail(e.target.value)} required
+          />
+          <input
+            type="password" placeholder="Password (min 8 chars)" value={password}
+            onChange={e => setPassword(e.target.value)} minLength={8} required
+          />
+          {error && <p className="error">{error}</p>}
+          <button type="submit" disabled={loading}>
+            {loading ? 'Creating account...' : 'Sign up'}
+          </button>
+        </form>
+        <p>Already have an account? <Link to="/login">Log in</Link></p>
+      </div>
     </div>
   );
 }

@@ -149,3 +149,146 @@ button:hover:not(:disabled) { opacity: 0.85; }
 button:disabled { opacity: 0.5; cursor: not-allowed; }
 .error { color: #f87171; font-size: 0.9rem; }
 .loading { text-align: center; margin-top: 4rem; color: #64748b; }
+
+/* ─────────────────────────────────────────────
+   Mascot animations
+───────────────────────────────────────────── */
+@keyframes pizza-entrance {
+  0%   { transform: translateY(-120px) rotate(15deg); opacity: 0; }
+  65%  { transform: translateY(12px) rotate(-4deg);  opacity: 1; }
+  82%  { transform: translateY(-6px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes pizza-bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  30%      { transform: translateY(-18px) rotate(-4deg); }
+  60%      { transform: translateY(-8px)  rotate(3deg); }
+}
+
+@keyframes pizza-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes arm-wave-left {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-28deg); }
+}
+
+@keyframes arm-wave-right {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(28deg); }
+}
+
+/* Arms – transform-origin relative to the path fill box */
+.pizza-arm-left,
+.pizza-arm-right { transform-box: fill-box; }
+.pizza-arm-left  { transform-origin: top right; }
+.pizza-arm-right { transform-origin: top left; }
+
+/* Arm waves fire only when SVG carries .mascot-excited */
+.mascot-excited .pizza-arm-left  {
+  animation: arm-wave-left  0.5s ease-in-out infinite alternate;
+}
+.mascot-excited .pizza-arm-right {
+  animation: arm-wave-right 0.5s ease-in-out infinite alternate;
+}
+
+/* Animation combos applied to the mascot wrapper */
+.mascot-entrance {
+  animation: pizza-entrance 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.mascot-excited {
+  animation: pizza-bounce 1.2s ease-in-out infinite;
+}
+.mascot-float {
+  animation: pizza-float 3s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Auth page layout
+───────────────────────────────────────────── */
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.mascot-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ─────────────────────────────────────────────
+   Speech bubble
+───────────────────────────────────────────── */
+.speech-bubble {
+  position: relative;
+  background: white;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top-color: white;
+  border-bottom: 0;
+}
+
+/* ─────────────────────────────────────────────
+   Dashboard gradient background
+───────────────────────────────────────────── */
+.gradient-page {
+  min-height: 100vh;
+  transition: background 0.6s ease;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Category preview strip below dropdown */
+.category-preview {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.4s ease;
+}
+
+/* ─────────────────────────────────────────────
+   Game page full-screen gradient
+───────────────────────────────────────────── */
+.game-gradient-wrapper {
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+/* Tiny corner mascot */
+.mascot-corner {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: 0.85;
+  pointer-events: none;
+  animation: pizza-float 3s ease-in-out infinite;
+}

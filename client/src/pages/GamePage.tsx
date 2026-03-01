@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
+import PizzaMascot from '../components/PizzaMascot';
+import { getCategoryTheme } from '../utils/categoryThemes';
 
 interface Question {
   question: string;
@@ -26,6 +28,10 @@ export default function GamePage() {
   const navigate = useNavigate();
   const mode = params.get('mode') ?? 'async';
   const questionSetId = params.get('qsid');
+  const catName = params.get('cat') ?? '';
+  const catId = params.get('catId') ? parseInt(params.get('catId')!) : undefined;
+
+  const theme = getCategoryTheme(catName, catId);
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,7 +87,7 @@ export default function GamePage() {
     return () => ws.close();
   }, [mode, gameId]);
 
-  // Countdown timer
+  // Countdown timer — updater must be pure, so no side effects inside it
   useEffect(() => {
     if (phase !== 'playing') { if (timerRef.current) clearInterval(timerRef.current); return; }
     questionStartRef.current = Date.now();
@@ -90,8 +96,6 @@ export default function GamePage() {
       setTimeLeft(t => {
         if (t <= 1) {
           clearInterval(timerRef.current!);
-          // Auto-submit timeout (0 points)
-          submitAnswer('__timeout__', QUESTION_TIME);
           return 0;
         }
         return t - 1;
@@ -99,6 +103,14 @@ export default function GamePage() {
     }, 1000);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [phase, currentIndex]);
+
+  // Auto-submit when the clock hits 0 — runs outside the state updater
+  useEffect(() => {
+    if (timeLeft === 0 && phase === 'playing') {
+      submitAnswer('__timeout__', QUESTION_TIME);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timeLeft]);
 
   const submitAnswer = useCallback(async (answer: string, forcedTime?: number) => {
     if (phase !== 'playing') return;
@@ -123,7 +135,6 @@ export default function GamePage() {
         if (mode === 'async') setPhase('finished');
         else setWaitingForOpponent(true);
       } else if (mode === 'async') {
-        // Auto-advance after 1.5s in async mode
         setTimeout(() => {
           setCurrentIndex(i => i + 1);
           setPhase('playing');
@@ -138,26 +149,34 @@ export default function GamePage() {
     }
   }, [phase, currentIndex, gameId, mode, score]);
 
-  if (phase === 'loading') return <div className="loading">Loading questions...</div>;
+  if (phase === 'loading') {
+    return (
+      <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
+        <div className="loading">Loading questions...</div>
+      </div>
+    );
+  }
 
   if (phase === 'finished') {
     return (
-      <div className="game-over">
-        <h2>Game over</h2>
-        <p className="final-score">Your score: <strong>{finalScores?.mine ?? score}</strong></p>
-        {finalScores?.opponent !== undefined && (
-          <p>Opponent score: <strong>{finalScores.opponent}</strong></p>
-        )}
-        {finalScores?.opponent !== undefined && (
-          <p className="result">
-            {(finalScores.mine ?? 0) > finalScores.opponent ? 'You win!' :
-             (finalScores.mine ?? 0) < finalScores.opponent ? 'You lose.' : "It's a tie!"}
-          </p>
-        )}
-        {mode === 'async' && !finalScores?.opponent && (
-          <p className="waiting-msg">Waiting for your opponent to play (up to 24h).</p>
-        )}
-        <button onClick={() => navigate('/')}>Back to dashboard</button>
+      <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
+        <div className="game-over">
+          <h2>Game over</h2>
+          <p className="final-score">Your score: <strong>{finalScores?.mine ?? score}</strong></p>
+          {finalScores?.opponent !== undefined && (
+            <p>Opponent score: <strong>{finalScores.opponent}</strong></p>
+          )}
+          {finalScores?.opponent !== undefined && (
+            <p className="result">
+              {(finalScores.mine ?? 0) > finalScores.opponent ? 'You win!' :
+               (finalScores.mine ?? 0) < finalScores.opponent ? 'You lose.' : "It's a tie!"}
+            </p>
+          )}
+          {mode === 'async' && !finalScores?.opponent && (
+            <p className="waiting-msg">Waiting for your opponent to play (up to 24h).</p>
+          )}
+          <button onClick={() => navigate('/')}>Back to dashboard</button>
+        </div>
       </div>
     );
   }
@@ -166,53 +185,60 @@ export default function GamePage() {
   if (!question) return null;
 
   return (
-    <div className="game-screen">
-      <div className="game-header">
-        <span>Question {currentIndex + 1} of {questions.length}</span>
-        <span className={`timer ${timeLeft <= 10 ? 'urgent' : ''}`}>{timeLeft}s</span>
-        <span>Score: {score}</span>
-      </div>
-
-      <div className="question-card">
-        <span className="difficulty">{question.difficulty}</span>
-        <p className="question-text">{question.question}</p>
-      </div>
-
-      <div className="answers">
-        {question.all_answers.map((answer, i) => {
-          let className = 'answer-btn';
-          if (selectedAnswer) {
-            if (answer === lastResult?.correctAnswer) className += ' correct';
-            else if (answer === selectedAnswer && !lastResult?.isCorrect) className += ' wrong';
-          }
-          return (
-            <button
-              key={i}
-              className={className}
-              onClick={() => submitAnswer(answer)}
-              disabled={phase !== 'playing'}
-            >
-              {answer}
-            </button>
-          );
-        })}
-      </div>
-
-      {phase === 'answered' && lastResult && (
-        <div className={`feedback ${lastResult.isCorrect ? 'correct' : 'wrong'}`}>
-          {lastResult.isCorrect ? `+${lastResult.points} pts` : `Wrong — 0 pts`}
-          {!lastResult.isCorrect && lastResult.correctAnswer && (
-            <span> (correct: {lastResult.correctAnswer})</span>
-          )}
+    <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
+      <div className="game-screen" style={{ maxWidth: 600, margin: '0 auto', padding: '2rem 1rem' }}>
+        <div className="game-header">
+          <span>
+            {theme.emoji && <span style={{ marginRight: '0.4rem' }}>{theme.emoji}</span>}
+            Question {currentIndex + 1} of {questions.length}
+          </span>
+          <span className={`timer ${timeLeft <= 10 ? 'urgent' : ''}`}>{timeLeft}s</span>
+          <span>Score: {score}</span>
         </div>
-      )}
 
-      {waitingForOpponent && (
-        <p className="waiting-msg">
-          Waiting for opponent...
-          {opponentAnswered && ' (they answered)'}
-        </p>
-      )}
+        <div className="question-card">
+          <span className="difficulty">{question.difficulty}</span>
+          <p className="question-text">{question.question}</p>
+        </div>
+
+        <div className="answers">
+          {question.all_answers.map((answer, i) => {
+            let className = 'answer-btn';
+            if (selectedAnswer) {
+              if (answer === lastResult?.correctAnswer) className += ' correct';
+              else if (answer === selectedAnswer && !lastResult?.isCorrect) className += ' wrong';
+            }
+            return (
+              <button
+                key={i}
+                className={className}
+                onClick={() => submitAnswer(answer)}
+                disabled={phase !== 'playing'}
+              >
+                {answer}
+              </button>
+            );
+          })}
+        </div>
+
+        {phase === 'answered' && lastResult && (
+          <div className={`feedback ${lastResult.isCorrect ? 'correct' : 'wrong'}`}>
+            {lastResult.isCorrect ? `+${lastResult.points} pts` : `Wrong — 0 pts`}
+            {!lastResult.isCorrect && lastResult.correctAnswer && (
+              <span> (correct: {lastResult.correctAnswer})</span>
+            )}
+          </div>
+        )}
+
+        {waitingForOpponent && (
+          <p className="waiting-msg">
+            Waiting for opponent...
+            {opponentAnswered && ' (they answered)'}
+          </p>
+        )}
+      </div>
+
+      <PizzaMascot mood="idle" size={36} className="mascot-corner" />
     </div>
   );
 }

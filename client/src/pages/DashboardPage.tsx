@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
+import PizzaMascot from '../components/PizzaMascot';
+import { getCategoryTheme } from '../utils/categoryThemes';
 
 interface Category {
   id: number;
@@ -29,6 +31,10 @@ export default function DashboardPage() {
     api.get<PendingGame[]>('/games/pending').then(setPending).catch(console.error);
   }, []);
 
+  const theme = selectedCategory
+    ? getCategoryTheme(selectedCategory.name, selectedCategory.id)
+    : { gradient: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', accent: '#6366f1', emoji: '' };
+
   const startRandomMatch = async () => {
     if (!selectedCategory) return;
     setMatchmaking(true);
@@ -38,32 +44,44 @@ export default function DashboardPage() {
         '/games/create-random',
         { category: selectedCategory.name, categoryId: selectedCategory.id }
       );
-      navigate(`/game/${result.gameId}?mode=${result.mode}&qsid=${result.questionSetId}`);
+      navigate(
+        `/game/${result.gameId}?mode=${result.mode}&qsid=${result.questionSetId}&cat=${encodeURIComponent(selectedCategory.name)}&catId=${selectedCategory.id}`
+      );
     } catch (err: any) {
       setError(err.message);
       setMatchmaking(false);
     }
   };
 
-  const joinGame = async (gameId: string) => {
+  const joinGame = async (gameId: string, categoryName: string) => {
     try {
       const result = await api.post<{ id: string; question_set_id: string }>(
         `/games/${gameId}/join`,
         {}
       );
-      navigate(`/game/${result.id}?mode=async&qsid=${result.question_set_id}`);
+      navigate(
+        `/game/${result.id}?mode=async&qsid=${result.question_set_id}&cat=${encodeURIComponent(categoryName)}`
+      );
     } catch (err: any) {
       setError(err.message);
     }
   };
 
   return (
-    <div className="dashboard">
-      <header>
-        <h1>Quizza</h1>
-        <div className="user-info">
-          <span>{user?.username}</span>
-          <button onClick={logout}>Log out</button>
+    <div
+      className="gradient-page"
+      style={{ background: theme.gradient }}
+    >
+      <header className="dashboard" style={{ marginBottom: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <PizzaMascot mood="idle" size={48} className="mascot-float" />
+            <h1 style={{ color: '#6366f1', fontSize: '1.75rem' }}>Quizza</h1>
+          </div>
+          <div className="user-info">
+            <span>{user?.username}</span>
+            <button onClick={logout}>Log out</button>
+          </div>
         </div>
       </header>
 
@@ -81,7 +99,18 @@ export default function DashboardPage() {
             <option key={c.id} value={c.id}>{c.name}</option>
           ))}
         </select>
-        <button onClick={startRandomMatch} disabled={!selectedCategory || matchmaking}>
+
+        {selectedCategory && (
+          <div
+            className="category-preview"
+            style={{ background: theme.accent + '22', color: theme.accent }}
+          >
+            <span style={{ fontSize: '1.4rem' }}>{theme.emoji}</span>
+            <span>{selectedCategory.name}</span>
+          </div>
+        )}
+
+        <button onClick={startRandomMatch} disabled={!selectedCategory || matchmaking} style={{ marginTop: '0.75rem' }}>
           {matchmaking ? 'Finding opponent (up to 30s)...' : 'Play'}
         </button>
         {error && <p className="error">{error}</p>}
@@ -96,7 +125,7 @@ export default function DashboardPage() {
               <span className="expires">
                 Expires {new Date(g.expires_at).toLocaleString()}
               </span>
-              <button onClick={() => joinGame(g.id)}>Accept</button>
+              <button onClick={() => joinGame(g.id, g.category)}>Accept</button>
             </div>
           ))}
         </section>
