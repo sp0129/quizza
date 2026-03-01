@@ -283,12 +283,46 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
   transition: background 0.4s ease;
 }
 
-/* Tiny corner mascot */
-.mascot-corner {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  opacity: 0.85;
-  pointer-events: none;
-  animation: pizza-float 3s ease-in-out infinite;
+/* ─────────────────────────────────────────────
+   In-game mascot reaction area
+───────────────────────────────────────────── */
+@keyframes mascot-think {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%      { transform: translateY(-6px) rotate(2deg); }
+}
+
+@keyframes mascot-celebrate {
+  0%   { transform: translateY(0)     rotate(0deg); }
+  18%  { transform: translateY(-36px) rotate(-10deg); }
+  36%  { transform: translateY(-24px) rotate(10deg); }
+  52%  { transform: translateY(-30px) rotate(-6deg); }
+  68%  { transform: translateY(-16px) rotate(6deg); }
+  84%  { transform: translateY(-8px)  rotate(-2deg); }
+  100% { transform: translateY(0)     rotate(0deg); }
+}
+
+@keyframes mascot-wrong-shake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  15%      { transform: translateX(-10px) rotate(-6deg); }
+  35%      { transform: translateX(10px)  rotate(6deg); }
+  55%      { transform: translateX(-7px)  rotate(-4deg); }
+  75%      { transform: translateX(7px)   rotate(4deg); }
+  90%      { transform: translateX(-3px)  rotate(-1deg); }
+}
+
+.mascot-thinking {
+  animation: mascot-think 2.4s ease-in-out infinite;
+}
+.mascot-celebrating {
+  animation: mascot-celebrate 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.mascot-wrong {
+  animation: mascot-wrong-shake 0.7s ease-in-out forwards;
+}
+
+.mascot-reaction-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
 }

@@ -19,6 +19,7 @@ interface GameResult {
 }
 
 type Phase = 'loading' | 'playing' | 'answered' | 'finished';
+type MascotMood = 'thinking' | 'celebrating' | 'wrong';
 
 const QUESTION_TIME = 30;
 
@@ -43,6 +44,15 @@ export default function GamePage() {
   const [opponentAnswered, setOpponentAnswered] = useState(false);
   const [waitingForOpponent, setWaitingForOpponent] = useState(false);
   const [finalScores, setFinalScores] = useState<{ mine: number; opponent?: number } | null>(null);
+
+  // Mascot reaction state — key increments to re-trigger CSS animation
+  const [mascotMood, setMascotMood] = useState<MascotMood>('thinking');
+  const [mascotKey, setMascotKey] = useState(0);
+
+  const triggerMascot = (mood: MascotMood) => {
+    setMascotMood(mood);
+    setMascotKey(k => k + 1);
+  };
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const questionStartRef = useRef<number>(Date.now());
@@ -76,6 +86,8 @@ export default function GamePage() {
         setWaitingForOpponent(false);
         setTimeLeft(QUESTION_TIME);
         questionStartRef.current = Date.now();
+        setMascotMood('thinking');
+        setMascotKey(k => k + 1);
       }
       if (msg.type === 'opponent_finished') {
         setFinalScores(prev => ({ mine: prev?.mine ?? 0, opponent: msg.score }));
@@ -87,24 +99,21 @@ export default function GamePage() {
     return () => ws.close();
   }, [mode, gameId]);
 
-  // Countdown timer — updater must be pure, so no side effects inside it
+  // Countdown timer — updater must be pure, no side effects inside it
   useEffect(() => {
     if (phase !== 'playing') { if (timerRef.current) clearInterval(timerRef.current); return; }
     questionStartRef.current = Date.now();
     setTimeLeft(QUESTION_TIME);
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
-        if (t <= 1) {
-          clearInterval(timerRef.current!);
-          return 0;
-        }
+        if (t <= 1) { clearInterval(timerRef.current!); return 0; }
         return t - 1;
       });
     }, 1000);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [phase, currentIndex]);
 
-  // Auto-submit when the clock hits 0 — runs outside the state updater
+  // Auto-submit when clock hits 0
   useEffect(() => {
     if (timeLeft === 0 && phase === 'playing') {
       submitAnswer('__timeout__', QUESTION_TIME);
@@ -130,17 +139,23 @@ export default function GamePage() {
       setLastResult(result);
       if (result.points) setScore(s => s + result.points);
 
+      // Mascot reacts immediately
+      triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
+
       if (result.gameComplete) {
         setFinalScores(prev => ({ ...prev, mine: result.totalScore ?? score }));
         if (mode === 'async') setPhase('finished');
         else setWaitingForOpponent(true);
       } else if (mode === 'async') {
+        // Slightly longer delay so the player can enjoy the reaction
         setTimeout(() => {
           setCurrentIndex(i => i + 1);
           setPhase('playing');
           setSelectedAnswer(null);
           setLastResult(null);
-        }, 1500);
+          setMascotMood('thinking');
+          setMascotKey(k => k + 1);
+        }, 1800);
       } else {
         setWaitingForOpponent(true);
       }
@@ -201,17 +216,27 @@ export default function GamePage() {
           <p className="question-text">{question.question}</p>
         </div>
 
+        {/* Mascot below the question, reacts to answers */}
+        <div className="mascot-reaction-area">
+          <PizzaMascot
+            key={mascotKey}
+            mood={mascotMood}
+            size={90}
+            className={`mascot-${mascotMood}`}
+          />
+        </div>
+
         <div className="answers">
           {question.all_answers.map((answer, i) => {
-            let className = 'answer-btn';
+            let cls = 'answer-btn';
             if (selectedAnswer) {
-              if (answer === lastResult?.correctAnswer) className += ' correct';
-              else if (answer === selectedAnswer && !lastResult?.isCorrect) className += ' wrong';
+              if (answer === lastResult?.correctAnswer) cls += ' correct';
+              else if (answer === selectedAnswer && !lastResult?.isCorrect) cls += ' wrong';
             }
             return (
               <button
                 key={i}
-                className={className}
+                className={cls}
                 onClick={() => submitAnswer(answer)}
                 disabled={phase !== 'playing'}
               >
@@ -221,24 +246,12 @@ export default function GamePage() {
           })}
         </div>
 
-        {phase === 'answered' && lastResult && (
-          <div className={`feedback ${lastResult.isCorrect ? 'correct' : 'wrong'}`}>
-            {lastResult.isCorrect ? `+${lastResult.points} pts` : `Wrong — 0 pts`}
-            {!lastResult.isCorrect && lastResult.correctAnswer && (
-              <span> (correct: {lastResult.correctAnswer})</span>
-            )}
-          </div>
-        )}
-
         {waitingForOpponent && (
           <p className="waiting-msg">
-            Waiting for opponent...
-            {opponentAnswered && ' (they answered)'}
+            Waiting for opponent...{opponentAnswered && ' (they answered)'}
           </p>
         )}
       </div>
-
-      <PizzaMascot mood="idle" size={36} className="mascot-corner" />
     </div>
   );
 }
