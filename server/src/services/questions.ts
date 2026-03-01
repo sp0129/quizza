@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import pool from '../db';
 
@@ -14,6 +16,24 @@ interface OpenTDBQuestion {
   correct_answer: string;
   incorrect_answers: string[];
   difficulty: string;
+}
+
+interface LocalQuestion {
+  question: string;
+  correct_answer: string;
+  incorrect_answers: string[];
+  difficulty: string;
+}
+
+interface LocalQuestionBank {
+  category: string;
+  category_id: number;
+  questions: LocalQuestion[];
+}
+
+export interface LocalData {
+  categories: { id: number; name: string }[];
+  question_banks: LocalQuestionBank[];
 }
 
 const DIFFICULTY_ORDER = { easy: 0, medium: 1, hard: 2 };
@@ -35,7 +55,52 @@ function shuffleArray<T>(arr: T[], seed?: number): T[] {
   return a;
 }
 
+export function loadLocalData(): LocalData {
+  const filePath = path.join(__dirname, '../../data/questions.json');
+  const raw = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(raw) as LocalData;
+}
+
+async function storeLocalQuestionSet(category: string, categoryId: number): Promise<string> {
+  const data = loadLocalData();
+  const bank = data.question_banks.find(b => b.category_id === categoryId);
+
+  if (!bank || !bank.questions.length) {
+    throw new Error(`No local questions found for category "${category}" (id ${categoryId})`);
+  }
+
+  const seed = Date.now();
+  const shuffled = shuffleArray(bank.questions, seed).slice(0, 10);
+
+  const questions: Question[] = shuffled
+    .sort((a, b) => {
+      const da = DIFFICULTY_ORDER[a.difficulty as keyof typeof DIFFICULTY_ORDER] ?? 1;
+      const db = DIFFICULTY_ORDER[b.difficulty as keyof typeof DIFFICULTY_ORDER] ?? 1;
+      return da - db;
+    })
+    .map(q => ({
+      question: q.question,
+      correct_answer: q.correct_answer,
+      incorrect_answers: q.incorrect_answers,
+      difficulty: q.difficulty as Question['difficulty'],
+      all_answers: shuffleArray([q.correct_answer, ...q.incorrect_answers], seed),
+    }));
+
+  const id = uuidv4();
+  await pool.query(
+    `INSERT INTO question_sets (id, category, questions, source) VALUES ($1, $2, $3, $4)`,
+    [id, category, JSON.stringify(questions), 'local']
+  );
+
+  return id;
+}
+
 export async function fetchAndStoreQuestionSet(category: string, categoryId?: number): Promise<string> {
+  // Local categories use IDs >= 2000
+  if (categoryId !== undefined && categoryId >= 2000) {
+    return storeLocalQuestionSet(category, categoryId);
+  }
+
   // Fetch from Open Trivia DB
   const url = categoryId
     ? `https://opentdb.com/api.php?amount=15&category=${categoryId}&type=multiple`

@@ -10,8 +10,13 @@ const DEFAULT_THEME: CategoryTheme = {
   emoji: '🧠',
 };
 
-// Map by Open Trivia DB category ID
+// Map by Open Trivia DB category ID (and local custom IDs ≥ 2000)
 const ID_MAP: Record<number, CategoryTheme> = {
+  // Custom local categories
+  2001: { gradient: 'linear-gradient(135deg, #064e3b 0%, #022c22 100%)', accent: '#34d399', emoji: '🧪' }, // Chemistry
+  2002: { gradient: 'linear-gradient(135deg, #14532d 0%, #052e16 100%)', accent: '#86efac', emoji: '🧬' }, // Biology
+  2003: { gradient: 'linear-gradient(135deg, #2e1065 0%, #1a0936 100%)', accent: '#c084fc', emoji: '⚡' }, // Harry Potter
+  2004: { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#dc2626', emoji: '🐉' }, // Game of Thrones
   9:  { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)', accent: '#38bdf8', emoji: '🌍' }, // General Knowledge
   10: { gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', accent: '#a78bfa', emoji: '📚' }, // Books
   11: { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#fb923c', emoji: '🎬' }, // Film
@@ -40,6 +45,10 @@ const ID_MAP: Record<number, CategoryTheme> = {
 
 // Keyword fallbacks for custom / unmapped categories
 const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
+  ['harry potter', { gradient: 'linear-gradient(135deg, #2e1065 0%, #1a0936 100%)', accent: '#c084fc', emoji: '⚡' }],
+  ['game of thrones', { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#dc2626', emoji: '🐉' }],
+  ['chemistry',   { gradient: 'linear-gradient(135deg, #064e3b 0%, #022c22 100%)', accent: '#34d399', emoji: '🧪' }],
+  ['biology',     { gradient: 'linear-gradient(135deg, #14532d 0%, #052e16 100%)', accent: '#86efac', emoji: '🧬' }],
   ['formula 1',   { gradient: 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)', accent: '#f87171', emoji: '🏎️' }],
   ['formula one', { gradient: 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)', accent: '#f87171', emoji: '🏎️' }],
   ['f1',          { gradient: 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)', accent: '#f87171', emoji: '🏎️' }],
