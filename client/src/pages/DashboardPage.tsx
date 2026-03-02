@@ -5,6 +5,7 @@ import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
 import FloatingIcons from '../components/FloatingIcons';
 import { getCategoryTheme } from '../utils/categoryThemes';
+import { playGibberish } from '../utils/sounds';
 
 interface Category {
   id: number;
@@ -32,6 +33,9 @@ export default function DashboardPage() {
   useEffect(() => {
     api.get<Category[]>('/categories').then(setCategories).catch(console.error);
     api.get<PendingGame[]>('/games/pending').then(setPending).catch(console.error);
+    // Play welcome gibberish after a short delay so the audio context is warm
+    const t = setTimeout(() => playGibberish('excited'), 700);
+    return () => clearTimeout(t);
   }, []);
 
   const theme = selectedCategory
@@ -89,7 +93,10 @@ export default function DashboardPage() {
         </header>
 
         <section className="play-section">
-          <h2>Start a game</h2>
+          <div className="mascot-prompt">
+            <div className="speech-bubble">Pick a category! 🍕</div>
+            <PizzaMascot mood="thinking" size={90} className="mascot-float" />
+          </div>
           <select
             value={selectedCategory?.id ?? ''}
             onChange={e => {

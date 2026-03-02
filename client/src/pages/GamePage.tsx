@@ -4,6 +4,7 @@ import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
 import FloatingIcons from '../components/FloatingIcons';
 import { getCategoryTheme } from '../utils/categoryThemes';
+import { playGibberish } from '../utils/sounds';
 
 interface Question {
   question: string;
@@ -122,6 +123,17 @@ export default function GamePage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft]);
 
+  // Play gibberish when game ends
+  useEffect(() => {
+    if (phase !== 'finished') return;
+    const opponent = finalScores?.opponent;
+    const mine = finalScores?.mine ?? 0;
+    const isWin = opponent !== undefined && mine > opponent;
+    const isLose = opponent !== undefined && mine < opponent;
+    setTimeout(() => playGibberish(isLose ? 'sad' : 'happy'), 400);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
+
   const submitAnswer = useCallback(async (answer: string, forcedTime?: number) => {
     if (phase !== 'playing') return;
     if (timerRef.current) clearInterval(timerRef.current);
@@ -175,22 +187,37 @@ export default function GamePage() {
   }
 
   if (phase === 'finished') {
+    const opponent = finalScores?.opponent;
+    const mine = finalScores?.mine ?? score;
+    const gameOutcome = opponent !== undefined
+      ? mine > opponent ? 'win' : mine < opponent ? 'lose' : 'tie'
+      : 'solo';
+
+    const outcomeConfig: Record<string, { text: string; mood: 'celebrating' | 'wrong' | 'happy' }> = {
+      win:  { text: 'You Rock!!! 🤘',  mood: 'celebrating' },
+      lose: { text: 'You Suck 😝',      mood: 'wrong'       },
+      tie:  { text: "It's a Tie! 🤝",  mood: 'happy'       },
+      solo: { text: 'Well played! 🍕',  mood: 'celebrating' },
+    };
+    const { text: outcomeText, mood: outcomeMood } = outcomeConfig[gameOutcome];
+
     return (
       <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
         <FloatingIcons emoji={theme.emoji} />
         <div className="game-over">
-          <h2>Game over</h2>
-          <p className="final-score">Your score: <strong>{finalScores?.mine ?? score}</strong></p>
-          {finalScores?.opponent !== undefined && (
-            <p>Opponent score: <strong>{finalScores.opponent}</strong></p>
+          <div className="game-over-mascot">
+            <div className="speech-bubble">{outcomeText}</div>
+            <PizzaMascot
+              mood={outcomeMood}
+              size={130}
+              className={outcomeMood === 'celebrating' ? 'mascot-celebrating' : outcomeMood === 'wrong' ? 'mascot-wrong' : 'mascot-float'}
+            />
+          </div>
+          <p className="final-score">Your score: <strong>{mine}</strong></p>
+          {opponent !== undefined && (
+            <p>Opponent score: <strong>{opponent}</strong></p>
           )}
-          {finalScores?.opponent !== undefined && (
-            <p className="result">
-              {(finalScores.mine ?? 0) > finalScores.opponent ? 'You win!' :
-               (finalScores.mine ?? 0) < finalScores.opponent ? 'You lose.' : "It's a tie!"}
-            </p>
-          )}
-          {mode === 'async' && !finalScores?.opponent && (
+          {mode === 'async' && opponent === undefined && (
             <p className="waiting-msg">Waiting for your opponent to play (up to 24h).</p>
           )}
           <button onClick={() => navigate('/')}>Back to dashboard</button>

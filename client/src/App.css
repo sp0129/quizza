@@ -328,6 +328,25 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 .game-gradient-wrapper .game-screen { position: relative; z-index: 1; }
 
 /* ─────────────────────────────────────────────
+   Dashboard "Pick a category!" mascot prompt
+───────────────────────────────────────────── */
+.mascot-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Game-over mascot + speech bubble */
+.game-over-mascot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ─────────────────────────────────────────────
    In-game mascot reaction area
 ───────────────────────────────────────────── */
 @keyframes mascot-think {
