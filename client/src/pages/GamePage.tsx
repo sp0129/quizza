@@ -128,7 +128,6 @@ export default function GamePage() {
     if (phase !== 'finished') return;
     const opponent = finalScores?.opponent;
     const mine = finalScores?.mine ?? 0;
-    const isWin = opponent !== undefined && mine > opponent;
     const isLose = opponent !== undefined && mine < opponent;
     setTimeout(() => playGibberish(isLose ? 'sad' : 'happy'), 400);
   // eslint-disable-next-line react-hooks/exhaustive-deps
