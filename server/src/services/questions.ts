@@ -83,7 +83,7 @@ async function storeLocalQuestionSet(category: string, categoryId: number): Prom
       correct_answer: q.correct_answer,
       incorrect_answers: q.incorrect_answers,
       difficulty: q.difficulty as Question['difficulty'],
-      all_answers: shuffleArray([q.correct_answer, ...q.incorrect_answers], seed),
+      all_answers: shuffleArray([q.correct_answer, ...q.incorrect_answers]),
     }));
 
   const id = uuidv4();
@@ -128,8 +128,7 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
     })
     .map((q) => {
       const allAnswers = shuffleArray(
-        [q.correct_answer, ...q.incorrect_answers].map(decode),
-        seed
+        [q.correct_answer, ...q.incorrect_answers].map(decode)
       );
       return {
         question: decode(q.question),
