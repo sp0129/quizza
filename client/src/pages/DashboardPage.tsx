@@ -19,7 +19,7 @@ interface PendingGame {
   expires_at: string;
 }
 
-const DEFAULT_GRADIENT = 'linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%)';
+const DEFAULT_GRADIENT = 'linear-gradient(135deg, #9ca1b2 0%, #abaab2 100%)';
 
 export default function DashboardPage() {
   const { user, logout } = useAuth();
@@ -40,7 +40,7 @@ export default function DashboardPage() {
 
   const theme = selectedCategory
     ? getCategoryTheme(selectedCategory.name, selectedCategory.id)
-    : { gradient: DEFAULT_GRADIENT, accent: '#6366f1', emoji: '🧠' };
+    : { gradient: DEFAULT_GRADIENT, accent: '#4547a8', emoji: '🧠' };
 
   const startRandomMatch = async () => {
     if (!selectedCategory) return;
