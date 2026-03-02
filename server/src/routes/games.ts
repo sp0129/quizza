@@ -8,7 +8,7 @@ import { syncGameManager } from '../services/syncGame';
 
 const router = Router();
 const ASYNC_EXPIRY_HOURS = 24;
-const MATCHMAKING_TIMEOUT_MS = 30_000;
+const MATCHMAKING_TIMEOUT_MS = 15_000;
 
 // POST /games/create-random
 router.post('/create-random', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {

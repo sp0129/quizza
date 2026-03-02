@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
@@ -28,6 +28,8 @@ export default function DashboardPage() {
   const [pending, setPending] = useState<PendingGame[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [matchmaking, setMatchmaking] = useState(false);
+  const [countdown, setCountdown] = useState(15);
+  const countdownRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -42,19 +44,32 @@ export default function DashboardPage() {
     ? getCategoryTheme(selectedCategory.name, selectedCategory.id)
     : { gradient: DEFAULT_GRADIENT, accent: '#4547a8', emoji: '🧠' };
 
+  const stopCountdown = () => {
+    if (countdownRef.current) { clearInterval(countdownRef.current); countdownRef.current = null; }
+  };
+
   const startRandomMatch = async () => {
     if (!selectedCategory) return;
     setMatchmaking(true);
+    setCountdown(15);
     setError('');
+
+    // Tick down every second
+    countdownRef.current = setInterval(() => {
+      setCountdown(c => (c <= 1 ? (stopCountdown(), 0) : c - 1));
+    }, 1000);
+
     try {
       const result = await api.post<{ gameId: string; mode: string; questionSetId: string }>(
         '/games/create-random',
         { category: selectedCategory.name, categoryId: selectedCategory.id }
       );
+      stopCountdown();
       navigate(
         `/game/${result.gameId}?mode=${result.mode}&qsid=${result.questionSetId}&cat=${encodeURIComponent(selectedCategory.name)}&catId=${selectedCategory.id}`
       );
     } catch (err: any) {
+      stopCountdown();
       setError(err.message);
       setMatchmaking(false);
     }
@@ -121,7 +136,7 @@ export default function DashboardPage() {
           )}
 
           <button onClick={startRandomMatch} disabled={!selectedCategory || matchmaking} style={{ marginTop: '0.75rem' }}>
-            {matchmaking ? 'Finding opponent (up to 30s)...' : 'Play'}
+            {matchmaking ? `Finding opponent... ${countdown}s` : 'Play'}
           </button>
           {error && <p className="error">{error}</p>}
         </section>
