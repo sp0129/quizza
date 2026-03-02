@@ -5,7 +5,7 @@ export interface CategoryTheme {
 }
 
 const DEFAULT_THEME: CategoryTheme = {
-  gradient: 'linear-gradient(135deg, #312e81 0%, #1e1b4b 100%)',
+  gradient: 'linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%)',
   accent: '#6366f1',
   emoji: '🧠',
 };
@@ -13,71 +13,71 @@ const DEFAULT_THEME: CategoryTheme = {
 // Map by Open Trivia DB category ID (and local custom IDs ≥ 2000)
 const ID_MAP: Record<number, CategoryTheme> = {
   // Custom local categories
-  2001: { gradient: 'linear-gradient(135deg, #064e3b 0%, #022c22 100%)', accent: '#34d399', emoji: '🧪' }, // Chemistry
-  2002: { gradient: 'linear-gradient(135deg, #14532d 0%, #052e16 100%)', accent: '#86efac', emoji: '🧬' }, // Biology
-  2003: { gradient: 'linear-gradient(135deg, #2e1065 0%, #1a0936 100%)', accent: '#c084fc', emoji: '⚡' }, // Harry Potter
-  2004: { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#dc2626', emoji: '🐉' }, // Game of Thrones
-  9:  { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)', accent: '#38bdf8', emoji: '🌍' }, // General Knowledge
-  10: { gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', accent: '#a78bfa', emoji: '📚' }, // Books
-  11: { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#fb923c', emoji: '🎬' }, // Film
-  12: { gradient: 'linear-gradient(135deg, #1e1b4b 0%, #2e1065 100%)', accent: '#c084fc', emoji: '🎵' }, // Music
-  13: { gradient: 'linear-gradient(135deg, #14532d 0%, #052e16 100%)', accent: '#4ade80', emoji: '🎭' }, // Musicals & Theatres
-  14: { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#fde047', emoji: '📺' }, // Television
-  15: { gradient: 'linear-gradient(135deg, #0c0a09 0%, #1c1917 100%)', accent: '#f97316', emoji: '🎮' }, // Video Games
-  16: { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #172554 100%)', accent: '#60a5fa', emoji: '🎲' }, // Board Games
-  17: { gradient: 'linear-gradient(135deg, #052e16 0%, #14532d 100%)', accent: '#34d399', emoji: '🔬' }, // Science & Nature
-  18: { gradient: 'linear-gradient(135deg, #0f2027 0%, #203a43 100%)', accent: '#22d3ee', emoji: '💻' }, // Computers
-  19: { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%)', accent: '#93c5fd', emoji: '➕' }, // Mathematics
-  20: { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#d4a574', emoji: '🏛️' }, // Mythology
-  21: { gradient: 'linear-gradient(135deg, #0f4c75 0%, #1b262c 100%)', accent: '#38bdf8', emoji: '⚽' }, // Sports
-  22: { gradient: 'linear-gradient(135deg, #14532d 0%, #1a3a1a 100%)', accent: '#86efac', emoji: '🗺️' }, // Geography
-  23: { gradient: 'linear-gradient(135deg, #7c2d12 0%, #431407 100%)', accent: '#fb923c', emoji: '⚔️' }, // History
-  24: { gradient: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', accent: '#818cf8', emoji: '🏛️' }, // Politics
-  25: { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#f5d0a9', emoji: '🎨' }, // Art
-  26: { gradient: 'linear-gradient(135deg, #14532d 0%, #166534 100%)', accent: '#86efac', emoji: '⭐' }, // Celebrities
-  27: { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #164e63 100%)', accent: '#67e8f9', emoji: '🐾' }, // Animals
-  28: { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#fcd34d', emoji: '🚗' }, // Vehicles
-  29: { gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', accent: '#a78bfa', emoji: '📖' }, // Comics
-  30: { gradient: 'linear-gradient(135deg, #172554 0%, #0f172a 100%)', accent: '#7dd3fc', emoji: '📡' }, // Gadgets
-  31: { gradient: 'linear-gradient(135deg, #1a0936 0%, #2e1065 100%)', accent: '#d8b4fe', emoji: '🎌' }, // Anime & Manga
-  32: { gradient: 'linear-gradient(135deg, #0c4a6e 0%, #082f49 100%)', accent: '#38bdf8', emoji: '🃏' }, // Cartoon & Animations
+  2001: { gradient: 'linear-gradient(135deg, #a7f3d0 0%, #ecfdf5 100%)', accent: '#059669', emoji: '🧪' }, // Chemistry
+  2002: { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #f0fdf4 100%)', accent: '#16a34a', emoji: '🧬' }, // Biology
+  2003: { gradient: 'linear-gradient(135deg, #e9d5ff 0%, #fdf4ff 100%)', accent: '#9333ea', emoji: '⚡' }, // Harry Potter
+  2004: { gradient: 'linear-gradient(135deg, #e7e5e4 0%, #fafaf9 100%)', accent: '#dc2626', emoji: '🐉' }, // Game of Thrones
+  9:  { gradient: 'linear-gradient(135deg, #bae6fd 0%, #f0f9ff 100%)', accent: '#0284c7', emoji: '🌍' }, // General Knowledge
+  10: { gradient: 'linear-gradient(135deg, #ddd6fe 0%, #f5f3ff 100%)', accent: '#7c3aed', emoji: '📚' }, // Books
+  11: { gradient: 'linear-gradient(135deg, #fde68a 0%, #fffbeb 100%)', accent: '#d97706', emoji: '🎬' }, // Film
+  12: { gradient: 'linear-gradient(135deg, #e9d5ff 0%, #fdf4ff 100%)', accent: '#9333ea', emoji: '🎵' }, // Music
+  13: { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #f0fdf4 100%)', accent: '#16a34a', emoji: '🎭' }, // Musicals & Theatres
+  14: { gradient: 'linear-gradient(135deg, #fef08a 0%, #fefce8 100%)', accent: '#ca8a04', emoji: '📺' }, // Television
+  15: { gradient: 'linear-gradient(135deg, #fed7aa 0%, #fff7ed 100%)', accent: '#ea580c', emoji: '🎮' }, // Video Games
+  16: { gradient: 'linear-gradient(135deg, #bfdbfe 0%, #eff6ff 100%)', accent: '#2563eb', emoji: '🎲' }, // Board Games
+  17: { gradient: 'linear-gradient(135deg, #a7f3d0 0%, #ecfdf5 100%)', accent: '#059669', emoji: '🔬' }, // Science & Nature
+  18: { gradient: 'linear-gradient(135deg, #a5f3fc 0%, #ecfeff 100%)', accent: '#0891b2', emoji: '💻' }, // Computers
+  19: { gradient: 'linear-gradient(135deg, #bfdbfe 0%, #eff6ff 100%)', accent: '#1d4ed8', emoji: '➕' }, // Mathematics
+  20: { gradient: 'linear-gradient(135deg, #fde68a 0%, #fef9c3 100%)', accent: '#b45309', emoji: '🏛️' }, // Mythology
+  21: { gradient: 'linear-gradient(135deg, #bae6fd 0%, #e0f2fe 100%)', accent: '#0284c7', emoji: '⚽' }, // Sports
+  22: { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #dcfce7 100%)', accent: '#15803d', emoji: '🗺️' }, // Geography
+  23: { gradient: 'linear-gradient(135deg, #fed7aa 0%, #ffedd5 100%)', accent: '#c2410c', emoji: '⚔️' }, // History
+  24: { gradient: 'linear-gradient(135deg, #c7d2fe 0%, #e0e7ff 100%)', accent: '#4338ca', emoji: '🏛️' }, // Politics
+  25: { gradient: 'linear-gradient(135deg, #fde68a 0%, #fef3c7 100%)', accent: '#92400e', emoji: '🎨' }, // Art
+  26: { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #dcfce7 100%)', accent: '#15803d', emoji: '⭐' }, // Celebrities
+  27: { gradient: 'linear-gradient(135deg, #a5f3fc 0%, #cffafe 100%)', accent: '#0e7490', emoji: '🐾' }, // Animals
+  28: { gradient: 'linear-gradient(135deg, #fde68a 0%, #fef9c3 100%)', accent: '#92400e', emoji: '🚗' }, // Vehicles
+  29: { gradient: 'linear-gradient(135deg, #ddd6fe 0%, #ede9fe 100%)', accent: '#6d28d9', emoji: '📖' }, // Comics
+  30: { gradient: 'linear-gradient(135deg, #bae6fd 0%, #dbeafe 100%)', accent: '#0369a1', emoji: '📡' }, // Gadgets
+  31: { gradient: 'linear-gradient(135deg, #f5d0fe 0%, #fdf4ff 100%)', accent: '#a21caf', emoji: '🎌' }, // Anime & Manga
+  32: { gradient: 'linear-gradient(135deg, #bae6fd 0%, #e0f2fe 100%)', accent: '#0284c7', emoji: '🃏' }, // Cartoon & Animations
 };
 
 // Keyword fallbacks for custom / unmapped categories
 const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
-  ['harry potter', { gradient: 'linear-gradient(135deg, #2e1065 0%, #1a0936 100%)', accent: '#c084fc', emoji: '⚡' }],
-  ['game of thrones', { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#dc2626', emoji: '🐉' }],
-  ['chemistry',   { gradient: 'linear-gradient(135deg, #064e3b 0%, #022c22 100%)', accent: '#34d399', emoji: '🧪' }],
-  ['biology',     { gradient: 'linear-gradient(135deg, #14532d 0%, #052e16 100%)', accent: '#86efac', emoji: '🧬' }],
-  ['formula 1',   { gradient: 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)', accent: '#f87171', emoji: '🏎️' }],
-  ['formula one', { gradient: 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)', accent: '#f87171', emoji: '🏎️' }],
-  ['f1',          { gradient: 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)', accent: '#f87171', emoji: '🏎️' }],
-  ['anime',       { gradient: 'linear-gradient(135deg, #1a0936 0%, #2e1065 100%)', accent: '#d8b4fe', emoji: '🎌' }],
-  ['manga',       { gradient: 'linear-gradient(135deg, #1a0936 0%, #2e1065 100%)', accent: '#d8b4fe', emoji: '🎌' }],
-  ['science',     { gradient: 'linear-gradient(135deg, #052e16 0%, #14532d 100%)', accent: '#34d399', emoji: '🔬' }],
-  ['nature',      { gradient: 'linear-gradient(135deg, #052e16 0%, #14532d 100%)', accent: '#34d399', emoji: '🌿' }],
-  ['history',     { gradient: 'linear-gradient(135deg, #7c2d12 0%, #431407 100%)', accent: '#fb923c', emoji: '⚔️' }],
-  ['sport',       { gradient: 'linear-gradient(135deg, #0f4c75 0%, #1b262c 100%)', accent: '#38bdf8', emoji: '⚽' }],
-  ['music',       { gradient: 'linear-gradient(135deg, #1e1b4b 0%, #2e1065 100%)', accent: '#c084fc', emoji: '🎵' }],
-  ['film',        { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#fb923c', emoji: '🎬' }],
-  ['movie',       { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#fb923c', emoji: '🎬' }],
-  ['geography',   { gradient: 'linear-gradient(135deg, #14532d 0%, #1a3a1a 100%)', accent: '#86efac', emoji: '🗺️' }],
-  ['computer',    { gradient: 'linear-gradient(135deg, #0f2027 0%, #203a43 100%)', accent: '#22d3ee', emoji: '💻' }],
-  ['video game',  { gradient: 'linear-gradient(135deg, #0c0a09 0%, #1c1917 100%)', accent: '#f97316', emoji: '🎮' }],
-  ['television',  { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#fde047', emoji: '📺' }],
-  ['tv',          { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#fde047', emoji: '📺' }],
-  ['art',         { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#f5d0a9', emoji: '🎨' }],
-  ['animal',      { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #164e63 100%)', accent: '#67e8f9', emoji: '🐾' }],
-  ['math',        { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%)', accent: '#93c5fd', emoji: '➕' }],
-  ['book',        { gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', accent: '#a78bfa', emoji: '📚' }],
-  ['politi',      { gradient: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', accent: '#818cf8', emoji: '🏛️' }],
-  ['mytholog',    { gradient: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)', accent: '#d4a574', emoji: '🏺' }],
-  ['cartoon',     { gradient: 'linear-gradient(135deg, #0c4a6e 0%, #082f49 100%)', accent: '#38bdf8', emoji: '🃏' }],
-  ['comic',       { gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', accent: '#a78bfa', emoji: '💥' }],
-  ['celebrit',    { gradient: 'linear-gradient(135deg, #14532d 0%, #166534 100%)', accent: '#86efac', emoji: '⭐' }],
-  ['vehicle',     { gradient: 'linear-gradient(135deg, #1c1917 0%, #0c0a09 100%)', accent: '#fcd34d', emoji: '🚗' }],
-  ['gadget',      { gradient: 'linear-gradient(135deg, #172554 0%, #0f172a 100%)', accent: '#7dd3fc', emoji: '📡' }],
-  ['board game',  { gradient: 'linear-gradient(135deg, #1e3a5f 0%, #172554 100%)', accent: '#60a5fa', emoji: '🎲' }],
+  ['harry potter',    { gradient: 'linear-gradient(135deg, #e9d5ff 0%, #fdf4ff 100%)', accent: '#9333ea', emoji: '⚡' }],
+  ['game of thrones', { gradient: 'linear-gradient(135deg, #e7e5e4 0%, #fafaf9 100%)', accent: '#dc2626', emoji: '🐉' }],
+  ['chemistry',       { gradient: 'linear-gradient(135deg, #a7f3d0 0%, #ecfdf5 100%)', accent: '#059669', emoji: '🧪' }],
+  ['biology',         { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #f0fdf4 100%)', accent: '#16a34a', emoji: '🧬' }],
+  ['formula 1',       { gradient: 'linear-gradient(135deg, #fecaca 0%, #fff1f2 100%)', accent: '#dc2626', emoji: '🏎️' }],
+  ['formula one',     { gradient: 'linear-gradient(135deg, #fecaca 0%, #fff1f2 100%)', accent: '#dc2626', emoji: '🏎️' }],
+  ['f1',              { gradient: 'linear-gradient(135deg, #fecaca 0%, #fff1f2 100%)', accent: '#dc2626', emoji: '🏎️' }],
+  ['anime',           { gradient: 'linear-gradient(135deg, #f5d0fe 0%, #fdf4ff 100%)', accent: '#a21caf', emoji: '🎌' }],
+  ['manga',           { gradient: 'linear-gradient(135deg, #f5d0fe 0%, #fdf4ff 100%)', accent: '#a21caf', emoji: '🎌' }],
+  ['science',         { gradient: 'linear-gradient(135deg, #a7f3d0 0%, #ecfdf5 100%)', accent: '#059669', emoji: '🔬' }],
+  ['nature',          { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #f0fdf4 100%)', accent: '#16a34a', emoji: '🌿' }],
+  ['history',         { gradient: 'linear-gradient(135deg, #fed7aa 0%, #ffedd5 100%)', accent: '#c2410c', emoji: '⚔️' }],
+  ['sport',           { gradient: 'linear-gradient(135deg, #bae6fd 0%, #e0f2fe 100%)', accent: '#0284c7', emoji: '⚽' }],
+  ['music',           { gradient: 'linear-gradient(135deg, #e9d5ff 0%, #fdf4ff 100%)', accent: '#9333ea', emoji: '🎵' }],
+  ['film',            { gradient: 'linear-gradient(135deg, #fde68a 0%, #fffbeb 100%)', accent: '#d97706', emoji: '🎬' }],
+  ['movie',           { gradient: 'linear-gradient(135deg, #fde68a 0%, #fffbeb 100%)', accent: '#d97706', emoji: '🎬' }],
+  ['geography',       { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #dcfce7 100%)', accent: '#15803d', emoji: '🗺️' }],
+  ['computer',        { gradient: 'linear-gradient(135deg, #a5f3fc 0%, #ecfeff 100%)', accent: '#0891b2', emoji: '💻' }],
+  ['video game',      { gradient: 'linear-gradient(135deg, #fed7aa 0%, #fff7ed 100%)', accent: '#ea580c', emoji: '🎮' }],
+  ['television',      { gradient: 'linear-gradient(135deg, #fef08a 0%, #fefce8 100%)', accent: '#ca8a04', emoji: '📺' }],
+  ['tv',              { gradient: 'linear-gradient(135deg, #fef08a 0%, #fefce8 100%)', accent: '#ca8a04', emoji: '📺' }],
+  ['art',             { gradient: 'linear-gradient(135deg, #fde68a 0%, #fef3c7 100%)', accent: '#92400e', emoji: '🎨' }],
+  ['animal',          { gradient: 'linear-gradient(135deg, #a5f3fc 0%, #cffafe 100%)', accent: '#0e7490', emoji: '🐾' }],
+  ['math',            { gradient: 'linear-gradient(135deg, #bfdbfe 0%, #eff6ff 100%)', accent: '#1d4ed8', emoji: '➕' }],
+  ['book',            { gradient: 'linear-gradient(135deg, #ddd6fe 0%, #f5f3ff 100%)', accent: '#7c3aed', emoji: '📚' }],
+  ['politi',          { gradient: 'linear-gradient(135deg, #c7d2fe 0%, #e0e7ff 100%)', accent: '#4338ca', emoji: '🏛️' }],
+  ['mytholog',        { gradient: 'linear-gradient(135deg, #fde68a 0%, #fef9c3 100%)', accent: '#b45309', emoji: '🏺' }],
+  ['cartoon',         { gradient: 'linear-gradient(135deg, #bae6fd 0%, #e0f2fe 100%)', accent: '#0284c7', emoji: '🃏' }],
+  ['comic',           { gradient: 'linear-gradient(135deg, #ddd6fe 0%, #ede9fe 100%)', accent: '#6d28d9', emoji: '💥' }],
+  ['celebrit',        { gradient: 'linear-gradient(135deg, #bbf7d0 0%, #dcfce7 100%)', accent: '#15803d', emoji: '⭐' }],
+  ['vehicle',         { gradient: 'linear-gradient(135deg, #fde68a 0%, #fef9c3 100%)', accent: '#92400e', emoji: '🚗' }],
+  ['gadget',          { gradient: 'linear-gradient(135deg, #bae6fd 0%, #dbeafe 100%)', accent: '#0369a1', emoji: '📡' }],
+  ['board game',      { gradient: 'linear-gradient(135deg, #bfdbfe 0%, #eff6ff 100%)', accent: '#2563eb', emoji: '🎲' }],
 ];
 
 export function getCategoryTheme(categoryName: string, categoryId?: number): CategoryTheme {

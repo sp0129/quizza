@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
+import FloatingIcons from '../components/FloatingIcons';
 import { getCategoryTheme } from '../utils/categoryThemes';
 
 interface Question {
@@ -167,6 +168,7 @@ export default function GamePage() {
   if (phase === 'loading') {
     return (
       <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
+        <FloatingIcons emoji={theme.emoji} />
         <div className="loading">Loading questions...</div>
       </div>
     );
@@ -175,6 +177,7 @@ export default function GamePage() {
   if (phase === 'finished') {
     return (
       <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
+        <FloatingIcons emoji={theme.emoji} />
         <div className="game-over">
           <h2>Game over</h2>
           <p className="final-score">Your score: <strong>{finalScores?.mine ?? score}</strong></p>
@@ -201,6 +204,7 @@ export default function GamePage() {
 
   return (
     <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
+      <FloatingIcons emoji={theme.emoji} />
       <div className="game-screen" style={{ maxWidth: 600, margin: '0 auto', padding: '2rem 1rem' }}>
         <div className="game-header">
           <span>

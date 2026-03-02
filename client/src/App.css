@@ -256,13 +256,23 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 /* ─────────────────────────────────────────────
    Dashboard gradient background
 ───────────────────────────────────────────── */
-.gradient-page {
+.gradient-page-wrapper {
   min-height: 100vh;
+  position: relative;
   transition: background 0.6s ease;
+}
+
+.gradient-page {
   padding: 2rem 1rem;
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
+
+/* Dark text on light dashboard backgrounds */
+.gradient-page-wrapper .dashboard h1 { color: #4338ca; }
+.gradient-page-wrapper .user-info    { color: #475569; }
 
 /* Category preview strip below dropdown */
 .category-preview {
@@ -278,12 +288,44 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 }
 
 /* ─────────────────────────────────────────────
+   Floating background icons
+───────────────────────────────────────────── */
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0)     rotate(0deg);  }
+  33%      { transform: translateY(-18px) rotate(6deg);  }
+  66%      { transform: translateY(-9px)  rotate(-4deg); }
+}
+
+.floating-icons-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  line-height: 1;
+  user-select: none;
+  animation: icon-float linear infinite;
+}
+
+/* ─────────────────────────────────────────────
    Game page full-screen gradient
 ───────────────────────────────────────────── */
 .game-gradient-wrapper {
   min-height: 100vh;
-  transition: background 0.4s ease;
+  position: relative;
+  transition: background 0.6s ease;
 }
+
+/* Dark text on the now-light backgrounds */
+.game-gradient-wrapper .game-header { color: #334155; }
+.game-gradient-wrapper .game-header .timer { color: #4f46e5; }
+.game-gradient-wrapper .game-header .timer.urgent { color: #dc2626; }
+.game-gradient-wrapper .waiting-msg { color: #64748b; }
+.game-gradient-wrapper .game-screen { position: relative; z-index: 1; }
 
 /* ─────────────────────────────────────────────
    In-game mascot reaction area

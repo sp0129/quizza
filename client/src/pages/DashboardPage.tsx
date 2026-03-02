@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
+import FloatingIcons from '../components/FloatingIcons';
 import { getCategoryTheme } from '../utils/categoryThemes';
 
 interface Category {
@@ -16,6 +17,8 @@ interface PendingGame {
   challenger_username: string;
   expires_at: string;
 }
+
+const DEFAULT_GRADIENT = 'linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%)';
 
 export default function DashboardPage() {
   const { user, logout } = useAuth();
@@ -33,7 +36,7 @@ export default function DashboardPage() {
 
   const theme = selectedCategory
     ? getCategoryTheme(selectedCategory.name, selectedCategory.id)
-    : { gradient: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', accent: '#6366f1', emoji: '' };
+    : { gradient: DEFAULT_GRADIENT, accent: '#6366f1', emoji: '🧠' };
 
   const startRandomMatch = async () => {
     if (!selectedCategory) return;
@@ -68,68 +71,69 @@ export default function DashboardPage() {
   };
 
   return (
-    <div
-      className="gradient-page"
-      style={{ background: theme.gradient }}
-    >
-      <header className="dashboard" style={{ marginBottom: 0 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <PizzaMascot mood="idle" size={48} className="mascot-float" />
-            <h1 style={{ color: '#6366f1', fontSize: '1.75rem' }}>Quizza</h1>
-          </div>
-          <div className="user-info">
-            <span>{user?.username}</span>
-            <button onClick={logout}>Log out</button>
-          </div>
-        </div>
-      </header>
+    <div className="gradient-page-wrapper" style={{ background: theme.gradient }}>
+      <FloatingIcons emoji={theme.emoji} />
 
-      <section className="play-section">
-        <h2>Start a game</h2>
-        <select
-          value={selectedCategory?.id ?? ''}
-          onChange={e => {
-            const cat = categories.find(c => c.id === parseInt(e.target.value));
-            setSelectedCategory(cat ?? null);
-          }}
-        >
-          <option value="">Select category...</option>
-          {categories.map(c => (
-            <option key={c.id} value={c.id}>{c.name}</option>
-          ))}
-        </select>
-
-        {selectedCategory && (
-          <div
-            className="category-preview"
-            style={{ background: theme.accent + '22', color: theme.accent }}
-          >
-            <span style={{ fontSize: '1.4rem' }}>{theme.emoji}</span>
-            <span>{selectedCategory.name}</span>
-          </div>
-        )}
-
-        <button onClick={startRandomMatch} disabled={!selectedCategory || matchmaking} style={{ marginTop: '0.75rem' }}>
-          {matchmaking ? 'Finding opponent (up to 30s)...' : 'Play'}
-        </button>
-        {error && <p className="error">{error}</p>}
-      </section>
-
-      {pending.length > 0 && (
-        <section className="pending-section">
-          <h2>Pending challenges</h2>
-          {pending.map(g => (
-            <div key={g.id} className="challenge-card">
-              <strong>{g.challenger_username}</strong> challenged you in <em>{g.category}</em>
-              <span className="expires">
-                Expires {new Date(g.expires_at).toLocaleString()}
-              </span>
-              <button onClick={() => joinGame(g.id, g.category)}>Accept</button>
+      <div className="gradient-page">
+        <header className="dashboard" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+              <PizzaMascot mood="idle" size={48} className="mascot-float" />
+              <h1 style={{ fontSize: '1.75rem' }}>Quizza</h1>
             </div>
-          ))}
+            <div className="user-info">
+              <span>{user?.username}</span>
+              <button onClick={logout}>Log out</button>
+            </div>
+          </div>
+        </header>
+
+        <section className="play-section">
+          <h2>Start a game</h2>
+          <select
+            value={selectedCategory?.id ?? ''}
+            onChange={e => {
+              const cat = categories.find(c => c.id === parseInt(e.target.value));
+              setSelectedCategory(cat ?? null);
+            }}
+          >
+            <option value="">Select category...</option>
+            {categories.map(c => (
+              <option key={c.id} value={c.id}>{c.name}</option>
+            ))}
+          </select>
+
+          {selectedCategory && (
+            <div
+              className="category-preview"
+              style={{ background: theme.accent + '22', color: theme.accent }}
+            >
+              <span style={{ fontSize: '1.4rem' }}>{theme.emoji}</span>
+              <span>{selectedCategory.name}</span>
+            </div>
+          )}
+
+          <button onClick={startRandomMatch} disabled={!selectedCategory || matchmaking} style={{ marginTop: '0.75rem' }}>
+            {matchmaking ? 'Finding opponent (up to 30s)...' : 'Play'}
+          </button>
+          {error && <p className="error">{error}</p>}
         </section>
-      )}
+
+        {pending.length > 0 && (
+          <section className="pending-section">
+            <h2>Pending challenges</h2>
+            {pending.map(g => (
+              <div key={g.id} className="challenge-card">
+                <strong>{g.challenger_username}</strong> challenged you in <em>{g.category}</em>
+                <span className="expires">
+                  Expires {new Date(g.expires_at).toLocaleString()}
+                </span>
+                <button onClick={() => joinGame(g.id, g.category)}>Accept</button>
+              </div>
+            ))}
+          </section>
+        )}
+      </div>
     </div>
   );
 }
