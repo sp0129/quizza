@@ -228,37 +228,54 @@ export default function GamePage() {
   const question = questions[currentIndex];
   if (!question) return null;
 
+  const progressPct = ((currentIndex + 1) / questions.length) * 100;
+
   return (
     <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
       <FloatingIcons emoji={theme.emoji} />
-      <div className="game-screen" style={{ maxWidth: 600, margin: '0 auto', padding: '2rem 1rem' }}>
-        <div className="game-header">
-          <span>
-            {theme.emoji && <span style={{ marginRight: '0.4rem' }}>{theme.emoji}</span>}
-            Question {currentIndex + 1} of {questions.length}
-          </span>
-          <span className={`timer ${timeLeft <= 10 ? 'urgent' : ''}`}>{timeLeft}s</span>
-          <span>Score: {score}</span>
+
+      <div className="game-layout">
+        {/* ── Top: gradient zone with question ── */}
+        <div className="game-top-zone">
+
+          {/* Progress bar + timer */}
+          <div className="game-topbar">
+            <div className="game-progress-track">
+              <div className="game-progress-fill" style={{ width: `${progressPct}%` }} />
+            </div>
+            <span className={`game-countdown${timeLeft <= 10 ? ' urgent' : ''}`}>
+              {timeLeft}s
+            </span>
+          </div>
+
+          {/* Score + question counter */}
+          <div className="game-meta-row">
+            <span className="game-score-pill">⭐ {score} pts</span>
+            <span className="game-q-counter">
+              {currentIndex + 1} / {questions.length}
+            </span>
+          </div>
+
+          {/* Big question text */}
+          <div className="game-question-wrap">
+            <p className="game-question-big">{question.question}</p>
+          </div>
+
+          {/* Mascot reacts in the corner */}
+          <div className="game-mascot-corner">
+            <PizzaMascot
+              key={mascotKey}
+              mood={mascotMood}
+              size={72}
+              className={`mascot-${mascotMood}`}
+            />
+          </div>
         </div>
 
-        <div className="question-card">
-          <span className="difficulty">{question.difficulty}</span>
-          <p className="question-text">{question.question}</p>
-        </div>
-
-        {/* Mascot below the question, reacts to answers */}
-        <div className="mascot-reaction-area">
-          <PizzaMascot
-            key={mascotKey}
-            mood={mascotMood}
-            size={90}
-            className={`mascot-${mascotMood}`}
-          />
-        </div>
-
-        <div className="answers">
+        {/* ── Bottom: dark zone with answer pills ── */}
+        <div className="game-bottom-zone">
           {question.all_answers.map((answer, i) => {
-            let cls = 'answer-btn';
+            let cls = 'answer-pill';
             if (selectedAnswer) {
               if (answer === lastResult?.correctAnswer) cls += ' correct';
               else if (answer === selectedAnswer && !lastResult?.isCorrect) cls += ' wrong';
@@ -274,13 +291,13 @@ export default function GamePage() {
               </button>
             );
           })}
-        </div>
 
-        {waitingForOpponent && (
-          <p className="waiting-msg">
-            Waiting for opponent...{opponentAnswered && ' (they answered)'}
-          </p>
-        )}
+          {waitingForOpponent && (
+            <p className="game-waiting-msg">
+              Waiting for opponent…{opponentAnswered && ' (they answered)'}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
