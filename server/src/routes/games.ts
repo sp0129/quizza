@@ -275,7 +275,12 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
 
         // Notify sync game manager if applicable
         if (game.game_mode === 'sync') {
-          syncGameManager.notifyPlayerFinished(game.id, userId, totalScore);
+          const otherPlayerId = isPlayerA ? game.player_b_id : game.player_a_id;
+          // Tell each player what their opponent scored
+          syncGameManager.notifyPlayerFinished(game.id, userId, totalScore);              // my score → sent to opponent
+          syncGameManager.notifyPlayerFinished(game.id, otherPlayerId, parseInt(otherScore)); // opponent's score → sent to me
+          // End the game for both players
+          syncGameManager.broadcastGameResult(game.id, {});
         }
       }
 
