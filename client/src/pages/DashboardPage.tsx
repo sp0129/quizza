@@ -109,8 +109,10 @@ export default function DashboardPage() {
 
         <section className="play-section">
           <div className="mascot-prompt">
-            <div className="speech-bubble">Pick a category! 🍕</div>
-            <PizzaMascot mood="thinking" size={90} className="mascot-float" />
+            <div className="speech-bubble">
+              {selectedCategory ? `${theme.emoji} ${selectedCategory.name}!` : 'Pick a category! 🍕'}
+            </div>
+            <PizzaMascot mood={selectedCategory ? 'excited' : 'thinking'} size={90} className="mascot-float" />
           </div>
           <select
             value={selectedCategory?.id ?? ''}
@@ -124,16 +126,6 @@ export default function DashboardPage() {
               <option key={c.id} value={c.id}>{c.name}</option>
             ))}
           </select>
-
-          {selectedCategory && (
-            <div
-              className="category-preview"
-              style={{ background: theme.accent + '22', color: theme.accent }}
-            >
-              <span style={{ fontSize: '1.4rem' }}>{theme.emoji}</span>
-              <span>{selectedCategory.name}</span>
-            </div>
-          )}
 
           <button onClick={startRandomMatch} disabled={!selectedCategory || matchmaking} style={{ marginTop: '0.75rem' }}>
             {matchmaking ? `Finding opponent... ${countdown}s` : 'Play'}
