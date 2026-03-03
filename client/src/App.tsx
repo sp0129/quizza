@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import GamePage from './pages/GamePage';
+import RoomPage from './pages/RoomPage';
 import './App.css';
 
 function RequireAuth({ children }: { children: React.ReactElement }) {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/" element={<RequireAuth><DashboardPage /></RequireAuth>} />
           <Route path="/game/:gameId" element={<RequireAuth><GamePage /></RequireAuth>} />
+          <Route path="/room/:roomId" element={<RequireAuth><RoomPage /></RequireAuth>} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

@@ -30,7 +30,7 @@ export default function SignupPage() {
   return (
     <div className="auth-page">
       <div className="mascot-area">
-        <PizzaMascot mood="happy" size={140} className="mascot-float" />
+        <PizzaMascot mood="happy" size={110} className="mascot-float" />
       </div>
 
       <div className="auth-container" style={{ margin: 0 }}>

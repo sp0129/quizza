@@ -38,7 +38,7 @@ export default function LoginPage() {
         <div className="speech-bubble">Let's get quizzing!!! 🍕</div>
         <PizzaMascot
           mood="excited"
-          size={180}
+          size={130}
           className={`mascot-${phase}`}
         />
       </div>

@@ -2,8 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
-import FloatingIcons from '../components/FloatingIcons';
-import { getCategoryTheme } from '../utils/categoryThemes';
+import Sparkles from '../components/Sparkles';
 import { playGibberish } from '../utils/sounds';
 
 interface Question {
@@ -32,9 +31,6 @@ export default function GamePage() {
   const mode = params.get('mode') ?? 'async';
   const questionSetId = params.get('qsid');
   const catName = params.get('cat') ?? '';
-  const catId = params.get('catId') ? parseInt(params.get('catId')!) : undefined;
-
-  const theme = getCategoryTheme(catName, catId);
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,8 +42,9 @@ export default function GamePage() {
   const [opponentAnswered, setOpponentAnswered] = useState(false);
   const [waitingForOpponent, setWaitingForOpponent] = useState(false);
   const [finalScores, setFinalScores] = useState<{ mine: number; opponent?: number } | null>(null);
+  const [showQuitDialog, setShowQuitDialog] = useState(false);
+  const [opponentQuit, setOpponentQuit] = useState(false);
 
-  // Mascot reaction state — key increments to re-trigger CSS animation
   const [mascotMood, setMascotMood] = useState<MascotMood>('thinking');
   const [mascotKey, setMascotKey] = useState(0);
 
@@ -97,11 +94,16 @@ export default function GamePage() {
       if (msg.type === 'game_over') {
         setPhase('finished');
       }
+      if (msg.type === 'opponent_quit') {
+        setFinalScores({ mine: msg.myScore, opponent: 0 });
+        setOpponentQuit(true);
+        setPhase('finished');
+      }
     };
     return () => ws.close();
   }, [mode, gameId]);
 
-  // Countdown timer — updater must be pure, no side effects inside it
+  // Countdown timer
   useEffect(() => {
     if (phase !== 'playing') { if (timerRef.current) clearInterval(timerRef.current); return; }
     questionStartRef.current = Date.now();
@@ -115,7 +117,7 @@ export default function GamePage() {
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [phase, currentIndex]);
 
-  // Auto-submit when clock hits 0
+  // Auto-submit on timeout
   useEffect(() => {
     if (timeLeft === 0 && phase === 'playing') {
       submitAnswer('__timeout__', QUESTION_TIME);
@@ -123,7 +125,7 @@ export default function GamePage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft]);
 
-  // Play gibberish when game ends
+  // Play gibberish on finish
   useEffect(() => {
     if (phase !== 'finished') return;
     const opponent = finalScores?.opponent;
@@ -132,6 +134,12 @@ export default function GamePage() {
     setTimeout(() => playGibberish(isLose ? 'sad' : 'happy'), 400);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
+
+  const handleConfirmQuit = async () => {
+    setShowQuitDialog(false);
+    try { await api.post(`/games/${gameId}/quit`, {}); } catch {}
+    navigate('/');
+  };
 
   const submitAnswer = useCallback(async (answer: string, forcedTime?: number) => {
     if (phase !== 'playing') return;
@@ -150,8 +158,6 @@ export default function GamePage() {
 
       setLastResult(result);
       if (result.points) setScore(s => s + result.points);
-
-      // Mascot reacts immediately
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
 
       if (result.gameComplete) {
@@ -159,7 +165,6 @@ export default function GamePage() {
         if (mode === 'async') setPhase('finished');
         else setWaitingForOpponent(true);
       } else if (mode === 'async') {
-        // Slightly longer delay so the player can enjoy the reaction
         setTimeout(() => {
           setCurrentIndex(i => i + 1);
           setPhase('playing');
@@ -178,8 +183,8 @@ export default function GamePage() {
 
   if (phase === 'loading') {
     return (
-      <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
-        <FloatingIcons emoji={theme.emoji} />
+      <div className="game-gradient-wrapper">
+        <Sparkles />
         <div className="loading">Loading questions...</div>
       </div>
     );
@@ -198,11 +203,12 @@ export default function GamePage() {
       tie:  { text: "It's a Tie! 🤝",  mood: 'happy'       },
       solo: { text: 'Well played! 🍕',  mood: 'celebrating' },
     };
-    const { text: outcomeText, mood: outcomeMood } = outcomeConfig[gameOutcome];
+    const outcomeText = opponentQuit ? 'Opponent quit! 🏆' : outcomeConfig[gameOutcome].text;
+    const outcomeMood = opponentQuit ? 'celebrating' : outcomeConfig[gameOutcome].mood;
 
     return (
-      <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
-        <FloatingIcons emoji={theme.emoji} />
+      <div className="game-gradient-wrapper">
+        <Sparkles />
         <div className="game-over">
           <div className="game-over-mascot">
             <div className="speech-bubble">{outcomeText}</div>
@@ -231,15 +237,13 @@ export default function GamePage() {
   const progressPct = ((currentIndex + 1) / questions.length) * 100;
 
   return (
-    <div className="game-gradient-wrapper" style={{ background: theme.gradient }}>
-      <FloatingIcons emoji={theme.emoji} />
+    <div className="game-gradient-wrapper">
+      <Sparkles />
 
       <div className="game-layout">
-        {/* ── Top: gradient zone with question ── */}
         <div className="game-top-zone">
-
-          {/* Progress bar + timer */}
           <div className="game-topbar">
+            <button className="quit-btn" onClick={() => setShowQuitDialog(true)}>✕</button>
             <div className="game-progress-track">
               <div className="game-progress-fill" style={{ width: `${progressPct}%` }} />
             </div>
@@ -248,7 +252,6 @@ export default function GamePage() {
             </span>
           </div>
 
-          {/* Score + question counter */}
           <div className="game-meta-row">
             <span className="game-score-pill">⭐ {score} pts</span>
             <span className="game-q-counter">
@@ -256,24 +259,21 @@ export default function GamePage() {
             </span>
           </div>
 
-          {/* Big question text */}
           <div className="game-question-wrap">
             <p className="game-question-big">{question.question}</p>
           </div>
+        </div>
 
-          {/* Mascot reacts in the corner */}
-          <div className="game-mascot-corner">
+        <div className="game-bottom-zone">
+          <div className="game-mascot-center">
             <PizzaMascot
               key={mascotKey}
               mood={mascotMood}
-              size={72}
+              size={110}
               className={`mascot-${mascotMood}`}
             />
           </div>
-        </div>
 
-        {/* ── Bottom: dark zone with answer pills ── */}
-        <div className="game-bottom-zone">
           {question.all_answers.map((answer, i) => {
             let cls = 'answer-pill';
             if (selectedAnswer) {
@@ -299,6 +299,23 @@ export default function GamePage() {
           )}
         </div>
       </div>
+
+      {showQuitDialog && (
+        <div className="quit-overlay">
+          <div className="quit-dialog">
+            <p className="quit-dialog-title">Quit game?</p>
+            <p className="quit-dialog-body">
+              {mode === 'sync'
+                ? "Your opponent will win the match."
+                : "You'll be registered as a loss."}
+            </p>
+            <div className="quit-dialog-actions">
+              <button className="quit-cancel-btn" onClick={() => setShowQuitDialog(false)}>Keep playing</button>
+              <button className="quit-confirm-btn" onClick={handleConfirmQuit}>Quit</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

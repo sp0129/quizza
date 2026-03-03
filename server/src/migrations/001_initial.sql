@@ -85,3 +85,37 @@ CREATE TABLE IF NOT EXISTS matchmaking_queue (
   category VARCHAR(255) NOT NULL,
   joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Rooms (N-player live game)
+CREATE TABLE IF NOT EXISTS rooms (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  host_id UUID NOT NULL REFERENCES users(id),
+  category VARCHAR(255) NOT NULL,
+  question_set_id UUID REFERENCES question_sets(id),
+  status VARCHAR(50) NOT NULL DEFAULT 'waiting',
+  room_code VARCHAR(10) UNIQUE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS room_players (
+  room_id UUID NOT NULL REFERENCES rooms(id),
+  player_id UUID NOT NULL REFERENCES users(id),
+  username VARCHAR(255) NOT NULL,
+  score INTEGER NOT NULL DEFAULT 0,
+  finished BOOLEAN NOT NULL DEFAULT FALSE,
+  joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (room_id, player_id)
+);
+
+CREATE TABLE IF NOT EXISTS room_answers (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  room_id UUID NOT NULL REFERENCES rooms(id),
+  player_id UUID NOT NULL REFERENCES users(id),
+  question_index INTEGER NOT NULL,
+  selected_answer VARCHAR(255) NOT NULL,
+  is_correct BOOLEAN NOT NULL,
+  time_taken_seconds INTEGER NOT NULL,
+  points_awarded INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(room_id, player_id, question_index)
+);

@@ -10,6 +10,28 @@ const router = Router();
 const ASYNC_EXPIRY_HOURS = 24;
 const MATCHMAKING_TIMEOUT_MS = 15_000;
 
+// POST /games/solo — instant solo game, no matchmaking
+router.post('/solo', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const { category, categoryId } = req.body;
+  if (!category) {
+    res.status(400).json({ error: 'category is required' });
+    return;
+  }
+  try {
+    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId);
+    const gameId = uuidv4();
+    await pool.query(
+      `INSERT INTO games (id, question_set_id, player_a_id, category, game_mode, status)
+       VALUES ($1, $2, $3, $4, 'async', 'active')`,
+      [gameId, questionSetId, req.userId, category]
+    );
+    res.json({ gameId, questionSetId });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // POST /games/create-random
 router.post('/create-random', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const { category, categoryId } = req.body;
@@ -292,6 +314,65 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
       }
       res.json({ isCorrect, points, correctAnswer: question.correct_answer });
     }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// POST /games/:gameId/quit — forfeit a game mid-match
+router.post('/:gameId/quit', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const userId = req.userId!;
+  try {
+    const gameResult = await pool.query('SELECT * FROM games WHERE id = $1', [req.params.gameId]);
+    const game = gameResult.rows[0];
+    if (!game) { res.status(404).json({ error: 'Game not found' }); return; }
+    if (game.player_a_id !== userId && game.player_b_id !== userId) {
+      res.status(403).json({ error: 'Forbidden' }); return;
+    }
+    if (game.status === 'completed') {
+      res.status(409).json({ error: 'Game already completed' }); return;
+    }
+
+    const isPlayerA = game.player_a_id === userId;
+    const opponentId: string | null = isPlayerA ? game.player_b_id : game.player_a_id;
+
+    // SUM quitter's points
+    const myScoreResult = await pool.query(
+      'SELECT COALESCE(SUM(points_awarded), 0) AS total FROM game_answers WHERE game_id = $1 AND player_id = $2',
+      [game.id, userId]
+    );
+    const myScore = parseInt(myScoreResult.rows[0].total);
+
+    if (opponentId) {
+      // SUM opponent's points
+      const oppScoreResult = await pool.query(
+        'SELECT COALESCE(SUM(points_awarded), 0) AS total FROM game_answers WHERE game_id = $1 AND player_id = $2',
+        [game.id, opponentId]
+      );
+      const oppScore = parseInt(oppScoreResult.rows[0].total);
+
+      const playerAScore = isPlayerA ? myScore : oppScore;
+      const playerBScore = isPlayerA ? oppScore : myScore;
+
+      await pool.query(
+        `UPDATE games SET player_a_score = $1, player_b_score = $2, status = 'completed', winner_id = $3, completed_at = NOW() WHERE id = $4`,
+        [playerAScore, playerBScore, opponentId, game.id]
+      );
+
+      if (game.game_mode === 'sync') {
+        syncGameManager.notifyOpponentQuit(game.id, opponentId, oppScore);
+      }
+    } else {
+      // No opponent — async waiting game, just close it
+      const scoreColumn = isPlayerA ? 'player_a_score' : 'player_b_score';
+      await pool.query(
+        `UPDATE games SET ${scoreColumn} = $1, status = 'completed', completed_at = NOW() WHERE id = $2`,
+        [myScore, game.id]
+      );
+    }
+
+    res.json({ ok: true });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });

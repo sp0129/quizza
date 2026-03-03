@@ -105,6 +105,13 @@ class SyncGameManager {
     if (room) this.broadcast(room, { type: 'game_over', ...payload });
   }
 
+  notifyOpponentQuit(gameId: string, remainingPlayerId: string, myScore: number) {
+    const room = this.rooms.get(gameId);
+    if (!room) return;
+    const ws = room.players.get(remainingPlayerId);
+    if (ws) this.send(ws, { type: 'opponent_quit', myScore });
+  }
+
   private broadcast(room: SyncGameRoom, msg: object) {
     for (const ws of room.players.values()) this.send(ws, msg);
   }
