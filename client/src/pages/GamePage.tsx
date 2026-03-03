@@ -30,7 +30,6 @@ export default function GamePage() {
   const navigate = useNavigate();
   const mode = params.get('mode') ?? 'async';
   const questionSetId = params.get('qsid');
-  const catName = params.get('cat') ?? '';
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
