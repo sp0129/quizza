@@ -53,6 +53,16 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
       [roomId, me, hostUsername]
     );
 
+    // Seed the WS manager's player cache so that late-connecting clients
+    // (including the host themselves) get the initial player list immediately.
+    roomGameManager.notifyPlayerJoined(roomId, [{
+      playerId: me,
+      username: hostUsername,
+      score: 0,
+      finished: false,
+      isHost: true,
+    }]);
+
     res.json({ roomId, roomCode, questionSetId, category });
   } catch (err) {
     console.error(err);
@@ -101,6 +111,7 @@ router.post('/join', requireAuth, async (req: AuthRequest, res: Response): Promi
       username: r.username,
       score: r.score,
       finished: r.finished,
+      isHost: r.player_id === room.host_id,
     })));
 
     res.json({ roomId: room.id, roomCode: room.room_code, questionSetId: room.question_set_id, category: room.category });
@@ -118,11 +129,19 @@ router.get('/:roomId', requireAuth, async (req: AuthRequest, res: Response): Pro
     if (!room) { res.status(404).json({ error: 'Room not found' }); return; }
 
     const playersResult = await pool.query(
-      `SELECT player_id, username, score, finished FROM room_players WHERE room_id = $1 ORDER BY score DESC`,
+      `SELECT player_id, username, score, finished FROM room_players WHERE room_id = $1 ORDER BY joined_at`,
       [room.id]
     );
 
-    res.json({ ...room, players: playersResult.rows });
+    const players = playersResult.rows.map(r => ({
+      playerId: r.player_id,
+      username: r.username,
+      score: r.score,
+      finished: r.finished,
+      isHost: r.player_id === room.host_id,
+    }));
+
+    res.json({ ...room, hostId: room.host_id, players });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });

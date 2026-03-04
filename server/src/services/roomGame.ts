@@ -7,13 +7,29 @@ interface RoomPlayerSocket {
   username: string;
 }
 
+interface PlayerInfo {
+  playerId: string;
+  username: string;
+  score: number;
+  finished: boolean;
+  isHost?: boolean;
+}
+
 interface RoomState {
   roomId: string;
   players: Map<string, RoomPlayerSocket>; // playerId → socket+username
+  cachedPlayers: PlayerInfo[];            // latest player list from DB
 }
 
 class RoomGameManager {
   private rooms = new Map<string, RoomState>();
+
+  private getOrCreateRoom(roomId: string): RoomState {
+    if (!this.rooms.has(roomId)) {
+      this.rooms.set(roomId, { roomId, players: new Map(), cachedPlayers: [] });
+    }
+    return this.rooms.get(roomId)!;
+  }
 
   attach(wss: WebSocketServer) {
     wss.on('connection', (ws: WebSocket, req: IncomingMessage) => {
@@ -33,11 +49,14 @@ class RoomGameManager {
         return;
       }
 
-      if (!this.rooms.has(roomId)) {
-        this.rooms.set(roomId, { roomId, players: new Map() });
-      }
-      const room = this.rooms.get(roomId)!;
+      const room = this.getOrCreateRoom(roomId);
       room.players.set(playerId, { ws, username });
+
+      // Send the current player list to the newly connected client immediately.
+      // This covers the race where the player joined via HTTP before their WS connected.
+      if (room.cachedPlayers.length > 0 && ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: 'player_joined', players: room.cachedPlayers }));
+      }
 
       ws.on('close', () => {
         room.players.delete(playerId);
@@ -53,7 +72,9 @@ class RoomGameManager {
     });
   }
 
-  notifyPlayerJoined(roomId: string, players: { playerId: string; username: string; score: number; finished: boolean }[]) {
+  notifyPlayerJoined(roomId: string, players: PlayerInfo[]) {
+    const room = this.getOrCreateRoom(roomId);
+    room.cachedPlayers = players; // cache for late-connecting WS clients
     this.broadcastToRoom(roomId, { type: 'player_joined', players });
   }
 

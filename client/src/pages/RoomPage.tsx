@@ -22,6 +22,7 @@ interface RoomPlayer {
   username: string;
   score: number;
   finished: boolean;
+  isHost?: boolean;
 }
 
 type Phase = 'lobby' | 'loading' | 'playing' | 'answered' | 'finished';
@@ -68,6 +69,7 @@ export default function RoomPage() {
 
     api.get<{ room_code: string; players: RoomPlayer[] }>(`/rooms/${roomId}`).then(data => {
       setRoomCode(data.room_code);
+      // GET returns players already normalized (playerId, isHost) from the server
       setPlayers(data.players ?? []);
     }).catch(console.error);
 
@@ -165,6 +167,9 @@ export default function RoomPage() {
     setStartLoading(true);
     try {
       await api.post(`/rooms/${roomId}/start`, {});
+      // Transition immediately on HTTP success — don't rely solely on WS message.
+      // The WS 'game_started' will handle non-host players.
+      setPhase('loading');
     } catch (err: any) {
       setError(err.message);
       setStartLoading(false);
@@ -198,7 +203,9 @@ export default function RoomPage() {
               {players.map((p, i) => (
                 <div key={p.playerId ?? i} className="room-player-row">
                   <span className="room-player-rank">{i + 1}</span>
-                  <span className="room-player-name">{p.username}</span>
+                  <span className="room-player-name">
+                    {p.username}{p.isHost ? ' 👑' : ''}
+                  </span>
                 </div>
               ))}
             </div>
