@@ -1,0 +1,205 @@
+/*
+ * ══════════════════════════════════════════════════════════════
+ *  QUIZZA DESIGN TOKENS
+ *  Single source of truth. Change a value here → updates everywhere.
+ *  Do not hardcode these values in App.css or any component file.
+ * ══════════════════════════════════════════════════════════════
+ */
+
+:root {
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Sapphire Backgrounds
+  ──────────────────────────────────────────────────────────── */
+  --bg-base:        #010810;   /* deepest background */
+  --bg-deep:        #020e20;   /* deep navy */
+  --bg-surface:     rgba(10, 30, 80, 0.55);  /* card surface */
+  --bg-surface-alt: rgba(6, 18, 60, 0.60);   /* inbox / alt card */
+  --bg-input:       rgba(5, 20, 70, 0.60);   /* all form inputs */
+  --bg-overlay:     rgba(0, 5, 30, 0.80);    /* modal backdrop */
+  --bg-strip:       rgba(2, 8, 30, 0.88);    /* top strip (room score) */
+  --bg-bottom-zone: #03080f;                 /* game answer zone */
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Borders
+  ──────────────────────────────────────────────────────────── */
+  --border:        rgba(80, 160, 255, 0.22);
+  --border-subtle: rgba(60, 120, 255, 0.16);
+  --border-strong: rgba(80, 160, 255, 0.50);
+  --border-focus:  rgba(100, 180, 255, 0.55);
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Text
+  ──────────────────────────────────────────────────────────── */
+  --text-primary:   #e8f0ff;
+  --text-secondary: rgba(180, 210, 255, 0.75);
+  --text-muted:     rgba(140, 180, 255, 0.48);
+  --text-link:      #60a5fa;
+  --text-accent:    #c8deff;    /* bright accent (card titles, etc.) */
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Green — Solo / Play
+  ──────────────────────────────────────────────────────────── */
+  --green-hi:     #00ee80;
+  --green-mid:    #00cc68;
+  --green-lo:     #009950;
+  --green-edge:   #00bb60;    /* bottom gradient stop */
+  --green-shadow: #008040;    /* 3D bottom edge */
+  --green-glow:   rgba(0, 220, 100, 0.50);
+  --green-on:     #00250e;    /* text color on green */
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Amber — Challenge
+  ──────────────────────────────────────────────────────────── */
+  --amber-hi:     #fbbf24;
+  --amber-mid:    #f59e0b;
+  --amber-lo:     #d97706;
+  --amber-shadow: #92580a;
+  --amber-glow:   rgba(251, 191, 36, 0.30);
+  --amber-on:     #1c0a00;
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Cyan — Room
+  ──────────────────────────────────────────────────────────── */
+  --cyan-hi:     #38bdf8;
+  --cyan-mid:    #0ea5e9;
+  --cyan-lo:     #0891b2;
+  --cyan-shadow: #065a7a;
+  --cyan-glow:   rgba(56, 189, 248, 0.35);
+  --cyan-on:     #001a20;
+  --cyan-text:   #7dd3fc;    /* cyan text on dark bg */
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Indigo — Primary / Default
+  ──────────────────────────────────────────────────────────── */
+  --indigo-hi:     #6366f1;
+  --indigo-mid:    #4f6ef7;
+  --indigo-lo:     #3b55d9;
+  --indigo-shadow: #2a3fb0;
+  --indigo-glow:   rgba(79, 110, 247, 0.35);
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Status
+  ──────────────────────────────────────────────────────────── */
+  --success:      #4ade80;
+  --success-bg:   rgba(5, 50, 20, 0.80);
+  --error:        #fca5a5;       /* inline error text */
+  --error-strong: #f87171;       /* answer-pill wrong state */
+  --error-bg:     rgba(60, 5, 5, 0.80);
+  --red-hi:       #ef4444;
+  --red-shadow:   #7f1d1d;
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Highlights / Shine
+  ──────────────────────────────────────────────────────────── */
+  --shine:        rgba(100, 180, 255, 0.09);
+  --shine-strong: rgba(120, 190, 255, 0.17);
+
+  /* ────────────────────────────────────────────────────────────
+     COLOR: Speech Bubble (unchanged orange/pink palette)
+  ──────────────────────────────────────────────────────────── */
+  --bubble-text:   #f97316;
+  --bubble-shadow1: #fde68a;
+  --bubble-shadow2: #ec4899;
+  --bubble-edge:   #c2410c;
+
+  /* ────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+  ──────────────────────────────────────────────────────────── */
+  --font-xs:   0.75rem;   /*  ~12px */
+  --font-sm:   0.85rem;   /* ~13.6px */
+  --font-base: 1rem;      /*  ~16px */
+  --font-md:   1.1rem;    /* ~17.6px */
+  --font-lg:   1.25rem;   /*  ~20px */
+  --font-xl:   1.5rem;    /*  ~24px */
+  --font-2xl:  1.9rem;    /* ~30.4px */
+  --font-3xl:  2.4rem;    /* ~38.4px */
+  --font-game: clamp(1.7rem, 5.5vw, 2.5rem);
+
+  --weight-normal:    400;
+  --weight-semi:      600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+  --weight-black:     900;
+
+  --leading-tight: 1.25;
+  --leading-base:  1.50;
+  --leading-loose: 1.70;
+
+  /* ────────────────────────────────────────────────────────────
+     SPACING SCALE  (4px base unit)
+  ──────────────────────────────────────────────────────────── */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+
+  /* ────────────────────────────────────────────────────────────
+     BORDER RADIUS SCALE
+  ──────────────────────────────────────────────────────────── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-2xl:  24px;
+  --radius-full: 999px;
+
+  /* ────────────────────────────────────────────────────────────
+     SHADOWS
+  ──────────────────────────────────────────────────────────── */
+  --shadow-card:
+    0 12px 40px rgba(0, 10, 60, 0.55),
+    0  0    0 1px rgba(10, 50, 150, 0.30);
+
+  --shadow-card-inner:
+    inset 0  1px 0 var(--shine),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.50);
+
+  --shadow-input: inset 0 1px 0 rgba(100, 180, 255, 0.06);
+
+  --shadow-btn-indigo:
+    0 3px 0 var(--indigo-shadow),
+    0 0 16px var(--indigo-glow);
+
+  --shadow-btn-green:
+    0 4px 0 var(--green-shadow),
+    0 0 35px var(--green-glow);
+
+  --shadow-btn-amber:
+    0 3px 0 var(--amber-shadow),
+    0 0 20px var(--amber-glow);
+
+  --shadow-btn-cyan:
+    0 3px 0 var(--cyan-shadow),
+    0 0 20px var(--cyan-glow);
+
+  --shadow-btn-red:
+    0 3px 0 var(--red-shadow);
+
+  /* ────────────────────────────────────────────────────────────
+     EFFECTS
+  ──────────────────────────────────────────────────────────── */
+  --blur-card:    blur(24px);
+  --blur-input:   blur(12px);
+  --blur-overlay: blur(4px);
+
+  /* ────────────────────────────────────────────────────────────
+     TRANSITIONS
+  ──────────────────────────────────────────────────────────── */
+  --ease-fast: 0.12s ease;
+  --ease-base: 0.20s ease;
+  --ease-slow: 0.40s ease;
+
+  /* ────────────────────────────────────────────────────────────
+     Z-INDEX SCALE
+  ──────────────────────────────────────────────────────────── */
+  --z-bg:      0;
+  --z-content: 2;
+  --z-game:   50;
+  --z-strip:  100;
+  --z-modal:  200;
+}
