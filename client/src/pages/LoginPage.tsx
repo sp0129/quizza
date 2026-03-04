@@ -43,20 +43,22 @@ export default function LoginPage() {
         />
       </div>
 
-      <div className="auth-container" style={{ margin: 0 }}>
+      <div className="auth-card">
         <h1>Quizza</h1>
         <h2>Log in</h2>
         <form onSubmit={handleSubmit}>
           <input
+            className="field"
             type="email" placeholder="Email" value={email}
             onChange={e => setEmail(e.target.value)} required
           />
           <input
+            className="field"
             type="password" placeholder="Password" value={password}
             onChange={e => setPassword(e.target.value)} required
           />
-          {error && <p className="error">{error}</p>}
-          <button type="submit" disabled={loading}>
+          {error && <p className="inline-error">{error}</p>}
+          <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
             {loading ? 'Logging in...' : 'Log in'}
           </button>
         </form>

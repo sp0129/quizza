@@ -185,13 +185,13 @@ export default function RoomPage() {
         <Sparkles />
         <div className="gradient-page">
           <div className="room-lobby">
-            <h1 className="room-lobby-title">🏠 Room Lobby</h1>
+            <h1 className="page-title text-center">🏠 Room Lobby</h1>
             <div className="room-code-display">
               <span className="room-code-label">Room Code</span>
               <span className="room-code-value">{roomCode}</span>
-              <button className="copy-code-btn" onClick={copyCode}>{copied ? '✓ Copied' : 'Copy'}</button>
+              <button className="btn btn-ghost btn-sm" onClick={copyCode}>{copied ? '✓ Copied' : 'Copy'}</button>
             </div>
-            <p className="room-lobby-hint">Share this code with friends — up to 8 players can join.</p>
+            <p className="text-muted text-center">Share this code with friends — up to 8 players can join.</p>
 
             <div className="room-player-list">
               <h3>Players ({players.length})</h3>
@@ -203,11 +203,11 @@ export default function RoomPage() {
               ))}
             </div>
 
-            {error && <p className="error">{error}</p>}
+            {error && <p className="inline-error">{error}</p>}
 
             {isHost ? (
               <button
-                className="start-game-btn"
+                className="btn btn-room btn-block"
                 onClick={startGame}
                 disabled={startLoading || players.length < 1}
               >
@@ -252,7 +252,7 @@ export default function RoomPage() {
               </div>
             ))}
           </div>
-          <button onClick={() => navigate('/')}>Back to Dashboard</button>
+          <button className="btn btn-ghost" onClick={() => navigate('/')}>Back to Dashboard</button>
         </div>
       </div>
     );

@@ -156,11 +156,11 @@ export default function DashboardPage() {
         <header className="dashboard-header">
           <div className="dashboard-logo">
             <PizzaMascot mood="idle" size={38} className="mascot-float" />
-            <h1 className="dashboard-title">Quizza</h1>
+            <h1 className="page-title">Quizza</h1>
           </div>
           <div className="user-info">
             <span>{user?.username}</span>
-            <button onClick={logout} className="logout-btn">Log out</button>
+            <button onClick={logout} className="btn btn-ghost btn-sm">Log out</button>
           </div>
         </header>
 
@@ -173,7 +173,7 @@ export default function DashboardPage() {
         </div>
 
         <select
-          className="category-select"
+          className="field"
           value={selectedCategory?.id ?? ''}
           onChange={e => {
             const cat = categories.find(c => c.id === parseInt(e.target.value));
@@ -186,105 +186,107 @@ export default function DashboardPage() {
           ))}
         </select>
 
-        {error && <p className="error" style={{ textAlign: 'center', marginTop: '0.5rem' }}>{error}</p>}
+        {error && <p className="inline-error">{error}</p>}
 
-        {/* Solo card */}
-        <div className="mode-card solo-card">
-          <h2 className="mode-card-title">⚡ Solo Play</h2>
-          <p className="mode-card-desc">Jump in instantly — 10 questions, all you.</p>
-          <button
-            className="solo-play-btn"
-            onClick={playSolo}
-            disabled={soloLoading || !selectedCategory}
-          >
-            {soloLoading ? 'Starting...' : '⚡ PLAY SOLO'}
-          </button>
-        </div>
-
-        {/* Challenge + Room cards side by side */}
-        <div className="mode-cards-row">
-          <div className="mode-card challenge-card-new">
-            <h2 className="mode-card-title">⚔️ Challenge</h2>
-            <p className="mode-card-desc">Dare a friend by username.</p>
-            <input
-              className="mode-input"
-              type="text"
-              placeholder="Friend's username"
-              value={challengeUsername}
-              onChange={e => setChallengeUsername(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && sendChallenge()}
-            />
+        <div className="stack stack-4">
+          {/* Solo card */}
+          <div className="card card-green">
+            <h2 className="card-title">⚡ Solo Play</h2>
+            <p className="card-body">Jump in instantly — 10 questions, all you.</p>
             <button
-              className="challenge-btn"
-              onClick={sendChallenge}
-              disabled={challengeLoading || !selectedCategory || !challengeUsername.trim()}
+              className="btn btn-play btn-block"
+              onClick={playSolo}
+              disabled={soloLoading || !selectedCategory}
             >
-              {challengeLoading ? 'Sending...' : '⚔️ Challenge'}
+              {soloLoading ? 'Starting...' : '⚡ PLAY SOLO'}
             </button>
           </div>
 
-          <div className="mode-card room-card-new">
-            <h2 className="mode-card-title">🏠 Room</h2>
-            <p className="mode-card-desc">Live multiplayer. Share the code!</p>
-            <button
-              className="create-room-btn"
-              onClick={createRoom}
-              disabled={roomLoading || !selectedCategory}
-            >
-              {roomLoading ? 'Creating...' : '+ Create Room'}
-            </button>
-            <div className="room-join-row">
+          {/* Challenge + Room cards side by side */}
+          <div className="two-col">
+            <div className="card card-amber stack stack-3">
+              <h2 className="card-title">⚔️ Challenge</h2>
+              <p className="card-body">Dare a friend by username.</p>
               <input
-                className="mode-input room-code-input"
+                className="field"
                 type="text"
-                placeholder="Room code"
-                value={roomCode}
-                onChange={e => setRoomCode(e.target.value.toUpperCase())}
-                maxLength={6}
-                onKeyDown={e => e.key === 'Enter' && joinRoom()}
+                placeholder="Friend's username"
+                value={challengeUsername}
+                onChange={e => setChallengeUsername(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && sendChallenge()}
               />
               <button
-                className="join-room-btn"
-                onClick={joinRoom}
-                disabled={joinLoading || !roomCode.trim()}
+                className="btn btn-challenge btn-block"
+                onClick={sendChallenge}
+                disabled={challengeLoading || !selectedCategory || !challengeUsername.trim()}
               >
-                {joinLoading ? '...' : 'Join'}
+                {challengeLoading ? 'Sending...' : '⚔️ Challenge'}
               </button>
             </div>
+
+            <div className="card card-cyan stack stack-3">
+              <h2 className="card-title">🏠 Room</h2>
+              <p className="card-body">Live multiplayer. Share the code!</p>
+              <button
+                className="btn btn-room btn-block"
+                onClick={createRoom}
+                disabled={roomLoading || !selectedCategory}
+              >
+                {roomLoading ? 'Creating...' : '+ Create'}
+              </button>
+              <div className="room-join-row">
+                <input
+                  className="field room-code-input"
+                  type="text"
+                  placeholder="Room code"
+                  value={roomCode}
+                  onChange={e => setRoomCode(e.target.value.toUpperCase())}
+                  maxLength={6}
+                  onKeyDown={e => e.key === 'Enter' && joinRoom()}
+                />
+                <button
+                  className="btn btn-ghost"
+                  onClick={joinRoom}
+                  disabled={joinLoading || !roomCode.trim()}
+                >
+                  {joinLoading ? '...' : 'Join'}
+                </button>
+              </div>
+            </div>
           </div>
+
+          {/* Incoming challenges */}
+          {incoming.length > 0 && (
+            <section className="card card-amber">
+              <h2 className="section-title">⚔️ Incoming Challenges</h2>
+              {incoming.map(inv => (
+                <div key={inv.id} className="inbox-card">
+                  <div className="inbox-info">
+                    <strong>{inv.inviter_username}</strong> challenged you in <em>{inv.category}</em>
+                    <span className="inbox-expires">Expires {new Date(inv.expires_at).toLocaleString()}</span>
+                  </div>
+                  <button className="btn btn-ghost btn-sm" onClick={() => acceptChallenge(inv)}>Accept</button>
+                </div>
+              ))}
+            </section>
+          )}
+
+          {/* Open games */}
+          {pending.length > 0 && (
+            <section className="card card-cyan">
+              <h2 className="section-title">⏳ Open Games</h2>
+              {pending.map(g => (
+                <div key={g.id} className="inbox-card">
+                  <div className="inbox-info">
+                    <strong>{g.challenger_username}</strong> started a game in <em>{g.category}</em>
+                    <span className="inbox-expires">Expires {new Date(g.expires_at).toLocaleString()}</span>
+                  </div>
+                  <button className="btn btn-ghost btn-sm" onClick={() => joinPendingGame(g.id, g.category)}>Play</button>
+                </div>
+              ))}
+            </section>
+          )}
         </div>
-
-        {/* Incoming challenges */}
-        {incoming.length > 0 && (
-          <section className="inbox-section challenge-inbox">
-            <h2 className="inbox-title">⚔️ Incoming Challenges</h2>
-            {incoming.map(inv => (
-              <div key={inv.id} className="inbox-card">
-                <div className="inbox-info">
-                  <strong>{inv.inviter_username}</strong> challenged you in <em>{inv.category}</em>
-                  <span className="inbox-expires">Expires {new Date(inv.expires_at).toLocaleString()}</span>
-                </div>
-                <button className="accept-btn" onClick={() => acceptChallenge(inv)}>Accept</button>
-              </div>
-            ))}
-          </section>
-        )}
-
-        {/* Open games */}
-        {pending.length > 0 && (
-          <section className="inbox-section pending-inbox">
-            <h2 className="inbox-title">⏳ Open Games</h2>
-            {pending.map(g => (
-              <div key={g.id} className="inbox-card">
-                <div className="inbox-info">
-                  <strong>{g.challenger_username}</strong> started a game in <em>{g.category}</em>
-                  <span className="inbox-expires">Expires {new Date(g.expires_at).toLocaleString()}</span>
-                </div>
-                <button className="accept-btn" onClick={() => joinPendingGame(g.id, g.category)}>Play</button>
-              </div>
-            ))}
-          </section>
-        )}
       </div>
     </div>
   );

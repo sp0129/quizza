@@ -224,7 +224,7 @@ export default function GamePage() {
           {mode === 'async' && opponent === undefined && (
             <p className="waiting-msg">Waiting for your opponent to play (up to 24h).</p>
           )}
-          <button onClick={() => navigate('/')}>Back to dashboard</button>
+          <button className="btn btn-ghost" onClick={() => navigate('/')}>Back to dashboard</button>
         </div>
       </div>
     );
@@ -242,7 +242,7 @@ export default function GamePage() {
       <div className="game-layout">
         <div className="game-top-zone">
           <div className="game-topbar">
-            <button className="quit-btn" onClick={() => setShowQuitDialog(true)}>✕</button>
+            <button className="btn btn-icon" onClick={() => setShowQuitDialog(true)}>✕</button>
             <div className="game-progress-track">
               <div className="game-progress-fill" style={{ width: `${progressPct}%` }} />
             </div>
@@ -309,8 +309,8 @@ export default function GamePage() {
                 : "You'll be registered as a loss."}
             </p>
             <div className="quit-dialog-actions">
-              <button className="quit-cancel-btn" onClick={() => setShowQuitDialog(false)}>Keep playing</button>
-              <button className="quit-confirm-btn" onClick={handleConfirmQuit}>Quit</button>
+              <button className="btn btn-ghost" style={{ flex: 1 }} onClick={() => setShowQuitDialog(false)}>Keep playing</button>
+              <button className="btn btn-danger" style={{ flex: 1 }} onClick={handleConfirmQuit}>Quit</button>
             </div>
           </div>
         </div>

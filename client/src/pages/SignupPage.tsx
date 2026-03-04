@@ -33,24 +33,27 @@ export default function SignupPage() {
         <PizzaMascot mood="happy" size={110} className="mascot-float" />
       </div>
 
-      <div className="auth-container" style={{ margin: 0 }}>
+      <div className="auth-card">
         <h1>Quizza</h1>
         <h2>Create account</h2>
         <form onSubmit={handleSubmit}>
           <input
+            className="field"
             type="text" placeholder="Username" value={username}
             onChange={e => setUsername(e.target.value)} required
           />
           <input
+            className="field"
             type="email" placeholder="Email" value={email}
             onChange={e => setEmail(e.target.value)} required
           />
           <input
+            className="field"
             type="password" placeholder="Password (min 8 chars)" value={password}
             onChange={e => setPassword(e.target.value)} minLength={8} required
           />
-          {error && <p className="error">{error}</p>}
-          <button type="submit" disabled={loading}>
+          {error && <p className="inline-error">{error}</p>}
+          <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
             {loading ? 'Creating account...' : 'Sign up'}
           </button>
         </form>
