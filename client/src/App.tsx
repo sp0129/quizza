@@ -4,6 +4,7 @@ import { useAuth, AuthProvider } from './hooks/useAuth';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
+import CategoryPage from './pages/CategoryPage';
 import GamePage from './pages/GamePage';
 import RoomPage from './pages/RoomPage';
 import './App.css';
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/" element={<RequireAuth><DashboardPage /></RequireAuth>} />
+          <Route path="/category" element={<RequireAuth><CategoryPage /></RequireAuth>} />
           <Route path="/game/:gameId" element={<RequireAuth><GamePage /></RequireAuth>} />
           <Route path="/room/:roomId" element={<RequireAuth><RoomPage /></RequireAuth>} />
         </Routes>
