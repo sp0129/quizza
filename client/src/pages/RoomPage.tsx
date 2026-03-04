@@ -63,15 +63,26 @@ export default function RoomPage() {
     setMascotKey(k => k + 1);
   };
 
-  // Fetch room info + connect WS
+  // Poll room state during lobby: keeps player list fresh and detects game start
+  useEffect(() => {
+    if (phase !== 'lobby' || !roomId) return;
+
+    const fetchRoom = () =>
+      api.get<{ room_code: string; status: string; players: RoomPlayer[] }>(`/rooms/${roomId}`)
+        .then(data => {
+          if (data.room_code) setRoomCode(data.room_code);
+          setPlayers(data.players ?? []);
+          if (data.status === 'active') setPhase('loading');
+        }).catch(console.error);
+
+    fetchRoom();
+    const interval = setInterval(fetchRoom, 2000);
+    return () => clearInterval(interval);
+  }, [phase, roomId]);
+
+  // Connect WS for in-game real-time events (score updates, game over)
   useEffect(() => {
     if (!roomId) return;
-
-    api.get<{ room_code: string; players: RoomPlayer[] }>(`/rooms/${roomId}`).then(data => {
-      setRoomCode(data.room_code);
-      // GET returns players already normalized (playerId, isHost) from the server
-      setPlayers(data.players ?? []);
-    }).catch(console.error);
 
     const token = localStorage.getItem('token');
     const storedUser = localStorage.getItem('user');
@@ -83,7 +94,6 @@ export default function RoomPage() {
 
     ws.onmessage = (e) => {
       const msg = JSON.parse(e.data);
-      if (msg.type === 'player_joined') setPlayers(msg.players);
       if (msg.type === 'game_started') setPhase('loading');
       if (msg.type === 'score_update') setLeaderboard(msg.leaderboard);
       if (msg.type === 'room_finished') {
