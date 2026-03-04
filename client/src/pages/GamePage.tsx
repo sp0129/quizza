@@ -69,7 +69,9 @@ export default function GamePage() {
   useEffect(() => {
     if (mode !== 'sync' || !gameId) return;
     const token = localStorage.getItem('token');
-    const wsUrl = `${(import.meta.env.VITE_WS_URL ?? 'ws://localhost:3001')}/ws?token=${token}&gameId=${gameId}`;
+    const apiUrl = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
+    const wsBase = import.meta.env.VITE_WS_URL ?? apiUrl.replace(/^http/, 'ws');
+    const wsUrl = `${wsBase}/ws?token=${token}&gameId=${gameId}`;
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 

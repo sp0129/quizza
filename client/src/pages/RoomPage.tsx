@@ -76,7 +76,8 @@ export default function RoomPage() {
     const token = localStorage.getItem('token');
     const storedUser = localStorage.getItem('user');
     const username = storedUser ? (JSON.parse(storedUser) as { username: string }).username : '';
-    const wsBase = import.meta.env.VITE_WS_URL ?? 'ws://localhost:3001';
+    const apiUrl = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
+    const wsBase = import.meta.env.VITE_WS_URL ?? apiUrl.replace(/^http/, 'ws');
     const ws = new WebSocket(`${wsBase}/room-ws?token=${token}&roomId=${roomId}&username=${encodeURIComponent(username)}`);
     wsRef.current = ws;
 
