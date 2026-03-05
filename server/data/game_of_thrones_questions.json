@@ -3,6 +3,66 @@
   "category_id": 2004,
   "questions": [
     {
+    "question": "What is the official motto (House Words) of House Stark?",
+    "correct_answer": "Winter is Coming",
+    "incorrect_answers": ["Fire and Blood", "Hear Me Roar", "Ours is the Fury"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which character is known as 'The Onion Knight'?",
+    "correct_answer": "Davos Seaworth",
+    "incorrect_answers": ["Stannis Baratheon", "Theon Greyjoy", "Petyr Baelish"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the flammable liquid used to defend King's Landing during the Battle of the Blackwater?",
+    "correct_answer": "Wildfire",
+    "incorrect_answers": ["Dragonfire", "Burning Oil", "Essence of Nightshade"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which of Daenerys's dragons was killed and resurrected by the Night King?",
+    "correct_answer": "Viserion",
+    "incorrect_answers": ["Drogon", "Rhaegal", "Balerion"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was the name of the person who actually killed Joffrey Baratheon at the Purple Wedding?",
+    "correct_answer": "Olenna Tyrell",
+    "incorrect_answers": ["Tyrion Lannister", "Sansa Stark", "Petyr Baelish"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are the names of the three orders within the Night's Watch?",
+    "correct_answer": "Rangers, Builders, and Stewards",
+    "incorrect_answers": ["Knights, Archers, and Cooks", "Sentinels, Craftsmen, and Guards", "Warriors, Scholars, and Peasants"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "In the TV series, what was Hodor's real name before his accident?",
+    "correct_answer": "Wylis",
+    "incorrect_answers": ["Walder", "Horys", "Myrys"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which city is the home of the Faceless Men and the House of Black and White?",
+    "correct_answer": "Braavos",
+    "incorrect_answers": ["Pentos", "Volantis", "Qarth"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the ancestral Valyrian steel sword belonging to House Mormont, later given to Jon Snow?",
+    "correct_answer": "Longclaw",
+    "incorrect_answers": ["Ice", "Heartsbane", "Widow's Wail"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who was the High Sparrow before he became the leader of the Faith of the Seven?",
+    "correct_answer": "A cobbler",
+    "incorrect_answers": ["A septon", "A blacksmith", "A beggar"],
+    "difficulty": "hard"
+  },
+    {
       "question": "What is the capital city of the Seven Kingdoms?",
       "correct_answer": "King's Landing",
       "incorrect_answers": ["Winterfell", "Dragonstone", "Oldtown"],
