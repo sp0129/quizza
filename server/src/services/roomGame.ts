@@ -79,6 +79,15 @@ class RoomGameManager {
       const existingSync = this.syncStates.get(roomId);
       if (existingSync && !existingSync.finished) {
         existingSync.playerIds.add(playerId);
+        // Send current game state so reconnecting clients can catch up.
+        const answered = existingSync.questionAnswers.get(existingSync.currentQuestion)?.has(playerId) ?? false;
+        if (ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({
+            type: 'sync_state',
+            currentQuestion: existingSync.currentQuestion,
+            answered,
+          }));
+        }
       }
 
       ws.on('close', () => {

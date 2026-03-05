@@ -86,34 +86,74 @@ export default function RoomPage() {
   useEffect(() => {
     if (!roomId) return;
 
-    const token = localStorage.getItem('token');
-    const storedUser = localStorage.getItem('user');
-    const username = storedUser ? (JSON.parse(storedUser) as { username: string }).username : '';
-    const apiUrl = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
-    const wsBase = import.meta.env.VITE_WS_URL ?? apiUrl.replace(/^http/, 'ws');
-    const ws = new WebSocket(`${wsBase}/room-ws?token=${token}&roomId=${roomId}&username=${encodeURIComponent(username)}`);
-    wsRef.current = ws;
+    let dead = false;
+    let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
+    let pingTimer: ReturnType<typeof setInterval> | null = null;
 
-    ws.onmessage = (e) => {
-      const msg = JSON.parse(e.data);
-      if (msg.type === 'game_started') setPhase('loading');
-      if (msg.type === 'advance_question') {
-        setCurrentIndex(msg.nextIndex);
-        setPhase('playing');
-        setSelectedAnswer(null);
-        setLastCorrect(null);
-        setMascotMood('thinking');
-        setMascotKey(k => k + 1);
-      }
-      if (msg.type === 'score_update') setLeaderboard(msg.leaderboard);
-      if (msg.type === 'room_finished') {
-        setLeaderboard(msg.leaderboard);
-        setPhase('finished');
-        playGibberish('happy');
-      }
+    const connect = () => {
+      if (dead) return;
+      const token = localStorage.getItem('token');
+      const storedUser = localStorage.getItem('user');
+      const username = storedUser ? (JSON.parse(storedUser) as { username: string }).username : '';
+      const apiUrl = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
+      const wsBase = import.meta.env.VITE_WS_URL ?? apiUrl.replace(/^http/, 'ws');
+      const ws = new WebSocket(`${wsBase}/room-ws?token=${token}&roomId=${roomId}&username=${encodeURIComponent(username)}`);
+      wsRef.current = ws;
+
+      ws.onopen = () => {
+        // Keepalive ping every 25s to prevent proxy timeouts
+        if (pingTimer) clearInterval(pingTimer);
+        pingTimer = setInterval(() => {
+          if (ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ type: 'ping' }));
+        }, 25_000);
+      };
+
+      ws.onmessage = (e) => {
+        const msg = JSON.parse(e.data);
+        if (msg.type === 'game_started') setPhase('loading');
+        if (msg.type === 'advance_question') {
+          setCurrentIndex(msg.nextIndex);
+          setPhase('playing');
+          setSelectedAnswer(null);
+          setLastCorrect(null);
+          setMascotMood('thinking');
+          setMascotKey(k => k + 1);
+        }
+        if (msg.type === 'sync_state') {
+          // Reconnected mid-game — jump to the server's current question
+          setCurrentIndex(msg.currentQuestion);
+          if (msg.answered) {
+            setPhase('answered');
+          } else {
+            setPhase('playing');
+            setSelectedAnswer(null);
+            setLastCorrect(null);
+            setMascotMood('thinking');
+            setMascotKey(k => k + 1);
+          }
+        }
+        if (msg.type === 'score_update') setLeaderboard(msg.leaderboard);
+        if (msg.type === 'room_finished') {
+          setLeaderboard(msg.leaderboard);
+          setPhase('finished');
+          playGibberish('happy');
+        }
+      };
+
+      ws.onclose = () => {
+        if (pingTimer) { clearInterval(pingTimer); pingTimer = null; }
+        if (!dead) reconnectTimer = setTimeout(connect, 2_000);
+      };
     };
 
-    return () => ws.close();
+    connect();
+
+    return () => {
+      dead = true;
+      if (reconnectTimer) clearTimeout(reconnectTimer);
+      if (pingTimer) clearInterval(pingTimer);
+      wsRef.current?.close();
+    };
   }, [roomId]);
 
   // Load questions when game starts
