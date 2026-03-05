@@ -51,6 +51,7 @@ export default function RoomPage() {
   const [mascotMood, setMascotMood] = useState<MascotMood>('thinking');
   const [mascotKey, setMascotKey] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
   const [startLoading, setStartLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -95,6 +96,14 @@ export default function RoomPage() {
     ws.onmessage = (e) => {
       const msg = JSON.parse(e.data);
       if (msg.type === 'game_started') setPhase('loading');
+      if (msg.type === 'advance_question') {
+        setCurrentIndex(msg.nextIndex);
+        setPhase('playing');
+        setSelectedAnswer(null);
+        setLastCorrect(null);
+        setMascotMood('thinking');
+        setMascotKey(k => k + 1);
+      }
       if (msg.type === 'score_update') setLeaderboard(msg.leaderboard);
       if (msg.type === 'room_finished') {
         setLeaderboard(msg.leaderboard);
@@ -158,16 +167,7 @@ export default function RoomPage() {
       setLastCorrect(result.isCorrect);
       if (result.points) setScore(s => s + result.points);
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
-
-      if (currentIndex < 9) {
-        setTimeout(() => {
-          setCurrentIndex(i => i + 1);
-          setPhase('playing');
-          setSelectedAnswer(null);
-          setLastCorrect(null);
-          triggerMascot('thinking');
-        }, 1800);
-      }
+      // Advancement is now server-driven via the 'advance_question' WS event.
     } catch (err) {
       console.error(err);
     }
@@ -194,6 +194,14 @@ export default function RoomPage() {
     });
   };
 
+  const shareLink = () => {
+    const url = `${window.location.origin}/join/${roomCode}`;
+    navigator.clipboard.writeText(url).then(() => {
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2500);
+    });
+  };
+
   // ── LOBBY ──
   if (phase === 'lobby') {
     return (
@@ -207,7 +215,12 @@ export default function RoomPage() {
               <span className="room-code-value">{roomCode}</span>
               <button className="btn btn-ghost btn-sm" onClick={copyCode}>{copied ? '✓ Copied' : 'Copy'}</button>
             </div>
-            <p className="text-muted text-center">Share this code with friends — up to 8 players can join.</p>
+            <button className="btn btn-ghost btn-block" onClick={shareLink} style={{ marginTop: '0.5rem' }}>
+              {linkCopied ? '✓ Link Copied!' : '🔗 Copy Invite Link'}
+            </button>
+            <p className="text-muted text-center" style={{ marginTop: '0.4rem' }}>
+              Friends click the link, pick a name, and join instantly — no account needed.
+            </p>
 
             <div className="room-player-list">
               <h3>Players ({players.length})</h3>
@@ -332,6 +345,12 @@ export default function RoomPage() {
               </button>
             );
           })}
+
+          {phase === 'answered' && (
+            <p className="room-waiting-msg" style={{ marginTop: '1rem', textAlign: 'center' }}>
+              Waiting for others…
+            </p>
+          )}
         </div>
       </div>
     </div>

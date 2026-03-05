@@ -7,6 +7,7 @@ import DashboardPage from './pages/DashboardPage';
 import CategoryPage from './pages/CategoryPage';
 import GamePage from './pages/GamePage';
 import RoomPage from './pages/RoomPage';
+import GuestJoinPage from './pages/GuestJoinPage';
 import './App.css';
 
 function RequireAuth({ children }: { children: React.ReactElement }) {
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/category" element={<RequireAuth><CategoryPage /></RequireAuth>} />
           <Route path="/game/:gameId" element={<RequireAuth><GamePage /></RequireAuth>} />
           <Route path="/room/:roomId" element={<RequireAuth><RoomPage /></RequireAuth>} />
+          <Route path="/join/:roomCode" element={<GuestJoinPage />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

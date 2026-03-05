@@ -12,6 +12,7 @@ interface AuthContextValue {
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
   signup: (username: string, email: string, password: string) => Promise<void>;
+  loginAsGuest: (username: string) => Promise<void>;
   logout: () => void;
 }
 
@@ -37,13 +38,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(data.user);
   };
 
+  const loginAsGuest = async (username: string) => {
+    const data = await api.post<{ token: string; user: User }>('/auth/guest', { username });
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+    setUser(data.user);
+  };
+
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setUser(null);
   };
 
-  return createElement(AuthContext.Provider, { value: { user, login, signup, logout } }, children);
+  return createElement(AuthContext.Provider, { value: { user, login, signup, loginAsGuest, logout } }, children);
 }
 
 export function useAuth(): AuthContextValue {

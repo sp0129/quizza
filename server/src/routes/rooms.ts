@@ -161,6 +161,14 @@ router.post('/:roomId/start', requireAuth, async (req: AuthRequest, res: Respons
     await pool.query(`UPDATE rooms SET status = 'active' WHERE id = $1`, [room.id]);
     roomGameManager.broadcastGameStarted(room.id, 10);
 
+    // Start server-side sync timer
+    const playersResult = await pool.query(
+      'SELECT player_id FROM room_players WHERE room_id = $1',
+      [room.id]
+    );
+    const playerIds: string[] = playersResult.rows.map((r: { player_id: string }) => r.player_id);
+    roomGameManager.initGameSync(room.id, playerIds, 10);
+
     res.json({ ok: true });
   } catch (err) {
     console.error(err);
@@ -198,6 +206,9 @@ router.post('/:roomId/answer', requireAuth, async (req: AuthRequest, res: Respon
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8) ON CONFLICT DO NOTHING`,
       [uuidv4(), room.id, me, questionIndex, selectedAnswer, isCorrect, timeTakenSeconds, points]
     );
+
+    // Notify sync manager — advances to next question when all players have answered
+    roomGameManager.recordAnswer(req.params.roomId, me, questionIndex);
 
     let totalScore: number | undefined;
 
