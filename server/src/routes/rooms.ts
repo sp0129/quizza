@@ -14,7 +14,7 @@ function generateRoomCode(): string {
 
 // POST /rooms — create a new room
 router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { category, categoryId } = req.body;
+  const { category, categoryId, timerSeconds } = req.body;
   const me = req.userId!;
 
   if (!category) {
@@ -43,9 +43,10 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
     const userResult = await pool.query('SELECT username FROM users WHERE id = $1', [me]);
     const hostUsername: string = userResult.rows[0]?.username ?? 'Host';
 
+    const roomTimer = (timerSeconds === 15) ? 15 : 30;
     await pool.query(
-      `INSERT INTO rooms (id, host_id, category, question_set_id, room_code) VALUES ($1, $2, $3, $4, $5)`,
-      [roomId, me, category, questionSetId, roomCode]
+      `INSERT INTO rooms (id, host_id, category, question_set_id, room_code, timer_seconds) VALUES ($1, $2, $3, $4, $5, $6)`,
+      [roomId, me, category, questionSetId, roomCode, roomTimer]
     );
 
     await pool.query(
@@ -119,7 +120,7 @@ router.post('/join', requireAuth, async (req: AuthRequest, res: Response): Promi
       isHost: r.player_id === room.host_id,
     })));
 
-    res.json({ roomId: room.id, roomCode: room.room_code, questionSetId: room.question_set_id, category: room.category });
+    res.json({ roomId: room.id, roomCode: room.room_code, questionSetId: room.question_set_id, category: room.category, timerSeconds: room.timer_seconds ?? 30 });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });

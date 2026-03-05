@@ -29,8 +29,6 @@ interface RoomPlayer {
 type Phase = 'lobby' | 'loading' | 'playing' | 'answered' | 'finished';
 type MascotMood = 'thinking' | 'celebrating' | 'wrong';
 
-const QUESTION_TIME = 30;
-
 export default function RoomPage() {
   const { roomId } = useParams<{ roomId: string }>();
   const [params] = useSearchParams();
@@ -41,6 +39,7 @@ export default function RoomPage() {
 
   const [phase, setPhase] = useState<Phase>('lobby');
   const [category, setCategory] = useState(decodeURIComponent(params.get('cat') ?? ''));
+  const [QUESTION_TIME, setQuestionTime] = useState(params.get('timer') === '15' ? 15 : 30);
   const [players, setPlayers] = useState<RoomPlayer[]>([]);
   // Seed from URL param so the share button is available immediately
   const [roomCode, setRoomCode] = useState(params.get('rc') ?? '');
@@ -72,10 +71,11 @@ export default function RoomPage() {
     if (phase !== 'lobby' || !roomId) return;
 
     const fetchRoom = () =>
-      api.get<{ room_code: string; status: string; players: RoomPlayer[]; category: string }>(`/rooms/${roomId}`)
+      api.get<{ room_code: string; status: string; players: RoomPlayer[]; category: string; timer_seconds?: number }>(`/rooms/${roomId}`)
         .then(data => {
           if (data.room_code) setRoomCode(data.room_code);
           if (data.category) setCategory(data.category);
+          if (data.timer_seconds) setQuestionTime(data.timer_seconds);
           setPlayers(data.players ?? []);
           if (data.status === 'active') setPhase('loading');
         }).catch(console.error);

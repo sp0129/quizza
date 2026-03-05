@@ -26,12 +26,13 @@ export default function GuestJoinPage() {
       await loginAsGuest(trimmed);
 
       // Join the room with the code from the link
-      const data = await api.post<{ roomId: string; questionSetId: string; category: string; roomCode: string }>(
+      const data = await api.post<{ roomId: string; questionSetId: string; category: string; roomCode: string; timerSeconds: number }>(
         '/rooms/join',
         { roomCode: roomCode?.toUpperCase(), displayName: trimmed }
       );
 
-      navigate(`/room/${data.roomId}?qsid=${data.questionSetId}&rc=${data.roomCode}`);
+      const timer = data.timerSeconds ?? 30;
+      navigate(`/room/${data.roomId}?qsid=${data.questionSetId}&rc=${data.roomCode}&timer=${timer}`);
     } catch (err: any) {
       setError(err.message ?? 'Could not join room');
       setLoading(false);

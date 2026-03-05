@@ -22,14 +22,13 @@ interface GameResult {
 type Phase = 'loading' | 'playing' | 'answered' | 'finished';
 type MascotMood = 'thinking' | 'celebrating' | 'wrong';
 
-const QUESTION_TIME = 30;
-
 export default function GamePage() {
   const { gameId } = useParams<{ gameId: string }>();
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const mode = params.get('mode') ?? 'async';
   const questionSetId = params.get('qsid');
+  const QUESTION_TIME = params.get('timer') === '15' ? 15 : 30;
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);

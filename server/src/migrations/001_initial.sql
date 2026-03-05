@@ -94,8 +94,11 @@ CREATE TABLE IF NOT EXISTS rooms (
   question_set_id UUID REFERENCES question_sets(id),
   status VARCHAR(50) NOT NULL DEFAULT 'waiting',
   room_code VARCHAR(10) UNIQUE NOT NULL,
+  timer_seconds INTEGER NOT NULL DEFAULT 30,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+-- Safe to re-run: adds timer_seconds to existing rooms tables
+ALTER TABLE rooms ADD COLUMN IF NOT EXISTS timer_seconds INTEGER NOT NULL DEFAULT 30;
 
 CREATE TABLE IF NOT EXISTS room_players (
   room_id UUID NOT NULL REFERENCES rooms(id),

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
@@ -22,6 +22,9 @@ export default function CategoryPage() {
   const [dropdown, setDropdown] = useState<Category[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [blitz, setBlitz] = useState(false);
+
+  const tileRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
   useEffect(() => {
     api.get<Category[]>('/categories').then(raw => {
@@ -48,7 +51,12 @@ export default function CategoryPage() {
     setSelected(cat);
     setSearch('');
     setDropdown([]);
+    setTimeout(() => {
+      tileRefs.current.get(cat.id)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }, 0);
   };
+
+  const timerSeconds = blitz ? 15 : 30;
 
   const go = async () => {
     if (!selected) return;
@@ -60,19 +68,19 @@ export default function CategoryPage() {
           '/games/solo',
           { category: selected.name, categoryId: selected.id }
         );
-        navigate(`/game/${result.gameId}?mode=async&qsid=${result.questionSetId}&cat=${encodeURIComponent(selected.name)}&catId=${selected.id}`);
+        navigate(`/game/${result.gameId}?mode=async&qsid=${result.questionSetId}&cat=${encodeURIComponent(selected.name)}&catId=${selected.id}&timer=${timerSeconds}`);
       } else if (mode === 'room') {
         const result = await api.post<{ roomId: string; roomCode: string; questionSetId: string; category: string }>(
           '/rooms',
-          { category: selected.name, categoryId: selected.id }
+          { category: selected.name, categoryId: selected.id, timerSeconds }
         );
-        navigate(`/room/${result.roomId}?host=true&qsid=${result.questionSetId}&cat=${encodeURIComponent(result.category)}&catId=${selected.id}&rc=${result.roomCode}`);
+        navigate(`/room/${result.roomId}?host=true&qsid=${result.questionSetId}&cat=${encodeURIComponent(result.category)}&catId=${selected.id}&rc=${result.roomCode}&timer=${timerSeconds}`);
       } else if (mode === 'challenge') {
         const result = await api.post<{ gameId: string; questionSetId: string }>(
           '/challenges',
           { targetUsername: target, category: selected.name, categoryId: selected.id }
         );
-        navigate(`/game/${result.gameId}?mode=async&qsid=${result.questionSetId}&cat=${encodeURIComponent(selected.name)}&catId=${selected.id}`);
+        navigate(`/game/${result.gameId}?mode=async&qsid=${result.questionSetId}&cat=${encodeURIComponent(selected.name)}&catId=${selected.id}&timer=${timerSeconds}`);
       }
     } catch (err: any) {
       setError(err.message);
@@ -108,6 +116,32 @@ export default function CategoryPage() {
           {error && <p className="inline-error">{error}</p>}
         </div>
 
+        {/* Search — sticky below header */}
+        <div className="cat-search">
+          <div className="cat-autocomplete">
+            <input
+              className="field"
+              type="text"
+              placeholder="Search for a topic…"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+            {dropdown.length > 0 && (
+              <div className="cat-dropdown">
+                {dropdown.map(cat => (
+                  <div
+                    key={cat.id}
+                    className="cat-dropdown-item"
+                    onClick={() => handleSelect(cat)}
+                  >
+                    {getCategoryTheme(cat.name, cat.id).emoji} {cat.name}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
         {/* Category grid */}
         <div className="cat-grid-wrap">
           <div className="cat-grid">
@@ -117,6 +151,7 @@ export default function CategoryPage() {
               return (
                 <div
                   key={cat.id}
+                  ref={el => { if (el) tileRefs.current.set(cat.id, el); else tileRefs.current.delete(cat.id); }}
                   className={`cat-tile${isSelected ? ' selected' : ''}`}
                   style={{ background: theme.gradient }}
                   onClick={() => handleSelect(cat)}
@@ -132,29 +167,21 @@ export default function CategoryPage() {
           </div>
         </div>
 
-        {/* Sticky bottom: search + go */}
+        {/* Sticky bottom: timer toggle + go button */}
         <div className="cat-bottom">
-          <div className="cat-autocomplete">
-            {dropdown.length > 0 && (
-              <div className="cat-dropdown">
-                {dropdown.map(cat => (
-                  <div
-                    key={cat.id}
-                    className="cat-dropdown-item"
-                    onClick={() => handleSelect(cat)}
-                  >
-                    {getCategoryTheme(cat.name, cat.id).emoji} {cat.name}
-                  </div>
-                ))}
-              </div>
-            )}
-            <input
-              className="field"
-              type="text"
-              placeholder="Search for a topic…"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-            />
+          <div className="cat-timer-toggle">
+            <button
+              className={`cat-timer-option${!blitz ? ' active' : ''}`}
+              onClick={() => setBlitz(false)}
+            >
+              ⏱ Standard · 30s
+            </button>
+            <button
+              className={`cat-timer-option${blitz ? ' active' : ''}`}
+              onClick={() => setBlitz(true)}
+            >
+              ⚡ Blitz · 15s
+            </button>
           </div>
           <button
             className="btn btn-play btn-block"
