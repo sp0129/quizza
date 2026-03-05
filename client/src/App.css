@@ -456,6 +456,8 @@ body {
   box-shadow: inset 0 1px 0 var(--shine-strong), 0 0 20px rgba(60,140,255,0.25);
   transform: translateY(-1px);
 }
+.answer-pill:focus { outline: none; }
+.answer-pill:focus-visible { outline: none; }
 .answer-pill:disabled { cursor: default; transform: none; }
 .answer-pill.correct {
   border-color: var(--success);

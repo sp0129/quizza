@@ -187,13 +187,18 @@ export default function RoomPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft]);
 
-  // Fallback poll: if WS advance_question was missed, detect it via REST every 3s
+  // Fallback poll: if WS advance_question or room_finished was missed, detect via REST every 3s
   useEffect(() => {
     if (phase !== 'answered' || !roomId) return;
     const poll = () =>
-      api.get<{ currentQuestion: number | null }>(`/rooms/${roomId}`)
+      api.get<{ status: string; currentQuestion: number | null; players: RoomPlayer[] }>(`/rooms/${roomId}`)
         .then(data => {
-          if (data.currentQuestion !== null && data.currentQuestion > currentIndex) {
+          if (data.status === 'finished') {
+            const lb = [...(data.players ?? [])].sort((a, b) => b.score - a.score);
+            setLeaderboard(lb);
+            setPhase('finished');
+            playGibberish('happy');
+          } else if (data.currentQuestion !== null && data.currentQuestion > currentIndex) {
             setCurrentIndex(data.currentQuestion);
             setPhase('playing');
             setSelectedAnswer(null);
@@ -406,7 +411,13 @@ export default function RoomPage() {
               else if (lastCorrect === false && answer === selectedAnswer) cls += ' wrong';
             }
             return (
-              <button key={i} className={cls} onClick={() => submitAnswer(answer)} disabled={phase !== 'playing'}>
+              <button
+                key={i}
+                type="button"
+                className={cls}
+                onClick={(e) => { e.currentTarget.blur(); submitAnswer(answer); }}
+                disabled={phase !== 'playing'}
+              >
                 {answer}
               </button>
             );

@@ -54,11 +54,12 @@ export default function GuestJoinPage() {
             <span className="room-code-value">{roomCode?.toUpperCase()}</span>
           </div>
 
-          <form onSubmit={handleJoin} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <div className="form-group">
-              <label className="form-label">Your name</label>
+          <form onSubmit={handleJoin} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <label style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)' }}>Your name</label>
               <input
-                className="form-input"
+                className="field"
+                style={{ fontSize: '1.1rem', padding: '0.85rem 1rem' }}
                 type="text"
                 placeholder="Pick a nickname…"
                 value={name}
