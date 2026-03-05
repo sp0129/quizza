@@ -55,7 +55,7 @@ export default function CategoryPage() {
           '/rooms',
           { category: selected.name, categoryId: selected.id }
         );
-        navigate(`/room/${result.roomId}?host=true&qsid=${result.questionSetId}&cat=${encodeURIComponent(result.category)}&catId=${selected.id}`);
+        navigate(`/room/${result.roomId}?host=true&qsid=${result.questionSetId}&cat=${encodeURIComponent(result.category)}&catId=${selected.id}&rc=${result.roomCode}`);
       } else if (mode === 'challenge') {
         const result = await api.post<{ gameId: string; questionSetId: string }>(
           '/challenges',

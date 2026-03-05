@@ -40,7 +40,8 @@ export default function RoomPage() {
 
   const [phase, setPhase] = useState<Phase>('lobby');
   const [players, setPlayers] = useState<RoomPlayer[]>([]);
-  const [roomCode, setRoomCode] = useState('');
+  // Seed from URL param so the share button is available immediately
+  const [roomCode, setRoomCode] = useState(params.get('rc') ?? '');
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState(QUESTION_TIME);
@@ -195,11 +196,17 @@ export default function RoomPage() {
   };
 
   const shareLink = () => {
+    if (!roomCode) return;
     const url = `${window.location.origin}/join/${roomCode}`;
-    navigator.clipboard.writeText(url).then(() => {
-      setLinkCopied(true);
-      setTimeout(() => setLinkCopied(false), 2500);
-    });
+    navigator.clipboard.writeText(url)
+      .then(() => {
+        setLinkCopied(true);
+        setTimeout(() => setLinkCopied(false), 2500);
+      })
+      .catch(() => {
+        // Clipboard API unavailable (non-HTTPS or blocked) — show URL as fallback
+        window.prompt('Copy this invite link:', url);
+      });
   };
 
   // ── LOBBY ──
@@ -215,7 +222,7 @@ export default function RoomPage() {
               <span className="room-code-value">{roomCode}</span>
               <button className="btn btn-ghost btn-sm" onClick={copyCode}>{copied ? '✓ Copied' : 'Copy'}</button>
             </div>
-            <button className="btn btn-ghost btn-block" onClick={shareLink} style={{ marginTop: '0.5rem' }}>
+            <button className="btn btn-ghost btn-block" onClick={shareLink} disabled={!roomCode} style={{ marginTop: '0.5rem' }}>
               {linkCopied ? '✓ Link Copied!' : '🔗 Copy Invite Link'}
             </button>
             <p className="text-muted text-center" style={{ marginTop: '0.4rem' }}>

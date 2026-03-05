@@ -31,7 +31,7 @@ export default function GuestJoinPage() {
         { roomCode: roomCode?.toUpperCase() }
       );
 
-      navigate(`/room/${data.roomId}?qsid=${data.questionSetId}`);
+      navigate(`/room/${data.roomId}?qsid=${data.questionSetId}&rc=${data.roomCode}`);
     } catch (err: any) {
       setError(err.message ?? 'Could not join room');
       setLoading(false);

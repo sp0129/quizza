@@ -51,7 +51,7 @@ export default function DashboardPage() {
         '/rooms/join',
         { roomCode: roomCode.trim() }
       );
-      navigate(`/room/${result.roomId}?qsid=${result.questionSetId}&cat=${encodeURIComponent(result.category)}`);
+      navigate(`/room/${result.roomId}?qsid=${result.questionSetId}&cat=${encodeURIComponent(result.category)}&rc=${result.roomCode}`);
     } catch (err: any) {
       setError(err.message);
       setJoinLoading(false);

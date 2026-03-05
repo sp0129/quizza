@@ -74,7 +74,19 @@ class RoomGameManager {
         ws.send(JSON.stringify({ type: 'player_joined', players: room.cachedPlayers }));
       }
 
+      // If a game is already in progress, make sure this player is tracked in the
+      // sync state (handles reconnections and React StrictMode double-mount).
+      const existingSync = this.syncStates.get(roomId);
+      if (existingSync && !existingSync.finished) {
+        existingSync.playerIds.add(playerId);
+      }
+
       ws.on('close', () => {
+        // Only act if this specific WS instance is still the active one for this
+        // player. A stale close event (e.g. from a React StrictMode double-mount)
+        // must NOT evict the newer WS that has already replaced it.
+        if (room.players.get(playerId)?.ws !== ws) return;
+
         room.players.delete(playerId);
         if (room.players.size === 0) this.rooms.delete(roomId);
 
