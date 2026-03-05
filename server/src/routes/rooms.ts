@@ -141,7 +141,8 @@ router.get('/:roomId', requireAuth, async (req: AuthRequest, res: Response): Pro
       isHost: r.player_id === room.host_id,
     }));
 
-    res.json({ ...room, hostId: room.host_id, players });
+    const currentQuestion = roomGameManager.getCurrentQuestion(req.params.roomId);
+    res.json({ ...room, hostId: room.host_id, players, currentQuestion });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });

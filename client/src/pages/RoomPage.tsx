@@ -187,6 +187,25 @@ export default function RoomPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft]);
 
+  // Fallback poll: if WS advance_question was missed, detect it via REST every 3s
+  useEffect(() => {
+    if (phase !== 'answered' || !roomId) return;
+    const poll = () =>
+      api.get<{ currentQuestion: number | null }>(`/rooms/${roomId}`)
+        .then(data => {
+          if (data.currentQuestion !== null && data.currentQuestion > currentIndex) {
+            setCurrentIndex(data.currentQuestion);
+            setPhase('playing');
+            setSelectedAnswer(null);
+            setLastCorrect(null);
+            setMascotMood('thinking');
+            setMascotKey(k => k + 1);
+          }
+        }).catch(console.error);
+    const interval = setInterval(poll, 3000);
+    return () => clearInterval(interval);
+  }, [phase, currentIndex, roomId]);
+
   const submitAnswer = useCallback(async (answer: string, forcedTime?: number) => {
     if (phase !== 'playing' || !roomId) return;
     if (timerRef.current) clearInterval(timerRef.current);

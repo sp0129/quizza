@@ -99,14 +99,13 @@ class RoomGameManager {
         room.players.delete(playerId);
         if (room.players.size === 0) this.rooms.delete(roomId);
 
-        // Remove disconnected player from sync so we don't wait for them forever
+        // Remove disconnected player from sync so we don't wait for them forever.
+        // IMPORTANT: never delete the syncState itself — the server-side timer must
+        // keep running so the game can advance even if all WS connections drop.
+        // Reconnecting clients will receive a sync_state message to catch up.
         const sync = this.syncStates.get(roomId);
         if (sync && !sync.finished) {
           sync.playerIds.delete(playerId);
-          if (sync.playerIds.size === 0) {
-            if (sync.timer) clearTimeout(sync.timer);
-            this.syncStates.delete(roomId);
-          }
         }
       });
 
@@ -117,6 +116,11 @@ class RoomGameManager {
         } catch {}
       });
     });
+  }
+
+  getCurrentQuestion(roomId: string): number | null {
+    const sync = this.syncStates.get(roomId);
+    return (sync && !sync.finished) ? sync.currentQuestion : null;
   }
 
   notifyPlayerJoined(roomId: string, players: PlayerInfo[]) {
