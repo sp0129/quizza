@@ -26,7 +26,7 @@ export default function GuestJoinPage() {
       await loginAsGuest(trimmed);
 
       // Join the room with the code from the link
-      const data = await api.post<{ roomId: string; questionSetId: string; category: string }>(
+      const data = await api.post<{ roomId: string; questionSetId: string; category: string; roomCode: string }>(
         '/rooms/join',
         { roomCode: roomCode?.toUpperCase() }
       );
