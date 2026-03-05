@@ -80,6 +80,63 @@ const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
   ['board game',      { gradient: 'linear-gradient(135deg, #8599b1 0%, #a7acb2 100%)', accent: '#1945a4', emoji: '🎲' }],
 ];
 
+// Strip OpenTDB qualifier prefixes ("Entertainment: ", "Science: ") and
+// apply a few specific renames so category names read cleanly.
+export function cleanCategoryName(name: string): string {
+  const stripped = name
+    .replace(/^Entertainment:\s*/i, '')
+    .replace(/^Science:\s*/i, '')
+    .trim();
+
+  const renames: Record<string, string> = {
+    'Japanese Anime & Manga': 'Anime & Manga',
+    'Cartoon & Animations':   'Cartoons',
+    'Musicals & Theatres':    'Musicals',
+    'Science & Nature':       'Science & Nature', // keep as-is
+  };
+  return renames[stripped] ?? stripped;
+}
+
+// Explicit display order — similar subjects are grouped together.
+// Categories not in this list appear at the end, alphabetically.
+export const CATEGORY_SORT_ORDER: number[] = [
+  // ── STEM ─────────────────────────────────
+  19,   // Mathematics
+  17,   // Science & Nature
+  18,   // Computers
+  2001, // Chemistry
+  2002, // Biology
+  30,   // Gadgets
+  // ── History & Society ────────────────────
+  23,   // History
+  20,   // Mythology
+  22,   // Geography
+  24,   // Politics
+  9,    // General Knowledge
+  // ── Entertainment ────────────────────────
+  11,   // Film
+  14,   // Television
+  12,   // Music
+  13,   // Musicals
+  15,   // Video Games
+  16,   // Board Games
+  29,   // Comics
+  31,   // Anime & Manga
+  32,   // Cartoons
+  // ── Pop Culture / Franchises ─────────────
+  26,   // Celebrities
+  2003, // Harry Potter
+  2004, // Game of Thrones
+  2005, // Marvel Movies
+  // ── Sports & Nature ──────────────────────
+  21,   // Sports
+  27,   // Animals
+  28,   // Vehicles
+  // ── Arts & Literature ────────────────────
+  25,   // Art
+  10,   // Books
+];
+
 export function getCategoryTheme(categoryName: string, categoryId?: number): CategoryTheme {
   if (categoryId !== undefined && ID_MAP[categoryId]) {
     return ID_MAP[categoryId];

@@ -4,6 +4,7 @@ import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
 import Sparkles from '../components/Sparkles';
 import { playGibberish } from '../utils/sounds';
+import { getCategoryTheme } from '../utils/categoryThemes';
 
 interface Question {
   question: string;
@@ -39,6 +40,7 @@ export default function RoomPage() {
   const questionSetId = params.get('qsid');
 
   const [phase, setPhase] = useState<Phase>('lobby');
+  const [category, setCategory] = useState(decodeURIComponent(params.get('cat') ?? ''));
   const [players, setPlayers] = useState<RoomPlayer[]>([]);
   // Seed from URL param so the share button is available immediately
   const [roomCode, setRoomCode] = useState(params.get('rc') ?? '');
@@ -70,9 +72,10 @@ export default function RoomPage() {
     if (phase !== 'lobby' || !roomId) return;
 
     const fetchRoom = () =>
-      api.get<{ room_code: string; status: string; players: RoomPlayer[] }>(`/rooms/${roomId}`)
+      api.get<{ room_code: string; status: string; players: RoomPlayer[]; category: string }>(`/rooms/${roomId}`)
         .then(data => {
           if (data.room_code) setRoomCode(data.room_code);
+          if (data.category) setCategory(data.category);
           setPlayers(data.players ?? []);
           if (data.status === 'active') setPhase('loading');
         }).catch(console.error);
@@ -279,8 +282,24 @@ export default function RoomPage() {
       <div className="gradient-page-wrapper">
         <Sparkles />
         <div className="gradient-page">
+          <button
+            className="btn btn-icon"
+            style={{ position: 'absolute', top: '1rem', right: '1rem', zIndex: 10 }}
+            onClick={() => navigate('/')}
+          >✕</button>
           <div className="room-lobby">
             <h1 className="page-title text-center">🏠 Room Lobby</h1>
+
+            {category && (() => {
+              const theme = getCategoryTheme(category);
+              return (
+                <div className="lobby-category-badge" style={{ background: theme.gradient }}>
+                  <span className="lobby-category-emoji">{theme.emoji}</span>
+                  <span className="lobby-category-name">{category}</span>
+                </div>
+              );
+            })()}
+
             <div className="room-code-display">
               <span className="room-code-label">Room Code</span>
               <span className="room-code-value">{roomCode}</span>
@@ -383,6 +402,7 @@ export default function RoomPage() {
       <div className="game-layout">
         <div className="game-top-zone">
           <div className="game-topbar">
+            <button className="btn btn-icon" onClick={() => navigate('/')}>✕</button>
             <div className="game-progress-track">
               <div className="game-progress-fill" style={{ width: `${progressPct}%` }} />
             </div>

@@ -82,34 +82,30 @@ router.post('/guest', async (req: Request, res: Response): Promise<void> => {
     return;
   }
 
-  // Try inserting with the requested name, appending a number on collision.
-  for (let attempt = 0; attempt < 5; attempt++) {
-    const candidateName = attempt === 0 ? username : `${username}${attempt + 1}`;
-    const id = uuidv4();
-    const email = `guest_${id}@guest.local`;
-    // Random unusable password hash — guests can't log in with a password
-    const passwordHash = uuidv4();
+  const id = uuidv4();
+  // Use a UUID-based internal username to guarantee uniqueness; the chosen
+  // display name is stored in room_players separately and returned to the client.
+  const internalUsername = `guest_${id.slice(0, 8)}`;
+  const email = `guest_${id}@guest.local`;
+  const passwordHash = uuidv4();
 
-    try {
-      const result = await pool.query(
-        `INSERT INTO users (id, username, email, password_hash)
-         VALUES ($1, $2, $3, $4)
-         RETURNING id, username, email, created_at`,
-        [id, candidateName, email, passwordHash]
-      );
-      const user = result.rows[0];
-      const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET!, { expiresIn: '24h' });
-      res.status(201).json({ token, user });
-      return;
-    } catch (err: any) {
-      if (err.code === '23505') continue; // username collision — retry with suffix
-      console.error(err);
-      res.status(500).json({ error: 'Server error' });
-      return;
-    }
+  try {
+    const result = await pool.query(
+      `INSERT INTO users (id, username, email, password_hash)
+       VALUES ($1, $2, $3, $4)
+       RETURNING id, email, created_at`,
+      [id, internalUsername, email, passwordHash]
+    );
+    const row = result.rows[0];
+    const token = jwt.sign({ userId: row.id }, process.env.JWT_SECRET!, { expiresIn: '24h' });
+    // Return the chosen display name as username so the client stores it correctly
+    res.status(201).json({ token, user: { ...row, username } });
+    return;
+  } catch (err: any) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+    return;
   }
-
-  res.status(409).json({ error: 'Username taken — try a different name' });
 });
 
 export default router;

@@ -42,6 +42,16 @@ export interface LocalData {
 
 const DIFFICULTY_ORDER = { easy: 0, medium: 1, hard: 2 };
 
+function deduplicateByQuestion<T extends { question: string }>(questions: T[]): T[] {
+  const seen = new Set<string>();
+  return questions.filter(q => {
+    const key = q.question.trim().toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 function shuffleArray<T>(arr: T[], seed?: number): T[] {
   const a = [...arr];
   // Simple seeded shuffle (mulberry32)
@@ -89,7 +99,7 @@ async function storeLocalQuestionSet(category: string, categoryId: number): Prom
   }
 
   const seed = Date.now();
-  const shuffled = shuffleArray(bank.questions, seed).slice(0, 10);
+  const shuffled = shuffleArray(deduplicateByQuestion(bank.questions), seed).slice(0, 10);
 
   const questions: Question[] = shuffled
     .sort((a, b) => {
@@ -137,7 +147,7 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
     str.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#039;/g, "'");
 
   const seed = Date.now();
-  const shuffled = shuffleArray(data.results, seed).slice(0, 10);
+  const shuffled = shuffleArray(deduplicateByQuestion(data.results), seed).slice(0, 10);
 
   const questions: Question[] = shuffled
     .sort((a, b) => {

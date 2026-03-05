@@ -72,7 +72,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
 
 // POST /rooms/join — join by room code
 router.post('/join', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { roomCode } = req.body;
+  const { roomCode, displayName } = req.body;
   const me = req.userId!;
 
   if (!roomCode) {
@@ -91,9 +91,14 @@ router.post('/join', requireAuth, async (req: AuthRequest, res: Response): Promi
       return;
     }
 
-    // Get joining player username
-    const userResult = await pool.query('SELECT username FROM users WHERE id = $1', [me]);
-    const username: string = userResult.rows[0]?.username ?? 'Player';
+    // Prefer an explicit displayName (guests pass their chosen name); fall back to DB username
+    let username: string;
+    if (displayName && typeof displayName === 'string' && displayName.trim()) {
+      username = displayName.trim().slice(0, 30);
+    } else {
+      const userResult = await pool.query('SELECT username FROM users WHERE id = $1', [me]);
+      username = userResult.rows[0]?.username ?? 'Player';
+    }
 
     // Insert (ignore if already in)
     await pool.query(

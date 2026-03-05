@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { api } from '../api/client';
 import PizzaMascot from '../components/PizzaMascot';
 import Sparkles from '../components/Sparkles';
-import { getCategoryTheme } from '../utils/categoryThemes';
+import { getCategoryTheme, cleanCategoryName, CATEGORY_SORT_ORDER } from '../utils/categoryThemes';
 
 interface Category {
   id: number;
@@ -24,7 +24,18 @@ export default function CategoryPage() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    api.get<Category[]>('/categories').then(setCategories).catch(console.error);
+    api.get<Category[]>('/categories').then(raw => {
+      const cleaned = raw.map(c => ({ ...c, name: cleanCategoryName(c.name) }));
+      cleaned.sort((a, b) => {
+        const ia = CATEGORY_SORT_ORDER.indexOf(a.id);
+        const ib = CATEGORY_SORT_ORDER.indexOf(b.id);
+        if (ia === -1 && ib === -1) return a.name.localeCompare(b.name);
+        if (ia === -1) return 1;
+        if (ib === -1) return -1;
+        return ia - ib;
+      });
+      setCategories(cleaned);
+    }).catch(console.error);
   }, []);
 
   useEffect(() => {
@@ -81,6 +92,12 @@ export default function CategoryPage() {
       <Sparkles />
 
       <div className="cat-inner">
+        <button
+          className="btn btn-icon"
+          style={{ position: 'absolute', top: '1rem', right: '1rem', zIndex: 10 }}
+          onClick={() => navigate('/')}
+        >✕</button>
+
         {/* Animated header */}
         <div className="cat-header">
           <div className="speech-bubble">Pick a category! 🍕</div>
