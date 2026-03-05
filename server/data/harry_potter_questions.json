@@ -3,6 +3,84 @@
   "category_id": 2003,
   "questions": [
     {
+    "question": "What house does Harry Potter get sorted into at Hogwarts?",
+    "correct_answer": "Gryffindor",
+    "incorrect_answers": ["Slytherin", "Ravenclaw", "Hufflepuff"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the three-headed dog that guards the Philosopher's Stone?",
+    "correct_answer": "Fluffy",
+    "incorrect_answers": ["Fang", "Aragog", "Norbert"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who was the founder of S.P.E.W.?",
+    "correct_answer": "Hermione Granger",
+    "incorrect_answers": ["Ron Weasley", "Albus Dumbledore", "Dobby"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the ice cream shop in Diagon Alley?",
+    "correct_answer": "Florean Fortescue's Ice Cream Parlour",
+    "incorrect_answers": ["Madam Puddifoot's", "Honeydukes", "Borgin and Burkes"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the five-digit code dialed into the telephone booth to enter the Ministry of Magic?",
+    "correct_answer": "6-2-4-4-2",
+    "incorrect_answers": ["1-2-3-4-5", "7-2-6-3-7", "9-8-7-6-5"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which row in the Hall of Prophecy contains the prophecy about Harry and Voldemort?",
+    "correct_answer": "Row 97",
+    "incorrect_answers": ["Row 13", "Row 54", "Row 101"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "Who was the first victim of the basilisk when the Chamber of Secrets was first opened fifty years ago?",
+    "correct_answer": "Moaning Myrtle",
+    "incorrect_answers": ["Nearly Headless Nick", "James Potter", "Peeves"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the house-elf who belonged to Hepzibah Smith?",
+    "correct_answer": "Hokey",
+    "incorrect_answers": ["Winky", "Kreacher", "Dobby"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What kind of wood is Harry Potter's first wand made of?",
+    "correct_answer": "Holly",
+    "incorrect_answers": ["Yew", "Vine", "Hawthorn"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who kills Nagini in the final battle?",
+    "correct_answer": "Neville Longbottom",
+    "incorrect_answers": ["Harry Potter", "Ron Weasley", "Molly Weasley"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the spell used to repel a Boggart?",
+    "correct_answer": "Riddikulus",
+    "incorrect_answers": ["Expelliarmus", "Stupefy", "Alohomora"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which character is an unregistered Animagus who turns into a beetle?",
+    "correct_answer": "Rita Skeeter",
+    "incorrect_answers": ["Minerva McGonagall", "James Potter", "Peter Pettigrew"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the Apparition instructor who comes to Hogwarts in the sixth year?",
+    "correct_answer": "Wilkie Twycross",
+    "incorrect_answers": ["Horace Slughorn", "Stan Shunpike", "Cuthbert Binns"],
+    "difficulty": "hard"
+  },
+    {
       "question": "What house does Harry Potter get sorted into at Hogwarts?",
       "correct_answer": "Gryffindor",
       "incorrect_answers": ["Slytherin", "Ravenclaw", "Hufflepuff"],
