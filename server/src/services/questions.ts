@@ -31,6 +31,10 @@ interface LocalQuestionBank {
   questions: LocalQuestion[];
 }
 
+interface CategoryIndex {
+  categories: { id: number; name: string; file: string }[];
+}
+
 export interface LocalData {
   categories: { id: number; name: string }[];
   question_banks: LocalQuestionBank[];
@@ -56,9 +60,24 @@ function shuffleArray<T>(arr: T[], seed?: number): T[] {
 }
 
 export function loadLocalData(): LocalData {
-  const filePath = path.join(__dirname, '../../data/questions.json');
-  const raw = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(raw) as LocalData;
+  const dataDir = path.join(__dirname, '../../data');
+  const index = JSON.parse(
+    fs.readFileSync(path.join(dataDir, 'questions.json'), 'utf-8')
+  ) as CategoryIndex;
+
+  const question_banks: LocalQuestionBank[] = [];
+  for (const cat of index.categories) {
+    const filePath = path.join(dataDir, cat.file);
+    if (fs.existsSync(filePath)) {
+      const bank = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as LocalQuestionBank;
+      question_banks.push(bank);
+    }
+  }
+
+  return {
+    categories: index.categories.map(c => ({ id: c.id, name: c.name })),
+    question_banks,
+  };
 }
 
 async function storeLocalQuestionSet(category: string, categoryId: number): Promise<string> {

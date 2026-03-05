@@ -1,0 +1,126 @@
+{
+  "category": "Chemistry",
+  "category_id": 2001,
+  "questions": [
+    {
+      "question": "What is the chemical formula for water?",
+      "correct_answer": "H2O",
+      "incorrect_answers": ["HO2", "H2O2", "OH"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "correct_answer": "Au",
+      "incorrect_answers": ["Go", "Gd", "Ag"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the lightest element on the periodic table?",
+      "correct_answer": "Hydrogen",
+      "incorrect_answers": ["Helium", "Lithium", "Carbon"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is table salt's chemical name?",
+      "correct_answer": "Sodium chloride",
+      "incorrect_answers": ["Potassium chloride", "Sodium bicarbonate", "Calcium carbonate"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is diamond made of?",
+      "correct_answer": "Carbon",
+      "incorrect_answers": ["Silicon", "Nitrogen", "Sulfur"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is baking soda's chemical name?",
+      "correct_answer": "Sodium bicarbonate",
+      "incorrect_answers": ["Sodium chloride", "Calcium carbonate", "Potassium carbonate"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What gas do we breathe in most from the air around us?",
+      "correct_answer": "Nitrogen",
+      "incorrect_answers": ["Oxygen", "Carbon dioxide", "Argon"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is dry ice made of?",
+      "correct_answer": "Solid carbon dioxide",
+      "incorrect_answers": ["Solid water", "Solid nitrogen", "Solid oxygen"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for iron?",
+      "correct_answer": "Fe",
+      "incorrect_answers": ["Ir", "In", "Io"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do we call the center of an atom?",
+      "correct_answer": "Nucleus",
+      "incorrect_answers": ["Core", "Shell", "Neutron"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the pH of pure water at room temperature?",
+      "correct_answer": "7",
+      "incorrect_answers": ["0", "14", "5"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is rust?",
+      "correct_answer": "Iron oxide",
+      "incorrect_answers": ["Iron sulfide", "Iron carbonate", "Iron chloride"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which gas makes up about 21% of Earth's atmosphere?",
+      "correct_answer": "Oxygen",
+      "incorrect_answers": ["Nitrogen", "Carbon dioxide", "Argon"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of reaction releases heat into the surroundings?",
+      "correct_answer": "Exothermic reaction",
+      "incorrect_answers": ["Endothermic reaction", "Oxidation reaction", "Decomposition reaction"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What element makes up most of the Sun?",
+      "correct_answer": "Hydrogen",
+      "incorrect_answers": ["Helium", "Oxygen", "Carbon"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for silver?",
+      "correct_answer": "Ag",
+      "incorrect_answers": ["Si", "Sv", "Sl"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is vinegar mainly made of?",
+      "correct_answer": "Acetic acid",
+      "incorrect_answers": ["Citric acid", "Lactic acid", "Hydrochloric acid"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which subatomic particle has a negative charge?",
+      "correct_answer": "Electron",
+      "incorrect_answers": ["Proton", "Neutron", "Photon"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most abundant element in the Earth's crust?",
+      "correct_answer": "Oxygen",
+      "incorrect_answers": ["Silicon", "Aluminum", "Iron"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What process turns a solid directly into a gas without passing through liquid?",
+      "correct_answer": "Sublimation",
+      "incorrect_answers": ["Evaporation", "Condensation", "Melting"],
+      "difficulty": "medium"
+    }
+  ]
+}

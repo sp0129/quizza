@@ -1,0 +1,126 @@
+{
+  "category": "Biology",
+  "category_id": 2002,
+  "questions": [
+    {
+      "question": "What is the powerhouse of the cell?",
+      "correct_answer": "Mitochondria",
+      "incorrect_answers": ["Nucleus", "Ribosome", "Golgi apparatus"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What organ pumps blood through the body?",
+      "correct_answer": "Heart",
+      "incorrect_answers": ["Lung", "Liver", "Kidney"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the largest organ of the human body?",
+      "correct_answer": "Skin",
+      "incorrect_answers": ["Liver", "Brain", "Intestines"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many bones does an adult human body have?",
+      "correct_answer": "206",
+      "incorrect_answers": ["186", "212", "256"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What gas do plants release during photosynthesis?",
+      "correct_answer": "Oxygen",
+      "incorrect_answers": ["Carbon dioxide", "Nitrogen", "Hydrogen"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the longest bone in the human body?",
+      "correct_answer": "Femur (thigh bone)",
+      "incorrect_answers": ["Tibia", "Humerus", "Fibula"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the fastest land animal?",
+      "correct_answer": "Cheetah",
+      "incorrect_answers": ["Lion", "Gazelle", "Horse"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many legs does a spider have?",
+      "correct_answer": "8",
+      "incorrect_answers": ["6", "10", "4"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What vitamin does sunlight help our body produce?",
+      "correct_answer": "Vitamin D",
+      "incorrect_answers": ["Vitamin A", "Vitamin C", "Vitamin B12"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the largest animal on Earth?",
+      "correct_answer": "Blue whale",
+      "incorrect_answers": ["African elephant", "Giant squid", "Sperm whale"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many chambers does the human heart have?",
+      "correct_answer": "4",
+      "incorrect_answers": ["2", "3", "6"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do we call animals that eat only plants?",
+      "correct_answer": "Herbivores",
+      "incorrect_answers": ["Carnivores", "Omnivores", "Decomposers"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the study of plants called?",
+      "correct_answer": "Botany",
+      "incorrect_answers": ["Zoology", "Mycology", "Ecology"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most common blood type in humans?",
+      "correct_answer": "O positive",
+      "incorrect_answers": ["A positive", "B positive", "AB positive"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Where does digestion begin in the human body?",
+      "correct_answer": "The mouth",
+      "incorrect_answers": ["The stomach", "The small intestine", "The esophagus"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the largest internal organ in the human body?",
+      "correct_answer": "Liver",
+      "incorrect_answers": ["Stomach", "Brain", "Kidney"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What do you call a group of lions?",
+      "correct_answer": "A pride",
+      "incorrect_answers": ["A pack", "A herd", "A colony"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What molecule carries genetic information in most living organisms?",
+      "correct_answer": "DNA",
+      "incorrect_answers": ["RNA", "Protein", "ATP"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which blood type is known as the universal donor?",
+      "correct_answer": "O negative",
+      "incorrect_answers": ["AB positive", "A positive", "B negative"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What process do plants use to convert sunlight into food?",
+      "correct_answer": "Photosynthesis",
+      "incorrect_answers": ["Respiration", "Transpiration", "Fermentation"],
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "category": "Harry Potter",
+  "category_id": 2003,
+  "questions": [
+    {
+      "question": "What house does Harry Potter get sorted into at Hogwarts?",
+      "correct_answer": "Gryffindor",
+      "incorrect_answers": ["Slytherin", "Ravenclaw", "Hufflepuff"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Harry Potter's pet owl?",
+      "correct_answer": "Hedwig",
+      "incorrect_answers": ["Errol", "Pigwidgeon", "Fawkes"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What platform does the Hogwarts Express depart from?",
+      "correct_answer": "Platform 9¾",
+      "incorrect_answers": ["Platform 10", "Platform 9", "Platform 7½"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What spell makes a light appear at the tip of a wand?",
+      "correct_answer": "Lumos",
+      "incorrect_answers": ["Nox", "Incendio", "Alohomora"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Weasley family home?",
+      "correct_answer": "The Burrow",
+      "incorrect_answers": ["The Hollow", "Ottery Cottage", "Red House"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the spell 'Wingardium Leviosa' do?",
+      "correct_answer": "Makes objects levitate",
+      "incorrect_answers": ["Unlocks doors", "Creates fire", "Disarms an opponent"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal represents Gryffindor house?",
+      "correct_answer": "Lion",
+      "incorrect_answers": ["Eagle", "Badger", "Snake"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the first name of Harry's godfather?",
+      "correct_answer": "Sirius",
+      "incorrect_answers": ["Remus", "James", "Alastor"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Ron Weasley's pet rat named?",
+      "correct_answer": "Scabbers",
+      "incorrect_answers": ["Crookshanks", "Hedwig", "Trevor"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the Mirror of Erised show the viewer?",
+      "correct_answer": "Their heart's deepest desire",
+      "incorrect_answers": ["The future", "Their greatest fear", "Hidden secrets"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the caretaker of Hogwarts?",
+      "correct_answer": "Argus Filch",
+      "incorrect_answers": ["Horace Slughorn", "Pomona Sprout", "Rubeus Hagrid"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What village is located near Hogwarts and is only for wizards?",
+      "correct_answer": "Hogsmeade",
+      "incorrect_answers": ["Godric's Hollow", "Ottery St. Catchpole", "Little Whinging"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does Hermione use to attend multiple classes at the same time in year three?",
+      "correct_answer": "A Time-Turner",
+      "incorrect_answers": ["A Portkey", "The Invisibility Cloak", "A Remembrall"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What position does Harry play on the Quidditch team?",
+      "correct_answer": "Seeker",
+      "incorrect_answers": ["Keeper", "Chaser", "Beater"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the ghost of Gryffindor tower?",
+      "correct_answer": "Nearly Headless Nick",
+      "incorrect_answers": ["The Bloody Baron", "The Fat Friar", "Moaning Myrtle"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What are the three Deathly Hallows?",
+      "correct_answer": "The Elder Wand, the Resurrection Stone, and the Invisibility Cloak",
+      "incorrect_answers": [
+        "The Sorcerer's Stone, the Time-Turner, and the Marauder's Map",
+        "The Elder Wand, the Philosopher's Stone, and the Invisibility Cloak",
+        "The Resurrection Stone, the Horcrux locket, and the Elder Wand"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who created the Marauder's Map?",
+      "correct_answer": "Moony, Wormtail, Padfoot, and Prongs",
+      "incorrect_answers": [
+        "Fred and George Weasley",
+        "Dumbledore and Flamel",
+        "Filch and Peeves"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the incantation for the spell that disarms an opponent?",
+      "correct_answer": "Expelliarmus",
+      "incorrect_answers": ["Stupefy", "Protego", "Accio"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the lucky potion Harry uses in book six?",
+      "correct_answer": "Felix Felicis",
+      "incorrect_answers": ["Veritaserum", "Amortentia", "Polyjuice Potion"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the Half-Blood Prince?",
+      "correct_answer": "Severus Snape",
+      "incorrect_answers": ["Voldemort", "Draco Malfoy", "Sirius Black"],
+      "difficulty": "medium"
+    }
+  ]
+}

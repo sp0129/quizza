@@ -1,0 +1,138 @@
+{
+  "category": "Game of Thrones",
+  "category_id": 2004,
+  "questions": [
+    {
+      "question": "What is the capital city of the Seven Kingdoms?",
+      "correct_answer": "King's Landing",
+      "incorrect_answers": ["Winterfell", "Dragonstone", "Oldtown"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the motto of House Stark?",
+      "correct_answer": "Winter is Coming",
+      "incorrect_answers": ["Fire and Blood", "Ours is the Fury", "Hear Me Roar"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Jon Snow's direwolf?",
+      "correct_answer": "Ghost",
+      "incorrect_answers": ["Grey Wind", "Lady", "Nymeria"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the ancestral home of the Stark family?",
+      "correct_answer": "Winterfell",
+      "incorrect_answers": ["The Eyrie", "Storm's End", "Casterly Rock"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Daenerys Targaryen's largest dragon?",
+      "correct_answer": "Drogon",
+      "incorrect_answers": ["Rhaegal", "Viserion", "Balerion"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who killed Ned Stark?",
+      "correct_answer": "Ser Ilyn Payne (by order of Joffrey)",
+      "incorrect_answers": [
+        "Tywin Lannister",
+        "Cersei Lannister",
+        "The Hound"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Arya Stark's sword?",
+      "correct_answer": "Needle",
+      "incorrect_answers": ["Ice", "Longclaw", "Oathkeeper"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who ends up killing the Night King?",
+      "correct_answer": "Arya Stark",
+      "incorrect_answers": ["Jon Snow", "Daenerys Targaryen", "Bran Stark"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Hound's real name?",
+      "correct_answer": "Sandor Clegane",
+      "incorrect_answers": ["Gregor Clegane", "Bronn", "Jaqen H'ghar"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What city in Essos does Arya travel to, to train with the Faceless Men?",
+      "correct_answer": "Braavos",
+      "incorrect_answers": ["Meereen", "Qarth", "Pentos"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Littlefinger's real name?",
+      "correct_answer": "Petyr Baelish",
+      "incorrect_answers": ["Varys", "Roose Bolton", "Theon Greyjoy"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the phrase 'Valar Morghulis' mean?",
+      "correct_answer": "All men must die",
+      "incorrect_answers": ["All men must serve", "Fire and blood", "Power is power"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What event is referred to as 'The Red Wedding'?",
+      "correct_answer": "The massacre of Robb Stark and his bannermen at the Twins",
+      "incorrect_answers": [
+        "Joffrey's wedding where he is poisoned",
+        "Daenerys's wedding to Khal Drogo",
+        "The wedding of Sansa Stark to Tyrion Lannister"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What material is effective against White Walkers?",
+      "correct_answer": "Dragonglass (obsidian) and Valyrian steel",
+      "incorrect_answers": [
+        "Wildfire and regular steel",
+        "Dragon fire only",
+        "Silver and iron"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who sits on the Iron Throne at the very start of the TV show?",
+      "correct_answer": "Robert Baratheon",
+      "incorrect_answers": ["Joffrey Baratheon", "Eddard Stark", "Tywin Lannister"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Jon Snow's biological father?",
+      "correct_answer": "Rhaegar Targaryen",
+      "incorrect_answers": ["Eddard Stark", "Robert Baratheon", "Aemon Targaryen"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who poisoned Joffrey at the Purple Wedding?",
+      "correct_answer": "Lady Olenna Tyrell",
+      "incorrect_answers": ["Tyrion Lannister", "Sansa Stark", "Margaery Tyrell"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the massive wall of ice in the far north of Westeros?",
+      "correct_answer": "The Wall",
+      "incorrect_answers": ["The Barrier", "The Frost Wall", "The Ice Wall"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city do the elite warrior slaves known as the Unsullied come from?",
+      "correct_answer": "Astapor",
+      "incorrect_answers": ["Meereen", "Yunkai", "Qarth"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the secret brotherhood sworn to protect the realm from threats beyond the Wall?",
+      "correct_answer": "The Night's Watch",
+      "incorrect_answers": ["The Kingsguard", "The City Watch", "The Golden Company"],
+      "difficulty": "easy"
+    }
+  ]
+}
