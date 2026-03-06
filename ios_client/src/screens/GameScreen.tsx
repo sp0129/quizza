@@ -360,18 +360,18 @@ const s = StyleSheet.create({
   // Answers
   answersWrap: { paddingHorizontal: 16, gap: 10 },
   answerPill: {
-    backgroundColor: 'rgba(255,255,255,0.13)',
+    backgroundColor: 'rgba(10,30,80,0.55)',
     borderRadius: 14, padding: 16,
-    borderWidth: 1, borderColor: 'rgba(255,255,255,0.25)',
+    borderWidth: 1, borderColor: 'rgba(80,160,255,0.30)',
     alignItems: 'center',
   },
   answerCorrect: {
-    backgroundColor: 'rgba(34,197,94,0.3)',
+    backgroundColor: 'rgba(0,204,104,0.25)',
     borderColor: colors.green,
     borderWidth: 2,
   },
   answerWrong: {
-    backgroundColor: 'rgba(239,68,68,0.3)',
+    backgroundColor: 'rgba(239,68,68,0.25)',
     borderColor: colors.red,
     borderWidth: 2,
   },

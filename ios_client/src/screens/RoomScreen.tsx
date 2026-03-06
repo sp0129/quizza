@@ -535,9 +535,9 @@ const s = StyleSheet.create({
   questionText: { color: colors.textPrimary, fontSize: 19, fontWeight: '600', lineHeight: 28, textAlign: 'center' },
   mascotCenter: { alignItems: 'center', paddingVertical: 8 },
   answersWrap: { paddingHorizontal: 16, gap: 10 },
-  answerPill: { backgroundColor: 'rgba(255,255,255,0.13)', borderRadius: 14, padding: 16, borderWidth: 1, borderColor: 'rgba(255,255,255,0.25)', alignItems: 'center' },
-  answerCorrect: { backgroundColor: 'rgba(34,197,94,0.3)', borderColor: colors.green, borderWidth: 2 },
-  answerWrong: { backgroundColor: 'rgba(239,68,68,0.3)', borderColor: colors.red, borderWidth: 2 },
+  answerPill: { backgroundColor: 'rgba(10,30,80,0.55)', borderRadius: 14, padding: 16, borderWidth: 1, borderColor: 'rgba(80,160,255,0.30)', alignItems: 'center' },
+  answerCorrect: { backgroundColor: 'rgba(0,204,104,0.25)', borderColor: colors.green, borderWidth: 2 },
+  answerWrong: { backgroundColor: 'rgba(239,68,68,0.25)', borderColor: colors.red, borderWidth: 2 },
   answerText: { color: colors.textPrimary, fontSize: 15, fontWeight: '500', textAlign: 'center' },
   waitingMsg: { color: colors.textMuted, fontSize: 14, textAlign: 'center', marginTop: 4 },
   // Finished
