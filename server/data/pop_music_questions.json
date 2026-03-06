@@ -1,0 +1,607 @@
+{
+"category": "Pop Music",
+  "category_id": 2006,
+  "questions": 
+[
+  {
+    "question": "Which artist is known as the 'Queen of Beyhive' and released the hit 'Single Ladies'?",
+    "correct_answer": "Beyoncé",
+    "incorrect_answers": ["Rihanna", "Kelly Rowland", "Alicia Keys"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which 'Umbrella' singer hails from the island of Barbados?",
+    "correct_answer": "Rihanna",
+    "incorrect_answers": ["Nicki Minaj", "Cardi B", "Camila Cabello"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of Taylor Swift's debut single released in 2006?",
+    "correct_answer": "Tim McGraw",
+    "incorrect_answers": ["Love Story", "You Belong With Me", "Teardrops on My Guitar"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which British boy band was formed on 'The X Factor' in 2010?",
+    "correct_answer": "One Direction",
+    "incorrect_answers": ["The Wanted", "5 Seconds of Summer", "Backstreet Boys"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who released the record-breaking 'Rolling in the Deep' and 'Hello'?",
+    "correct_answer": "Adele",
+    "incorrect_answers": ["Amy Winehouse", "Dua Lipa", "Sia"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist wore a dress made of raw meat to the 2010 MTV VMAs?",
+    "correct_answer": "Lady Gaga",
+    "incorrect_answers": ["Katy Perry", "Miley Cyrus", "Kesha"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What was Justin Bieber's first major hit single released in 2010?",
+    "correct_answer": "Baby",
+    "incorrect_answers": ["One Time", "Sorry", "Boyfriend"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which female artist released 'Teenage Dream' and 'Firework'?",
+    "correct_answer": "Katy Perry",
+    "incorrect_answers": ["Taylor Swift", "Britney Spears", "Lady Gaga"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who is the 'King of Latin Pop' who released 'Bailando' in 2014?",
+    "correct_answer": "Enrique Iglesias",
+    "incorrect_answers": ["Ricky Martin", "Pitbull", "Bad Bunny"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which South Korean artist released the viral sensation 'Gangnam Style' in 2012?",
+    "correct_answer": "PSY",
+    "incorrect_answers": ["BTS", "Rain", "G-Dragon"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the title of Billie Eilish's 2019 debut studio album?",
+    "correct_answer": "When We All Fall Asleep, Where Do We Go?",
+    "incorrect_answers": ["Happier Than Ever", "Don't Smile at Me", "Hit Me Hard and Soft"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist is famous for the 'Happy' song from 'Despicable Me 2'?",
+    "correct_answer": "Pharrell Williams",
+    "incorrect_answers": ["Usher", "Bruno Mars", "The Weeknd"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who 'kissed a girl and liked it' in 2008?",
+    "correct_answer": "Katy Perry",
+    "incorrect_answers": ["Pink", "Avril Lavigne", "Demi Lovato"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which Canadian artist released 'Blinding Lights' and 'The Hills'?",
+    "correct_answer": "The Weeknd",
+    "incorrect_answers": ["Drake", "Shawn Mendes", "Justin Bieber"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which group released the hit 'Toxic' in 2003?",
+    "correct_answer": "Britney Spears",
+    "incorrect_answers": ["Christina Aguilera", "Jessica Simpson", "Mandy Moore"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang 'Poker Face' and 'Bad Romance'?",
+    "correct_answer": "Lady Gaga",
+    "incorrect_answers": ["Madonna", "Lana Del Rey", "Halsey"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which band features lead singer Adam Levine?",
+    "correct_answer": "Maroon 5",
+    "incorrect_answers": ["Imagine Dragons", "Coldplay", "OneRepublic"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of Miley Cyrus's famous alter ego from the Disney Channel?",
+    "correct_answer": "Hannah Montana",
+    "incorrect_answers": ["Lizzie McGuire", "Alex Russo", "Raven Baxter"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist sang 'Shape of You' and 'Perfect'?",
+    "correct_answer": "Ed Sheeran",
+    "incorrect_answers": ["Sam Smith", "Lewis Capaldi", "Harry Styles"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which 2010s star is known for the hits 'Problem', '7 Rings', and 'Thank U, Next'?",
+    "correct_answer": "Ariana Grande",
+    "incorrect_answers": ["Selena Gomez", "Camila Cabello", "Lorde"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang the 2000 hit 'Oops!... I Did It Again'?",
+    "correct_answer": "Britney Spears",
+    "incorrect_answers": ["Christina Aguilera", "Pink", "Janet Jackson"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which Colombian singer performed 'Hips Don't Lie'?",
+    "correct_answer": "Shakira",
+    "incorrect_answers": ["Jennifer Lopez", "Gloria Estefan", "Karol G"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which band released 'Yellow' and 'Viva La Vida'?",
+    "correct_answer": "Coldplay",
+    "incorrect_answers": ["The Killers", "Radiohead", "U2"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who released the hit 'Uptown Funk' with Mark Ronson?",
+    "correct_answer": "Bruno Mars",
+    "incorrect_answers": ["Jason Derulo", "Prince", "Justin Timberlake"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of Taylor Swift's fans?",
+    "correct_answer": "Swifties",
+    "incorrect_answers": ["Little Monsters", "Beliebers", "Arianators"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which former boy band member released the solo hit 'Cry Me a River'?",
+    "correct_answer": "Justin Timberlake",
+    "incorrect_answers": ["Nick Lachey", "JC Chasez", "Harry Styles"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist sang 'Call Me Maybe'?",
+    "correct_answer": "Carly Rae Jepsen",
+    "incorrect_answers": ["Rebecca Black", "Meghan Trainor", "Olivia Rodrigo"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who is the lead singer of the band Paramore?",
+    "correct_answer": "Hayley Williams",
+    "incorrect_answers": ["Amy Lee", "Gwen Stefani", "Avril Lavigne"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which rapper released 'Old Town Road' in 2019?",
+    "correct_answer": "Lil Nas X",
+    "incorrect_answers": ["Post Malone", "Travis Scott", "Drake"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which female group sang 'Say My Name' and 'Survivor'?",
+    "correct_answer": "Destiny's Child",
+    "incorrect_answers": ["The Pussycat Dolls", "Fifth Harmony", "Little Mix"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang the 2002 hit 'Complicated'?",
+    "correct_answer": "Avril Lavigne",
+    "incorrect_answers": ["Michelle Branch", "Vanessa Carlton", "Kelly Clarkson"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which Disney star released 'Come & Get It' and 'Lose You to Love Me'?",
+    "correct_answer": "Selena Gomez",
+    "incorrect_answers": ["Demi Lovato", "Miley Cyrus", "Zendaya"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What was the first names of the 'Jonas Brothers'?",
+    "correct_answer": "Kevin, Joe, and Nick",
+    "incorrect_answers": ["Kevin, Joe, and Brian", "Nick, Joe, and AJ", "Nick, Joe, and Sam"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who released the hit album 'Future Nostalgia' in 2020?",
+    "correct_answer": "Dua Lipa",
+    "incorrect_answers": ["Bebe Rexha", "Rita Ora", "Anne-Marie"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist is known for 'Drivers License' and 'Vampire'?",
+    "correct_answer": "Olivia Rodrigo",
+    "incorrect_answers": ["Sabrina Carpenter", "Tate McRae", "Billie Eilish"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which rapper's real name is Marshall Mathers?",
+    "correct_answer": "Eminem",
+    "incorrect_answers": ["Jay-Z", "50 Cent", "Dr. Dre"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang 'Wrecking Ball' in 2013?",
+    "correct_answer": "Miley Cyrus",
+    "incorrect_answers": ["Sia", "Lorde", "Pink"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which K-pop group is known for the song 'Dynamite'?",
+    "correct_answer": "BTS",
+    "incorrect_answers": ["EXO", "Stray Kids", "Blackpink"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang 'Since U Been Gone' after winning American Idol?",
+    "correct_answer": "Kelly Clarkson",
+    "incorrect_answers": ["Carrie Underwood", "Jordin Sparks", "Adam Lambert"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which female rapper released 'Super Bass'?",
+    "correct_answer": "Nicki Minaj",
+    "incorrect_answers": ["Missy Elliott", "Cardi B", "Megan Thee Stallion"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang 'Havana' and was a former member of Fifth Harmony?",
+    "correct_answer": "Camila Cabello",
+    "incorrect_answers": ["Normani", "Lauren Jauregui", "Becky G"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist released 'Royals' in 2013?",
+    "correct_answer": "Lorde",
+    "incorrect_answers": ["Birdy", "Banks", "Tove Lo"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which band released 'Believer' and 'Radioactive'?",
+    "correct_answer": "Imagine Dragons",
+    "incorrect_answers": ["Fall Out Boy", "Panic! At The Disco", "Bastille"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang the 2011 hit 'Someone Like You'?",
+    "correct_answer": "Adele",
+    "incorrect_answers": ["Duffy", "Jessie J", "Leona Lewis"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which song by Luis Fonsi and Daddy Yankee became a global hit in 2017?",
+    "correct_answer": "Despacito",
+    "incorrect_answers": ["Gasolina", "Mi Gente", "Taki Taki"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who is known for the hits 'Espresso' and 'Please Please Please' in 2024?",
+    "correct_answer": "Sabrina Carpenter",
+    "incorrect_answers": ["Gracie Abrams", "Chappell Roan", "Dove Cameron"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which male artist released 'Watermelon Sugar'?",
+    "correct_answer": "Harry Styles",
+    "incorrect_answers": ["Niall Horan", "Zayn Malik", "Liam Payne"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist had a hit with 'Bad Guy' while wearing baggy clothes?",
+    "correct_answer": "Billie Eilish",
+    "incorrect_answers": ["Melanie Martinez", "Willow Smith", "Lizzo"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who sang 'Beautiful' and 'Genie in a Bottle'?",
+    "correct_answer": "Christina Aguilera",
+    "incorrect_answers": ["Britney Spears", "Jessica Simpson", "Mariah Carey"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which song by Pharrell Williams asks listeners to 'clap along'?",
+    "correct_answer": "Happy",
+    "incorrect_answers": ["Lucky", "Get Lucky", "Blurred Lines"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which artist holds the record for the most Grammys won in a single night by a female artist (6), achieved in 2010?",
+    "correct_answer": "Beyoncé",
+    "incorrect_answers": ["Adele", "Taylor Swift", "Lady Gaga"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was the name of Amy Winehouse's second and final studio album, released in 2006?",
+    "correct_answer": "Back to Black",
+    "incorrect_answers": ["Frank", "Lioness", "Valerie"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "In 2017, which artist's 'Divide' tour became the highest-grossing concert tour of all time at the time?",
+    "correct_answer": "Ed Sheeran",
+    "incorrect_answers": ["U2", "The Rolling Stones", "Taylor Swift"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which pop star made their film debut in the 2002 movie 'Crossroads'?",
+    "correct_answer": "Britney Spears",
+    "incorrect_answers": ["Christina Aguilera", "Mandy Moore", "Jessica Simpson"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the alter ego Beyoncé introduced for her 2008 double album?",
+    "correct_answer": "Sasha Fierce",
+    "incorrect_answers": ["Mrs. Carter", "Yoncé", "Honey Bee"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which band's 2004 album 'American Idiot' was turned into a Broadway musical?",
+    "correct_answer": "Green Day",
+    "incorrect_answers": ["Blink-182", "The Killers", "Fall Out Boy"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist’s real name is Stefani Joanne Angelina Germanotta?",
+    "correct_answer": "Lady Gaga",
+    "incorrect_answers": ["Madonna", "Halsey", "Gwen Stefani"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was the first music video to reach 1 billion views on YouTube?",
+    "correct_answer": "Gangnam Style",
+    "incorrect_answers": ["Baby", "Despacito", "Roar"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "In which city was the singer Rihanna born?",
+    "correct_answer": "Saint Michael",
+    "incorrect_answers": ["Kingston", "Bridgetown", "San Juan"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist released the 2016 'visual album' titled 'Lemonade'?",
+    "correct_answer": "Beyoncé",
+    "incorrect_answers": ["Solange", "Rihanna", "Janelle Monáe"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Before her solo career, Camila Cabello was a member of which girl group?",
+    "correct_answer": "Fifth Harmony",
+    "incorrect_answers": ["Little Mix", "The Pussycat Dolls", "G.R.L."],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which song stayed at #1 on the Billboard Hot 100 for a record 19 weeks in 2019?",
+    "correct_answer": "Old Town Road",
+    "incorrect_answers": ["Despacito", "Uptown Funk", "Shape of You"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was the name of Justin Timberlake's debut solo studio album?",
+    "correct_answer": "Justified",
+    "incorrect_answers": ["FutureSex/LoveSounds", "The 20/20 Experience", "Man of the Woods"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist is the youngest person to ever win the 'Big Four' Grammy categories in one night?",
+    "correct_answer": "Billie Eilish",
+    "incorrect_answers": ["Taylor Swift", "Adele", "Sam Smith"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which 2000s pop-punk band's lead singer is Gerard Way?",
+    "correct_answer": "My Chemical Romance",
+    "incorrect_answers": ["The Used", "Panic! At The Disco", "Fall Out Boy"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "In 2024, Taylor Swift broke the record for most 'Album of the Year' wins at the Grammys. How many does she have?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which female artist released the albums 'The Fame' and 'The Fame Monster'?",
+    "correct_answer": "Lady Gaga",
+    "incorrect_answers": ["Katy Perry", "Kesha", "Sia"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who is the only artist to have seven consecutive #1 singles on the Billboard Hot 100?",
+    "correct_answer": "Whitney Houston",
+    "incorrect_answers": ["Mariah Carey", "Katy Perry", "The Beatles"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist's 2013 hit 'Royals' made her the youngest solo artist to have a US #1 since 1987?",
+    "correct_answer": "Lorde",
+    "incorrect_answers": ["Billie Eilish", "Olivia Rodrigo", "Halsey"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the real name of the artist known as The Weeknd?",
+    "correct_answer": "Abel Tesfaye",
+    "incorrect_answers": ["Aubrey Graham", "Christopher Breaux", "Khalid Robinson"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which pop star's father was a member of the country-rock band The Sky Kings?",
+    "correct_answer": "Katy Perry",
+    "incorrect_answers": ["Miley Cyrus", "Taylor Swift", "Lady Gaga"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which 2000s song features the lyric 'I'm coming out so you better get this party started'?",
+    "correct_answer": "Get the Party Started by P!nk",
+    "incorrect_answers": ["Just Dance by Lady Gaga", "Dirrty by Christina Aguilera", "Toxic by Britney Spears"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which British artist is behind the albums '19', '21', '25', and '30'?",
+    "correct_answer": "Adele",
+    "incorrect_answers": ["Sam Smith", "Ed Sheeran", "Duffy"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which rapper's 2003 debut album was titled 'Get Rich or Die Tryin'?",
+    "correct_answer": "50 Cent",
+    "incorrect_answers": ["The Game", "Eminem", "Ludacris"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who was the first female artist to have five #1 singles from one album?",
+    "correct_answer": "Katy Perry",
+    "incorrect_answers": ["Madonna", "Whitney Houston", "Taylor Swift"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "In the song 'Empire State of Mind', Jay-Z features which female singer on the chorus?",
+    "correct_answer": "Alicia Keys",
+    "incorrect_answers": ["Beyoncé", "Rihanna", "Mary J. Blige"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which band released 'Mr. Brightside' in 2003?",
+    "correct_answer": "The Killers",
+    "incorrect_answers": ["The Strokes", "Kings of Leon", "Franz Ferdinand"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of Miley Cyrus's 2023 hit that broke Spotify streaming records?",
+    "correct_answer": "Flowers",
+    "incorrect_answers": ["Midnight Sky", "Used to be Young", "Malibu"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist is known as the 'Main Pop Girl' and sang 'Espresso'?",
+    "correct_answer": "Sabrina Carpenter",
+    "incorrect_answers": ["Dove Cameron", "Olivia Rodrigo", "Sofia Carson"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which Swedish producer is responsible for hits like '...Baby One More Time' and 'Shake It Off'?",
+    "correct_answer": "Max Martin",
+    "incorrect_answers": ["Benny Blanco", "Dr. Luke", "Jack Antonoff"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was the name of the debut album by Panic! At The Disco?",
+    "correct_answer": "A Fever You Can't Sweat Out",
+    "incorrect_answers": ["Pretty. Odd.", "Vices & Virtues", "Death of a Bachelor"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist sang 'Elastic Heart' and 'Chandelier'?",
+    "correct_answer": "Sia",
+    "incorrect_answers": ["Lana Del Rey", "Florence Welch", "Marina"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the real name of the rapper Cardi B?",
+    "correct_answer": "Belcalis Almanzar",
+    "incorrect_answers": ["Onika Maraj", "Amala Dlamini", "Megan Pete"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which pop group's fan base is known as the 'Barbz'?",
+    "correct_answer": "Nicki Minaj",
+    "incorrect_answers": ["Ariana Grande", "Doja Cat", "Megan Thee Stallion"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which singer's 2021 debut album is titled 'Sour'?",
+    "correct_answer": "Olivia Rodrigo",
+    "incorrect_answer": ["Gaye Su Akyol", "Billie Eilish", "Tate McRae"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which 2000s girl group featured Nicole Scherzinger as the lead singer?",
+    "correct_answer": "The Pussycat Dolls",
+    "incorrect_answers": ["Danity Kane", "Sugababes", "Girls Aloud"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the title of the 2011 Lady Gaga album that sold 1 million copies in its first week?",
+    "correct_answer": "Born This Way",
+    "incorrect_answers": ["Artpop", "Joanne", "Chromatica"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist's 2024 tour is called 'The Short n' Sweet Tour'?",
+    "correct_answer": "Sabrina Carpenter",
+    "incorrect_answers": ["Chappell Roan", "Charli XCX", "Billie Eilish"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was the name of the band Gwen Stefani was in before going solo?",
+    "correct_answer": "No Doubt",
+    "incorrect_answers": ["Hole", "Garbage", "The Cardigans"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "In 2012, which artist won the Grammy for Album of the Year for '21'?",
+    "correct_answer": "Adele",
+    "incorrect_answers": ["Lady Gaga", "Bruno Mars", "Rihanna"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which pop star owns a cosmetics brand called 'Fenty Beauty'?",
+    "correct_answer": "Rihanna",
+    "incorrect_answers": ["Selena Gomez", "Ariana Grande", "Halsey"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the 2024 album by Charli XCX that sparked the 'brat' trend?",
+    "correct_answer": "BRAT",
+    "incorrect_answers": ["CRASH", "How I'm Feeling Now", "Sucker"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist's 2019 hit 'Truth Hurts' became a #1 two years after its release?",
+    "correct_answer": "Lizzo",
+    "incorrect_answers": ["SZA", "Doja Cat", "H.E.R."],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was the name of the lead single from Kelly Clarkson's second album, 'Breakaway'?",
+    "correct_answer": "Since U Been Gone",
+    "incorrect_answers": ["Behind These Hazel Eyes", "Walk Away", "Because of You"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which rapper released 'The College Dropout' in 2004?",
+    "correct_answer": "Kanye West",
+    "incorrect_answers": ["Jay-Z", "Kendrick Lamar", "Pharrell"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist voiced the character Smurfette in 'The Smurfs' (2011)?",
+    "correct_answer": "Katy Perry",
+    "incorrect_answers": ["Britney Spears", "Taylor Swift", "Selena Gomez"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the 2022 album by Harry Styles that features 'As It Was'?",
+    "correct_answer": "Harry's House",
+    "incorrect_answers": ["Fine Line", "Styles", "Golden"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which female artist had a 2014 hit with 'Fancy' featuring Charli XCX?",
+    "correct_answer": "Iggy Azalea",
+    "incorrect_answers": ["Nicki Minaj", "M.I.A.", "Bebe Rexha"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who released the hit song 'Hozier' in 2013?",
+    "correct_answer": "Take Me to Church",
+    "incorrect_answers": ["Work Song", "Someone New", "Nina Cried Power"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which artist's 2024 'Eras Tour' became the first tour to cross $1 billion in revenue?",
+    "correct_answer": "Taylor Swift",
+    "incorrect_answers": ["Beyoncé", "The Weeknd", "Coldplay"],
+    "difficulty": "medium"
+  }
+
+]
