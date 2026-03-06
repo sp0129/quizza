@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Quizza",
+    "slug": "quizza",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0a0b14"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.quizza.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0a0b14"
+      },
+      "package": "com.quizza.app"
+    },
+    "scheme": "quizza"
+  }
+}
