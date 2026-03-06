@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  ScrollView, Share, ActivityIndicator,
+  ScrollView, Share, ActivityIndicator, Dimensions,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Clipboard from 'expo-clipboard';
@@ -435,21 +435,26 @@ export default function RoomScreen({ route, navigation }: Props) {
         <Text style={s.qCounter}>{currentIndex + 1} / {questions.length}</Text>
       </View>
 
-      {/* Question */}
-      <View style={s.questionWrap}>
+      {/* Question — scrollable, fills remaining space */}
+      <ScrollView
+        style={s.flex}
+        contentContainerStyle={s.questionScrollContent}
+        scrollEnabled
+        showsVerticalScrollIndicator={false}
+      >
         <Text style={s.questionText}>{question.question}</Text>
-      </View>
+      </ScrollView>
 
       {/* Mascot */}
       <View style={s.mascotCenter}>
-        <PizzaMascot key={mascotKey} mood={mascotMood} size={90} />
+        <PizzaMascot key={mascotKey} mood={mascotMood} size={85} />
       </View>
 
-      {/* Answers */}
+      {/* Answers — fixed at bottom */}
       <View style={[s.answersWrap, { paddingBottom: insets.bottom + 16 }]}>
         {question.all_answers.map((answer, i) => {
           let ansStyle = [s.answerPill];
-          if (selectedAnswer) {
+          if (selectedAnswer && lastCorrect !== null) {
             if (lastCorrect === true && answer === selectedAnswer) ansStyle = [s.answerPill, s.answerCorrect];
             else if (lastCorrect === false && answer === selectedAnswer) ansStyle = [s.answerPill, s.answerWrong];
           }
@@ -526,14 +531,14 @@ const s = StyleSheet.create({
   scorePill: { backgroundColor: 'rgba(255,255,255,0.06)', paddingHorizontal: 12, paddingVertical: 5, borderRadius: 20, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
   scorePillText: { color: colors.textPrimary, fontSize: 13, fontWeight: '600' },
   qCounter: { color: colors.textMuted, fontSize: 13 },
-  questionWrap: { paddingHorizontal: 20, marginBottom: 8 },
-  questionText: { color: colors.textPrimary, fontSize: 17, fontWeight: '600', lineHeight: 25, textAlign: 'center' },
-  mascotCenter: { alignItems: 'center', marginBottom: 4 },
-  answersWrap: { paddingHorizontal: 16, gap: 8 },
-  answerPill: { backgroundColor: 'rgba(255,255,255,0.07)', borderRadius: 14, padding: 14, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', alignItems: 'center' },
-  answerCorrect: { backgroundColor: 'rgba(34,197,94,0.2)', borderColor: colors.green },
-  answerWrong: { backgroundColor: 'rgba(239,68,68,0.2)', borderColor: colors.red },
-  answerText: { color: colors.textPrimary, fontSize: 14, fontWeight: '500', textAlign: 'center' },
+  questionScrollContent: { flexGrow: 1, justifyContent: 'center', paddingHorizontal: 20, paddingVertical: 12 },
+  questionText: { color: colors.textPrimary, fontSize: 19, fontWeight: '600', lineHeight: 28, textAlign: 'center' },
+  mascotCenter: { alignItems: 'center', paddingVertical: 8 },
+  answersWrap: { paddingHorizontal: 16, gap: 10 },
+  answerPill: { backgroundColor: 'rgba(255,255,255,0.13)', borderRadius: 14, padding: 16, borderWidth: 1, borderColor: 'rgba(255,255,255,0.25)', alignItems: 'center' },
+  answerCorrect: { backgroundColor: 'rgba(34,197,94,0.3)', borderColor: colors.green, borderWidth: 2 },
+  answerWrong: { backgroundColor: 'rgba(239,68,68,0.3)', borderColor: colors.red, borderWidth: 2 },
+  answerText: { color: colors.textPrimary, fontSize: 15, fontWeight: '500', textAlign: 'center' },
   waitingMsg: { color: colors.textMuted, fontSize: 14, textAlign: 'center', marginTop: 4 },
   // Finished
   finishedContainer: { alignItems: 'center', gap: 16, padding: 20 },
