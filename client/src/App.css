@@ -585,6 +585,16 @@ body {
   letter-spacing: 0.02em;
 }
 
+.lobby-invite-row {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.lobby-invite-row .btn {
+  flex: 1;
+}
+
 .room-code-display {
   display: flex;
   align-items: center;

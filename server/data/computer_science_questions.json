@@ -513,7 +513,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "What does 'RAM primarily do for a computer?",
+      "question": "What does RAM primarily do for a computer?",
       "correct_answer": "Temporarily stores data for quick access by the CPU",
       "incorrect_answers": ["Permanently stores files", "Processes graphics", "Manages network connections"],
       "difficulty": "easy"

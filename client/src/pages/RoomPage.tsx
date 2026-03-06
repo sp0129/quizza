@@ -264,19 +264,35 @@ export default function RoomPage() {
     });
   };
 
+  const inviteUrl = () => `${window.location.origin}/join/${roomCode}`;
+
   const shareLink = () => {
     if (!roomCode) return;
-    const url = `${window.location.origin}/join/${roomCode}`;
+    const url = inviteUrl();
     navigator.clipboard.writeText(url)
       .then(() => {
         setLinkCopied(true);
         setTimeout(() => setLinkCopied(false), 2500);
       })
       .catch(() => {
-        // Clipboard API unavailable (non-HTTPS or blocked) — show URL as fallback
         window.prompt('Copy this invite link:', url);
       });
   };
+
+  const nativeShare = async () => {
+    if (!roomCode) return;
+    try {
+      await navigator.share({
+        title: 'Join my Quizza room!',
+        text: `Join my quiz — room code: ${roomCode}`,
+        url: inviteUrl(),
+      });
+    } catch {
+      // User cancelled or share failed — no-op
+    }
+  };
+
+  const canNativeShare = typeof navigator !== 'undefined' && !!navigator.share;
 
   // ── LOBBY ──
   if (phase === 'lobby') {
@@ -307,9 +323,20 @@ export default function RoomPage() {
               <span className="room-code-value">{roomCode}</span>
               <button className="btn btn-ghost btn-sm" onClick={copyCode}>{copied ? '✓ Copied' : 'Copy'}</button>
             </div>
-            <button className="btn btn-ghost btn-block" onClick={shareLink} disabled={!roomCode} style={{ marginTop: '0.5rem' }}>
-              {linkCopied ? '✓ Link Copied!' : '🔗 Copy Invite Link'}
-            </button>
+            <div className="lobby-invite-row">
+              {canNativeShare && (
+                <button className="btn btn-ghost" onClick={nativeShare} disabled={!roomCode}>
+                  📤 Share
+                </button>
+              )}
+              <button
+                className={`btn btn-ghost${canNativeShare ? '' : ' btn-block'}`}
+                onClick={shareLink}
+                disabled={!roomCode}
+              >
+                {linkCopied ? '✓ Copied!' : '🔗 Copy Link'}
+              </button>
+            </div>
             <p className="text-muted text-center" style={{ marginTop: '0.4rem' }}>
               Friends click the link, pick a name, and join instantly — no account needed.
             </p>
