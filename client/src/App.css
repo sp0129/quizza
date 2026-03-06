@@ -665,38 +665,110 @@ body {
   white-space: nowrap;
 }
 
+/* ── Room winner banner ─────────────────────────────────── */
+.room-winner-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  background: linear-gradient(135deg, rgba(251,191,36,0.18) 0%, rgba(245,158,11,0.08) 100%);
+  border: 1px solid rgba(251,191,36,0.40);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-8);
+  box-shadow: 0 0 32px rgba(251,191,36,0.15);
+  animation: winner-pulse 2s ease-in-out infinite;
+}
+.room-winner-banner--tie {
+  background: linear-gradient(135deg, rgba(56,189,248,0.18) 0%, rgba(14,165,233,0.08) 100%);
+  border-color: rgba(56,189,248,0.40);
+  box-shadow: 0 0 32px rgba(56,189,248,0.15);
+  animation: none;
+}
+@keyframes winner-pulse {
+  0%, 100% { box-shadow: 0 0 32px rgba(251,191,36,0.15); }
+  50%       { box-shadow: 0 0 48px rgba(251,191,36,0.35); }
+}
+.room-winner-crown  { font-size: 2.2rem; line-height: 1; }
+.room-winner-name   {
+  font-size: var(--font-xl);
+  font-weight: var(--weight-black);
+  color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251,191,36,0.60);
+  letter-spacing: 0.02em;
+}
+.room-winner-label  {
+  font-size: var(--font-xl);
+  font-weight: var(--weight-black);
+  color: var(--cyan-hi);
+  text-shadow: 0 0 20px rgba(56,189,248,0.60);
+}
+.room-winner-score  {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-bold);
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
 /* ── Room final leaderboard ─────────────────────────────── */
 .room-leaderboard-final {
   width: 100%;
   max-width: 380px;
   background: var(--bg-surface-alt);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-4);
   box-shadow: var(--shadow-card), var(--shadow-card-inner);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 .leaderboard-title {
   font-size: var(--font-md);
   font-weight: var(--weight-extrabold);
   color: var(--text-accent);
   text-align: center;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-1);
   text-shadow: 0 0 14px rgba(100,180,255,0.40);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .leaderboard-row {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--border-subtle);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.03);
 }
-.leaderboard-row:last-child { border-bottom: none; }
-.rank-1 .lb-name { color: #fbbf24; font-weight: var(--weight-extrabold); text-shadow: 0 0 12px rgba(251,191,36,0.40); }
-.rank-2 .lb-name { color: #94a3b8; font-weight: var(--weight-bold); }
-.rank-3 .lb-name { color: #cd7c3f; font-weight: var(--weight-bold); }
-.lb-rank  { font-size: var(--font-lg); min-width: 2rem; }
-.lb-name  { flex: 1; font-size: var(--font-base); color: var(--text-accent); }
-.lb-score { font-size: var(--font-sm); font-weight: var(--weight-bold); color: var(--text-muted); }
+.rank-1.leaderboard-row { background: rgba(251,191,36,0.10); border: 1px solid rgba(251,191,36,0.25); }
+.rank-2.leaderboard-row { background: rgba(148,163,184,0.08); border: 1px solid rgba(148,163,184,0.20); }
+.rank-3.leaderboard-row { background: rgba(205,124,63,0.08); border: 1px solid rgba(205,124,63,0.20); }
+.rank-1 .lb-name { color: #fbbf24; font-weight: var(--weight-extrabold); text-shadow: 0 0 10px rgba(251,191,36,0.40); }
+.rank-2 .lb-name { color: #cbd5e1; font-weight: var(--weight-bold); }
+.rank-3 .lb-name { color: #e8a87c; font-weight: var(--weight-bold); }
+.lb-rank  { font-size: var(--font-lg); min-width: 2rem; text-align: center; }
+.lb-name  { flex: 1; font-size: var(--font-base); color: var(--text-accent); display: flex; align-items: center; gap: var(--space-2); }
+.lb-you   {
+  font-size: 0.65rem;
+  font-weight: var(--weight-bold);
+  background: rgba(56,189,248,0.20);
+  color: var(--cyan-hi);
+  border: 1px solid rgba(56,189,248,0.35);
+  border-radius: var(--radius-full);
+  padding: 1px 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.lb-score-pill {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 2px 10px;
+  white-space: nowrap;
+}
 
 /* ════════════════════════════════════════════════════════════
    SPEECH BUBBLE

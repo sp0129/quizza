@@ -17,6 +17,8 @@ const ID_MAP: Record<number, CategoryTheme> = {
   2002: { gradient: 'linear-gradient(135deg, #82ac91 0%, #a8b1aa 100%)', accent: '#0f7233', emoji: '🧬' }, // Biology
   2003: { gradient: 'linear-gradient(135deg, #a395b2 0%, #b1aab2 100%)', accent: '#6623a3', emoji: '⚡' }, // Harry Potter
   2004: { gradient: 'linear-gradient(135deg, #a1a09f 0%, #afafae 100%)', accent: '#9a1a1a', emoji: '🐉' }, // Game of Thrones
+  2005: { gradient: 'linear-gradient(135deg, #b18d8d 0%, #b2a8a8 100%)', accent: '#9a1a1a', emoji: '🦸' }, // Marvel Movies
+  2006: { gradient: 'linear-gradient(135deg, #c47eb5 0%, #b19ab1 100%)', accent: '#9b1a9b', emoji: '🎤' }, // Pop Music
   9:  { gradient: 'linear-gradient(135deg, #82a1b1 0%, #a8aeb2 100%)', accent: '#015c8b', emoji: '🌍' }, // General Knowledge
   10: { gradient: 'linear-gradient(135deg, #9a95b1 0%, #abaab2 100%)', accent: '#5628a5', emoji: '📚' }, // Books
   11: { gradient: 'linear-gradient(135deg, #b1a160 0%, #b2afa4 100%)', accent: '#975304', emoji: '🎬' }, // Film
@@ -58,6 +60,7 @@ const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
   ['nature',          { gradient: 'linear-gradient(135deg, #82ac91 0%, #a8b1aa 100%)', accent: '#0f7233', emoji: '🌿' }],
   ['history',         { gradient: 'linear-gradient(135deg, #b19676 0%, #b2a595 100%)', accent: '#872d08', emoji: '⚔️' }],
   ['sport',           { gradient: 'linear-gradient(135deg, #82a1b1 0%, #9ca9b1 100%)', accent: '#015c8b', emoji: '⚽' }],
+  ['pop music',       { gradient: 'linear-gradient(135deg, #c47eb5 0%, #b19ab1 100%)', accent: '#9b1a9b', emoji: '🎤' }],
   ['music',           { gradient: 'linear-gradient(135deg, #a395b2 0%, #b1aab2 100%)', accent: '#6623a3', emoji: '🎵' }],
   ['film',            { gradient: 'linear-gradient(135deg, #b1a160 0%, #b2afa4 100%)', accent: '#975304', emoji: '🎬' }],
   ['movie',           { gradient: 'linear-gradient(135deg, #b1a160 0%, #b2afa4 100%)', accent: '#975304', emoji: '🎬' }],
@@ -117,6 +120,7 @@ export const CATEGORY_SORT_ORDER: number[] = [
   11,   // Film
   14,   // Television
   12,   // Music
+  2006, // Pop Music
   13,   // Musicals
   15,   // Video Games
   16,   // Board Games

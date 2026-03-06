@@ -5,6 +5,7 @@ import PizzaMascot from '../components/PizzaMascot';
 import Sparkles from '../components/Sparkles';
 import { playGibberish } from '../utils/sounds';
 import { getCategoryTheme } from '../utils/categoryThemes';
+import { useAuth } from '../hooks/useAuth';
 
 interface Question {
   question: string;
@@ -33,6 +34,7 @@ export default function RoomPage() {
   const { roomId } = useParams<{ roomId: string }>();
   const [params] = useSearchParams();
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   const isHost = params.get('host') === 'true';
   const questionSetId = params.get('qsid');
@@ -355,24 +357,55 @@ export default function RoomPage() {
 
   // ── FINISHED ──
   if (phase === 'finished') {
+    const topScore = leaderboard[0]?.score ?? 0;
+    const isTie = leaderboard.filter(e => e.score === topScore).length > 1;
+    const winner = isTie ? null : leaderboard[0];
+    const isCurrentUserWinner = !isTie && winner?.username === user?.username;
+
+    const bubbleText = isTie
+      ? "It's a tie! 🤝"
+      : isCurrentUserWinner
+        ? 'You win! 🎉'
+        : `${winner?.username} wins! 🏆`;
+    const finalMood = isTie || isCurrentUserWinner ? 'celebrating' : 'thinking';
+
     return (
       <div className="game-gradient-wrapper">
         <Sparkles />
         <div className="game-over">
           <div className="game-over-mascot">
-            <div className="speech-bubble">Game Over! 🎉</div>
-            <PizzaMascot mood="celebrating" size={130} className="mascot-celebrating" />
+            <div className="speech-bubble">{bubbleText}</div>
+            <PizzaMascot mood={finalMood} size={130} className={`mascot-${finalMood}`} />
           </div>
+
+          {isTie ? (
+            <div className="room-winner-banner room-winner-banner--tie">
+              <span className="room-winner-crown">🤝</span>
+              <span className="room-winner-label">It's a Tie!</span>
+              <span className="room-winner-score">{topScore} pts each</span>
+            </div>
+          ) : winner && (
+            <div className="room-winner-banner">
+              <span className="room-winner-crown">👑</span>
+              <span className="room-winner-name">{winner.username}</span>
+              <span className="room-winner-score">{winner.score} pts</span>
+            </div>
+          )}
+
           <div className="room-leaderboard-final">
-            <h2 className="leaderboard-title">Final Leaderboard</h2>
+            <h2 className="leaderboard-title">Final Scores</h2>
             {leaderboard.map((entry, i) => (
               <div key={entry.username} className={`leaderboard-row rank-${i + 1}`}>
                 <span className="lb-rank">{i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}.`}</span>
-                <span className="lb-name">{entry.username}</span>
-                <span className="lb-score">{entry.score} pts</span>
+                <span className="lb-name">
+                  {entry.username}
+                  {entry.username === user?.username && <span className="lb-you"> you</span>}
+                </span>
+                <span className="lb-score-pill">{entry.score} pts</span>
               </div>
             ))}
           </div>
+
           <button className="btn btn-ghost" onClick={() => navigate('/')}>Back to Dashboard</button>
         </div>
       </div>
