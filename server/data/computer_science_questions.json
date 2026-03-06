@@ -1,0 +1,1056 @@
+{
+  "category": "Computer Science",
+  "category_id": 2007,
+  "questions": [
+    {
+      "question": "What does CPU stand for?",
+      "correct_answer": "Central Processing Unit",
+      "incorrect_answers": ["Computer Processing Unit", "Central Program Unit", "Core Processing Unit"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does RAM stand for?",
+      "correct_answer": "Random Access Memory",
+      "incorrect_answers": ["Read Access Memory", "Rapid Access Memory", "Random Array Memory"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many bits are in a byte?",
+      "correct_answer": "8",
+      "incorrect_answers": ["4", "16", "32"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does HTML stand for?",
+      "correct_answer": "HyperText Markup Language",
+      "incorrect_answers": ["High Transfer Markup Language", "HyperText Making Language", "High Text Markup Language"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does CSS stand for?",
+      "correct_answer": "Cascading Style Sheets",
+      "incorrect_answers": ["Creative Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does URL stand for?",
+      "correct_answer": "Uniform Resource Locator",
+      "incorrect_answers": ["Universal Resource Locator", "Unified Resource Link", "Uniform Routing Link"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does HTTP stand for?",
+      "correct_answer": "HyperText Transfer Protocol",
+      "incorrect_answers": ["High Transfer Text Protocol", "HyperText Transmission Protocol", "Hyperlink Transfer Protocol"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What data type stores a True or False value?",
+      "correct_answer": "Boolean",
+      "incorrect_answers": ["Integer", "String", "Float"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the first index of an array in most programming languages?",
+      "correct_answer": "0",
+      "incorrect_answers": ["1", "-1", "2"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does OS stand for?",
+      "correct_answer": "Operating System",
+      "incorrect_answers": ["Open Software", "Online Service", "Output System"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who created the Python programming language?",
+      "correct_answer": "Guido van Rossum",
+      "incorrect_answers": ["Linus Torvalds", "James Gosling", "Bjarne Stroustrup"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does USB stand for?",
+      "correct_answer": "Universal Serial Bus",
+      "incorrect_answers": ["Unified System Bridge", "Universal System Board", "Unified Serial Base"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does SQL stand for?",
+      "correct_answer": "Structured Query Language",
+      "incorrect_answers": ["Simple Query Language", "Sequential Query Language", "Standard Query Logic"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does IP stand for in IP address?",
+      "correct_answer": "Internet Protocol",
+      "incorrect_answers": ["Internal Protocol", "Interface Port", "Internet Pathway"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does DNS stand for?",
+      "correct_answer": "Domain Name System",
+      "incorrect_answers": ["Digital Network Service", "Domain Network Server", "Data Name System"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ROM stand for?",
+      "correct_answer": "Read-Only Memory",
+      "incorrect_answers": ["Random Operating Memory", "Readable Output Memory", "Run-Only Memory"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does API stand for?",
+      "correct_answer": "Application Programming Interface",
+      "incorrect_answers": ["Automated Program Interaction", "Application Process Integration", "Applied Programming Index"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does IDE stand for in software development?",
+      "correct_answer": "Integrated Development Environment",
+      "incorrect_answers": ["Internal Design Editor", "Interactive Debug Engine", "Integrated Design Editor"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a bug in programming?",
+      "correct_answer": "An error or flaw in a program",
+      "incorrect_answers": ["A type of comment", "A security feature", "A variable declaration"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which company developed Java?",
+      "correct_answer": "Sun Microsystems",
+      "incorrect_answers": ["Microsoft", "Apple", "IBM"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does LAN stand for?",
+      "correct_answer": "Local Area Network",
+      "incorrect_answers": ["Large Area Node", "Linked Access Network", "Local Access Node"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary function of a compiler?",
+      "correct_answer": "Translates source code into machine code",
+      "incorrect_answers": ["Runs code line by line", "Debugs the program", "Stores program data"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many bytes are in a kilobyte (traditional)?",
+      "correct_answer": "1024",
+      "incorrect_answers": ["1000", "512", "2048"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of a loop in programming?",
+      "correct_answer": "To repeat a block of code",
+      "incorrect_answers": ["To store data", "To define a function", "To handle errors"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does HTTPS stand for?",
+      "correct_answer": "HyperText Transfer Protocol Secure",
+      "incorrect_answers": ["High Transfer Text Protocol Safe", "HyperText Transmission Protocol System", "HyperText Transfer Protected Standard"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a variable in programming?",
+      "correct_answer": "A named storage location for data",
+      "incorrect_answers": ["A type of loop", "A fixed constant value", "A programming language keyword"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the file extension for JavaScript files?",
+      "correct_answer": ".js",
+      "incorrect_answers": [".java", ".jscript", ".jsx"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the 'if' statement do in programming?",
+      "correct_answer": "Executes code conditionally based on a test",
+      "incorrect_answers": ["Repeats code a set number of times", "Defines a new function", "Imports a module"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does OOP stand for?",
+      "correct_answer": "Object-Oriented Programming",
+      "incorrect_answers": ["Organized Output Programming", "Objective-Operation Protocol", "Open Output Processing"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which company owns Android?",
+      "correct_answer": "Google",
+      "incorrect_answers": ["Apple", "Microsoft", "Samsung"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the 'cd' command do in a terminal?",
+      "correct_answer": "Changes the current directory",
+      "incorrect_answers": ["Creates a new directory", "Copies a file", "Clears the screen"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does VPN stand for?",
+      "correct_answer": "Virtual Private Network",
+      "incorrect_answers": ["Verified Public Node", "Virtual Protocol Network", "Variable Private Network"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What programming language is primarily used for front-end web development?",
+      "correct_answer": "JavaScript",
+      "incorrect_answers": ["Python", "Java", "PHP"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the file extension for Python files?",
+      "correct_answer": ".py",
+      "incorrect_answers": [".pt", ".pyth", ".pyt"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does JSON stand for?",
+      "correct_answer": "JavaScript Object Notation",
+      "incorrect_answers": ["Java Source Object Network", "JavaScript Online Notation", "Java Structured Object Node"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is recursion in programming?",
+      "correct_answer": "A function that calls itself",
+      "incorrect_answers": ["A type of loop", "A way to import modules", "A method to sort arrays"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the 'ls' command do in Linux?",
+      "correct_answer": "Lists files and directories",
+      "incorrect_answers": ["Loads a script", "Links files", "Logs system activity"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the result of 10 % 3 (modulo operation)?",
+      "correct_answer": "1",
+      "incorrect_answers": ["3", "0", "2"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'open source' mean?",
+      "correct_answer": "The source code is freely available to view and modify",
+      "incorrect_answers": ["The software costs nothing", "The software works on all platforms", "The code is stored in the cloud"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does BIOS stand for?",
+      "correct_answer": "Basic Input/Output System",
+      "incorrect_answers": ["Binary Integrated Operating System", "Built-In Operating Software", "Boot Input/Output Standard"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does SSD stand for?",
+      "correct_answer": "Solid-State Drive",
+      "incorrect_answers": ["Super Speed Disk", "Static Storage Device", "Sequential Storage Drive"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What programming language is primarily used for iOS app development?",
+      "correct_answer": "Swift",
+      "incorrect_answers": ["Objective-C", "Kotlin", "Java"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which data structure operates on a FIFO (First In First Out) basis?",
+      "correct_answer": "Queue",
+      "incorrect_answers": ["Stack", "Tree", "Heap"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which data structure operates on a LIFO (Last In First Out) basis?",
+      "correct_answer": "Stack",
+      "incorrect_answers": ["Queue", "Linked List", "Graph"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a library in programming?",
+      "correct_answer": "A collection of pre-written code for reuse",
+      "incorrect_answers": ["A place to store databases", "A type of loop structure", "A set of error messages"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does GUI stand for?",
+      "correct_answer": "Graphical User Interface",
+      "incorrect_answers": ["General Utility Interface", "Global User Index", "Graphical Utility Interaction"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is an algorithm?",
+      "correct_answer": "A step-by-step procedure to solve a problem",
+      "incorrect_answers": ["A type of programming language", "A hardware component", "A database structure"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does JPEG stand for?",
+      "correct_answer": "Joint Photographic Experts Group",
+      "incorrect_answers": ["Joint Picture Extension Graphics", "Java Processing Experts Group", "Joint Portable Encoding Graphics"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does PNG stand for?",
+      "correct_answer": "Portable Network Graphics",
+      "incorrect_answers": ["Picture Node Graphics", "Portable Node Graph", "Processed Network Graphics"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is debugging?",
+      "correct_answer": "The process of finding and fixing errors in code",
+      "incorrect_answers": ["Writing new features", "Compiling source code", "Deploying an application"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a string in programming?",
+      "correct_answer": "A sequence of characters",
+      "incorrect_answers": ["A whole number", "A decimal number", "A true or false value"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does WAN stand for?",
+      "correct_answer": "Wide Area Network",
+      "incorrect_answers": ["Wireless Access Node", "Web Application Network", "Wired Area Node"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a float in programming?",
+      "correct_answer": "A number that can have a decimal point",
+      "incorrect_answers": ["A whole number", "A sequence of characters", "A boolean value"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does CLI stand for?",
+      "correct_answer": "Command Line Interface",
+      "incorrect_answers": ["Computer Language Interpreter", "Code Load Interface", "Central Logic Input"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'null' typically represent in programming?",
+      "correct_answer": "The absence of a value",
+      "incorrect_answers": ["The number zero", "An empty string", "A false boolean"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of version control?",
+      "correct_answer": "To track changes in code over time",
+      "incorrect_answers": ["To compile code faster", "To encrypt source files", "To deploy applications"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most widely used version control system?",
+      "correct_answer": "Git",
+      "incorrect_answers": ["SVN", "Mercurial", "CVS"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a function in programming?",
+      "correct_answer": "A reusable block of code that performs a task",
+      "incorrect_answers": ["A type of variable", "A hardware component", "A database record"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What symbol is used for single-line comments in Python?",
+      "correct_answer": "#",
+      "incorrect_answers": ["//", "/*", "--"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a syntax error?",
+      "correct_answer": "An error caused by incorrect code structure",
+      "incorrect_answers": ["An error caused by wrong logic", "A runtime crash", "An out-of-memory error"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the 'import' statement do in Python?",
+      "correct_answer": "Loads a module so its code can be used",
+      "incorrect_answers": ["Exports a function", "Declares a variable", "Creates a loop"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does TCP stand for?",
+      "correct_answer": "Transmission Control Protocol",
+      "incorrect_answers": ["Transfer Communication Protocol", "Terminal Control Program", "Text Control Protocol"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does SSH stand for?",
+      "correct_answer": "Secure Shell",
+      "incorrect_answers": ["System Shell Host", "Secure Socket Handler", "Standard Shell Host"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does FTP stand for?",
+      "correct_answer": "File Transfer Protocol",
+      "incorrect_answers": ["Fast Transfer Program", "File Transmission Port", "Folder Transfer Protocol"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a comment in code?",
+      "correct_answer": "Text that is ignored during execution, used for documentation",
+      "incorrect_answers": ["A type of variable", "A function return value", "An error message"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the 'www' in a web address stand for?",
+      "correct_answer": "World Wide Web",
+      "incorrect_answers": ["Worldwide Web Wrapper", "Web Wide World", "World Web Wiring"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a pixel?",
+      "correct_answer": "The smallest individual element of a digital image",
+      "incorrect_answers": ["A unit of file size", "A type of font", "A network packet"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does UI stand for?",
+      "correct_answer": "User Interface",
+      "incorrect_answers": ["Universal Input", "Unified Interaction", "Unit Integration"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does PDF stand for?",
+      "correct_answer": "Portable Document Format",
+      "incorrect_answers": ["Printed Document File", "Public Data File", "Processed Document Format"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the keyboard shortcut to undo an action on Windows?",
+      "correct_answer": "Ctrl + Z",
+      "incorrect_answers": ["Ctrl + U", "Ctrl + X", "Alt + Z"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a database?",
+      "correct_answer": "An organized collection of structured data",
+      "incorrect_answers": ["A type of programming language", "A hardware storage device", "A network protocol"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'append' do to a list in Python?",
+      "correct_answer": "Adds an element to the end of the list",
+      "incorrect_answers": ["Removes the last element", "Inserts at the beginning", "Sorts the list"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the keyboard shortcut to copy text on most systems?",
+      "correct_answer": "Ctrl + C",
+      "incorrect_answers": ["Ctrl + P", "Ctrl + X", "Ctrl + V"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the binary representation of the decimal number 5?",
+      "correct_answer": "101",
+      "incorrect_answers": ["110", "011", "100"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does HDD stand for?",
+      "correct_answer": "Hard Disk Drive",
+      "incorrect_answers": ["High Density Data", "Hybrid Data Device", "Hard Data Directory"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'else' do in an if-else statement?",
+      "correct_answer": "Executes code when the if condition is false",
+      "incorrect_answers": ["Runs code before the if check", "Stops the program", "Creates a new variable"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of indentation in Python?",
+      "correct_answer": "To define code blocks",
+      "incorrect_answers": ["To improve readability only", "To mark comments", "To declare variables"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the '==' operator check?",
+      "correct_answer": "Whether two values are equal",
+      "incorrect_answers": ["Whether two values are assigned", "Whether a value is greater", "Whether a variable exists"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a for loop?",
+      "correct_answer": "A loop that iterates over a sequence or a fixed number of times",
+      "incorrect_answers": ["A loop that runs until a condition is false", "A function that returns a value", "A way to handle errors"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'print' do in Python?",
+      "correct_answer": "Displays output to the console",
+      "incorrect_answers": ["Saves output to a file", "Sends data to a printer", "Creates a variable"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the internet?",
+      "correct_answer": "A global network of interconnected computers",
+      "incorrect_answers": ["A single large server", "A type of software", "A wireless communication standard"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does GB stand for in computing?",
+      "correct_answer": "Gigabyte",
+      "incorrect_answers": ["Gigabit", "Gigaboard", "Graphical Block"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a boolean expression?",
+      "correct_answer": "An expression that evaluates to True or False",
+      "incorrect_answers": ["A numeric calculation", "A string operation", "A loop condition type"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the keyboard shortcut Ctrl+S typically do?",
+      "correct_answer": "Saves the current file",
+      "incorrect_answers": ["Opens search", "Closes the application", "Selects all text"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a syntax in programming?",
+      "correct_answer": "The set of rules that define valid code structure",
+      "incorrect_answers": ["The speed of a program", "The memory used by a program", "The output of a program"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'RAM primarily do for a computer?",
+      "correct_answer": "Temporarily stores data for quick access by the CPU",
+      "incorrect_answers": ["Permanently stores files", "Processes graphics", "Manages network connections"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of a README file?",
+      "correct_answer": "To describe and document a project",
+      "incorrect_answers": ["To store database records", "To configure the build system", "To list all dependencies"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the logical AND operator '&&' return?",
+      "correct_answer": "True only if both conditions are true",
+      "incorrect_answers": ["True if at least one condition is true", "The first true value", "Always true"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which programming language is most commonly used for data science and machine learning?",
+      "correct_answer": "Python",
+      "incorrect_answers": ["R", "Java", "MATLAB"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does a while loop do?",
+      "correct_answer": "Repeats code as long as a condition is true",
+      "incorrect_answers": ["Iterates over a list once", "Runs code a fixed number of times", "Executes code only once"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is an integer in programming?",
+      "correct_answer": "A whole number without a decimal point",
+      "incorrect_answers": ["A number with decimals", "A sequence of characters", "A true/false value"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'git clone' do?",
+      "correct_answer": "Copies a remote repository to your local machine",
+      "incorrect_answers": ["Creates a new branch", "Merges two branches", "Deletes a repository"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is an array?",
+      "correct_answer": "An ordered collection of elements",
+      "incorrect_answers": ["A key-value store", "A single numeric value", "A network address"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the NOT operator '!' do?",
+      "correct_answer": "Reverses a boolean value",
+      "incorrect_answers": ["Adds two values", "Checks equality", "Skips a loop iteration"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main programming language used for Android app development?",
+      "correct_answer": "Kotlin",
+      "incorrect_answers": ["Swift", "Python", "Ruby"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'git commit' do?",
+      "correct_answer": "Records a snapshot of staged changes to the repository",
+      "incorrect_answers": ["Uploads code to a remote server", "Creates a new branch", "Reverts the last change"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of a constructor in OOP?",
+      "correct_answer": "To initialize an object when it is created",
+      "incorrect_answers": ["To delete an object", "To copy an object", "To compare two objects"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does CRUD stand for in software development?",
+      "correct_answer": "Create, Read, Update, Delete",
+      "incorrect_answers": ["Copy, Run, Update, Deploy", "Create, Retrieve, Undo, Delete", "Compile, Run, Upload, Download"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the binary representation of decimal 8?",
+      "correct_answer": "1000",
+      "incorrect_answers": ["0111", "1001", "1010"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the time complexity of binary search?",
+      "correct_answer": "O(log n)",
+      "incorrect_answers": ["O(n)", "O(n²)", "O(1)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the worst-case time complexity of bubble sort?",
+      "correct_answer": "O(n²)",
+      "incorrect_answers": ["O(n log n)", "O(n)", "O(log n)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which data structure is typically used internally to implement recursion?",
+      "correct_answer": "Stack",
+      "incorrect_answers": ["Queue", "Heap", "Tree"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a hash table?",
+      "correct_answer": "A data structure that maps keys to values using a hash function",
+      "incorrect_answers": ["A sorted list of numbers", "A type of binary tree", "A graph of connected nodes"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between '==' and '===' in JavaScript?",
+      "correct_answer": "'==' checks value only; '===' checks value and type",
+      "incorrect_answers": ["They are identical in JavaScript", "'===' checks value only; '==' checks type too", "'===' is used for strings only"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a deadlock in operating systems?",
+      "correct_answer": "A state where two or more processes each wait for the other to release a resource",
+      "incorrect_answers": ["A program that crashes due to a null pointer", "An infinite loop with no exit condition", "A memory leak in a process"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is polymorphism in OOP?",
+      "correct_answer": "The ability of different objects to respond to the same interface in different ways",
+      "incorrect_answers": ["The process of hiding internal implementation", "A mechanism for a class to inherit from another", "The practice of writing code once and reusing it"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is inheritance in OOP?",
+      "correct_answer": "A mechanism where one class acquires properties and methods from another",
+      "incorrect_answers": ["Bundling data and methods into a single unit", "The ability to redefine a method in a subclass", "Creating multiple instances of a class"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between the stack and the heap in memory?",
+      "correct_answer": "Stack is used for static allocation; heap is used for dynamic allocation",
+      "incorrect_answers": ["Stack is slower than heap", "Heap is used for function call frames", "Stack stores global variables; heap stores local ones"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Big O notation used for?",
+      "correct_answer": "Describing the time or space complexity of an algorithm in terms of input size",
+      "incorrect_answers": ["Measuring actual execution time in milliseconds", "Comparing memory usage between two computers", "Specifying network bandwidth requirements"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a linked list?",
+      "correct_answer": "A data structure where each element contains data and a pointer to the next element",
+      "incorrect_answers": ["An array that automatically resizes", "A table of key-value pairs", "A sorted collection stored in contiguous memory"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of normalization in relational databases?",
+      "correct_answer": "To reduce data redundancy and improve data integrity",
+      "incorrect_answers": ["To encrypt sensitive data", "To speed up read queries", "To compress database files"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ACID stand for in the context of databases?",
+      "correct_answer": "Atomicity, Consistency, Isolation, Durability",
+      "incorrect_answers": ["Access, Concurrency, Integrity, Data", "Atomic, Cascading, Index, Delete", "Automation, Caching, Integration, Delivery"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a foreign key in a relational database?",
+      "correct_answer": "A field that references the primary key of another table",
+      "incorrect_answers": ["A unique identifier for each row", "An encrypted field", "An auto-incrementing column"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the key difference between TCP and UDP?",
+      "correct_answer": "TCP is reliable and connection-oriented; UDP is faster but unreliable",
+      "incorrect_answers": ["UDP guarantees delivery; TCP does not", "TCP is only used for video streaming", "UDP requires a three-way handshake"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does MVC stand for in software architecture?",
+      "correct_answer": "Model-View-Controller",
+      "incorrect_answers": ["Module-Version-Controller", "Main-View-Component", "Model-Variable-Control"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the average-case time complexity of quicksort?",
+      "correct_answer": "O(n log n)",
+      "incorrect_answers": ["O(n²)", "O(n)", "O(log n)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is encapsulation in OOP?",
+      "correct_answer": "Bundling data and the methods that operate on it into a single unit and restricting direct access",
+      "incorrect_answers": ["Allowing a class to inherit from multiple parents", "Overriding methods in a subclass", "Creating multiple objects from one class"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a pointer in C?",
+      "correct_answer": "A variable that stores the memory address of another variable",
+      "incorrect_answers": ["A variable that stores a boolean value", "A reference to a function return type", "A constant integer value"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of a garbage collector?",
+      "correct_answer": "To automatically reclaim memory that is no longer in use",
+      "incorrect_answers": ["To optimize loop performance", "To compress unused files on disk", "To clear the CPU cache"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a race condition?",
+      "correct_answer": "A bug where the outcome depends on unpredictable timing of concurrent operations",
+      "incorrect_answers": ["A performance bottleneck in the CPU", "An infinite loop caused by a bad condition", "A naming conflict between variables"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a process and a thread?",
+      "correct_answer": "A process is an independent program in execution; a thread is a lighter unit of execution within a process",
+      "incorrect_answers": ["A thread owns its own memory; a process shares memory", "They are the same thing in modern operating systems", "A process is faster than a thread"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does HTTP status code 404 mean?",
+      "correct_answer": "Not Found — the requested resource does not exist",
+      "incorrect_answers": ["Internal Server Error", "Unauthorized access", "Request timed out"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a closure in programming?",
+      "correct_answer": "A function that retains access to variables from its enclosing scope even after that scope has exited",
+      "incorrect_answers": ["A function with no return value", "A function that cannot be called recursively", "An anonymous function with no parameters"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is memoization?",
+      "correct_answer": "Caching the results of expensive function calls so repeated calls return the cached result",
+      "incorrect_answers": ["Compressing function arguments", "Pre-loading all functions at startup", "Randomly sampling function inputs"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Singleton design pattern?",
+      "correct_answer": "A pattern that ensures a class has only one instance and provides a global access point to it",
+      "incorrect_answers": ["A pattern that creates many instances of an object", "A pattern for chaining method calls", "A pattern that decouples object creation from usage"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is virtual memory?",
+      "correct_answer": "A memory management technique that uses disk space to simulate additional RAM",
+      "incorrect_answers": ["Memory built into the CPU", "Memory used only for graphics", "A type of read-only memory"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a compiled and an interpreted language?",
+      "correct_answer": "Compiled languages are translated entirely to machine code before running; interpreted ones are translated line by line at runtime",
+      "incorrect_answers": ["Compiled languages run slower than interpreted ones", "Interpreted languages cannot handle errors", "Compiled languages cannot be used on multiple platforms"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a regular expression?",
+      "correct_answer": "A sequence of characters that defines a pattern for searching or matching text",
+      "incorrect_answers": ["A mathematical formula used in algorithms", "A type of database query", "A named constant in programming"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is method overloading?",
+      "correct_answer": "Defining multiple methods with the same name but different parameter lists",
+      "incorrect_answers": ["Redefining a parent class method in a subclass", "Calling a method from inside itself", "Assigning a method to a variable"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the CAP theorem state for distributed systems?",
+      "correct_answer": "A distributed system can guarantee at most two of: Consistency, Availability, and Partition tolerance",
+      "incorrect_answers": ["All distributed systems must be consistent and available", "Partition tolerance is always sacrificed", "Consistency and availability are mutually exclusive"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of an index in a database?",
+      "correct_answer": "To speed up data retrieval by allowing faster lookups",
+      "incorrect_answers": ["To enforce unique constraints on a table", "To compress table data", "To back up data automatically"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a callback function?",
+      "correct_answer": "A function passed as an argument to another function and invoked at a later time",
+      "incorrect_answers": ["A function that returns another function", "A function that runs before main", "A function that only runs on errors"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does CORS stand for in web development?",
+      "correct_answer": "Cross-Origin Resource Sharing",
+      "incorrect_answers": ["Client-Origin Request System", "Cross-Object Resource Standard", "Centralized Origin Resource Service"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is dependency injection?",
+      "correct_answer": "Providing a class's dependencies from outside rather than having the class create them",
+      "incorrect_answers": ["Importing a library at runtime", "Hard-coding configuration values", "Injecting malicious code into a dependency"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a lambda function?",
+      "correct_answer": "A small anonymous function defined inline",
+      "incorrect_answers": ["A recursive function", "A function that returns multiple values", "A function stored in a database"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of 'try-catch' blocks?",
+      "correct_answer": "To handle exceptions gracefully and prevent program crashes",
+      "incorrect_answers": ["To speed up execution by skipping validation", "To declare global variables safely", "To test two code paths simultaneously"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does CRUD stand for and what SQL operation maps to 'Create'?",
+      "correct_answer": "CRUD is Create, Read, Update, Delete; 'Create' maps to INSERT",
+      "incorrect_answers": ["CRUD is Copy, Retrieve, Update, Delete; 'Create' maps to ADD", "CRUD is Create, Read, Update, Drop; 'Create' maps to NEW", "CRUD is Copy, Read, Undo, Delete; 'Create' maps to PUT"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the worst-case time complexity of merge sort?",
+      "correct_answer": "O(n log n)",
+      "incorrect_answers": ["O(n²)", "O(n)", "O(2^n)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does DFS stand for in graph algorithms?",
+      "correct_answer": "Depth-First Search",
+      "incorrect_answers": ["Data Flow System", "Direct File Search", "Distributed Function Service"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between DFS and BFS in graph traversal?",
+      "correct_answer": "DFS explores as deep as possible before backtracking; BFS explores all neighbors level by level",
+      "incorrect_answers": ["DFS is always faster than BFS", "BFS uses a stack; DFS uses a queue", "They produce identical results on all graphs"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a promise in JavaScript?",
+      "correct_answer": "An object that represents the eventual completion or failure of an asynchronous operation",
+      "incorrect_answers": ["A guarantee that a function will not throw an error", "A synchronous function wrapper", "A way to declare constants"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is immutability in programming?",
+      "correct_answer": "The property where an object's state cannot be modified after it is created",
+      "incorrect_answers": ["The ability of a variable to hold any type", "A data structure that cannot be read", "A function that always returns the same type"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a context switch in operating systems?",
+      "correct_answer": "The process of saving and restoring a process's state so the CPU can switch between processes",
+      "incorrect_answers": ["Switching between user and kernel mode", "Changing the active display output", "Transferring data between memory and disk"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a mutex?",
+      "correct_answer": "A synchronization primitive that prevents multiple threads from accessing a shared resource simultaneously",
+      "incorrect_answers": ["A method that mutates an object", "A type of database transaction", "A compressed memory block"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is SQL injection?",
+      "correct_answer": "An attack where malicious SQL code is inserted into an input to manipulate a database",
+      "incorrect_answers": ["A technique to speed up SQL queries", "A method to back up a database", "A way to connect two databases"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of load balancing?",
+      "correct_answer": "To distribute incoming network traffic across multiple servers to ensure no single server is overwhelmed",
+      "incorrect_answers": ["To compress data before sending it", "To encrypt traffic between client and server", "To cache static content near users"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is XSS (Cross-Site Scripting)?",
+      "correct_answer": "An attack where malicious scripts are injected into trusted websites and executed in a victim's browser",
+      "incorrect_answers": ["A technique for secure data sharing between sites", "A type of database encryption", "A network protocol for cross-domain requests"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between synchronous and asynchronous programming?",
+      "correct_answer": "Synchronous code blocks execution until complete; asynchronous code allows other operations to run while waiting",
+      "incorrect_answers": ["Asynchronous code always runs faster", "Synchronous code runs on multiple threads", "They are two terms for the same concept"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an enum in programming?",
+      "correct_answer": "A type with a fixed set of named constant values",
+      "incorrect_answers": ["A function that enumerates list items", "A dynamically growing array", "A mapping of strings to integers"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is duck typing?",
+      "correct_answer": "A principle where an object's suitability is determined by its methods and properties rather than its type",
+      "incorrect_answers": ["A debugging technique using print statements", "A pattern for copying objects", "A form of strong static typing"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is event-driven programming?",
+      "correct_answer": "A paradigm where the program flow is determined by events such as user actions or messages",
+      "incorrect_answers": ["Programming that runs on a fixed timer", "Programming without loops", "A style that avoids using functions"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a decorator in Python?",
+      "correct_answer": "A function that wraps another function to modify or extend its behavior without changing its source code",
+      "incorrect_answers": ["A CSS-style formatter for output", "A comment block above a class", "A type annotation for a variable"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a REST API?",
+      "correct_answer": "An API that uses HTTP and follows Representational State Transfer constraints",
+      "incorrect_answers": ["An API that only works over WebSockets", "An API stored entirely in a database", "An API that requires authentication tokens only"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a binary tree?",
+      "correct_answer": "A tree data structure where each node has at most two children",
+      "incorrect_answers": ["A tree stored as binary data on disk", "A tree with exactly two levels", "A sorted list of binary numbers"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of the SSL/TLS protocol?",
+      "correct_answer": "To encrypt data transmitted over a network, ensuring confidentiality and integrity",
+      "incorrect_answers": ["To speed up HTTP connections", "To authenticate users with passwords", "To compress web page assets"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a microservices architecture?",
+      "correct_answer": "An approach where an application is built as a collection of small, independently deployable services",
+      "incorrect_answers": ["An architecture with a single shared database for all services", "A design pattern for mobile apps", "A monolithic application split across multiple files"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does a CDN (Content Delivery Network) do?",
+      "correct_answer": "Delivers web content from servers geographically closer to the user to reduce latency",
+      "incorrect_answers": ["Encrypts data stored in the cloud", "Manages DNS records for a domain", "Compiles JavaScript on the server"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does 'git rebase' do?",
+      "correct_answer": "Moves or applies commits from one branch onto another base commit",
+      "incorrect_answers": ["Merges two branches into a single commit", "Reverts the last pushed commit", "Creates a new empty branch"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of Docker?",
+      "correct_answer": "To package applications and their dependencies into portable containers",
+      "incorrect_answers": ["To manage version control for code", "To monitor server performance", "To automate unit testing"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is tail recursion?",
+      "correct_answer": "A form of recursion where the recursive call is the very last operation in the function, allowing stack optimization",
+      "incorrect_answers": ["A recursion that always reaches its base case immediately", "Recursion that starts from the end of a list", "A loop disguised as recursion"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is continuous integration (CI)?",
+      "correct_answer": "The practice of frequently merging developer code changes and running automated tests to detect issues early",
+      "incorrect_answers": ["Manually deploying code to production every week", "Writing code continuously without breaks", "A workflow where one developer writes all code"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a JWT (JSON Web Token) used for?",
+      "correct_answer": "Securely transmitting information between parties, commonly used for authentication",
+      "incorrect_answers": ["Formatting API responses as JSON", "Storing user data in the browser's local storage", "Encrypting database passwords"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between '==' and 'is' in Python?",
+      "correct_answer": "'==' checks if two values are equal; 'is' checks if they are the same object in memory",
+      "incorrect_answers": ["They are interchangeable in Python", "'is' is used for string comparison only", "'==' checks type; 'is' checks value"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a doubly linked list?",
+      "correct_answer": "A linked list where each node has pointers to both the next and previous nodes",
+      "incorrect_answers": ["A linked list with two separate heads", "A linked list stored in two arrays", "A linked list that loops back to the start"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of code refactoring?",
+      "correct_answer": "Restructuring existing code to improve readability and maintainability without changing its external behavior",
+      "incorrect_answers": ["Adding new features to existing code", "Rewriting an application in a different language", "Fixing bugs found during testing"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a semaphore in operating systems?",
+      "correct_answer": "A variable used to control access to a shared resource by multiple processes or threads",
+      "incorrect_answers": ["A signal sent between two computers", "A type of process scheduler", "A hardware interrupt handler"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a buffer overflow?",
+      "correct_answer": "A vulnerability where more data is written to a buffer than it can hold, overwriting adjacent memory",
+      "incorrect_answers": ["A network error caused by too many connections", "A database error from too many rows", "A UI bug caused by too much text"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does an ORM (Object-Relational Mapper) do?",
+      "correct_answer": "Maps database tables and rows to programming language objects, allowing database interaction without raw SQL",
+      "incorrect_answers": ["Optimizes database queries automatically", "Generates database schemas from JSON files", "Connects two different databases together"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Observer design pattern?",
+      "correct_answer": "A pattern where an object maintains a list of dependents and notifies them automatically of state changes",
+      "incorrect_answers": ["A pattern that logs all function calls", "A pattern for creating a single shared instance", "A pattern that caches expensive computations"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a deep copy and a shallow copy?",
+      "correct_answer": "A deep copy recursively copies all nested objects; a shallow copy copies only references to nested objects",
+      "incorrect_answers": ["A shallow copy is always slower", "A deep copy and shallow copy are identical for primitive types and objects", "A shallow copy creates a new object with all new data"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Dijkstra's algorithm used for?",
+      "correct_answer": "Finding the shortest path between nodes in a weighted graph",
+      "incorrect_answers": ["Sorting an array of integers", "Searching for a value in a binary tree", "Detecting cycles in a directed graph"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a namespace in programming?",
+      "correct_answer": "A container that groups identifiers to avoid naming conflicts",
+      "incorrect_answers": ["The memory address of a variable", "A type of encrypted storage", "A protocol for naming network devices"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is static memory allocation?",
+      "correct_answer": "Memory allocated at compile time with a fixed size that cannot change at runtime",
+      "incorrect_answers": ["Memory allocated on the heap", "Memory shared between processes", "Memory that persists after the program exits"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does HTTP status code 500 indicate?",
+      "correct_answer": "Internal Server Error — something went wrong on the server",
+      "incorrect_answers": ["Request not found", "Unauthorized access", "Request timed out"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Factory design pattern?",
+      "correct_answer": "A creational pattern that provides an interface for creating objects without specifying the exact class",
+      "incorrect_answers": ["A pattern that restricts a class to one instance", "A pattern that adds behavior to an object dynamically", "A pattern that translates one interface into another"],
+      "difficulty": "medium"
+    }
+  ]
+}

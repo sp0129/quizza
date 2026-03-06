@@ -19,6 +19,7 @@ const ID_MAP: Record<number, CategoryTheme> = {
   2004: { gradient: 'linear-gradient(135deg, #a1a09f 0%, #afafae 100%)', accent: '#9a1a1a', emoji: '🐉' }, // Game of Thrones
   2005: { gradient: 'linear-gradient(135deg, #b18d8d 0%, #b2a8a8 100%)', accent: '#9a1a1a', emoji: '🦸' }, // Marvel Movies
   2006: { gradient: 'linear-gradient(135deg, #c47eb5 0%, #b19ab1 100%)', accent: '#9b1a9b', emoji: '🎤' }, // Pop Music
+  2007: { gradient: 'linear-gradient(135deg, #6b8fb5 0%, #8faab2 100%)', accent: '#1a5c8b', emoji: '💻' }, // Computer Science
   9:  { gradient: 'linear-gradient(135deg, #82a1b1 0%, #a8aeb2 100%)', accent: '#015c8b', emoji: '🌍' }, // General Knowledge
   10: { gradient: 'linear-gradient(135deg, #9a95b1 0%, #abaab2 100%)', accent: '#5628a5', emoji: '📚' }, // Books
   11: { gradient: 'linear-gradient(135deg, #b1a160 0%, #b2afa4 100%)', accent: '#975304', emoji: '🎬' }, // Film
@@ -107,6 +108,7 @@ export const CATEGORY_SORT_ORDER: number[] = [
   19,   // Mathematics
   17,   // Science & Nature
   18,   // Computers
+  2007, // Computer Science
   2001, // Chemistry
   2002, // Biology
   30,   // Gadgets
