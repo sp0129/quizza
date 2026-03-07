@@ -65,6 +65,9 @@ function RootNavigator() {
           <Stack.Screen name="Category" component={CategoryScreen} />
           <Stack.Screen name="Game" component={GameScreen} />
           <Stack.Screen name="Room" component={RoomScreen} />
+          {/* Guests can navigate here to create a real account */}
+          <Stack.Screen name="Signup" component={SignupScreen} />
+          <Stack.Screen name="Login" component={LoginScreen} />
         </>
       ) : (
         <>
