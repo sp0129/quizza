@@ -1,29 +1,44 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
+import * as AppleAuthentication from 'expo-apple-authentication';
 import { api, setAuthToken } from '../api/client';
 
 export interface User {
   id: string;
   username: string;
   email: string;
+  profile_picture_url?: string;
+  is_guest?: boolean;
 }
 
 interface AuthContextValue {
   user: User | null;
   loading: boolean;
+  isGuest: boolean;
   login: (email: string, password: string) => Promise<void>;
   signup: (username: string, email: string, password: string) => Promise<void>;
-  loginAsGuest: (username: string) => Promise<void>;
+  loginAsGuest: (username?: string) => Promise<void>;
+  loginWithApple: () => Promise<void>;
+  refreshUser: (updated: Partial<User>) => void;
   logout: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 
+const GUEST_NAMES = [
+  'TriviaHero', 'QuizWizard', 'BrainBolt', 'FactHunter', 'QuickMind',
+  'PizzaFan', 'TriviaAce', 'NightOwl', 'RocketBrain', 'MindSurfer',
+];
+
+function randomGuestName(): string {
+  const base = GUEST_NAMES[Math.floor(Math.random() * GUEST_NAMES.length)];
+  return base + Math.floor(Math.random() * 9000 + 1000);
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Load persisted auth on startup
   useEffect(() => {
     (async () => {
       try {
@@ -58,9 +73,33 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await storeAuth(data.token, data.user);
   };
 
-  const loginAsGuest = async (username: string) => {
-    const data = await api.post<{ token: string; user: User }>('/auth/guest', { username });
+  const loginAsGuest = async (username?: string) => {
+    const name = username ?? randomGuestName();
+    const data = await api.post<{ token: string; user: User }>('/auth/guest', { username: name });
     await storeAuth(data.token, data.user);
+  };
+
+  const loginWithApple = async () => {
+    const credential = await AppleAuthentication.signInAsync({
+      requestedScopes: [
+        AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
+        AppleAuthentication.AppleAuthenticationScope.EMAIL,
+      ],
+    });
+    const data = await api.post<{ token: string; user: User }>('/auth/apple', {
+      identityToken: credential.identityToken,
+      fullName: credential.fullName,
+    });
+    await storeAuth(data.token, data.user);
+  };
+
+  const refreshUser = (updated: Partial<User>) => {
+    setUser(prev => {
+      if (!prev) return prev;
+      const next = { ...prev, ...updated };
+      SecureStore.setItemAsync('user', JSON.stringify(next));
+      return next;
+    });
   };
 
   const logout = async () => {
@@ -71,7 +110,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, signup, loginAsGuest, logout }}>
+    <AuthContext.Provider value={{
+      user, loading,
+      isGuest: user?.is_guest === true,
+      login, signup, loginAsGuest, loginWithApple, refreshUser, logout,
+    }}>
       {children}
     </AuthContext.Provider>
   );

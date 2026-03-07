@@ -4,6 +4,7 @@ import {
   KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import * as AppleAuthentication from 'expo-apple-authentication';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
 import PizzaMascot from '../components/PizzaMascot';
@@ -13,7 +14,7 @@ import type { RootStackParamList } from '../../App';
 type Props = NativeStackScreenProps<RootStackParamList, 'Signup'>;
 
 export default function SignupScreen({ navigation }: Props) {
-  const { signup } = useAuth();
+  const { signup, loginWithApple } = useAuth();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -89,6 +90,26 @@ export default function SignupScreen({ navigation }: Props) {
                 : <Text style={s.btnText}>Sign up</Text>}
             </TouchableOpacity>
 
+            <View style={s.divider}>
+              <View style={s.dividerLine} />
+              <Text style={s.dividerText}>or</Text>
+              <View style={s.dividerLine} />
+            </View>
+
+            <AppleAuthentication.AppleAuthenticationButton
+              buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_UP}
+              buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
+              cornerRadius={12}
+              style={s.appleBtn}
+              onPress={async () => {
+                setError('');
+                setLoading(true);
+                try { await loginWithApple(); }
+                catch (err: any) { if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed'); }
+                finally { setLoading(false); }
+              }}
+            />
+
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={s.link}>
               <Text style={s.linkText}>
                 Already have an account? <Text style={s.linkAccent}>Log in</Text>
@@ -113,12 +134,16 @@ const s = StyleSheet.create({
   title: { color: colors.textPrimary, fontSize: 28, fontWeight: '800', textAlign: 'center', marginBottom: 4 },
   subtitle: { color: colors.textMuted, fontSize: 16, textAlign: 'center', marginBottom: 24 },
   input: {
-    backgroundColor: 'rgba(255,255,255,0.06)',
+    backgroundColor: 'rgba(10,30,80,0.6)',
     borderRadius: 12, padding: 14,
     color: colors.textPrimary, fontSize: 16,
-    borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
+    borderWidth: 1, borderColor: colors.border,
     marginBottom: 12,
   },
+  divider: { flexDirection: 'row', alignItems: 'center', marginVertical: 16, gap: 10 },
+  dividerLine: { flex: 1, height: 1, backgroundColor: colors.border },
+  dividerText: { color: colors.textMuted, fontSize: 13 },
+  appleBtn: { width: '100%', height: 50, marginBottom: 4 },
   error: { color: colors.red, fontSize: 14, marginBottom: 12 },
   btn: { borderRadius: 12, padding: 16, alignItems: 'center', marginTop: 4 },
   btnGreen: { backgroundColor: colors.green },

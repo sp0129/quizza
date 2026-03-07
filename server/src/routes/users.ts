@@ -33,7 +33,51 @@ router.get('/:username', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-// PUT /users/:userId — update own profile
+// GET /users/search?q= — search users by username prefix (authenticated)
+router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const q = (req.query.q as string ?? '').trim();
+  if (q.length < 1) { res.json([]); return; }
+  try {
+    const result = await pool.query(
+      `SELECT id, username, profile_picture_url,
+              EXISTS (
+                SELECT 1 FROM friendships
+                WHERE (user_a_id = LEAST($2::uuid, id) AND user_b_id = GREATEST($2::uuid, id))
+              ) AS is_friend
+       FROM users
+       WHERE username ILIKE $1 AND id != $2 AND is_guest = FALSE
+       ORDER BY is_friend DESC, username
+       LIMIT 10`,
+      [q + '%', req.userId]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// PUT /users/me — update own profile (username, avatar)
+router.put('/me', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const { username, profilePictureUrl } = req.body;
+  try {
+    const result = await pool.query(
+      `UPDATE users
+       SET username = COALESCE($1, username),
+           profile_picture_url = COALESCE($2, profile_picture_url),
+           updated_at = NOW()
+       WHERE id = $3
+       RETURNING id, username, email, profile_picture_url, is_guest`,
+      [username ?? null, profilePictureUrl ?? null, req.userId]
+    );
+    res.json(result.rows[0]);
+  } catch (err: any) {
+    if (err.code === '23505') res.status(409).json({ error: 'Username already taken' });
+    else { console.error(err); res.status(500).json({ error: 'Server error' }); }
+  }
+});
+
+// PUT /users/:userId — legacy update (kept for compatibility)
 router.put('/:userId', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   if (req.params.userId !== req.userId) {
     res.status(403).json({ error: 'Forbidden' }); return;

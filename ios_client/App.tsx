@@ -14,6 +14,7 @@ import CategoryScreen from './src/screens/CategoryScreen';
 import GameScreen from './src/screens/GameScreen';
 import RoomScreen from './src/screens/RoomScreen';
 import GuestJoinScreen from './src/screens/GuestJoinScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
 
 export type RootStackParamList = {
   // Auth
@@ -22,6 +23,7 @@ export type RootStackParamList = {
   GuestJoin: { roomCode: string };
   // App
   Dashboard: undefined;
+  Profile: undefined;
   Category: { mode: 'solo' | 'room' | 'challenge'; target?: string };
   Game: {
     gameId: string;
@@ -59,6 +61,7 @@ function RootNavigator() {
       {user ? (
         <>
           <Stack.Screen name="Dashboard" component={DashboardScreen} />
+          <Stack.Screen name="Profile" component={ProfileScreen} />
           <Stack.Screen name="Category" component={CategoryScreen} />
           <Stack.Screen name="Game" component={GameScreen} />
           <Stack.Screen name="Room" component={RoomScreen} />

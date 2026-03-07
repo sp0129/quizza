@@ -10,8 +10,12 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.quizza.app"
+      "bundleIdentifier": "com.quizza.app",
+      "usesAppleSignIn": true
     },
+    "plugins": [
+      "expo-apple-authentication"
+    ],
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#0a0b14"

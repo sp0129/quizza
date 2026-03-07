@@ -9,6 +9,7 @@ import questionRoutes from './routes/questions';
 import userRoutes from './routes/users';
 import challengeRoutes from './routes/challenges';
 import roomRoutes from './routes/rooms';
+import friendRoutes from './routes/friends';
 import { syncGameManager } from './services/syncGame';
 import { roomGameManager } from './services/roomGame';
 
@@ -23,6 +24,7 @@ app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 app.use('/auth', authRoutes);
 app.use('/games', gameRoutes);
 app.use('/users', userRoutes);
+app.use('/friends', friendRoutes);
 app.use('/challenges', challengeRoutes);
 app.use('/rooms', roomRoutes);
 app.use('/', questionRoutes); // /categories and /questions/set/:id

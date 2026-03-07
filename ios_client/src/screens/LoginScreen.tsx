@@ -4,6 +4,7 @@ import {
   KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import * as AppleAuthentication from 'expo-apple-authentication';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
 import PizzaMascot from '../components/PizzaMascot';
@@ -13,7 +14,7 @@ import type { RootStackParamList } from '../../App';
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 export default function LoginScreen({ navigation }: Props) {
-  const { login } = useAuth();
+  const { login, loginWithApple, loginAsGuest } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -25,6 +26,30 @@ export default function LoginScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await login(email.trim().toLowerCase(), password);
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleApple = async () => {
+    setError('');
+    setLoading(true);
+    try {
+      await loginWithApple();
+    } catch (err: any) {
+      if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGuest = async () => {
+    setError('');
+    setLoading(true);
+    try {
+      await loginAsGuest();
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -78,6 +103,24 @@ export default function LoginScreen({ navigation }: Props) {
                 : <Text style={s.btnText}>Log in</Text>}
             </TouchableOpacity>
 
+            <View style={s.divider}>
+              <View style={s.dividerLine} />
+              <Text style={s.dividerText}>or</Text>
+              <View style={s.dividerLine} />
+            </View>
+
+            <AppleAuthentication.AppleAuthenticationButton
+              buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN}
+              buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
+              cornerRadius={12}
+              style={s.appleBtn}
+              onPress={handleApple}
+            />
+
+            <TouchableOpacity style={s.guestBtn} onPress={handleGuest} disabled={loading}>
+              <Text style={s.guestBtnText}>Play as Guest (Solo only)</Text>
+            </TouchableOpacity>
+
             <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={s.link}>
               <Text style={s.linkText}>
                 No account? <Text style={s.linkAccent}>Sign up</Text>
@@ -98,7 +141,7 @@ const s = StyleSheet.create({
     backgroundColor: colors.surface,
     paddingHorizontal: 16, paddingVertical: 10,
     borderRadius: 16, marginBottom: 16,
-    borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
+    borderWidth: 1, borderColor: colors.border,
   },
   bubbleText: { color: colors.textPrimary, fontSize: 15, fontWeight: '600' },
   card: {
@@ -109,10 +152,10 @@ const s = StyleSheet.create({
   title: { color: colors.textPrimary, fontSize: 28, fontWeight: '800', textAlign: 'center', marginBottom: 4 },
   subtitle: { color: colors.textMuted, fontSize: 16, textAlign: 'center', marginBottom: 24 },
   input: {
-    backgroundColor: 'rgba(255,255,255,0.06)',
+    backgroundColor: 'rgba(10,30,80,0.6)',
     borderRadius: 12, padding: 14,
     color: colors.textPrimary, fontSize: 16,
-    borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
+    borderWidth: 1, borderColor: colors.border,
     marginBottom: 12,
   },
   error: { color: colors.red, fontSize: 14, marginBottom: 12 },
@@ -120,7 +163,18 @@ const s = StyleSheet.create({
   btnGreen: { backgroundColor: colors.green },
   btnDisabled: { opacity: 0.6 },
   btnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
-  link: { marginTop: 20, alignItems: 'center' },
+  divider: { flexDirection: 'row', alignItems: 'center', marginVertical: 16, gap: 10 },
+  dividerLine: { flex: 1, height: 1, backgroundColor: colors.border },
+  dividerText: { color: colors.textMuted, fontSize: 13 },
+  appleBtn: { width: '100%', height: 50, marginBottom: 12 },
+  guestBtn: {
+    borderRadius: 12, padding: 14, alignItems: 'center',
+    borderWidth: 1, borderColor: colors.border,
+    backgroundColor: 'rgba(255,255,255,0.05)',
+    marginBottom: 4,
+  },
+  guestBtnText: { color: colors.textMuted, fontSize: 15, fontWeight: '600' },
+  link: { marginTop: 16, alignItems: 'center' },
   linkText: { color: colors.textMuted, fontSize: 14 },
   linkAccent: { color: colors.green, fontWeight: '600' },
 });

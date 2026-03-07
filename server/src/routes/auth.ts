@@ -2,7 +2,41 @@ import { Router, Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
+import crypto from 'crypto';
 import pool from '../db';
+
+// Verify an Apple identity token using Apple's public JWKS
+async function verifyAppleToken(token: string): Promise<{ sub: string; email?: string }> {
+  const keysRes = await fetch('https://appleid.apple.com/auth/keys');
+  const { keys } = await keysRes.json() as { keys: object[] };
+  const decoded = jwt.decode(token, { complete: true });
+  if (!decoded || typeof decoded === 'string') throw new Error('Invalid token');
+  const kid = (decoded.header as any).kid;
+  const appleKey = (keys as any[]).find(k => k.kid === kid);
+  if (!appleKey) throw new Error('Apple key not found');
+  const publicKey = crypto.createPublicKey({ key: appleKey, format: 'jwk' });
+  const pem = publicKey.export({ type: 'spki', format: 'pem' }) as string;
+  return jwt.verify(token, pem, {
+    algorithms: ['RS256'],
+    issuer: 'https://appleid.apple.com',
+    audience: process.env.APPLE_APP_ID ?? 'com.quizza.app',
+  }) as { sub: string; email?: string };
+}
+
+function buildAppleUsername(
+  fullName: { givenName?: string; familyName?: string } | null,
+  email: string | undefined,
+  userId: string,
+): string {
+  let base = '';
+  if (fullName?.givenName) {
+    base = (fullName.givenName + (fullName.familyName?.[0] ?? '')).replace(/[^a-zA-Z0-9]/g, '');
+  } else if (email) {
+    base = email.split('@')[0].replace(/[^a-zA-Z0-9]/g, '');
+  }
+  base = base.slice(0, 12) || 'Player';
+  return base + '_' + userId.slice(0, 4);
+}
 
 const router = Router();
 
@@ -91,20 +125,61 @@ router.post('/guest', async (req: Request, res: Response): Promise<void> => {
 
   try {
     const result = await pool.query(
-      `INSERT INTO users (id, username, email, password_hash)
-       VALUES ($1, $2, $3, $4)
+      `INSERT INTO users (id, username, email, password_hash, is_guest)
+       VALUES ($1, $2, $3, $4, TRUE)
        RETURNING id, email, created_at`,
       [id, internalUsername, email, passwordHash]
     );
     const row = result.rows[0];
     const token = jwt.sign({ userId: row.id }, process.env.JWT_SECRET!, { expiresIn: '24h' });
-    // Return the chosen display name as username so the client stores it correctly
-    res.status(201).json({ token, user: { ...row, username } });
+    res.status(201).json({ token, user: { ...row, username, is_guest: true } });
     return;
   } catch (err: any) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
     return;
+  }
+});
+
+// POST /auth/apple — Sign in with Apple (iOS)
+router.post('/apple', async (req: Request, res: Response): Promise<void> => {
+  const { identityToken, fullName } = req.body;
+  if (!identityToken) { res.status(400).json({ error: 'identityToken required' }); return; }
+  try {
+    const claims = await verifyAppleToken(identityToken);
+    const appleId = claims.sub;
+
+    // Return existing user if already linked
+    const existing = await pool.query(
+      `SELECT id, username, email, is_guest FROM users WHERE apple_id = $1`,
+      [appleId]
+    );
+    if (existing.rows.length > 0) {
+      const u = existing.rows[0];
+      const token = jwt.sign({ userId: u.id }, process.env.JWT_SECRET!, { expiresIn: '30d' });
+      res.json({ token, user: u });
+      return;
+    }
+
+    // Create new user
+    const userId = uuidv4();
+    const username = buildAppleUsername(fullName ?? null, claims.email, userId);
+    const userEmail = claims.email ?? `apple_${appleId.slice(0, 8)}@apple.local`;
+
+    const inserted = await pool.query(
+      `INSERT INTO users (id, username, email, password_hash, apple_id, is_guest)
+       VALUES ($1, $2, $3, $4, $5, FALSE)
+       ON CONFLICT (apple_id) DO UPDATE SET apple_id = EXCLUDED.apple_id
+       RETURNING id, username, email, is_guest`,
+      [userId, username, userEmail, uuidv4(), appleId]
+    );
+    const newUser = inserted.rows[0];
+    const token = jwt.sign({ userId: newUser.id }, process.env.JWT_SECRET!, { expiresIn: '30d' });
+    res.status(201).json({ token, user: newUser });
+  } catch (err: any) {
+    console.error('Apple auth error:', err);
+    if (err.code === '23505') res.status(409).json({ error: 'Account already exists' });
+    else res.status(401).json({ error: 'Apple authentication failed' });
   }
 });
 

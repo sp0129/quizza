@@ -63,6 +63,7 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [copied, setCopied] = useState(false);
   const [startLoading, setStartLoading] = useState(false);
   const [error, setError] = useState('');
+  const [addedFriends, setAddedFriends] = useState<Set<string>>(new Set());
 
   const wsRef = useRef<WebSocket | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -382,6 +383,38 @@ export default function RoomScreen({ route, navigation }: Props) {
             </View>
           ))}
 
+          {/* Add friends from this room */}
+          {leaderboard.filter(e => e.username !== user?.username).length > 0 && (
+            <View style={s.addFriendsBox}>
+              <Text style={s.addFriendsTitle}>Add players as friends</Text>
+              {leaderboard
+                .filter(e => e.username !== user?.username)
+                .map(entry => (
+                  <View key={entry.username} style={s.addFriendRow}>
+                    <View style={s.addFriendAvatar}>
+                      <Text style={s.addFriendAvatarText}>{entry.username[0].toUpperCase()}</Text>
+                    </View>
+                    <Text style={s.addFriendName}>{entry.username}</Text>
+                    {addedFriends.has(entry.username) ? (
+                      <Text style={s.addedText}>Added ✓</Text>
+                    ) : (
+                      <TouchableOpacity
+                        style={s.addFriendBtn}
+                        onPress={async () => {
+                          try {
+                            await api.post('/friends', { username: entry.username });
+                            setAddedFriends(prev => new Set([...prev, entry.username]));
+                          } catch {}
+                        }}
+                      >
+                        <Text style={s.addFriendBtnText}>+ Add</Text>
+                      </TouchableOpacity>
+                    )}
+                  </View>
+                ))}
+            </View>
+          )}
+
           <TouchableOpacity style={[s.btn, s.btnGhost]} onPress={() => navigation.navigate('Dashboard')}>
             <Text style={s.btnGhostText}>Back to Dashboard</Text>
           </TouchableOpacity>
@@ -558,6 +591,27 @@ const s = StyleSheet.create({
   lbYou: { color: colors.textMuted, fontSize: 13, fontWeight: '400' },
   lbScorePill: { backgroundColor: 'rgba(255,255,255,0.08)', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 10 },
   lbScoreText: { color: colors.textPrimary, fontSize: 13, fontWeight: '700' },
+  addFriendsBox: {
+    alignSelf: 'stretch', backgroundColor: 'rgba(10,30,80,0.5)',
+    borderRadius: 14, padding: 14,
+    borderWidth: 1, borderColor: colors.border, gap: 10,
+  },
+  addFriendsTitle: { color: colors.textPrimary, fontSize: 15, fontWeight: '700' },
+  addFriendRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  addFriendAvatar: {
+    width: 32, height: 32, borderRadius: 16,
+    backgroundColor: 'rgba(80,160,255,0.3)',
+    justifyContent: 'center', alignItems: 'center',
+  },
+  addFriendAvatarText: { color: colors.textPrimary, fontSize: 13, fontWeight: '700' },
+  addFriendName: { flex: 1, color: colors.textPrimary, fontSize: 14 },
+  addedText: { color: colors.green, fontSize: 13, fontWeight: '600' },
+  addFriendBtn: {
+    backgroundColor: 'rgba(80,160,255,0.2)', borderRadius: 10,
+    paddingHorizontal: 12, paddingVertical: 6,
+    borderWidth: 1, borderColor: colors.border,
+  },
+  addFriendBtnText: { color: colors.textPrimary, fontSize: 13, fontWeight: '600' },
   btn: { borderRadius: 12, padding: 14, alignItems: 'center', minWidth: 200 },
   btnGhost: { backgroundColor: 'rgba(255,255,255,0.08)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.15)' },
   btnGhostText: { color: colors.textPrimary, fontSize: 15, fontWeight: '600' },
