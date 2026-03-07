@@ -21,6 +21,10 @@ export default function SignupScreen({ navigation }: Props) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const onSuccess = () => {
+    try { navigation.navigate('Dashboard' as any); } catch {}
+  };
+
   const handleSignup = async () => {
     if (!username.trim() || !email.trim() || !password) {
       setError('All fields required');
@@ -31,6 +35,7 @@ export default function SignupScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await signup(username.trim(), email.trim().toLowerCase(), password);
+      onSuccess();
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -104,7 +109,7 @@ export default function SignupScreen({ navigation }: Props) {
               onPress={async () => {
                 setError('');
                 setLoading(true);
-                try { await loginWithApple(); }
+                try { await loginWithApple(); onSuccess(); }
                 catch (err: any) { if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed'); }
                 finally { setLoading(false); }
               }}

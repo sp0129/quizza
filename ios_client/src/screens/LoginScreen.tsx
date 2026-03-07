@@ -20,12 +20,20 @@ export default function LoginScreen({ navigation }: Props) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const onSuccess = () => {
+    // If Login was pushed onto the authenticated stack (e.g. by a guest),
+    // navigate back to Dashboard. In the unauthenticated stack the
+    // navigator switch handles it automatically.
+    try { navigation.navigate('Dashboard' as any); } catch {}
+  };
+
   const handleLogin = async () => {
     if (!email.trim() || !password) { setError('Email and password required'); return; }
     setError('');
     setLoading(true);
     try {
       await login(email.trim().toLowerCase(), password);
+      onSuccess();
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -38,6 +46,7 @@ export default function LoginScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await loginWithApple();
+      onSuccess();
     } catch (err: any) {
       if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed');
     } finally {
@@ -50,6 +59,7 @@ export default function LoginScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await loginAsGuest();
+      onSuccess();
     } catch (err: any) {
       setError(err.message);
     } finally {
