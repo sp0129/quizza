@@ -124,6 +124,8 @@ router.post('/guest', async (req: Request, res: Response): Promise<void> => {
   const passwordHash = uuidv4();
 
   try {
+    // Ensure column exists (idempotent — safe if migration already ran)
+    await pool.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS is_guest BOOLEAN NOT NULL DEFAULT FALSE`);
     const result = await pool.query(
       `INSERT INTO users (id, username, email, password_hash, is_guest)
        VALUES ($1, $2, $3, $4, TRUE)
