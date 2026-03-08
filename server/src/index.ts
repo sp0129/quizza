@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { createServer } from 'http';
+import path from 'path';
 import { WebSocketServer } from 'ws';
 import authRoutes from './routes/auth';
 import gameRoutes from './routes/games';
@@ -20,6 +21,7 @@ app.use(cors({ origin: process.env.CLIENT_URL ?? 'http://localhost:5173', creden
 app.use(express.json());
 
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
+app.get('/privacy', (_req, res) => res.sendFile(path.join(__dirname, '../../client/public/privacy.html')));
 
 app.use('/auth', authRoutes);
 app.use('/games', gameRoutes);
