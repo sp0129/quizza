@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   View, Text, TextInput, TouchableOpacity, StyleSheet,
-  KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator,
+  KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator, Linking,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as AppleAuthentication from 'expo-apple-authentication';
@@ -120,6 +120,10 @@ export default function SignupScreen({ navigation }: Props) {
                 Already have an account? <Text style={s.linkAccent}>Log in</Text>
               </Text>
             </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => Linking.openURL('https://quizza-eta.vercel.app/privacy.html')} style={s.privacyLink}>
+              <Text style={s.privacyText}>Privacy Policy</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -157,4 +161,6 @@ const s = StyleSheet.create({
   link: { marginTop: 20, alignItems: 'center' },
   linkText: { color: colors.textMuted, fontSize: 14 },
   linkAccent: { color: colors.green, fontWeight: '600' },
+  privacyLink: { marginTop: 12, alignItems: 'center' },
+  privacyText: { color: colors.textMuted, fontSize: 12, textDecorationLine: 'underline' },
 });

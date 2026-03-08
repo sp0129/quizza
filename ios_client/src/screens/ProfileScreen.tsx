@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  ScrollView, TextInput, Image, ActivityIndicator, Alert,
+  ScrollView, TextInput, Image, ActivityIndicator, Alert, Linking,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -261,6 +261,11 @@ export default function ProfileScreen({ navigation }: Props) {
             </View>
           ))}
         </View>
+
+        {/* Privacy Policy */}
+        <TouchableOpacity onPress={() => Linking.openURL('https://quizza-eta.vercel.app/privacy.html')} style={s.privacyLink}>
+          <Text style={s.privacyText}>Privacy Policy</Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
@@ -335,4 +340,6 @@ const s = StyleSheet.create({
     justifyContent: 'center', alignItems: 'center',
   },
   removeBtnText: { color: colors.red, fontSize: 12 },
+  privacyLink: { alignItems: 'center', paddingVertical: 8 },
+  privacyText: { color: colors.textMuted, fontSize: 12, textDecorationLine: 'underline' },
 });

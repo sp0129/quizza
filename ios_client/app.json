@@ -5,13 +5,21 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
     "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
       "backgroundColor": "#0a0b14"
     },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.quizza.app",
-      "usesAppleSignIn": true
+      "usesAppleSignIn": true,
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Quizza needs access to your photos to set a profile picture.",
+        "NSCameraUsageDescription": "Quizza needs access to your camera to take a profile picture."
+      }
     },
     "plugins": [
       "expo-apple-authentication"
