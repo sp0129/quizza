@@ -15,10 +15,11 @@
       "supportsTablet": false,
       "bundleIdentifier": "com.quizza.app",
       "usesAppleSignIn": true,
-      "buildNumber": "1",
+      "buildNumber": "2",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Quizza needs access to your photos to set a profile picture.",
-        "NSCameraUsageDescription": "Quizza needs access to your camera to take a profile picture."
+        "NSCameraUsageDescription": "Quizza needs access to your camera to take a profile picture.",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "plugins": [
@@ -30,6 +31,11 @@
       },
       "package": "com.quizza.app"
     },
-    "scheme": "quizza"
+    "scheme": "quizza",
+    "extra": {
+      "eas": {
+        "projectId": "0f7738f4-08c1-49bf-b9c7-70b6560f8c05"
+      }
+    }
   }
 }

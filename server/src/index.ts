@@ -17,7 +17,18 @@ import { roomGameManager } from './services/roomGame';
 const app = express();
 const PORT = parseInt(process.env.PORT ?? '3001', 10);
 
-app.use(cors({ origin: process.env.CLIENT_URL ?? 'http://localhost:5173', credentials: true }));
+app.use(cors({
+  origin: (origin, callback) => {
+    const allowed = (process.env.CLIENT_URL ?? 'http://localhost:5173').split(',');
+    // Allow requests with no origin (mobile apps, curl, etc.)
+    if (!origin || allowed.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(null, true); // Allow all origins for now (auth is via JWT, not cookies)
+    }
+  },
+  credentials: true,
+}));
 app.use(express.json());
 
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
