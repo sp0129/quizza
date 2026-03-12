@@ -1,15 +1,33 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
-  View, Text, TouchableOpacity, StyleSheet,
-  ActivityIndicator, Alert, ScrollView,
+  View, Text, StyleSheet, ActivityIndicator, Alert, Dimensions,
 } from 'react-native';
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+  withTiming,
+  withSequence,
+  runOnJS,
+  FadeIn,
+  SlideInRight,
+  SlideOutLeft,
+} from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import * as Haptics from 'expo-haptics';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
 import { api, getAuthToken } from '../api/client';
 import PizzaMascot, { MascotMood } from '../components/PizzaMascot';
-import { colors, gradients } from '../theme';
+import AnswerButton from '../components/AnswerButton';
+import CircularTimer from '../components/CircularTimer';
+import { colors, gradients } from '../theme/colors';
 import type { RootStackParamList } from '../../App';
+
+// ---------------------------------------------------------------------------
+// Types
+// ---------------------------------------------------------------------------
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Game'>;
 
@@ -28,14 +46,136 @@ interface GameResult {
 }
 
 type Phase = 'loading' | 'playing' | 'answered' | 'finished';
+type AnswerState = 'neutral' | 'correct' | 'wrong' | 'dimmed';
 
 const API_BASE = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
-const WS_BASE = process.env.EXPO_PUBLIC_WS_URL ?? API_BASE.replace(/^https?/, m => m === 'https' ? 'wss' : 'ws');
+const WS_BASE = process.env.EXPO_PUBLIC_WS_URL ?? API_BASE.replace(/^https?/, (m: string) => m === 'https' ? 'wss' : 'ws');
+
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
+
+// ---------------------------------------------------------------------------
+// Animated Score Display
+// ---------------------------------------------------------------------------
+// Animates a count-up from old to new value with a brief scale pulse (1.0→1.2→1.0)
+// to draw the eye when points are awarded. Uses tabular-nums to prevent layout shift.
+
+function AnimatedScore({ value }: { value: number }) {
+  const [display, setDisplay] = useState(value);
+  const scale = useSharedValue(1);
+
+  useEffect(() => {
+    if (value === display) return;
+
+    // Pulse scale 1.0 → 1.2 → 1.0 over 300ms
+    scale.value = withSequence(
+      withSpring(1.2, { damping: 12, stiffness: 200 }),
+      withSpring(1, { damping: 12, stiffness: 200 }),
+    );
+
+    // Count-up animation over 200ms
+    const start = display;
+    const diff = value - start;
+    const steps = 10;
+    const stepTime = 200 / steps;
+    let step = 0;
+
+    const interval = setInterval(() => {
+      step++;
+      setDisplay(Math.round(start + (diff * step) / steps));
+      if (step >= steps) {
+        clearInterval(interval);
+        setDisplay(value);
+      }
+    }, stepTime);
+
+    return () => clearInterval(interval);
+  }, [value]);
+
+  const animStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value }],
+  }));
+
+  return (
+    <Animated.Text style={[styles.scoreValue, animStyle]}>
+      {display}
+    </Animated.Text>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Floating Points Indicator
+// ---------------------------------------------------------------------------
+// Shows "+N" that floats upward and fades out when points are awarded.
+
+function FloatingPoints({ points, triggerKey }: { points: number; triggerKey: number }) {
+  const translateY = useSharedValue(0);
+  const opacity = useSharedValue(0);
+
+  useEffect(() => {
+    if (triggerKey === 0 || points === 0) return;
+    translateY.value = 0;
+    opacity.value = 1;
+    translateY.value = withTiming(-30, { duration: 800 });
+    opacity.value = withTiming(0, { duration: 800 });
+  }, [triggerKey]);
+
+  const style = useAnimatedStyle(() => ({
+    transform: [{ translateY: translateY.value }],
+    opacity: opacity.value,
+  }));
+
+  if (triggerKey === 0) return null;
+
+  return (
+    <Animated.Text style={[styles.floatingPoints, style]}>
+      +{points}
+    </Animated.Text>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Progress Dots
+// ---------------------------------------------------------------------------
+// Segmented progress indicator (one dot per question) — recommended in uiux.md
+// for quizzes under 20 questions. Filled = answered, current = pulsing accent.
+
+function ProgressDots({ total, current, results }: {
+  total: number;
+  current: number;
+  results: (boolean | null)[];
+}) {
+  return (
+    <View style={styles.dotsRow}>
+      {Array.from({ length: total }, (_, i) => {
+        let dotColor = colors.bg.elevated;
+        if (results[i] === true) dotColor = colors.correct;
+        else if (results[i] === false) dotColor = colors.wrong;
+        else if (i === current) dotColor = colors.button;
+
+        return (
+          <View
+            key={i}
+            style={[
+              styles.dot,
+              { backgroundColor: dotColor },
+              i === current && styles.dotCurrent,
+            ]}
+          />
+        );
+      })}
+    </View>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Main GameScreen Component
+// ---------------------------------------------------------------------------
 
 export default function GameScreen({ route, navigation }: Props) {
   const { gameId, mode, questionSetId, timer: QUESTION_TIME } = route.params;
   const insets = useSafeAreaInsets();
 
+  // --- Core game state ---
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>('loading');
@@ -43,12 +183,25 @@ export default function GameScreen({ route, navigation }: Props) {
   const [score, setScore] = useState(0);
   const [lastResult, setLastResult] = useState<GameResult | null>(null);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [questionResults, setQuestionResults] = useState<(boolean | null)[]>([]);
+
+  // --- Sync mode state ---
   const [opponentAnswered, setOpponentAnswered] = useState(false);
   const [waitingForOpponent, setWaitingForOpponent] = useState(false);
   const [finalScores, setFinalScores] = useState<{ mine: number; opponent?: number } | null>(null);
   const [opponentQuit, setOpponentQuit] = useState(false);
+
+  // --- Visual state ---
   const [mascotMood, setMascotMood] = useState<MascotMood>('thinking');
   const [mascotKey, setMascotKey] = useState(0);
+  const [timerKey, setTimerKey] = useState(0);
+  const [lastPoints, setLastPoints] = useState(0);
+  const [pointsTrigger, setPointsTrigger] = useState(0);
+
+  // --- Animation: question slide transition ---
+  // We use a key-based approach with Reanimated layout animations:
+  // current question exits via SlideOutLeft, new one enters via SlideInRight (250ms)
+  const [questionAnimKey, setQuestionAnimKey] = useState(0);
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const questionStartRef = useRef<number>(Date.now());
@@ -59,15 +212,17 @@ export default function GameScreen({ route, navigation }: Props) {
     setMascotKey(k => k + 1);
   };
 
-  // Load questions
+  // --- Load questions ---
   useEffect(() => {
     api.get<{ questions: Question[] }>(`/questions/set/${questionSetId}`).then(data => {
       setQuestions(data.questions);
+      setQuestionResults(new Array(data.questions.length).fill(null));
       setPhase('playing');
+      setTimerKey(k => k + 1);
     }).catch(console.error);
   }, [questionSetId]);
 
-  // WebSocket for sync mode
+  // --- WebSocket for sync mode ---
   useEffect(() => {
     if (mode !== 'sync' || !gameId) return;
     const token = getAuthToken();
@@ -84,6 +239,9 @@ export default function GameScreen({ route, navigation }: Props) {
         setOpponentAnswered(false);
         setWaitingForOpponent(false);
         setTimeLeft(QUESTION_TIME);
+        setLastResult(null);
+        setTimerKey(k => k + 1);
+        setQuestionAnimKey(k => k + 1);
         questionStartRef.current = Date.now();
         setMascotMood('thinking');
         setMascotKey(k => k + 1);
@@ -101,7 +259,7 @@ export default function GameScreen({ route, navigation }: Props) {
     return () => ws.close();
   }, [mode, gameId]);
 
-  // Countdown timer
+  // --- Countdown timer ---
   useEffect(() => {
     if (phase !== 'playing') {
       if (timerRef.current) clearInterval(timerRef.current);
@@ -118,13 +276,14 @@ export default function GameScreen({ route, navigation }: Props) {
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [phase, currentIndex]);
 
-  // Auto-submit on timeout
+  // --- Auto-submit on timeout ---
   useEffect(() => {
     if (timeLeft === 0 && phase === 'playing') {
       submitAnswer('__timeout__', QUESTION_TIME);
     }
   }, [timeLeft]);
 
+  // --- Submit answer ---
   const submitAnswer = useCallback(async (answer: string, forcedTime?: number) => {
     if (phase !== 'playing') return;
     if (timerRef.current) clearInterval(timerRef.current);
@@ -141,22 +300,42 @@ export default function GameScreen({ route, navigation }: Props) {
       });
 
       setLastResult(result);
-      if (result.points) setScore(s => s + result.points);
+
+      // Update score with floating points animation
+      if (result.points) {
+        setScore(s => s + result.points);
+        setLastPoints(result.points);
+        setPointsTrigger(k => k + 1);
+      }
+
+      // Record result for progress dots
+      setQuestionResults(prev => {
+        const next = [...prev];
+        next[currentIndex] = result.isCorrect;
+        return next;
+      });
+
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
 
       if (result.gameComplete) {
         setFinalScores(prev => ({ ...prev, mine: result.totalScore ?? score }));
-        if (mode === 'async') setPhase('finished');
-        else setWaitingForOpponent(true);
+        if (mode === 'async') {
+          setTimeout(() => setPhase('finished'), 1500);
+        } else {
+          setWaitingForOpponent(true);
+        }
       } else if (mode === 'async') {
+        // 1.5s pause on reveal state — long enough to register, short enough for flow
         setTimeout(() => {
           setCurrentIndex(i => i + 1);
           setPhase('playing');
           setSelectedAnswer(null);
           setLastResult(null);
+          setTimerKey(k => k + 1);
+          setQuestionAnimKey(k => k + 1);
           setMascotMood('thinking');
           setMascotKey(k => k + 1);
-        }, 1800);
+        }, 1500);
       } else {
         setWaitingForOpponent(true);
       }
@@ -165,6 +344,7 @@ export default function GameScreen({ route, navigation }: Props) {
     }
   }, [phase, currentIndex, gameId, mode, score]);
 
+  // --- Quit handler ---
   const handleQuit = () => {
     Alert.alert(
       'Quit game?',
@@ -178,21 +358,35 @@ export default function GameScreen({ route, navigation }: Props) {
             navigation.navigate('Dashboard');
           },
         },
-      ]
+      ],
     );
   };
 
-  // Loading
+  // --- Determine answer button states ---
+  const getAnswerState = (answer: string): AnswerState => {
+    if (!selectedAnswer || !lastResult) return 'neutral';
+    if (answer === lastResult.correctAnswer) return 'correct';
+    if (answer === selectedAnswer && !lastResult.isCorrect) return 'wrong';
+    return 'dimmed';
+  };
+
+  // =========================================================================
+  // RENDER: Loading
+  // =========================================================================
   if (phase === 'loading') {
     return (
-      <LinearGradient colors={gradients.game} style={s.center}>
-        <ActivityIndicator color={colors.green} size="large" />
-        <Text style={s.loadingText}>Loading questions...</Text>
+      <LinearGradient colors={gradients.game} style={styles.flex}>
+        <View style={styles.center}>
+          <ActivityIndicator color={colors.button} size="large" />
+          <Text style={styles.loadingText}>Loading questions…</Text>
+        </View>
       </LinearGradient>
     );
   }
 
-  // Finished
+  // =========================================================================
+  // RENDER: Finished (leaderboard)
+  // =========================================================================
   if (phase === 'finished') {
     const opponent = finalScores?.opponent;
     const mine = finalScores?.mine ?? score;
@@ -201,106 +395,146 @@ export default function GameScreen({ route, navigation }: Props) {
       : 'solo';
 
     const outcomeConfig: Record<string, { text: string; mood: MascotMood }> = {
-      win:  { text: 'You Rock!!! 🤘', mood: 'celebrating' },
-      lose: { text: 'You Suck 😝',    mood: 'wrong' },
-      tie:  { text: "It's a Tie! 🤝", mood: 'happy' },
-      solo: { text: 'Well played! 🍕', mood: 'celebrating' },
+      win:  { text: 'You Rock!!!', mood: 'celebrating' },
+      lose: { text: 'Better luck next time!', mood: 'wrong' },
+      tie:  { text: "It's a Tie!", mood: 'happy' },
+      solo: { text: 'Well played!', mood: 'celebrating' },
     };
-    const outcomeText = opponentQuit ? 'Opponent quit! 🏆' : outcomeConfig[gameOutcome].text;
+    const outcomeText = opponentQuit ? 'Opponent quit!' : outcomeConfig[gameOutcome].text;
     const outcomeMood = opponentQuit ? 'celebrating' : outcomeConfig[gameOutcome].mood;
 
     return (
-      <LinearGradient colors={gradients.game} style={s.flex}>
-        <View style={[s.finishedContainer, { paddingTop: insets.top + 32, paddingBottom: insets.bottom + 32 }]}>
-          <View style={s.bubble}>
-            <Text style={s.bubbleText}>{outcomeText}</Text>
-          </View>
+      <LinearGradient colors={gradients.game} style={styles.flex}>
+        <View style={[styles.finishedContainer, { paddingTop: insets.top + 32, paddingBottom: insets.bottom + 32 }]}>
           <PizzaMascot mood={outcomeMood} size={130} />
-          <Text style={s.finalScore}>Your score: <Text style={s.finalScoreBold}>{mine}</Text></Text>
+          <Text style={styles.outcomeText}>{outcomeText}</Text>
+
+          <View style={styles.scoreCard}>
+            <Text style={styles.scoreCardLabel}>Your Score</Text>
+            <Text style={styles.scoreCardValue}>{mine}</Text>
+          </View>
+
           {opponent !== undefined && (
-            <Text style={s.opponentScore}>Opponent score: <Text style={{ fontWeight: '700' }}>{opponent}</Text></Text>
+            <View style={[styles.scoreCard, styles.scoreCardOpponent]}>
+              <Text style={styles.scoreCardLabel}>Opponent</Text>
+              <Text style={styles.scoreCardValue}>{opponent}</Text>
+            </View>
           )}
+
           {mode === 'async' && opponent === undefined && (
-            <Text style={s.waitingMsg}>Waiting for your opponent to play (up to 24h).</Text>
+            <Text style={styles.waitingMsg}>
+              Waiting for your opponent to play (up to 24h).
+            </Text>
           )}
-          <TouchableOpacity style={[s.btn, s.btnGhost]} onPress={() => navigation.navigate('Dashboard')}>
-            <Text style={s.btnGhostText}>Back to Dashboard</Text>
-          </TouchableOpacity>
+
+          {/* Progress dots showing per-question results */}
+          <ProgressDots total={questions.length} current={-1} results={questionResults} />
+
+          <Animated.View entering={FadeIn.delay(300)}>
+            <View style={styles.dashBtn}>
+              <Text
+                style={styles.dashBtnText}
+                onPress={() => navigation.navigate('Dashboard')}
+              >
+                Back to Dashboard
+              </Text>
+            </View>
+          </Animated.View>
         </View>
       </LinearGradient>
     );
   }
 
+  // =========================================================================
+  // RENDER: Playing / Answered
+  // =========================================================================
   const question = questions[currentIndex];
   if (!question) return null;
 
-  const progressPct = (currentIndex + 1) / questions.length;
-  const isUrgent = timeLeft <= 10;
-
   return (
-    <LinearGradient colors={gradients.game} style={s.flex}>
-      {/* Top bar */}
-      <View style={[s.topBar, { paddingTop: insets.top + 8 }]}>
-        <TouchableOpacity style={s.quitBtn} onPress={handleQuit}>
-          <Text style={s.quitBtnText}>✕</Text>
-        </TouchableOpacity>
+    <LinearGradient colors={gradients.game} style={styles.flex}>
+      {/* ================================================================= */}
+      {/* TOP ZONE (~15%): Status bar — progress, timer, score              */}
+      {/* Three-zone layout per uiux.md. Compact, persistent, never         */}
+      {/* competes with question content.                                    */}
+      {/* ================================================================= */}
+      <View style={[styles.topZone, { paddingTop: insets.top + 8 }]}>
+        {/* Quit button */}
+        <View style={styles.topRow}>
+          <View style={styles.quitBtn} >
+            <Text style={styles.quitBtnText} onPress={handleQuit}>✕</Text>
+          </View>
 
-        <View style={s.progressTrack}>
-          <View style={[s.progressFill, { width: `${progressPct * 100}%` }]} />
+          {/* Progress dots — segmented indicator, one per question */}
+          <ProgressDots
+            total={questions.length}
+            current={currentIndex}
+            results={questionResults}
+          />
+
+          {/* Score display with animated count-up and floating +N */}
+          <View style={styles.scoreContainer}>
+            <Text style={styles.scoreLabel}>Score</Text>
+            <View style={styles.scoreRow}>
+              <AnimatedScore value={score} />
+              <FloatingPoints points={lastPoints} triggerKey={pointsTrigger} />
+            </View>
+          </View>
         </View>
 
-        <View style={[s.countdown, isUrgent && s.countdownUrgent]}>
-          <Text style={[s.countdownText, isUrgent && s.countdownTextUrgent]}>{timeLeft}s</Text>
+        {/* Circular countdown timer — center of top zone */}
+        <View style={styles.timerRow}>
+          <CircularTimer
+            duration={QUESTION_TIME}
+            timeLeft={timeLeft}
+            isPlaying={phase === 'playing'}
+            timerKey={timerKey}
+          />
         </View>
       </View>
 
-      {/* Meta row */}
-      <View style={s.metaRow}>
-        <View style={s.scorePill}>
-          <Text style={s.scorePillText}>⭐ {score} pts</Text>
+      {/* ================================================================= */}
+      {/* MIDDLE ZONE (~35%): Question text + question counter              */}
+      {/* Large, bold, centered text with 1.5x line height.                 */}
+      {/* Animated: slides out left / in from right on question change.     */}
+      {/* ================================================================= */}
+      <View style={styles.middleZone}>
+        <Animated.View
+          key={questionAnimKey}
+          entering={SlideInRight.duration(250)}
+          exiting={SlideOutLeft.duration(250)}
+          style={styles.questionContainer}
+        >
+          <Text style={styles.questionCounter}>
+            Question {currentIndex + 1} of {questions.length}
+          </Text>
+          <Text style={styles.questionText}>{question.question}</Text>
+        </Animated.View>
+
+        {/* Mascot — small, positioned to add personality without distraction */}
+        <View style={styles.mascotWrap}>
+          <PizzaMascot key={mascotKey} mood={mascotMood} size={60} />
         </View>
-        <Text style={s.qCounter}>{currentIndex + 1} / {questions.length}</Text>
       </View>
 
-      {/* Question — scrollable so long questions don't overflow */}
-      <ScrollView
-        style={s.flex}
-        contentContainerStyle={s.questionScrollContent}
-        scrollEnabled
-        showsVerticalScrollIndicator={false}
-      >
-        <Text style={s.questionText}>{question.question}</Text>
-      </ScrollView>
-
-      {/* Mascot */}
-      <View style={s.mascotCenter}>
-        <PizzaMascot key={mascotKey} mood={mascotMood} size={85} />
-      </View>
-
-      {/* Answers — fixed at bottom */}
-      <View style={[s.answersWrap, { paddingBottom: insets.bottom + 16 }]}>
-        {question.all_answers.map((answer, i) => {
-          let ansStyle: object[] = [s.answerPill];
-          // Only apply colours after the API has responded (lastResult set)
-          if (selectedAnswer && lastResult) {
-            if (answer === lastResult.correctAnswer) ansStyle = [s.answerPill, s.answerCorrect];
-            else if (answer === selectedAnswer && !lastResult.isCorrect) ansStyle = [s.answerPill, s.answerWrong];
-          }
-          return (
-            <TouchableOpacity
-              key={i}
-              style={ansStyle}
-              onPress={() => submitAnswer(answer)}
-              disabled={phase !== 'playing'}
-              activeOpacity={0.75}
-            >
-              <Text style={s.answerText}>{answer}</Text>
-            </TouchableOpacity>
-          );
-        })}
+      {/* ================================================================= */}
+      {/* BOTTOM ZONE (~50%): Answer buttons                                */}
+      {/* Four full-width buttons, 12dp spacing, in the natural thumb arc.  */}
+      {/* Each button handles its own press/reveal/shake animations.        */}
+      {/* ================================================================= */}
+      <View style={[styles.bottomZone, { paddingBottom: insets.bottom + 20 }]}>
+        {question.all_answers.map((answer, i) => (
+          <AnswerButton
+            key={`${currentIndex}-${i}`}
+            text={answer}
+            state={getAnswerState(answer)}
+            disabled={phase !== 'playing'}
+            onPress={() => submitAnswer(answer)}
+          />
+        ))}
 
         {waitingForOpponent && (
-          <Text style={s.waitingMsg}>
+          <Text style={styles.waitingMsg}>
             Waiting for opponent…{opponentAnswered ? ' (they answered)' : ''}
           </Text>
         )}
@@ -309,86 +543,165 @@ export default function GameScreen({ route, navigation }: Props) {
   );
 }
 
-const s = StyleSheet.create({
+// ---------------------------------------------------------------------------
+// Styles
+// ---------------------------------------------------------------------------
+
+const styles = StyleSheet.create({
   flex: { flex: 1 },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 16 },
-  loadingText: { color: colors.textMuted, fontSize: 16 },
-  // Top bar
-  topBar: {
-    flexDirection: 'row', alignItems: 'center',
-    paddingHorizontal: 16, paddingBottom: 8, gap: 12,
+  loadingText: { color: colors.text.secondary, fontSize: 16, marginTop: 8 },
+
+  // === TOP ZONE ===
+  topZone: {
+    paddingHorizontal: 16,
+    paddingBottom: 4,
+  },
+  topRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 8,
   },
   quitBtn: {
-    width: 32, height: 32, borderRadius: 16,
-    backgroundColor: 'rgba(255,255,255,0.08)',
+    width: 36, height: 36, borderRadius: 18,
+    backgroundColor: colors.bg.surface,
     justifyContent: 'center', alignItems: 'center',
   },
-  quitBtnText: { color: colors.textMuted, fontSize: 14 },
-  progressTrack: {
-    flex: 1, height: 6, backgroundColor: 'rgba(255,255,255,0.1)',
-    borderRadius: 3, overflow: 'hidden',
+  quitBtnText: { color: colors.text.secondary, fontSize: 16, fontWeight: '600' },
+
+  // Progress dots
+  dotsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 8,
   },
-  progressFill: { height: '100%', backgroundColor: colors.green, borderRadius: 3 },
-  countdown: {
-    backgroundColor: 'rgba(255,255,255,0.08)',
-    paddingHorizontal: 10, paddingVertical: 4,
-    borderRadius: 10,
+  dot: {
+    width: 8, height: 8, borderRadius: 4,
   },
-  countdownUrgent: { backgroundColor: 'rgba(239,68,68,0.2)' },
-  countdownText: { color: colors.textMuted, fontSize: 14, fontWeight: '700' },
-  countdownTextUrgent: { color: colors.red },
-  // Meta row
-  metaRow: {
-    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
-    paddingHorizontal: 16, marginBottom: 8,
+  dotCurrent: {
+    width: 10, height: 10, borderRadius: 5,
+    borderWidth: 1.5,
+    borderColor: colors.text.primary,
   },
-  scorePill: {
-    backgroundColor: 'rgba(255,255,255,0.06)',
-    paddingHorizontal: 12, paddingVertical: 5,
-    borderRadius: 20, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
+
+  // Score
+  scoreContainer: {
+    alignItems: 'center',
+    minWidth: 50,
   },
-  scorePillText: { color: colors.textPrimary, fontSize: 13, fontWeight: '600' },
-  qCounter: { color: colors.textMuted, fontSize: 13 },
-  // Question
-  questionScrollContent: {
-    flexGrow: 1, justifyContent: 'center',
-    paddingHorizontal: 20, paddingVertical: 12,
+  scoreLabel: {
+    fontSize: 10,
+    fontWeight: '600',
+    color: colors.text.secondary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
-  questionText: { color: colors.textPrimary, fontSize: 19, fontWeight: '600', lineHeight: 28, textAlign: 'center' },
-  // Mascot
-  mascotCenter: { alignItems: 'center', paddingVertical: 8 },
-  // Answers
-  answersWrap: { paddingHorizontal: 16, gap: 10 },
-  answerPill: {
-    backgroundColor: 'rgba(10,30,80,0.55)',
-    borderRadius: 14, padding: 16,
-    borderWidth: 1, borderColor: 'rgba(80,160,255,0.30)',
+  scoreRow: {
+    flexDirection: 'row',
     alignItems: 'center',
   },
-  answerCorrect: {
-    backgroundColor: 'rgba(0,204,104,0.25)',
-    borderColor: colors.green,
-    borderWidth: 2,
+  scoreValue: {
+    // Monospace/tabular-nums prevents layout shift when score changes
+    fontVariant: ['tabular-nums'],
+    fontSize: 18,
+    fontWeight: '800',
+    color: colors.gold,
   },
-  answerWrong: {
-    backgroundColor: 'rgba(239,68,68,0.25)',
-    borderColor: colors.red,
-    borderWidth: 2,
+  floatingPoints: {
+    position: 'absolute',
+    right: -28,
+    top: -4,
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.correct,
   },
-  answerText: { color: colors.textPrimary, fontSize: 15, fontWeight: '500', textAlign: 'center' },
-  waitingMsg: { color: colors.textMuted, fontSize: 14, textAlign: 'center', marginTop: 4 },
-  // Finished
-  finishedContainer: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 16 },
-  bubble: {
-    backgroundColor: colors.surface,
-    paddingHorizontal: 18, paddingVertical: 10,
-    borderRadius: 16, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
+
+  // Timer row
+  timerRow: {
+    alignItems: 'center',
+    paddingVertical: 4,
   },
-  bubbleText: { color: colors.textPrimary, fontSize: 18, fontWeight: '700' },
-  finalScore: { color: colors.textPrimary, fontSize: 22, marginTop: 8 },
-  finalScoreBold: { fontWeight: '800', color: colors.green },
-  opponentScore: { color: colors.textMuted, fontSize: 16 },
-  btn: { borderRadius: 12, padding: 14, alignItems: 'center', minWidth: 200 },
-  btnGhost: { backgroundColor: 'rgba(255,255,255,0.08)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.15)' },
-  btnGhostText: { color: colors.textPrimary, fontSize: 15, fontWeight: '600' },
+
+  // === MIDDLE ZONE ===
+  middleZone: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+  },
+  questionContainer: {
+    alignItems: 'center',
+  },
+  questionCounter: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: colors.text.secondary,
+    marginBottom: 12,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+  },
+  questionText: {
+    // 20-22px bold per typography spec, 1.5x line height, centered
+    fontSize: 21,
+    fontWeight: '700',
+    color: colors.text.primary,
+    textAlign: 'center',
+    lineHeight: 32,       // ~1.5x of 21px
+  },
+  mascotWrap: {
+    alignItems: 'center',
+    marginTop: 12,
+  },
+
+  // === BOTTOM ZONE ===
+  bottomZone: {
+    paddingHorizontal: 16,
+    gap: 12,              // 12dp spacing between answer buttons per spec
+  },
+
+  // === FINISHED SCREEN ===
+  finishedContainer: {
+    flex: 1, alignItems: 'center', justifyContent: 'center',
+    padding: 24, gap: 16,
+  },
+  outcomeText: {
+    fontSize: 26, fontWeight: '800',
+    color: colors.text.primary,
+    marginTop: 12,
+  },
+  scoreCard: {
+    backgroundColor: colors.bg.surface,
+    borderRadius: 16, padding: 20,
+    alignItems: 'center', minWidth: 160,
+    borderWidth: 1, borderColor: colors.correct,
+  },
+  scoreCardOpponent: {
+    borderColor: colors.bg.elevated,
+  },
+  scoreCardLabel: {
+    fontSize: 13, fontWeight: '600',
+    color: colors.text.secondary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+  },
+  scoreCardValue: {
+    fontSize: 36, fontWeight: '800',
+    color: colors.text.primary,
+    fontVariant: ['tabular-nums'],
+  },
+  dashBtn: {
+    backgroundColor: colors.button,
+    borderRadius: 14, paddingVertical: 16, paddingHorizontal: 32,
+    marginTop: 8,
+  },
+  dashBtnText: {
+    color: colors.text.onButton, fontSize: 16, fontWeight: '700',
+  },
+  waitingMsg: {
+    color: colors.text.secondary, fontSize: 14,
+    textAlign: 'center', marginTop: 4,
+  },
 });
