@@ -4,6 +4,7 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withSpring,
+  runOnJS,
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import * as Haptics from 'expo-haptics';
@@ -21,15 +22,21 @@ interface ModeCardProps {
 function ModeCard({ icon, label, color, badgeCount, onPress, subtitle }: ModeCardProps) {
   const scale = useSharedValue(1);
 
+  const handlePress = useCallback(() => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    onPress();
+  }, [onPress]);
+
   const tapGesture = Gesture.Tap()
     .onBegin(() => {
+      'worklet';
       scale.value = withSpring(0.93, { damping: 12, stiffness: 400 });
     })
     .onFinalize((_e, success) => {
+      'worklet';
       scale.value = withSpring(1, { damping: 10, stiffness: 300 });
       if (success) {
-        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-        onPress();
+        runOnJS(handlePress)();
       }
     });
 
