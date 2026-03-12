@@ -9,6 +9,7 @@ import {
   Alert,
   ActivityIndicator,
   RefreshControl,
+  Share,
 } from 'react-native';
 import Animated, {
   FadeInDown,
@@ -16,6 +17,8 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
+import * as Clipboard from 'expo-clipboard';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
 import { useChallenges } from '../hooks/useChallenges';
@@ -28,9 +31,11 @@ import ChallengesFeed from '../components/dashboard/ChallengesFeed';
 import ModeCard from '../components/dashboard/ModeCard';
 import BottomNav from '../components/dashboard/BottomNav';
 import UserSearchOverlay from '../components/dashboard/UserSearchOverlay';
-import EmptyState from '../components/dashboard/EmptyState';
+import OnboardingOverlay from '../components/OnboardingOverlay';
 import type { RootStackParamList } from '../../App';
 import type { SearchedUser } from '../stores/dashboard';
+
+const ONBOARDING_KEY = 'quizza_onboarding_completed';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Dashboard'>;
 
@@ -56,6 +61,30 @@ export default function DashboardScreen({ navigation }: Props) {
   const [roomCode, setRoomCode] = useState('');
   const [joinLoading, setJoinLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(false);
+
+  // Check for first-time user onboarding
+  useEffect(() => {
+    AsyncStorage.getItem(ONBOARDING_KEY).then((value) => {
+      if (!value) {
+        setShowOnboarding(true);
+      }
+    });
+  }, []);
+
+  const dismissOnboarding = useCallback(async () => {
+    setShowOnboarding(false);
+    await AsyncStorage.setItem(ONBOARDING_KEY, 'true');
+  }, []);
+
+  const handleOnboardingCreateRoom = useCallback(async () => {
+    await dismissOnboarding();
+    if (isGuest) {
+      navigation.navigate('Signup');
+      return;
+    }
+    navigation.navigate('Category', { mode: 'room' });
+  }, [dismissOnboarding, isGuest, navigation]);
 
   // Fetch user metrics
   useEffect(() => {
@@ -135,7 +164,7 @@ export default function DashboardScreen({ navigation }: Props) {
     navigation.navigate('Category', { mode: 'solo' });
   }, [navigation]);
 
-  const handleRoom = useCallback(() => {
+  const handleGroupPlay = useCallback(() => {
     if (isGuest) {
       navigation.navigate('Signup');
       return;
@@ -195,23 +224,47 @@ export default function DashboardScreen({ navigation }: Props) {
     [navigation, setSearchOverlayVisible],
   );
 
-  // Bottom nav
+  // Bottom nav — wire all tabs to their screens
   const handleTabPress = useCallback(
     (key: string) => {
       switch (key) {
+        case 'home':
+          // Already on home — no-op
+          break;
+        case 'leaderboard':
+          navigation.navigate('Leaderboard');
+          break;
+        case 'friends':
+          navigation.navigate('Friends');
+          break;
         case 'profile':
           navigation.navigate('Profile');
-          break;
-        case 'home':
-          // Already on home
-          break;
-        default:
-          // Other tabs not yet implemented
           break;
       }
     },
     [navigation],
   );
+
+  // "Find Friends First" section actions
+  const handleSearchFriends = useCallback(() => {
+    navigation.navigate('Friends');
+  }, [navigation]);
+
+  const handleShareInviteLink = useCallback(async () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    const inviteLink = `https://quizza.app/invite/${user?.username ?? 'friend'}`;
+    try {
+      const result = await Share.share({
+        message: `Join me on Quizza! Let's play trivia together. ${inviteLink}`,
+        url: inviteLink,
+      });
+      if (result.action === Share.dismissedAction) return;
+      await Clipboard.setStringAsync(inviteLink);
+    } catch {
+      await Clipboard.setStringAsync(inviteLink);
+      Alert.alert('Copied!', 'Invite link copied to clipboard.');
+    }
+  }, [user?.username]);
 
   const handleLogout = useCallback(() => {
     Alert.alert('Log out', 'Are you sure?', [
@@ -300,6 +353,31 @@ export default function DashboardScreen({ navigation }: Props) {
             />
           </Animated.View>
 
+          {/* Find Friends First section — shown when no challenges and not loading */}
+          {!challengesLoading && challenges.length === 0 && !isGuest && (
+            <Animated.View entering={FadeInDown.delay(300).duration(400)} style={styles.findFriendsSection}>
+              <Text style={styles.findFriendsHint}>Don't have friends added yet?</Text>
+              <View style={styles.findFriendsRow}>
+                <TouchableOpacity
+                  style={styles.findFriendsBtn}
+                  onPress={handleSearchFriends}
+                  activeOpacity={0.8}
+                >
+                  <Text style={styles.findFriendsBtnIcon}>🔍</Text>
+                  <Text style={styles.findFriendsBtnText}>Search Friends</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.shareInviteBtn}
+                  onPress={handleShareInviteLink}
+                  activeOpacity={0.8}
+                >
+                  <Text style={styles.shareInviteBtnIcon}>📤</Text>
+                  <Text style={styles.shareInviteBtnText}>Share Invite</Text>
+                </TouchableOpacity>
+              </View>
+            </Animated.View>
+          )}
+
           {/* Mode cards */}
           <Animated.View entering={FadeInDown.delay(350).duration(400)} style={styles.modeSection}>
             <Text style={styles.modeLabel}>GAME MODES</Text>
@@ -309,14 +387,14 @@ export default function DashboardScreen({ navigation }: Props) {
                 label="Solo"
                 color={colors.brand.primary}
                 onPress={handleSolo}
-                subtitle="Quick play"
+                subtitle="Play now"
               />
               <ModeCard
                 icon="👥"
-                label="Room"
+                label="Group Play"
                 color={colors.brand.secondary}
-                onPress={handleRoom}
-                subtitle="Live match"
+                onPress={handleGroupPlay}
+                subtitle="Play with friends"
               />
               <ModeCard
                 icon="⚔️"
@@ -324,8 +402,17 @@ export default function DashboardScreen({ navigation }: Props) {
                 color="#F97316"
                 badgeCount={pendingCount}
                 onPress={handleChallenge}
-                subtitle="Dare a friend"
+                subtitle="vs your friends"
               />
+            </View>
+
+            {/* Mode descriptions */}
+            <View style={styles.modeDescriptions}>
+              <Text style={styles.modeDesc}>
+                <Text style={[styles.modeDescBold, { color: colors.brand.primary }]}>Solo</Text> — Play trivia at your own pace.{' '}
+                <Text style={[styles.modeDescBold, { color: colors.brand.secondary }]}>Group Play</Text> — Fun group quiz with friends.{' '}
+                <Text style={[styles.modeDescBold, { color: '#F97316' }]}>Challenge</Text> — Async 1v1 duel with a friend.
+              </Text>
             </View>
           </Animated.View>
 
@@ -377,6 +464,13 @@ export default function DashboardScreen({ navigation }: Props) {
           onClose={() => setSearchOverlayVisible(false)}
           onSelectUser={handleUserSelect}
         />
+
+        {/* Onboarding overlay for first-time users */}
+        <OnboardingOverlay
+          visible={showOnboarding}
+          onCreateRoom={handleOnboardingCreateRoom}
+          onDismiss={dismissOnboarding}
+        />
     </View>
   );
 }
@@ -425,6 +519,65 @@ const styles = StyleSheet.create({
     gap: 8,
   },
 
+  // Find Friends First section
+  findFriendsSection: {
+    marginHorizontal: 16,
+    backgroundColor: colors.bg.surface,
+    borderRadius: 14,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: colors.border + '25',
+    gap: 10,
+  },
+  findFriendsHint: {
+    color: colors.text.secondary,
+    fontSize: 13,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  findFriendsRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  findFriendsBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.brand.primary,
+    paddingVertical: 11,
+    borderRadius: 12,
+    gap: 6,
+  },
+  findFriendsBtnIcon: {
+    fontSize: 14,
+  },
+  findFriendsBtnText: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontWeight: '700',
+  },
+  shareInviteBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.bg.elevated,
+    paddingVertical: 11,
+    borderRadius: 12,
+    gap: 6,
+    borderWidth: 1,
+    borderColor: colors.border + '40',
+  },
+  shareInviteBtnIcon: {
+    fontSize: 14,
+  },
+  shareInviteBtnText: {
+    color: colors.text.primary,
+    fontSize: 13,
+    fontWeight: '700',
+  },
+
   // Mode cards
   modeSection: {
     paddingHorizontal: 16,
@@ -439,6 +592,17 @@ const styles = StyleSheet.create({
   modeRow: {
     flexDirection: 'row',
     gap: 10,
+  },
+  modeDescriptions: {
+    paddingTop: 4,
+  },
+  modeDesc: {
+    color: colors.text.secondary,
+    fontSize: 11,
+    lineHeight: 16,
+  },
+  modeDescBold: {
+    fontWeight: '700',
   },
 
   // Join room
