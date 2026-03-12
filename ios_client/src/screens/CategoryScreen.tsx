@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
-  View, Text, TextInput, TouchableOpacity, StyleSheet,
-  ScrollView, Dimensions, ActivityIndicator,
+  View, Text, TouchableOpacity, StyleSheet,
+  Dimensions, ActivityIndicator, Keyboard,
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import { FlashList } from '@shopify/flash-list';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import * as Haptics from 'expo-haptics';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { api } from '../api/client';
-import PizzaMascot from '../components/PizzaMascot';
-import { colors, gradients } from '../theme';
-import {
-  getCategoryTheme, cleanCategoryName, CATEGORY_SORT_ORDER, parseGradientColors,
-} from '../utils/categoryThemes';
+import { cleanCategoryName, CATEGORY_SORT_ORDER } from '../utils/categoryThemes';
+import { FILTER_CATEGORY_IDS } from '../utils/categoryColors';
+import SearchBar from '../components/category/SearchBar';
+import FilterChips from '../components/category/FilterChips';
+import FavoritesSection from '../components/category/FavoritesSection';
+import { CategoryCard } from '../components/category/CategoryCard';
+import CategorySkeleton from '../components/category/CategorySkeleton';
+import EmptySearchState from '../components/category/EmptySearchState';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Category'>;
@@ -19,230 +23,382 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Category'>;
 interface Category { id: number; name: string; }
 
 const { width: SCREEN_W } = Dimensions.get('window');
-const COLS = 3;
-const H_PAD = 12;
-const GAP = 8;
-const TILE_W = (SCREEN_W - H_PAD * 2 - GAP * (COLS - 1)) / COLS;
 const BOTTOM_BAR_H = 160;
 
+// ── Debounce hook ──────────────────────────────────────────────
+function useDebounce<T>(value: T, delay: number): T {
+  const [debounced, setDebounced] = useState(value);
+  useEffect(() => {
+    const timer = setTimeout(() => setDebounced(value), delay);
+    return () => clearTimeout(timer);
+  }, [value, delay]);
+  return debounced;
+}
+
+// ── Main screen ────────────────────────────────────────────────
 export default function CategoryScreen({ route, navigation }: Props) {
   const { mode, target } = route.params;
   const insets = useSafeAreaInsets();
 
+  // State
   const [categories, setCategories] = useState<Category[]>([]);
   const [selected, setSelected] = useState<Category | null>(null);
-  const [search, setSearch] = useState('');
-  const [dropdown, setDropdown] = useState<Category[]>([]);
+  const [query, setQuery] = useState('');
+  const [activeFilter, setActiveFilter] = useState('all');
   const [blitz, setBlitz] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
 
+  const debouncedQuery = useDebounce(query, 300);
+
+  // Fetch categories
   useEffect(() => {
-    api.get<Category[]>('/categories').then(raw => {
-      const cleaned = raw.map(c => ({ ...c, name: cleanCategoryName(c.name) }));
-      cleaned.sort((a, b) => {
-        const ia = CATEGORY_SORT_ORDER.indexOf(a.id);
-        const ib = CATEGORY_SORT_ORDER.indexOf(b.id);
-        if (ia === -1 && ib === -1) return a.name.localeCompare(b.name);
-        if (ia === -1) return 1;
-        if (ib === -1) return -1;
-        return ia - ib;
-      });
-      setCategories(cleaned);
-    }).catch(console.error);
+    api.get<Category[]>('/categories')
+      .then((raw) => {
+        const cleaned = raw.map((c) => ({ ...c, name: cleanCategoryName(c.name) }));
+        cleaned.sort((a, b) => {
+          const ia = CATEGORY_SORT_ORDER.indexOf(a.id);
+          const ib = CATEGORY_SORT_ORDER.indexOf(b.id);
+          if (ia === -1 && ib === -1) return a.name.localeCompare(b.name);
+          if (ia === -1) return 1;
+          if (ib === -1) return -1;
+          return ia - ib;
+        });
+        setCategories(cleaned);
+      })
+      .catch(console.error)
+      .finally(() => setLoading(false));
   }, []);
 
-  useEffect(() => {
-    if (!search.trim()) { setDropdown([]); return; }
-    const q = search.toLowerCase();
-    setDropdown(categories.filter(c => c.name.toLowerCase().includes(q)).slice(0, 6));
-  }, [search, categories]);
+  // Filter + search
+  const filtered = useMemo(() => {
+    let result = categories;
 
-  const timerSeconds = blitz ? 15 : 30;
+    // Apply chip filter
+    if (activeFilter !== 'all') {
+      const ids = FILTER_CATEGORY_IDS[activeFilter];
+      if (ids) result = result.filter((c) => ids.includes(c.id));
+    }
+
+    // Apply search
+    if (debouncedQuery) {
+      const q = debouncedQuery.toLowerCase();
+      result = result.filter((c) => c.name.toLowerCase().includes(q));
+    }
+
+    return result;
+  }, [categories, debouncedQuery, activeFilter]);
+
+  // Mode label
   const modeLabelMap: Record<string, string> = {
-    solo: '⚡ Solo Play', room: '🏠 Create Room', challenge: '⚔️ Challenge',
+    solo: 'Solo Play', room: 'Create Room', challenge: 'Challenge',
   };
   const modeLabel = `${modeLabelMap[mode] ?? mode}${target ? ` — ${target}` : ''}`;
+  const timerSeconds = blitz ? 15 : 30;
 
-  const go = async () => {
+  // Handlers
+  const handleSelect = useCallback((item: Category) => {
+    setSelected(item);
+  }, []);
+
+  const handleClearSearch = useCallback(() => {
+    setQuery('');
+    setActiveFilter('all');
+  }, []);
+
+  const handleFilterSelect = useCallback((key: string) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    setActiveFilter(key);
+  }, []);
+
+  const go = useCallback(async () => {
     if (!selected) return;
-    setLoading(true);
+    setSubmitting(true);
     setError('');
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    Keyboard.dismiss();
     try {
       if (mode === 'solo') {
         const r = await api.post<{ gameId: string; questionSetId: string }>(
-          '/games/solo', { category: selected.name, categoryId: selected.id }
+          '/games/solo', { category: selected.name, categoryId: selected.id },
         );
-        navigation.replace('Game', { gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId, category: selected.name, catId: selected.id, timer: timerSeconds });
+        navigation.replace('Game', {
+          gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId,
+          category: selected.name, catId: selected.id, timer: timerSeconds,
+        });
       } else if (mode === 'room') {
         const r = await api.post<{ roomId: string; roomCode: string; questionSetId: string; category: string }>(
-          '/rooms', { category: selected.name, categoryId: selected.id, timerSeconds }
+          '/rooms', { category: selected.name, categoryId: selected.id, timerSeconds },
         );
-        navigation.replace('Room', { roomId: r.roomId, questionSetId: r.questionSetId, category: r.category, roomCode: r.roomCode, isHost: true, timer: timerSeconds });
+        navigation.replace('Room', {
+          roomId: r.roomId, questionSetId: r.questionSetId,
+          category: r.category, roomCode: r.roomCode, isHost: true, timer: timerSeconds,
+        });
       } else if (mode === 'challenge') {
         const r = await api.post<{ gameId: string; questionSetId: string }>(
-          '/challenges', { targetUsername: target, category: selected.name, categoryId: selected.id }
+          '/challenges', { targetUsername: target, category: selected.name, categoryId: selected.id },
         );
-        navigation.replace('Game', { gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId, category: selected.name, catId: selected.id, timer: timerSeconds });
+        navigation.replace('Game', {
+          gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId,
+          category: selected.name, catId: selected.id, timer: timerSeconds,
+        });
       }
     } catch (err: any) {
       setError(err.message);
-      setLoading(false);
+      setSubmitting(false);
     }
-  };
+  }, [selected, mode, target, timerSeconds, navigation]);
 
-  const renderTile = (item: Category) => {
-    const theme = getCategoryTheme(item.name, item.id);
-    const [c1, c2] = parseGradientColors(theme.gradient);
-    const isSelected = selected?.id === item.id;
-    return (
-      <TouchableOpacity
-        key={item.id}
-        style={[s.tile, isSelected && s.tileSelected]}
-        onPress={() => setSelected(item)}
-        activeOpacity={0.75}
-        delayPressIn={80}
-      >
-        <LinearGradient colors={[c1, c2]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.tileInner}>
-          <Text style={s.tileEmoji}>{theme.emoji}</Text>
-          <Text style={s.tileName} numberOfLines={2}>{item.name}</Text>
-        </LinearGradient>
-      </TouchableOpacity>
-    );
-  };
+  // Render item for FlashList
+  const renderItem = useCallback(
+    ({ item, index }: { item: Category; index: number }) => (
+      <CategoryCard
+        item={item}
+        index={index}
+        isSelected={selected?.id === item.id}
+        onSelect={handleSelect}
+      />
+    ),
+    [selected?.id, handleSelect],
+  );
+
+  const keyExtractor = useCallback((item: Category) => String(item.id), []);
+
+  // List header: favorites + section title
+  const ListHeader = useMemo(
+    () => (
+      <View>
+        <FavoritesSection
+          categories={categories}
+          selectedId={selected?.id ?? null}
+          onSelect={handleSelect}
+        />
+        {filtered.length > 0 && (
+          <Text style={s.sectionTitle}>
+            {debouncedQuery ? 'Search Results' : 'All Categories'}
+          </Text>
+        )}
+      </View>
+    ),
+    [categories, selected?.id, handleSelect, filtered.length, debouncedQuery],
+  );
 
   return (
-    <View style={s.root}>
-      <LinearGradient colors={gradients.bg} style={StyleSheet.absoluteFill} pointerEvents="none" />
-
-      <ScrollView
-        style={s.scroll}
-        contentContainerStyle={[s.scrollContent, { paddingTop: insets.top + 8, paddingBottom: BOTTOM_BAR_H + insets.bottom + 16 }]}
-        keyboardShouldPersistTaps="handled"
-        showsVerticalScrollIndicator={false}
-        alwaysBounceVertical
-      >
-        {/* Header */}
-        <TouchableOpacity style={s.closeBtn} onPress={() => navigation.goBack()}>
-          <Text style={s.closeBtnText}>✕</Text>
-        </TouchableOpacity>
-
-        <View style={s.mascotRow}>
-          <View style={s.bubble}><Text style={s.bubbleText}>Pick a category! 🍕</Text></View>
-          <PizzaMascot mood="excited" size={55} />
+    <View style={[s.root, { paddingTop: insets.top }]}>
+      {/* ── Fixed header: back + mode pill + search + chips ── */}
+      <View style={s.header}>
+        <View style={s.headerTop}>
+          <TouchableOpacity style={s.backBtn} onPress={() => navigation.goBack()}>
+            <Text style={s.backBtnText}>←</Text>
+          </TouchableOpacity>
+          <View style={s.modePill}>
+            <Text style={s.modePillText}>{modeLabel}</Text>
+          </View>
+          <View style={{ width: 36 }} />
         </View>
 
-        <View style={s.modePill}>
-          <Text style={s.modePillText}>{modeLabel}</Text>
+        <View style={s.searchRow}>
+          <SearchBar value={query} onChangeText={setQuery} onClear={handleClearSearch} />
         </View>
 
-        {error ? <Text style={s.error}>{error}</Text> : null}
+        <FilterChips activeFilter={activeFilter} onSelect={handleFilterSelect} />
+      </View>
 
-        <View style={s.searchWrap}>
-          <TextInput
-            style={s.searchInput}
-            placeholder="Search for a topic..."
-            placeholderTextColor={colors.textMuted}
-            value={search}
-            onChangeText={setSearch}
-          />
-          {dropdown.length > 0 && (
-            <View style={s.dropdown}>
-              {dropdown.map(cat => {
-                const theme = getCategoryTheme(cat.name, cat.id);
-                return (
-                  <TouchableOpacity key={cat.id} style={s.dropdownItem}
-                    onPress={() => { setSelected(cat); setSearch(''); setDropdown([]); }}>
-                    <Text style={s.dropdownText}>{theme.emoji} {cat.name}</Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-          )}
+      {/* ── Error ── */}
+      {error ? (
+        <View style={s.errorRow}>
+          <Text style={s.errorText}>{error}</Text>
         </View>
+      ) : null}
 
-        {/* Category grid — flexWrap on inner View, NOT on contentContainerStyle */}
-        <View style={s.grid}>
-          {categories.map(renderTile)}
-        </View>
-      </ScrollView>
+      {/* ── Content ── */}
+      {loading ? (
+        <CategorySkeleton />
+      ) : (
+        <FlashList
+          data={filtered}
+          numColumns={2}
+          renderItem={renderItem}
+          keyExtractor={keyExtractor}
+          estimatedItemSize={150}
+          ListHeaderComponent={ListHeader}
+          ListEmptyComponent={
+            <EmptySearchState query={debouncedQuery || activeFilter} onClear={handleClearSearch} />
+          }
+          contentContainerStyle={{
+            paddingHorizontal: 10,
+            paddingBottom: BOTTOM_BAR_H + insets.bottom + 16,
+          }}
+          keyboardDismissMode="on-drag"
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        />
+      )}
 
-      {/* Fixed bottom bar */}
+      {/* ── Fixed bottom bar ── */}
       <View style={[s.bottom, { paddingBottom: insets.bottom + 12 }]}>
         <View style={s.timerToggle}>
-          <TouchableOpacity style={[s.timerOption, !blitz && s.timerOptionActive]} onPress={() => setBlitz(false)}>
-            <Text style={[s.timerOptionText, !blitz && s.timerOptionTextActive]}>⏱ Standard · 30s</Text>
+          <TouchableOpacity
+            style={[s.timerOption, !blitz && s.timerOptionActive]}
+            onPress={() => setBlitz(false)}
+          >
+            <Text style={[s.timerOptionText, !blitz && s.timerOptionTextActive]}>
+              Standard · 30s
+            </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[s.timerOption, blitz && s.timerOptionActive]} onPress={() => setBlitz(true)}>
-            <Text style={[s.timerOptionText, blitz && s.timerOptionTextActive]}>⚡ Blitz · 15s</Text>
+          <TouchableOpacity
+            style={[s.timerOption, blitz && s.timerOptionActive]}
+            onPress={() => setBlitz(true)}
+          >
+            <Text style={[s.timerOptionText, blitz && s.timerOptionTextActive]}>
+              Blitz · 15s
+            </Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={[s.goBtn, (!selected || loading) && s.goBtnDisabled]} onPress={go} disabled={!selected || loading}>
-          {loading ? <ActivityIndicator color="#fff" /> : <Text style={s.goBtnText}>{selected ? "Let's Go →" : 'Pick a category'}</Text>}
+
+        <TouchableOpacity
+          style={[s.goBtn, (!selected || submitting) && s.goBtnDisabled]}
+          onPress={go}
+          disabled={!selected || submitting}
+          activeOpacity={0.8}
+        >
+          {submitting ? (
+            <ActivityIndicator color="#fff" />
+          ) : (
+            <Text style={s.goBtnText}>
+              {selected ? "Let's Go →" : 'Pick a category'}
+            </Text>
+          )}
         </TouchableOpacity>
       </View>
     </View>
   );
 }
 
+// ── Styles ─────────────────────────────────────────────────────
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: colors.bg },
-  scroll: { flex: 1 },
-  scrollContent: { paddingHorizontal: H_PAD },
-  closeBtn: {
-    alignSelf: 'flex-end', width: 32, height: 32, borderRadius: 16,
-    backgroundColor: 'rgba(255,255,255,0.1)', justifyContent: 'center', alignItems: 'center', marginBottom: 8,
+  root: {
+    flex: 1,
+    backgroundColor: '#0F172A',
   },
-  closeBtnText: { color: colors.textPrimary, fontSize: 16 },
-  mascotRow: { alignItems: 'center', marginBottom: 6 },
-  bubble: {
-    backgroundColor: colors.surface, paddingHorizontal: 14, paddingVertical: 8,
-    borderRadius: 14, marginBottom: 8, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
+
+  // Header
+  header: {
+    backgroundColor: '#0F172A',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(71,85,105,0.3)',
   },
-  bubbleText: { color: colors.textPrimary, fontSize: 14, fontWeight: '600' },
-  modePill: {
-    alignSelf: 'center', backgroundColor: 'rgba(255,255,255,0.06)',
-    paddingHorizontal: 14, paddingVertical: 6, borderRadius: 20, marginBottom: 10,
-    borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
-  },
-  modePillText: { color: colors.textMuted, fontSize: 13, fontWeight: '500' },
-  error: { color: colors.red, fontSize: 14, textAlign: 'center', marginBottom: 8 },
-  searchWrap: { marginBottom: 12, zIndex: 20 },
-  searchInput: {
-    backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: 12, padding: 12,
-    color: colors.textPrimary, fontSize: 15, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
-  },
-  dropdown: {
-    position: 'absolute', top: 48, left: 0, right: 0, backgroundColor: colors.surface2,
-    borderRadius: 12, zIndex: 30, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', overflow: 'hidden',
-  },
-  dropdownItem: { padding: 12, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.05)' },
-  dropdownText: { color: colors.textPrimary, fontSize: 14 },
-  // Grid: flexWrap on the container View makes scrollable wrapping grids work on iOS
-  grid: {
+  headerTop: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: GAP,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingTop: 4,
+    paddingBottom: 8,
   },
-  tile: { width: TILE_W, borderRadius: 14, overflow: 'hidden', borderWidth: 2, borderColor: 'transparent' },
-  tileSelected: { borderColor: colors.white },
-  tileInner: { padding: 8, aspectRatio: 1, justifyContent: 'center', alignItems: 'center' },
-  tileEmoji: { fontSize: 24, marginBottom: 4 },
-  tileName: { color: '#fff', fontSize: 10, fontWeight: '700', textAlign: 'center', lineHeight: 13 },
+  backBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(255,255,255,0.08)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  backBtnText: {
+    color: '#F1F5F9',
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  modePill: {
+    backgroundColor: 'rgba(124,58,237,0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(124,58,237,0.3)',
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: 20,
+  },
+  modePillText: {
+    color: '#C4B5FD',
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  searchRow: {
+    paddingHorizontal: 16,
+  },
+
+  // Section title
+  sectionTitle: {
+    color: '#94A3B8',
+    fontSize: 13,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    letterSpacing: 0.8,
+    paddingHorizontal: 6,
+    paddingTop: 8,
+    paddingBottom: 12,
+  },
+
+  // Error
+  errorRow: {
+    paddingHorizontal: 16,
+    paddingTop: 8,
+  },
+  errorText: {
+    color: '#EF4444',
+    fontSize: 14,
+    textAlign: 'center',
+  },
+
+  // Bottom bar
   bottom: {
-    position: 'absolute', bottom: 0, left: 0, right: 0,
-    backgroundColor: colors.surface, borderTopWidth: 1, borderTopColor: colors.border,
-    padding: 16, gap: 10,
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#1E293B',
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(71,85,105,0.4)',
+    padding: 16,
+    gap: 10,
   },
   timerToggle: {
-    flexDirection: 'row', backgroundColor: 'rgba(255,255,255,0.04)',
-    borderRadius: 12, padding: 4, borderWidth: 1, borderColor: colors.border,
+    flexDirection: 'row',
+    backgroundColor: 'rgba(15,23,42,0.6)',
+    borderRadius: 12,
+    padding: 4,
+    borderWidth: 1,
+    borderColor: '#334155',
   },
-  timerOption: { flex: 1, borderRadius: 10, padding: 10, alignItems: 'center' },
-  timerOptionActive: { backgroundColor: 'rgba(255,255,255,0.1)' },
-  timerOptionText: { color: colors.textMuted, fontSize: 13, fontWeight: '600' },
-  timerOptionTextActive: { color: colors.textPrimary },
-  goBtn: { backgroundColor: colors.green, borderRadius: 14, padding: 16, alignItems: 'center' },
-  goBtnDisabled: { opacity: 0.4 },
-  goBtnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
+  timerOption: {
+    flex: 1,
+    borderRadius: 10,
+    padding: 10,
+    alignItems: 'center',
+  },
+  timerOptionActive: {
+    backgroundColor: 'rgba(124,58,237,0.2)',
+  },
+  timerOptionText: {
+    color: '#64748B',
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  timerOptionTextActive: {
+    color: '#C4B5FD',
+  },
+  goBtn: {
+    backgroundColor: '#7C3AED',
+    borderRadius: 14,
+    padding: 16,
+    alignItems: 'center',
+  },
+  goBtnDisabled: {
+    opacity: 0.4,
+  },
+  goBtnText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '700',
+  },
 });
