@@ -80,6 +80,8 @@ export default function ResetPasswordScreen({ navigation }: Props) {
                   value={newPassword}
                   onChangeText={setNewPassword}
                   secureTextEntry
+                  textContentType="none"
+                  autoComplete="off"
                 />
                 <TextInput
                   style={s.input}
@@ -88,6 +90,8 @@ export default function ResetPasswordScreen({ navigation }: Props) {
                   value={confirmPassword}
                   onChangeText={setConfirmPassword}
                   secureTextEntry
+                  textContentType="none"
+                  autoComplete="off"
                 />
 
                 {error ? <Text style={s.error}>{error}</Text> : null}

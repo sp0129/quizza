@@ -39,6 +39,7 @@ export type RootStackParamList = {
     category: string;
     catId?: number;
     timer: number;
+    questionCount?: number;
   };
   Room: {
     roomId: string;

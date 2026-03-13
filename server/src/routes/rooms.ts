@@ -14,7 +14,7 @@ function generateRoomCode(): string {
 
 // POST /rooms — create a new room
 router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { category, categoryId, timerSeconds } = req.body;
+  const { category, categoryId, timerSeconds, questionCount } = req.body;
   const me = req.userId!;
 
   if (!category) {
@@ -23,7 +23,8 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
   }
 
   try {
-    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId);
+    const count = Number(questionCount) === 5 ? 5 : 10;
+    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count);
 
     // Generate unique 6-char code with collision retry
     let roomCode = '';
@@ -166,7 +167,9 @@ router.post('/:roomId/start', requireAuth, async (req: AuthRequest, res: Respons
     if (room.status !== 'waiting') { res.status(409).json({ error: 'Room already started' }); return; }
 
     await pool.query(`UPDATE rooms SET status = 'active' WHERE id = $1`, [room.id]);
-    roomGameManager.broadcastGameStarted(room.id, 10);
+    const qs = await getQuestionSet(room.question_set_id);
+    const totalQuestions = qs?.questions.length ?? 10;
+    roomGameManager.broadcastGameStarted(room.id, totalQuestions);
 
     // Start server-side sync timer
     const playersResult = await pool.query(
@@ -174,7 +177,7 @@ router.post('/:roomId/start', requireAuth, async (req: AuthRequest, res: Respons
       [room.id]
     );
     const playerIds: string[] = playersResult.rows.map((r: { player_id: string }) => r.player_id);
-    roomGameManager.initGameSync(room.id, playerIds, 10);
+    roomGameManager.initGameSync(room.id, playerIds, totalQuestions);
 
     res.json({ ok: true });
   } catch (err) {
@@ -220,7 +223,7 @@ router.post('/:roomId/answer', requireAuth, async (req: AuthRequest, res: Respon
     let totalScore: number | undefined;
 
     // On last question, tally final score
-    if (questionIndex === 9) {
+    if (questionIndex === qs.questions.length - 1) {
       const scoreResult = await pool.query(
         `SELECT COALESCE(SUM(points_awarded), 0) AS total FROM room_answers WHERE room_id = $1 AND player_id = $2`,
         [room.id, me]
@@ -245,7 +248,7 @@ router.post('/:roomId/answer', requireAuth, async (req: AuthRequest, res: Respon
     if (allFinished) {
       await pool.query(`UPDATE rooms SET status = 'finished' WHERE id = $1`, [room.id]);
       roomGameManager.broadcastRoomFinished(room.id, leaderboard);
-    } else if (questionIndex === 9) {
+    } else if (questionIndex === qs.questions.length - 1) {
       roomGameManager.broadcastScoreUpdate(room.id, leaderboard);
     } else {
       roomGameManager.broadcastScoreUpdate(room.id, leaderboard);

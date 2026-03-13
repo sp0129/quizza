@@ -54,9 +54,16 @@ const WS_BASE = process.env.EXPO_PUBLIC_WS_URL ?? API_BASE.replace(/^https?/, (m
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-// Read time: 2s for question, 0.5s for button settle = 2.5s before timer starts
-const QUESTION_READ_MS = 2000;
-const BUTTON_SETTLE_MS = 500;
+// Read time: 3s question-only, then 0.6s stagger (4 × 200ms) + 0.2s settle = 3.8s before timer
+const QUESTION_READ_MS = 3000;
+const ANSWER_STAGGER_MS = 200;
+const ANSWER_COUNT = 4;
+const ANSWER_REVEAL_TOTAL_MS = ANSWER_STAGGER_MS * ANSWER_COUNT; // 800ms
+const POST_REVEAL_SETTLE_MS = 200;
+
+// Fixed layout heights to prevent question jitter
+const QUESTION_AREA_HEIGHT = 140;
+const ANSWER_AREA_HEIGHT = 320;
 
 // ---------------------------------------------------------------------------
 // Animated Score Display
@@ -166,34 +173,64 @@ function ProgressDots({ total, current, results }: {
 }
 
 // ---------------------------------------------------------------------------
-// Staggered Answer Button wrapper
+// Fisher-Yates shuffle for answer display order
 // ---------------------------------------------------------------------------
 
-function StaggeredAnswerButton({
+function shuffleIndices(count: number): number[] {
+  const indices = Array.from({ length: count }, (_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  return indices;
+}
+
+// ---------------------------------------------------------------------------
+// Pop-in Answer Button wrapper (fade + scale, random stagger order)
+// ---------------------------------------------------------------------------
+
+function PopInAnswerButton({
   answer,
-  index,
+  revealDelay,
   state,
   disabled,
   visible,
   onPress,
-  questionIndex,
 }: {
   answer: string;
-  index: number;
+  revealDelay: number;
   state: AnswerState;
   disabled: boolean;
   visible: boolean;
   onPress: () => void;
-  questionIndex: number;
 }) {
-  if (!visible) return <View style={styles.answerPlaceholder} />;
+  const scale = useSharedValue(0.8);
+  const opacity = useSharedValue(0);
+
+  useEffect(() => {
+    if (visible) {
+      scale.value = withDelay(
+        revealDelay,
+        withSpring(1, { mass: 1, damping: 7, stiffness: 40 }),
+      );
+      opacity.value = withDelay(
+        revealDelay,
+        withTiming(1, { duration: 150 }),
+      );
+    } else {
+      scale.value = 0.8;
+      opacity.value = 0;
+    }
+  }, [visible, revealDelay]);
+
+  const animStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value }],
+    opacity: opacity.value,
+  }));
 
   return (
-    <Animated.View
-      entering={SlideInRight.duration(300).delay(index * 50).springify().damping(18)}
-    >
+    <Animated.View style={[styles.answerSlot, animStyle]}>
       <AnswerButton
-        key={`${questionIndex}-${index}`}
         text={answer}
         state={state}
         disabled={disabled}
@@ -221,9 +258,11 @@ export default function GameScreen({ route, navigation }: Props) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [questionResults, setQuestionResults] = useState<(boolean | null)[]>([]);
 
-  // --- Answer button visibility (staggered reveal) ---
+  // --- Answer button visibility (random pop-in reveal) ---
   const [buttonsVisible, setButtonsVisible] = useState(false);
   const [timerActive, setTimerActive] = useState(false);
+  // Per-question random reveal order: maps display slot → stagger delay index
+  const [revealOrder, setRevealOrder] = useState<number[]>([0, 1, 2, 3]);
 
   // --- Sync mode state ---
   const [opponentAnswered, setOpponentAnswered] = useState(false);
@@ -257,17 +296,19 @@ export default function GameScreen({ route, navigation }: Props) {
     setButtonsVisible(false);
     setTimerActive(false);
     setPhase('reading');
+    // Shuffle reveal order for this question
+    setRevealOrder(shuffleIndices(ANSWER_COUNT));
 
-    // After 2s: reveal answer buttons
+    // After 3s: reveal answer buttons with random pop-in
     readTimeoutRef.current = setTimeout(() => {
       setButtonsVisible(true);
 
-      // After 0.5s more (2.5s total): start the timer
+      // After stagger completes + settle (0.8s + 0.2s = 1.0s): start the timer
       settleTimeoutRef.current = setTimeout(() => {
         setPhase('playing');
         setTimerActive(true);
         questionStartRef.current = Date.now();
-      }, BUTTON_SETTLE_MS);
+      }, ANSWER_REVEAL_TOTAL_MS + POST_REVEAL_SETTLE_MS);
     }, QUESTION_READ_MS);
   }, []);
 
@@ -394,12 +435,12 @@ export default function GameScreen({ route, navigation }: Props) {
 
       if (result.gameComplete) {
         setFinalScores(prev => ({ ...prev, mine: result.totalScore ?? score }));
-        if (mode === 'async') {
+        if (mode !== 'sync') {
           setTimeout(() => setPhase('finished'), 1500);
         } else {
           setWaitingForOpponent(true);
         }
-      } else if (mode === 'async') {
+      } else if (mode !== 'sync') {
         // 1.5s pause on reveal state — long enough to register, short enough for flow
         setTimeout(() => {
           setCurrentIndex(i => i + 1);
@@ -570,21 +611,23 @@ export default function GameScreen({ route, navigation }: Props) {
       </View>
 
       {/* ================================================================= */}
-      {/* MIDDLE ZONE: Question text + mascot                               */}
-      {/* Question fades in first, buttons appear 2s later                  */}
+      {/* MIDDLE ZONE: Question text + mascot (fixed height)                */}
+      {/* Question appears instantly, answers pop in 3s later               */}
       {/* ================================================================= */}
       <View style={styles.middleZone}>
-        <Animated.View
-          key={questionAnimKey}
-          entering={SlideInRight.duration(250)}
-          exiting={SlideOutLeft.duration(250)}
-          style={styles.questionContainer}
-        >
-          <Text style={styles.questionCounter}>
-            Question {currentIndex + 1} of {questions.length}
-          </Text>
-          <Text style={styles.questionText}>{question.question}</Text>
-        </Animated.View>
+        <View style={styles.questionArea}>
+          <Animated.View
+            key={questionAnimKey}
+            entering={SlideInRight.duration(250)}
+            exiting={SlideOutLeft.duration(250)}
+            style={styles.questionContainer}
+          >
+            <Text style={styles.questionCounter}>
+              Question {currentIndex + 1} of {questions.length}
+            </Text>
+            <Text style={styles.questionText}>{question.question}</Text>
+          </Animated.View>
+        </View>
 
         {/* Mascot */}
         <View style={styles.mascotWrap}>
@@ -593,29 +636,34 @@ export default function GameScreen({ route, navigation }: Props) {
       </View>
 
       {/* ================================================================= */}
-      {/* BOTTOM ZONE: Answer buttons with staggered slide-in               */}
-      {/* Buttons slide in from right 2s after question, staggered 50ms     */}
+      {/* BOTTOM ZONE: Answer buttons with random pop-in reveal             */}
+      {/* Pre-allocated fixed height prevents question jitter               */}
       {/* ================================================================= */}
       <View style={[styles.bottomZone, { paddingBottom: insets.bottom + 20 }]}>
-        {question.all_answers.map((answer, i) => (
-          <StaggeredAnswerButton
-            key={`${currentIndex}-${i}`}
-            answer={answer}
-            index={i}
-            questionIndex={currentIndex}
-            state={getAnswerState(answer)}
-            disabled={!canAnswer}
-            visible={buttonsVisible}
-            onPress={() => submitAnswer(answer)}
-          />
-        ))}
+        <View style={styles.answerArea}>
+          {question.all_answers.map((answer, i) => {
+            // revealOrder[i] = which stagger position this slot gets
+            const staggerIndex = revealOrder[i] ?? i;
+            return (
+              <PopInAnswerButton
+                key={`${currentIndex}-${i}`}
+                answer={answer}
+                revealDelay={staggerIndex * ANSWER_STAGGER_MS}
+                state={getAnswerState(answer)}
+                disabled={!canAnswer}
+                visible={buttonsVisible}
+                onPress={() => submitAnswer(answer)}
+              />
+            );
+          })}
 
-        {/* Reading phase hint */}
-        {isReadingPhase && !buttonsVisible && (
-          <Animated.View entering={FadeIn.duration(300)} style={styles.readingHint}>
-            <Text style={styles.readingHintText}>Read the question...</Text>
-          </Animated.View>
-        )}
+          {/* Reading phase hint */}
+          {isReadingPhase && !buttonsVisible && (
+            <Animated.View entering={FadeIn.duration(300)} style={styles.readingHint}>
+              <Text style={styles.readingHintText}>Read the question...</Text>
+            </Animated.View>
+          )}
+        </View>
 
         {waitingForOpponent && (
           <Text style={styles.waitingMsg}>
@@ -715,6 +763,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
   },
+  questionArea: {
+    minHeight: QUESTION_AREA_HEIGHT,
+    justifyContent: 'center',
+  },
   questionContainer: {
     alignItems: 'center',
   },
@@ -741,10 +793,14 @@ const styles = StyleSheet.create({
   // === BOTTOM ZONE ===
   bottomZone: {
     paddingHorizontal: 16,
+  },
+  answerArea: {
+    minHeight: ANSWER_AREA_HEIGHT,
+    justifyContent: 'flex-end',
     gap: 12,
   },
-  answerPlaceholder: {
-    minHeight: 60,
+  answerSlot: {
+    // Each slot reserves space even when invisible (opacity 0, scale 0.8)
   },
   readingHint: {
     alignItems: 'center',

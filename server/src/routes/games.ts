@@ -12,13 +12,14 @@ const MATCHMAKING_TIMEOUT_MS = 15_000;
 
 // POST /games/solo — instant solo game, no matchmaking
 router.post('/solo', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { category, categoryId } = req.body;
+  const { category, categoryId, questionCount } = req.body;
   if (!category) {
     res.status(400).json({ error: 'category is required' });
     return;
   }
+  const count = Number(questionCount) === 5 ? 5 : 10;
   try {
-    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId);
+    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count);
     const gameId = uuidv4();
     await pool.query(
       `INSERT INTO games (id, question_set_id, player_a_id, category, game_mode, status)
@@ -34,12 +35,13 @@ router.post('/solo', requireAuth, async (req: AuthRequest, res: Response): Promi
 
 // POST /games/create-random
 router.post('/create-random', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { category, categoryId } = req.body;
+  const { category, categoryId, questionCount } = req.body;
   if (!category) {
     res.status(400).json({ error: 'category is required' });
     return;
   }
   const userId = req.userId!;
+  const count = Number(questionCount) === 5 ? 5 : 10;
 
   try {
     // Check if there's already someone waiting in this category
@@ -56,7 +58,7 @@ router.post('/create-random', requireAuth, async (req: AuthRequest, res: Respons
       const opponent = queueResult.rows[0];
       await pool.query('DELETE FROM matchmaking_queue WHERE id = $1', [opponent.id]);
 
-      const questionSetId = await fetchAndStoreQuestionSet(category, categoryId);
+      const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count);
       const gameId = uuidv4();
       const expiresAt = new Date(Date.now() + ASYNC_EXPIRY_HOURS * 3600_000);
 
@@ -88,7 +90,7 @@ router.post('/create-random', requireAuth, async (req: AuthRequest, res: Respons
     // Timeout — remove from queue and create async game
     await pool.query('DELETE FROM matchmaking_queue WHERE id = $1', [queueEntryId]);
 
-    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId);
+    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count);
     const gameId = uuidv4();
     const expiresAt = new Date(Date.now() + ASYNC_EXPIRY_HOURS * 3600_000);
 
@@ -264,8 +266,9 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
       [uuidv4(), game.id, userId, questionIndex, selectedAnswer, isCorrect, timeTakenSeconds, points]
     );
 
-    // If this is the last question (index 9), calculate final score and check completion
-    if (questionIndex === 9) {
+    // If this is the last question, calculate final score and check completion
+    const totalQuestions = qs.questions.length;
+    if (questionIndex === totalQuestions - 1) {
       const scoreResult = await pool.query(
         'SELECT COALESCE(SUM(points_awarded), 0) AS total FROM game_answers WHERE game_id = $1 AND player_id = $2',
         [game.id, userId]
@@ -306,7 +309,7 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
         }
       }
 
-      res.json({ isCorrect, points, totalScore, gameComplete: true });
+      res.json({ isCorrect, points, totalScore, gameComplete: true, correctAnswer: question.correct_answer });
     } else {
       // For sync mode, notify the manager that this player answered
       if (game.game_mode === 'sync') {

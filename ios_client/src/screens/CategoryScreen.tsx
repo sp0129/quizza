@@ -23,7 +23,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Category'>;
 interface Category { id: number; name: string; }
 
 const { width: SCREEN_W } = Dimensions.get('window');
-const BOTTOM_BAR_H = 160;
+const BOTTOM_BAR_H = 210;
 
 // ── Debounce hook ──────────────────────────────────────────────
 function useDebounce<T>(value: T, delay: number): T {
@@ -46,6 +46,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
   const [query, setQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState('all');
   const [blitz, setBlitz] = useState(false);
+  const [miniMode, setMiniMode] = useState(false);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -96,6 +97,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
   };
   const modeLabel = `${modeLabelMap[mode] ?? mode}${target ? ` — ${target}` : ''}`;
   const timerSeconds = blitz ? 15 : 30;
+  const questionCount = miniMode ? 5 : 10;
 
   // Handlers — toggle: tap selected card again to deselect
   const handleSelect = useCallback((item: Category) => {
@@ -121,15 +123,15 @@ export default function CategoryScreen({ route, navigation }: Props) {
     try {
       if (mode === 'solo') {
         const r = await api.post<{ gameId: string; questionSetId: string }>(
-          '/games/solo', { category: selected.name, categoryId: selected.id },
+          '/games/solo', { category: selected.name, categoryId: selected.id, questionCount },
         );
         navigation.replace('Game', {
-          gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId,
-          category: selected.name, catId: selected.id, timer: timerSeconds,
+          gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
+          category: selected.name, catId: selected.id, timer: timerSeconds, questionCount,
         });
       } else if (mode === 'room') {
         const r = await api.post<{ roomId: string; roomCode: string; questionSetId: string; category: string }>(
-          '/rooms', { category: selected.name, categoryId: selected.id, timerSeconds },
+          '/rooms', { category: selected.name, categoryId: selected.id, timerSeconds, questionCount },
         );
         navigation.replace('Room', {
           roomId: r.roomId, questionSetId: r.questionSetId,
@@ -137,18 +139,18 @@ export default function CategoryScreen({ route, navigation }: Props) {
         });
       } else if (mode === 'challenge') {
         const r = await api.post<{ gameId: string; questionSetId: string }>(
-          '/challenges', { targetUsername: target, category: selected.name, categoryId: selected.id },
+          '/challenges', { targetUsername: target, category: selected.name, categoryId: selected.id, questionCount },
         );
         navigation.replace('Game', {
           gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId,
-          category: selected.name, catId: selected.id, timer: timerSeconds,
+          category: selected.name, catId: selected.id, timer: timerSeconds, questionCount,
         });
       }
     } catch (err: any) {
       setError(err.message);
       setSubmitting(false);
     }
-  }, [selected, mode, target, timerSeconds, navigation]);
+  }, [selected, mode, target, timerSeconds, questionCount, navigation]);
 
   // Render item for FlashList
   const renderItem = useCallback(
@@ -254,6 +256,25 @@ export default function CategoryScreen({ route, navigation }: Props) {
           >
             <Text style={[s.timerOptionText, blitz && s.timerOptionTextActive]}>
               Blitz · 15s
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={s.timerToggle}>
+          <TouchableOpacity
+            style={[s.timerOption, !miniMode && s.timerOptionActive]}
+            onPress={() => { setMiniMode(false); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }}
+          >
+            <Text style={[s.timerOptionText, !miniMode && s.timerOptionTextActive]}>
+              10 Questions
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[s.timerOption, miniMode && s.timerOptionActive]}
+            onPress={() => { setMiniMode(true); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }}
+          >
+            <Text style={[s.timerOptionText, miniMode && s.timerOptionTextActive]}>
+              5 Questions
             </Text>
           </TouchableOpacity>
         </View>

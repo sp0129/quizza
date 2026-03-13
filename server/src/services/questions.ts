@@ -90,7 +90,7 @@ export function loadLocalData(): LocalData {
   };
 }
 
-async function storeLocalQuestionSet(category: string, categoryId: number): Promise<string> {
+async function storeLocalQuestionSet(category: string, categoryId: number, questionCount: number = 10): Promise<string> {
   const data = loadLocalData();
   const bank = data.question_banks.find(b => b.category_id === categoryId);
 
@@ -99,7 +99,7 @@ async function storeLocalQuestionSet(category: string, categoryId: number): Prom
   }
 
   const seed = Date.now();
-  const shuffled = shuffleArray(deduplicateByQuestion(bank.questions), seed).slice(0, 10);
+  const shuffled = shuffleArray(deduplicateByQuestion(bank.questions), seed).slice(0, questionCount);
 
   const questions: Question[] = shuffled
     .sort((a, b) => {
@@ -124,10 +124,10 @@ async function storeLocalQuestionSet(category: string, categoryId: number): Prom
   return id;
 }
 
-export async function fetchAndStoreQuestionSet(category: string, categoryId?: number): Promise<string> {
+export async function fetchAndStoreQuestionSet(category: string, categoryId?: number, questionCount: number = 10): Promise<string> {
   // Local categories use IDs >= 2000
   if (categoryId !== undefined && categoryId >= 2000) {
-    return storeLocalQuestionSet(category, categoryId);
+    return storeLocalQuestionSet(category, categoryId, questionCount);
   }
 
   // Fetch from Open Trivia DB
@@ -147,7 +147,7 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
     str.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#039;/g, "'");
 
   const seed = Date.now();
-  const shuffled = shuffleArray(deduplicateByQuestion(data.results), seed).slice(0, 10);
+  const shuffled = shuffleArray(deduplicateByQuestion(data.results), seed).slice(0, questionCount);
 
   const questions: Question[] = shuffled
     .sort((a, b) => {
