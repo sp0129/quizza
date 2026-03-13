@@ -18,11 +18,13 @@ import GuestJoinScreen from './src/screens/GuestJoinScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import FriendsScreen from './src/screens/FriendsScreen';
 import LeaderboardScreen from './src/screens/LeaderboardScreen';
+import ResetPasswordScreen from './src/screens/ResetPasswordScreen';
 
 export type RootStackParamList = {
   // Auth
   Login: undefined;
   Signup: undefined;
+  ResetPassword: undefined;
   GuestJoin: { roomCode: string };
   // App
   Dashboard: undefined;
@@ -80,6 +82,7 @@ function RootNavigator() {
         <>
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
+          <Stack.Screen name="ResetPassword" component={ResetPasswordScreen} />
           <Stack.Screen name="GuestJoin" component={GuestJoinScreen} />
         </>
       )}

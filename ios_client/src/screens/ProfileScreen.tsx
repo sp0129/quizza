@@ -46,7 +46,7 @@ function Avatar({ uri, username, size }: { uri?: string; username: string; size:
 }
 
 export default function ProfileScreen({ navigation }: Props) {
-  const { user, refreshUser } = useAuth();
+  const { user, refreshUser, logout } = useAuth();
   const insets = useSafeAreaInsets();
 
   const [username, setUsername] = useState(user?.username ?? '');
@@ -262,6 +262,19 @@ export default function ProfileScreen({ navigation }: Props) {
           ))}
         </View>
 
+        {/* Logout */}
+        <TouchableOpacity
+          style={s.logoutBtn}
+          onPress={() => {
+            Alert.alert('Log out', 'Are you sure you want to log out?', [
+              { text: 'Cancel', style: 'cancel' },
+              { text: 'Log out', style: 'destructive', onPress: () => logout() },
+            ]);
+          }}
+        >
+          <Text style={s.logoutBtnText}>Log Out</Text>
+        </TouchableOpacity>
+
         {/* Privacy Policy */}
         <TouchableOpacity onPress={() => Linking.openURL('https://quizza-eta.vercel.app/privacy.html')} style={s.privacyLink}>
           <Text style={s.privacyText}>Privacy Policy</Text>
@@ -340,6 +353,12 @@ const s = StyleSheet.create({
     justifyContent: 'center', alignItems: 'center',
   },
   removeBtnText: { color: colors.red, fontSize: 12 },
+  logoutBtn: {
+    backgroundColor: 'rgba(239,68,68,0.12)',
+    borderRadius: 14, padding: 16, alignItems: 'center',
+    borderWidth: 1, borderColor: 'rgba(239,68,68,0.3)',
+  },
+  logoutBtnText: { color: colors.red, fontSize: 16, fontWeight: '700' },
   privacyLink: { alignItems: 'center', paddingVertical: 8 },
   privacyText: { color: colors.textMuted, fontSize: 12, textDecorationLine: 'underline' },
 });

@@ -185,4 +185,30 @@ router.post('/apple', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
+// POST /auth/reset-password — reset password by email (no token verification)
+router.post('/reset-password', async (req: Request, res: Response): Promise<void> => {
+  const { email, newPassword } = req.body;
+  if (!email || !newPassword) {
+    res.status(400).json({ error: 'email and newPassword are required' });
+    return;
+  }
+  if (newPassword.length < 6) {
+    res.status(400).json({ error: 'Password must be at least 6 characters' });
+    return;
+  }
+  try {
+    const result = await pool.query('SELECT id FROM users WHERE email = $1', [email.toLowerCase()]);
+    if (result.rows.length === 0) {
+      res.status(404).json({ error: 'No account found with that email' });
+      return;
+    }
+    const passwordHash = await bcrypt.hash(newPassword, 12);
+    await pool.query('UPDATE users SET password_hash = $1, updated_at = NOW() WHERE email = $2', [passwordHash, email.toLowerCase()]);
+    res.json({ message: 'Password reset successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 export default router;

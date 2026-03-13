@@ -221,6 +221,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
           numColumns={2}
           renderItem={renderItem}
           keyExtractor={keyExtractor}
+          extraData={selected?.id}
           estimatedItemSize={150}
           ListHeaderComponent={ListHeader}
           ListEmptyComponent={

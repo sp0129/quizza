@@ -101,6 +101,10 @@ export default function LoginScreen({ navigation }: Props) {
               secureTextEntry
             />
 
+            <TouchableOpacity onPress={() => navigation.navigate('ResetPassword' as any)} style={s.forgotLink}>
+              <Text style={s.forgotText}>Forgot password?</Text>
+            </TouchableOpacity>
+
             {error ? <Text style={s.error}>{error}</Text> : null}
 
             <TouchableOpacity
@@ -184,6 +188,8 @@ const s = StyleSheet.create({
     marginBottom: 4,
   },
   guestBtnText: { color: colors.textMuted, fontSize: 15, fontWeight: '600' },
+  forgotLink: { alignSelf: 'flex-end', marginBottom: 4, marginTop: -4 },
+  forgotText: { color: colors.textMuted, fontSize: 13 },
   link: { marginTop: 16, alignItems: 'center' },
   linkText: { color: colors.textMuted, fontSize: 14 },
   linkAccent: { color: colors.green, fontWeight: '600' },
