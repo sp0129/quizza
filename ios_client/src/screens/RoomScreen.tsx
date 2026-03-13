@@ -3,13 +3,24 @@ import {
   View, Text, TouchableOpacity, StyleSheet,
   ScrollView, Share, ActivityIndicator, Dimensions,
 } from 'react-native';
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+  withTiming,
+  withDelay,
+  FadeIn,
+} from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Clipboard from 'expo-clipboard';
+import * as Haptics from 'expo-haptics';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { api, getAuthToken } from '../api/client';
 import { useAuth } from '../hooks/useAuth';
 import PizzaMascot, { MascotMood } from '../components/PizzaMascot';
+import AnswerButton from '../components/AnswerButton';
+import CircularTimer from '../components/CircularTimer';
 import { colors, gradients } from '../theme';
 import { getCategoryTheme, parseGradientColors } from '../utils/categoryThemes';
 import type { RootStackParamList } from '../../App';
@@ -36,10 +47,69 @@ interface LeaderboardEntry {
   finished: boolean;
 }
 
-type Phase = 'lobby' | 'loading' | 'playing' | 'answered' | 'finished';
+type Phase = 'lobby' | 'loading' | 'reading' | 'playing' | 'answered' | 'finished';
+type AnswerState = 'neutral' | 'correct' | 'wrong' | 'dimmed';
 
 const API_BASE = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
-const WS_BASE = process.env.EXPO_PUBLIC_WS_URL ?? API_BASE.replace(/^https?/, m => m === 'https' ? 'wss' : 'ws');
+const WS_BASE = process.env.EXPO_PUBLIC_WS_URL ?? API_BASE.replace(/^https?/, (m: string) => m === 'https' ? 'wss' : 'ws');
+
+// Timing constants (same as GameScreen)
+const QUESTION_READ_MS = 3000;
+const ANSWER_STAGGER_MS = 200;
+const ANSWER_COUNT = 4;
+const ANSWER_REVEAL_TOTAL_MS = ANSWER_STAGGER_MS * ANSWER_COUNT;
+const POST_REVEAL_SETTLE_MS = 200;
+const QUESTION_AREA_HEIGHT = 140;
+const ANSWER_AREA_HEIGHT = 320;
+
+function shuffleIndices(count: number): number[] {
+  const indices = Array.from({ length: count }, (_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  return indices;
+}
+
+function RoomPopInAnswerButton({
+  answer,
+  revealDelay,
+  state,
+  disabled,
+  visible,
+  onPress,
+}: {
+  answer: string;
+  revealDelay: number;
+  state: AnswerState;
+  disabled: boolean;
+  visible: boolean;
+  onPress: () => void;
+}) {
+  const scale = useSharedValue(0.8);
+  const opacity = useSharedValue(0);
+
+  useEffect(() => {
+    if (visible) {
+      scale.value = withDelay(revealDelay, withSpring(1, { mass: 1, damping: 7, stiffness: 40 }));
+      opacity.value = withDelay(revealDelay, withTiming(1, { duration: 150 }));
+    } else {
+      scale.value = 0.8;
+      opacity.value = 0;
+    }
+  }, [visible, revealDelay]);
+
+  const animStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value }],
+    opacity: opacity.value,
+  }));
+
+  return (
+    <Animated.View style={animStyle}>
+      <AnswerButton text={answer} state={state} disabled={disabled} onPress={onPress} />
+    </Animated.View>
+  );
+}
 const WEB_BASE = process.env.EXPO_PUBLIC_WEB_URL ?? 'https://quizza.vercel.app';
 
 export default function RoomScreen({ route, navigation }: Props) {
@@ -57,6 +127,7 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [lastCorrect, setLastCorrect] = useState<boolean | null>(null);
+  const [correctAnswer, setCorrectAnswer] = useState<string | null>(null);
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
   const [mascotMood, setMascotMood] = useState<MascotMood>('thinking');
   const [mascotKey, setMascotKey] = useState(0);
@@ -65,14 +136,46 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [error, setError] = useState('');
   const [addedFriends, setAddedFriends] = useState<Set<string>>(new Set());
 
+  // Answer reveal state
+  const [buttonsVisible, setButtonsVisible] = useState(false);
+  const [timerActive, setTimerActive] = useState(false);
+  const [revealOrder, setRevealOrder] = useState<number[]>([0, 1, 2, 3]);
+  const [timerKey, setTimerKey] = useState(0);
+
   const wsRef = useRef<WebSocket | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const questionStartRef = useRef<number>(Date.now());
+  const readTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const settleTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const triggerMascot = (mood: MascotMood) => {
     setMascotMood(mood);
     setMascotKey(k => k + 1);
   };
+
+  const startQuestionSequence = useCallback(() => {
+    setButtonsVisible(false);
+    setTimerActive(false);
+    setPhase('reading');
+    setRevealOrder(shuffleIndices(ANSWER_COUNT));
+
+    readTimeoutRef.current = setTimeout(() => {
+      setButtonsVisible(true);
+      settleTimeoutRef.current = setTimeout(() => {
+        setPhase('playing');
+        setTimerActive(true);
+        questionStartRef.current = Date.now();
+      }, ANSWER_REVEAL_TOTAL_MS + POST_REVEAL_SETTLE_MS);
+    }, QUESTION_READ_MS);
+  }, []);
+
+  // Clean up read/settle timeouts
+  useEffect(() => {
+    return () => {
+      if (readTimeoutRef.current) clearTimeout(readTimeoutRef.current);
+      if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
+    };
+  }, []);
 
   // Poll room state during lobby
   useEffect(() => {
@@ -119,20 +222,26 @@ export default function RoomScreen({ route, navigation }: Props) {
         if (msg.type === 'game_started') setPhase('loading');
         if (msg.type === 'advance_question') {
           setCurrentIndex(msg.nextIndex);
-          setPhase('playing');
           setSelectedAnswer(null);
           setLastCorrect(null);
+          setCorrectAnswer(null);
+          setTimerKey(k => k + 1);
           setMascotMood('thinking');
           setMascotKey(k => k + 1);
+          startQuestionSequence();
         }
         if (msg.type === 'sync_state') {
           setCurrentIndex(msg.currentQuestion);
-          setPhase(msg.answered ? 'answered' : 'playing');
-          if (!msg.answered) {
+          if (msg.answered) {
+            setPhase('answered');
+          } else {
             setSelectedAnswer(null);
             setLastCorrect(null);
+            setCorrectAnswer(null);
+            setTimerKey(k => k + 1);
             setMascotMood('thinking');
             setMascotKey(k => k + 1);
+            startQuestionSequence();
           }
         }
         if (msg.type === 'score_update') setLeaderboard(msg.leaderboard);
@@ -162,17 +271,17 @@ export default function RoomScreen({ route, navigation }: Props) {
     if (phase !== 'loading' || !questionSetId) return;
     api.get<{ questions: Question[] }>(`/questions/set/${questionSetId}`).then(data => {
       setQuestions(data.questions);
-      setPhase('playing');
+      setTimerKey(k => k + 1);
+      startQuestionSequence();
     }).catch(console.error);
-  }, [phase, questionSetId]);
+  }, [phase, questionSetId, startQuestionSequence]);
 
-  // Countdown timer
+  // Countdown timer (only when timerActive)
   useEffect(() => {
-    if (phase !== 'playing') {
+    if (!timerActive || phase !== 'playing') {
       if (timerRef.current) clearInterval(timerRef.current);
       return;
     }
-    questionStartRef.current = Date.now();
     setTimeLeft(QUESTION_TIME);
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
@@ -181,7 +290,7 @@ export default function RoomScreen({ route, navigation }: Props) {
       });
     }, 1000);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, [phase, currentIndex]);
+  }, [timerActive, phase, currentIndex]);
 
   useEffect(() => {
     if (timeLeft === 0 && phase === 'playing') submitAnswer('__timeout__', QUESTION_TIME);
@@ -199,11 +308,13 @@ export default function RoomScreen({ route, navigation }: Props) {
             setPhase('finished');
           } else if (data.currentQuestion !== null && data.currentQuestion > currentIndex) {
             setCurrentIndex(data.currentQuestion);
-            setPhase('playing');
             setSelectedAnswer(null);
             setLastCorrect(null);
+            setCorrectAnswer(null);
+            setTimerKey(k => k + 1);
             setMascotMood('thinking');
             setMascotKey(k => k + 1);
+            startQuestionSequence();
           }
         }).catch(console.error);
     const interval = setInterval(poll, 3000);
@@ -211,15 +322,19 @@ export default function RoomScreen({ route, navigation }: Props) {
   }, [phase, currentIndex, roomId]);
 
   const submitAnswer = useCallback(async (answer: string, forcedTime?: number) => {
-    if (phase !== 'playing' || !roomId) return;
+    if (phase !== 'playing' && phase !== 'reading') return;
+    if (!roomId) return;
     if (timerRef.current) clearInterval(timerRef.current);
+    if (readTimeoutRef.current) clearTimeout(readTimeoutRef.current);
+    if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
 
     const timeTaken = forcedTime ?? Math.round((Date.now() - questionStartRef.current) / 1000);
     setSelectedAnswer(answer);
     setPhase('answered');
+    setTimerActive(false);
 
     try {
-      const result = await api.post<{ isCorrect: boolean; points: number; totalScore?: number }>(
+      const result = await api.post<{ isCorrect: boolean; points: number; correctAnswer?: string; totalScore?: number }>(
         `/rooms/${roomId}/answer`,
         {
           questionIndex: currentIndex,
@@ -228,6 +343,7 @@ export default function RoomScreen({ route, navigation }: Props) {
         }
       );
       setLastCorrect(result.isCorrect);
+      setCorrectAnswer(result.correctAnswer ?? null);
       if (result.points) setScore(s => s + result.points);
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
     } catch (err) {
@@ -423,18 +539,27 @@ export default function RoomScreen({ route, navigation }: Props) {
     );
   }
 
-  // ── PLAYING / ANSWERED ──
+  // ── Helper: answer button state ──
+  const getAnswerState = (answer: string): AnswerState => {
+    if (!selectedAnswer || lastCorrect === null) return 'neutral';
+    if (answer === correctAnswer) return 'correct';
+    if (answer === selectedAnswer && !lastCorrect) return 'wrong';
+    return 'dimmed';
+  };
+
+  // ── READING / PLAYING / ANSWERED ──
   const question = questions[currentIndex];
   if (!question) return null;
 
-  const progressPct = (currentIndex + 1) / questions.length;
-  const isUrgent = timeLeft <= 10;
+  const isReadingPhase = phase === 'reading';
+  const canAnswer = phase === 'playing';
 
   return (
     <LinearGradient colors={gradients.game} style={s.flex}>
-      {/* Leaderboard strip */}
-      {leaderboard.length > 0 && (
-        <View style={[s.scoreStrip, { paddingTop: insets.top + 4 }]}>
+      {/* Top zone: status bar */}
+      <View style={[s.topZone, { paddingTop: insets.top + 8 }]}>
+        {/* Leaderboard strip */}
+        {leaderboard.length > 0 && (
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.scoreStripInner}>
             {leaderboard.slice(0, 4).map((entry, i) => (
               <View key={entry.username} style={s.scoreChip}>
@@ -444,65 +569,82 @@ export default function RoomScreen({ route, navigation }: Props) {
               </View>
             ))}
           </ScrollView>
-        </View>
-      )}
+        )}
 
-      {/* Top bar */}
-      <View style={s.topBar}>
-        <TouchableOpacity style={s.quitBtn} onPress={() => navigation.navigate('Dashboard')}>
-          <Text style={s.quitBtnText}>✕</Text>
-        </TouchableOpacity>
-        <View style={s.progressTrack}>
-          <View style={[s.progressFill, { width: `${progressPct * 100}%` }]} />
+        <View style={s.topRow}>
+          <TouchableOpacity style={s.quitBtn} onPress={() => navigation.navigate('Dashboard')}>
+            <Text style={s.quitBtnText}>✕</Text>
+          </TouchableOpacity>
+
+          {/* Progress dots */}
+          <View style={s.dotsRow}>
+            {Array.from({ length: questions.length }, (_, i) => (
+              <View
+                key={i}
+                style={[
+                  s.dot,
+                  { backgroundColor: i < currentIndex ? colors.green : i === currentIndex ? colors.cyan : 'rgba(255,255,255,0.15)' },
+                  i === currentIndex && s.dotCurrent,
+                ]}
+              />
+            ))}
+          </View>
+
+          <View style={s.scoreContainer}>
+            <Text style={s.scoreLabel}>Score</Text>
+            <Text style={s.scoreValue}>{score}</Text>
+          </View>
         </View>
-        <View style={[s.countdown, isUrgent && s.countdownUrgent]}>
-          <Text style={[s.countdownText, isUrgent && s.countdownTextUrgent]}>{timeLeft}s</Text>
+
+        {/* Circular countdown timer */}
+        <View style={s.timerRow}>
+          <CircularTimer
+            duration={QUESTION_TIME}
+            timeLeft={timeLeft}
+            isPlaying={timerActive}
+            timerKey={timerKey}
+          />
         </View>
       </View>
 
-      {/* Meta row */}
-      <View style={s.metaRow}>
-        <View style={s.scorePill}>
-          <Text style={s.scorePillText}>⭐ {score} pts</Text>
+      {/* Middle zone: Question (fixed height) */}
+      <View style={s.middleZone}>
+        <View style={s.questionArea}>
+          <Text style={s.questionCounter}>
+            Question {currentIndex + 1} of {questions.length}
+          </Text>
+          <Text style={s.questionText}>{question.question}</Text>
         </View>
-        <Text style={s.qCounter}>{currentIndex + 1} / {questions.length}</Text>
+
+        <View style={s.mascotCenter}>
+          <PizzaMascot key={mascotKey} mood={mascotMood} size={60} />
+        </View>
       </View>
 
-      {/* Question — scrollable, fills remaining space */}
-      <ScrollView
-        style={s.flex}
-        contentContainerStyle={s.questionScrollContent}
-        scrollEnabled
-        showsVerticalScrollIndicator={false}
-      >
-        <Text style={s.questionText}>{question.question}</Text>
-      </ScrollView>
+      {/* Bottom zone: Answer buttons with pop-in reveal */}
+      <View style={[s.bottomZone, { paddingBottom: insets.bottom + 20 }]}>
+        <View style={s.answerArea}>
+          {question.all_answers.map((answer, i) => {
+            const staggerIndex = revealOrder[i] ?? i;
+            return (
+              <RoomPopInAnswerButton
+                key={`${currentIndex}-${i}`}
+                answer={answer}
+                revealDelay={staggerIndex * ANSWER_STAGGER_MS}
+                state={getAnswerState(answer)}
+                disabled={!canAnswer}
+                visible={buttonsVisible}
+                onPress={() => submitAnswer(answer)}
+              />
+            );
+          })}
 
-      {/* Mascot */}
-      <View style={s.mascotCenter}>
-        <PizzaMascot key={mascotKey} mood={mascotMood} size={85} />
-      </View>
-
-      {/* Answers — fixed at bottom */}
-      <View style={[s.answersWrap, { paddingBottom: insets.bottom + 16 }]}>
-        {question.all_answers.map((answer, i) => {
-          let ansStyle = [s.answerPill];
-          if (selectedAnswer && lastCorrect !== null) {
-            if (lastCorrect === true && answer === selectedAnswer) ansStyle = [s.answerPill, s.answerCorrect];
-            else if (lastCorrect === false && answer === selectedAnswer) ansStyle = [s.answerPill, s.answerWrong];
-          }
-          return (
-            <TouchableOpacity
-              key={i}
-              style={ansStyle}
-              onPress={() => submitAnswer(answer)}
-              disabled={phase !== 'playing'}
-              activeOpacity={0.75}
-            >
-              <Text style={s.answerText}>{answer}</Text>
-            </TouchableOpacity>
-          );
-        })}
+          {isReadingPhase && !buttonsVisible && (
+            <Animated.View entering={FadeIn.duration(300)} style={s.readingHint}>
+              <Text style={s.readingHintText}>Read the question...</Text>
+            </Animated.View>
+          )}
+        </View>
 
         {phase === 'answered' && (
           <Text style={s.waitingMsg}>Waiting for others...</Text>
@@ -545,33 +687,32 @@ const s = StyleSheet.create({
   startBtnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
   waitingBox: { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 14, padding: 16, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)' },
   waitingText: { color: colors.textMuted, fontSize: 15 },
-  // Score strip
-  scoreStrip: { backgroundColor: 'rgba(0,0,0,0.3)', paddingBottom: 6 },
-  scoreStripInner: { paddingHorizontal: 16, gap: 8 },
+  // === TOP ZONE (game) ===
+  topZone: { paddingHorizontal: 16, paddingBottom: 4 },
+  topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 },
+  quitBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: 'rgba(255,255,255,0.08)', justifyContent: 'center', alignItems: 'center' },
+  quitBtnText: { color: colors.textMuted, fontSize: 16, fontWeight: '600' },
+  scoreStripInner: { paddingHorizontal: 0, gap: 8, marginBottom: 8 },
   scoreChip: { backgroundColor: 'rgba(255,255,255,0.07)', borderRadius: 20, paddingHorizontal: 12, paddingVertical: 4 },
   scoreChipText: { color: colors.textPrimary, fontSize: 12, fontWeight: '600' },
-  // Game top bar
-  topBar: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingVertical: 8, gap: 12 },
-  quitBtn: { width: 32, height: 32, borderRadius: 16, backgroundColor: 'rgba(255,255,255,0.08)', justifyContent: 'center', alignItems: 'center' },
-  quitBtnText: { color: colors.textMuted, fontSize: 14 },
-  progressTrack: { flex: 1, height: 6, backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: 3, overflow: 'hidden' },
-  progressFill: { height: '100%', backgroundColor: colors.cyan, borderRadius: 3 },
-  countdown: { backgroundColor: 'rgba(255,255,255,0.08)', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 10 },
-  countdownUrgent: { backgroundColor: 'rgba(239,68,68,0.2)' },
-  countdownText: { color: colors.textMuted, fontSize: 14, fontWeight: '700' },
-  countdownTextUrgent: { color: colors.red },
-  metaRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 16, marginBottom: 8 },
-  scorePill: { backgroundColor: 'rgba(255,255,255,0.06)', paddingHorizontal: 12, paddingVertical: 5, borderRadius: 20, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
-  scorePillText: { color: colors.textPrimary, fontSize: 13, fontWeight: '600' },
-  qCounter: { color: colors.textMuted, fontSize: 13 },
-  questionScrollContent: { flexGrow: 1, justifyContent: 'center', paddingHorizontal: 20, paddingVertical: 12 },
-  questionText: { color: colors.textPrimary, fontSize: 19, fontWeight: '600', lineHeight: 28, textAlign: 'center' },
-  mascotCenter: { alignItems: 'center', paddingVertical: 8 },
-  answersWrap: { paddingHorizontal: 16, gap: 10 },
-  answerPill: { backgroundColor: 'rgba(10,30,80,0.55)', borderRadius: 14, padding: 16, borderWidth: 1, borderColor: 'rgba(80,160,255,0.30)', alignItems: 'center' },
-  answerCorrect: { backgroundColor: 'rgba(0,204,104,0.25)', borderColor: colors.green, borderWidth: 2 },
-  answerWrong: { backgroundColor: 'rgba(239,68,68,0.25)', borderColor: colors.red, borderWidth: 2 },
-  answerText: { color: colors.textPrimary, fontSize: 15, fontWeight: '500', textAlign: 'center' },
+  dotsRow: { flexDirection: 'row', alignItems: 'center', gap: 5, flex: 1, justifyContent: 'center', paddingHorizontal: 8 },
+  dot: { width: 8, height: 8, borderRadius: 4 },
+  dotCurrent: { width: 10, height: 10, borderRadius: 5, borderWidth: 1.5, borderColor: colors.textPrimary },
+  scoreContainer: { alignItems: 'center', minWidth: 50 },
+  scoreLabel: { fontSize: 10, fontWeight: '600', color: colors.textMuted, textTransform: 'uppercase', letterSpacing: 0.5 },
+  scoreValue: { fontVariant: ['tabular-nums'], fontSize: 18, fontWeight: '800', color: colors.amber ?? '#F59E0B' },
+  timerRow: { alignItems: 'center', paddingVertical: 4 },
+  // === MIDDLE ZONE ===
+  middleZone: { flex: 1, justifyContent: 'center', paddingHorizontal: 20 },
+  questionArea: { minHeight: QUESTION_AREA_HEIGHT, justifyContent: 'center', alignItems: 'center' },
+  questionCounter: { fontSize: 13, fontWeight: '600', color: colors.textMuted, marginBottom: 12, textTransform: 'uppercase', letterSpacing: 1 },
+  questionText: { fontSize: 21, fontWeight: '700', color: colors.textPrimary, textAlign: 'center', lineHeight: 32 },
+  mascotCenter: { alignItems: 'center', marginTop: 12 },
+  // === BOTTOM ZONE ===
+  bottomZone: { paddingHorizontal: 16 },
+  answerArea: { minHeight: ANSWER_AREA_HEIGHT, justifyContent: 'flex-end', gap: 12 },
+  readingHint: { alignItems: 'center', paddingVertical: 8 },
+  readingHintText: { color: colors.textMuted, fontSize: 14, fontWeight: '600', fontStyle: 'italic' },
   waitingMsg: { color: colors.textMuted, fontSize: 14, textAlign: 'center', marginTop: 4 },
   // Finished
   finishedContainer: { alignItems: 'center', gap: 16, padding: 20 },

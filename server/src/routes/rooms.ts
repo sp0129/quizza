@@ -254,7 +254,7 @@ router.post('/:roomId/answer', requireAuth, async (req: AuthRequest, res: Respon
       roomGameManager.broadcastScoreUpdate(room.id, leaderboard);
     }
 
-    res.json({ isCorrect, points, ...(totalScore !== undefined ? { totalScore } : {}) });
+    res.json({ isCorrect, points, correctAnswer: question.correct_answer, ...(totalScore !== undefined ? { totalScore } : {}) });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
