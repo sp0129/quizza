@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   View, Text, StyleSheet, ActivityIndicator, Alert, Dimensions,
+  TouchableOpacity,
 } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -547,14 +548,15 @@ export default function GameScreen({ route, navigation }: Props) {
           <ProgressDots total={questions.length} current={-1} results={questionResults} />
 
           <Animated.View entering={FadeIn.delay(300)}>
-            <View style={styles.dashBtn}>
-              <Text
-                style={styles.dashBtnText}
-                onPress={() => navigation.navigate('Dashboard')}
-              >
+            <TouchableOpacity
+              style={styles.dashBtn}
+              onPress={() => navigation.navigate('Dashboard')}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.dashBtnText}>
                 Back to Dashboard
               </Text>
-            </View>
+            </TouchableOpacity>
           </Animated.View>
         </View>
       </LinearGradient>
@@ -578,9 +580,9 @@ export default function GameScreen({ route, navigation }: Props) {
       <View style={[styles.topZone, { paddingTop: insets.top + 8 }]}>
         {/* Quit button */}
         <View style={styles.topRow}>
-          <View style={styles.quitBtn} >
-            <Text style={styles.quitBtnText} onPress={handleQuit}>✕</Text>
-          </View>
+          <TouchableOpacity style={styles.quitBtn} onPress={handleQuit}>
+            <Text style={styles.quitBtnText}>✕</Text>
+          </TouchableOpacity>
 
           {/* Progress dots */}
           <ProgressDots
