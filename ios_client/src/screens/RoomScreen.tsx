@@ -128,6 +128,7 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [lastCorrect, setLastCorrect] = useState<boolean | null>(null);
   const [correctAnswer, setCorrectAnswer] = useState<string | null>(null);
+  const [questionResults, setQuestionResults] = useState<(boolean | null)[]>([]);
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
   const [mascotMood, setMascotMood] = useState<MascotMood>('thinking');
   const [mascotKey, setMascotKey] = useState(0);
@@ -271,6 +272,7 @@ export default function RoomScreen({ route, navigation }: Props) {
     if (phase !== 'loading' || !questionSetId) return;
     api.get<{ questions: Question[] }>(`/questions/set/${questionSetId}`).then(data => {
       setQuestions(data.questions);
+      setQuestionResults(new Array(data.questions.length).fill(null));
       setTimerKey(k => k + 1);
       startQuestionSequence();
     }).catch(console.error);
@@ -344,6 +346,11 @@ export default function RoomScreen({ route, navigation }: Props) {
       );
       setLastCorrect(result.isCorrect);
       setCorrectAnswer(result.correctAnswer ?? null);
+      setQuestionResults(prev => {
+        const next = [...prev];
+        next[currentIndex] = result.isCorrect;
+        return next;
+      });
       if (result.points) setScore(s => s + result.points);
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
     } catch (err) {
@@ -578,16 +585,22 @@ export default function RoomScreen({ route, navigation }: Props) {
 
           {/* Progress dots */}
           <View style={s.dotsRow}>
-            {Array.from({ length: questions.length }, (_, i) => (
-              <View
-                key={i}
-                style={[
-                  s.dot,
-                  { backgroundColor: i < currentIndex ? colors.green : i === currentIndex ? colors.cyan : 'rgba(255,255,255,0.15)' },
-                  i === currentIndex && s.dotCurrent,
-                ]}
-              />
-            ))}
+            {Array.from({ length: questions.length }, (_, i) => {
+              let dotColor = 'rgba(255,255,255,0.15)';
+              if (questionResults[i] === true) dotColor = colors.green;
+              else if (questionResults[i] === false) dotColor = colors.red;
+              else if (i === currentIndex) dotColor = colors.cyan;
+              return (
+                <View
+                  key={i}
+                  style={[
+                    s.dot,
+                    { backgroundColor: dotColor },
+                    i === currentIndex && s.dotCurrent,
+                  ]}
+                />
+              );
+            })}
           </View>
 
           <View style={s.scoreContainer}>
@@ -733,7 +746,7 @@ const s = StyleSheet.create({
   lbScorePill: { backgroundColor: 'rgba(255,255,255,0.08)', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 10 },
   lbScoreText: { color: colors.textPrimary, fontSize: 13, fontWeight: '700' },
   addFriendsBox: {
-    alignSelf: 'stretch', backgroundColor: 'rgba(10,30,80,0.5)',
+    alignSelf: 'stretch', backgroundColor: 'rgba(30,41,59,0.5)',
     borderRadius: 14, padding: 14,
     borderWidth: 1, borderColor: colors.border, gap: 10,
   },
@@ -741,14 +754,14 @@ const s = StyleSheet.create({
   addFriendRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   addFriendAvatar: {
     width: 32, height: 32, borderRadius: 16,
-    backgroundColor: 'rgba(80,160,255,0.3)',
+    backgroundColor: 'rgba(124,58,237,0.3)',
     justifyContent: 'center', alignItems: 'center',
   },
   addFriendAvatarText: { color: colors.textPrimary, fontSize: 13, fontWeight: '700' },
   addFriendName: { flex: 1, color: colors.textPrimary, fontSize: 14 },
   addedText: { color: colors.green, fontSize: 13, fontWeight: '600' },
   addFriendBtn: {
-    backgroundColor: 'rgba(80,160,255,0.2)', borderRadius: 10,
+    backgroundColor: 'rgba(124,58,237,0.2)', borderRadius: 10,
     paddingHorizontal: 12, paddingVertical: 6,
     borderWidth: 1, borderColor: colors.border,
   },

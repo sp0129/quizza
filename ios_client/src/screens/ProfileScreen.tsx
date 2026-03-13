@@ -35,7 +35,7 @@ function Avatar({ uri, username, size }: { uri?: string; username: string; size:
   return (
     <View style={{
       width: size, height: size, borderRadius: size / 2,
-      backgroundColor: 'rgba(80,160,255,0.3)',
+      backgroundColor: 'rgba(124,58,237,0.3)',
       justifyContent: 'center', alignItems: 'center',
     }}>
       <Text style={{ color: colors.textPrimary, fontSize: size * 0.4, fontWeight: '700' }}>
@@ -300,7 +300,7 @@ const s = StyleSheet.create({
   avatarWrap: { position: 'relative' },
   avatarPlaceholder: {
     width: 90, height: 90, borderRadius: 45,
-    backgroundColor: 'rgba(80,160,255,0.15)',
+    backgroundColor: 'rgba(124,58,237,0.15)',
     justifyContent: 'center', alignItems: 'center',
     borderWidth: 2, borderColor: colors.border,
   },
@@ -323,7 +323,7 @@ const s = StyleSheet.create({
   row: { flexDirection: 'row', gap: 10, alignItems: 'center' },
   flex1: { flex: 1 },
   input: {
-    backgroundColor: 'rgba(10,30,80,0.6)',
+    backgroundColor: 'rgba(30,41,59,0.6)',
     borderRadius: 12, padding: 12,
     color: colors.textPrimary, fontSize: 15,
     borderWidth: 1, borderColor: colors.border,
@@ -339,7 +339,7 @@ const s = StyleSheet.create({
   searchName: { flex: 1, color: colors.textPrimary, fontSize: 15 },
   alreadyFriend: { color: colors.green, fontSize: 13, fontWeight: '600' },
   addBtn: {
-    backgroundColor: 'rgba(80,160,255,0.2)',
+    backgroundColor: 'rgba(124,58,237,0.2)',
     borderRadius: 10, paddingHorizontal: 12, paddingVertical: 6,
     borderWidth: 1, borderColor: colors.border,
   },

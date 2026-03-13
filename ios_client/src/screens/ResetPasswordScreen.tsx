@@ -131,7 +131,7 @@ const s = StyleSheet.create({
   title: { color: colors.textPrimary, fontSize: 24, fontWeight: '800', textAlign: 'center', marginBottom: 4 },
   subtitle: { color: colors.textMuted, fontSize: 15, textAlign: 'center', marginBottom: 24 },
   input: {
-    backgroundColor: 'rgba(10,30,80,0.6)',
+    backgroundColor: 'rgba(30,41,59,0.6)',
     borderRadius: 12, padding: 14,
     color: colors.textPrimary, fontSize: 16,
     borderWidth: 1, borderColor: colors.border,
