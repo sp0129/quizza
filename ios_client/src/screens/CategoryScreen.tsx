@@ -97,9 +97,9 @@ export default function CategoryScreen({ route, navigation }: Props) {
   const modeLabel = `${modeLabelMap[mode] ?? mode}${target ? ` — ${target}` : ''}`;
   const timerSeconds = blitz ? 15 : 30;
 
-  // Handlers
+  // Handlers — toggle: tap selected card again to deselect
   const handleSelect = useCallback((item: Category) => {
-    setSelected(item);
+    setSelected((prev) => (prev?.id === item.id ? null : item));
   }, []);
 
   const handleClearSearch = useCallback(() => {
@@ -267,7 +267,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
             <ActivityIndicator color="#fff" />
           ) : (
             <Text style={s.goBtnText}>
-              {selected ? "Let's Go →" : 'Pick a category'}
+              {selected ? 'Start Game →' : 'Select a category to play'}
             </Text>
           )}
         </TouchableOpacity>

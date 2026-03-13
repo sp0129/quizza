@@ -1,9 +1,10 @@
 import React, { useCallback } from 'react';
-import { Text, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withSpring,
+  withTiming,
   FadeInUp,
 } from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
@@ -23,21 +24,44 @@ interface CategoryCardProps {
 }
 
 const SPRING_CONFIG = { damping: 15, stiffness: 300 };
+const SELECT_SPRING = { mass: 0.8, damping: 10, stiffness: 200 };
 
 function CategoryCardInner({ item, index, isSelected, onSelect }: CategoryCardProps) {
   const scale = useSharedValue(1);
   const starScale = useSharedValue(1);
+  const selectScale = useSharedValue(isSelected ? 1.05 : 1);
+  const checkOpacity = useSharedValue(isSelected ? 1 : 0);
+  const checkScale = useSharedValue(isSelected ? 1 : 0.8);
+
   const favorites = useFavoritesStore((s) => s.favorites);
   const toggleFavorite = useFavoritesStore((s) => s.toggleFavorite);
   const isFav = favorites.includes(item.id);
   const colors = getCategoryCardColors(item.name, item.id);
 
-  const animStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
+  // Animate selection state when isSelected prop changes
+  React.useEffect(() => {
+    if (isSelected) {
+      selectScale.value = withSpring(1.05, SELECT_SPRING);
+      checkOpacity.value = withTiming(1, { duration: 200 });
+      checkScale.value = withSpring(1, { damping: 12, stiffness: 200 });
+    } else {
+      selectScale.value = withSpring(1, SELECT_SPRING);
+      checkOpacity.value = withTiming(0, { duration: 200 });
+      checkScale.value = withTiming(0.8, { duration: 200 });
+    }
+  }, [isSelected]);
+
+  const cardAnimStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value * selectScale.value }],
   }));
 
   const starAnimStyle = useAnimatedStyle(() => ({
     transform: [{ scale: starScale.value }],
+  }));
+
+  const checkAnimStyle = useAnimatedStyle(() => ({
+    opacity: checkOpacity.value,
+    transform: [{ scale: checkScale.value }],
   }));
 
   const handlePress = useCallback(() => {
@@ -66,10 +90,23 @@ function CategoryCardInner({ item, index, isSelected, onSelect }: CategoryCardPr
         <Animated.View
           style={[
             s.card,
-            { backgroundColor: colors.bg, borderColor: isSelected ? colors.accent : 'rgba(255,255,255,0.06)' },
-            animStyle,
+            {
+              backgroundColor: colors.bg,
+              borderColor: isSelected ? '#22C55E' : 'rgba(255,255,255,0.06)',
+              borderWidth: isSelected ? 2.5 : 1.5,
+              // Enhanced shadow when selected
+              shadowOpacity: isSelected ? 0.4 : 0.15,
+              shadowRadius: isSelected ? 12 : 4,
+              shadowColor: isSelected ? '#22C55E' : '#000',
+            },
+            cardAnimStyle,
           ]}
         >
+          {/* Selection checkmark badge */}
+          <Animated.View style={[s.checkBadge, checkAnimStyle]}>
+            <Text style={s.checkText}>✓</Text>
+          </Animated.View>
+
           {/* Favorite star */}
           <Pressable
             onPress={handleFavoritePress}
@@ -108,6 +145,34 @@ const s = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 130,
+    // Default shadow
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  checkBadge: {
+    position: 'absolute',
+    top: 8,
+    left: 8,
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    backgroundColor: '#22C55E',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10,
+    // Shadow for visibility
+    shadowColor: '#22C55E',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.4,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  checkText: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '800',
   },
   starBtn: {
     position: 'absolute',

@@ -8,6 +8,7 @@ import Animated, {
   withSpring,
   withTiming,
   withSequence,
+  withDelay,
   runOnJS,
   FadeIn,
   SlideInRight,
@@ -45,7 +46,7 @@ interface GameResult {
   gameComplete?: boolean;
 }
 
-type Phase = 'loading' | 'playing' | 'answered' | 'finished';
+type Phase = 'loading' | 'reading' | 'playing' | 'answered' | 'finished';
 type AnswerState = 'neutral' | 'correct' | 'wrong' | 'dimmed';
 
 const API_BASE = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
@@ -53,11 +54,13 @@ const WS_BASE = process.env.EXPO_PUBLIC_WS_URL ?? API_BASE.replace(/^https?/, (m
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
+// Read time: 2s for question, 0.5s for button settle = 2.5s before timer starts
+const QUESTION_READ_MS = 2000;
+const BUTTON_SETTLE_MS = 500;
+
 // ---------------------------------------------------------------------------
 // Animated Score Display
 // ---------------------------------------------------------------------------
-// Animates a count-up from old to new value with a brief scale pulse (1.0→1.2→1.0)
-// to draw the eye when points are awarded. Uses tabular-nums to prevent layout shift.
 
 function AnimatedScore({ value }: { value: number }) {
   const [display, setDisplay] = useState(value);
@@ -66,13 +69,11 @@ function AnimatedScore({ value }: { value: number }) {
   useEffect(() => {
     if (value === display) return;
 
-    // Pulse scale 1.0 → 1.2 → 1.0 over 300ms
     scale.value = withSequence(
       withSpring(1.2, { damping: 12, stiffness: 200 }),
       withSpring(1, { damping: 12, stiffness: 200 }),
     );
 
-    // Count-up animation over 200ms
     const start = display;
     const diff = value - start;
     const steps = 10;
@@ -105,7 +106,6 @@ function AnimatedScore({ value }: { value: number }) {
 // ---------------------------------------------------------------------------
 // Floating Points Indicator
 // ---------------------------------------------------------------------------
-// Shows "+N" that floats upward and fades out when points are awarded.
 
 function FloatingPoints({ points, triggerKey }: { points: number; triggerKey: number }) {
   const translateY = useSharedValue(0);
@@ -136,8 +136,6 @@ function FloatingPoints({ points, triggerKey }: { points: number; triggerKey: nu
 // ---------------------------------------------------------------------------
 // Progress Dots
 // ---------------------------------------------------------------------------
-// Segmented progress indicator (one dot per question) — recommended in uiux.md
-// for quizzes under 20 questions. Filled = answered, current = pulsing accent.
 
 function ProgressDots({ total, current, results }: {
   total: number;
@@ -168,6 +166,44 @@ function ProgressDots({ total, current, results }: {
 }
 
 // ---------------------------------------------------------------------------
+// Staggered Answer Button wrapper
+// ---------------------------------------------------------------------------
+
+function StaggeredAnswerButton({
+  answer,
+  index,
+  state,
+  disabled,
+  visible,
+  onPress,
+  questionIndex,
+}: {
+  answer: string;
+  index: number;
+  state: AnswerState;
+  disabled: boolean;
+  visible: boolean;
+  onPress: () => void;
+  questionIndex: number;
+}) {
+  if (!visible) return <View style={styles.answerPlaceholder} />;
+
+  return (
+    <Animated.View
+      entering={SlideInRight.duration(300).delay(index * 50).springify().damping(18)}
+    >
+      <AnswerButton
+        key={`${questionIndex}-${index}`}
+        text={answer}
+        state={state}
+        disabled={disabled}
+        onPress={onPress}
+      />
+    </Animated.View>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Main GameScreen Component
 // ---------------------------------------------------------------------------
 
@@ -185,6 +221,10 @@ export default function GameScreen({ route, navigation }: Props) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [questionResults, setQuestionResults] = useState<(boolean | null)[]>([]);
 
+  // --- Answer button visibility (staggered reveal) ---
+  const [buttonsVisible, setButtonsVisible] = useState(false);
+  const [timerActive, setTimerActive] = useState(false);
+
   // --- Sync mode state ---
   const [opponentAnswered, setOpponentAnswered] = useState(false);
   const [waitingForOpponent, setWaitingForOpponent] = useState(false);
@@ -199,28 +239,55 @@ export default function GameScreen({ route, navigation }: Props) {
   const [pointsTrigger, setPointsTrigger] = useState(0);
 
   // --- Animation: question slide transition ---
-  // We use a key-based approach with Reanimated layout animations:
-  // current question exits via SlideOutLeft, new one enters via SlideInRight (250ms)
   const [questionAnimKey, setQuestionAnimKey] = useState(0);
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const questionStartRef = useRef<number>(Date.now());
   const wsRef = useRef<WebSocket | null>(null);
+  const readTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const settleTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const triggerMascot = (mood: MascotMood) => {
     setMascotMood(mood);
     setMascotKey(k => k + 1);
   };
 
+  // --- Start the read → reveal → play sequence for each question ---
+  const startQuestionSequence = useCallback(() => {
+    setButtonsVisible(false);
+    setTimerActive(false);
+    setPhase('reading');
+
+    // After 2s: reveal answer buttons
+    readTimeoutRef.current = setTimeout(() => {
+      setButtonsVisible(true);
+
+      // After 0.5s more (2.5s total): start the timer
+      settleTimeoutRef.current = setTimeout(() => {
+        setPhase('playing');
+        setTimerActive(true);
+        questionStartRef.current = Date.now();
+      }, BUTTON_SETTLE_MS);
+    }, QUESTION_READ_MS);
+  }, []);
+
+  // Clean up read/settle timeouts
+  useEffect(() => {
+    return () => {
+      if (readTimeoutRef.current) clearTimeout(readTimeoutRef.current);
+      if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
+    };
+  }, []);
+
   // --- Load questions ---
   useEffect(() => {
     api.get<{ questions: Question[] }>(`/questions/set/${questionSetId}`).then(data => {
       setQuestions(data.questions);
       setQuestionResults(new Array(data.questions.length).fill(null));
-      setPhase('playing');
       setTimerKey(k => k + 1);
+      startQuestionSequence();
     }).catch(console.error);
-  }, [questionSetId]);
+  }, [questionSetId, startQuestionSequence]);
 
   // --- WebSocket for sync mode ---
   useEffect(() => {
@@ -234,7 +301,6 @@ export default function GameScreen({ route, navigation }: Props) {
       if (msg.type === 'opponent_answered') setOpponentAnswered(true);
       if (msg.type === 'advance') {
         setCurrentIndex(msg.question);
-        setPhase('playing');
         setSelectedAnswer(null);
         setOpponentAnswered(false);
         setWaitingForOpponent(false);
@@ -242,9 +308,9 @@ export default function GameScreen({ route, navigation }: Props) {
         setLastResult(null);
         setTimerKey(k => k + 1);
         setQuestionAnimKey(k => k + 1);
-        questionStartRef.current = Date.now();
         setMascotMood('thinking');
         setMascotKey(k => k + 1);
+        startQuestionSequence();
       }
       if (msg.type === 'opponent_finished') {
         setFinalScores(prev => ({ mine: prev?.mine ?? 0, opponent: msg.score }));
@@ -257,15 +323,14 @@ export default function GameScreen({ route, navigation }: Props) {
       }
     };
     return () => ws.close();
-  }, [mode, gameId]);
+  }, [mode, gameId, startQuestionSequence]);
 
-  // --- Countdown timer ---
+  // --- Countdown timer (only when timerActive) ---
   useEffect(() => {
-    if (phase !== 'playing') {
+    if (!timerActive || phase !== 'playing') {
       if (timerRef.current) clearInterval(timerRef.current);
       return;
     }
-    questionStartRef.current = Date.now();
     setTimeLeft(QUESTION_TIME);
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
@@ -274,7 +339,14 @@ export default function GameScreen({ route, navigation }: Props) {
       });
     }, 1000);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, [phase, currentIndex]);
+  }, [timerActive, phase, currentIndex]);
+
+  // --- Haptic ticks in final 5 seconds ---
+  useEffect(() => {
+    if (timeLeft > 0 && timeLeft <= 5 && phase === 'playing') {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+  }, [timeLeft, phase]);
 
   // --- Auto-submit on timeout ---
   useEffect(() => {
@@ -285,12 +357,15 @@ export default function GameScreen({ route, navigation }: Props) {
 
   // --- Submit answer ---
   const submitAnswer = useCallback(async (answer: string, forcedTime?: number) => {
-    if (phase !== 'playing') return;
+    if (phase !== 'playing' && phase !== 'reading') return;
     if (timerRef.current) clearInterval(timerRef.current);
+    if (readTimeoutRef.current) clearTimeout(readTimeoutRef.current);
+    if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
 
     const timeTaken = forcedTime ?? Math.round((Date.now() - questionStartRef.current) / 1000);
     setSelectedAnswer(answer);
     setPhase('answered');
+    setTimerActive(false);
 
     try {
       const result = await api.post<GameResult>(`/games/${gameId}/answer`, {
@@ -328,13 +403,13 @@ export default function GameScreen({ route, navigation }: Props) {
         // 1.5s pause on reveal state — long enough to register, short enough for flow
         setTimeout(() => {
           setCurrentIndex(i => i + 1);
-          setPhase('playing');
           setSelectedAnswer(null);
           setLastResult(null);
           setTimerKey(k => k + 1);
           setQuestionAnimKey(k => k + 1);
           setMascotMood('thinking');
           setMascotKey(k => k + 1);
+          startQuestionSequence();
         }, 1500);
       } else {
         setWaitingForOpponent(true);
@@ -342,7 +417,7 @@ export default function GameScreen({ route, navigation }: Props) {
     } catch (err) {
       console.error(err);
     }
-  }, [phase, currentIndex, gameId, mode, score]);
+  }, [phase, currentIndex, gameId, mode, score, startQuestionSequence]);
 
   // --- Quit handler ---
   const handleQuit = () => {
@@ -446,17 +521,18 @@ export default function GameScreen({ route, navigation }: Props) {
   }
 
   // =========================================================================
-  // RENDER: Playing / Answered
+  // RENDER: Reading / Playing / Answered
   // =========================================================================
   const question = questions[currentIndex];
   if (!question) return null;
 
+  const isReadingPhase = phase === 'reading';
+  const canAnswer = phase === 'playing';
+
   return (
     <LinearGradient colors={gradients.game} style={styles.flex}>
       {/* ================================================================= */}
-      {/* TOP ZONE (~15%): Status bar — progress, timer, score              */}
-      {/* Three-zone layout per uiux.md. Compact, persistent, never         */}
-      {/* competes with question content.                                    */}
+      {/* TOP ZONE: Status bar — progress, timer, score                     */}
       {/* ================================================================= */}
       <View style={[styles.topZone, { paddingTop: insets.top + 8 }]}>
         {/* Quit button */}
@@ -465,14 +541,14 @@ export default function GameScreen({ route, navigation }: Props) {
             <Text style={styles.quitBtnText} onPress={handleQuit}>✕</Text>
           </View>
 
-          {/* Progress dots — segmented indicator, one per question */}
+          {/* Progress dots */}
           <ProgressDots
             total={questions.length}
             current={currentIndex}
             results={questionResults}
           />
 
-          {/* Score display with animated count-up and floating +N */}
+          {/* Score display */}
           <View style={styles.scoreContainer}>
             <Text style={styles.scoreLabel}>Score</Text>
             <View style={styles.scoreRow}>
@@ -482,21 +558,20 @@ export default function GameScreen({ route, navigation }: Props) {
           </View>
         </View>
 
-        {/* Circular countdown timer — center of top zone */}
+        {/* Circular countdown timer */}
         <View style={styles.timerRow}>
           <CircularTimer
             duration={QUESTION_TIME}
             timeLeft={timeLeft}
-            isPlaying={phase === 'playing'}
+            isPlaying={timerActive}
             timerKey={timerKey}
           />
         </View>
       </View>
 
       {/* ================================================================= */}
-      {/* MIDDLE ZONE (~35%): Question text + question counter              */}
-      {/* Large, bold, centered text with 1.5x line height.                 */}
-      {/* Animated: slides out left / in from right on question change.     */}
+      {/* MIDDLE ZONE: Question text + mascot                               */}
+      {/* Question fades in first, buttons appear 2s later                  */}
       {/* ================================================================= */}
       <View style={styles.middleZone}>
         <Animated.View
@@ -511,27 +586,36 @@ export default function GameScreen({ route, navigation }: Props) {
           <Text style={styles.questionText}>{question.question}</Text>
         </Animated.View>
 
-        {/* Mascot — small, positioned to add personality without distraction */}
+        {/* Mascot */}
         <View style={styles.mascotWrap}>
           <PizzaMascot key={mascotKey} mood={mascotMood} size={60} />
         </View>
       </View>
 
       {/* ================================================================= */}
-      {/* BOTTOM ZONE (~50%): Answer buttons                                */}
-      {/* Four full-width buttons, 12dp spacing, in the natural thumb arc.  */}
-      {/* Each button handles its own press/reveal/shake animations.        */}
+      {/* BOTTOM ZONE: Answer buttons with staggered slide-in               */}
+      {/* Buttons slide in from right 2s after question, staggered 50ms     */}
       {/* ================================================================= */}
       <View style={[styles.bottomZone, { paddingBottom: insets.bottom + 20 }]}>
         {question.all_answers.map((answer, i) => (
-          <AnswerButton
+          <StaggeredAnswerButton
             key={`${currentIndex}-${i}`}
-            text={answer}
+            answer={answer}
+            index={i}
+            questionIndex={currentIndex}
             state={getAnswerState(answer)}
-            disabled={phase !== 'playing'}
+            disabled={!canAnswer}
+            visible={buttonsVisible}
             onPress={() => submitAnswer(answer)}
           />
         ))}
+
+        {/* Reading phase hint */}
+        {isReadingPhase && !buttonsVisible && (
+          <Animated.View entering={FadeIn.duration(300)} style={styles.readingHint}>
+            <Text style={styles.readingHintText}>Read the question...</Text>
+          </Animated.View>
+        )}
 
         {waitingForOpponent && (
           <Text style={styles.waitingMsg}>
@@ -605,7 +689,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   scoreValue: {
-    // Monospace/tabular-nums prevents layout shift when score changes
     fontVariant: ['tabular-nums'],
     fontSize: 18,
     fontWeight: '800',
@@ -644,12 +727,11 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   questionText: {
-    // 20-22px bold per typography spec, 1.5x line height, centered
     fontSize: 21,
     fontWeight: '700',
     color: colors.text.primary,
     textAlign: 'center',
-    lineHeight: 32,       // ~1.5x of 21px
+    lineHeight: 32,
   },
   mascotWrap: {
     alignItems: 'center',
@@ -659,7 +741,20 @@ const styles = StyleSheet.create({
   // === BOTTOM ZONE ===
   bottomZone: {
     paddingHorizontal: 16,
-    gap: 12,              // 12dp spacing between answer buttons per spec
+    gap: 12,
+  },
+  answerPlaceholder: {
+    minHeight: 60,
+  },
+  readingHint: {
+    alignItems: 'center',
+    paddingVertical: 8,
+  },
+  readingHintText: {
+    color: colors.text.secondary,
+    fontSize: 14,
+    fontWeight: '600',
+    fontStyle: 'italic',
   },
 
   // === FINISHED SCREEN ===
