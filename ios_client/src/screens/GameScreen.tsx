@@ -207,9 +207,13 @@ function PopInAnswerButton({
 }) {
   const scale = useSharedValue(0.8);
   const opacity = useSharedValue(0);
+  // Track whether this button has started its reveal animation
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
     if (visible) {
+      // Delay mounting the AnswerButton until its stagger slot arrives
+      const mountTimer = setTimeout(() => setRevealed(true), revealDelay);
       scale.value = withDelay(
         revealDelay,
         withSpring(1, { mass: 1, damping: 7, stiffness: 40 }),
@@ -218,9 +222,11 @@ function PopInAnswerButton({
         revealDelay,
         withTiming(1, { duration: 150 }),
       );
+      return () => clearTimeout(mountTimer);
     } else {
       scale.value = 0.8;
       opacity.value = 0;
+      setRevealed(false);
     }
   }, [visible, revealDelay]);
 
@@ -228,6 +234,12 @@ function PopInAnswerButton({
     transform: [{ scale: scale.value }],
     opacity: opacity.value,
   }));
+
+  // Reserve space with placeholder until reveal; prevents flash from
+  // AnswerButton mounting before the wrapper's animated opacity takes effect
+  if (!visible && !revealed) {
+    return <View style={styles.answerPlaceholder} />;
+  }
 
   return (
     <Animated.View style={[styles.answerSlot, animStyle]}>
@@ -803,6 +815,9 @@ const styles = StyleSheet.create({
   },
   answerSlot: {
     // Each slot reserves space even when invisible (opacity 0, scale 0.8)
+  },
+  answerPlaceholder: {
+    minHeight: 60,
   },
   readingHint: {
     alignItems: 'center',

@@ -88,14 +88,18 @@ function RoomPopInAnswerButton({
 }) {
   const scale = useSharedValue(0.8);
   const opacity = useSharedValue(0);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
     if (visible) {
+      const mountTimer = setTimeout(() => setRevealed(true), revealDelay);
       scale.value = withDelay(revealDelay, withSpring(1, { mass: 1, damping: 7, stiffness: 40 }));
       opacity.value = withDelay(revealDelay, withTiming(1, { duration: 150 }));
+      return () => clearTimeout(mountTimer);
     } else {
       scale.value = 0.8;
       opacity.value = 0;
+      setRevealed(false);
     }
   }, [visible, revealDelay]);
 
@@ -103,6 +107,10 @@ function RoomPopInAnswerButton({
     transform: [{ scale: scale.value }],
     opacity: opacity.value,
   }));
+
+  if (!visible && !revealed) {
+    return <View style={{ minHeight: 60 }} />;
+  }
 
   return (
     <Animated.View style={animStyle}>
