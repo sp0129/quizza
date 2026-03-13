@@ -4,6 +4,33 @@ import { requireAuth, AuthRequest } from '../middleware/auth';
 
 const router = Router();
 
+// GET /users/search?q= — search users by username prefix (authenticated)
+// IMPORTANT: Must be defined BEFORE /:username to avoid being swallowed by the wildcard
+router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  let q = (req.query.q as string ?? '').trim();
+  // Strip leading @ if user types "@username"
+  if (q.startsWith('@')) q = q.slice(1);
+  if (q.length < 1) { res.json([]); return; }
+  try {
+    const result = await pool.query(
+      `SELECT id, username, profile_picture_url,
+              EXISTS (
+                SELECT 1 FROM friendships
+                WHERE (user_a_id = LEAST($2::uuid, id) AND user_b_id = GREATEST($2::uuid, id))
+              ) AS is_friend
+       FROM users
+       WHERE username ILIKE $1 AND id != $2 AND is_guest = FALSE
+       ORDER BY is_friend DESC, username
+       LIMIT 10`,
+      [q + '%', req.userId]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // GET /users/:username — public profile + stats
 router.get('/:username', async (req: Request, res: Response): Promise<void> => {
   try {
@@ -27,30 +54,6 @@ router.get('/:username', async (req: Request, res: Response): Promise<void> => {
     );
 
     res.json({ ...user, stats: statsResult.rows[0] });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Server error' });
-  }
-});
-
-// GET /users/search?q= — search users by username prefix (authenticated)
-router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const q = (req.query.q as string ?? '').trim();
-  if (q.length < 1) { res.json([]); return; }
-  try {
-    const result = await pool.query(
-      `SELECT id, username, profile_picture_url,
-              EXISTS (
-                SELECT 1 FROM friendships
-                WHERE (user_a_id = LEAST($2::uuid, id) AND user_b_id = GREATEST($2::uuid, id))
-              ) AS is_friend
-       FROM users
-       WHERE username ILIKE $1 AND id != $2 AND is_guest = FALSE
-       ORDER BY is_friend DESC, username
-       LIMIT 10`,
-      [q + '%', req.userId]
-    );
-    res.json(result.rows);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
