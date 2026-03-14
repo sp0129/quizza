@@ -215,6 +215,7 @@ router.post('/:invitationId/accept', requireAuth, async (req: AuthRequest, res: 
 router.post('/:id/seen', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const me = req.userId!;
   const { id } = req.params;
+  console.log('[seen] POST /challenges/:id/seen called', { id, me });
 
   try {
     // Determine if I'm the inviter or invitee and set the right column
@@ -222,16 +223,19 @@ router.post('/:id/seen', requireAuth, async (req: AuthRequest, res: Response): P
       `SELECT inviter_id, invitee_id FROM invitations WHERE id = $1`,
       [id]
     );
+    console.log('[seen] lookup result', { found: !!inv.rows[0], row: inv.rows[0] });
     if (!inv.rows[0]) {
       res.status(404).json({ error: 'Invitation not found' });
       return;
     }
 
     const col = inv.rows[0].inviter_id === me ? 'inviter_seen' : 'invitee_seen';
-    await pool.query(
+    console.log('[seen] updating column', { col, id });
+    const updateResult = await pool.query(
       `UPDATE invitations SET ${col} = TRUE WHERE id = $1`,
       [id]
     );
+    console.log('[seen] update rowCount', updateResult.rowCount);
     res.json({ ok: true });
   } catch (err) {
     console.error(err);
