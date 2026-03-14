@@ -132,8 +132,8 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
 
   // Fetch from Open Trivia DB
   const url = categoryId
-    ? `https://opentdb.com/api.php?amount=15&category=${categoryId}&type=multiple`
-    : `https://opentdb.com/api.php?amount=15&type=multiple`;
+    ? `https://opentdb.com/api.php?amount=15&category=${categoryId}&type=multiple&encode=url3986`
+    : `https://opentdb.com/api.php?amount=15&type=multiple&encode=url3986`;
 
   const res = await fetch(url);
   const data = await res.json() as { response_code: number; results: OpenTDBQuestion[] };
@@ -142,9 +142,8 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
     throw new Error('Failed to fetch questions from Open Trivia DB');
   }
 
-  // Decode HTML entities from API response
-  const decode = (str: string) =>
-    str.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#039;/g, "'");
+  // Decode URL-encoded strings from API response (encode=url3986)
+  const decode = (str: string) => decodeURIComponent(str);
 
   const seed = Date.now();
   const shuffled = shuffleArray(deduplicateByQuestion(data.results), seed).slice(0, questionCount);
