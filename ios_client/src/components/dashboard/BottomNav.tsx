@@ -83,7 +83,7 @@ function BottomNav({ activeTab, onTabPress, badges = {} }: BottomNavProps) {
   const insets = useSafeAreaInsets();
 
   return (
-    <View style={[styles.container, { paddingBottom: Math.max(insets.bottom, 8) }]}>
+    <View style={[styles.container, { paddingBottom: insets.bottom }]}>
       <View style={styles.bar}>
         {TABS.map((tab) => (
           <TabButton
@@ -107,14 +107,14 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'transparent',
+    backgroundColor: colors.bg.surface,
   },
   bar: {
     flexDirection: 'row',
     backgroundColor: colors.bg.surface,
     borderTopWidth: 1,
     borderTopColor: colors.border + '30',
-    height: 60,
+    height: 50,
     alignItems: 'center',
     justifyContent: 'space-around',
     paddingHorizontal: 4,

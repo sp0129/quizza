@@ -24,6 +24,7 @@ interface RawCompletedChallenge {
   won: boolean;
   tied: boolean;
   completedAt: string;
+  seen?: boolean;
 }
 
 interface RawOutgoingChallenge {
@@ -39,6 +40,7 @@ interface RawOutgoingChallenge {
   won?: boolean;
   tied?: boolean;
   completedAt?: string;
+  seen?: boolean;
 }
 
 function mapRawChallenge(raw: RawChallenge): Challenge {
@@ -70,6 +72,7 @@ function mapCompletedChallenge(raw: RawCompletedChallenge): Challenge {
     opponentScore: raw.opponentScore,
     won: raw.won,
     tied: raw.tied,
+    seen: raw.seen,
   };
 }
 
@@ -88,6 +91,7 @@ function mapOutgoingChallenge(raw: RawOutgoingChallenge): Challenge {
     opponentScore: raw.opponentScore,
     won: raw.won,
     tied: raw.tied,
+    seen: raw.seen,
   };
 }
 

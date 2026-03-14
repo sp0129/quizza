@@ -83,7 +83,7 @@ router.get('/incoming', requireAuth, async (req: AuthRequest, res: Response): Pr
 router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const result = await pool.query(
-      `SELECT i.id, i.category, i.game_id,
+      `SELECT i.id, i.category, i.game_id, i.seen_by,
               g.player_a_score, g.player_b_score, g.winner_id, g.completed_at,
               g.player_a_id, g.player_b_id,
               inviter.username AS inviter_username,
@@ -111,6 +111,7 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
         won: r.winner_id === req.userId,
         tied: r.winner_id === null && r.player_a_score !== null && r.player_b_score !== null,
         completedAt: r.completed_at,
+        seen: (r.seen_by as string[]).includes(req.userId!),
       };
     });
     res.json(mapped);
@@ -124,7 +125,7 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
 router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const result = await pool.query(
-      `SELECT i.id, i.category, i.game_id, i.created_at, i.expires_at,
+      `SELECT i.id, i.category, i.game_id, i.created_at, i.expires_at, i.seen_by,
               g.status AS game_status,
               g.player_a_score, g.player_b_score, g.winner_id, g.completed_at,
               invitee.username AS opponent_username
@@ -156,6 +157,7 @@ router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Pr
           won: r.winner_id === req.userId,
           tied: r.winner_id === null && r.player_a_score !== null && r.player_b_score !== null,
           completedAt: r.completed_at,
+          seen: (r.seen_by as string[]).includes(req.userId!),
         } : {}),
       };
     });
@@ -197,6 +199,24 @@ router.post('/:invitationId/accept', requireAuth, async (req: AuthRequest, res: 
     );
 
     res.json({ gameId: inv.game_id, questionSetId: inv.question_set_id, category: inv.category });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// PATCH /challenges/:id/seen — mark a challenge result as seen by the current user
+router.patch('/:id/seen', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const me = req.userId!;
+  const { id } = req.params;
+
+  try {
+    await pool.query(
+      `UPDATE invitations SET seen_by = array_append(seen_by, $1)
+       WHERE id = $2 AND (inviter_id = $1 OR invitee_id = $1) AND NOT ($1 = ANY(seen_by))`,
+      [me, id]
+    );
+    res.json({ ok: true });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });

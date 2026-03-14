@@ -56,9 +56,7 @@ export default function DashboardScreen({ navigation }: Props) {
     setMetrics,
     searchOverlayVisible,
     setSearchOverlayVisible,
-    seenResultIds,
     markChallengeSeen,
-    loadSeenResults,
   } = useDashboardStore();
 
   const [roomCode, setRoomCode] = useState('');
@@ -83,15 +81,11 @@ export default function DashboardScreen({ navigation }: Props) {
   const completedChallenges = challenges
     .filter((c) => c.status === 'completed')
     .sort((a, b) => {
-      const aSeen = seenResultIds[a.id] ? 1 : 0;
-      const bSeen = seenResultIds[b.id] ? 1 : 0;
+      const aSeen = a.seen ? 1 : 0;
+      const bSeen = b.seen ? 1 : 0;
       return aSeen - bSeen; // unseen first, seen last
     });
 
-  // Load persisted seen result IDs
-  useEffect(() => {
-    loadSeenResults();
-  }, [loadSeenResults]);
 
   // Check for first-time user onboarding
   useEffect(() => {
@@ -454,9 +448,9 @@ export default function DashboardScreen({ navigation }: Props) {
                   opponentScore={item.opponentScore}
                   won={item.won}
                   tied={item.tied}
-                  seen={seenResultIds[item.id]}
+                  seen={item.seen}
                   onPress={() => {
-                    const isSeen = seenResultIds[item.id];
+                    const isSeen = item.seen;
                     if (!isSeen) markChallengeSeen(item.id);
                     const result: 'win' | 'loss' | 'tie' = item.won
                       ? 'win'

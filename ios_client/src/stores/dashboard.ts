@@ -1,7 +1,5 @@
 import { create } from 'zustand';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-const SEEN_RESULTS_KEY = 'quizza_seen_results';
+import { api } from '../api/client';
 
 // ─── Types ──────────────────────────────────────────
 export interface Challenge {
@@ -48,12 +46,10 @@ interface DashboardState {
   // Challenges
   challenges: Challenge[];
   challengesLoading: boolean;
-  seenResultIds: Record<string, true>;
   setChallenges: (challenges: Challenge[]) => void;
   addChallenge: (challenge: Challenge) => void;
   removeChallenge: (id: string) => void;
   markChallengeSeen: (id: string) => void;
-  loadSeenResults: () => Promise<void>;
   setChallengesLoading: (loading: boolean) => void;
 
   // Metrics
@@ -91,27 +87,20 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
   // Challenges
   challenges: [],
   challengesLoading: true,
-  seenResultIds: {},
   setChallenges: (challenges) => set({ challenges }),
   addChallenge: (challenge) =>
     set((s) => ({ challenges: [challenge, ...s.challenges] })),
   removeChallenge: (id) =>
     set((s) => ({ challenges: s.challenges.filter((c) => c.id !== id) })),
   markChallengeSeen: (id) => {
-    const next = { ...get().seenResultIds, [id]: true as const };
-    set({ seenResultIds: next });
-    AsyncStorage.setItem(SEEN_RESULTS_KEY, JSON.stringify(Object.keys(next))).catch(() => {});
-  },
-  loadSeenResults: async () => {
-    try {
-      const raw = await AsyncStorage.getItem(SEEN_RESULTS_KEY);
-      if (raw) {
-        const ids: string[] = JSON.parse(raw);
-        const map: Record<string, true> = {};
-        for (const id of ids) map[id] = true;
-        set({ seenResultIds: map });
-      }
-    } catch {}
+    // Optimistically mark seen locally
+    set((s) => ({
+      challenges: s.challenges.map((c) =>
+        c.id === id ? { ...c, seen: true } : c
+      ),
+    }));
+    // Persist to server
+    api.patch(`/challenges/${id}/seen`, {}).catch(() => {});
   },
   setChallengesLoading: (loading) => set({ challengesLoading: loading }),
 
