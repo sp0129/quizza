@@ -29,8 +29,9 @@ interface ModeCardProps {
 
 function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: ModeCardProps) {
   const scale = useSharedValue(1);
-  const shineOpacity = useSharedValue(0.4);
-  const glowOpacity = useSharedValue(0.2);
+  const shineOpacity = useSharedValue(0.7);
+  const shine2Opacity = useSharedValue(0.18);
+  const glowOpacity = useSharedValue(0.18);
 
   const g = gem ?? { base: color, light: color, dark: color };
 
@@ -42,15 +43,17 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: Mo
   const tapGesture = Gesture.Tap()
     .onBegin(() => {
       'worklet';
-      scale.value = withSpring(0.98, { damping: 12, stiffness: 400 });
-      shineOpacity.value = withTiming(0.6, { duration: 100 });
-      glowOpacity.value = withTiming(0.35, { duration: 100 });
+      scale.value = withTiming(0.97, { duration: 80 });
+      shineOpacity.value = withTiming(0.85, { duration: 80 });
+      shine2Opacity.value = withTiming(0.3, { duration: 80 });
+      glowOpacity.value = withTiming(0.3, { duration: 80 });
     })
     .onFinalize((_e, success) => {
       'worklet';
-      scale.value = withSpring(1, { mass: 0.8, damping: 10, stiffness: 100 });
-      shineOpacity.value = withTiming(0.4, { duration: 300 });
-      glowOpacity.value = withTiming(0.2, { duration: 300 });
+      scale.value = withSpring(1, { mass: 0.7, damping: 12, stiffness: 120 });
+      shineOpacity.value = withTiming(0.7, { duration: 250 });
+      shine2Opacity.value = withTiming(0.18, { duration: 250 });
+      glowOpacity.value = withTiming(0.18, { duration: 250 });
       if (success) {
         runOnJS(handlePress)();
       }
@@ -62,6 +65,10 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: Mo
 
   const shineStyle = useAnimatedStyle(() => ({
     opacity: shineOpacity.value,
+  }));
+
+  const shine2Style = useAnimatedStyle(() => ({
+    opacity: shine2Opacity.value,
   }));
 
   const glowStyle = useAnimatedStyle(() => ({
@@ -77,25 +84,32 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: Mo
           glowStyle,
           {
             shadowColor: g.base,
-            shadowOffset: { width: 0, height: 6 },
-            shadowRadius: 18,
-            elevation: 10,
+            shadowOffset: { width: 0, height: 4 },
+            shadowRadius: 14,
+            elevation: 8,
           },
         ]}
       >
-        {/* Layer 3: Base gradient (depth) */}
+        {/* Layer 3: Base gradient (depth & curvature) */}
         <LinearGradient
           colors={[g.light, g.base, g.dark]}
-          locations={[0, 0.5, 1]}
+          locations={[0, 0.45, 1]}
           style={styles.pillGradient}
         >
-          {/* Layer 4: Inner shadow / beveled edge */}
-          <View style={[styles.innerBevel, { borderColor: g.dark + '66' }]} />
+          {/* Layer 6: Inner shadow (bottom beveled edge) */}
+          <LinearGradient
+            colors={['transparent', g.dark + '80']}
+            locations={[0.7, 1]}
+            style={styles.innerShadow}
+          />
 
-          {/* Layer 2: Mid-facet glow (iridescence) */}
-          <View style={[styles.facetGlow, { backgroundColor: g.light + '30' }]} />
+          {/* Layer 4: White outline / premium edge (top + sides) */}
+          <View style={styles.topOutline} />
 
-          {/* Layer 1: Bright top highlight (shine) */}
+          {/* Layer 2: Secondary subtle glow (mid-section) */}
+          <Animated.View style={[styles.shine2, shine2Style]} />
+
+          {/* Layer 1: Top bright shine (crisp highlight) */}
           <Animated.View style={[styles.shine, shineStyle]} />
 
           {/* Content */}
@@ -121,81 +135,96 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: Mo
 
 export default React.memo(ModeCard);
 
+const RADIUS = 20;
+
 const styles = StyleSheet.create({
   pillOuter: {
-    height: 76,
-    borderRadius: 22,
-    overflow: 'hidden',
+    height: 60,
+    borderRadius: RADIUS,
   },
   pillGradient: {
     flex: 1,
-    borderRadius: 22,
+    borderRadius: RADIUS,
     overflow: 'hidden',
   },
-  // Layer 4: Inner bevel
-  innerBevel: {
+  // Layer 6: Inner shadow at bottom
+  innerShadow: {
     ...StyleSheet.absoluteFillObject,
-    borderRadius: 22,
-    borderWidth: 1.5,
+    borderRadius: RADIUS,
   },
-  // Layer 2: Mid-facet glow
-  facetGlow: {
+  // Layer 4: White outline on top + sides
+  topOutline: {
     position: 'absolute',
-    top: '30%',
-    left: '10%',
-    right: '10%',
-    height: '40%',
-    borderRadius: 40,
+    top: 0,
+    left: 0,
+    right: 0,
+    height: '60%',
+    borderTopLeftRadius: RADIUS,
+    borderTopRightRadius: RADIUS,
+    borderTopWidth: 1,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderColor: 'rgba(255,255,255,0.35)',
   },
-  // Layer 1: Top shine
+  // Layer 2: Secondary subtle glow
+  shine2: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    right: 20,
+    height: 5,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 3,
+  },
+  // Layer 1: Top bright shine
   shine: {
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
-    height: '30%',
+    height: 10,
     backgroundColor: '#FFFFFF',
-    borderTopLeftRadius: 22,
-    borderTopRightRadius: 22,
+    borderTopLeftRadius: RADIUS,
+    borderTopRightRadius: RADIUS,
   },
   content: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    gap: 16,
+    gap: 14,
   },
   icon: {
-    fontSize: 36,
+    fontSize: 32,
   },
   textColumn: {
-    gap: 2,
+    gap: 1,
   },
   label: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '800',
     color: '#FFFFFF',
   },
   subtitle: {
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: '500',
     color: 'rgba(255,255,255,0.7)',
   },
   badge: {
     position: 'absolute',
-    top: 12,
-    right: 16,
-    minWidth: 26,
-    height: 26,
-    borderRadius: 13,
+    top: 10,
+    right: 14,
+    minWidth: 24,
+    height: 24,
+    borderRadius: 12,
     backgroundColor: '#7C3AED',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 6,
+    paddingHorizontal: 5,
   },
   badgeText: {
     color: '#FFFFFF',
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: '800',
   },
 });
