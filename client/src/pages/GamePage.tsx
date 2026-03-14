@@ -126,13 +126,34 @@ export default function GamePage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft]);
 
-  // Play gibberish on finish
+  // When game finishes, fetch game status as fallback to get opponent score
   useEffect(() => {
-    if (phase !== 'finished') return;
-    const opponent = finalScores?.opponent;
-    const mine = finalScores?.mine ?? 0;
-    const isLose = opponent !== undefined && mine < opponent;
-    setTimeout(() => playGibberish(isLose ? 'sad' : 'happy'), 400);
+    if (phase !== 'finished' || !gameId) return;
+    // If we already have opponent score, just play sound
+    if (finalScores?.opponent !== undefined) {
+      const isLose = (finalScores.mine ?? 0) < finalScores.opponent;
+      setTimeout(() => playGibberish(isLose ? 'sad' : 'happy'), 400);
+      return;
+    }
+    // Fallback: fetch game status to check if opponent already played
+    api.get<{
+      player_a_id: string; player_b_id: string;
+      player_a_score: number | null; player_b_score: number | null;
+      status: string;
+    }>(`/games/${gameId}/status`).then(status => {
+      const userId = JSON.parse(localStorage.getItem('user') || '{}').id;
+      const isPlayerA = status.player_a_id === userId;
+      const opponentScore = isPlayerA ? status.player_b_score : status.player_a_score;
+      if (opponentScore !== null && opponentScore !== undefined) {
+        setFinalScores(prev => ({ ...prev, opponent: opponentScore }));
+        const isLose = (prev => (prev?.mine ?? 0) < opponentScore)(finalScores);
+        setTimeout(() => playGibberish(isLose ? 'sad' : 'happy'), 400);
+      } else {
+        setTimeout(() => playGibberish('happy'), 400);
+      }
+    }).catch(() => {
+      setTimeout(() => playGibberish('happy'), 400);
+    });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 

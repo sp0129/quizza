@@ -278,20 +278,26 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
       const isPlayerA = game.player_a_id === userId;
       const scoreColumn = isPlayerA ? 'player_a_score' : 'player_b_score';
       const finishedColumn = isPlayerA ? 'player_a_finished_at' : 'player_b_finished_at';
-      const otherScore = isPlayerA ? game.player_b_score : game.player_a_score;
 
       await pool.query(
         `UPDATE games SET ${scoreColumn} = $1, ${finishedColumn} = NOW() WHERE id = $2`,
         [totalScore, game.id]
       );
 
+      // Re-fetch game to get fresh opponent score (the initial fetch may be stale)
+      const freshGameResult = await pool.query(
+        'SELECT player_a_id, player_b_id, player_a_score, player_b_score, game_mode FROM games WHERE id = $1',
+        [game.id]
+      );
+      const freshGame = freshGameResult.rows[0];
+      const otherScore = isPlayerA ? freshGame.player_b_score : freshGame.player_a_score;
+
       // If both players have finished, determine winner
       if (otherScore !== null) {
         const myScore = totalScore;
-        const opponentScore = otherScore;
         let winnerId: string | null = null;
-        if (myScore > opponentScore) winnerId = userId;
-        else if (opponentScore > myScore) winnerId = isPlayerA ? game.player_b_id : game.player_a_id;
+        if (myScore > otherScore) winnerId = userId;
+        else if (otherScore > myScore) winnerId = isPlayerA ? freshGame.player_b_id : freshGame.player_a_id;
 
         await pool.query(
           `UPDATE games SET status = 'completed', winner_id = $1, completed_at = NOW() WHERE id = $2`,
@@ -299,19 +305,16 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
         );
 
         // Notify sync game manager if applicable
-        if (game.game_mode === 'sync') {
-          const otherPlayerId = isPlayerA ? game.player_b_id : game.player_a_id;
-          // Tell each player what their opponent scored
-          syncGameManager.notifyPlayerFinished(game.id, userId, totalScore);              // my score → sent to opponent
-          syncGameManager.notifyPlayerFinished(game.id, otherPlayerId, parseInt(otherScore)); // opponent's score → sent to me
-          // End the game for both players
+        if (freshGame.game_mode === 'sync') {
+          const otherPlayerId = isPlayerA ? freshGame.player_b_id : freshGame.player_a_id;
+          syncGameManager.notifyPlayerFinished(game.id, userId, totalScore);
+          syncGameManager.notifyPlayerFinished(game.id, otherPlayerId, parseInt(otherScore));
           syncGameManager.broadcastGameResult(game.id, {});
         }
       }
 
-      // Include opponent's score when both players have finished (async challenge completed)
-      const opponentScore = otherScore !== null ? parseInt(otherScore) : undefined;
-      res.json({ isCorrect, points, totalScore, gameComplete: true, correctAnswer: question.correct_answer, opponentScore });
+      const finalOpponentScore = otherScore !== null ? parseInt(otherScore) : undefined;
+      res.json({ isCorrect, points, totalScore, gameComplete: true, correctAnswer: question.correct_answer, opponentScore: finalOpponentScore });
     } else {
       // For sync mode, notify the manager that this player answered
       if (game.game_mode === 'sync') {
