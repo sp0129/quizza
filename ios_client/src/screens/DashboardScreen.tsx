@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
-  FlatList,
   Alert,
   ActivityIndicator,
   RefreshControl,
@@ -379,14 +378,10 @@ export default function DashboardScreen({ navigation }: Props) {
                 <Text style={styles.countText}>{incomingChallenges.length}</Text>
               </View>
             </View>
-            <FlatList
-              data={incomingChallenges}
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.pillScroll}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => (
+            <View style={styles.challengeList}>
+              {incomingChallenges.map((item) => (
                 <ChallengePill
+                  key={item.id}
                   challengeId={item.id}
                   opponentUsername={item.opponentUsername}
                   category={item.category}
@@ -394,9 +389,8 @@ export default function DashboardScreen({ navigation }: Props) {
                   timeSent={item.createdAt}
                   onPress={() => handleIncomingPress(item)}
                 />
-              )}
-              ItemSeparatorComponent={() => <View style={{ width: 12 }} />}
-            />
+              ))}
+            </View>
           </Animated.View>
         )}
 
@@ -410,26 +404,19 @@ export default function DashboardScreen({ navigation }: Props) {
                 <Text style={styles.countText}>{waitingChallenges.length}</Text>
               </View>
             </View>
-            <FlatList
-              data={waitingChallenges}
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.pillScroll}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => (
+            <View style={styles.challengeList}>
+              {waitingChallenges.map((item) => (
                 <ChallengePill
+                  key={item.id}
                   challengeId={item.id}
                   opponentUsername={item.opponentUsername}
                   category={item.category}
                   type="waiting"
                   timeSent={item.createdAt}
-                  onPress={() => {
-                    // Waiting cards are not tappable (disabled in ChallengePill)
-                  }}
+                  onPress={() => {}}
                 />
-              )}
-              ItemSeparatorComponent={() => <View style={{ width: 12 }} />}
-            />
+              ))}
+            </View>
           </Animated.View>
         )}
 
@@ -440,14 +427,10 @@ export default function DashboardScreen({ navigation }: Props) {
               <Text style={styles.sectionIcon}>📋</Text>
               <Text style={styles.sectionLabel}>YOUR RESULTS</Text>
             </View>
-            <FlatList
-              data={completedChallenges}
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.pillScroll}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => (
+            <View style={styles.challengeList}>
+              {completedChallenges.map((item) => (
                 <ChallengePill
+                  key={item.id}
                   challengeId={item.id}
                   opponentUsername={item.opponentUsername}
                   category={item.category}
@@ -475,9 +458,8 @@ export default function DashboardScreen({ navigation }: Props) {
                     });
                   }}
                 />
-              )}
-              ItemSeparatorComponent={() => <View style={{ width: 12 }} />}
-            />
+              ))}
+            </View>
           </Animated.View>
         )}
 
@@ -644,11 +626,12 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 
-  // Challenge pill sections
+  // Challenge sections
   challengeSection: {
     gap: 0,
   },
-  pillScroll: {
-    paddingHorizontal: 16,
+  challengeList: {
+    paddingHorizontal: 20,
+    gap: 8,
   },
 });

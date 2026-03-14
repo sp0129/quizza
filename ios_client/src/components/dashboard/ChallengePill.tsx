@@ -50,7 +50,7 @@ function ChallengePill({
   onPress,
 }: ChallengePillProps) {
   const scale = useSharedValue(1);
-  const pulseScale = useSharedValue(1);
+  const pulseOpacity = useSharedValue(1);
   const theme = getCategoryTheme(category);
   const isWaiting = type === 'waiting';
   const isOutgoing = type === 'outgoing';
@@ -60,13 +60,13 @@ function ChallengePill({
     onPress();
   }, [onPress]);
 
-  // Pulsing animation for waiting state
+  // Pulsing for waiting state
   useEffect(() => {
     if (isWaiting) {
-      pulseScale.value = withRepeat(
+      pulseOpacity.value = withRepeat(
         withSequence(
-          withTiming(1.1, { duration: 750, easing: Easing.inOut(Easing.ease) }),
-          withTiming(1.0, { duration: 750, easing: Easing.inOut(Easing.ease) }),
+          withTiming(0.5, { duration: 800, easing: Easing.inOut(Easing.ease) }),
+          withTiming(1.0, { duration: 800, easing: Easing.inOut(Easing.ease) }),
         ),
         -1,
         true,
@@ -75,10 +75,10 @@ function ChallengePill({
   }, [isWaiting]);
 
   const tapGesture = Gesture.Tap()
-    .enabled(!isWaiting) // Disable tap for waiting cards
+    .enabled(!isWaiting)
     .onBegin(() => {
       'worklet';
-      scale.value = withSpring(0.95, { damping: 12, stiffness: 400 });
+      scale.value = withSpring(0.98, { damping: 12, stiffness: 400 });
     })
     .onFinalize((_e, success) => {
       'worklet';
@@ -91,123 +91,70 @@ function ChallengePill({
   }));
 
   const pulseStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: pulseScale.value }],
+    opacity: pulseOpacity.value,
   }));
 
-  // ── Waiting state ──
+  // Colors based on type
+  let accentColor = colors.text.secondary;
+  let statusText = timeSent ? getTimeSince(timeSent) : '';
+  let statusEmoji = '';
+  let rowOpacity = 1;
+
   if (isWaiting) {
-    return (
-      <GestureDetector gesture={tapGesture}>
-        <Animated.View
-          style={[
-            styles.pillOuter,
-            animStyle,
-            {
-              shadowColor: '#06B6D4',
-              shadowOffset: { width: 0, height: 2 },
-              shadowOpacity: 0.15,
-              shadowRadius: 6,
-              elevation: 3,
-            },
-          ]}
-          exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
-        >
-          <View style={[styles.bottomEdge, { backgroundColor: '#06B6D420' }]} />
-          <View
-            style={[
-              styles.pill,
-              {
-                backgroundColor: '#06B6D40D',
-                borderColor: '#06B6D4',
-                opacity: 0.85,
-              },
-            ]}
-          >
-            <Text style={styles.categoryIcon}>{theme.emoji}</Text>
-            <Text style={styles.handle} numberOfLines={1}>
-              @{opponentUsername}
-            </Text>
-            <Text style={styles.waitingText}>Waiting...</Text>
-            <Animated.Text style={[styles.waitingIcon, pulseStyle]}>
-              ⏳
-            </Animated.Text>
-          </View>
-        </Animated.View>
-      </GestureDetector>
-    );
+    accentColor = '#06B6D4';
+    statusText = 'Waiting for opponent...';
+    statusEmoji = '⏳';
+    rowOpacity = 0.75;
+  } else if (isOutgoing) {
+    if (won) {
+      accentColor = '#22C55E';
+      statusText = 'You won!';
+      statusEmoji = '🎉';
+    } else if (tied) {
+      accentColor = '#F59E0B';
+      statusText = 'Tied!';
+      statusEmoji = '🤝';
+    } else {
+      accentColor = '#EF4444';
+      statusText = 'You lost';
+      statusEmoji = '😢';
+    }
   }
-
-  // ── Outcome-based styling for completed challenges ──
-  const outcomeColor = isOutgoing
-    ? won
-      ? '#22C55E'
-      : tied
-        ? '#F59E0B'
-        : '#EF4444'
-    : '#94A3B8';
-
-  const outcomeText = isOutgoing
-    ? won
-      ? 'You won!'
-      : tied
-        ? 'You tied'
-        : 'You lost'
-    : undefined;
-
-  const outcomeEmoji = isOutgoing
-    ? won
-      ? '🎉'
-      : tied
-        ? '🤝'
-        : '😢'
-    : undefined;
-
-  const tintedBg = isOutgoing ? outcomeColor + '18' : colors.bg.surface;
-  const borderCol = isOutgoing ? outcomeColor : colors.bg.elevated;
-  const bottomEdgeColor = isOutgoing ? outcomeColor + '60' : colors.bg.elevated;
 
   return (
     <GestureDetector gesture={tapGesture}>
       <Animated.View
-        style={[
-          styles.pillOuter,
-          animStyle,
-          isOutgoing && {
-            shadowColor: outcomeColor,
-            shadowOffset: { width: 0, height: 4 },
-            shadowOpacity: 0.4,
-            shadowRadius: 12,
-            elevation: 8,
-          },
-        ]}
+        style={[styles.row, { opacity: rowOpacity }, animStyle]}
         exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
       >
-        <View
-          style={[styles.bottomEdge, { backgroundColor: bottomEdgeColor }]}
-        />
-        <View
-          style={[
-            styles.pill,
-            { backgroundColor: tintedBg, borderColor: borderCol },
-          ]}
-        >
-          <Text style={styles.categoryIcon}>{theme.emoji}</Text>
-          <Text style={styles.handle} numberOfLines={1}>
+        {/* Left accent bar */}
+        <View style={[styles.accentBar, { backgroundColor: accentColor }]} />
+
+        {/* Category emoji */}
+        <Text style={styles.emoji}>{theme.emoji}</Text>
+
+        {/* Text content */}
+        <View style={styles.textCol}>
+          <Text style={styles.username} numberOfLines={1}>
             @{opponentUsername}
           </Text>
-          {isOutgoing && outcomeText ? (
-            <>
-              <Text style={[styles.outcomeText, { color: outcomeColor }]}>
-                {outcomeText}
-              </Text>
-              <Text style={styles.outcomeEmoji}>{outcomeEmoji}</Text>
-            </>
+          {isWaiting ? (
+            <Animated.Text style={[styles.status, { color: accentColor }, pulseStyle]}>
+              {statusText}
+            </Animated.Text>
           ) : (
-            <Text style={styles.time}>
-              {timeSent ? getTimeSince(timeSent) : ''}
+            <Text style={[styles.status, isOutgoing && { color: accentColor, fontWeight: '700' }]}>
+              {statusText}
             </Text>
           )}
         </View>
+
+        {/* Right side: emoji or time */}
+        {statusEmoji ? (
+          <Text style={styles.rightEmoji}>{statusEmoji}</Text>
+        ) : (
+          <Text style={styles.chevron}>›</Text>
+        )}
       </Animated.View>
     </GestureDetector>
   );
@@ -216,58 +163,46 @@ function ChallengePill({
 export default React.memo(ChallengePill);
 
 const styles = StyleSheet.create({
-  pillOuter: {
-    width: 125,
-    height: 129,
-    borderRadius: 16,
-  },
-  bottomEdge: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 150,
-    borderRadius: 16,
-  },
-  pill: {
-    width: 125,
-    height: 125,
-    borderRadius: 16,
-    borderWidth: 2,
+  row: {
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: 6,
-    paddingHorizontal: 10,
-    paddingVertical: 12,
+    backgroundColor: colors.bg.surface,
+    borderRadius: 12,
+    height: 56,
+    paddingRight: 14,
+    gap: 12,
+    overflow: 'hidden',
   },
-  categoryIcon: {
-    fontSize: 36,
+  accentBar: {
+    width: 4,
+    height: '100%',
+    borderTopLeftRadius: 12,
+    borderBottomLeftRadius: 12,
   },
-  handle: {
+  emoji: {
+    fontSize: 28,
+    marginLeft: 8,
+  },
+  textCol: {
+    flex: 1,
+    gap: 1,
+  },
+  username: {
+    color: colors.text.primary,
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  status: {
     color: colors.text.secondary,
     fontSize: 12,
-    fontWeight: '600',
-    maxWidth: 105,
+    fontWeight: '500',
   },
-  outcomeText: {
-    fontSize: 13,
-    fontWeight: '800',
-  },
-  outcomeEmoji: {
-    fontSize: 24,
-  },
-  time: {
-    color: colors.text.secondary,
-    fontSize: 11,
-    fontWeight: '400',
-  },
-  // Waiting state
-  waitingText: {
-    color: '#06B6D4',
-    fontSize: 12,
-    fontWeight: '600',
-  },
-  waitingIcon: {
+  rightEmoji: {
     fontSize: 20,
+  },
+  chevron: {
+    color: colors.text.secondary,
+    fontSize: 22,
+    fontWeight: '300',
   },
 });
