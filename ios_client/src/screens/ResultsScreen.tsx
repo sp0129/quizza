@@ -98,7 +98,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
   const theme = getCategoryTheme(category);
   const removeChallenge = useDashboardStore((s) => s.removeChallenge);
 
-  const [stage, setStage] = useState<Stage>('anticipation');
+  const skip = !!skipAnimation;
+  const [stage, setStage] = useState<Stage>(skip ? 'complete' : 'anticipation');
   const [reduceMotion, setReduceMotion] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
 
@@ -107,20 +108,20 @@ export default function ResultsScreen({ route, navigation }: Props) {
     AccessibilityInfo.isReduceMotionEnabled().then(setReduceMotion);
   }, []);
 
-  // Animations
-  const anticipationOpacity = useSharedValue(0);
+  // Animations — initialize to final state if skipping
+  const anticipationOpacity = useSharedValue(skip ? 0 : 0);
   const anticipationScale = useSharedValue(1);
-  const myScoreSlide = useSharedValue(40);
-  const myScoreOpacity = useSharedValue(0);
-  const oppScoreSlide = useSharedValue(40);
-  const oppScoreOpacity = useSharedValue(0);
-  const metaOpacity = useSharedValue(0);
-  const outcomeScale = useSharedValue(0.8);
-  const outcomeOpacity = useSharedValue(0);
+  const myScoreSlide = useSharedValue(skip ? 0 : 40);
+  const myScoreOpacity = useSharedValue(skip ? 1 : 0);
+  const oppScoreSlide = useSharedValue(skip ? 0 : 40);
+  const oppScoreOpacity = useSharedValue(skip ? 1 : 0);
+  const metaOpacity = useSharedValue(skip ? 1 : 0);
+  const outcomeScale = useSharedValue(skip ? 1 : 0.8);
+  const outcomeOpacity = useSharedValue(skip ? 1 : 0);
   const shakeX = useSharedValue(0);
   const trophySpin = useSharedValue(0);
-  const trophyScale = useSharedValue(0);
-  const buttonsOpacity = useSharedValue(0);
+  const trophyScale = useSharedValue(skip ? 1 : 0);
+  const buttonsOpacity = useSharedValue(skip ? 1 : 0);
 
   // Outcome colors
   const outcomeColor =
@@ -339,6 +340,9 @@ export default function ResultsScreen({ route, navigation }: Props) {
           { paddingTop: insets.top + 24, paddingBottom: insets.bottom + 24 },
         ]}
       >
+        {/* Top spacer — push content to ~30% from top */}
+        <View style={styles.topSpacer} />
+
         {/* ═══ STAGE 1: ANTICIPATION ═══ */}
         {stage === 'anticipation' && (
           <Animated.View style={[styles.anticipationContainer, anticipationStyle]}>
@@ -456,7 +460,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     paddingHorizontal: 24,
   },
 
@@ -545,7 +549,10 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
 
-  // Spacer
+  // Spacers
+  topSpacer: {
+    flex: 0.3,
+  },
   spacer: {
     flex: 1,
     minHeight: 24,

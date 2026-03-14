@@ -58,6 +58,7 @@ export default function DashboardScreen({ navigation }: Props) {
     setSearchOverlayVisible,
     seenResultIds,
     markChallengeSeen,
+    loadSeenResults,
   } = useDashboardStore();
 
   const [roomCode, setRoomCode] = useState('');
@@ -86,6 +87,11 @@ export default function DashboardScreen({ navigation }: Props) {
       const bSeen = seenResultIds.has(b.id) ? 1 : 0;
       return aSeen - bSeen; // unseen first, seen last
     });
+
+  // Load persisted seen result IDs
+  useEffect(() => {
+    loadSeenResults();
+  }, [loadSeenResults]);
 
   // Check for first-time user onboarding
   useEffect(() => {

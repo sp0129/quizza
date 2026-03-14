@@ -1,4 +1,7 @@
 import { create } from 'zustand';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const SEEN_RESULTS_KEY = 'quizza_seen_results';
 
 // ─── Types ──────────────────────────────────────────
 export interface Challenge {
@@ -50,6 +53,7 @@ interface DashboardState {
   addChallenge: (challenge: Challenge) => void;
   removeChallenge: (id: string) => void;
   markChallengeSeen: (id: string) => void;
+  loadSeenResults: () => Promise<void>;
   setChallengesLoading: (loading: boolean) => void;
 
   // Metrics
@@ -93,12 +97,24 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
     set((s) => ({ challenges: [challenge, ...s.challenges] })),
   removeChallenge: (id) =>
     set((s) => ({ challenges: s.challenges.filter((c) => c.id !== id) })),
-  markChallengeSeen: (id) =>
+  markChallengeSeen: (id) => {
     set((s) => {
       const next = new Set(s.seenResultIds);
       next.add(id);
+      // Persist to AsyncStorage
+      AsyncStorage.setItem(SEEN_RESULTS_KEY, JSON.stringify([...next])).catch(() => {});
       return { seenResultIds: next };
-    }),
+    });
+  },
+  loadSeenResults: async () => {
+    try {
+      const raw = await AsyncStorage.getItem(SEEN_RESULTS_KEY);
+      if (raw) {
+        const ids: string[] = JSON.parse(raw);
+        set({ seenResultIds: new Set(ids) });
+      }
+    } catch {}
+  },
   setChallengesLoading: (loading) => set({ challengesLoading: loading }),
 
   // Metrics
