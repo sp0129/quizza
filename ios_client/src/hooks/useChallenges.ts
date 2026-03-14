@@ -13,6 +13,18 @@ interface RawChallenge {
   status?: string;
 }
 
+interface RawCompletedChallenge {
+  id: string;
+  gameId: string;
+  category: string;
+  myScore: number;
+  opponentScore: number;
+  opponentUsername: string;
+  won: boolean;
+  tied: boolean;
+  completedAt: string;
+}
+
 function mapRawChallenge(raw: RawChallenge): Challenge {
   return {
     id: raw.id,
@@ -24,6 +36,24 @@ function mapRawChallenge(raw: RawChallenge): Challenge {
     status: raw.status === 'waiting' ? 'waiting' : raw.status === 'your_turn' ? 'your_turn' : 'incoming',
     createdAt: raw.created_at ?? raw.expires_at,
     expiresAt: raw.expires_at,
+  };
+}
+
+function mapCompletedChallenge(raw: RawCompletedChallenge): Challenge {
+  return {
+    id: raw.id,
+    opponentId: '',
+    opponentUsername: raw.opponentUsername,
+    opponentHandle: `@${raw.opponentUsername.toLowerCase()}`,
+    category: raw.category,
+    gameId: raw.gameId,
+    status: 'completed',
+    createdAt: raw.completedAt,
+    expiresAt: raw.completedAt,
+    myScore: raw.myScore,
+    opponentScore: raw.opponentScore,
+    won: raw.won,
+    tied: raw.tied,
   };
 }
 
@@ -42,8 +72,14 @@ export function useChallenges() {
   const fetchChallenges = useCallback(async () => {
     setChallengesLoading(true);
     try {
-      const raw = await api.get<RawChallenge[]>('/challenges/incoming');
-      setChallenges(raw.map(mapRawChallenge));
+      const [incoming, completed] = await Promise.all([
+        api.get<RawChallenge[]>('/challenges/incoming'),
+        api.get<RawCompletedChallenge[]>('/challenges/completed').catch(() => [] as RawCompletedChallenge[]),
+      ]);
+      setChallenges([
+        ...incoming.map(mapRawChallenge),
+        ...completed.map(mapCompletedChallenge),
+      ]);
     } catch {
       // silently fail — keep existing challenges
     } finally {

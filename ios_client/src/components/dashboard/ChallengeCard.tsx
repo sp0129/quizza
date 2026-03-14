@@ -18,17 +18,19 @@ import type { Challenge } from '../../stores/dashboard';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.3;
 
-const STATUS_COLORS = {
+const STATUS_COLORS: Record<string, string> = {
   your_turn: '#22C55E',
   waiting: '#F59E0B',
   incoming: '#3B82F6',
-} as const;
+  completed: '#8B5CF6',
+};
 
-const STATUS_LABELS = {
+const STATUS_LABELS: Record<string, string> = {
   your_turn: 'Your Turn',
   waiting: 'Waiting',
   incoming: 'New Challenge',
-} as const;
+  completed: 'Completed',
+};
 
 interface ChallengeCardProps {
   challenge: Challenge;
@@ -51,7 +53,13 @@ function getTimeSince(dateStr: string): string {
 function ChallengeCard({ challenge, onAccept, onDecline, onPress }: ChallengeCardProps) {
   const translateX = useSharedValue(0);
   const cardHeight = useSharedValue(80);
-  const statusColor = STATUS_COLORS[challenge.status];
+  const isCompleted = challenge.status === 'completed';
+  const statusColor = isCompleted
+    ? (challenge.won ? '#22C55E' : challenge.tied ? '#F59E0B' : '#EF4444')
+    : STATUS_COLORS[challenge.status] ?? '#8B5CF6';
+  const statusLabel = isCompleted
+    ? (challenge.won ? 'Won' : challenge.tied ? 'Tie' : 'Lost')
+    : STATUS_LABELS[challenge.status] ?? 'Done';
 
   const triggerAccept = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -157,12 +165,17 @@ function ChallengeCard({ challenge, onAccept, onDecline, onPress }: ChallengeCar
 
             {/* Status + Actions */}
             <View style={styles.rightSection}>
+              {isCompleted && challenge.myScore !== undefined ? (
+                <Text style={[styles.scoreText, { color: statusColor }]}>
+                  {challenge.myScore}–{challenge.opponentScore}
+                </Text>
+              ) : null}
               <View style={[styles.statusBadge, { backgroundColor: statusColor + '20' }]}>
                 <Text style={[styles.statusText, { color: statusColor }]}>
-                  {STATUS_LABELS[challenge.status]}
+                  {statusLabel}
                 </Text>
               </View>
-              {(challenge.status === 'incoming' || challenge.status === 'your_turn') && (
+              {!isCompleted && (challenge.status === 'incoming' || challenge.status === 'your_turn') && (
                 <View style={styles.actionBtns}>
                   <TouchableOpacity
                     style={[styles.actionBtn, styles.acceptBtn]}
@@ -331,5 +344,10 @@ const styles = StyleSheet.create({
     color: '#EF4444',
     fontSize: 14,
     fontWeight: '800',
+  },
+  scoreText: {
+    fontSize: 16,
+    fontWeight: '800',
+    fontVariant: ['tabular-nums'],
   },
 });

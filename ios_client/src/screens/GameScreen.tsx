@@ -18,6 +18,7 @@ import Animated, {
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
+import * as SecureStore from 'expo-secure-store';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import { api, getAuthToken } from '../api/client';
@@ -45,6 +46,7 @@ interface GameResult {
   correctAnswer?: string;
   totalScore?: number;
   gameComplete?: boolean;
+  opponentScore?: number;
 }
 
 type Phase = 'loading' | 'reading' | 'playing' | 'answered' | 'finished';
@@ -447,7 +449,11 @@ export default function GameScreen({ route, navigation }: Props) {
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
 
       if (result.gameComplete) {
-        setFinalScores(prev => ({ ...prev, mine: result.totalScore ?? score }));
+        setFinalScores(prev => ({
+          ...prev,
+          mine: result.totalScore ?? score,
+          ...(result.opponentScore !== undefined ? { opponent: result.opponentScore } : {}),
+        }));
         if (mode !== 'sync') {
           setTimeout(() => setPhase('finished'), 1500);
         } else {
@@ -472,6 +478,27 @@ export default function GameScreen({ route, navigation }: Props) {
       console.error(err);
     }
   }, [phase, currentIndex, gameId, mode, score, startQuestionSequence]);
+
+  // --- Fetch opponent score on finish (fallback for async challenges) ---
+  useEffect(() => {
+    if (phase !== 'finished' || !gameId || finalScores?.opponent !== undefined) return;
+    (async () => {
+      try {
+        const status = await api.get<{
+          player_a_id: string; player_b_id: string;
+          player_a_score: number | null; player_b_score: number | null;
+        }>(`/games/${gameId}/status`);
+        const raw = await SecureStore.getItemAsync('user');
+        if (!raw) return;
+        const me = JSON.parse(raw);
+        const isPlayerA = status.player_a_id === me.id;
+        const oppScore = isPlayerA ? status.player_b_score : status.player_a_score;
+        if (oppScore !== null && oppScore !== undefined) {
+          setFinalScores(prev => ({ mine: prev?.mine ?? 0, ...prev, opponent: oppScore }));
+        }
+      } catch {}
+    })();
+  }, [phase, gameId]);
 
   // --- Quit handler ---
   const handleQuit = () => {

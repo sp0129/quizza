@@ -111,7 +111,7 @@ function ChallengesFeed({
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.sectionIcon}>⚔️</Text>
-        <Text style={styles.sectionTitle}>PENDING CHALLENGES</Text>
+        <Text style={styles.sectionTitle}>CHALLENGES</Text>
         <View style={styles.countBadge}>
           <Text style={styles.countText}>{challenges.length}</Text>
         </View>

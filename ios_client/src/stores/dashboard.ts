@@ -9,9 +9,13 @@ export interface Challenge {
   opponentAvatar?: string;
   category: string;
   gameId: string;
-  status: 'your_turn' | 'waiting' | 'incoming';
+  status: 'your_turn' | 'waiting' | 'incoming' | 'completed';
   createdAt: string;
   expiresAt: string;
+  myScore?: number;
+  opponentScore?: number;
+  won?: boolean;
+  tied?: boolean;
 }
 
 export interface UserMetrics {
