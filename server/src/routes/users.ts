@@ -31,6 +31,63 @@ router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Prom
   }
 });
 
+// GET /users/me/stats — authenticated user's dashboard metrics
+router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const userId = req.userId!;
+  try {
+    // Core stats: wins, losses, games played
+    const statsResult = await pool.query(
+      `SELECT
+         COUNT(*) FILTER (WHERE status = 'completed') AS games_played,
+         COUNT(*) FILTER (WHERE status = 'completed' AND winner_id = $1) AS wins,
+         COUNT(*) FILTER (WHERE status = 'completed' AND winner_id IS NOT NULL AND winner_id != $1) AS losses
+       FROM games
+       WHERE player_a_id = $1 OR player_b_id = $1`,
+      [userId]
+    );
+    const { games_played, wins, losses } = statsResult.rows[0];
+    const gamesPlayed = parseInt(games_played) || 0;
+    const totalWins = parseInt(wins) || 0;
+    const totalLosses = parseInt(losses) || 0;
+    const decided = totalWins + totalLosses;
+    const winRate = decided > 0 ? Math.round((totalWins / decided) * 100) : 0;
+
+    // Win streak: count consecutive recent wins
+    const recentGames = await pool.query(
+      `SELECT winner_id FROM games
+       WHERE (player_a_id = $1 OR player_b_id = $1)
+         AND status = 'completed'
+         AND winner_id IS NOT NULL
+       ORDER BY completed_at DESC
+       LIMIT 50`,
+      [userId]
+    );
+    let streak = 0;
+    for (const row of recentGames.rows) {
+      if (row.winner_id === userId) streak++;
+      else break;
+    }
+
+    // Derived stats
+    const level = Math.max(1, Math.floor(gamesPlayed / 5) + 1);
+    const xp = gamesPlayed * 10;
+    const xpToNextLevel = ((level) * 5 - gamesPlayed) * 10;
+
+    res.json({
+      streak,
+      wins: totalWins,
+      winRate,
+      level,
+      gems: totalWins * 5,
+      xp,
+      xpToNextLevel: Math.max(xpToNextLevel, 0),
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // GET /users/:username — public profile + stats
 router.get('/:username', async (req: Request, res: Response): Promise<void> => {
   try {
