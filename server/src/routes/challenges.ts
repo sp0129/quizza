@@ -215,30 +215,20 @@ router.post('/:invitationId/accept', requireAuth, async (req: AuthRequest, res: 
 router.post('/:id/seen', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const me = req.userId!;
   const { id } = req.params;
-  console.log('[seen] POST /challenges/:id/seen called', { id, me });
 
   try {
-    // Determine if I'm the inviter or invitee and set the right column
-    const inv = await pool.query(
-      `SELECT inviter_id, invitee_id FROM invitations WHERE id = $1`,
-      [id]
+    // Update both columns in one query — only the matching one will change
+    const result = await pool.query(
+      `UPDATE invitations
+       SET inviter_seen = CASE WHEN inviter_id = $2 THEN TRUE ELSE inviter_seen END,
+           invitee_seen = CASE WHEN invitee_id = $2 THEN TRUE ELSE invitee_seen END
+       WHERE id = $1::uuid AND (inviter_id = $2 OR invitee_id = $2)`,
+      [id, me]
     );
-    console.log('[seen] lookup result', { found: !!inv.rows[0], row: inv.rows[0] });
-    if (!inv.rows[0]) {
-      res.status(404).json({ error: 'Invitation not found' });
-      return;
-    }
-
-    const col = inv.rows[0].inviter_id === me ? 'inviter_seen' : 'invitee_seen';
-    console.log('[seen] updating column', { col, id });
-    const updateResult = await pool.query(
-      `UPDATE invitations SET ${col} = TRUE WHERE id = $1`,
-      [id]
-    );
-    console.log('[seen] update rowCount', updateResult.rowCount);
+    console.log('[seen]', { id, me, rowCount: result.rowCount });
     res.json({ ok: true });
   } catch (err) {
-    console.error(err);
+    console.error('[seen] error', err);
     res.status(500).json({ error: 'Server error' });
   }
 });
