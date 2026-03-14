@@ -18,6 +18,7 @@ import GuestJoinScreen from './src/screens/GuestJoinScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import FriendsScreen from './src/screens/FriendsScreen';
 import LeaderboardScreen from './src/screens/LeaderboardScreen';
+import ResultsScreen from './src/screens/ResultsScreen';
 import ResetPasswordScreen from './src/screens/ResetPasswordScreen';
 
 export type RootStackParamList = {
@@ -49,6 +50,17 @@ export type RootStackParamList = {
     isHost: boolean;
     timer: number;
   };
+  Results: {
+    yourScore: number;
+    opponentScore?: number;
+    opponentHandle?: string;
+    opponentUsername?: string;
+    category: string;
+    gameMode: 'challenge' | 'group' | 'solo';
+    timestamp?: string;
+    result: 'win' | 'loss' | 'tie';
+    challengeId?: string;
+  };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -75,6 +87,7 @@ function RootNavigator() {
           <Stack.Screen name="Category" component={CategoryScreen} />
           <Stack.Screen name="Game" component={GameScreen} />
           <Stack.Screen name="Room" component={RoomScreen} />
+          <Stack.Screen name="Results" component={ResultsScreen} />
           {/* Guests can navigate here to create a real account */}
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />

@@ -6,7 +6,6 @@ import Animated, {
   withSpring,
   runOnJS,
   FadeOut,
-  SlideOutLeft,
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import * as Haptics from 'expo-haptics';
@@ -42,8 +41,6 @@ function ChallengePill({
   category,
   type,
   timeSent,
-  myScore,
-  opponentScore,
   won,
   tied,
   onPress,
@@ -72,25 +69,54 @@ function ChallengePill({
   }));
 
   const isOutgoing = type === 'outgoing';
-  const borderColor = isOutgoing
-    ? (won ? '#22C55E' : tied ? '#F59E0B' : '#EF4444')
+
+  // Outcome-based styling for completed challenges
+  const outcomeColor = isOutgoing
+    ? won
+      ? '#22C55E'
+      : tied
+        ? '#F59E0B'
+        : '#EF4444'
     : colors.bg.elevated;
+
+  const outcomeText = isOutgoing
+    ? won
+      ? 'You won!'
+      : tied
+        ? 'You tied'
+        : 'You lost'
+    : undefined;
+
+  const outcomeEmoji = isOutgoing
+    ? won
+      ? '🎉'
+      : tied
+        ? '🤝'
+        : '😢'
+    : undefined;
+
+  // Glow shadow for completed cards
+  const glowShadow = isOutgoing
+    ? {
+        shadowColor: outcomeColor,
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0.35,
+        shadowRadius: 8,
+        elevation: 6,
+      }
+    : {};
 
   return (
     <GestureDetector gesture={tapGesture}>
       <Animated.View
-        style={[styles.pill, { borderColor }, animStyle]}
+        style={[
+          styles.pill,
+          { borderColor: outcomeColor },
+          glowShadow,
+          animStyle,
+        ]}
         exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
       >
-        {/* Outgoing: result badge */}
-        {isOutgoing && (
-          <View style={[styles.resultBadge, { backgroundColor: borderColor }]}>
-            <Text style={styles.resultBadgeText}>
-              {won ? '✓' : tied ? '=' : '✕'}
-            </Text>
-          </View>
-        )}
-
         {/* Category icon */}
         <Text style={styles.categoryIcon}>{theme.emoji}</Text>
 
@@ -99,11 +125,14 @@ function ChallengePill({
           @{opponentUsername}
         </Text>
 
-        {/* Bottom info: time for incoming, score for outgoing */}
-        {isOutgoing && myScore !== undefined ? (
-          <Text style={[styles.score, { color: borderColor }]}>
-            {myScore}–{opponentScore}
-          </Text>
+        {/* Outcome text or time */}
+        {isOutgoing && outcomeText ? (
+          <>
+            <Text style={[styles.outcomeText, { color: outcomeColor }]}>
+              {outcomeText}
+            </Text>
+            <Text style={styles.outcomeEmoji}>{outcomeEmoji}</Text>
+          </>
         ) : (
           <Text style={styles.time}>
             {timeSent ? getTimeSince(timeSent) : ''}
@@ -118,45 +147,32 @@ export default React.memo(ChallengePill);
 
 const styles = StyleSheet.create({
   pill: {
-    width: 140,
-    height: 100,
+    width: 150,
+    height: 150,
     backgroundColor: colors.bg.surface,
-    borderRadius: 14,
+    borderRadius: 16,
     borderWidth: 2,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 4,
-    paddingHorizontal: 8,
-    paddingVertical: 10,
-  },
-  resultBadge: {
-    position: 'absolute',
-    top: 6,
-    left: 6,
-    width: 22,
-    height: 22,
-    borderRadius: 11,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  resultBadgeText: {
-    color: '#FFFFFF',
-    fontSize: 12,
-    fontWeight: '900',
+    gap: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 12,
   },
   categoryIcon: {
-    fontSize: 32,
+    fontSize: 40,
   },
   handle: {
     color: colors.text.secondary,
-    fontSize: 12,
-    fontWeight: '600',
-    maxWidth: 120,
-  },
-  score: {
     fontSize: 14,
+    fontWeight: '600',
+    maxWidth: 126,
+  },
+  outcomeText: {
+    fontSize: 16,
     fontWeight: '800',
-    fontVariant: ['tabular-nums'],
+  },
+  outcomeEmoji: {
+    fontSize: 28,
   },
   time: {
     color: colors.text.secondary,

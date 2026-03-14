@@ -426,8 +426,22 @@ export default function DashboardScreen({ navigation }: Props) {
                   won={item.won}
                   tied={item.tied}
                   onPress={() => {
-                    // Could navigate to a detailed results screen in the future
-                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                    const result: 'win' | 'loss' | 'tie' = item.won
+                      ? 'win'
+                      : item.tied
+                        ? 'tie'
+                        : 'loss';
+                    navigation.navigate('Results', {
+                      yourScore: item.myScore ?? 0,
+                      opponentScore: item.opponentScore,
+                      opponentHandle: item.opponentHandle,
+                      opponentUsername: item.opponentUsername,
+                      category: item.category,
+                      gameMode: 'challenge',
+                      timestamp: item.createdAt,
+                      result,
+                      challengeId: item.id,
+                    });
                   }}
                 />
               )}

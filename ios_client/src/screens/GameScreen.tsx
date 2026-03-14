@@ -541,63 +541,73 @@ export default function GameScreen({ route, navigation }: Props) {
   }
 
   // =========================================================================
-  // RENDER: Finished (leaderboard)
+  // RENDER: Finished → navigate to ResultsScreen
   // =========================================================================
   if (phase === 'finished') {
     const opponent = finalScores?.opponent;
     const mine = finalScores?.mine ?? score;
-    const gameOutcome = opponent !== undefined
-      ? mine > opponent ? 'win' : mine < opponent ? 'lose' : 'tie'
-      : 'solo';
 
-    const outcomeConfig: Record<string, { text: string; mood: MascotMood }> = {
-      win:  { text: 'You Rock!!!', mood: 'celebrating' },
-      lose: { text: 'Better luck next time!', mood: 'wrong' },
-      tie:  { text: "It's a Tie!", mood: 'happy' },
-      solo: { text: 'Well played!', mood: 'celebrating' },
-    };
-    const outcomeText = opponentQuit ? 'Opponent quit!' : outcomeConfig[gameOutcome].text;
-    const outcomeMood = opponentQuit ? 'celebrating' : outcomeConfig[gameOutcome].mood;
+    // For async challenges where opponent hasn't played yet, show waiting screen
+    if (mode === 'async' && opponent === undefined) {
+      return (
+        <LinearGradient colors={gradients.game} style={styles.flex}>
+          <View style={[styles.finishedContainer, { paddingTop: insets.top + 32, paddingBottom: insets.bottom + 32 }]}>
+            <PizzaMascot mood="celebrating" size={130} />
+            <Text style={styles.outcomeText}>Well played!</Text>
 
-    return (
-      <LinearGradient colors={gradients.game} style={styles.flex}>
-        <View style={[styles.finishedContainer, { paddingTop: insets.top + 32, paddingBottom: insets.bottom + 32 }]}>
-          <PizzaMascot mood={outcomeMood} size={130} />
-          <Text style={styles.outcomeText}>{outcomeText}</Text>
-
-          <View style={styles.scoreCard}>
-            <Text style={styles.scoreCardLabel}>Your Score</Text>
-            <Text style={styles.scoreCardValue}>{mine}</Text>
-          </View>
-
-          {opponent !== undefined && (
-            <View style={[styles.scoreCard, styles.scoreCardOpponent]}>
-              <Text style={styles.scoreCardLabel}>Opponent</Text>
-              <Text style={styles.scoreCardValue}>{opponent}</Text>
+            <View style={styles.scoreCard}>
+              <Text style={styles.scoreCardLabel}>Your Score</Text>
+              <Text style={styles.scoreCardValue}>{mine}</Text>
             </View>
-          )}
 
-          {mode === 'async' && opponent === undefined && (
             <Text style={styles.waitingMsg}>
               Waiting for your opponent to play (up to 24h).
             </Text>
-          )}
 
-          {/* Progress dots showing per-question results */}
-          <ProgressDots total={questions.length} current={-1} results={questionResults} />
+            <ProgressDots total={questions.length} current={-1} results={questionResults} />
 
-          <Animated.View entering={FadeIn.delay(300)}>
-            <TouchableOpacity
-              style={styles.dashBtn}
-              onPress={() => navigation.navigate('Dashboard')}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.dashBtnText}>
-                Back to Dashboard
-              </Text>
-            </TouchableOpacity>
-          </Animated.View>
-        </View>
+            <Animated.View entering={FadeIn.delay(300)}>
+              <TouchableOpacity
+                style={styles.dashBtn}
+                onPress={() => navigation.navigate('Dashboard')}
+                activeOpacity={0.8}
+              >
+                <Text style={styles.dashBtnText}>Back to Dashboard</Text>
+              </TouchableOpacity>
+            </Animated.View>
+          </View>
+        </LinearGradient>
+      );
+    }
+
+    // Determine outcome and navigate to ResultsScreen
+    const gameResult: 'win' | 'loss' | 'tie' = opponentQuit
+      ? 'win'
+      : opponent !== undefined
+        ? mine > opponent
+          ? 'win'
+          : mine < opponent
+            ? 'loss'
+            : 'tie'
+        : 'win'; // solo = always "win"
+
+    const gameMode: 'challenge' | 'solo' | 'group' =
+      mode === 'async' || mode === 'sync' ? 'challenge' : 'solo';
+
+    // Navigate once (replace so user can't go back to game)
+    navigation.replace('Results', {
+      yourScore: mine,
+      opponentScore: opponent,
+      category: route.params.category ?? 'Trivia',
+      gameMode,
+      result: gameResult,
+      timestamp: new Date().toISOString(),
+    });
+
+    // Render nothing while navigating
+    return (
+      <LinearGradient colors={gradients.game} style={styles.flex}>
+        <View style={styles.center} />
       </LinearGradient>
     );
   }
