@@ -105,6 +105,7 @@ const R = 16;
 
 const styles = StyleSheet.create({
   outer: {
+    flex: 1,
     height: 52,
     borderRadius: R,
   },

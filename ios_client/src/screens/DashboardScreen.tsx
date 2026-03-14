@@ -60,6 +60,7 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const [roomCode, setRoomCode] = useState('');
   const [joinLoading, setJoinLoading] = useState(false);
+  const [joinModalVisible, setJoinModalVisible] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
@@ -312,65 +313,47 @@ export default function DashboardScreen({ navigation }: Props) {
           <MetricsPill icon="📊" label="Win %" value={metrics.winRate} suffix="%" color={colors.brand.secondary} />
         </Animated.View>
 
-        {/* ═══ GAME MODES ═══ */}
+        {/* ═══ GAME MODES (2×2 Grid) ═══ */}
         <Animated.View entering={FadeInDown.delay(250).duration(400)} style={styles.modeSection}>
           <Text style={styles.sectionLabel}>GAME MODES</Text>
-          <View style={styles.modeStack}>
-            <ModeCard
-              icon="🎯"
-              label="Solo"
-              color="#0F5A9F"
-              gem={{ base: '#0F5A9F', light: '#1E90FF', dark: '#0A3A6B' }}
-              onPress={handleSolo}
-              subtitle="Play now"
-            />
-            <ModeCard
-              icon="👥"
-              label="Group Play"
-              color="#6B21A8"
-              gem={{ base: '#6B21A8', light: '#A855F7', dark: '#4A1271' }}
-              onPress={handleGroupPlay}
-              subtitle="Play with friends"
-            />
-            <ModeCard
-              icon="⚔️"
-              label="Challenge"
-              color="#B8571A"
-              gem={{ base: '#B8571A', light: '#EA8C35', dark: '#7A3A0F' }}
-              badgeCount={pendingCount}
-              onPress={handleChallenge}
-              subtitle="vs your friends"
-            />
-          </View>
-        </Animated.View>
-
-        {/* Quick join room */}
-        <Animated.View entering={FadeInDown.delay(350).duration(400)} style={styles.joinSection}>
-          <Text style={styles.sectionLabel}>JOIN A ROOM</Text>
-          <View style={styles.joinRow}>
-            <TextInput
-              style={styles.joinInput}
-              placeholder="Enter room code"
-              placeholderTextColor={colors.text.secondary}
-              value={roomCode}
-              onChangeText={(t) => setRoomCode(t.toUpperCase())}
-              maxLength={6}
-              autoCapitalize="characters"
-              autoCorrect={false}
-              onSubmitEditing={joinRoom}
-            />
-            <TouchableOpacity
-              style={[styles.joinBtn, (!roomCode.trim() || joinLoading) && styles.joinBtnDisabled]}
-              onPress={joinRoom}
-              disabled={!roomCode.trim() || joinLoading}
-              activeOpacity={0.8}
-            >
-              {joinLoading ? (
-                <ActivityIndicator color="#FFFFFF" size="small" />
-              ) : (
-                <Text style={styles.joinBtnText}>Join →</Text>
-              )}
-            </TouchableOpacity>
+          <View style={styles.modeGrid}>
+            <View style={styles.modeGridRow}>
+              <ModeCard
+                icon="🎯"
+                label="Solo"
+                color="#0F5A9F"
+                gem={{ base: '#0F5A9F', light: '#1E90FF', dark: '#0A3A6B' }}
+                onPress={handleSolo}
+                subtitle="Play now"
+              />
+              <ModeCard
+                icon="⚔️"
+                label="Challenge"
+                color="#B8571A"
+                gem={{ base: '#B8571A', light: '#EA8C35', dark: '#7A3A0F' }}
+                badgeCount={pendingCount}
+                onPress={handleChallenge}
+                subtitle="vs your friends"
+              />
+            </View>
+            <View style={styles.modeGridRow}>
+              <ModeCard
+                icon="➕"
+                label="Create Room"
+                color="#6B21A8"
+                gem={{ base: '#6B21A8', light: '#A855F7', dark: '#4A1271' }}
+                onPress={handleGroupPlay}
+                subtitle="Play w/ friends"
+              />
+              <ModeCard
+                icon="🚪"
+                label="Join Room"
+                color="#0E7490"
+                gem={{ base: '#0E7490', light: '#22D3EE', dark: '#064E5B' }}
+                onPress={() => setJoinModalVisible(true)}
+                subtitle="Enter a code"
+              />
+            </View>
           </View>
         </Animated.View>
 
@@ -520,6 +503,50 @@ export default function DashboardScreen({ navigation }: Props) {
         onSelectUser={handleUserSelect}
       />
 
+      {/* Join room modal */}
+      {joinModalVisible && (
+        <TouchableOpacity
+          style={styles.joinOverlay}
+          activeOpacity={1}
+          onPress={() => { setJoinModalVisible(false); setRoomCode(''); }}
+        >
+          <TouchableOpacity activeOpacity={1} style={styles.joinModal} onPress={() => {}}>
+            <Text style={styles.joinModalTitle}>🚪 Join a Room</Text>
+            <TextInput
+              style={styles.joinModalInput}
+              placeholder="ROOM CODE"
+              placeholderTextColor={colors.text.secondary}
+              value={roomCode}
+              onChangeText={(t) => setRoomCode(t.toUpperCase())}
+              maxLength={6}
+              autoCapitalize="characters"
+              autoCorrect={false}
+              autoFocus
+              onSubmitEditing={joinRoom}
+            />
+            <View style={styles.joinModalRow}>
+              <TouchableOpacity
+                style={styles.joinModalCancel}
+                onPress={() => { setJoinModalVisible(false); setRoomCode(''); }}
+              >
+                <Text style={styles.joinModalCancelText}>Cancel</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.joinModalSubmit, (!roomCode.trim() || joinLoading) && styles.joinModalSubmitDisabled]}
+                onPress={() => { joinRoom(); setJoinModalVisible(false); }}
+                disabled={!roomCode.trim() || joinLoading}
+              >
+                {joinLoading ? (
+                  <ActivityIndicator color="#FFFFFF" size="small" />
+                ) : (
+                  <Text style={styles.joinModalSubmitText}>Join →</Text>
+                )}
+              </TouchableOpacity>
+            </View>
+          </TouchableOpacity>
+        </TouchableOpacity>
+      )}
+
       {/* Onboarding overlay for first-time users */}
       <OnboardingOverlay
         visible={showOnboarding}
@@ -610,44 +637,77 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     gap: 10,
   },
-  modeStack: {
-    gap: 12,
-  },
-
-  // Join room
-  joinSection: {
-    paddingHorizontal: 16,
+  modeGrid: {
     gap: 10,
   },
-  joinRow: {
+  modeGridRow: {
     flexDirection: 'row',
     gap: 10,
   },
-  joinInput: {
-    flex: 1,
+
+  // Join room modal
+  joinOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 50,
+  },
+  joinModal: {
     backgroundColor: colors.bg.surface,
+    borderRadius: 20,
+    padding: 24,
+    width: '85%',
+    gap: 16,
+    borderWidth: 1,
+    borderColor: colors.border + '30',
+  },
+  joinModalTitle: {
+    color: colors.text.primary,
+    fontSize: 18,
+    fontWeight: '800',
+    textAlign: 'center',
+  },
+  joinModalInput: {
+    backgroundColor: colors.bg.primary,
     borderRadius: 14,
     paddingHorizontal: 14,
-    paddingVertical: 12,
+    paddingVertical: 14,
     color: colors.text.primary,
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '700',
-    letterSpacing: 3,
+    letterSpacing: 4,
     borderWidth: 1,
     borderColor: colors.border + '30',
     textAlign: 'center',
   },
-  joinBtn: {
-    backgroundColor: colors.brand.secondary,
-    borderRadius: 14,
-    paddingHorizontal: 20,
-    justifyContent: 'center',
+  joinModalRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  joinModalCancel: {
+    flex: 1,
+    backgroundColor: colors.bg.elevated,
+    borderRadius: 12,
+    paddingVertical: 12,
     alignItems: 'center',
   },
-  joinBtnDisabled: {
+  joinModalCancelText: {
+    color: colors.text.secondary,
+    fontSize: 15,
+    fontWeight: '600',
+  },
+  joinModalSubmit: {
+    flex: 1,
+    backgroundColor: '#0E7490',
+    borderRadius: 12,
+    paddingVertical: 12,
+    alignItems: 'center',
+  },
+  joinModalSubmitDisabled: {
     opacity: 0.4,
   },
-  joinBtnText: {
+  joinModalSubmitText: {
     color: '#FFFFFF',
     fontSize: 15,
     fontWeight: '700',
