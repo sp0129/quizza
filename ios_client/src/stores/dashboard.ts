@@ -101,7 +101,7 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
     }));
     // Persist to server — await so re-fetches see the update
     try {
-      await api.patch(`/challenges/${id}/seen`, {});
+      await api.post(`/challenges/${id}/seen`, {});
     } catch {}
   },
   setChallengesLoading: (loading) => set({ challengesLoading: loading }),

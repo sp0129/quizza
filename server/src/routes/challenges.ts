@@ -82,8 +82,11 @@ router.get('/incoming', requireAuth, async (req: AuthRequest, res: Response): Pr
 // GET /challenges/completed — challenges I sent or received that are now finished
 router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
+    const me = req.userId!;
     const result = await pool.query(
-      `SELECT i.id, i.category, i.game_id, i.seen_by,
+      `SELECT i.id, i.category, i.game_id,
+              i.inviter_id, i.invitee_id,
+              i.inviter_seen, i.invitee_seen,
               g.player_a_score, g.player_b_score, g.winner_id, g.completed_at,
               g.player_a_id, g.player_b_id,
               inviter.username AS inviter_username,
@@ -96,11 +99,12 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
          AND g.status = 'completed'
        ORDER BY g.completed_at DESC
        LIMIT 20`,
-      [req.userId]
+      [me]
     );
     // Map results to include opponent info relative to the requesting user
     const mapped = result.rows.map(r => {
-      const iAmInviter = r.player_a_id === req.userId;
+      const iAmInviter = r.player_a_id === me;
+      const iAmTheInviter = r.inviter_id === me;
       return {
         id: r.id,
         gameId: r.game_id,
@@ -108,10 +112,10 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
         myScore: iAmInviter ? r.player_a_score : r.player_b_score,
         opponentScore: iAmInviter ? r.player_b_score : r.player_a_score,
         opponentUsername: iAmInviter ? r.invitee_username : r.inviter_username,
-        won: r.winner_id === req.userId,
+        won: r.winner_id === me,
         tied: r.winner_id === null && r.player_a_score !== null && r.player_b_score !== null,
         completedAt: r.completed_at,
-        seen: (r.seen_by as string[]).includes(req.userId!),
+        seen: iAmTheInviter ? r.inviter_seen : r.invitee_seen,
       };
     });
     res.json(mapped);
@@ -124,8 +128,10 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
 // GET /challenges/outgoing — challenges I sent, waiting for opponent OR ready (opponent finished)
 router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
+    const me = req.userId!;
     const result = await pool.query(
-      `SELECT i.id, i.category, i.game_id, i.created_at, i.expires_at, i.seen_by,
+      `SELECT i.id, i.category, i.game_id, i.created_at, i.expires_at,
+              i.inviter_seen,
               g.status AS game_status,
               g.player_a_score, g.player_b_score, g.winner_id, g.completed_at,
               invitee.username AS opponent_username
@@ -137,7 +143,7 @@ router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Pr
          AND g.status IN ('waiting', 'active', 'completed')
        ORDER BY i.created_at DESC
        LIMIT 20`,
-      [req.userId]
+      [me]
     );
 
     const mapped = result.rows.map(r => {
@@ -154,10 +160,10 @@ router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Pr
         ...(isCompleted ? {
           myScore: r.player_a_score,
           opponentScore: r.player_b_score,
-          won: r.winner_id === req.userId,
+          won: r.winner_id === me,
           tied: r.winner_id === null && r.player_a_score !== null && r.player_b_score !== null,
           completedAt: r.completed_at,
-          seen: (r.seen_by as string[]).includes(req.userId!),
+          seen: r.inviter_seen,
         } : {}),
       };
     });
@@ -205,16 +211,26 @@ router.post('/:invitationId/accept', requireAuth, async (req: AuthRequest, res: 
   }
 });
 
-// PATCH /challenges/:id/seen — mark a challenge result as seen by the current user
-router.patch('/:id/seen', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+// POST /challenges/:id/seen — mark a challenge result as seen by the current user
+router.post('/:id/seen', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const me = req.userId!;
   const { id } = req.params;
 
   try {
+    // Determine if I'm the inviter or invitee and set the right column
+    const inv = await pool.query(
+      `SELECT inviter_id, invitee_id FROM invitations WHERE id = $1`,
+      [id]
+    );
+    if (!inv.rows[0]) {
+      res.status(404).json({ error: 'Invitation not found' });
+      return;
+    }
+
+    const col = inv.rows[0].inviter_id === me ? 'inviter_seen' : 'invitee_seen';
     await pool.query(
-      `UPDATE invitations SET seen_by = array_append(seen_by, $1)
-       WHERE id = $2 AND (inviter_id = $1 OR invitee_id = $1) AND NOT ($1 = ANY(seen_by))`,
-      [me, id]
+      `UPDATE invitations SET ${col} = TRUE WHERE id = $1`,
+      [id]
     );
     res.json({ ok: true });
   } catch (err) {
