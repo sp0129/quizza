@@ -310,9 +310,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
 
   const handleBackToHome = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    if (challengeId) removeChallenge(challengeId);
     navigation.navigate('Dashboard');
-  }, [challengeId, navigation, removeChallenge]);
+  }, [navigation]);
 
   // ---------------------------------------------------------------------------
   // Time formatting
