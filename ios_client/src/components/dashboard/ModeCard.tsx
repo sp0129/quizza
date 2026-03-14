@@ -106,7 +106,7 @@ const R = 16;
 const styles = StyleSheet.create({
   outer: {
     flex: 1,
-    aspectRatio: 1,
+    height: 52,
     borderRadius: R,
   },
   gradient: {
@@ -125,32 +125,31 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: 4,
+    paddingHorizontal: 14,
+    gap: 10,
   },
   icon: {
-    fontSize: 30,
+    fontSize: 22,
   },
   textCol: {
-    alignItems: 'center',
-    gap: 1,
+    flex: 1,
+    gap: 0,
   },
   label: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '700',
     color: '#FFFFFF',
-    textAlign: 'center',
   },
   subtitle: {
     fontSize: 10,
     fontWeight: '500',
     color: 'rgba(255,255,255,0.65)',
-    textAlign: 'center',
   },
   badge: {
     position: 'absolute',
-    top: 8,
+    top: 6,
     right: 8,
     minWidth: 22,
     height: 22,
