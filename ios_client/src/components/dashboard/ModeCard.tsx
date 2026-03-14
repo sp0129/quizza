@@ -101,12 +101,12 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: Mo
 
 export default React.memo(ModeCard);
 
-const R = 16;
+const R = 20;
 
 const styles = StyleSheet.create({
   outer: {
     flex: 1,
-    height: 52,
+    height: 75,
     borderRadius: R,
   },
   gradient: {
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    height: 22,
+    height: 28,
     borderTopLeftRadius: R,
     borderTopRightRadius: R,
   },
@@ -127,23 +127,23 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 14,
-    gap: 10,
+    paddingHorizontal: 16,
+    gap: 12,
   },
   icon: {
-    fontSize: 22,
+    fontSize: 34,
   },
   textCol: {
     flex: 1,
-    gap: 0,
+    gap: 1,
   },
   label: {
-    fontSize: 13,
+    fontSize: 20,
     fontWeight: '700',
     color: '#FFFFFF',
   },
   subtitle: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: '500',
     color: 'rgba(255,255,255,0.65)',
   },
