@@ -62,6 +62,12 @@ export default function DashboardScreen({ navigation }: Props) {
   const [joinLoading, setJoinLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+
+  const MAX_VISIBLE = 3;
+  const toggleSection = useCallback((key: string) => {
+    setExpandedSections((prev) => ({ ...prev, [key]: !prev[key] }));
+  }, []);
 
   // Split challenges into incoming, waiting (outgoing), and completed
   const incomingChallenges = challenges.filter(
@@ -379,7 +385,7 @@ export default function DashboardScreen({ navigation }: Props) {
               </View>
             </View>
             <View style={styles.challengeList}>
-              {incomingChallenges.map((item) => (
+              {(expandedSections.incoming ? incomingChallenges : incomingChallenges.slice(0, MAX_VISIBLE)).map((item) => (
                 <ChallengePill
                   key={item.id}
                   challengeId={item.id}
@@ -390,6 +396,13 @@ export default function DashboardScreen({ navigation }: Props) {
                   onPress={() => handleIncomingPress(item)}
                 />
               ))}
+              {incomingChallenges.length > MAX_VISIBLE && (
+                <TouchableOpacity style={styles.seeAllBtn} onPress={() => toggleSection('incoming')}>
+                  <Text style={styles.seeAllText}>
+                    {expandedSections.incoming ? 'Show less' : `See all ${incomingChallenges.length}`}
+                  </Text>
+                </TouchableOpacity>
+              )}
             </View>
           </Animated.View>
         )}
@@ -405,7 +418,7 @@ export default function DashboardScreen({ navigation }: Props) {
               </View>
             </View>
             <View style={styles.challengeList}>
-              {waitingChallenges.map((item) => (
+              {(expandedSections.waiting ? waitingChallenges : waitingChallenges.slice(0, MAX_VISIBLE)).map((item) => (
                 <ChallengePill
                   key={item.id}
                   challengeId={item.id}
@@ -416,6 +429,13 @@ export default function DashboardScreen({ navigation }: Props) {
                   onPress={() => {}}
                 />
               ))}
+              {waitingChallenges.length > MAX_VISIBLE && (
+                <TouchableOpacity style={styles.seeAllBtn} onPress={() => toggleSection('waiting')}>
+                  <Text style={styles.seeAllText}>
+                    {expandedSections.waiting ? 'Show less' : `See all ${waitingChallenges.length}`}
+                  </Text>
+                </TouchableOpacity>
+              )}
             </View>
           </Animated.View>
         )}
@@ -428,7 +448,7 @@ export default function DashboardScreen({ navigation }: Props) {
               <Text style={styles.sectionLabel}>YOUR RESULTS</Text>
             </View>
             <View style={styles.challengeList}>
-              {completedChallenges.map((item) => (
+              {(expandedSections.results ? completedChallenges : completedChallenges.slice(0, MAX_VISIBLE)).map((item) => (
                 <ChallengePill
                   key={item.id}
                   challengeId={item.id}
@@ -459,6 +479,13 @@ export default function DashboardScreen({ navigation }: Props) {
                   }}
                 />
               ))}
+              {completedChallenges.length > MAX_VISIBLE && (
+                <TouchableOpacity style={styles.seeAllBtn} onPress={() => toggleSection('results')}>
+                  <Text style={styles.seeAllText}>
+                    {expandedSections.results ? 'Show less' : `See all ${completedChallenges.length}`}
+                  </Text>
+                </TouchableOpacity>
+              )}
             </View>
           </Animated.View>
         )}
@@ -633,5 +660,14 @@ const styles = StyleSheet.create({
   challengeList: {
     paddingHorizontal: 20,
     gap: 8,
+  },
+  seeAllBtn: {
+    alignItems: 'center',
+    paddingVertical: 8,
+  },
+  seeAllText: {
+    color: colors.brand.primary,
+    fontSize: 13,
+    fontWeight: '600',
   },
 });
