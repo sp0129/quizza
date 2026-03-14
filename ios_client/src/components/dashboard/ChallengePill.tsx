@@ -8,7 +8,6 @@ import Animated, {
   withSequence,
   withTiming,
   runOnJS,
-  FadeOut,
   Easing,
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
@@ -144,7 +143,6 @@ function ChallengePill({
           },
           animStyle,
         ]}
-        exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
       >
         {/* Left accent bar */}
         <View style={[styles.accentBar, { backgroundColor: accentColor }]} />
