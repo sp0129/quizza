@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -46,25 +46,40 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle }: ModeCar
 
   return (
     <GestureDetector gesture={tapGesture}>
-      <Animated.View style={[styles.card, { borderColor: color + '30' }, animatedStyle]}>
-        {/* Glow background */}
-        <Animated.View style={[styles.glow, { backgroundColor: color + '10' }]} />
+      <Animated.View
+        style={[
+          styles.cardOuter,
+          {
+            shadowColor: color,
+            shadowOffset: { width: 0, height: 6 },
+            shadowOpacity: 0.35,
+            shadowRadius: 10,
+            elevation: 8,
+          },
+          animatedStyle,
+        ]}
+      >
+        {/* 3D bottom edge */}
+        <View style={[styles.bottomEdge, { backgroundColor: color + '50' }]} />
 
-        {/* Badge */}
-        {badgeCount !== undefined && badgeCount > 0 && (
-          <Animated.View style={[styles.badge, { backgroundColor: color }]}>
-            <Text style={styles.badgeText}>{badgeCount}</Text>
-          </Animated.View>
-        )}
+        {/* Main card face */}
+        <View style={[styles.card, { borderColor: color + '55', backgroundColor: color + '18' }]}>
+          {/* Badge */}
+          {badgeCount !== undefined && badgeCount > 0 && (
+            <View style={[styles.badge, { backgroundColor: color }]}>
+              <Text style={styles.badgeText}>{badgeCount}</Text>
+            </View>
+          )}
 
-        {/* Icon */}
-        <Text style={styles.icon}>{icon}</Text>
+          {/* Icon */}
+          <Text style={styles.icon}>{icon}</Text>
 
-        {/* Label */}
-        <Text style={[styles.label, { color }]}>{label}</Text>
+          {/* Label */}
+          <Text style={[styles.label, { color }]}>{label}</Text>
 
-        {/* Subtitle */}
-        {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+          {/* Subtitle */}
+          {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+        </View>
       </Animated.View>
     </GestureDetector>
   );
@@ -73,27 +88,28 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle }: ModeCar
 export default React.memo(ModeCard);
 
 const styles = StyleSheet.create({
-  card: {
+  cardOuter: {
     flex: 1,
+    height: 108, // 104 card + 4 bottom edge
+    borderRadius: 16,
+  },
+  bottomEdge: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 104,
+    borderRadius: 16,
+  },
+  card: {
+    height: 104,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.bg.surface,
     borderRadius: 16,
-    paddingVertical: 16,
+    paddingVertical: 14,
     paddingHorizontal: 8,
-    borderWidth: 1,
+    borderWidth: 1.5,
     gap: 4,
-    overflow: 'hidden',
-    // Shadow
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
-    shadowRadius: 8,
-    elevation: 4,
-  },
-  glow: {
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 16,
   },
   badge: {
     position: 'absolute',

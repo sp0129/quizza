@@ -532,7 +532,7 @@ const styles = StyleSheet.create({
     minHeight: 24,
   },
 
-  // Buttons
+  // Buttons — 3D raised look
   buttonsContainer: {
     width: '100%',
     gap: 12,
@@ -543,6 +543,13 @@ const styles = StyleSheet.create({
     height: 48,
     justifyContent: 'center',
     alignItems: 'center',
+    borderBottomWidth: 4,
+    borderBottomColor: '#5B21B6',
+    shadowColor: '#7C3AED',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
+    elevation: 6,
   },
   rematchBtnText: {
     color: '#FFFFFF',
@@ -555,6 +562,13 @@ const styles = StyleSheet.create({
     height: 48,
     justifyContent: 'center',
     alignItems: 'center',
+    borderBottomWidth: 4,
+    borderBottomColor: '#1E293B',
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    elevation: 4,
   },
   homeBtnText: {
     color: '#FFFFFF',

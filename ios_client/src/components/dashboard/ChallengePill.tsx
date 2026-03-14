@@ -77,7 +77,7 @@ function ChallengePill({
       : tied
         ? '#F59E0B'
         : '#EF4444'
-    : colors.bg.elevated;
+    : '#94A3B8';
 
   const outcomeText = isOutgoing
     ? won
@@ -95,49 +95,69 @@ function ChallengePill({
         : '😢'
     : undefined;
 
-  // Glow shadow for completed cards
-  const glowShadow = isOutgoing
-    ? {
-        shadowColor: outcomeColor,
-        shadowOffset: { width: 0, height: 0 },
-        shadowOpacity: 0.35,
-        shadowRadius: 8,
-        elevation: 6,
-      }
-    : {};
+  // Tinted background based on outcome
+  const tintedBg = isOutgoing ? outcomeColor + '18' : colors.bg.surface;
+  const borderCol = isOutgoing ? outcomeColor : colors.bg.elevated;
+  // Darker shade for 3D bottom edge
+  const bottomEdgeColor = isOutgoing ? outcomeColor + '60' : colors.bg.elevated;
 
   return (
     <GestureDetector gesture={tapGesture}>
       <Animated.View
         style={[
-          styles.pill,
-          { borderColor: outcomeColor },
-          glowShadow,
+          styles.pillOuter,
           animStyle,
+          // Colored glow shadow
+          isOutgoing && {
+            shadowColor: outcomeColor,
+            shadowOffset: { width: 0, height: 4 },
+            shadowOpacity: 0.4,
+            shadowRadius: 12,
+            elevation: 8,
+          },
         ]}
         exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
       >
-        {/* Category icon */}
-        <Text style={styles.categoryIcon}>{theme.emoji}</Text>
+        {/* 3D bottom edge — thicker colored bar at bottom */}
+        <View
+          style={[
+            styles.bottomEdge,
+            { backgroundColor: bottomEdgeColor },
+          ]}
+        />
 
-        {/* Opponent handle */}
-        <Text style={styles.handle} numberOfLines={1}>
-          @{opponentUsername}
-        </Text>
+        {/* Main card face */}
+        <View
+          style={[
+            styles.pill,
+            {
+              backgroundColor: tintedBg,
+              borderColor: borderCol,
+            },
+          ]}
+        >
+          {/* Category icon */}
+          <Text style={styles.categoryIcon}>{theme.emoji}</Text>
 
-        {/* Outcome text or time */}
-        {isOutgoing && outcomeText ? (
-          <>
-            <Text style={[styles.outcomeText, { color: outcomeColor }]}>
-              {outcomeText}
-            </Text>
-            <Text style={styles.outcomeEmoji}>{outcomeEmoji}</Text>
-          </>
-        ) : (
-          <Text style={styles.time}>
-            {timeSent ? getTimeSince(timeSent) : ''}
+          {/* Opponent handle */}
+          <Text style={styles.handle} numberOfLines={1}>
+            @{opponentUsername}
           </Text>
-        )}
+
+          {/* Outcome text or time */}
+          {isOutgoing && outcomeText ? (
+            <>
+              <Text style={[styles.outcomeText, { color: outcomeColor }]}>
+                {outcomeText}
+              </Text>
+              <Text style={styles.outcomeEmoji}>{outcomeEmoji}</Text>
+            </>
+          ) : (
+            <Text style={styles.time}>
+              {timeSent ? getTimeSince(timeSent) : ''}
+            </Text>
+          )}
+        </View>
       </Animated.View>
     </GestureDetector>
   );
@@ -146,10 +166,23 @@ function ChallengePill({
 export default React.memo(ChallengePill);
 
 const styles = StyleSheet.create({
+  pillOuter: {
+    width: 150,
+    height: 154, // 150 + 4 for bottom edge
+    borderRadius: 16,
+  },
+  bottomEdge: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 150,
+    borderRadius: 16,
+    // Sits behind pill, visible as a 4px bottom bar
+  },
   pill: {
     width: 150,
     height: 150,
-    backgroundColor: colors.bg.surface,
     borderRadius: 16,
     borderWidth: 2,
     alignItems: 'center',
