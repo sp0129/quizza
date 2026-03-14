@@ -170,8 +170,8 @@ export default function DashboardScreen({ navigation }: Props) {
       navigation.navigate('Signup');
       return;
     }
-    setSearchOverlayVisible(true);
-  }, [isGuest, navigation, setSearchOverlayVisible]);
+    navigation.navigate('Friends');
+  }, [isGuest, navigation]);
 
   // Room join
   const joinRoom = useCallback(async () => {
