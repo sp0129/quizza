@@ -91,6 +91,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
     result,
     challengeId,
     opponentUsername,
+    skipAnimation,
   } = route.params;
 
   const insets = useSafeAreaInsets();
@@ -139,7 +140,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
   // ---------------------------------------------------------------------------
 
   useEffect(() => {
-    if (reduceMotion) {
+    if (reduceMotion || skipAnimation) {
       // Skip animations, show everything immediately
       anticipationOpacity.value = 0;
       myScoreOpacity.value = 1;

@@ -60,6 +60,7 @@ export type RootStackParamList = {
     timestamp?: string;
     result: 'win' | 'loss' | 'tie';
     challengeId?: string;
+    skipAnimation?: boolean;
   };
 };
 

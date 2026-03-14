@@ -26,6 +26,7 @@ interface ChallengePillProps {
   opponentScore?: number;
   won?: boolean;
   tied?: boolean;
+  seen?: boolean;
   onPress: () => void;
 }
 
@@ -47,6 +48,7 @@ function ChallengePill({
   timeSent,
   won,
   tied,
+  seen,
   onPress,
 }: ChallengePillProps) {
   const scale = useSharedValue(1);
@@ -106,7 +108,12 @@ function ChallengePill({
     statusEmoji = '⏳';
     rowOpacity = 0.75;
   } else if (isOutgoing) {
-    if (won) {
+    if (!seen) {
+      // Unseen result — neutral mystery style, no spoilers
+      accentColor = '#F59E0B';
+      statusText = 'Tap to reveal';
+      statusEmoji = '✨';
+    } else if (won) {
       accentColor = '#22C55E';
       statusText = 'You won!';
       statusEmoji = '🎉';

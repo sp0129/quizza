@@ -56,6 +56,8 @@ export default function DashboardScreen({ navigation }: Props) {
     setMetrics,
     searchOverlayVisible,
     setSearchOverlayVisible,
+    seenResultIds,
+    markChallengeSeen,
   } = useDashboardStore();
 
   const [roomCode, setRoomCode] = useState('');
@@ -442,7 +444,10 @@ export default function DashboardScreen({ navigation }: Props) {
                   opponentScore={item.opponentScore}
                   won={item.won}
                   tied={item.tied}
+                  seen={seenResultIds.has(item.id)}
                   onPress={() => {
+                    const isSeen = seenResultIds.has(item.id);
+                    if (!isSeen) markChallengeSeen(item.id);
                     const result: 'win' | 'loss' | 'tie' = item.won
                       ? 'win'
                       : item.tied
@@ -458,6 +463,7 @@ export default function DashboardScreen({ navigation }: Props) {
                       timestamp: item.createdAt,
                       result,
                       challengeId: item.id,
+                      skipAnimation: isSeen,
                     });
                   }}
                 />

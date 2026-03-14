@@ -16,6 +16,7 @@ export interface Challenge {
   opponentScore?: number;
   won?: boolean;
   tied?: boolean;
+  seen?: boolean;
 }
 
 export interface UserMetrics {
@@ -44,9 +45,11 @@ interface DashboardState {
   // Challenges
   challenges: Challenge[];
   challengesLoading: boolean;
+  seenResultIds: Set<string>;
   setChallenges: (challenges: Challenge[]) => void;
   addChallenge: (challenge: Challenge) => void;
   removeChallenge: (id: string) => void;
+  markChallengeSeen: (id: string) => void;
   setChallengesLoading: (loading: boolean) => void;
 
   // Metrics
@@ -84,11 +87,18 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
   // Challenges
   challenges: [],
   challengesLoading: true,
+  seenResultIds: new Set<string>(),
   setChallenges: (challenges) => set({ challenges }),
   addChallenge: (challenge) =>
     set((s) => ({ challenges: [challenge, ...s.challenges] })),
   removeChallenge: (id) =>
     set((s) => ({ challenges: s.challenges.filter((c) => c.id !== id) })),
+  markChallengeSeen: (id) =>
+    set((s) => {
+      const next = new Set(s.seenResultIds);
+      next.add(id);
+      return { seenResultIds: next };
+    }),
   setChallengesLoading: (loading) => set({ challengesLoading: loading }),
 
   // Metrics
