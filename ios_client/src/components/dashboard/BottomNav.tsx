@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
-  withSpring,
   withSequence,
+  withSpring,
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
@@ -14,20 +14,17 @@ interface TabItem {
   key: string;
   icon: string;
   label: string;
-  badge?: number;
 }
 
 interface BottomNavProps {
   activeTab: string;
   onTabPress: (key: string) => void;
-  onPlayPress: () => void;
   badges?: { [key: string]: number };
 }
 
 const TABS: TabItem[] = [
   { key: 'home', icon: '🏠', label: 'Home' },
   { key: 'leaderboard', icon: '🏆', label: 'Board' },
-  { key: 'play', icon: '▶', label: 'PLAY' },
   { key: 'friends', icon: '👥', label: 'Friends' },
   { key: 'profile', icon: '👤', label: 'Profile' },
 ];
@@ -82,54 +79,22 @@ function TabButton({
   );
 }
 
-function BottomNav({ activeTab, onTabPress, onPlayPress, badges = {} }: BottomNavProps) {
+function BottomNav({ activeTab, onTabPress, badges = {} }: BottomNavProps) {
   const insets = useSafeAreaInsets();
-  const fabScale = useSharedValue(1);
-
-  const handleFabPress = useCallback(() => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    fabScale.value = withSequence(
-      withSpring(0.9, { damping: 12, stiffness: 400 }),
-      withSpring(1, { damping: 8, stiffness: 200 }),
-    );
-    onPlayPress();
-  }, [onPlayPress, fabScale]);
-
-  const fabStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: fabScale.value }],
-  }));
 
   return (
     <View style={[styles.container, { paddingBottom: Math.max(insets.bottom, 8) }]}>
-      {/* Tab bar background */}
       <View style={styles.bar}>
-        {TABS.map((tab) => {
-          if (tab.key === 'play') {
-            return <View key="play-spacer" style={styles.fabSpacer} />;
-          }
-          return (
-            <TabButton
-              key={tab.key}
-              tab={tab}
-              isActive={activeTab === tab.key}
-              badge={badges[tab.key]}
-              onPress={() => onTabPress(tab.key)}
-            />
-          );
-        })}
+        {TABS.map((tab) => (
+          <TabButton
+            key={tab.key}
+            tab={tab}
+            isActive={activeTab === tab.key}
+            badge={badges[tab.key]}
+            onPress={() => onTabPress(tab.key)}
+          />
+        ))}
       </View>
-
-      {/* Center FAB */}
-      <Animated.View style={[styles.fabWrapper, fabStyle]}>
-        <TouchableOpacity
-          style={styles.fab}
-          onPress={handleFabPress}
-          activeOpacity={0.85}
-        >
-          <Text style={styles.fabIcon}>▶</Text>
-          <Text style={styles.fabLabel}>PLAY</Text>
-        </TouchableOpacity>
-      </Animated.View>
     </View>
   );
 }
@@ -194,43 +159,5 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 9,
     fontWeight: '800',
-  },
-  fabSpacer: {
-    width: 64,
-  },
-  fabWrapper: {
-    position: 'absolute',
-    top: -24,
-    left: '50%',
-    marginLeft: -32,
-    zIndex: 10,
-  },
-  fab: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: colors.brand.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
-    // Shadow
-    shadowColor: colors.brand.primary,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.45,
-    shadowRadius: 12,
-    elevation: 8,
-    borderWidth: 3,
-    borderColor: colors.bg.primary,
-  },
-  fabIcon: {
-    color: '#FFFFFF',
-    fontSize: 18,
-    fontWeight: '900',
-    marginBottom: -2,
-  },
-  fabLabel: {
-    color: '#FFFFFF',
-    fontSize: 9,
-    fontWeight: '900',
-    letterSpacing: 1,
   },
 });
