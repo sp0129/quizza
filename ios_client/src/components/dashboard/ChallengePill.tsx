@@ -217,8 +217,8 @@ export default React.memo(ChallengePill);
 
 const styles = StyleSheet.create({
   pillOuter: {
-    width: 150,
-    height: 154,
+    width: 125,
+    height: 129,
     borderRadius: 16,
   },
   bottomEdge: {
@@ -230,8 +230,8 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   pill: {
-    width: 150,
-    height: 150,
+    width: 125,
+    height: 125,
     borderRadius: 16,
     borderWidth: 2,
     alignItems: 'center',
@@ -241,20 +241,20 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
   },
   categoryIcon: {
-    fontSize: 40,
+    fontSize: 36,
   },
   handle: {
     color: colors.text.secondary,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '600',
-    maxWidth: 126,
+    maxWidth: 105,
   },
   outcomeText: {
-    fontSize: 16,
+    fontSize: 13,
     fontWeight: '800',
   },
   outcomeEmoji: {
-    fontSize: 28,
+    fontSize: 24,
   },
   time: {
     color: colors.text.secondary,

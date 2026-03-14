@@ -4,11 +4,18 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withSpring,
+  withTiming,
   runOnJS,
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+import { LinearGradient } from 'expo-linear-gradient';
 import * as Haptics from 'expo-haptics';
-import { colors } from '../../theme/colors';
+
+interface GemColors {
+  base: string;
+  light: string;
+  dark: string;
+}
 
 interface ModeCardProps {
   icon: string;
@@ -17,24 +24,33 @@ interface ModeCardProps {
   badgeCount?: number;
   onPress: () => void;
   subtitle?: string;
+  gem?: GemColors;
 }
 
-function ModeCard({ icon, label, color, badgeCount, onPress, subtitle }: ModeCardProps) {
+function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: ModeCardProps) {
   const scale = useSharedValue(1);
+  const shineOpacity = useSharedValue(0.4);
+  const glowOpacity = useSharedValue(0.2);
+
+  const g = gem ?? { base: color, light: color, dark: color };
 
   const handlePress = useCallback(() => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     onPress();
   }, [onPress]);
 
   const tapGesture = Gesture.Tap()
     .onBegin(() => {
       'worklet';
-      scale.value = withSpring(0.93, { damping: 12, stiffness: 400 });
+      scale.value = withSpring(0.98, { damping: 12, stiffness: 400 });
+      shineOpacity.value = withTiming(0.6, { duration: 100 });
+      glowOpacity.value = withTiming(0.35, { duration: 100 });
     })
     .onFinalize((_e, success) => {
       'worklet';
-      scale.value = withSpring(1, { damping: 10, stiffness: 300 });
+      scale.value = withSpring(1, { mass: 0.8, damping: 10, stiffness: 100 });
+      shineOpacity.value = withTiming(0.4, { duration: 300 });
+      glowOpacity.value = withTiming(0.2, { duration: 300 });
       if (success) {
         runOnJS(handlePress)();
       }
@@ -44,42 +60,60 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle }: ModeCar
     transform: [{ scale: scale.value }],
   }));
 
+  const shineStyle = useAnimatedStyle(() => ({
+    opacity: shineOpacity.value,
+  }));
+
+  const glowStyle = useAnimatedStyle(() => ({
+    shadowOpacity: glowOpacity.value,
+  }));
+
   return (
     <GestureDetector gesture={tapGesture}>
       <Animated.View
         style={[
-          styles.cardOuter,
-          {
-            shadowColor: color,
-            shadowOffset: { width: 0, height: 6 },
-            shadowOpacity: 0.35,
-            shadowRadius: 10,
-            elevation: 8,
-          },
+          styles.pillOuter,
           animatedStyle,
+          glowStyle,
+          {
+            shadowColor: g.base,
+            shadowOffset: { width: 0, height: 6 },
+            shadowRadius: 18,
+            elevation: 10,
+          },
         ]}
       >
-        {/* 3D bottom edge */}
-        <View style={[styles.bottomEdge, { backgroundColor: color + '50' }]} />
+        {/* Layer 3: Base gradient (depth) */}
+        <LinearGradient
+          colors={[g.light, g.base, g.dark]}
+          locations={[0, 0.5, 1]}
+          style={styles.pillGradient}
+        >
+          {/* Layer 4: Inner shadow / beveled edge */}
+          <View style={[styles.innerBevel, { borderColor: g.dark + '66' }]} />
 
-        {/* Main card face */}
-        <View style={[styles.card, { borderColor: color + '55', backgroundColor: color + '18' }]}>
+          {/* Layer 2: Mid-facet glow (iridescence) */}
+          <View style={[styles.facetGlow, { backgroundColor: g.light + '30' }]} />
+
+          {/* Layer 1: Bright top highlight (shine) */}
+          <Animated.View style={[styles.shine, shineStyle]} />
+
+          {/* Content */}
+          <View style={styles.content}>
+            <Text style={styles.icon}>{icon}</Text>
+            <View style={styles.textColumn}>
+              <Text style={styles.label}>{label}</Text>
+              {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+            </View>
+          </View>
+
           {/* Badge */}
           {badgeCount !== undefined && badgeCount > 0 && (
-            <View style={[styles.badge, { backgroundColor: color }]}>
+            <View style={styles.badge}>
               <Text style={styles.badgeText}>{badgeCount}</Text>
             </View>
           )}
-
-          {/* Icon */}
-          <Text style={styles.icon}>{icon}</Text>
-
-          {/* Label */}
-          <Text style={[styles.label, { color }]}>{label}</Text>
-
-          {/* Subtitle */}
-          {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
-        </View>
+        </LinearGradient>
       </Animated.View>
     </GestureDetector>
   );
@@ -88,58 +122,80 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle }: ModeCar
 export default React.memo(ModeCard);
 
 const styles = StyleSheet.create({
-  cardOuter: {
-    flex: 1,
-    height: 108, // 104 card + 4 bottom edge
-    borderRadius: 16,
+  pillOuter: {
+    height: 76,
+    borderRadius: 22,
+    overflow: 'hidden',
   },
-  bottomEdge: {
+  pillGradient: {
+    flex: 1,
+    borderRadius: 22,
+    overflow: 'hidden',
+  },
+  // Layer 4: Inner bevel
+  innerBevel: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 22,
+    borderWidth: 1.5,
+  },
+  // Layer 2: Mid-facet glow
+  facetGlow: {
     position: 'absolute',
-    bottom: 0,
+    top: '30%',
+    left: '10%',
+    right: '10%',
+    height: '40%',
+    borderRadius: 40,
+  },
+  // Layer 1: Top shine
+  shine: {
+    position: 'absolute',
+    top: 0,
     left: 0,
     right: 0,
-    height: 104,
-    borderRadius: 16,
+    height: '30%',
+    backgroundColor: '#FFFFFF',
+    borderTopLeftRadius: 22,
+    borderTopRightRadius: 22,
   },
-  card: {
-    height: 104,
+  content: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 16,
-    paddingVertical: 14,
-    paddingHorizontal: 8,
-    borderWidth: 1.5,
-    gap: 4,
+    paddingHorizontal: 20,
+    gap: 16,
+  },
+  icon: {
+    fontSize: 36,
+  },
+  textColumn: {
+    gap: 2,
+  },
+  label: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#FFFFFF',
+  },
+  subtitle: {
+    fontSize: 13,
+    fontWeight: '500',
+    color: 'rgba(255,255,255,0.7)',
   },
   badge: {
     position: 'absolute',
-    top: 8,
-    right: 8,
-    minWidth: 20,
-    height: 20,
-    borderRadius: 10,
+    top: 12,
+    right: 16,
+    minWidth: 26,
+    height: 26,
+    borderRadius: 13,
+    backgroundColor: '#7C3AED',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 5,
+    paddingHorizontal: 6,
   },
   badgeText: {
     color: '#FFFFFF',
-    fontSize: 11,
-    fontWeight: '800',
-  },
-  icon: {
-    fontSize: 28,
-    marginBottom: 2,
-  },
-  label: {
     fontSize: 13,
     fontWeight: '800',
-    letterSpacing: 0.3,
-  },
-  subtitle: {
-    color: colors.text.secondary,
-    fontSize: 10,
-    fontWeight: '500',
-    textAlign: 'center',
   },
 });

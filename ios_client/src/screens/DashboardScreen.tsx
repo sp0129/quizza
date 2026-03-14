@@ -310,37 +310,32 @@ export default function DashboardScreen({ navigation }: Props) {
         {/* ═══ GAME MODES ═══ */}
         <Animated.View entering={FadeInDown.delay(250).duration(400)} style={styles.modeSection}>
           <Text style={styles.sectionLabel}>GAME MODES</Text>
-          <View style={styles.modeRow}>
+          <View style={styles.modeStack}>
             <ModeCard
               icon="🎯"
               label="Solo"
-              color={colors.brand.primary}
+              color="#0F5A9F"
+              gem={{ base: '#0F5A9F', light: '#1E90FF', dark: '#0A3A6B' }}
               onPress={handleSolo}
               subtitle="Play now"
             />
             <ModeCard
               icon="👥"
               label="Group Play"
-              color={colors.brand.secondary}
+              color="#6B21A8"
+              gem={{ base: '#6B21A8', light: '#A855F7', dark: '#4A1271' }}
               onPress={handleGroupPlay}
               subtitle="Play with friends"
             />
             <ModeCard
               icon="⚔️"
               label="Challenge"
-              color="#F97316"
+              color="#B8571A"
+              gem={{ base: '#B8571A', light: '#EA8C35', dark: '#7A3A0F' }}
               badgeCount={pendingCount}
               onPress={handleChallenge}
               subtitle="vs your friends"
             />
-          </View>
-
-          <View style={styles.modeDescriptions}>
-            <Text style={styles.modeDesc}>
-              <Text style={[styles.modeDescBold, { color: colors.brand.primary }]}>Solo</Text> — Play trivia at your own pace.{' '}
-              <Text style={[styles.modeDescBold, { color: colors.brand.secondary }]}>Group Play</Text> — Fun group quiz with friends.{' '}
-              <Text style={[styles.modeDescBold, { color: '#F97316' }]}>Challenge</Text> — Async 1v1 duel with a friend.
-            </Text>
           </View>
         </Animated.View>
 
@@ -539,7 +534,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingTop: 12,
-    gap: 20,
+    gap: 24,
   },
 
   // Guest banner
@@ -603,23 +598,11 @@ const styles = StyleSheet.create({
 
   // Game modes
   modeSection: {
-    paddingHorizontal: 16,
+    paddingHorizontal: 20,
     gap: 10,
   },
-  modeRow: {
-    flexDirection: 'row',
-    gap: 10,
-  },
-  modeDescriptions: {
-    paddingTop: 4,
-  },
-  modeDesc: {
-    color: colors.text.secondary,
-    fontSize: 11,
-    lineHeight: 16,
-  },
-  modeDescBold: {
-    fontWeight: '700',
+  modeStack: {
+    gap: 14,
   },
 
   // Join room
