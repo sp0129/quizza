@@ -151,8 +151,9 @@ export default function ResultsScreen({ route, navigation }: Props) {
       outcomeOpacity.value = 1;
       outcomeScale.value = 1;
       buttonsOpacity.value = 1;
+      trophyScale.value = 1;
+      trophySpin.value = 0;
       setStage('complete');
-      if (result === 'win') setShowConfetti(true);
       return;
     }
 
@@ -328,6 +329,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
   })();
 
   const hasOpponent = opponentScore !== undefined && opponentScore !== null;
+  const skipCountDelay = reduceMotion || skipAnimation;
 
   return (
     <LinearGradient colors={gradients.game} style={styles.flex}>
@@ -353,8 +355,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
               <Text style={styles.scoreLabel}>Your Score</Text>
               <CountingNumber
                 target={yourScore}
-                duration={500}
-                delay={reduceMotion ? 0 : 100}
+                duration={skipCountDelay ? 0 : 500}
+                delay={skipCountDelay ? 0 : 100}
                 style={styles.scoreNumber}
               />
             </Animated.View>
@@ -372,8 +374,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
                 </Text>
                 <CountingNumber
                   target={opponentScore!}
-                  duration={500}
-                  delay={reduceMotion ? 0 : 900}
+                  duration={skipCountDelay ? 0 : 500}
+                  delay={skipCountDelay ? 0 : 900}
                   style={styles.scoreNumber}
                 />
               </Animated.View>

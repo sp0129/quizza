@@ -79,9 +79,13 @@ export default function DashboardScreen({ navigation }: Props) {
   const waitingChallenges = challenges.filter(
     (c) => c.status === 'waiting',
   );
-  const completedChallenges = challenges.filter(
-    (c) => c.status === 'completed',
-  );
+  const completedChallenges = challenges
+    .filter((c) => c.status === 'completed')
+    .sort((a, b) => {
+      const aSeen = seenResultIds.has(a.id) ? 1 : 0;
+      const bSeen = seenResultIds.has(b.id) ? 1 : 0;
+      return aSeen - bSeen; // unseen first, seen last
+    });
 
   // Check for first-time user onboarding
   useEffect(() => {
