@@ -120,7 +120,7 @@ export default function DashboardScreen({ navigation }: Props) {
           xpToNextLevel: stats.xpToNextLevel ?? 100,
         });
       })
-      .catch((err) => console.warn('Failed to fetch stats:', err.message));
+      .catch(() => {});
   }, [setMetrics]);
 
   // Pull-to-refresh

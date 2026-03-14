@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
-  withTiming,
   withSequence,
   withSpring,
-  Easing,
-  useDerivedValue,
-  useAnimatedProps,
 } from 'react-native-reanimated';
 import { colors } from '../../theme/colors';
 
@@ -18,7 +14,6 @@ interface MetricsPillProps {
   value: number;
   suffix?: string;
   color?: string;
-  animate?: boolean;
 }
 
 function MetricsPill({
@@ -27,65 +22,53 @@ function MetricsPill({
   value,
   suffix = '',
   color = colors.brand.primary,
-  animate = true,
 }: MetricsPillProps) {
-  const displayValue = useSharedValue(animate ? 0 : value);
   const scale = useSharedValue(1);
+  const [display, setDisplay] = useState(0);
 
   useEffect(() => {
-    if (animate) {
-      displayValue.value = withTiming(value, {
-        duration: 500,
-        easing: Easing.out(Easing.cubic),
-      });
-      scale.value = withSequence(
-        withSpring(1.15, { damping: 8, stiffness: 300 }),
-        withSpring(1, { damping: 12, stiffness: 200 }),
-      );
-    } else {
-      displayValue.value = value;
-    }
-  }, [value, animate, displayValue, scale]);
+    if (value === display) return;
+
+    // Animate the number counting up
+    const start = display;
+    const diff = value - start;
+    const steps = Math.min(Math.abs(diff), 15);
+    if (steps === 0) { setDisplay(value); return; }
+
+    const stepTime = 400 / steps;
+    let step = 0;
+    const interval = setInterval(() => {
+      step++;
+      setDisplay(Math.round(start + (diff * step) / steps));
+      if (step >= steps) {
+        clearInterval(interval);
+        setDisplay(value);
+      }
+    }, stepTime);
+
+    // Bounce the pill
+    scale.value = withSequence(
+      withSpring(1.15, { damping: 8, stiffness: 300 }),
+      withSpring(1, { damping: 12, stiffness: 200 }),
+    );
+
+    return () => clearInterval(interval);
+  }, [value]);
 
   const pillStyle = useAnimatedStyle(() => ({
     transform: [{ scale: scale.value }],
   }));
 
-  // We display the rounded integer of the animated value
-  const animatedText = useDerivedValue(() => {
-    return `${Math.round(displayValue.value)}${suffix}`;
-  });
-
   return (
     <Animated.View style={[styles.pill, { backgroundColor: color + '20' }, pillStyle]}>
       <Text style={styles.icon}>{icon}</Text>
       <View style={styles.content}>
-        <AnimatedNumber value={animatedText} color={color} />
+        <Text style={[styles.value, { color }]}>
+          {display}{suffix}
+        </Text>
         <Text style={styles.label}>{label}</Text>
       </View>
     </Animated.View>
-  );
-}
-
-// Simple component that reads the derived value
-function AnimatedNumber({
-  value,
-  color,
-}: {
-  value: Animated.SharedValue<string>;
-  color: string;
-}) {
-  // Since we can't directly use useAnimatedProps on Text easily,
-  // we use a workaround with AnimatedProps on a View and display via re-render
-  const animStyle = useAnimatedStyle(() => ({
-    opacity: 1, // trigger re-render
-  }));
-
-  return (
-    <Animated.Text style={[styles.value, { color }, animStyle]}>
-      {/* We fall back to reading .value directly — works with Reanimated on JS thread */}
-      {Math.round(value.value as unknown as number) || value.value}
-    </Animated.Text>
   );
 }
 
