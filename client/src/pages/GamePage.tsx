@@ -17,6 +17,7 @@ interface GameResult {
   correctAnswer?: string;
   totalScore?: number;
   gameComplete?: boolean;
+  opponentScore?: number;
 }
 
 type Phase = 'loading' | 'playing' | 'answered' | 'finished';
@@ -161,7 +162,11 @@ export default function GamePage() {
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
 
       if (result.gameComplete) {
-        setFinalScores(prev => ({ ...prev, mine: result.totalScore ?? score }));
+        setFinalScores(prev => ({
+          ...prev,
+          mine: result.totalScore ?? score,
+          ...(result.opponentScore !== undefined ? { opponent: result.opponentScore } : {}),
+        }));
         if (mode === 'async') setPhase('finished');
         else setWaitingForOpponent(true);
       } else if (mode === 'async') {

@@ -461,6 +461,25 @@ button {
   white-space: nowrap;
 }
 
+.challenge-chip-score {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.challenge-chip-result {
+  cursor: default;
+}
+.challenge-chip-result:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.avatar-win  { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.avatar-loss { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.avatar-tie  { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
 
 /* ════════════════════════════════════════════════════════════
    CATEGORY PAGE

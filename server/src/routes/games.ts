@@ -309,7 +309,9 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
         }
       }
 
-      res.json({ isCorrect, points, totalScore, gameComplete: true, correctAnswer: question.correct_answer });
+      // Include opponent's score when both players have finished (async challenge completed)
+      const opponentScore = otherScore !== null ? parseInt(otherScore) : undefined;
+      res.json({ isCorrect, points, totalScore, gameComplete: true, correctAnswer: question.correct_answer, opponentScore });
     } else {
       // For sync mode, notify the manager that this player answered
       if (game.game_mode === 'sync') {

@@ -14,11 +14,24 @@ interface IncomingChallenge {
   inviter_username: string;
 }
 
+interface CompletedChallenge {
+  id: string;
+  gameId: string;
+  category: string;
+  myScore: number;
+  opponentScore: number;
+  opponentUsername: string;
+  won: boolean;
+  tied: boolean;
+  completedAt: string;
+}
+
 export default function DashboardPage() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   const [incoming, setIncoming] = useState<IncomingChallenge[]>([]);
+  const [completed, setCompleted] = useState<CompletedChallenge[]>([]);
   const [challengeUsername, setChallengeUsername] = useState('');
   const [roomCode, setRoomCode] = useState('');
   const [joinLoading, setJoinLoading] = useState(false);
@@ -26,6 +39,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     api.get<IncomingChallenge[]>('/challenges/incoming').then(setIncoming).catch(console.error);
+    api.get<CompletedChallenge[]>('/challenges/completed').then(setCompleted).catch(console.error);
     const t = setTimeout(() => playGibberish('excited'), 700);
     return () => clearTimeout(t);
   }, []);
@@ -167,6 +181,25 @@ export default function DashboardPage() {
                       <span className="challenge-chip-cat">{inv.category}</span>
                     </div>
                   ))}
+              </div>
+            </section>
+          )}
+
+          {/* Completed challenges */}
+          {completed.length > 0 && (
+            <section className="card">
+              <h2 className="section-title">📋 Results</h2>
+              <div className="challenges-scroll">
+                {completed.map(c => (
+                  <div key={c.id} className="challenge-chip challenge-chip-result">
+                    <div className={`challenge-avatar ${c.won ? 'avatar-win' : c.tied ? 'avatar-tie' : 'avatar-loss'}`}>
+                      {c.won ? 'W' : c.tied ? 'T' : 'L'}
+                    </div>
+                    <span className="challenge-chip-name">vs {c.opponentUsername}</span>
+                    <span className="challenge-chip-cat">{c.category}</span>
+                    <span className="challenge-chip-score">{c.myScore}–{c.opponentScore}</span>
+                  </div>
+                ))}
               </div>
             </section>
           )}
