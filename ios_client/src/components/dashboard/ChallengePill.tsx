@@ -135,6 +135,7 @@ function ChallengePill({
           styles.row,
           {
             opacity: rowOpacity,
+            backgroundColor: accentColor + '18',
             shadowColor: accentColor,
             shadowOffset: { width: 0, height: 2 },
             shadowOpacity: 0.2,
