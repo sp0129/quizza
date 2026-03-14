@@ -350,36 +350,41 @@ export default function ResultsScreen({ route, navigation }: Props) {
         {/* ═══ STAGE 2+: SCORES ═══ */}
         {stage !== 'anticipation' && (
           <View style={styles.scoresContainer}>
-            {/* Your score */}
-            <Animated.View style={[styles.scoreBlock, myScoreStyle]}>
-              <Text style={styles.scoreLabel}>Your Score</Text>
-              <CountingNumber
-                target={yourScore}
-                duration={skipCountDelay ? 0 : 500}
-                delay={skipCountDelay ? 0 : 100}
-                style={styles.scoreNumber}
-              />
-            </Animated.View>
-
-            {/* Divider */}
-            {hasOpponent && (
-              <Animated.View style={[styles.divider, metaStyle]} />
-            )}
-
-            {/* Opponent score */}
-            {hasOpponent && (
-              <Animated.View style={[styles.scoreBlock, oppScoreStyle]}>
-                <Text style={styles.scoreLabel}>
-                  {opponentHandle ?? 'Opponent'}
-                </Text>
+            {/* Versus row: You | vs | Opponent */}
+            <View style={styles.vsRow}>
+              {/* Your score */}
+              <Animated.View style={[styles.vsBlock, myScoreStyle]}>
+                <Text style={styles.vsLabel}>You</Text>
                 <CountingNumber
-                  target={opponentScore!}
+                  target={yourScore}
                   duration={skipCountDelay ? 0 : 500}
-                  delay={skipCountDelay ? 0 : 900}
-                  style={styles.scoreNumber}
+                  delay={skipCountDelay ? 0 : 100}
+                  style={styles.vsScore}
                 />
               </Animated.View>
-            )}
+
+              {/* VS divider */}
+              {hasOpponent && (
+                <Animated.View style={[styles.vsDivider, metaStyle]}>
+                  <Text style={styles.vsText}>vs</Text>
+                </Animated.View>
+              )}
+
+              {/* Opponent score */}
+              {hasOpponent && (
+                <Animated.View style={[styles.vsBlock, oppScoreStyle]}>
+                  <Text style={styles.vsLabel} numberOfLines={1}>
+                    {opponentHandle ?? 'Opponent'}
+                  </Text>
+                  <CountingNumber
+                    target={opponentScore!}
+                    duration={skipCountDelay ? 0 : 500}
+                    delay={skipCountDelay ? 0 : 900}
+                    style={styles.vsScore}
+                  />
+                </Animated.View>
+              )}
+            </View>
 
             {/* Meta info */}
             <Animated.View style={[styles.metaRow, metaStyle]}>
@@ -470,34 +475,45 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
 
-  // Scores
+  // Scores — versus layout
   scoresContainer: {
     alignItems: 'center',
-    gap: 8,
+    gap: 12,
   },
-  scoreBlock: {
+  vsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  vsBlock: {
+    flex: 1,
     alignItems: 'center',
     gap: 4,
-    paddingVertical: 8,
   },
-  scoreLabel: {
-    fontSize: 12,
+  vsLabel: {
+    fontSize: 13,
     fontWeight: '600',
     color: colors.text.secondary,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
+    maxWidth: 120,
   },
-  scoreNumber: {
-    fontSize: 48,
+  vsScore: {
+    fontSize: 44,
     fontWeight: '800',
     color: colors.text.primary,
     fontVariant: ['tabular-nums'],
   },
-  divider: {
-    width: 120,
-    height: 1,
-    backgroundColor: '#334155',
-    marginVertical: 4,
+  vsDivider: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  vsText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: colors.text.secondary,
+    fontStyle: 'italic',
   },
 
   // Meta
