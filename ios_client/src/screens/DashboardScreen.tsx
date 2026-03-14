@@ -602,7 +602,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   modeStack: {
-    gap: 14,
+    gap: 12,
   },
 
   // Join room
