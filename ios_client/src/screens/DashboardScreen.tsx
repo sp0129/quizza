@@ -64,9 +64,12 @@ export default function DashboardScreen({ navigation }: Props) {
   const [refreshing, setRefreshing] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
 
-  // Split challenges into incoming and completed (outgoing results)
+  // Split challenges into incoming, waiting (outgoing), and completed
   const incomingChallenges = challenges.filter(
     (c) => c.status === 'incoming' || c.status === 'your_turn',
+  );
+  const waitingChallenges = challenges.filter(
+    (c) => c.status === 'waiting',
   );
   const completedChallenges = challenges.filter(
     (c) => c.status === 'completed',
@@ -254,7 +257,7 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const username = user?.username ?? 'Player';
   const avatarInitial = username[0]?.toUpperCase() ?? 'P';
-  const hasAnyChallenges = incomingChallenges.length > 0 || completedChallenges.length > 0;
+  const hasAnyChallenges = incomingChallenges.length > 0 || waitingChallenges.length > 0 || completedChallenges.length > 0;
 
   return (
     <View style={[styles.root, styles.container]}>
@@ -402,7 +405,40 @@ export default function DashboardScreen({ navigation }: Props) {
           </Animated.View>
         )}
 
-        {/* ═══ OUTGOING / COMPLETED CHALLENGES ═══ */}
+        {/* ═══ OUTGOING / WAITING CHALLENGES ═══ */}
+        {waitingChallenges.length > 0 && (
+          <Animated.View entering={FadeInDown.delay(420).duration(400)} style={styles.challengeSection}>
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionIcon}>⏳</Text>
+              <Text style={styles.sectionLabel}>OUTGOING CHALLENGES</Text>
+              <View style={[styles.countBadge, { backgroundColor: '#06B6D4' }]}>
+                <Text style={styles.countText}>{waitingChallenges.length}</Text>
+              </View>
+            </View>
+            <FlatList
+              data={waitingChallenges}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.pillScroll}
+              keyExtractor={(item) => item.id}
+              renderItem={({ item }) => (
+                <ChallengePill
+                  challengeId={item.id}
+                  opponentUsername={item.opponentUsername}
+                  category={item.category}
+                  type="waiting"
+                  timeSent={item.createdAt}
+                  onPress={() => {
+                    // Waiting cards are not tappable (disabled in ChallengePill)
+                  }}
+                />
+              )}
+              ItemSeparatorComponent={() => <View style={{ width: 12 }} />}
+            />
+          </Animated.View>
+        )}
+
+        {/* ═══ COMPLETED CHALLENGES ═══ */}
         {completedChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(450).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>

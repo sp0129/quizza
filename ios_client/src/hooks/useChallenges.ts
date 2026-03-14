@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
+import { AppState } from 'react-native';
 import { api } from '../api/client';
 import { useDashboardStore, Challenge } from '../stores/dashboard';
 
@@ -23,6 +24,21 @@ interface RawCompletedChallenge {
   won: boolean;
   tied: boolean;
   completedAt: string;
+}
+
+interface RawOutgoingChallenge {
+  id: string;
+  gameId: string;
+  category: string;
+  opponentUsername: string;
+  status: 'waiting' | 'completed';
+  createdAt: string;
+  expiresAt: string;
+  myScore?: number;
+  opponentScore?: number;
+  won?: boolean;
+  tied?: boolean;
+  completedAt?: string;
 }
 
 function mapRawChallenge(raw: RawChallenge): Challenge {
@@ -57,6 +73,26 @@ function mapCompletedChallenge(raw: RawCompletedChallenge): Challenge {
   };
 }
 
+function mapOutgoingChallenge(raw: RawOutgoingChallenge): Challenge {
+  return {
+    id: raw.id,
+    opponentId: '',
+    opponentUsername: raw.opponentUsername,
+    opponentHandle: `@${raw.opponentUsername.toLowerCase()}`,
+    category: raw.category,
+    gameId: raw.gameId,
+    status: raw.status === 'completed' ? 'completed' : 'waiting',
+    createdAt: raw.createdAt,
+    expiresAt: raw.expiresAt,
+    myScore: raw.myScore,
+    opponentScore: raw.opponentScore,
+    won: raw.won,
+    tied: raw.tied,
+  };
+}
+
+const POLL_INTERVAL_MS = 30_000; // 30 seconds
+
 export function useChallenges() {
   const {
     challenges,
@@ -68,17 +104,25 @@ export function useChallenges() {
   } = useDashboardStore();
 
   const hasFetched = useRef(false);
+  const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const fetchChallenges = useCallback(async () => {
     setChallengesLoading(true);
     try {
-      const [incoming, completed] = await Promise.all([
+      const [incoming, completed, outgoing] = await Promise.all([
         api.get<RawChallenge[]>('/challenges/incoming'),
         api.get<RawCompletedChallenge[]>('/challenges/completed').catch(() => [] as RawCompletedChallenge[]),
+        api.get<RawOutgoingChallenge[]>('/challenges/outgoing').catch(() => [] as RawOutgoingChallenge[]),
       ]);
+
+      // Deduplicate: outgoing completed challenges may overlap with /completed endpoint
+      const completedIds = new Set(completed.map(c => c.id));
+      const uniqueOutgoing = outgoing.filter(o => !completedIds.has(o.id));
+
       setChallenges([
         ...incoming.map(mapRawChallenge),
         ...completed.map(mapCompletedChallenge),
+        ...uniqueOutgoing.map(mapOutgoingChallenge),
       ]);
     } catch {
       // silently fail — keep existing challenges
@@ -118,6 +162,40 @@ export function useChallenges() {
       hasFetched.current = true;
       fetchChallenges();
     }
+  }, [fetchChallenges]);
+
+  // Poll for updates when there are waiting challenges
+  const hasWaiting = challenges.some(c => c.status === 'waiting');
+
+  useEffect(() => {
+    if (!hasWaiting) {
+      if (pollRef.current) {
+        clearInterval(pollRef.current);
+        pollRef.current = null;
+      }
+      return;
+    }
+
+    pollRef.current = setInterval(() => {
+      fetchChallenges();
+    }, POLL_INTERVAL_MS);
+
+    return () => {
+      if (pollRef.current) {
+        clearInterval(pollRef.current);
+        pollRef.current = null;
+      }
+    };
+  }, [hasWaiting, fetchChallenges]);
+
+  // Re-fetch when app comes to foreground
+  useEffect(() => {
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'active') {
+        fetchChallenges();
+      }
+    });
+    return () => sub.remove();
   }, [fetchChallenges]);
 
   return {

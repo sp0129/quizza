@@ -547,7 +547,9 @@ export default function GameScreen({ route, navigation }: Props) {
     const opponent = finalScores?.opponent;
     const mine = finalScores?.mine ?? score;
 
-    // For async challenges where opponent hasn't played yet, show waiting screen
+    // Challenger finished async game — opponent hasn't played yet.
+    // Show score summary + send them back to Dashboard where they'll
+    // see a "waiting" card that updates when the opponent finishes.
     if (mode === 'async' && opponent === undefined) {
       return (
         <LinearGradient colors={gradients.game} style={styles.flex}>
@@ -561,7 +563,7 @@ export default function GameScreen({ route, navigation }: Props) {
             </View>
 
             <Text style={styles.waitingMsg}>
-              Waiting for your opponent to play (up to 24h).
+              Your opponent will be notified. You'll see results on your dashboard when they finish.
             </Text>
 
             <ProgressDots total={questions.length} current={-1} results={questionResults} />

@@ -1,11 +1,15 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withSpring,
+  withRepeat,
+  withSequence,
+  withTiming,
   runOnJS,
   FadeOut,
+  Easing,
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import * as Haptics from 'expo-haptics';
@@ -16,7 +20,7 @@ interface ChallengePillProps {
   challengeId: string;
   opponentUsername: string;
   category: string;
-  type: 'incoming' | 'outgoing';
+  type: 'incoming' | 'outgoing' | 'waiting';
   timeSent?: string;
   myScore?: number;
   opponentScore?: number;
@@ -46,14 +50,32 @@ function ChallengePill({
   onPress,
 }: ChallengePillProps) {
   const scale = useSharedValue(1);
+  const pulseScale = useSharedValue(1);
   const theme = getCategoryTheme(category);
+  const isWaiting = type === 'waiting';
+  const isOutgoing = type === 'outgoing';
 
   const handlePress = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     onPress();
   }, [onPress]);
 
+  // Pulsing animation for waiting state
+  useEffect(() => {
+    if (isWaiting) {
+      pulseScale.value = withRepeat(
+        withSequence(
+          withTiming(1.1, { duration: 750, easing: Easing.inOut(Easing.ease) }),
+          withTiming(1.0, { duration: 750, easing: Easing.inOut(Easing.ease) }),
+        ),
+        -1,
+        true,
+      );
+    }
+  }, [isWaiting]);
+
   const tapGesture = Gesture.Tap()
+    .enabled(!isWaiting) // Disable tap for waiting cards
     .onBegin(() => {
       'worklet';
       scale.value = withSpring(0.95, { damping: 12, stiffness: 400 });
@@ -68,9 +90,54 @@ function ChallengePill({
     transform: [{ scale: scale.value }],
   }));
 
-  const isOutgoing = type === 'outgoing';
+  const pulseStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: pulseScale.value }],
+  }));
 
-  // Outcome-based styling for completed challenges
+  // ── Waiting state ──
+  if (isWaiting) {
+    return (
+      <GestureDetector gesture={tapGesture}>
+        <Animated.View
+          style={[
+            styles.pillOuter,
+            animStyle,
+            {
+              shadowColor: '#06B6D4',
+              shadowOffset: { width: 0, height: 2 },
+              shadowOpacity: 0.15,
+              shadowRadius: 6,
+              elevation: 3,
+            },
+          ]}
+          exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
+        >
+          <View style={[styles.bottomEdge, { backgroundColor: '#06B6D420' }]} />
+          <View
+            style={[
+              styles.pill,
+              {
+                backgroundColor: '#06B6D40D',
+                borderColor: '#06B6D4',
+                opacity: 0.85,
+              },
+            ]}
+          >
+            <Text style={styles.categoryIcon}>{theme.emoji}</Text>
+            <Text style={styles.handle} numberOfLines={1}>
+              @{opponentUsername}
+            </Text>
+            <Text style={styles.waitingText}>Waiting...</Text>
+            <Animated.Text style={[styles.waitingIcon, pulseStyle]}>
+              ⏳
+            </Animated.Text>
+          </View>
+        </Animated.View>
+      </GestureDetector>
+    );
+  }
+
+  // ── Outcome-based styling for completed challenges ──
   const outcomeColor = isOutgoing
     ? won
       ? '#22C55E'
@@ -95,10 +162,8 @@ function ChallengePill({
         : '😢'
     : undefined;
 
-  // Tinted background based on outcome
   const tintedBg = isOutgoing ? outcomeColor + '18' : colors.bg.surface;
   const borderCol = isOutgoing ? outcomeColor : colors.bg.elevated;
-  // Darker shade for 3D bottom edge
   const bottomEdgeColor = isOutgoing ? outcomeColor + '60' : colors.bg.elevated;
 
   return (
@@ -107,7 +172,6 @@ function ChallengePill({
         style={[
           styles.pillOuter,
           animStyle,
-          // Colored glow shadow
           isOutgoing && {
             shadowColor: outcomeColor,
             shadowOffset: { width: 0, height: 4 },
@@ -118,33 +182,19 @@ function ChallengePill({
         ]}
         exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
       >
-        {/* 3D bottom edge — thicker colored bar at bottom */}
         <View
-          style={[
-            styles.bottomEdge,
-            { backgroundColor: bottomEdgeColor },
-          ]}
+          style={[styles.bottomEdge, { backgroundColor: bottomEdgeColor }]}
         />
-
-        {/* Main card face */}
         <View
           style={[
             styles.pill,
-            {
-              backgroundColor: tintedBg,
-              borderColor: borderCol,
-            },
+            { backgroundColor: tintedBg, borderColor: borderCol },
           ]}
         >
-          {/* Category icon */}
           <Text style={styles.categoryIcon}>{theme.emoji}</Text>
-
-          {/* Opponent handle */}
           <Text style={styles.handle} numberOfLines={1}>
             @{opponentUsername}
           </Text>
-
-          {/* Outcome text or time */}
           {isOutgoing && outcomeText ? (
             <>
               <Text style={[styles.outcomeText, { color: outcomeColor }]}>
@@ -168,7 +218,7 @@ export default React.memo(ChallengePill);
 const styles = StyleSheet.create({
   pillOuter: {
     width: 150,
-    height: 154, // 150 + 4 for bottom edge
+    height: 154,
     borderRadius: 16,
   },
   bottomEdge: {
@@ -178,7 +228,6 @@ const styles = StyleSheet.create({
     right: 0,
     height: 150,
     borderRadius: 16,
-    // Sits behind pill, visible as a 4px bottom bar
   },
   pill: {
     width: 150,
@@ -211,5 +260,14 @@ const styles = StyleSheet.create({
     color: colors.text.secondary,
     fontSize: 11,
     fontWeight: '400',
+  },
+  // Waiting state
+  waitingText: {
+    color: '#06B6D4',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  waitingIcon: {
+    fontSize: 20,
   },
 });

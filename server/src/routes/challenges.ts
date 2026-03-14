@@ -120,6 +120,53 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
   }
 });
 
+// GET /challenges/outgoing — challenges I sent, waiting for opponent OR ready (opponent finished)
+router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  try {
+    const result = await pool.query(
+      `SELECT i.id, i.category, i.game_id, i.created_at, i.expires_at,
+              g.status AS game_status,
+              g.player_a_score, g.player_b_score, g.winner_id, g.completed_at,
+              invitee.username AS opponent_username
+       FROM invitations i
+       JOIN games g ON g.id = i.game_id
+       JOIN users invitee ON invitee.id = i.invitee_id
+       WHERE i.inviter_id = $1
+         AND i.expires_at > NOW()
+         AND g.status IN ('waiting', 'active', 'completed')
+       ORDER BY i.created_at DESC
+       LIMIT 20`,
+      [req.userId]
+    );
+
+    const mapped = result.rows.map(r => {
+      const isCompleted = r.game_status === 'completed';
+      return {
+        id: r.id,
+        gameId: r.game_id,
+        category: r.category,
+        opponentUsername: r.opponent_username,
+        status: isCompleted ? 'completed' : 'waiting',
+        createdAt: r.created_at,
+        expiresAt: r.expires_at,
+        // Only include scores if completed
+        ...(isCompleted ? {
+          myScore: r.player_a_score,
+          opponentScore: r.player_b_score,
+          won: r.winner_id === req.userId,
+          tied: r.winner_id === null && r.player_a_score !== null && r.player_b_score !== null,
+          completedAt: r.completed_at,
+        } : {}),
+      };
+    });
+
+    res.json(mapped);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // POST /challenges/:invitationId/accept
 router.post('/:invitationId/accept', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const me = req.userId!;
