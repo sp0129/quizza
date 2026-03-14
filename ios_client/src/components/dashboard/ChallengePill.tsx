@@ -95,13 +95,13 @@ function ChallengePill({
   }));
 
   // Colors based on type
-  let accentColor = colors.text.secondary;
+  let accentColor = '#06B6D4'; // Incoming: cyan
   let statusText = timeSent ? getTimeSince(timeSent) : '';
   let statusEmoji = '';
   let rowOpacity = 1;
 
   if (isWaiting) {
-    accentColor = '#06B6D4';
+    accentColor = '#B8571A'; // Outgoing: orange
     statusText = 'Waiting for opponent...';
     statusEmoji = '⏳';
     rowOpacity = 0.75;
@@ -112,7 +112,7 @@ function ChallengePill({
       statusEmoji = '🎉';
     } else if (tied) {
       accentColor = '#F59E0B';
-      statusText = 'Tied!';
+      statusText = 'You tied';
       statusEmoji = '🤝';
     } else {
       accentColor = '#EF4444';
@@ -124,7 +124,18 @@ function ChallengePill({
   return (
     <GestureDetector gesture={tapGesture}>
       <Animated.View
-        style={[styles.row, { opacity: rowOpacity }, animStyle]}
+        style={[
+          styles.row,
+          {
+            opacity: rowOpacity,
+            shadowColor: accentColor,
+            shadowOffset: { width: 0, height: 2 },
+            shadowOpacity: 0.2,
+            shadowRadius: 8,
+            elevation: 4,
+          },
+          animStyle,
+        ]}
         exiting={FadeOut.duration(200).withInitialValues({ opacity: 1 })}
       >
         {/* Left accent bar */}
@@ -139,11 +150,11 @@ function ChallengePill({
             @{opponentUsername}
           </Text>
           {isWaiting ? (
-            <Animated.Text style={[styles.status, { color: accentColor }, pulseStyle]}>
+            <Animated.Text style={[styles.status, { color: accentColor, fontWeight: '600' }, pulseStyle]}>
               {statusText}
             </Animated.Text>
           ) : (
-            <Text style={[styles.status, isOutgoing && { color: accentColor, fontWeight: '700' }]}>
+            <Text style={[styles.status, { color: accentColor, fontWeight: isOutgoing ? '700' : '500' }]}>
               {statusText}
             </Text>
           )}
@@ -174,7 +185,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   accentBar: {
-    width: 4,
+    width: 3,
     height: '100%',
     borderTopLeftRadius: 12,
     borderBottomLeftRadius: 12,
