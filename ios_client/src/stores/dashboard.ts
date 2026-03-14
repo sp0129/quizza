@@ -48,7 +48,7 @@ interface DashboardState {
   // Challenges
   challenges: Challenge[];
   challengesLoading: boolean;
-  seenResultIds: Set<string>;
+  seenResultIds: Record<string, true>;
   setChallenges: (challenges: Challenge[]) => void;
   addChallenge: (challenge: Challenge) => void;
   removeChallenge: (id: string) => void;
@@ -91,27 +91,25 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
   // Challenges
   challenges: [],
   challengesLoading: true,
-  seenResultIds: new Set<string>(),
+  seenResultIds: {},
   setChallenges: (challenges) => set({ challenges }),
   addChallenge: (challenge) =>
     set((s) => ({ challenges: [challenge, ...s.challenges] })),
   removeChallenge: (id) =>
     set((s) => ({ challenges: s.challenges.filter((c) => c.id !== id) })),
   markChallengeSeen: (id) => {
-    set((s) => {
-      const next = new Set(s.seenResultIds);
-      next.add(id);
-      // Persist to AsyncStorage
-      AsyncStorage.setItem(SEEN_RESULTS_KEY, JSON.stringify([...next])).catch(() => {});
-      return { seenResultIds: next };
-    });
+    const next = { ...get().seenResultIds, [id]: true as const };
+    set({ seenResultIds: next });
+    AsyncStorage.setItem(SEEN_RESULTS_KEY, JSON.stringify(Object.keys(next))).catch(() => {});
   },
   loadSeenResults: async () => {
     try {
       const raw = await AsyncStorage.getItem(SEEN_RESULTS_KEY);
       if (raw) {
         const ids: string[] = JSON.parse(raw);
-        set({ seenResultIds: new Set(ids) });
+        const map: Record<string, true> = {};
+        for (const id of ids) map[id] = true;
+        set({ seenResultIds: map });
       }
     } catch {}
   },

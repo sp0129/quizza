@@ -83,8 +83,8 @@ export default function DashboardScreen({ navigation }: Props) {
   const completedChallenges = challenges
     .filter((c) => c.status === 'completed')
     .sort((a, b) => {
-      const aSeen = seenResultIds.has(a.id) ? 1 : 0;
-      const bSeen = seenResultIds.has(b.id) ? 1 : 0;
+      const aSeen = seenResultIds[a.id] ? 1 : 0;
+      const bSeen = seenResultIds[b.id] ? 1 : 0;
       return aSeen - bSeen; // unseen first, seen last
     });
 
@@ -454,9 +454,9 @@ export default function DashboardScreen({ navigation }: Props) {
                   opponentScore={item.opponentScore}
                   won={item.won}
                   tied={item.tied}
-                  seen={seenResultIds.has(item.id)}
+                  seen={seenResultIds[item.id]}
                   onPress={() => {
-                    const isSeen = seenResultIds.has(item.id);
+                    const isSeen = seenResultIds[item.id];
                     if (!isSeen) markChallengeSeen(item.id);
                     const result: 'win' | 'loss' | 'tie' = item.won
                       ? 'win'
