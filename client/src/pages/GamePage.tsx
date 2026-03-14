@@ -145,8 +145,8 @@ export default function GamePage() {
       const isPlayerA = status.player_a_id === userId;
       const opponentScore = isPlayerA ? status.player_b_score : status.player_a_score;
       if (opponentScore !== null && opponentScore !== undefined) {
-        setFinalScores(prev => ({ ...prev, opponent: opponentScore }));
-        const isLose = (prev => (prev?.mine ?? 0) < opponentScore)(finalScores);
+        setFinalScores(prev => ({ mine: prev?.mine ?? 0, ...prev, opponent: opponentScore }));
+        const isLose = (finalScores?.mine ?? 0) < opponentScore;
         setTimeout(() => playGibberish(isLose ? 'sad' : 'happy'), 400);
       } else {
         setTimeout(() => playGibberish('happy'), 400);
