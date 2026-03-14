@@ -449,9 +449,9 @@ export default function DashboardScreen({ navigation }: Props) {
                   won={item.won}
                   tied={item.tied}
                   seen={item.seen}
-                  onPress={() => {
+                  onPress={async () => {
                     const isSeen = item.seen;
-                    if (!isSeen) markChallengeSeen(item.id);
+                    if (!isSeen) await markChallengeSeen(item.id);
                     const result: 'win' | 'loss' | 'tie' = item.won
                       ? 'win'
                       : item.tied

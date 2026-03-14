@@ -49,7 +49,7 @@ interface DashboardState {
   setChallenges: (challenges: Challenge[]) => void;
   addChallenge: (challenge: Challenge) => void;
   removeChallenge: (id: string) => void;
-  markChallengeSeen: (id: string) => void;
+  markChallengeSeen: (id: string) => Promise<void>;
   setChallengesLoading: (loading: boolean) => void;
 
   // Metrics
@@ -92,15 +92,17 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
     set((s) => ({ challenges: [challenge, ...s.challenges] })),
   removeChallenge: (id) =>
     set((s) => ({ challenges: s.challenges.filter((c) => c.id !== id) })),
-  markChallengeSeen: (id) => {
+  markChallengeSeen: async (id) => {
     // Optimistically mark seen locally
     set((s) => ({
       challenges: s.challenges.map((c) =>
         c.id === id ? { ...c, seen: true } : c
       ),
     }));
-    // Persist to server
-    api.patch(`/challenges/${id}/seen`, {}).catch(() => {});
+    // Persist to server — await so re-fetches see the update
+    try {
+      await api.patch(`/challenges/${id}/seen`, {});
+    } catch {}
   },
   setChallengesLoading: (loading) => set({ challengesLoading: loading }),
 
