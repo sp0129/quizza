@@ -156,6 +156,7 @@ export default function DashboardScreen({ navigation }: Props) {
           category: result.category,
           timer: 30,
           opponentUsername: challenge.opponentUsername,
+          opponentAvatarId: challenge.opponentAvatarId,
         });
       } catch (err: any) {
         Alert.alert('Error', err.message || 'Failed to accept challenge');

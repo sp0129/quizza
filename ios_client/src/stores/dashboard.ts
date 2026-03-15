@@ -7,7 +7,7 @@ export interface Challenge {
   opponentId: string;
   opponentUsername: string;
   opponentHandle: string;
-  opponentAvatar?: string;
+  opponentAvatarId?: number;
   category: string;
   gameId: string;
   status: 'your_turn' | 'waiting' | 'incoming' | 'completed';

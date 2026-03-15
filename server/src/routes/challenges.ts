@@ -63,7 +63,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
 router.get('/incoming', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const result = await pool.query(
-      `SELECT i.id, i.category, i.game_id, i.expires_at, u.username AS inviter_username
+      `SELECT i.id, i.category, i.game_id, i.expires_at, u.username AS inviter_username, u.avatar_id AS inviter_avatar_id
        FROM invitations i
        JOIN users u ON u.id = i.inviter_id
        WHERE i.invitee_id = $1
@@ -89,8 +89,8 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
               i.inviter_seen, i.invitee_seen,
               g.player_a_score, g.player_b_score, g.winner_id, g.completed_at,
               g.player_a_id, g.player_b_id,
-              inviter.username AS inviter_username,
-              invitee.username AS invitee_username
+              inviter.username AS inviter_username, inviter.avatar_id AS inviter_avatar_id,
+              invitee.username AS invitee_username, invitee.avatar_id AS invitee_avatar_id
        FROM invitations i
        JOIN games g ON g.id = i.game_id
        JOIN users inviter ON inviter.id = i.inviter_id
@@ -112,6 +112,7 @@ router.get('/completed', requireAuth, async (req: AuthRequest, res: Response): P
         myScore: iAmInviter ? r.player_a_score : r.player_b_score,
         opponentScore: iAmInviter ? r.player_b_score : r.player_a_score,
         opponentUsername: iAmInviter ? r.invitee_username : r.inviter_username,
+        opponentAvatarId: iAmInviter ? (r.invitee_avatar_id ?? undefined) : (r.inviter_avatar_id ?? undefined),
         won: r.winner_id === me,
         tied: r.winner_id === null && r.player_a_score !== null && r.player_b_score !== null,
         completedAt: r.completed_at,
@@ -134,7 +135,7 @@ router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Pr
               i.inviter_seen,
               g.status AS game_status,
               g.player_a_score, g.player_b_score, g.winner_id, g.completed_at,
-              invitee.username AS opponent_username
+              invitee.username AS opponent_username, invitee.avatar_id AS opponent_avatar_id
        FROM invitations i
        JOIN games g ON g.id = i.game_id
        JOIN users invitee ON invitee.id = i.invitee_id
@@ -153,6 +154,7 @@ router.get('/outgoing', requireAuth, async (req: AuthRequest, res: Response): Pr
         gameId: r.game_id,
         category: r.category,
         opponentUsername: r.opponent_username,
+        opponentAvatarId: r.opponent_avatar_id ?? undefined,
         status: isCompleted ? 'completed' : 'waiting',
         createdAt: r.created_at,
         expiresAt: r.expires_at,

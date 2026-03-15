@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["M7CPMU8E8A.com.quizza.app"],
+        "paths": ["/join/*"]
+      }
+    ]
+  }
+}

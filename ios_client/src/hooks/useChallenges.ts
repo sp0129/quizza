@@ -11,6 +11,7 @@ interface RawChallenge {
   created_at?: string;
   inviter_id?: string;
   inviter_username: string;
+  inviter_avatar_id?: number;
   status?: string;
 }
 
@@ -21,6 +22,7 @@ interface RawCompletedChallenge {
   myScore: number;
   opponentScore: number;
   opponentUsername: string;
+  opponentAvatarId?: number;
   won: boolean;
   tied: boolean;
   completedAt: string;
@@ -32,6 +34,7 @@ interface RawOutgoingChallenge {
   gameId: string;
   category: string;
   opponentUsername: string;
+  opponentAvatarId?: number;
   status: 'waiting' | 'completed';
   createdAt: string;
   expiresAt: string;
@@ -49,6 +52,7 @@ function mapRawChallenge(raw: RawChallenge): Challenge {
     opponentId: raw.inviter_id ?? '',
     opponentUsername: raw.inviter_username,
     opponentHandle: `@${raw.inviter_username.toLowerCase()}`,
+    opponentAvatarId: raw.inviter_avatar_id,
     category: raw.category,
     gameId: raw.game_id,
     status: raw.status === 'waiting' ? 'waiting' : raw.status === 'your_turn' ? 'your_turn' : 'incoming',
@@ -63,6 +67,7 @@ function mapCompletedChallenge(raw: RawCompletedChallenge): Challenge {
     opponentId: '',
     opponentUsername: raw.opponentUsername,
     opponentHandle: `@${raw.opponentUsername.toLowerCase()}`,
+    opponentAvatarId: raw.opponentAvatarId,
     category: raw.category,
     gameId: raw.gameId,
     status: 'completed',
@@ -82,6 +87,7 @@ function mapOutgoingChallenge(raw: RawOutgoingChallenge): Challenge {
     opponentId: '',
     opponentUsername: raw.opponentUsername,
     opponentHandle: `@${raw.opponentUsername.toLowerCase()}`,
+    opponentAvatarId: raw.opponentAvatarId,
     category: raw.category,
     gameId: raw.gameId,
     status: raw.status === 'completed' ? 'completed' : 'waiting',

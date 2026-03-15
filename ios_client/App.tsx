@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, LinkingOptions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
+import * as Linking from 'expo-linking';
 import { AuthProvider, useAuth } from './src/hooks/useAuth';
 import { colors } from './src/theme';
 import BottomNav from './src/components/dashboard/BottomNav';
@@ -80,6 +81,18 @@ export type RootStackParamList = {
 
 const Tab = createBottomTabNavigator<TabParamList>();
 const Stack = createNativeStackNavigator<RootStackParamList>();
+
+const linking: LinkingOptions<RootStackParamList> = {
+  prefixes: [
+    Linking.createURL('/'),
+    'https://quizza-eta.vercel.app',
+  ],
+  config: {
+    screens: {
+      GuestJoin: 'join/:roomCode',
+    },
+  },
+};
 
 const TAB_KEY_MAP: Record<string, keyof TabParamList> = {
   Home: 'Home',
@@ -164,7 +177,7 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <AuthProvider>
-          <NavigationContainer>
+          <NavigationContainer linking={linking}>
             <StatusBar style="light" />
             <RootNavigator />
           </NavigationContainer>

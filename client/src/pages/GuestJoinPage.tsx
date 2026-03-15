@@ -1,84 +1,46 @@
-import { useState, type FormEvent } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
-import { api } from '../api/client';
+import { useParams } from 'react-router-dom';
 import PizzaMascot from '../components/PizzaMascot';
 import Sparkles from '../components/Sparkles';
 
 export default function GuestJoinPage() {
   const { roomCode } = useParams<{ roomCode: string }>();
-  const { loginAsGuest } = useAuth();
-  const navigate = useNavigate();
-
-  const [name, setName] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const handleJoin = async (e: FormEvent) => {
-    e.preventDefault();
-    const trimmed = name.trim();
-    if (!trimmed) { setError('Enter a name to continue'); return; }
-
-    setLoading(true);
-    setError('');
-    try {
-      // Create a guest account and set auth context
-      await loginAsGuest(trimmed);
-
-      // Join the room with the code from the link
-      const data = await api.post<{ roomId: string; questionSetId: string; category: string; roomCode: string; timerSeconds: number }>(
-        '/rooms/join',
-        { roomCode: roomCode?.toUpperCase(), displayName: trimmed }
-      );
-
-      const timer = data.timerSeconds ?? 30;
-      navigate(`/room/${data.roomId}?qsid=${data.questionSetId}&rc=${data.roomCode}&timer=${timer}`);
-    } catch (err: any) {
-      setError(err.message ?? 'Could not join room');
-      setLoading(false);
-    }
-  };
 
   return (
     <div className="gradient-page-wrapper">
       <Sparkles />
       <div className="gradient-page">
-        <div className="auth-card" style={{ maxWidth: 420 }}>
-          <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-            <PizzaMascot mood="thinking" size={90} />
+        <div className="auth-card" style={{ maxWidth: 420, textAlign: 'center' }}>
+          <div style={{ marginBottom: '1.5rem' }}>
+            <PizzaMascot mood="excited" size={110} />
           </div>
 
-          <h1 className="page-title text-center" style={{ fontSize: '1.6rem' }}>Join Room</h1>
+          <h1 className="page-title" style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>
+            You've been invited!
+          </h1>
+
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', marginBottom: '1.5rem' }}>
+            Open this link on your iPhone to join the game in the Quizza app.
+          </p>
 
           <div className="room-code-display" style={{ marginBottom: '1.5rem' }}>
             <span className="room-code-label">Room Code</span>
             <span className="room-code-value">{roomCode?.toUpperCase()}</span>
           </div>
 
-          <form onSubmit={handleJoin} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)' }}>Your name</label>
-              <input
-                className="field"
-                style={{ fontSize: '1.1rem', padding: '0.85rem 1rem' }}
-                type="text"
-                placeholder="Pick a nickname…"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                maxLength={30}
-                autoFocus
-              />
-            </div>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1rem' }}>
+            Don't have the app yet? Get it on TestFlight:
+          </p>
 
-            {error && <p className="inline-error">{error}</p>}
+          <a
+            href="https://testflight.apple.com/join/ZGn86wHH"
+            className="btn btn-room btn-block"
+            style={{ display: 'block', textDecoration: 'none', textAlign: 'center' }}
+          >
+            Download on TestFlight
+          </a>
 
-            <button className="btn btn-room btn-block" type="submit" disabled={loading}>
-              {loading ? 'Joining…' : '▶ Join Game'}
-            </button>
-          </form>
-
-          <p className="text-muted text-center" style={{ marginTop: '1.2rem', fontSize: '0.85rem' }}>
-            No account needed — you'll play as a guest.
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '1.5rem' }}>
+            After installing, open this link again on your phone — it will open directly in the app.
           </p>
         </div>
       </div>
