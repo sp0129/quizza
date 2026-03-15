@@ -37,7 +37,7 @@ function useDebounce<T>(value: T, delay: number): T {
 
 // ── Main screen ────────────────────────────────────────────────
 export default function CategoryScreen({ route, navigation }: Props) {
-  const { mode, target } = route.params;
+  const { mode, target, targetAvatarId } = route.params;
   const insets = useSafeAreaInsets();
 
   // State
@@ -145,6 +145,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
           gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId,
           category: selected.name, catId: selected.id, timer: timerSeconds, questionCount,
           opponentUsername: target,
+          opponentAvatarId: targetAvatarId,
         });
       }
     } catch (err: any) {

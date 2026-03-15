@@ -45,7 +45,7 @@ export type RootStackParamList = {
   Profile: undefined;
   Friends: undefined;
   Leaderboard: undefined;
-  Category: { mode: 'solo' | 'room' | 'challenge'; target?: string };
+  Category: { mode: 'solo' | 'room' | 'challenge'; target?: string; targetAvatarId?: number };
   Game: {
     gameId: string;
     mode: string;
@@ -156,6 +156,7 @@ function RootNavigator() {
           <Stack.Screen name="Game" component={GameScreen} />
           <Stack.Screen name="Room" component={RoomScreen} />
           <Stack.Screen name="Results" component={ResultsScreen} />
+          <Stack.Screen name="GuestJoin" component={GuestJoinScreen} />
           {/* Guests can navigate here to create a real account */}
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />

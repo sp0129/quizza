@@ -319,7 +319,7 @@ export default function FriendsScreen({ navigation }: Props) {
                 style={styles.challengeBtn}
                 onPress={() => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                  navigation.navigate('Category', { mode: 'challenge', target: item.username });
+                  navigation.navigate('Category', { mode: 'challenge', target: item.username, targetAvatarId: item.avatar_id });
                 }}
               >
                 <Text style={styles.challengeBtnText}>⚔️ Challenge</Text>
@@ -339,9 +339,9 @@ export default function FriendsScreen({ navigation }: Props) {
         visible={selectedFriend !== null}
         friend={selectedFriend}
         onClose={() => setSelectedFriend(null)}
-        onChallenge={(username) => {
+        onChallenge={(username, avatarId) => {
           setSelectedFriend(null);
-          navigation.navigate('Category', { mode: 'challenge', target: username });
+          navigation.navigate('Category', { mode: 'challenge', target: username, targetAvatarId: avatarId });
         }}
       />
     </View>

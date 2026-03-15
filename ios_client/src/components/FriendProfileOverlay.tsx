@@ -48,7 +48,7 @@ interface FriendProfileOverlayProps {
   visible: boolean;
   friend: Friend | null;
   onClose: () => void;
-  onChallenge: (username: string) => void;
+  onChallenge: (username: string, avatarId?: number) => void;
 }
 
 function formatRelativeDate(dateStr: string): string {
@@ -227,7 +227,7 @@ export default function FriendProfileOverlay({
               style={styles.challengeCta}
               onPress={() => {
                 Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-                onChallenge(friend.username);
+                onChallenge(friend.username, friend.avatar_id);
               }}
               activeOpacity={0.85}
             >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View, Text, TextInput, TouchableOpacity, StyleSheet,
   KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator,
@@ -15,12 +15,35 @@ type Props = NativeStackScreenProps<RootStackParamList, 'GuestJoin'>;
 
 export default function GuestJoinScreen({ route, navigation }: Props) {
   const { roomCode } = route.params;
-  const { loginAsGuest } = useAuth();
+  const { user, loginAsGuest } = useAuth();
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleJoin = async () => {
+  // If user is already logged in, auto-join the room
+  useEffect(() => {
+    if (!user) return;
+    setLoading(true);
+    api.post<{
+      roomId: string; questionSetId: string; category: string; roomCode: string; timerSeconds: number;
+    }>('/rooms/join', { roomCode: roomCode.toUpperCase() })
+      .then(data => {
+        navigation.replace('Room', {
+          roomId: data.roomId,
+          questionSetId: data.questionSetId,
+          category: data.category,
+          roomCode: data.roomCode,
+          isHost: false,
+          timer: data.timerSeconds ?? 30,
+        });
+      })
+      .catch(err => {
+        setError(err.message ?? 'Could not join room');
+        setLoading(false);
+      });
+  }, [user]);
+
+  const handleGuestJoin = async () => {
     const trimmed = name.trim();
     if (!trimmed) { setError('Enter a name to continue'); return; }
     setLoading(true);
@@ -45,6 +68,31 @@ export default function GuestJoinScreen({ route, navigation }: Props) {
     }
   };
 
+  // Authenticated user: show joining state
+  if (user) {
+    return (
+      <LinearGradient colors={gradients.bg} style={s.flex}>
+        <View style={s.centerContainer}>
+          <PizzaMascot mood="excited" size={100} />
+          {loading && !error ? (
+            <>
+              <ActivityIndicator color={colors.cyan} size="large" style={{ marginTop: 24 }} />
+              <Text style={s.joiningText}>Joining room {roomCode.toUpperCase()}...</Text>
+            </>
+          ) : (
+            <>
+              <Text style={s.errorLarge}>{error}</Text>
+              <TouchableOpacity style={[s.btn, s.btnCyan]} onPress={() => navigation.navigate('MainTabs')}>
+                <Text style={s.btnText}>Back to Home</Text>
+              </TouchableOpacity>
+            </>
+          )}
+        </View>
+      </LinearGradient>
+    );
+  }
+
+  // Guest flow: enter name
   return (
     <LinearGradient colors={gradients.bg} style={s.flex}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={s.flex}>
@@ -76,7 +124,7 @@ export default function GuestJoinScreen({ route, navigation }: Props) {
 
             <TouchableOpacity
               style={[s.btn, s.btnCyan, loading && s.btnDisabled]}
-              onPress={handleJoin}
+              onPress={handleGuestJoin}
               disabled={loading}
             >
               {loading
@@ -95,6 +143,7 @@ export default function GuestJoinScreen({ route, navigation }: Props) {
 const s = StyleSheet.create({
   flex: { flex: 1 },
   container: { flexGrow: 1, justifyContent: 'center', padding: 24 },
+  centerContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 },
   mascotArea: { alignItems: 'center', marginBottom: 24 },
   card: {
     backgroundColor: colors.surface,
@@ -119,6 +168,8 @@ const s = StyleSheet.create({
     marginBottom: 12,
   },
   error: { color: colors.red, fontSize: 14, marginBottom: 12 },
+  errorLarge: { color: colors.red, fontSize: 16, textAlign: 'center', marginTop: 16, marginBottom: 16 },
+  joiningText: { color: colors.textMuted, fontSize: 16, marginTop: 12 },
   btn: { borderRadius: 12, padding: 16, alignItems: 'center', marginTop: 4 },
   btnCyan: { backgroundColor: colors.cyan },
   btnDisabled: { opacity: 0.6 },
