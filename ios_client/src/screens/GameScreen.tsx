@@ -176,20 +176,15 @@ function ProgressDots({ total, current, results }: {
 }
 
 // ---------------------------------------------------------------------------
-// Fisher-Yates shuffle for answer display order
+// Sequential top-to-bottom reveal order (quiz show style)
 // ---------------------------------------------------------------------------
 
-function shuffleIndices(count: number): number[] {
-  const indices = Array.from({ length: count }, (_, i) => i);
-  for (let i = indices.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [indices[i], indices[j]] = [indices[j], indices[i]];
-  }
-  return indices;
+function sequentialIndices(count: number): number[] {
+  return Array.from({ length: count }, (_, i) => i);
 }
 
 // ---------------------------------------------------------------------------
-// Pop-in Answer Button wrapper (fade + scale, random stagger order)
+// Pop-in Answer Button wrapper (fade + scale, top-to-bottom stagger)
 // ---------------------------------------------------------------------------
 
 function PopInAnswerButton({
@@ -312,7 +307,7 @@ export default function GameScreen({ route, navigation }: Props) {
     setTimerActive(false);
     setPhase('reading');
     // Shuffle reveal order for this question
-    setRevealOrder(shuffleIndices(ANSWER_COUNT));
+    setRevealOrder(sequentialIndices(ANSWER_COUNT));
 
     // After 3s: reveal answer buttons with random pop-in
     readTimeoutRef.current = setTimeout(() => {
