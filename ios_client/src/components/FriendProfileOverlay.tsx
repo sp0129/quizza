@@ -7,7 +7,7 @@ import {
   ScrollView,
   ActivityIndicator,
 } from 'react-native';
-import Animated, { FadeIn, FadeOut, SlideInUp, SlideOutDown } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { api } from '../api/client';
@@ -140,25 +140,14 @@ export default function FriendProfileOverlay({
       exiting={FadeOut.duration(200)}
       style={styles.overlay}
     >
-      {/* Backdrop */}
-      <TouchableOpacity activeOpacity={1} onPress={onClose} style={StyleSheet.absoluteFill} />
-
-      <Animated.View
-        entering={SlideInUp.duration(300)}
-        exiting={SlideOutDown.duration(200)}
-        style={[styles.sheet, { paddingBottom: insets.bottom + 20 }]}
-      >
-        {/* Drag handle */}
-        <View style={styles.handleRow}>
-          <View style={styles.handle} />
-        </View>
-
+      <View style={[styles.sheet, { paddingTop: insets.top + 12, paddingBottom: insets.bottom + 20 }]}>
         {/* Header */}
         <View style={styles.header}>
-          <View style={{ flex: 1 }} />
           <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
-            <Text style={styles.closeBtnText}>✕</Text>
+            <Text style={styles.closeBtnText}>←</Text>
           </TouchableOpacity>
+          <Text style={styles.headerTitle}>Profile</Text>
+          <View style={{ width: 32 }} />
         </View>
 
         {loading ? (
@@ -172,6 +161,7 @@ export default function FriendProfileOverlay({
         ) : data ? (
           <>
             <ScrollView
+              style={{ flex: 1 }}
               showsVerticalScrollIndicator={false}
               contentContainerStyle={styles.scrollContent}
             >
@@ -240,7 +230,7 @@ export default function FriendProfileOverlay({
             </TouchableOpacity>
           </>
         ) : null}
-      </Animated.View>
+      </View>
     </Animated.View>
   );
 }
@@ -248,36 +238,24 @@ export default function FriendProfileOverlay({
 const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0,0,0,0.6)',
+    backgroundColor: colors.bg.primary,
     zIndex: 150,
-    justifyContent: 'flex-end',
   },
   sheet: {
-    backgroundColor: colors.bg.surface,
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
+    flex: 1,
+    backgroundColor: colors.bg.primary,
     paddingHorizontal: 20,
-    maxHeight: '80%',
-    borderWidth: 1,
-    borderBottomWidth: 0,
-    borderColor: colors.border + '30',
-  },
-  handleRow: {
-    alignItems: 'center',
-    paddingTop: 12,
-    paddingBottom: 4,
-  },
-  handle: {
-    width: 36,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: colors.border + '60',
   },
   header: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 4,
+    marginBottom: 16,
+  },
+  headerTitle: {
+    color: colors.text.primary,
+    fontSize: 18,
+    fontWeight: '800',
   },
   closeBtn: {
     width: 32,
@@ -288,14 +266,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   closeBtnText: {
-    color: colors.text.secondary,
-    fontSize: 14,
-    fontWeight: '700',
+    color: colors.text.primary,
+    fontSize: 18,
   },
   centered: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 40,
   },
   errorText: {
     color: colors.text.secondary,
