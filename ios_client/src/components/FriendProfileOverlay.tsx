@@ -7,7 +7,7 @@ import {
   ScrollView,
   ActivityIndicator,
 } from 'react-native';
-import Animated, { FadeIn, FadeOut, SlideInDown, SlideOutDown } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeOut, SlideInUp, SlideOutDown } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { api } from '../api/client';
@@ -144,7 +144,7 @@ export default function FriendProfileOverlay({
       <TouchableOpacity activeOpacity={1} onPress={onClose} style={StyleSheet.absoluteFill} />
 
       <Animated.View
-        entering={SlideInDown.duration(350).springify().damping(18)}
+        entering={SlideInUp.duration(300)}
         exiting={SlideOutDown.duration(200)}
         style={[styles.sheet, { paddingBottom: insets.bottom + 20 }]}
       >
