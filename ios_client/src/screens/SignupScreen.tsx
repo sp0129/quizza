@@ -22,7 +22,7 @@ export default function SignupScreen({ navigation }: Props) {
   const [loading, setLoading] = useState(false);
 
   const onSuccess = () => {
-    try { navigation.navigate('Dashboard' as any); } catch {}
+    try { navigation.navigate('MainTabs' as any); } catch {}
   };
 
   const handleSignup = async () => {

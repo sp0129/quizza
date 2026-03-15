@@ -159,9 +159,7 @@ export default function ProfileScreen({ navigation }: Props) {
       >
         {/* Header */}
         <View style={s.header}>
-          <TouchableOpacity style={s.backBtn} onPress={() => navigation.goBack()}>
-            <Text style={s.backBtnText}>←</Text>
-          </TouchableOpacity>
+          <View style={{ width: 36 }} />
           <Text style={s.headerTitle}>Profile</Text>
           <View style={{ width: 36 }} />
         </View>
@@ -353,7 +351,7 @@ const s = StyleSheet.create({
     gap: 4,
   },
   avatarOptionSelected: {
-    borderColor: colors.brand?.primary ?? '#7C3AED',
+    borderColor: '#7C3AED',
     backgroundColor: 'rgba(124,58,237,0.15)',
   },
   avatarOptionEmoji: { fontSize: 32 },

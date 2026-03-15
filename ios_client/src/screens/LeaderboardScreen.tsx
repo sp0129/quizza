@@ -79,9 +79,7 @@ export default function LeaderboardScreen({ navigation }: Props) {
     <View style={styles.root}>
       {/* Header */}
       <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
-        <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
-          <Text style={styles.backBtnText}>←</Text>
-        </TouchableOpacity>
+        <View style={{ width: 36 }} />
         <Text style={styles.title}>Leaderboard</Text>
         <View style={{ width: 36 }} />
       </View>

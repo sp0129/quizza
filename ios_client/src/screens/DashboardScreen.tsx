@@ -29,7 +29,6 @@ import { getAvatar } from '../utils/avatars';
 import StatusBarHeader from '../components/dashboard/StatusBarHeader';
 import MetricsPill from '../components/dashboard/MetricsPill';
 import ModeCard from '../components/dashboard/ModeCard';
-import BottomNav from '../components/dashboard/BottomNav';
 import ChallengePill from '../components/dashboard/ChallengePill';
 import UserSearchOverlay from '../components/dashboard/UserSearchOverlay';
 import EmptyState from '../components/dashboard/EmptyState';
@@ -225,26 +224,6 @@ export default function DashboardScreen({ navigation }: Props) {
     [navigation, setSearchOverlayVisible],
   );
 
-  // Bottom nav
-  const handleTabPress = useCallback(
-    (key: string) => {
-      switch (key) {
-        case 'home':
-          break;
-        case 'leaderboard':
-          navigation.navigate('Leaderboard');
-          break;
-        case 'friends':
-          navigation.navigate('Friends');
-          break;
-        case 'profile':
-          navigation.navigate('Profile');
-          break;
-      }
-    },
-    [navigation],
-  );
-
   const handleShareInviteLink = useCallback(async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     const inviteLink = `https://quizza.app/invite/${user?.username ?? 'friend'}`;
@@ -285,7 +264,7 @@ export default function DashboardScreen({ navigation }: Props) {
       {/* Scrollable content */}
       <ScrollView
         style={styles.scroll}
-        contentContainerStyle={[styles.scrollContent, { paddingBottom: 80 + insets.bottom }]}
+        contentContainerStyle={[styles.scrollContent, { paddingBottom: 20 }]}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
         refreshControl={
@@ -499,13 +478,6 @@ export default function DashboardScreen({ navigation }: Props) {
           </Animated.View>
         )}
       </ScrollView>
-
-      {/* Bottom navigation */}
-      <BottomNav
-        activeTab="home"
-        onTabPress={handleTabPress}
-        badges={{ home: pendingCount }}
-      />
 
       {/* User search overlay */}
       <UserSearchOverlay

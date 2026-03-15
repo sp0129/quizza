@@ -399,7 +399,7 @@ export default function RoomScreen({ route, navigation }: Props) {
     return (
       <LinearGradient colors={gradients.bg} style={s.flex}>
         <ScrollView contentContainerStyle={[s.lobbyContainer, { paddingTop: insets.top + 16, paddingBottom: insets.bottom + 24 }]}>
-          <TouchableOpacity style={[s.closeBtn, { top: insets.top + 12 }]} onPress={() => navigation.navigate('Dashboard')}>
+          <TouchableOpacity style={[s.closeBtn, { top: insets.top + 12 }]} onPress={() => navigation.navigate('MainTabs')}>
             <Text style={s.closeBtnText}>✕</Text>
           </TouchableOpacity>
 
@@ -546,7 +546,7 @@ export default function RoomScreen({ route, navigation }: Props) {
             </View>
           )}
 
-          <TouchableOpacity style={[s.btn, s.btnGhost]} onPress={() => navigation.navigate('Dashboard')}>
+          <TouchableOpacity style={[s.btn, s.btnGhost]} onPress={() => navigation.navigate('MainTabs')}>
             <Text style={s.btnGhostText}>Back to Dashboard</Text>
           </TouchableOpacity>
         </ScrollView>
@@ -587,7 +587,7 @@ export default function RoomScreen({ route, navigation }: Props) {
         )}
 
         <View style={s.topRow}>
-          <TouchableOpacity style={s.quitBtn} onPress={() => navigation.navigate('Dashboard')}>
+          <TouchableOpacity style={s.quitBtn} onPress={() => navigation.navigate('MainTabs')}>
             <Text style={s.quitBtnText}>✕</Text>
           </TouchableOpacity>
 

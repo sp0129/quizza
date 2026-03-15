@@ -310,7 +310,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
 
   const handleBackToHome = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    navigation.navigate('Dashboard');
+    navigation.navigate('MainTabs');
   }, [navigation]);
 
   // ---------------------------------------------------------------------------

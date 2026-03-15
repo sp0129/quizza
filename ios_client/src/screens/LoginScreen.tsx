@@ -24,7 +24,7 @@ export default function LoginScreen({ navigation }: Props) {
     // If Login was pushed onto the authenticated stack (e.g. by a guest),
     // navigate back to Dashboard. In the unauthenticated stack the
     // navigator switch handles it automatically.
-    try { navigation.navigate('Dashboard' as any); } catch {}
+    try { navigation.navigate('MainTabs' as any); } catch {}
   };
 
   const handleLogin = async () => {

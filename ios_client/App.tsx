@@ -2,11 +2,13 @@ import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { AuthProvider, useAuth } from './src/hooks/useAuth';
 import { colors } from './src/theme';
+import BottomNav from './src/components/dashboard/BottomNav';
 
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
@@ -21,6 +23,15 @@ import LeaderboardScreen from './src/screens/LeaderboardScreen';
 import ResultsScreen from './src/screens/ResultsScreen';
 import ResetPasswordScreen from './src/screens/ResetPasswordScreen';
 
+// Tab navigator param list
+export type TabParamList = {
+  Home: undefined;
+  Leaderboard: undefined;
+  Friends: undefined;
+  Profile: undefined;
+};
+
+// Root stack param list (screens pushed on top of tabs)
 export type RootStackParamList = {
   // Auth
   Login: undefined;
@@ -28,6 +39,7 @@ export type RootStackParamList = {
   ResetPassword: undefined;
   GuestJoin: { roomCode: string };
   // App
+  MainTabs: undefined;
   Dashboard: undefined;
   Profile: undefined;
   Friends: undefined;
@@ -64,7 +76,50 @@ export type RootStackParamList = {
   };
 };
 
+const Tab = createBottomTabNavigator<TabParamList>();
 const Stack = createNativeStackNavigator<RootStackParamList>();
+
+const TAB_KEY_MAP: Record<string, keyof TabParamList> = {
+  Home: 'Home',
+  Leaderboard: 'Leaderboard',
+  Friends: 'Friends',
+  Profile: 'Profile',
+};
+
+function MainTabs() {
+  return (
+    <Tab.Navigator
+      screenOptions={{ headerShown: false }}
+      tabBar={({ state, navigation }: any) => {
+        const activeRoute = state.routes[state.index].name;
+        const tabKey =
+          activeRoute === 'Home' ? 'home' :
+          activeRoute === 'Leaderboard' ? 'leaderboard' :
+          activeRoute === 'Friends' ? 'friends' :
+          activeRoute === 'Profile' ? 'profile' : 'home';
+
+        return (
+          <BottomNav
+            activeTab={tabKey}
+            onTabPress={(key) => {
+              const routeName =
+                key === 'home' ? 'Home' :
+                key === 'leaderboard' ? 'Leaderboard' :
+                key === 'friends' ? 'Friends' :
+                key === 'profile' ? 'Profile' : 'Home';
+              navigation.navigate(routeName);
+            }}
+          />
+        );
+      }}
+    >
+      <Tab.Screen name="Home" component={DashboardScreen} />
+      <Tab.Screen name="Leaderboard" component={LeaderboardScreen} />
+      <Tab.Screen name="Friends" component={FriendsScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
+}
 
 function RootNavigator() {
   const { user, loading } = useAuth();
@@ -81,10 +136,7 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false, animation: 'slide_from_right' }}>
       {user ? (
         <>
-          <Stack.Screen name="Dashboard" component={DashboardScreen} />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
-          <Stack.Screen name="Friends" component={FriendsScreen} />
-          <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
+          <Stack.Screen name="MainTabs" component={MainTabs} />
           <Stack.Screen name="Category" component={CategoryScreen} />
           <Stack.Screen name="Game" component={GameScreen} />
           <Stack.Screen name="Room" component={RoomScreen} />

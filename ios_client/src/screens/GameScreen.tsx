@@ -506,7 +506,7 @@ export default function GameScreen({ route, navigation }: Props) {
           text: 'Quit', style: 'destructive',
           onPress: async () => {
             try { await api.post(`/games/${gameId}/quit`, {}); } catch {}
-            navigation.navigate('Dashboard');
+            navigation.navigate('MainTabs');
           },
         },
       ],
@@ -566,7 +566,7 @@ export default function GameScreen({ route, navigation }: Props) {
             <Animated.View entering={FadeIn.delay(300)}>
               <TouchableOpacity
                 style={styles.dashBtn}
-                onPress={() => navigation.navigate('Dashboard')}
+                onPress={() => navigation.navigate('MainTabs')}
                 activeOpacity={0.8}
               >
                 <Text style={styles.dashBtnText}>Back to Dashboard</Text>
