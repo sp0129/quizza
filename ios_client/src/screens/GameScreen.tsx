@@ -495,6 +495,38 @@ export default function GameScreen({ route, navigation }: Props) {
     })();
   }, [phase, gameId]);
 
+  // --- Navigate to Results when game is finished and scores are ready ---
+  useEffect(() => {
+    if (phase !== 'finished') return;
+    const opponent = finalScores?.opponent;
+    const mine = finalScores?.mine ?? score;
+
+    // Async challenger still waiting for opponent — don't navigate yet
+    if (mode === 'async' && opponent === undefined) return;
+
+    const gameResult: 'win' | 'loss' | 'tie' = opponentQuit
+      ? 'win'
+      : opponent !== undefined
+        ? mine > opponent
+          ? 'win'
+          : mine < opponent
+            ? 'loss'
+            : 'tie'
+        : 'win'; // solo = always "win"
+
+    const gameMode: 'challenge' | 'solo' | 'group' =
+      mode === 'async' || mode === 'sync' ? 'challenge' : 'solo';
+
+    navigation.replace('Results', {
+      yourScore: mine,
+      opponentScore: opponent,
+      category: route.params.category ?? 'Trivia',
+      gameMode,
+      result: gameResult,
+      timestamp: new Date().toISOString(),
+    });
+  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category]);
+
   // --- Quit handler ---
   const handleQuit = () => {
     Alert.alert(
@@ -577,31 +609,7 @@ export default function GameScreen({ route, navigation }: Props) {
       );
     }
 
-    // Determine outcome and navigate to ResultsScreen
-    const gameResult: 'win' | 'loss' | 'tie' = opponentQuit
-      ? 'win'
-      : opponent !== undefined
-        ? mine > opponent
-          ? 'win'
-          : mine < opponent
-            ? 'loss'
-            : 'tie'
-        : 'win'; // solo = always "win"
-
-    const gameMode: 'challenge' | 'solo' | 'group' =
-      mode === 'async' || mode === 'sync' ? 'challenge' : 'solo';
-
-    // Navigate once (replace so user can't go back to game)
-    navigation.replace('Results', {
-      yourScore: mine,
-      opponentScore: opponent,
-      category: route.params.category ?? 'Trivia',
-      gameMode,
-      result: gameResult,
-      timestamp: new Date().toISOString(),
-    });
-
-    // Render nothing while navigating
+    // Render nothing while navigating (useEffect below handles the navigate)
     return (
       <LinearGradient colors={gradients.game} style={styles.flex}>
         <View style={styles.center} />

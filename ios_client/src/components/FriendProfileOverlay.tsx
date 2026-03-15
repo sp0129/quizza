@@ -145,11 +145,10 @@ export default function FriendProfileOverlay({
       <View style={[styles.sheet, { paddingTop: insets.top + 12, paddingBottom: insets.bottom + 20 }]}>
         {/* Header */}
         <View style={styles.header}>
-          <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
-            <Text style={styles.closeBtnText}>←</Text>
-          </TouchableOpacity>
           <Text style={styles.headerTitle}>Profile</Text>
-          <View style={{ width: 32 }} />
+          <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
+            <Text style={styles.closeBtnText}>✕</Text>
+          </TouchableOpacity>
         </View>
 
         {loading ? (
@@ -253,6 +252,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 16,
+    paddingLeft: 4,
   },
   headerTitle: {
     color: colors.text.primary,
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   scrollContent: {
-    paddingBottom: 12,
+    paddingBottom: 20,
   },
   // Profile
   profileSection: {
@@ -452,7 +452,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     borderRadius: 14,
     alignItems: 'center',
-    marginTop: 4,
+    marginTop: 16,
     shadowColor: colors.cta,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,
