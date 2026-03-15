@@ -72,14 +72,14 @@ function UserSearchOverlay({
     debounceRef.current = setTimeout(async () => {
       try {
         const results = await api.get<
-          { id: string; username: string; profile_picture_url?: string }[]
+          { id: string; username: string; avatar_id?: number }[]
         >(`/users/search?q=${encodeURIComponent(query.trim())}`);
         setSearchResults(
           results.map((u) => ({
             id: u.id,
             username: u.username,
             handle: `@${u.username.toLowerCase()}`,
-            profilePictureUrl: u.profile_picture_url,
+            avatarId: u.avatar_id,
           })),
         );
       } catch {

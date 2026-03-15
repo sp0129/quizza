@@ -13,10 +13,12 @@ import * as Haptics from 'expo-haptics';
 import { api } from '../api/client';
 import { colors } from '../theme/colors';
 import { getCategoryTheme, cleanCategoryName } from '../utils/categoryThemes';
+import { getAvatar } from '../utils/avatars';
 
 interface Friend {
   id: string;
   username: string;
+  avatar_id?: number;
 }
 
 interface GameHistoryItem {
@@ -169,7 +171,7 @@ export default function FriendProfileOverlay({
               <View style={styles.profileSection}>
                 <View style={styles.largeAvatar}>
                   <Text style={styles.largeAvatarText}>
-                    {friend.username[0]?.toUpperCase()}
+                    {getAvatar(friend.avatar_id)?.emoji ?? friend.username[0]?.toUpperCase()}
                   </Text>
                 </View>
                 <Text style={styles.username}>{friend.username}</Text>

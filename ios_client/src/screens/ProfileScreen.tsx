@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  ScrollView, TextInput, Image, ActivityIndicator, Alert, Linking,
+  ScrollView, TextInput, ActivityIndicator, Alert, Linking,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import * as ImagePicker from 'expo-image-picker';
-import * as ImageManipulator from 'expo-image-manipulator';
+import * as Haptics from 'expo-haptics';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
 import { colors, gradients } from '../theme';
+import { AVATARS, getAvatar } from '../utils/avatars';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
@@ -18,19 +18,29 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
 interface Friend {
   id: string;
   username: string;
-  profile_picture_url?: string;
+  avatar_id?: number;
 }
 
 interface UserSearch {
   id: string;
   username: string;
-  profile_picture_url?: string;
+  avatar_id?: number;
   is_friend: boolean;
 }
 
-function Avatar({ uri, username, size }: { uri?: string; username: string; size: number }) {
-  if (uri) {
-    return <Image source={{ uri }} style={{ width: size, height: size, borderRadius: size / 2 }} />;
+function UserAvatar({ avatarId, username, size }: { avatarId?: number; username: string; size: number }) {
+  const avatar = getAvatar(avatarId);
+  if (avatar) {
+    return (
+      <View style={{
+        width: size, height: size, borderRadius: size / 2,
+        backgroundColor: 'rgba(124,58,237,0.2)',
+        justifyContent: 'center', alignItems: 'center',
+        borderWidth: 2, borderColor: 'rgba(124,58,237,0.3)',
+      }}>
+        <Text style={{ fontSize: size * 0.5 }}>{avatar.emoji}</Text>
+      </View>
+    );
   }
   return (
     <View style={{
@@ -52,7 +62,8 @@ export default function ProfileScreen({ navigation }: Props) {
   const [username, setUsername] = useState(user?.username ?? '');
   const [usernameLoading, setUsernameLoading] = useState(false);
   const [usernameError, setUsernameError] = useState('');
-  const [avatarLoading, setAvatarLoading] = useState(false);
+  const [showAvatarPicker, setShowAvatarPicker] = useState(false);
+  const [savingAvatarId, setSavingAvatarId] = useState<number | null>(null);
 
   const [friends, setFriends] = useState<Friend[]>([]);
   const [friendsLoading, setFriendsLoading] = useState(true);
@@ -92,34 +103,17 @@ export default function ProfileScreen({ navigation }: Props) {
     }
   };
 
-  const pickAvatar = async () => {
-    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (status !== 'granted') {
-      Alert.alert('Permission needed', 'Allow photo library access to set a profile picture.');
-      return;
-    }
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.8,
-    });
-    if (result.canceled || !result.assets[0]) return;
-
-    setAvatarLoading(true);
+  const selectAvatar = async (avatarId: number) => {
+    setSavingAvatarId(avatarId);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     try {
-      const manipulated = await ImageManipulator.manipulateAsync(
-        result.assets[0].uri,
-        [{ resize: { width: 150, height: 150 } }],
-        { compress: 0.7, format: ImageManipulator.SaveFormat.JPEG, base64: true }
-      );
-      const dataUrl = `data:image/jpeg;base64,${manipulated.base64}`;
-      const updated = await api.put<{ profile_picture_url: string }>('/users/me', { profilePictureUrl: dataUrl });
-      refreshUser({ profile_picture_url: updated.profile_picture_url });
+      const updated = await api.put<{ avatar_id: number }>('/users/me', { avatarId });
+      refreshUser({ avatar_id: updated.avatar_id });
+      setShowAvatarPicker(false);
     } catch (err: any) {
-      Alert.alert('Upload failed', err.message);
+      Alert.alert('Error', err.message);
     } finally {
-      setAvatarLoading(false);
+      setSavingAvatarId(null);
     }
   };
 
@@ -174,17 +168,48 @@ export default function ProfileScreen({ navigation }: Props) {
 
         {/* Avatar */}
         <View style={s.avatarSection}>
-          <TouchableOpacity onPress={pickAvatar} style={s.avatarWrap} disabled={avatarLoading}>
-            {avatarLoading
-              ? <View style={s.avatarPlaceholder}><ActivityIndicator color={colors.green} /></View>
-              : <Avatar uri={user?.profile_picture_url} username={user?.username ?? '?'} size={90} />
-            }
+          <TouchableOpacity
+            onPress={() => setShowAvatarPicker(!showAvatarPicker)}
+            style={s.avatarWrap}
+          >
+            <UserAvatar avatarId={user?.avatar_id} username={user?.username ?? '?'} size={90} />
             <View style={s.avatarEditBadge}>
               <Text style={s.avatarEditText}>✏️</Text>
             </View>
           </TouchableOpacity>
-          <Text style={s.avatarHint}>Tap to change photo</Text>
+          <Text style={s.avatarHint}>Tap to change avatar</Text>
         </View>
+
+        {/* Avatar picker */}
+        {showAvatarPicker && (
+          <View style={s.avatarPickerCard}>
+            <Text style={s.cardLabel}>Choose your avatar</Text>
+            <View style={s.avatarGrid}>
+              {AVATARS.map((a) => {
+                const isSelected = user?.avatar_id === a.id;
+                const isSaving = savingAvatarId === a.id;
+                return (
+                  <TouchableOpacity
+                    key={a.id}
+                    style={[s.avatarOption, isSelected && s.avatarOptionSelected]}
+                    onPress={() => selectAvatar(a.id)}
+                    disabled={savingAvatarId !== null}
+                    activeOpacity={0.7}
+                  >
+                    {isSaving ? (
+                      <ActivityIndicator color={colors.textPrimary} size="small" />
+                    ) : (
+                      <Text style={s.avatarOptionEmoji}>{a.emoji}</Text>
+                    )}
+                    <Text style={[s.avatarOptionLabel, isSelected && s.avatarOptionLabelSelected]}>
+                      {a.label}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </View>
+        )}
 
         {/* Username */}
         <View style={s.card}>
@@ -226,7 +251,7 @@ export default function ProfileScreen({ navigation }: Props) {
           />
           {addResults.map(u => (
             <View key={u.id} style={s.searchRow}>
-              <Avatar uri={u.profile_picture_url} username={u.username} size={36} />
+              <UserAvatar avatarId={u.avatar_id} username={u.username} size={36} />
               <Text style={s.searchName}>{u.username}</Text>
               {u.is_friend
                 ? <Text style={s.alreadyFriend}>Friends ✓</Text>
@@ -253,7 +278,7 @@ export default function ProfileScreen({ navigation }: Props) {
           )}
           {friends.map(f => (
             <View key={f.id} style={s.friendRow}>
-              <Avatar uri={f.profile_picture_url} username={f.username} size={36} />
+              <UserAvatar avatarId={f.avatar_id} username={f.username} size={36} />
               <Text style={s.friendName}>{f.username}</Text>
               <TouchableOpacity onPress={() => removeFriend(f)} style={s.removeBtn}>
                 <Text style={s.removeBtnText}>✕</Text>
@@ -298,12 +323,6 @@ const s = StyleSheet.create({
   headerTitle: { color: colors.textPrimary, fontSize: 20, fontWeight: '700' },
   avatarSection: { alignItems: 'center', gap: 8 },
   avatarWrap: { position: 'relative' },
-  avatarPlaceholder: {
-    width: 90, height: 90, borderRadius: 45,
-    backgroundColor: 'rgba(124,58,237,0.15)',
-    justifyContent: 'center', alignItems: 'center',
-    borderWidth: 2, borderColor: colors.border,
-  },
   avatarEditBadge: {
     position: 'absolute', bottom: 0, right: 0,
     backgroundColor: colors.surface, borderRadius: 12,
@@ -312,6 +331,35 @@ const s = StyleSheet.create({
   },
   avatarEditText: { fontSize: 12 },
   avatarHint: { color: colors.textMuted, fontSize: 13 },
+  // Avatar picker
+  avatarPickerCard: {
+    backgroundColor: colors.surface,
+    borderRadius: 16, padding: 16,
+    borderWidth: 1, borderColor: colors.border,
+    gap: 12,
+  },
+  avatarGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+    justifyContent: 'center',
+  },
+  avatarOption: {
+    width: 76, height: 84,
+    borderRadius: 14,
+    backgroundColor: 'rgba(30,41,59,0.6)',
+    justifyContent: 'center', alignItems: 'center',
+    borderWidth: 2, borderColor: 'transparent',
+    gap: 4,
+  },
+  avatarOptionSelected: {
+    borderColor: colors.brand?.primary ?? '#7C3AED',
+    backgroundColor: 'rgba(124,58,237,0.15)',
+  },
+  avatarOptionEmoji: { fontSize: 32 },
+  avatarOptionLabel: { color: colors.textMuted, fontSize: 11, fontWeight: '600' },
+  avatarOptionLabelSelected: { color: colors.textPrimary },
+  // Card
   card: {
     backgroundColor: colors.surface,
     borderRadius: 16, padding: 16,

@@ -17,7 +17,7 @@ import { colors } from '../theme/colors';
 export interface GamePlayer {
   id: string;
   username: string;
-  profilePictureUrl?: string;
+  avatarId?: number;
   isFriend?: boolean;
 }
 

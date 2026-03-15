@@ -15,7 +15,7 @@ interface StatusBarHeaderProps {
   metrics: UserMetrics;
   avatarInitial: string;
   onProfilePress: () => void;
-  profilePicture?: string;
+  avatarId?: number;
 }
 
 function StatusBarHeader({

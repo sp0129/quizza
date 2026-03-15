@@ -18,6 +18,7 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
 import { colors } from '../theme/colors';
+import { getAvatar } from '../utils/avatars';
 import FriendProfileOverlay from '../components/FriendProfileOverlay';
 import type { RootStackParamList } from '../../App';
 
@@ -26,13 +27,13 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Friends'>;
 interface Friend {
   id: string;
   username: string;
-  profile_picture_url?: string;
+  avatar_id?: number;
 }
 
 interface UserSearchResult {
   id: string;
   username: string;
-  profile_picture_url?: string;
+  avatar_id?: number;
   is_friend: boolean;
 }
 
@@ -215,7 +216,9 @@ export default function FriendsScreen({ navigation }: Props) {
           renderItem={({ item }) => (
             <View style={styles.userRow}>
               <View style={styles.avatar}>
-                <Text style={styles.avatarText}>{item.username[0]?.toUpperCase()}</Text>
+                <Text style={styles.avatarText}>
+                  {getAvatar(item.avatar_id)?.emoji ?? item.username[0]?.toUpperCase()}
+                </Text>
               </View>
               <View style={styles.userInfo}>
                 <Text style={styles.userName} numberOfLines={1}>
@@ -300,7 +303,9 @@ export default function FriendsScreen({ navigation }: Props) {
               }}
             >
               <View style={styles.avatar}>
-                <Text style={styles.avatarText}>{item.username[0]?.toUpperCase()}</Text>
+                <Text style={styles.avatarText}>
+                  {getAvatar(item.avatar_id)?.emoji ?? item.username[0]?.toUpperCase()}
+                </Text>
               </View>
               <View style={styles.userInfo}>
                 <Text style={styles.userName} numberOfLines={1}>

@@ -51,7 +51,7 @@ router.post('/signup', async (req: Request, res: Response): Promise<void> => {
     const result = await pool.query(
       `INSERT INTO users (id, username, email, password_hash)
        VALUES ($1, $2, $3, $4)
-       RETURNING id, username, email, created_at`,
+       RETURNING id, username, email, avatar_id, created_at`,
       [uuidv4(), username, email, passwordHash]
     );
     const user = result.rows[0];
@@ -75,7 +75,7 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
   }
   try {
     const result = await pool.query(
-      'SELECT id, username, email, password_hash, created_at FROM users WHERE email = $1',
+      'SELECT id, username, email, password_hash, avatar_id, created_at FROM users WHERE email = $1',
       [email]
     );
     const user = result.rows[0];
@@ -153,7 +153,7 @@ router.post('/apple', async (req: Request, res: Response): Promise<void> => {
 
     // Return existing user if already linked
     const existing = await pool.query(
-      `SELECT id, username, email, is_guest FROM users WHERE apple_id = $1`,
+      `SELECT id, username, email, avatar_id, is_guest FROM users WHERE apple_id = $1`,
       [appleId]
     );
     if (existing.rows.length > 0) {
@@ -172,7 +172,7 @@ router.post('/apple', async (req: Request, res: Response): Promise<void> => {
       `INSERT INTO users (id, username, email, password_hash, apple_id, is_guest)
        VALUES ($1, $2, $3, $4, $5, FALSE)
        ON CONFLICT (apple_id) DO UPDATE SET apple_id = EXCLUDED.apple_id
-       RETURNING id, username, email, is_guest`,
+       RETURNING id, username, email, avatar_id, is_guest`,
       [userId, username, userEmail, uuidv4(), appleId]
     );
     const newUser = inserted.rows[0];

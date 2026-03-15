@@ -8,7 +8,7 @@ const router = Router();
 router.get('/', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const result = await pool.query(
-      `SELECT u.id, u.username, u.profile_picture_url
+      `SELECT u.id, u.username, u.avatar_id
        FROM friendships f
        JOIN users u ON u.id = CASE
          WHEN f.user_a_id = $1 THEN f.user_b_id

@@ -19,7 +19,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Leaderboard'>;
 interface LeaderboardEntry {
   id: string;
   username: string;
-  profile_picture_url?: string;
+  avatar_id?: number;
   wins: number;
   winRate: number;
   rank: number;

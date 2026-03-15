@@ -13,6 +13,7 @@ import roomRoutes from './routes/rooms';
 import friendRoutes from './routes/friends';
 import { syncGameManager } from './services/syncGame';
 import { roomGameManager } from './services/roomGame';
+import pool from './db';
 
 const app = express();
 const PORT = parseInt(process.env.PORT ?? '3001', 10);
@@ -50,6 +51,14 @@ syncGameManager.attach(wss);
 const roomWss = new WebSocketServer({ server: httpServer, path: '/room-ws' });
 roomGameManager.attach(roomWss);
 
-httpServer.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Ensure avatar_id column exists (idempotent)
+pool.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS avatar_id INTEGER NOT NULL DEFAULT 0`)
+  .then(() => {
+    httpServer.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Migration failed:', err);
+    process.exit(1);
+  });

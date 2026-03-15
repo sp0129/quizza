@@ -13,7 +13,7 @@ router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Prom
   if (q.length < 1) { res.json([]); return; }
   try {
     const result = await pool.query(
-      `SELECT id, username, profile_picture_url,
+      `SELECT id, username, avatar_id,
               EXISTS (
                 SELECT 1 FROM friendships
                 WHERE (user_a_id = LEAST($2::uuid, id) AND user_b_id = GREATEST($2::uuid, id))
@@ -92,7 +92,7 @@ router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Pr
 router.get('/:username', async (req: Request, res: Response): Promise<void> => {
   try {
     const userResult = await pool.query(
-      `SELECT id, username, profile_picture_url, created_at FROM users WHERE username = $1`,
+      `SELECT id, username, avatar_id, created_at FROM users WHERE username = $1`,
       [req.params.username]
     );
     const user = userResult.rows[0];
@@ -117,18 +117,18 @@ router.get('/:username', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-// PUT /users/me — update own profile (username, avatar)
+// PUT /users/me — update own profile (username, avatarId)
 router.put('/me', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { username, profilePictureUrl } = req.body;
+  const { username, avatarId } = req.body;
   try {
     const result = await pool.query(
       `UPDATE users
        SET username = COALESCE($1, username),
-           profile_picture_url = COALESCE($2, profile_picture_url),
+           avatar_id = COALESCE($2, avatar_id),
            updated_at = NOW()
        WHERE id = $3
-       RETURNING id, username, email, profile_picture_url, is_guest`,
-      [username ?? null, profilePictureUrl ?? null, req.userId]
+       RETURNING id, username, email, avatar_id, is_guest`,
+      [username ?? null, avatarId ?? null, req.userId]
     );
     res.json(result.rows[0]);
   } catch (err: any) {
@@ -142,15 +142,15 @@ router.put('/:userId', requireAuth, async (req: AuthRequest, res: Response): Pro
   if (req.params.userId !== req.userId) {
     res.status(403).json({ error: 'Forbidden' }); return;
   }
-  const { profilePictureUrl, phoneNumber } = req.body;
+  const { avatarId, phoneNumber } = req.body;
   try {
     const result = await pool.query(
-      `UPDATE users SET profile_picture_url = COALESCE($1, profile_picture_url),
+      `UPDATE users SET avatar_id = COALESCE($1, avatar_id),
                         phone_number = COALESCE($2, phone_number),
                         updated_at = NOW()
        WHERE id = $3
-       RETURNING id, username, email, phone_number, profile_picture_url`,
-      [profilePictureUrl ?? null, phoneNumber ?? null, req.userId]
+       RETURNING id, username, email, phone_number, avatar_id`,
+      [avatarId ?? null, phoneNumber ?? null, req.userId]
     );
     res.json(result.rows[0]);
   } catch (err) {

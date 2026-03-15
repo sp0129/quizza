@@ -35,7 +35,7 @@ export interface SearchedUser {
   id: string;
   username: string;
   handle: string;
-  profilePictureUrl?: string;
+  avatarId?: number;
   isOnline?: boolean;
   isFriend?: boolean;
   mutualFriends?: string[];
