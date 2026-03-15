@@ -33,8 +33,12 @@ export default function GuestJoinPage() {
 
           <a
             href="https://testflight.apple.com/join/ZGn86wHH"
-            className="btn btn-room btn-block"
-            style={{ display: 'block', textDecoration: 'none', textAlign: 'center' }}
+            className="btn btn-block"
+            style={{
+              display: 'block', textDecoration: 'none', textAlign: 'center',
+              background: '#1d4ed8', color: '#ffffff', fontWeight: 700,
+              padding: '1rem', borderRadius: '0.75rem', fontSize: '1.1rem',
+            }}
           >
             Download on TestFlight
           </a>
