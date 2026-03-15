@@ -53,6 +53,8 @@ export type RootStackParamList = {
     catId?: number;
     timer: number;
     questionCount?: number;
+    opponentUsername?: string;
+    opponentAvatarId?: number;
   };
   Room: {
     roomId: string;

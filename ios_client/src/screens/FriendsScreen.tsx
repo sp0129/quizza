@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
   Alert,
   Share,
+  Image,
 } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -214,9 +215,11 @@ export default function FriendsScreen({ navigation }: Props) {
           renderItem={({ item }) => (
             <View style={styles.userRow}>
               <View style={styles.avatar}>
-                <Text style={styles.avatarText}>
-                  {getAvatar(item.avatar_id)?.emoji ?? item.username[0]?.toUpperCase()}
-                </Text>
+                {getAvatar(item.avatar_id) ? (
+                  <Image source={getAvatar(item.avatar_id)!.image} style={styles.avatarImage} resizeMode="cover" />
+                ) : (
+                  <Text style={styles.avatarText}>{item.username[0]?.toUpperCase()}</Text>
+                )}
               </View>
               <View style={styles.userInfo}>
                 <Text style={styles.userName} numberOfLines={1}>
@@ -301,9 +304,11 @@ export default function FriendsScreen({ navigation }: Props) {
               }}
             >
               <View style={styles.avatar}>
-                <Text style={styles.avatarText}>
-                  {getAvatar(item.avatar_id)?.emoji ?? item.username[0]?.toUpperCase()}
-                </Text>
+                {getAvatar(item.avatar_id) ? (
+                  <Image source={getAvatar(item.avatar_id)!.image} style={styles.avatarImage} resizeMode="cover" />
+                ) : (
+                  <Text style={styles.avatarText}>{item.username[0]?.toUpperCase()}</Text>
+                )}
               </View>
               <View style={styles.userInfo}>
                 <Text style={styles.userName} numberOfLines={1}>
@@ -526,6 +531,11 @@ const styles = StyleSheet.create({
     color: colors.text.primary,
     fontSize: 17,
     fontWeight: '800',
+  },
+  avatarImage: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
   },
   userInfo: {
     flex: 1,

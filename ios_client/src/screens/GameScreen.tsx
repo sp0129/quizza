@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   View, Text, StyleSheet, ActivityIndicator, Alert, Dimensions,
-  TouchableOpacity,
+  TouchableOpacity, Image,
 } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -26,6 +26,8 @@ import PizzaMascot, { MascotMood } from '../components/PizzaMascot';
 import AnswerButton from '../components/AnswerButton';
 import CircularTimer from '../components/CircularTimer';
 import { colors, gradients } from '../theme/colors';
+import { useAuth } from '../hooks/useAuth';
+import { getAvatar } from '../utils/avatars';
 import type { RootStackParamList } from '../../App';
 
 // ---------------------------------------------------------------------------
@@ -49,7 +51,7 @@ interface GameResult {
   opponentScore?: number;
 }
 
-type Phase = 'loading' | 'reading' | 'playing' | 'answered' | 'finished';
+type Phase = 'loading' | 'vs' | 'reading' | 'playing' | 'answered' | 'finished';
 type AnswerState = 'neutral' | 'correct' | 'wrong' | 'dimmed';
 
 const API_BASE = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
@@ -251,11 +253,276 @@ function PopInAnswerButton({
 }
 
 // ---------------------------------------------------------------------------
+// VS Screen Overlay
+// ---------------------------------------------------------------------------
+
+const VS_DURATION = 4800;
+
+function VsScreen({
+  myName,
+  myAvatarId,
+  opponentName,
+  opponentAvatarId,
+  category,
+  onDone,
+}: {
+  myName: string;
+  myAvatarId?: number;
+  opponentName: string;
+  opponentAvatarId?: number;
+  category: string;
+  onDone: () => void;
+}) {
+  const insets = useSafeAreaInsets();
+
+  // Slide from sides
+  const leftX = useSharedValue(-SCREEN_WIDTH);
+  const rightX = useSharedValue(SCREEN_WIDTH);
+  const vsScale = useSharedValue(0);
+  const vsOpacity = useSharedValue(0);
+  const catOpacity = useSharedValue(0);
+  const flashOpacity = useSharedValue(0);
+
+  // Ready dots
+  const [dots, setDots] = useState(0);
+
+  useEffect(() => {
+    // Players slide in
+    leftX.value = withSpring(0, { damping: 14, stiffness: 120 });
+    rightX.value = withSpring(0, { damping: 14, stiffness: 120 });
+
+    // VS appears after players land
+    vsScale.value = withDelay(400, withSpring(1, { damping: 8, stiffness: 200 }));
+    vsOpacity.value = withDelay(400, withTiming(1, { duration: 200 }));
+
+    // Category fades in
+    catOpacity.value = withDelay(700, withTiming(1, { duration: 300 }));
+
+    // Flash/impact effect on VS
+    flashOpacity.value = withDelay(400, withSequence(
+      withTiming(0.6, { duration: 100 }),
+      withTiming(0, { duration: 400 }),
+    ));
+
+    // Ready countdown: 3 dots appear one by one after VS settles
+    const dot1 = setTimeout(() => { setDots(1); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }, 1800);
+    const dot2 = setTimeout(() => { setDots(2); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }, 2600);
+    const dot3 = setTimeout(() => { setDots(3); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium); }, 3400);
+
+    // Auto-advance after final dot holds
+    const timer = setTimeout(onDone, VS_DURATION);
+    return () => {
+      clearTimeout(dot1);
+      clearTimeout(dot2);
+      clearTimeout(dot3);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  const leftStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: leftX.value }],
+  }));
+  const rightStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: rightX.value }],
+  }));
+  const vsStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: vsScale.value }],
+    opacity: vsOpacity.value,
+  }));
+  const catStyle = useAnimatedStyle(() => ({
+    opacity: catOpacity.value,
+  }));
+  const flashStyle = useAnimatedStyle(() => ({
+    opacity: flashOpacity.value,
+  }));
+
+  const renderAvatar = (avatarId?: number, name?: string) => {
+    const avatar = getAvatar(avatarId);
+    if (avatar) {
+      return (
+        <View style={vsStyles.avatarCircle}>
+          <Animated.Image source={avatar.image} style={vsStyles.avatarImage} resizeMode="cover" />
+        </View>
+      );
+    }
+    return (
+      <View style={vsStyles.avatarCircle}>
+        <Text style={vsStyles.avatarInitial}>{(name ?? '?')[0]?.toUpperCase()}</Text>
+      </View>
+    );
+  };
+
+  return (
+    <LinearGradient colors={gradients.game} style={styles.flex}>
+      <View style={[vsStyles.container, { paddingTop: insets.top + 40, paddingBottom: insets.bottom + 40 }]}>
+        {/* Flash overlay */}
+        <Animated.View style={[vsStyles.flash, flashStyle]} pointerEvents="none" />
+
+        {/* Players */}
+        <View style={vsStyles.playersRow}>
+          {/* You */}
+          <Animated.View style={[vsStyles.playerBlock, leftStyle]}>
+            {renderAvatar(myAvatarId, myName)}
+            <Text style={vsStyles.playerName} numberOfLines={1}>You</Text>
+            <Text style={vsStyles.playerHandle} numberOfLines={1}>@{myName}</Text>
+          </Animated.View>
+
+          {/* VS */}
+          <Animated.View style={[vsStyles.vsContainer, vsStyle]}>
+            <Text style={vsStyles.vsText}>VS</Text>
+          </Animated.View>
+
+          {/* Opponent */}
+          <Animated.View style={[vsStyles.playerBlock, rightStyle]}>
+            {renderAvatar(opponentAvatarId, opponentName)}
+            <Text style={vsStyles.playerName} numberOfLines={1}>{opponentName}</Text>
+            <Text style={vsStyles.playerHandle} numberOfLines={1}>@{opponentName}</Text>
+          </Animated.View>
+        </View>
+
+        {/* Category */}
+        <Animated.View style={[vsStyles.categoryContainer, catStyle]}>
+          <Text style={vsStyles.categoryText}>{category}</Text>
+        </Animated.View>
+
+        {/* Ready dots */}
+        {dots > 0 && (
+          <View style={vsStyles.dotsRow}>
+            {[1, 2, 3].map(i => (
+              <View
+                key={i}
+                style={[
+                  vsStyles.dot,
+                  i <= dots ? vsStyles.dotActive : vsStyles.dotInactive,
+                ]}
+              />
+            ))}
+          </View>
+        )}
+      </View>
+    </LinearGradient>
+  );
+}
+
+const vsStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  flash: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#FFFFFF',
+  },
+  playersRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    paddingHorizontal: 20,
+  },
+  playerBlock: {
+    flex: 1,
+    alignItems: 'center',
+    gap: 8,
+  },
+  avatarCircle: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+    backgroundColor: 'rgba(124,58,237,0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: 'rgba(124,58,237,0.5)',
+    overflow: 'hidden',
+  },
+  avatarImage: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+  },
+  avatarInitial: {
+    fontSize: 36,
+    fontWeight: '800',
+    color: '#FFFFFF',
+  },
+  playerName: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#FFFFFF',
+    maxWidth: 120,
+  },
+  playerHandle: {
+    fontSize: 12,
+    fontWeight: '500',
+    color: 'rgba(255,255,255,0.5)',
+    maxWidth: 120,
+  },
+  vsContainer: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: '#EF4444',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#EF4444',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.6,
+    shadowRadius: 16,
+    elevation: 10,
+    marginHorizontal: 8,
+  },
+  vsText: {
+    fontSize: 24,
+    fontWeight: '900',
+    color: '#FFFFFF',
+    letterSpacing: 2,
+  },
+  categoryContainer: {
+    marginTop: 40,
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    borderRadius: 12,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+  },
+  categoryText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: 'rgba(255,255,255,0.7)',
+  },
+  dotsRow: {
+    flexDirection: 'row',
+    gap: 14,
+    marginTop: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  dot: {
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+  },
+  dotActive: {
+    backgroundColor: '#22C55E',
+    shadowColor: '#22C55E',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.7,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  dotInactive: {
+    backgroundColor: 'rgba(255,255,255,0.15)',
+  },
+});
+
+// ---------------------------------------------------------------------------
 // Main GameScreen Component
 // ---------------------------------------------------------------------------
 
 export default function GameScreen({ route, navigation }: Props) {
-  const { gameId, mode, questionSetId, timer: QUESTION_TIME } = route.params;
+  const { gameId, mode, questionSetId, timer: QUESTION_TIME, opponentUsername, opponentAvatarId } = route.params;
+  const { user } = useAuth();
   const insets = useSafeAreaInsets();
 
   // --- Core game state ---
@@ -330,15 +597,22 @@ export default function GameScreen({ route, navigation }: Props) {
     };
   }, []);
 
+  // Is this a challenge game that should show VS screen?
+  const isChallenge = (mode === 'async' || mode === 'sync') && !!opponentUsername;
+
   // --- Load questions ---
   useEffect(() => {
     api.get<{ questions: Question[] }>(`/questions/set/${questionSetId}`).then(data => {
       setQuestions(data.questions);
       setQuestionResults(new Array(data.questions.length).fill(null));
       setTimerKey(k => k + 1);
-      startQuestionSequence();
+      if (isChallenge) {
+        setPhase('vs');
+      } else {
+        startQuestionSequence();
+      }
     }).catch(console.error);
-  }, [questionSetId, startQuestionSequence]);
+  }, [questionSetId, startQuestionSequence, isChallenge]);
 
   // --- WebSocket for sync mode ---
   useEffect(() => {
@@ -568,6 +842,22 @@ export default function GameScreen({ route, navigation }: Props) {
   }
 
   // =========================================================================
+  // RENDER: VS Screen (challenge mode only)
+  // =========================================================================
+  if (phase === 'vs') {
+    return (
+      <VsScreen
+        myName={user?.username ?? 'You'}
+        myAvatarId={user?.avatar_id}
+        opponentName={opponentUsername ?? 'Opponent'}
+        opponentAvatarId={opponentAvatarId}
+        category={route.params.category ?? 'Trivia'}
+        onDone={startQuestionSequence}
+      />
+    );
+  }
+
+  // =========================================================================
   // RENDER: Finished → navigate to ResultsScreen
   // =========================================================================
   if (phase === 'finished') {
@@ -687,7 +977,7 @@ export default function GameScreen({ route, navigation }: Props) {
 
         {/* Mascot */}
         <View style={styles.mascotWrap}>
-          <PizzaMascot key={mascotKey} mood={mascotMood} size={60} />
+          <PizzaMascot key={mascotKey} mood={mascotMood} size={75} />
         </View>
       </View>
 

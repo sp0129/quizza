@@ -144,6 +144,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
         navigation.replace('Game', {
           gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId,
           category: selected.name, catId: selected.id, timer: timerSeconds, questionCount,
+          opponentUsername: target,
         });
       }
     } catch (err: any) {

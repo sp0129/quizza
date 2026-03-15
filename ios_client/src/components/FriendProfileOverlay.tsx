@@ -6,6 +6,7 @@ import {
   StyleSheet,
   ScrollView,
   ActivityIndicator,
+  Image,
 } from 'react-native';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -168,9 +169,13 @@ export default function FriendProfileOverlay({
               {/* Profile */}
               <View style={styles.profileSection}>
                 <View style={styles.largeAvatar}>
-                  <Text style={styles.largeAvatarText}>
-                    {getAvatar(friend.avatar_id)?.emoji ?? friend.username[0]?.toUpperCase()}
-                  </Text>
+                  {getAvatar(friend.avatar_id) ? (
+                    <Image source={getAvatar(friend.avatar_id)!.image} style={styles.largeAvatarImage} resizeMode="cover" />
+                  ) : (
+                    <Text style={styles.largeAvatarText}>
+                      {friend.username[0]?.toUpperCase()}
+                    </Text>
+                  )}
                 </View>
                 <Text style={styles.username}>{friend.username}</Text>
                 <Text style={styles.friendsSince}>
@@ -302,6 +307,11 @@ const styles = StyleSheet.create({
     color: colors.text.primary,
     fontSize: 26,
     fontWeight: '800',
+  },
+  largeAvatarImage: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
   },
   username: {
     color: colors.text.primary,

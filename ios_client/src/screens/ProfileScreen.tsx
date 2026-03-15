@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  ScrollView, TextInput, ActivityIndicator, Alert, Linking,
+  ScrollView, TextInput, ActivityIndicator, Alert, Linking, Image,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -28,17 +28,21 @@ interface UserSearch {
   is_friend: boolean;
 }
 
-function UserAvatar({ avatarId, username, size }: { avatarId?: number; username: string; size: number }) {
+export function UserAvatar({ avatarId, username, size }: { avatarId?: number; username: string; size: number }) {
   const avatar = getAvatar(avatarId);
   if (avatar) {
     return (
       <View style={{
         width: size, height: size, borderRadius: size / 2,
-        backgroundColor: 'rgba(124,58,237,0.2)',
-        justifyContent: 'center', alignItems: 'center',
+        backgroundColor: 'rgba(124,58,237,0.12)',
+        overflow: 'hidden',
         borderWidth: 2, borderColor: 'rgba(124,58,237,0.3)',
       }}>
-        <Text style={{ fontSize: size * 0.5 }}>{avatar.emoji}</Text>
+        <Image
+          source={avatar.image}
+          style={{ width: size, height: size }}
+          resizeMode="cover"
+        />
       </View>
     );
   }
@@ -197,7 +201,7 @@ export default function ProfileScreen({ navigation }: Props) {
                     {isSaving ? (
                       <ActivityIndicator color={colors.textPrimary} size="small" />
                     ) : (
-                      <Text style={s.avatarOptionEmoji}>{a.emoji}</Text>
+                      <Image source={a.image} style={s.avatarOptionImage} resizeMode="contain" />
                     )}
                     <Text style={[s.avatarOptionLabel, isSelected && s.avatarOptionLabelSelected]}>
                       {a.label}
@@ -354,7 +358,7 @@ const s = StyleSheet.create({
     borderColor: '#7C3AED',
     backgroundColor: 'rgba(124,58,237,0.15)',
   },
-  avatarOptionEmoji: { fontSize: 32 },
+  avatarOptionImage: { width: 44, height: 44 },
   avatarOptionLabel: { color: colors.textMuted, fontSize: 11, fontWeight: '600' },
   avatarOptionLabelSelected: { color: colors.textPrimary },
   // Card

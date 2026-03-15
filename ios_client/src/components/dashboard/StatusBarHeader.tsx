@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -8,6 +8,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from '../../theme/colors';
+import { getAvatar } from '../../utils/avatars';
 import type { UserMetrics } from '../../stores/dashboard';
 
 interface StatusBarHeaderProps {
@@ -22,6 +23,7 @@ function StatusBarHeader({
   username,
   metrics,
   avatarInitial,
+  avatarId,
   onProfilePress,
 }: StatusBarHeaderProps) {
   const insets = useSafeAreaInsets();
@@ -40,13 +42,19 @@ function StatusBarHeader({
     transform: [{ scale: streakScale.value }],
   }));
 
+  const avatar = getAvatar(avatarId);
+
   return (
     <View style={[styles.container, { paddingTop: insets.top + 8 }]}>
       <View style={styles.row}>
         {/* Left: Avatar + Level */}
         <TouchableOpacity style={styles.left} onPress={onProfilePress} activeOpacity={0.7}>
           <View style={styles.avatar}>
-            <Text style={styles.avatarText}>{avatarInitial}</Text>
+            {avatar ? (
+              <Image source={avatar.image} style={styles.avatarImage} resizeMode="cover" />
+            ) : (
+              <Text style={styles.avatarText}>{avatarInitial}</Text>
+            )}
           </View>
           <View style={styles.levelBadge}>
             <Text style={styles.levelText}>Lv.{metrics.level}</Text>
@@ -109,11 +117,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 2,
     borderColor: colors.brand.primary,
+    overflow: 'hidden',
   },
   avatarText: {
     color: colors.text.primary,
     fontSize: 15,
     fontWeight: '800',
+  },
+  avatarImage: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
   },
   levelBadge: {
     backgroundColor: colors.brand.primary,

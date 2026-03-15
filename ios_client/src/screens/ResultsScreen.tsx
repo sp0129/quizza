@@ -27,6 +27,7 @@ import type { RootStackParamList } from '../../App';
 import { colors, gradients } from '../theme/colors';
 import { getCategoryTheme } from '../utils/categoryThemes';
 import ConfettiOverlay from '../components/ConfettiOverlay';
+import PizzaMascot from '../components/PizzaMascot';
 import { useDashboardStore } from '../stores/dashboard';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Results'>;
@@ -125,16 +126,18 @@ export default function ResultsScreen({ route, navigation }: Props) {
 
   // Outcome colors
   const outcomeColor =
-    result === 'win' ? '#22C55E' : result === 'loss' ? '#EF4444' : '#F59E0B';
+    gameMode === 'solo' ? '#22C55E'
+    : result === 'win' ? '#22C55E' : result === 'loss' ? '#EF4444' : '#F59E0B';
 
   const outcomeText =
-    result === 'win'
-      ? 'YOU WON!'
-      : result === 'loss'
-        ? 'Better luck next time!'
-        : "It's a tie!";
+    gameMode === 'solo'
+      ? 'Well played!'
+      : result === 'win'
+        ? 'YOU WON!'
+        : result === 'loss'
+          ? 'Better luck next time!'
+          : "It's a tie!";
 
-  const outcomeEmoji = result === 'win' ? '🏆' : result === 'loss' ? '😢' : '🤝';
 
   // ---------------------------------------------------------------------------
   // Staged reveal timeline
@@ -345,7 +348,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
         {/* ═══ STAGE 1: ANTICIPATION ═══ */}
         {stage === 'anticipation' && (
           <Animated.View style={[styles.anticipationContainer, anticipationStyle]}>
-            <Text style={styles.anticipationIcon}>🏆</Text>
+            <PizzaMascot mood="thinking" size={90} />
             <Text style={styles.anticipationText}>Calculating results...</Text>
           </Animated.View>
         )}
@@ -404,17 +407,13 @@ export default function ResultsScreen({ route, navigation }: Props) {
         {/* ═══ STAGE 3: OUTCOME ═══ */}
         {(stage === 'outcome' || stage === 'complete') && (
           <Animated.View style={[styles.outcomeContainer, outcomeStyle]}>
-            {result === 'win' && (
-              <Animated.Text style={[styles.trophyEmoji, trophyStyle]}>
-                🏆
-              </Animated.Text>
-            )}
+            <PizzaMascot
+              mood={gameMode === 'solo' ? 'happy' : result === 'win' ? 'celebrating' : result === 'loss' ? 'wrong' : 'happy'}
+              size={110}
+            />
             <Text style={[styles.outcomeText, { color: outcomeColor }]}>
               {outcomeText}
             </Text>
-            {result !== 'win' && (
-              <Text style={styles.outcomeEmoji}>{outcomeEmoji}</Text>
-            )}
           </Animated.View>
         )}
 
@@ -540,12 +539,6 @@ const styles = StyleSheet.create({
   outcomeText: {
     fontSize: 28,
     fontWeight: '800',
-  },
-  outcomeEmoji: {
-    fontSize: 40,
-  },
-  trophyEmoji: {
-    fontSize: 40,
   },
 
   // Spacers

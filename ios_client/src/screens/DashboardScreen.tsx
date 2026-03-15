@@ -25,7 +25,6 @@ import { useChallenges } from '../hooks/useChallenges';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../api/client';
 import { colors } from '../theme/colors';
-import { getAvatar } from '../utils/avatars';
 import StatusBarHeader from '../components/dashboard/StatusBarHeader';
 import MetricsPill from '../components/dashboard/MetricsPill';
 import ModeCard from '../components/dashboard/ModeCard';
@@ -156,6 +155,7 @@ export default function DashboardScreen({ navigation }: Props) {
           questionSetId: result.questionSetId,
           category: result.category,
           timer: 30,
+          opponentUsername: challenge.opponentUsername,
         });
       } catch (err: any) {
         Alert.alert('Error', err.message || 'Failed to accept challenge');
@@ -248,7 +248,7 @@ export default function DashboardScreen({ navigation }: Props) {
   }, [logout]);
 
   const username = user?.username ?? 'Player';
-  const avatarInitial = getAvatar(user?.avatar_id)?.emoji ?? username[0]?.toUpperCase() ?? 'P';
+  const avatarInitial = username[0]?.toUpperCase() ?? 'P';
   const hasAnyChallenges = incomingChallenges.length > 0 || waitingChallenges.length > 0 || completedChallenges.length > 0;
 
   return (
@@ -258,6 +258,7 @@ export default function DashboardScreen({ navigation }: Props) {
         username={username}
         metrics={metrics}
         avatarInitial={avatarInitial}
+        avatarId={user?.avatar_id}
         onProfilePress={() => navigation.navigate('Profile')}
       />
 

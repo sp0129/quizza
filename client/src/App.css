@@ -824,15 +824,6 @@ body {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
 }
-@keyframes arm-wave-left  { from { transform: rotate(0deg); }   to { transform: rotate(-28deg); } }
-@keyframes arm-wave-right { from { transform: rotate(0deg); }   to { transform: rotate( 28deg); } }
-
-.pizza-arm-left, .pizza-arm-right { transform-box: fill-box; }
-.pizza-arm-left  { transform-origin: top right; }
-.pizza-arm-right { transform-origin: top left; }
-
-.mascot-excited .pizza-arm-left  { animation: arm-wave-left  0.5s ease-in-out infinite alternate; }
-.mascot-excited .pizza-arm-right { animation: arm-wave-right 0.5s ease-in-out infinite alternate; }
 
 .mascot-entrance   { animation: pizza-entrance 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .mascot-excited    { animation: pizza-bounce   1.2s ease-in-out infinite; }

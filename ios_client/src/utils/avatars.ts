@@ -1,20 +1,15 @@
-// Avatar system — emoji placeholders for now, swap for illustrations later.
-// Store only the avatar_id (integer) in the DB.
+import { ImageSourcePropType } from 'react-native';
 
 export interface AvatarDef {
   id: number;
-  emoji: string;
+  image: ImageSourcePropType;
   label: string;
 }
 
 export const AVATARS: AvatarDef[] = [
-  { id: 1, emoji: '🦊', label: 'Fox' },
-  { id: 2, emoji: '🐻', label: 'Bear' },
-  { id: 3, emoji: '🐧', label: 'Penguin' },
-  { id: 4, emoji: '🦁', label: 'Lion' },
-  { id: 5, emoji: '🐉', label: 'Dragon' },
-  { id: 6, emoji: '🦄', label: 'Unicorn' },
-  { id: 7, emoji: '🐼', label: 'Panda' },
+  { id: 1, image: require('../assets/avatars/explorer.png'), label: 'Explorer' },
+  { id: 2, image: require('../assets/avatars/rockstar.png'), label: 'Rockstar' },
+  { id: 3, image: require('../assets/avatars/scientist.png'), label: 'Scientist' },
 ];
 
 const AVATAR_MAP = new Map(AVATARS.map(a => [a.id, a]));
