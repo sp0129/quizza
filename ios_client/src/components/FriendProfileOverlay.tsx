@@ -142,10 +142,9 @@ export default function FriendProfileOverlay({
       exiting={FadeOut.duration(200)}
       style={styles.overlay}
     >
-      <View style={[styles.sheet, { paddingTop: insets.top + 12, paddingBottom: insets.bottom + 20 }]}>
+      <View style={[styles.sheet, { paddingTop: insets.top + 12, paddingBottom: insets.bottom + 5 }]}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>Profile</Text>
           <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
             <Text style={styles.closeBtnText}>✕</Text>
           </TouchableOpacity>
@@ -249,10 +248,9 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     marginBottom: 16,
-    paddingLeft: 4,
   },
   headerTitle: {
     color: colors.text.primary,
