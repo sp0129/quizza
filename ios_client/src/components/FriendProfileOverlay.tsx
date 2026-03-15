@@ -66,8 +66,8 @@ function formatFriendsSince(dateStr: string): string {
 
 function StatBox({ label, value, color }: { label: string; value: number; color: string }) {
   return (
-    <View style={[styles.statBox, { borderTopColor: color }]}>
-      <Text style={styles.statValue}>{value}</Text>
+    <View style={[styles.statBox, { backgroundColor: color + '18', borderTopColor: color, shadowColor: color }]}>
+      <Text style={[styles.statValue, { color }]}>{value}</Text>
       <Text style={styles.statLabel}>{label}</Text>
     </View>
   );
@@ -79,7 +79,7 @@ function GamePill({ item }: { item: GameHistoryItem }) {
   const resultLabel = item.won ? 'W' : item.tied ? 'T' : 'L';
 
   return (
-    <View style={[styles.gamePill, { borderLeftColor: resultColor }]}>
+    <View style={[styles.gamePill, { borderLeftColor: resultColor, backgroundColor: resultColor + '18', shadowColor: resultColor }]}>
       <Text style={styles.gamePillEmoji}>{theme.emoji}</Text>
       <View style={styles.gamePillInfo}>
         <Text style={styles.gamePillCategory} numberOfLines={1}>
@@ -321,16 +321,18 @@ const styles = StyleSheet.create({
   },
   statBox: {
     flex: 1,
-    backgroundColor: colors.bg.elevated,
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',
     borderTopWidth: 3,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 4,
   },
   statValue: {
-    color: colors.text.primary,
-    fontSize: 22,
-    fontWeight: '800',
+    fontSize: 24,
+    fontWeight: '900',
   },
   statLabel: {
     color: colors.text.secondary,
@@ -381,12 +383,15 @@ const styles = StyleSheet.create({
   gamePill: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: colors.bg.elevated,
     borderRadius: 12,
     padding: 12,
     marginBottom: 8,
     gap: 10,
     borderLeftWidth: 3,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 4,
   },
   gamePillEmoji: {
     fontSize: 20,
