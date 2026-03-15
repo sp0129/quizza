@@ -89,7 +89,7 @@ const TAB_KEY_MAP: Record<string, keyof TabParamList> = {
 function MainTabs() {
   return (
     <Tab.Navigator
-      screenOptions={{ headerShown: false }}
+      screenOptions={{ headerShown: false, lazy: false }}
       tabBar={({ state, navigation }: any) => {
         const activeRoute = state.routes[state.index].name;
         const tabKey =
