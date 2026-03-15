@@ -18,6 +18,7 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
 import { colors } from '../theme/colors';
+import FriendProfileOverlay from '../components/FriendProfileOverlay';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Friends'>;
@@ -46,6 +47,7 @@ export default function FriendsScreen({ navigation }: Props) {
   const [searchResults, setSearchResults] = useState<UserSearchResult[]>([]);
   const [searchLoading, setSearchLoading] = useState(false);
   const [addingIds, setAddingIds] = useState<Set<string>>(new Set());
+  const [selectedFriend, setSelectedFriend] = useState<Friend | null>(null);
 
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -289,7 +291,14 @@ export default function FriendsScreen({ navigation }: Props) {
           keyExtractor={(item) => item.id}
           contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: insets.bottom + 20 }}
           renderItem={({ item }) => (
-            <View style={styles.friendRow}>
+            <TouchableOpacity
+              style={styles.friendRow}
+              activeOpacity={0.7}
+              onPress={() => {
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                setSelectedFriend(item);
+              }}
+            >
               <View style={styles.avatar}>
                 <Text style={styles.avatarText}>{item.username[0]?.toUpperCase()}</Text>
               </View>
@@ -310,13 +319,23 @@ export default function FriendsScreen({ navigation }: Props) {
               <TouchableOpacity style={styles.removeBtn} onPress={() => removeFriend(item)}>
                 <Text style={styles.removeBtnText}>✕</Text>
               </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
           )}
           ListHeaderComponent={
             <Text style={styles.listHeader}>YOUR FRIENDS ({friends.length})</Text>
           }
         />
       )}
+
+      <FriendProfileOverlay
+        visible={selectedFriend !== null}
+        friend={selectedFriend}
+        onClose={() => setSelectedFriend(null)}
+        onChallenge={(username) => {
+          setSelectedFriend(null);
+          navigation.navigate('Category', { mode: 'challenge', target: username });
+        }}
+      />
     </View>
   );
 }
