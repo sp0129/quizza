@@ -26,7 +26,7 @@ interface UserSearch {
   id: string;
   username: string;
   avatar_id?: number;
-  is_friend: boolean;
+  friend_status: 'accepted' | 'pending' | null;
 }
 
 export function UserAvatar({ avatarId, username, size }: { avatarId?: number; username: string; size: number }) {
@@ -276,8 +276,10 @@ export default function ProfileScreen({ navigation }: Props) {
             <View key={u.id} style={s.searchRow}>
               <UserAvatar avatarId={u.avatar_id} username={u.username} size={36} />
               <Text style={s.searchName}>{u.username}</Text>
-              {u.is_friend
+              {u.friend_status === 'accepted'
                 ? <Text style={s.alreadyFriend}>Friends ✓</Text>
+                : u.friend_status === 'pending'
+                ? <Text style={s.alreadyFriend}>Pending</Text>
                 : (
                   <TouchableOpacity
                     style={s.addBtn}
@@ -364,23 +366,23 @@ const s = StyleSheet.create({
   avatarGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 10,
+    gap: 12,
     justifyContent: 'center',
   },
   avatarOption: {
-    width: 76, height: 84,
-    borderRadius: 14,
+    width: 100, height: 116,
+    borderRadius: 16,
     backgroundColor: 'rgba(30,41,59,0.6)',
     justifyContent: 'center', alignItems: 'center',
     borderWidth: 2, borderColor: 'transparent',
-    gap: 4,
+    gap: 6,
   },
   avatarOptionSelected: {
     borderColor: '#7C3AED',
     backgroundColor: 'rgba(124,58,237,0.15)',
   },
-  avatarOptionImage: { width: 44, height: 44 },
-  avatarOptionLabel: { color: colors.textMuted, fontSize: 11, fontWeight: '600' },
+  avatarOptionImage: { width: 72, height: 72 },
+  avatarOptionLabel: { color: colors.textMuted, fontSize: 12, fontWeight: '600' },
   avatarOptionLabelSelected: { color: colors.textPrimary },
   // Sound toggle
   soundRow: {

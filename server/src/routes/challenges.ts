@@ -63,7 +63,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
 router.get('/incoming', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const result = await pool.query(
-      `SELECT i.id, i.category, i.game_id, i.expires_at, u.username AS inviter_username, u.avatar_id AS inviter_avatar_id
+      `SELECT i.id, i.category, i.game_id, i.created_at, i.expires_at, u.username AS inviter_username, u.avatar_id AS inviter_avatar_id
        FROM invitations i
        JOIN users u ON u.id = i.inviter_id
        WHERE i.invitee_id = $1

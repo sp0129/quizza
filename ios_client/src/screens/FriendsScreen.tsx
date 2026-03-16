@@ -35,7 +35,7 @@ interface UserSearchResult {
   id: string;
   username: string;
   avatar_id?: number;
-  is_friend: boolean;
+  friend_status: 'accepted' | 'pending' | null;
 }
 
 export default function FriendsScreen({ navigation }: Props) {
@@ -108,7 +108,7 @@ export default function FriendsScreen({ navigation }: Props) {
       setFriends(updated);
       // Update search result to show as friend
       setSearchResults((prev) =>
-        prev.map((u) => (u.id === friendUser.id ? { ...u, is_friend: true } : u)),
+        prev.map((u) => (u.id === friendUser.id ? { ...u, friend_status: 'pending' as const } : u)),
       );
     } catch (err: any) {
       Alert.alert('Error', err.message || 'Could not add friend');
@@ -227,9 +227,13 @@ export default function FriendsScreen({ navigation }: Props) {
                 </Text>
                 <Text style={styles.userHandle}>@{item.username.toLowerCase()}</Text>
               </View>
-              {item.is_friend ? (
+              {item.friend_status === 'accepted' ? (
                 <View style={styles.friendBadge}>
                   <Text style={styles.friendBadgeText}>Friends ✓</Text>
+                </View>
+              ) : item.friend_status === 'pending' ? (
+                <View style={styles.pendingBadge}>
+                  <Text style={styles.pendingBadgeText}>Pending</Text>
                 </View>
               ) : (
                 <TouchableOpacity
@@ -558,6 +562,16 @@ const styles = StyleSheet.create({
     color: '#22C55E',
     fontSize: 13,
     fontWeight: '600',
+  },
+  pendingBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+  },
+  pendingBadgeText: {
+    color: colors.text.secondary,
+    fontSize: 13,
+    fontWeight: '600',
+    fontStyle: 'italic',
   },
   addBtn: {
     backgroundColor: colors.brand.primary,

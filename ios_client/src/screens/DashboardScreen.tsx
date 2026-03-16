@@ -10,6 +10,7 @@ import {
   ActivityIndicator,
   RefreshControl,
   Share,
+  Image,
 } from 'react-native';
 import Animated, {
   FadeInDown,
@@ -25,6 +26,7 @@ import { useChallenges } from '../hooks/useChallenges';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../api/client';
 import { colors } from '../theme/colors';
+import { getAvatar } from '../utils/avatars';
 import StatusBarHeader from '../components/dashboard/StatusBarHeader';
 import MetricsPill from '../components/dashboard/MetricsPill';
 import ModeCard from '../components/dashboard/ModeCard';
@@ -64,6 +66,17 @@ export default function DashboardScreen({ navigation }: Props) {
   const [refreshing, setRefreshing] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+
+  // Friend requests
+  interface FriendRequest {
+    id: string;
+    user_id: string;
+    username: string;
+    avatar_id?: number;
+    created_at: string;
+  }
+  const [friendRequests, setFriendRequests] = useState<FriendRequest[]>([]);
+  const [respondingIds, setRespondingIds] = useState<Set<string>>(new Set());
 
   const MAX_VISIBLE = 3;
   const toggleSection = useCallback((key: string) => {
@@ -137,12 +150,47 @@ export default function DashboardScreen({ navigation }: Props) {
       .catch(() => {});
   }, [setMetrics]);
 
+  // Fetch friend requests
+  const fetchFriendRequests = useCallback(async () => {
+    try {
+      const data = await api.get<FriendRequest[]>('/friends/requests');
+      setFriendRequests(data);
+    } catch {}
+  }, []);
+
+  useEffect(() => { fetchFriendRequests(); }, [fetchFriendRequests]);
+
+  const handleAcceptRequest = useCallback(async (req: FriendRequest) => {
+    setRespondingIds(prev => new Set(prev).add(req.id));
+    try {
+      await api.post(`/friends/requests/${req.id}/accept`, {});
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      setFriendRequests(prev => prev.filter(r => r.id !== req.id));
+    } catch (err: any) {
+      Alert.alert('Error', err.message);
+    } finally {
+      setRespondingIds(prev => { const next = new Set(prev); next.delete(req.id); return next; });
+    }
+  }, []);
+
+  const handleRejectRequest = useCallback(async (req: FriendRequest) => {
+    setRespondingIds(prev => new Set(prev).add(req.id));
+    try {
+      await api.post(`/friends/requests/${req.id}/reject`, {});
+      setFriendRequests(prev => prev.filter(r => r.id !== req.id));
+    } catch (err: any) {
+      Alert.alert('Error', err.message);
+    } finally {
+      setRespondingIds(prev => { const next = new Set(prev); next.delete(req.id); return next; });
+    }
+  }, []);
+
   // Pull-to-refresh
   const handleRefresh = useCallback(async () => {
     setRefreshing(true);
-    await fetchChallenges();
+    await Promise.all([fetchChallenges(), fetchFriendRequests()]);
     setRefreshing(false);
-  }, [fetchChallenges]);
+  }, [fetchChallenges, fetchFriendRequests]);
 
   // Incoming challenge pill tap → accept and play
   const handleIncomingPress = useCallback(
@@ -344,6 +392,49 @@ export default function DashboardScreen({ navigation }: Props) {
             </View>
           </View>
         </Animated.View>
+
+        {/* ═══ FRIEND REQUESTS ═══ */}
+        {friendRequests.length > 0 && (
+          <Animated.View entering={FadeInDown.delay(350).duration(400)} style={styles.challengeSection}>
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionIcon}>👋</Text>
+              <Text style={styles.sectionLabel}>FRIEND REQUESTS</Text>
+              <View style={styles.countBadge}>
+                <Text style={styles.countText}>{friendRequests.length}</Text>
+              </View>
+            </View>
+            <View style={styles.challengeList}>
+              {friendRequests.map((req) => {
+                const avatar = getAvatar(req.avatar_id);
+                const isResponding = respondingIds.has(req.id);
+                return (
+                  <View key={req.id} style={styles.friendRequestRow}>
+                    <View style={styles.friendRequestAvatar}>
+                      {avatar ? (
+                        <Image source={avatar.image} style={styles.friendRequestAvatarImg} resizeMode="cover" />
+                      ) : (
+                        <Text style={styles.friendRequestInitial}>{req.username[0]?.toUpperCase()}</Text>
+                      )}
+                    </View>
+                    <Text style={styles.friendRequestName} numberOfLines={1}>{req.username}</Text>
+                    {isResponding ? (
+                      <ActivityIndicator color={colors.brand.primary} size="small" />
+                    ) : (
+                      <View style={styles.friendRequestActions}>
+                        <TouchableOpacity style={styles.acceptBtn} onPress={() => handleAcceptRequest(req)} activeOpacity={0.7}>
+                          <Text style={styles.acceptBtnText}>Accept</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.rejectBtn} onPress={() => handleRejectRequest(req)} activeOpacity={0.7}>
+                          <Text style={styles.rejectBtnText}>Decline</Text>
+                        </TouchableOpacity>
+                      </View>
+                    )}
+                  </View>
+                );
+              })}
+            </View>
+          </Animated.View>
+        )}
 
         {/* ═══ INCOMING CHALLENGES ═══ */}
         {incomingChallenges.length > 0 && (
@@ -615,6 +706,67 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 11,
     fontWeight: '800',
+  },
+
+  // Friend requests
+  friendRequestRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.bg.elevated,
+    borderRadius: 12,
+    padding: 12,
+    gap: 10,
+  },
+  friendRequestAvatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: colors.brand.primary + '30',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+  },
+  friendRequestAvatarImg: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+  },
+  friendRequestInitial: {
+    color: colors.text.primary,
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  friendRequestName: {
+    flex: 1,
+    color: colors.text.primary,
+    fontSize: 15,
+    fontWeight: '600',
+  },
+  friendRequestActions: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  acceptBtn: {
+    backgroundColor: '#22C55E',
+    paddingHorizontal: 14,
+    paddingVertical: 7,
+    borderRadius: 8,
+  },
+  acceptBtnText: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontWeight: '700',
+  },
+  rejectBtn: {
+    backgroundColor: 'rgba(255,255,255,0.08)',
+    paddingHorizontal: 14,
+    paddingVertical: 7,
+    borderRadius: 8,
+  },
+  rejectBtnText: {
+    color: colors.text.secondary,
+    fontSize: 13,
+    fontWeight: '600',
   },
 
   // Game modes

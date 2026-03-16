@@ -4,7 +4,7 @@ import { requireAuth, AuthRequest } from '../middleware/auth';
 
 const router = Router();
 
-// GET /friends — list my friends
+// GET /friends — list my accepted friends
 router.get('/', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const result = await pool.query(
@@ -14,7 +14,8 @@ router.get('/', requireAuth, async (req: AuthRequest, res: Response): Promise<vo
          WHEN f.user_a_id = $1 THEN f.user_b_id
          ELSE f.user_a_id
        END
-       WHERE f.user_a_id = $1 OR f.user_b_id = $1
+       WHERE (f.user_a_id = $1 OR f.user_b_id = $1)
+         AND f.status = 'accepted'
        ORDER BY u.username`,
       [req.userId]
     );
@@ -25,7 +26,7 @@ router.get('/', requireAuth, async (req: AuthRequest, res: Response): Promise<vo
   }
 });
 
-// POST /friends — add friend by username (direct, no request flow)
+// POST /friends — send friend request by username
 router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const { username } = req.body;
   if (!username) { res.status(400).json({ error: 'username required' }); return; }
@@ -40,8 +41,10 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
     const [a, b] = [req.userId!, friendId].sort();
 
     await pool.query(
-      `INSERT INTO friendships (user_a_id, user_b_id) VALUES ($1, $2) ON CONFLICT DO NOTHING`,
-      [a, b]
+      `INSERT INTO friendships (user_a_id, user_b_id, status, requester_id)
+       VALUES ($1, $2, 'pending', $3)
+       ON CONFLICT (user_a_id, user_b_id) DO NOTHING`,
+      [a, b, req.userId]
     );
     res.json({ success: true, friendId });
   } catch (err) {
@@ -50,15 +53,75 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
   }
 });
 
-// POST /friends/by-id — add friend by userId (for post-room flow)
+// POST /friends/by-id — send friend request by userId (for post-room flow)
 router.post('/by-id', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const { userId: friendId } = req.body;
   if (!friendId || friendId === req.userId) { res.status(400).json({ error: 'invalid userId' }); return; }
   try {
     const [a, b] = [req.userId!, friendId].sort();
     await pool.query(
-      `INSERT INTO friendships (user_a_id, user_b_id) VALUES ($1, $2) ON CONFLICT DO NOTHING`,
-      [a, b]
+      `INSERT INTO friendships (user_a_id, user_b_id, status, requester_id)
+       VALUES ($1, $2, 'pending', $3)
+       ON CONFLICT (user_a_id, user_b_id) DO NOTHING`,
+      [a, b, req.userId]
+    );
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// GET /friends/requests — pending friend requests sent TO me
+router.get('/requests', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  try {
+    const result = await pool.query(
+      `SELECT f.id, u.id AS user_id, u.username, u.avatar_id, f.created_at
+       FROM friendships f
+       JOIN users u ON u.id = f.requester_id
+       WHERE (f.user_a_id = $1 OR f.user_b_id = $1)
+         AND f.requester_id != $1
+         AND f.status = 'pending'
+       ORDER BY f.created_at DESC`,
+      [req.userId]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// POST /friends/requests/:id/accept — accept a friend request
+router.post('/requests/:id/accept', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  try {
+    const result = await pool.query(
+      `UPDATE friendships SET status = 'accepted'
+       WHERE id = $1
+         AND (user_a_id = $2 OR user_b_id = $2)
+         AND requester_id != $2
+         AND status = 'pending'
+       RETURNING id`,
+      [req.params.id, req.userId]
+    );
+    if (!result.rows[0]) { res.status(404).json({ error: 'Request not found' }); return; }
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// POST /friends/requests/:id/reject — reject (delete) a friend request
+router.post('/requests/:id/reject', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  try {
+    await pool.query(
+      `DELETE FROM friendships
+       WHERE id = $1
+         AND (user_a_id = $2 OR user_b_id = $2)
+         AND requester_id != $2
+         AND status = 'pending'`,
+      [req.params.id, req.userId]
     );
     res.json({ success: true });
   } catch (err) {
@@ -75,7 +138,7 @@ router.get('/:friendId/history', requireAuth, async (req: AuthRequest, res: Resp
     // Verify friendship exists and get created_at
     const [a, b] = [me, friend].sort();
     const friendship = await pool.query(
-      `SELECT created_at FROM friendships WHERE user_a_id = $1::uuid AND user_b_id = $2::uuid`,
+      `SELECT created_at FROM friendships WHERE user_a_id = $1::uuid AND user_b_id = $2::uuid AND status = 'accepted'`,
       [a, b]
     );
     if (!friendship.rows[0]) { res.status(404).json({ error: 'Not friends' }); return; }
