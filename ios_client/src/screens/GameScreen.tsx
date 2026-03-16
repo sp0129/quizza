@@ -28,6 +28,7 @@ import CircularTimer from '../components/CircularTimer';
 import { colors, gradients } from '../theme/colors';
 import { useAuth } from '../hooks/useAuth';
 import { getAvatar } from '../utils/avatars';
+import { playSound } from '../utils/sounds';
 import type { RootStackParamList } from '../../App';
 
 // ---------------------------------------------------------------------------
@@ -660,6 +661,7 @@ export default function GameScreen({ route, navigation }: Props) {
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
         if (t <= 1) { clearInterval(timerRef.current!); return 0; }
+        if (t <= 6) playSound('tick');
         return t - 1;
       });
     }, 1000);
@@ -716,6 +718,7 @@ export default function GameScreen({ route, navigation }: Props) {
       });
 
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
+      playSound(result.isCorrect ? 'correct' : 'wrong');
 
       if (result.gameComplete) {
         setFinalScores(prev => ({

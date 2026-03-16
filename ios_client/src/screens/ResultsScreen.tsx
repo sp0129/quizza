@@ -28,6 +28,7 @@ import { colors, gradients } from '../theme/colors';
 import { getCategoryTheme } from '../utils/categoryThemes';
 import ConfettiOverlay from '../components/ConfettiOverlay';
 import PizzaMascot from '../components/PizzaMascot';
+import { playSound } from '../utils/sounds';
 import { useDashboardStore } from '../stores/dashboard';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Results'>;
@@ -219,6 +220,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
         );
         setShowConfetti(true);
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        playSound('celebrate');
       } else if (result === 'loss') {
         outcomeOpacity.value = withTiming(1, { duration: 200 });
         outcomeScale.value = withTiming(1, { duration: 200 });

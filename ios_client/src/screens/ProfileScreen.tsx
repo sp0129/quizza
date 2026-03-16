@@ -11,6 +11,7 @@ import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
 import { colors, gradients } from '../theme';
 import { AVATARS, getAvatar } from '../utils/avatars';
+import { isSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
@@ -68,6 +69,7 @@ export default function ProfileScreen({ navigation }: Props) {
   const [usernameError, setUsernameError] = useState('');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
   const [savingAvatarId, setSavingAvatarId] = useState<number | null>(null);
+  const [soundOn, setSoundOn] = useState(isSoundEnabled());
 
   const [friends, setFriends] = useState<Friend[]>([]);
   const [friendsLoading, setFriendsLoading] = useState(true);
@@ -212,6 +214,25 @@ export default function ProfileScreen({ navigation }: Props) {
             </View>
           </View>
         )}
+
+        {/* Sound toggle */}
+        <View style={s.card}>
+          <View style={s.soundRow}>
+            <Text style={s.cardLabel}>Sound Effects</Text>
+            <TouchableOpacity
+              style={[s.soundToggle, soundOn && s.soundToggleOn]}
+              onPress={() => {
+                const next = !soundOn;
+                setSoundOn(next);
+                setSoundEnabled(next);
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+              }}
+              activeOpacity={0.7}
+            >
+              <View style={[s.soundToggleThumb, soundOn && s.soundToggleThumbOn]} />
+            </TouchableOpacity>
+          </View>
+        </View>
 
         {/* Username */}
         <View style={s.card}>
@@ -361,6 +382,27 @@ const s = StyleSheet.create({
   avatarOptionImage: { width: 44, height: 44 },
   avatarOptionLabel: { color: colors.textMuted, fontSize: 11, fontWeight: '600' },
   avatarOptionLabelSelected: { color: colors.textPrimary },
+  // Sound toggle
+  soundRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  soundToggle: {
+    width: 50, height: 28, borderRadius: 14,
+    backgroundColor: 'rgba(255,255,255,0.12)',
+    justifyContent: 'center', paddingHorizontal: 3,
+  },
+  soundToggleOn: {
+    backgroundColor: colors.green,
+  },
+  soundToggleThumb: {
+    width: 22, height: 22, borderRadius: 11,
+    backgroundColor: '#FFFFFF',
+  },
+  soundToggleThumbOn: {
+    alignSelf: 'flex-end' as const,
+  },
   // Card
   card: {
     backgroundColor: colors.surface,

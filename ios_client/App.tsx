@@ -10,6 +10,7 @@ import * as Linking from 'expo-linking';
 import { AuthProvider, useAuth } from './src/hooks/useAuth';
 import { colors } from './src/theme';
 import BottomNav from './src/components/dashboard/BottomNav';
+import { initSoundSetting } from './src/utils/sounds';
 
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
@@ -172,6 +173,9 @@ function RootNavigator() {
     </Stack.Navigator>
   );
 }
+
+// Initialize sound setting from storage
+initSoundSetting();
 
 export default function App() {
   return (
