@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
   Dimensions, ActivityIndicator, Keyboard, LayoutAnimation,
@@ -63,6 +63,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
   const [error, setError] = useState('');
 
   const debouncedQuery = useDebounce(query, 300);
+  const listRef = useRef<any>(null);
 
   // Fetch categories
   useEffect(() => {
@@ -81,7 +82,16 @@ export default function CategoryScreen({ route, navigation }: Props) {
         // Preselect category if coming from rematch
         if (preselectedCategory) {
           const match = cleaned.find(c => c.name.toLowerCase() === preselectedCategory.toLowerCase());
-          if (match) setSelected(match);
+          if (match) {
+            setSelected(match);
+            // Scroll to the selected category after render
+            const idx = cleaned.indexOf(match);
+            if (idx >= 0) {
+              setTimeout(() => {
+                listRef.current?.scrollToIndex?.({ index: idx, animated: true, viewPosition: 0.3 });
+              }, 300);
+            }
+          }
         }
       })
       .catch(console.error)
@@ -246,6 +256,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
         <CategorySkeleton />
       ) : (
         <FlashList
+          ref={listRef}
           data={filtered}
           numColumns={2}
           renderItem={renderItem}
