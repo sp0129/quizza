@@ -16,6 +16,7 @@ import FavoritesSection from '../components/category/FavoritesSection';
 import { CategoryCard } from '../components/category/CategoryCard';
 import CategorySkeleton from '../components/category/CategorySkeleton';
 import EmptySearchState from '../components/category/EmptySearchState';
+import { getGamePreferences } from '../utils/gamePreferences';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Category'>;
@@ -48,6 +49,15 @@ export default function CategoryScreen({ route, navigation }: Props) {
   const [blitz, setBlitz] = useState(false);
   const [miniMode, setMiniMode] = useState(false);
   const [difficulty, setDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
+
+  // Load saved preferences as defaults
+  useEffect(() => {
+    getGamePreferences().then(prefs => {
+      setBlitz(prefs.timer === 15);
+      setMiniMode(prefs.questionCount === 5);
+      setDifficulty(prefs.difficulty);
+    });
+  }, []);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');

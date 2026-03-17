@@ -12,6 +12,7 @@ import { api } from '../api/client';
 import { colors, gradients } from '../theme';
 import { AVATARS, getAvatar } from '../utils/avatars';
 import { isSoundEnabled, setSoundEnabled } from '../utils/sounds';
+import { getGamePreferences, saveGamePreferences, type GamePreferences } from '../utils/gamePreferences';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
@@ -57,6 +58,16 @@ export default function ProfileScreen({ navigation }: Props) {
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
   const [savingAvatarId, setSavingAvatarId] = useState<number | null>(null);
   const [soundOn, setSoundOn] = useState(isSoundEnabled());
+  const [gamePrefs, setGamePrefs] = useState<GamePreferences>({ timer: 30, questionCount: 10, difficulty: 'all' });
+
+  useEffect(() => {
+    getGamePreferences().then(setGamePrefs);
+  }, []);
+
+  const updatePref = (update: Partial<GamePreferences>) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    saveGamePreferences(update).then(setGamePrefs);
+  };
 
   const saveUsername = async () => {
     const trimmed = username.trim();
@@ -164,6 +175,68 @@ export default function ProfileScreen({ navigation }: Props) {
             >
               <View style={[s.soundToggleThumb, soundOn && s.soundToggleThumbOn]} />
             </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Game mode settings */}
+        <View style={s.card}>
+          <Text style={s.cardLabel}>Game Mode Defaults</Text>
+          <Text style={s.cardHint}>These will be pre-selected when you start a game.</Text>
+
+          {/* Timer */}
+          <View style={s.prefRow}>
+            <Text style={s.prefLabel}>Timer</Text>
+            <View style={s.prefToggle}>
+              <TouchableOpacity
+                style={[s.prefOption, gamePrefs.timer === 30 && s.prefOptionActive]}
+                onPress={() => updatePref({ timer: 30 })}
+              >
+                <Text style={[s.prefOptionText, gamePrefs.timer === 30 && s.prefOptionTextActive]}>30s</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[s.prefOption, gamePrefs.timer === 15 && s.prefOptionActive]}
+                onPress={() => updatePref({ timer: 15 })}
+              >
+                <Text style={[s.prefOptionText, gamePrefs.timer === 15 && s.prefOptionTextActive]}>15s</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Question count */}
+          <View style={s.prefRow}>
+            <Text style={s.prefLabel}>Questions</Text>
+            <View style={s.prefToggle}>
+              <TouchableOpacity
+                style={[s.prefOption, gamePrefs.questionCount === 10 && s.prefOptionActive]}
+                onPress={() => updatePref({ questionCount: 10 })}
+              >
+                <Text style={[s.prefOptionText, gamePrefs.questionCount === 10 && s.prefOptionTextActive]}>10</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[s.prefOption, gamePrefs.questionCount === 5 && s.prefOptionActive]}
+                onPress={() => updatePref({ questionCount: 5 })}
+              >
+                <Text style={[s.prefOptionText, gamePrefs.questionCount === 5 && s.prefOptionTextActive]}>5</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Difficulty */}
+          <View style={s.prefRow}>
+            <Text style={s.prefLabel}>Difficulty</Text>
+            <View style={s.prefToggle}>
+              {(['all', 'easy', 'medium', 'hard'] as const).map(d => (
+                <TouchableOpacity
+                  key={d}
+                  style={[s.prefOption, gamePrefs.difficulty === d && s.prefOptionActive]}
+                  onPress={() => updatePref({ difficulty: d })}
+                >
+                  <Text style={[s.prefOptionText, gamePrefs.difficulty === d && s.prefOptionTextActive]}>
+                    {d === 'all' ? 'All' : d.charAt(0).toUpperCase() + d.slice(1)}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
           </View>
         </View>
 
@@ -285,6 +358,45 @@ const s = StyleSheet.create({
   },
   soundToggleThumbOn: {
     alignSelf: 'flex-end' as const,
+  },
+  // Game mode preferences
+  prefRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 10,
+  },
+  prefLabel: {
+    color: colors.textPrimary,
+    fontSize: 14,
+    fontWeight: '600',
+    minWidth: 70,
+  },
+  prefToggle: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'rgba(15,23,42,0.6)',
+    borderRadius: 10,
+    padding: 3,
+    borderWidth: 1,
+    borderColor: 'rgba(51,65,85,0.5)',
+  },
+  prefOption: {
+    flex: 1,
+    borderRadius: 8,
+    paddingVertical: 7,
+    alignItems: 'center',
+  },
+  prefOptionActive: {
+    backgroundColor: 'rgba(124,58,237,0.2)',
+  },
+  prefOptionText: {
+    color: '#64748B',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  prefOptionTextActive: {
+    color: colors.textPrimary,
   },
   // Card
   card: {
