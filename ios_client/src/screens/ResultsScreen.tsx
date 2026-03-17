@@ -310,6 +310,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
     navigation.navigate('Category', {
       mode: 'challenge',
       target: opponentUsername ?? opponentHandle?.replace('@', ''),
+      preselectedCategory: category,
     });
   }, [challengeId, opponentUsername, opponentHandle, navigation, removeChallenge]);
 

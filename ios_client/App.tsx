@@ -46,7 +46,7 @@ export type RootStackParamList = {
   Profile: undefined;
   Friends: undefined;
   Leaderboard: undefined;
-  Category: { mode: 'solo' | 'room' | 'challenge'; target?: string; targetAvatarId?: number };
+  Category: { mode: 'solo' | 'room' | 'challenge'; target?: string; targetAvatarId?: number; preselectedCategory?: string };
   Game: {
     gameId: string;
     mode: string;

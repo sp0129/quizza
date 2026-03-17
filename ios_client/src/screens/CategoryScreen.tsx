@@ -38,7 +38,7 @@ function useDebounce<T>(value: T, delay: number): T {
 
 // ── Main screen ────────────────────────────────────────────────
 export default function CategoryScreen({ route, navigation }: Props) {
-  const { mode, target, targetAvatarId } = route.params;
+  const { mode, target, targetAvatarId, preselectedCategory } = route.params;
   const insets = useSafeAreaInsets();
 
   // State
@@ -78,6 +78,11 @@ export default function CategoryScreen({ route, navigation }: Props) {
           return ia - ib;
         });
         setCategories(cleaned);
+        // Preselect category if coming from rematch
+        if (preselectedCategory) {
+          const match = cleaned.find(c => c.name.toLowerCase() === preselectedCategory.toLowerCase());
+          if (match) setSelected(match);
+        }
       })
       .catch(console.error)
       .finally(() => setLoading(false));
