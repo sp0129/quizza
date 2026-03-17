@@ -24,7 +24,8 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Category'>;
 interface Category { id: number; name: string; }
 
 const { width: SCREEN_W } = Dimensions.get('window');
-const BOTTOM_BAR_H = 210;
+const BOTTOM_BAR_COLLAPSED = 80;   // just the button
+const BOTTOM_BAR_EXPANDED = 260;   // button + 3 toggle rows
 
 // ── Debounce hook ──────────────────────────────────────────────
 function useDebounce<T>(value: T, delay: number): T {
@@ -269,7 +270,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
           }
           contentContainerStyle={{
             paddingHorizontal: 10,
-            paddingBottom: BOTTOM_BAR_H + insets.bottom + 16,
+            paddingBottom: (selected ? BOTTOM_BAR_EXPANDED : BOTTOM_BAR_COLLAPSED) + insets.bottom + 16,
           }}
           keyboardDismissMode="on-drag"
           keyboardShouldPersistTaps="handled"
