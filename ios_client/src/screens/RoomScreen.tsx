@@ -13,6 +13,8 @@ import Animated, {
   withSequence,
   FadeIn,
   FadeInDown,
+  SlideInRight,
+  SlideOutLeft,
   Easing,
 } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -163,6 +165,7 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [startLoading, setStartLoading] = useState(false);
   const [error, setError] = useState('');
   const [addedFriends, setAddedFriends] = useState<Set<string>>(new Set());
+  const [existingFriends, setExistingFriends] = useState<Set<string>>(new Set());
   const [roomClosed, setRoomClosed] = useState('');
 
   // Lobby polish state
@@ -178,6 +181,7 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [timerActive, setTimerActive] = useState(false);
   const [revealOrder, setRevealOrder] = useState<number[]>([0, 1, 2, 3]);
   const [timerKey, setTimerKey] = useState(0);
+  const [questionAnimKey, setQuestionAnimKey] = useState(0);
 
   const wsRef = useRef<WebSocket | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -213,6 +217,14 @@ export default function RoomScreen({ route, navigation }: Props) {
       if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
     };
   }, []);
+
+  // Fetch friends when game finishes (for add-friend filtering)
+  useEffect(() => {
+    if (phase !== 'finished') return;
+    api.get<{ id: string; username: string }[]>('/friends')
+      .then(friends => setExistingFriends(new Set(friends.map(f => f.username))))
+      .catch(() => {});
+  }, [phase]);
 
   // Lobby music
   useEffect(() => {
@@ -308,6 +320,7 @@ export default function RoomScreen({ route, navigation }: Props) {
           setLastCorrect(null);
           setCorrectAnswer(null);
           setTimerKey(k => k + 1);
+          setQuestionAnimKey(k => k + 1);
           setMascotMood('thinking');
           setMascotKey(k => k + 1);
           startQuestionSequence();
@@ -321,6 +334,7 @@ export default function RoomScreen({ route, navigation }: Props) {
             setLastCorrect(null);
             setCorrectAnswer(null);
             setTimerKey(k => k + 1);
+            setQuestionAnimKey(k => k + 1);
             setMascotMood('thinking');
             setMascotKey(k => k + 1);
             startQuestionSequence();
@@ -369,6 +383,7 @@ export default function RoomScreen({ route, navigation }: Props) {
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
         if (t <= 1) { clearInterval(timerRef.current!); return 0; }
+        if (t <= 6) playSound('tick');
         return t - 1;
       });
     }, 1000);
@@ -395,6 +410,7 @@ export default function RoomScreen({ route, navigation }: Props) {
             setLastCorrect(null);
             setCorrectAnswer(null);
             setTimerKey(k => k + 1);
+            setQuestionAnimKey(k => k + 1);
             setMascotMood('thinking');
             setMascotKey(k => k + 1);
             startQuestionSequence();
@@ -434,6 +450,7 @@ export default function RoomScreen({ route, navigation }: Props) {
       });
       if (result.points) setScore(s => s + result.points);
       triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
+      playSound(result.isCorrect ? 'correct' : 'wrong');
     } catch (err) {
       console.error(err);
     }
@@ -667,13 +684,23 @@ export default function RoomScreen({ route, navigation }: Props) {
             </View>
           ))}
 
-          {/* Add friends from this room */}
-          {leaderboard.filter(e => e.username !== user?.username).length > 0 && (
-            <View style={s.addFriendsBox}>
-              <Text style={s.addFriendsTitle}>Add players as friends</Text>
-              {leaderboard
-                .filter(e => e.username !== user?.username)
-                .map(entry => (
+          {/* Add friends from this room — only non-friends, non-self, non-guests */}
+          {(() => {
+            const suggestions = leaderboard.filter(e =>
+              e.username !== user?.username &&
+              !existingFriends.has(e.username) &&
+              !addedFriends.has(e.username)
+            );
+            // Also count already-added ones to show them
+            const added = leaderboard.filter(e =>
+              e.username !== user?.username &&
+              addedFriends.has(e.username)
+            );
+            if (suggestions.length === 0 && added.length === 0) return null;
+            return (
+              <View style={s.addFriendsBox}>
+                <Text style={s.addFriendsTitle}>Add players as friends</Text>
+                {[...suggestions, ...added].map(entry => (
                   <View key={entry.username} style={s.addFriendRow}>
                     <View style={s.addFriendAvatar}>
                       <Text style={s.addFriendAvatarText}>{entry.username[0].toUpperCase()}</Text>
@@ -696,8 +723,9 @@ export default function RoomScreen({ route, navigation }: Props) {
                     )}
                   </View>
                 ))}
-            </View>
-          )}
+              </View>
+            );
+          })()}
 
           <TouchableOpacity style={[s.btn, s.btnGhost]} onPress={() => navigation.navigate('MainTabs')}>
             <Text style={s.btnGhostText}>Back to Dashboard</Text>
@@ -784,10 +812,16 @@ export default function RoomScreen({ route, navigation }: Props) {
       {/* Middle zone: Question (fixed height) */}
       <View style={s.middleZone}>
         <View style={s.questionArea}>
-          <Text style={s.questionCounter}>
-            Question {currentIndex + 1} of {questions.length}
-          </Text>
-          <Text style={s.questionText}>{question.question}</Text>
+          <Animated.View
+            key={questionAnimKey}
+            entering={SlideInRight.duration(250)}
+            exiting={SlideOutLeft.duration(250)}
+          >
+            <Text style={s.questionCounter}>
+              Question {currentIndex + 1} of {questions.length}
+            </Text>
+            <Text style={s.questionText}>{question.question}</Text>
+          </Animated.View>
         </View>
 
         <View style={s.mascotCenter}>
