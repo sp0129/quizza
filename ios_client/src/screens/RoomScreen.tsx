@@ -58,7 +58,7 @@ interface LeaderboardEntry {
   finished: boolean;
 }
 
-type Phase = 'lobby' | 'loading' | 'reading' | 'playing' | 'answered' | 'finished';
+type Phase = 'lobby' | 'loading' | 'countdown' | 'reading' | 'playing' | 'answered' | 'finished';
 type AnswerState = 'neutral' | 'correct' | 'wrong' | 'dimmed';
 
 const API_BASE = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
@@ -140,6 +140,79 @@ const LOBBY_TIPS = [
   'The more players, the more fun! 🎉',
   'Tip: Read the question carefully before answering!',
 ];
+
+// ---------------------------------------------------------------------------
+// Ready / Steady / Go! countdown
+// ---------------------------------------------------------------------------
+
+const COUNTDOWN_WORDS = [
+  { text: 'Ready', color: '#EF4444' },   // ruby red
+  { text: 'Steady', color: '#F59E0B' },  // topaz/amber
+  { text: 'GO!', color: '#22C55E' },     // bright green
+] as const;
+
+function ReadySteadyGo({ onDone }: { onDone: () => void }) {
+  const [wordIndex, setWordIndex] = useState(0);
+  const scale = useSharedValue(0);
+  const opacity = useSharedValue(0);
+
+  useEffect(() => {
+    let idx = 0;
+    const showWord = () => {
+      setWordIndex(idx);
+      scale.value = 0.3;
+      opacity.value = 0;
+      scale.value = withSpring(1, { damping: 8, stiffness: 180 });
+      opacity.value = withTiming(1, { duration: 150 });
+      Haptics.impactAsync(
+        idx === 2 ? Haptics.ImpactFeedbackStyle.Heavy : Haptics.ImpactFeedbackStyle.Medium
+      );
+
+      idx++;
+      if (idx < COUNTDOWN_WORDS.length) {
+        setTimeout(showWord, 700);
+      } else {
+        // Hold "GO!" briefly then proceed
+        setTimeout(onDone, 500);
+      }
+    };
+    showWord();
+  }, []);
+
+  const animStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value }],
+    opacity: opacity.value,
+  }));
+
+  const word = COUNTDOWN_WORDS[wordIndex];
+
+  return (
+    <LinearGradient colors={gradients.game} style={countdownStyles.container}>
+      <Animated.Text style={[countdownStyles.word, { color: word.color }, animStyle]}>
+        {word.text}
+      </Animated.Text>
+    </LinearGradient>
+  );
+}
+
+const countdownStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  word: {
+    fontSize: 64,
+    fontWeight: '900',
+    letterSpacing: 4,
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 20,
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Main RoomScreen
+// ---------------------------------------------------------------------------
 
 export default function RoomScreen({ route, navigation }: Props) {
   const { roomId, questionSetId, isHost, timer: QUESTION_TIME } = route.params;
@@ -362,16 +435,16 @@ export default function RoomScreen({ route, navigation }: Props) {
     };
   }, [roomId, user?.username]);
 
-  // Load questions when game starts
+  // Load questions when game starts, then show countdown
   useEffect(() => {
     if (phase !== 'loading' || !questionSetId) return;
     api.get<{ questions: Question[] }>(`/questions/set/${questionSetId}`).then(data => {
       setQuestions(data.questions);
       setQuestionResults(new Array(data.questions.length).fill(null));
       setTimerKey(k => k + 1);
-      startQuestionSequence();
+      setPhase('countdown');
     }).catch(console.error);
-  }, [phase, questionSetId, startQuestionSequence]);
+  }, [phase, questionSetId]);
 
   // Countdown timer (only when timerActive)
   useEffect(() => {
@@ -636,6 +709,13 @@ export default function RoomScreen({ route, navigation }: Props) {
         <ActivityIndicator color={colors.green} size="large" />
         <Text style={s.loadingText}>Loading questions...</Text>
       </LinearGradient>
+    );
+  }
+
+  // ── COUNTDOWN (Ready / Steady / Go!) ──
+  if (phase === 'countdown') {
+    return (
+      <ReadySteadyGo onDone={startQuestionSequence} />
     );
   }
 
