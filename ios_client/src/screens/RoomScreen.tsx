@@ -271,7 +271,7 @@ export default function RoomScreen({ route, navigation }: Props) {
     setButtonsVisible(false);
     setTimerActive(false);
     setPhase('reading');
-    setRevealOrder(shuffleIndices(ANSWER_COUNT));
+    setRevealOrder([0, 1, 2, 3]);
 
     readTimeoutRef.current = setTimeout(() => {
       setButtonsVisible(true);
