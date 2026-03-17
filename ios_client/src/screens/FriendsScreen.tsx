@@ -185,7 +185,7 @@ export default function FriendsScreen({ navigation }: Props) {
           <TextInput
             ref={inputRef}
             style={styles.searchInput}
-            placeholder="Search by @username..."
+            placeholder="Add friend by @username..."
             placeholderTextColor={colors.text.secondary}
             value={query}
             onChangeText={setQuery}

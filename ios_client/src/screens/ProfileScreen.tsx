@@ -16,19 +16,6 @@ import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
 
-interface Friend {
-  id: string;
-  username: string;
-  avatar_id?: number;
-}
-
-interface UserSearch {
-  id: string;
-  username: string;
-  avatar_id?: number;
-  friend_status: 'accepted' | 'pending' | null;
-}
-
 export function UserAvatar({ avatarId, username, size }: { avatarId?: number; username: string; size: number }) {
   const avatar = getAvatar(avatarId);
   if (avatar) {
@@ -71,28 +58,6 @@ export default function ProfileScreen({ navigation }: Props) {
   const [savingAvatarId, setSavingAvatarId] = useState<number | null>(null);
   const [soundOn, setSoundOn] = useState(isSoundEnabled());
 
-  const [friends, setFriends] = useState<Friend[]>([]);
-  const [friendsLoading, setFriendsLoading] = useState(true);
-
-  const [addQuery, setAddQuery] = useState('');
-  const [addResults, setAddResults] = useState<UserSearch[]>([]);
-  const [addLoading, setAddLoading] = useState(false);
-
-  useEffect(() => {
-    api.get<Friend[]>('/friends').then(setFriends).catch(console.error).finally(() => setFriendsLoading(false));
-  }, []);
-
-  useEffect(() => {
-    if (addQuery.trim().length < 2) { setAddResults([]); return; }
-    const timer = setTimeout(async () => {
-      try {
-        const results = await api.get<UserSearch[]>(`/users/search?q=${encodeURIComponent(addQuery.trim())}`);
-        setAddResults(results);
-      } catch { setAddResults([]); }
-    }, 300);
-    return () => clearTimeout(timer);
-  }, [addQuery]);
-
   const saveUsername = async () => {
     const trimmed = username.trim();
     if (!trimmed || trimmed === user?.username) return;
@@ -121,38 +86,6 @@ export default function ProfileScreen({ navigation }: Props) {
     } finally {
       setSavingAvatarId(null);
     }
-  };
-
-  const addFriend = async (friendUsername: string) => {
-    setAddLoading(true);
-    try {
-      await api.post('/friends', { username: friendUsername });
-      const updated = await api.get<Friend[]>('/friends');
-      setFriends(updated);
-      setAddQuery('');
-      setAddResults([]);
-    } catch (err: any) {
-      Alert.alert('Error', err.message);
-    } finally {
-      setAddLoading(false);
-    }
-  };
-
-  const removeFriend = (friend: Friend) => {
-    Alert.alert('Remove friend', `Remove ${friend.username}?`, [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Remove', style: 'destructive',
-        onPress: async () => {
-          try {
-            await api.delete<void>(`/friends/${friend.id}`);
-            setFriends(prev => prev.filter(f => f.id !== friend.id));
-          } catch (err: any) {
-            Alert.alert('Error', err.message);
-          }
-        },
-      },
-    ]);
   };
 
   return (
@@ -258,58 +191,6 @@ export default function ProfileScreen({ navigation }: Props) {
             </TouchableOpacity>
           </View>
           {usernameError ? <Text style={s.error}>{usernameError}</Text> : null}
-        </View>
-
-        {/* Add friend */}
-        <View style={s.card}>
-          <Text style={s.cardLabel}>Add Friend</Text>
-          <TextInput
-            style={s.input}
-            placeholder="Search by username..."
-            placeholderTextColor={colors.textMuted}
-            value={addQuery}
-            onChangeText={setAddQuery}
-            autoCapitalize="none"
-            autoCorrect={false}
-          />
-          {addResults.map(u => (
-            <View key={u.id} style={s.searchRow}>
-              <UserAvatar avatarId={u.avatar_id} username={u.username} size={36} />
-              <Text style={s.searchName}>{u.username}</Text>
-              {u.friend_status === 'accepted'
-                ? <Text style={s.alreadyFriend}>Friends ✓</Text>
-                : u.friend_status === 'pending'
-                ? <Text style={s.alreadyFriend}>Pending</Text>
-                : (
-                  <TouchableOpacity
-                    style={s.addBtn}
-                    onPress={() => addFriend(u.username)}
-                    disabled={addLoading}
-                  >
-                    <Text style={s.addBtnText}>+ Add</Text>
-                  </TouchableOpacity>
-                )
-              }
-            </View>
-          ))}
-        </View>
-
-        {/* Friends list */}
-        <View style={s.card}>
-          <Text style={s.cardLabel}>Friends ({friends.length})</Text>
-          {friendsLoading && <ActivityIndicator color={colors.textMuted} style={{ marginTop: 8 }} />}
-          {!friendsLoading && friends.length === 0 && (
-            <Text style={s.emptyText}>No friends yet. Add some above!</Text>
-          )}
-          {friends.map(f => (
-            <View key={f.id} style={s.friendRow}>
-              <UserAvatar avatarId={f.avatar_id} username={f.username} size={36} />
-              <Text style={s.friendName}>{f.username}</Text>
-              <TouchableOpacity onPress={() => removeFriend(f)} style={s.removeBtn}>
-                <Text style={s.removeBtnText}>✕</Text>
-              </TouchableOpacity>
-            </View>
-          ))}
         </View>
 
         {/* Logout */}

@@ -19,6 +19,11 @@ router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Prom
               ) AS friend_status
        FROM users
        WHERE username ILIKE $1 AND id != $2 AND is_guest = FALSE
+         AND NOT EXISTS (
+           SELECT 1 FROM friendships
+           WHERE user_a_id = LEAST($2::uuid, id) AND user_b_id = GREATEST($2::uuid, id)
+             AND status = 'accepted'
+         )
        ORDER BY friend_status DESC NULLS LAST, username
        LIMIT 10`,
       [q + '%', req.userId]
