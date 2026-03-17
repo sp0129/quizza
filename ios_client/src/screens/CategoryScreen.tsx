@@ -89,7 +89,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
             const idx = cleaned.indexOf(match);
             if (idx >= 0) {
               setTimeout(() => {
-                listRef.current?.scrollToIndex?.({ index: idx, animated: true, viewPosition: 0.3 });
+                listRef.current?.scrollToIndex?.({ index: idx, animated: true, viewPosition: 0 });
               }, 300);
             }
           }
