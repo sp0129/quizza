@@ -9,7 +9,11 @@ import Animated, {
   withSpring,
   withTiming,
   withDelay,
+  withRepeat,
+  withSequence,
   FadeIn,
+  FadeInDown,
+  Easing,
 } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Clipboard from 'expo-clipboard';
@@ -23,6 +27,11 @@ import AnswerButton from '../components/AnswerButton';
 import CircularTimer from '../components/CircularTimer';
 import { colors, gradients } from '../theme';
 import { getCategoryTheme, parseGradientColors } from '../utils/categoryThemes';
+import { playSound } from '../utils/sounds';
+import { startLobbyMusic, stopLobbyMusic } from '../utils/lobbyMusic';
+import FloatingParticles from '../components/lobby/FloatingParticles';
+import LobbyMascot from '../components/lobby/LobbyMascot';
+import JoinBurst from '../components/lobby/JoinBurst';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Room'>;
@@ -120,6 +129,16 @@ function RoomPopInAnswerButton({
 }
 const WEB_BASE = process.env.EXPO_PUBLIC_WEB_URL ?? 'https://quizza.vercel.app';
 
+const LOBBY_TIPS = [
+  'Tip: Faster answers earn more points! ⚡',
+  'Tip: Build a streak to climb the leaderboard! 🔥',
+  'Share the room code with friends! 📲',
+  'Tip: Each correct answer is worth 50-100 points!',
+  'Fun fact: Pizza was invented in Naples, Italy 🍕',
+  'The more players, the more fun! 🎉',
+  'Tip: Read the question carefully before answering!',
+];
+
 export default function RoomScreen({ route, navigation }: Props) {
   const { roomId, questionSetId, isHost, timer: QUESTION_TIME } = route.params;
   const insets = useSafeAreaInsets();
@@ -144,6 +163,15 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [startLoading, setStartLoading] = useState(false);
   const [error, setError] = useState('');
   const [addedFriends, setAddedFriends] = useState<Set<string>>(new Set());
+
+  // Lobby polish state
+  const [tipIndex, setTipIndex] = useState(0);
+  const [joinBurstKey, setJoinBurstKey] = useState(0);
+  const prevPlayerCountRef = useRef(0);
+  const readySoundPlayed = useRef(false);
+  const playerCountScale = useSharedValue(1);
+  const codeGlow = useSharedValue(0.3);
+  const startBtnScale = useSharedValue(1);
 
   // Answer reveal state
   const [buttonsVisible, setButtonsVisible] = useState(false);
@@ -186,6 +214,13 @@ export default function RoomScreen({ route, navigation }: Props) {
     };
   }, []);
 
+  // Lobby music
+  useEffect(() => {
+    if (phase !== 'lobby') return;
+    startLobbyMusic();
+    return () => { stopLobbyMusic(); };
+  }, [phase]);
+
   // Poll room state during lobby
   useEffect(() => {
     if (phase !== 'lobby' || !roomId) return;
@@ -195,7 +230,34 @@ export default function RoomScreen({ route, navigation }: Props) {
       ).then(data => {
         if (data.room_code) setRoomCode(data.room_code);
         if (data.category) setCategory(data.category);
-        setPlayers(data.players ?? []);
+        const newPlayers = data.players ?? [];
+        const newCount = newPlayers.length;
+
+        // Detect new player join
+        if (newCount > prevPlayerCountRef.current && prevPlayerCountRef.current > 0) {
+          playSound('tap');
+          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+          setJoinBurstKey(k => k + 1);
+          playerCountScale.value = withSequence(
+            withSpring(1.15, { damping: 8, stiffness: 200 }),
+            withSpring(1, { damping: 10, stiffness: 150 }),
+          );
+        }
+        prevPlayerCountRef.current = newCount;
+
+        // Start button pulse when enough players
+        if (newCount >= 2 && !readySoundPlayed.current) {
+          readySoundPlayed.current = true;
+          startBtnScale.value = withRepeat(
+            withSequence(
+              withTiming(1.03, { duration: 800, easing: Easing.inOut(Easing.ease) }),
+              withTiming(1.0, { duration: 800, easing: Easing.inOut(Easing.ease) }),
+            ),
+            -1, true,
+          );
+        }
+
+        setPlayers(newPlayers);
         if (data.status === 'active') setPhase('loading');
       }).catch(console.error);
 
@@ -203,6 +265,24 @@ export default function RoomScreen({ route, navigation }: Props) {
     const interval = setInterval(fetchRoom, 2000);
     return () => clearInterval(interval);
   }, [phase, roomId]);
+
+  // Tip rotation
+  useEffect(() => {
+    if (phase !== 'lobby') return;
+    const interval = setInterval(() => setTipIndex(i => (i + 1) % LOBBY_TIPS.length), 5000);
+    return () => clearInterval(interval);
+  }, [phase]);
+
+  // Room code glow animation
+  useEffect(() => {
+    codeGlow.value = withRepeat(
+      withSequence(
+        withTiming(0.7, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
+        withTiming(0.3, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
+      ),
+      -1, true,
+    );
+  }, []);
 
   // WebSocket for real-time game events
   useEffect(() => {
@@ -368,6 +448,7 @@ export default function RoomScreen({ route, navigation }: Props) {
 
   const startGame = async () => {
     if (!roomId) return;
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
     setStartLoading(true);
     try {
       await api.post(`/rooms/${roomId}/start`, {});
@@ -380,11 +461,13 @@ export default function RoomScreen({ route, navigation }: Props) {
 
   const copyCode = async () => {
     await Clipboard.setStringAsync(roomCode);
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const shareRoom = async () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     const inviteUrl = `${WEB_BASE}/join/${roomCode}`;
     await Share.share({
       message: `Join my Quizza room! Code: ${roomCode}\n${inviteUrl}`,
@@ -392,12 +475,30 @@ export default function RoomScreen({ route, navigation }: Props) {
     });
   };
 
+  // ── Animated styles for lobby ──
+  const playerCountAnimStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: playerCountScale.value }],
+  }));
+  const codeGlowStyle = useAnimatedStyle(() => ({
+    textShadowColor: 'rgba(6,182,212,0.6)',
+    textShadowRadius: 4 + codeGlow.value * 12,
+    textShadowOffset: { width: 0, height: 0 },
+  }));
+  const startBtnAnimStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: startBtnScale.value }],
+  }));
+
   // ── LOBBY ──
   if (phase === 'lobby') {
     const theme = getCategoryTheme(category);
     const [c1, c2] = parseGradientColors(theme.gradient);
     return (
-      <LinearGradient colors={gradients.bg} style={s.flex}>
+      <LinearGradient colors={[c1 + '22', gradients.bg[1], c2 + '22']} style={s.flex}>
+        {/* Floating particles background */}
+        <View style={StyleSheet.absoluteFill} pointerEvents="none">
+          <FloatingParticles />
+        </View>
+
         <ScrollView contentContainerStyle={[s.lobbyContainer, { paddingTop: insets.top + 16, paddingBottom: insets.bottom + 24 }]}>
           <TouchableOpacity style={[s.closeBtn, { top: insets.top + 12 }]} onPress={() => navigation.navigate('MainTabs')}>
             <Text style={s.closeBtnText}>✕</Text>
@@ -405,55 +506,101 @@ export default function RoomScreen({ route, navigation }: Props) {
 
           <Text style={s.lobbyTitle}>Room Lobby</Text>
 
+          {/* Host badge */}
+          {isHost && (
+            <Animated.View entering={FadeIn.delay(200)} style={s.hostBadge}>
+              <Text style={s.hostBadgeText}>You are the host 👑</Text>
+            </Animated.View>
+          )}
+
+          {/* Lottie mascot */}
+          <Animated.View entering={FadeIn.delay(300)}>
+            <LobbyMascot size={140} />
+          </Animated.View>
+
+          {/* Category badge */}
           {category ? (
-            <LinearGradient colors={[c1, c2]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.categoryBadge}>
-              <Text style={s.categoryEmoji}>{theme.emoji}</Text>
-              <Text style={s.categoryName}>{category}</Text>
-            </LinearGradient>
+            <Animated.View entering={FadeInDown.delay(400).duration(400)}>
+              <LinearGradient
+                colors={[c1, c2]}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                style={[s.categoryBadge, { borderWidth: 1, borderColor: theme.accent + '44', shadowColor: theme.accent, shadowOpacity: 0.3, shadowRadius: 12, shadowOffset: { width: 0, height: 0 }, elevation: 6 }]}
+              >
+                <Text style={[s.categoryEmoji, { fontSize: 32 }]}>{theme.emoji}</Text>
+                <Text style={s.categoryName}>{category}</Text>
+              </LinearGradient>
+            </Animated.View>
           ) : null}
 
-          <View style={s.codeBox}>
-            <Text style={s.codeLabel}>Room Code</Text>
-            <Text style={s.codeValue}>{roomCode}</Text>
-            <TouchableOpacity style={s.copyBtn} onPress={copyCode}>
-              <Text style={s.copyBtnText}>{copied ? '✓ Copied' : 'Copy'}</Text>
-            </TouchableOpacity>
-          </View>
+          {/* Room code with glow */}
+          <Animated.View entering={FadeInDown.delay(500).duration(400)}>
+            <View style={s.codeBox}>
+              <Text style={s.codeLabel}>Room Code</Text>
+              <Animated.Text style={[s.codeValue, codeGlowStyle]}>{roomCode}</Animated.Text>
+              <TouchableOpacity style={[s.copyBtn, copied && { backgroundColor: 'rgba(34,197,94,0.2)', borderColor: 'rgba(34,197,94,0.3)' }]} onPress={copyCode}>
+                <Text style={[s.copyBtnText, copied && { color: '#22C55E' }]}>{copied ? '✓ Copied' : 'Copy'}</Text>
+              </TouchableOpacity>
+            </View>
+          </Animated.View>
 
-          <View style={s.shareRow}>
-            <TouchableOpacity style={[s.shareBtn, s.flex1]} onPress={shareRoom}>
-              <Text style={s.shareBtnText}>📤 Share Invite</Text>
-            </TouchableOpacity>
-          </View>
-          <Text style={s.shareHint}>Friends can join via the link — no account needed.</Text>
+          {/* Share invite */}
+          <Animated.View entering={FadeInDown.delay(600).duration(400)}>
+            <View style={s.shareRow}>
+              <TouchableOpacity style={[s.shareBtn, s.flex1]} onPress={shareRoom} activeOpacity={0.7}>
+                <Text style={s.shareBtnText}>📤 Share Invite Link</Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={s.shareHint}>Friends can join via the link — no account needed.</Text>
+          </Animated.View>
 
-          <View style={s.playerList}>
-            <Text style={s.playerListTitle}>Players ({players.length})</Text>
-            {players.map((p, i) => (
-              <View key={p.playerId ?? i} style={s.playerRow}>
-                <Text style={s.playerRank}>{i + 1}</Text>
-                <Text style={s.playerName}>{p.username}{p.isHost ? ' 👑' : ''}</Text>
-              </View>
-            ))}
-          </View>
+          {/* Player list with join burst */}
+          <Animated.View entering={FadeInDown.delay(700).duration(400)}>
+            <View style={s.playerList}>
+              <Animated.Text style={[s.playerListTitle, playerCountAnimStyle]}>
+                Players ({players.length})
+              </Animated.Text>
+              {/* Join burst effect */}
+              {joinBurstKey > 0 && (
+                <View style={{ position: 'absolute', right: 16, top: 16 }}>
+                  <JoinBurst key={joinBurstKey} />
+                </View>
+              )}
+              {players.map((p, i) => (
+                <Animated.View key={p.playerId ?? i} entering={FadeInDown.delay(i * 80).springify()} style={s.playerRow}>
+                  <Text style={s.playerRank}>{i + 1}</Text>
+                  <Text style={s.playerName}>{p.username}{p.isHost ? ' 👑' : ''}</Text>
+                </Animated.View>
+              ))}
+            </View>
+          </Animated.View>
 
           {error ? <Text style={s.error}>{error}</Text> : null}
 
+          {/* Start / Waiting */}
           {isHost ? (
-            <TouchableOpacity
-              style={[s.startBtn, (startLoading || players.length < 1) && s.startBtnDisabled]}
-              onPress={startGame}
-              disabled={startLoading || players.length < 1}
-            >
-              {startLoading
-                ? <ActivityIndicator color="#fff" />
-                : <Text style={s.startBtnText}>Start Game</Text>}
-            </TouchableOpacity>
+            <Animated.View style={startBtnAnimStyle}>
+              <TouchableOpacity
+                style={[s.startBtn, (startLoading || players.length < 1) && s.startBtnDisabled]}
+                onPress={startGame}
+                disabled={startLoading || players.length < 1}
+                activeOpacity={0.8}
+              >
+                {startLoading
+                  ? <ActivityIndicator color="#fff" />
+                  : <Text style={s.startBtnText}>Start Game</Text>}
+              </TouchableOpacity>
+            </Animated.View>
           ) : (
             <View style={s.waitingBox}>
               <Text style={s.waitingText}>Waiting for host to start...</Text>
             </View>
           )}
+
+          {/* Rotating tips */}
+          <Animated.Text key={tipIndex} entering={FadeIn.duration(400)} style={s.tipText}>
+            {LOBBY_TIPS[tipIndex]}
+          </Animated.Text>
         </ScrollView>
       </LinearGradient>
     );
@@ -708,6 +855,17 @@ const s = StyleSheet.create({
   startBtnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
   waitingBox: { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 14, padding: 16, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)' },
   waitingText: { color: colors.textMuted, fontSize: 15 },
+  hostBadge: {
+    alignSelf: 'center',
+    backgroundColor: 'rgba(245,158,11,0.15)',
+    borderRadius: 20, paddingHorizontal: 14, paddingVertical: 6,
+    borderWidth: 1, borderColor: 'rgba(245,158,11,0.3)',
+  },
+  hostBadgeText: { color: '#F59E0B', fontSize: 13, fontWeight: '600' },
+  tipText: {
+    color: colors.textMuted, fontSize: 13, textAlign: 'center',
+    fontStyle: 'italic', marginTop: 8,
+  },
   // === TOP ZONE (game) ===
   topZone: { paddingHorizontal: 16, paddingBottom: 4 },
   topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 },
