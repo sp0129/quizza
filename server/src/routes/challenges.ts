@@ -9,7 +9,7 @@ const CHALLENGE_EXPIRY_HOURS = 24;
 
 // POST /challenges — send a challenge invitation to a user by username
 router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { targetUsername, category, categoryId, questionCount } = req.body;
+  const { targetUsername, category, categoryId, questionCount, difficulty } = req.body;
   const me = req.userId!;
 
   if (!targetUsername || !category) {
@@ -35,7 +35,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
     }
 
     const count = Number(questionCount) === 5 ? 5 : 10;
-    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count);
+    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count, difficulty);
     const gameId = uuidv4();
     const invId = uuidv4();
     const expiresAt = new Date(Date.now() + CHALLENGE_EXPIRY_HOURS * 3_600_000);

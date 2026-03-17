@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  Dimensions, ActivityIndicator, Keyboard,
+  Dimensions, ActivityIndicator, Keyboard, LayoutAnimation,
 } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -47,6 +47,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
   const [activeFilter, setActiveFilter] = useState('all');
   const [blitz, setBlitz] = useState(false);
   const [miniMode, setMiniMode] = useState(false);
+  const [difficulty, setDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -101,7 +102,16 @@ export default function CategoryScreen({ route, navigation }: Props) {
 
   // Handlers — toggle: tap selected card again to deselect
   const handleSelect = useCallback((item: Category) => {
-    setSelected((prev) => (prev?.id === item.id ? null : item));
+    setSelected((prev) => {
+      const next = prev?.id === item.id ? null : item;
+      const wasSelected = prev !== null;
+      const willBeSelected = next !== null;
+      // Animate only when transitioning between selected/deselected
+      if (wasSelected !== willBeSelected) {
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+      }
+      return next;
+    });
   }, []);
 
   const handleClearSearch = useCallback(() => {
@@ -123,7 +133,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
     try {
       if (mode === 'solo') {
         const r = await api.post<{ gameId: string; questionSetId: string }>(
-          '/games/solo', { category: selected.name, categoryId: selected.id, questionCount },
+          '/games/solo', { category: selected.name, categoryId: selected.id, questionCount, difficulty: difficulty !== 'all' ? difficulty : undefined },
         );
         navigation.replace('Game', {
           gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
@@ -131,7 +141,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
         });
       } else if (mode === 'room') {
         const r = await api.post<{ roomId: string; roomCode: string; questionSetId: string; category: string }>(
-          '/rooms', { category: selected.name, categoryId: selected.id, timerSeconds, questionCount },
+          '/rooms', { category: selected.name, categoryId: selected.id, timerSeconds, questionCount, difficulty: difficulty !== 'all' ? difficulty : undefined },
         );
         navigation.replace('Room', {
           roomId: r.roomId, questionSetId: r.questionSetId,
@@ -139,7 +149,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
         });
       } else if (mode === 'challenge') {
         const r = await api.post<{ gameId: string; questionSetId: string }>(
-          '/challenges', { targetUsername: target, category: selected.name, categoryId: selected.id, questionCount },
+          '/challenges', { targetUsername: target, category: selected.name, categoryId: selected.id, questionCount, difficulty: difficulty !== 'all' ? difficulty : undefined },
         );
         navigation.replace('Game', {
           gameId: r.gameId, mode: 'async', questionSetId: r.questionSetId,
@@ -243,43 +253,61 @@ export default function CategoryScreen({ route, navigation }: Props) {
 
       {/* ── Fixed bottom bar ── */}
       <View style={[s.bottom, { paddingBottom: insets.bottom + 12 }]}>
-        <View style={s.timerToggle}>
-          <TouchableOpacity
-            style={[s.timerOption, !blitz && s.timerOptionActive]}
-            onPress={() => setBlitz(false)}
-          >
-            <Text style={[s.timerOptionText, !blitz && s.timerOptionTextActive]}>
-              Standard · 30s
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[s.timerOption, blitz && s.timerOptionActive]}
-            onPress={() => setBlitz(true)}
-          >
-            <Text style={[s.timerOptionText, blitz && s.timerOptionTextActive]}>
-              Blitz · 15s
-            </Text>
-          </TouchableOpacity>
-        </View>
+        {selected && (
+          <>
+            <View style={s.timerToggle}>
+              <TouchableOpacity
+                style={[s.timerOption, !blitz && s.timerOptionActive]}
+                onPress={() => setBlitz(false)}
+              >
+                <Text style={[s.timerOptionText, !blitz && s.timerOptionTextActive]}>
+                  Standard · 30s
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[s.timerOption, blitz && s.timerOptionActive]}
+                onPress={() => setBlitz(true)}
+              >
+                <Text style={[s.timerOptionText, blitz && s.timerOptionTextActive]}>
+                  Blitz · 15s
+                </Text>
+              </TouchableOpacity>
+            </View>
 
-        <View style={s.timerToggle}>
-          <TouchableOpacity
-            style={[s.timerOption, !miniMode && s.timerOptionActive]}
-            onPress={() => { setMiniMode(false); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }}
-          >
-            <Text style={[s.timerOptionText, !miniMode && s.timerOptionTextActive]}>
-              10 Questions
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[s.timerOption, miniMode && s.timerOptionActive]}
-            onPress={() => { setMiniMode(true); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }}
-          >
-            <Text style={[s.timerOptionText, miniMode && s.timerOptionTextActive]}>
-              5 Questions
-            </Text>
-          </TouchableOpacity>
-        </View>
+            <View style={s.timerToggle}>
+              <TouchableOpacity
+                style={[s.timerOption, !miniMode && s.timerOptionActive]}
+                onPress={() => { setMiniMode(false); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }}
+              >
+                <Text style={[s.timerOptionText, !miniMode && s.timerOptionTextActive]}>
+                  10 Questions
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[s.timerOption, miniMode && s.timerOptionActive]}
+                onPress={() => { setMiniMode(true); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }}
+              >
+                <Text style={[s.timerOptionText, miniMode && s.timerOptionTextActive]}>
+                  5 Questions
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={s.timerToggle}>
+              {(['all', 'easy', 'medium', 'hard'] as const).map((d) => (
+                <TouchableOpacity
+                  key={d}
+                  style={[s.timerOption, difficulty === d && s.timerOptionActive, { flex: 1 }]}
+                  onPress={() => { setDifficulty(d); Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); }}
+                >
+                  <Text style={[s.timerOptionText, difficulty === d && s.timerOptionTextActive]}>
+                    {d === 'all' ? 'All' : d.charAt(0).toUpperCase() + d.slice(1)}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </>
+        )}
 
         <TouchableOpacity
           style={[s.goBtn, (!selected || submitting) && s.goBtnDisabled]}

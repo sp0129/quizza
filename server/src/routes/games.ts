@@ -12,14 +12,14 @@ const MATCHMAKING_TIMEOUT_MS = 15_000;
 
 // POST /games/solo — instant solo game, no matchmaking
 router.post('/solo', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { category, categoryId, questionCount } = req.body;
+  const { category, categoryId, questionCount, difficulty } = req.body;
   if (!category) {
     res.status(400).json({ error: 'category is required' });
     return;
   }
   const count = Number(questionCount) === 5 ? 5 : 10;
   try {
-    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count);
+    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count, difficulty);
     const gameId = uuidv4();
     await pool.query(
       `INSERT INTO games (id, question_set_id, player_a_id, category, game_mode, status)

@@ -14,7 +14,7 @@ function generateRoomCode(): string {
 
 // POST /rooms — create a new room
 router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { category, categoryId, timerSeconds, questionCount } = req.body;
+  const { category, categoryId, timerSeconds, questionCount, difficulty } = req.body;
   const me = req.userId!;
 
   if (!category) {
@@ -24,7 +24,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
 
   try {
     const count = Number(questionCount) === 5 ? 5 : 10;
-    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count);
+    const questionSetId = await fetchAndStoreQuestionSet(category, categoryId, count, difficulty);
 
     // Generate unique 6-char code with collision retry
     let roomCode = '';

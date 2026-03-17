@@ -90,7 +90,7 @@ export function loadLocalData(): LocalData {
   };
 }
 
-async function storeLocalQuestionSet(category: string, categoryId: number, questionCount: number = 10): Promise<string> {
+async function storeLocalQuestionSet(category: string, categoryId: number, questionCount: number = 10, difficulty?: string): Promise<string> {
   const data = loadLocalData();
   const bank = data.question_banks.find(b => b.category_id === categoryId);
 
@@ -98,8 +98,16 @@ async function storeLocalQuestionSet(category: string, categoryId: number, quest
     throw new Error(`No local questions found for category "${category}" (id ${categoryId})`);
   }
 
+  let questionPool = deduplicateByQuestion(bank.questions);
+  if (difficulty && difficulty !== 'all') {
+    questionPool = questionPool.filter(q => q.difficulty === difficulty);
+  }
+  if (!questionPool.length) {
+    throw new Error(`No ${difficulty} questions found for this category`);
+  }
+
   const seed = Date.now();
-  const shuffled = shuffleArray(deduplicateByQuestion(bank.questions), seed).slice(0, questionCount);
+  const shuffled = shuffleArray(questionPool, seed).slice(0, questionCount);
 
   const questions: Question[] = shuffled
     .sort((a, b) => {
@@ -124,16 +132,19 @@ async function storeLocalQuestionSet(category: string, categoryId: number, quest
   return id;
 }
 
-export async function fetchAndStoreQuestionSet(category: string, categoryId?: number, questionCount: number = 10): Promise<string> {
+export async function fetchAndStoreQuestionSet(category: string, categoryId?: number, questionCount: number = 10, difficulty?: string): Promise<string> {
   // Local categories use IDs >= 2000
   if (categoryId !== undefined && categoryId >= 2000) {
-    return storeLocalQuestionSet(category, categoryId, questionCount);
+    return storeLocalQuestionSet(category, categoryId, questionCount, difficulty);
   }
 
   // Fetch from Open Trivia DB
-  const url = categoryId
+  let url = categoryId
     ? `https://opentdb.com/api.php?amount=15&category=${categoryId}&type=multiple&encode=url3986`
     : `https://opentdb.com/api.php?amount=15&type=multiple&encode=url3986`;
+  if (difficulty && difficulty !== 'all') {
+    url += `&difficulty=${difficulty}`;
+  }
 
   const res = await fetch(url);
   const data = await res.json() as { response_code: number; results: OpenTDBQuestion[] };
