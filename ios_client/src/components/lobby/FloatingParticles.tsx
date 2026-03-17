@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -11,48 +11,43 @@ import Animated, {
 
 const { width: W, height: H } = Dimensions.get('window');
 
-const PARTICLE_COUNT = 14;
-const COLORS = [
-  'rgba(124,58,237,0.15)',   // purple
-  'rgba(6,182,212,0.12)',    // cyan
-  'rgba(245,158,11,0.10)',   // amber
-  'rgba(34,197,94,0.10)',    // green
-];
+const PARTICLE_COUNT = 18;
 
 interface ParticleConfig {
   x: number;
   y: number;
   size: number;
-  color: string;
+  durationFade: number;
+  durationDrift: number;
   driftY: number;
-  driftX: number;
-  durationY: number;
-  durationX: number;
 }
 
-function Particle({ config }: { config: ParticleConfig }) {
+function Twinkle({ config }: { config: ParticleConfig }) {
+  const opacity = useSharedValue(0);
   const ty = useSharedValue(0);
-  const tx = useSharedValue(0);
 
   React.useEffect(() => {
-    ty.value = withRepeat(
+    // Fade in/out like a twinkle
+    opacity.value = withRepeat(
       withSequence(
-        withTiming(config.driftY, { duration: config.durationY, easing: Easing.inOut(Easing.ease) }),
-        withTiming(0, { duration: config.durationY, easing: Easing.inOut(Easing.ease) }),
+        withTiming(0.4 + Math.random() * 0.3, { duration: config.durationFade, easing: Easing.inOut(Easing.ease) }),
+        withTiming(0, { duration: config.durationFade, easing: Easing.inOut(Easing.ease) }),
       ),
       -1, true,
     );
-    tx.value = withRepeat(
+    // Gentle drift
+    ty.value = withRepeat(
       withSequence(
-        withTiming(config.driftX, { duration: config.durationX, easing: Easing.inOut(Easing.ease) }),
-        withTiming(0, { duration: config.durationX, easing: Easing.inOut(Easing.ease) }),
+        withTiming(config.driftY, { duration: config.durationDrift, easing: Easing.inOut(Easing.ease) }),
+        withTiming(0, { duration: config.durationDrift, easing: Easing.inOut(Easing.ease) }),
       ),
       -1, true,
     );
   }, []);
 
   const style = useAnimatedStyle(() => ({
-    transform: [{ translateY: ty.value }, { translateX: tx.value }],
+    opacity: opacity.value,
+    transform: [{ translateY: ty.value }],
   }));
 
   return (
@@ -65,7 +60,7 @@ function Particle({ config }: { config: ParticleConfig }) {
           width: config.size,
           height: config.size,
           borderRadius: config.size / 2,
-          backgroundColor: config.color,
+          backgroundColor: '#FFFFFF',
         },
         style,
       ]}
@@ -78,19 +73,17 @@ export default function FloatingParticles() {
     Array.from({ length: PARTICLE_COUNT }, () => ({
       x: Math.random() * W,
       y: Math.random() * H,
-      size: 4 + Math.random() * 6,
-      color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      driftY: 30 + Math.random() * 40,
-      driftX: (Math.random() - 0.5) * 30,
-      durationY: 4000 + Math.random() * 3000,
-      durationX: 5000 + Math.random() * 4000,
+      size: 2 + Math.random() * 3,
+      durationFade: 2000 + Math.random() * 3000,
+      durationDrift: 5000 + Math.random() * 4000,
+      driftY: 10 + Math.random() * 20,
     })),
   []);
 
   return (
     <>
       {particles.map((p, i) => (
-        <Particle key={i} config={p} />
+        <Twinkle key={i} config={p} />
       ))}
     </>
   );

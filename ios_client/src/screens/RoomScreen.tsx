@@ -163,6 +163,7 @@ export default function RoomScreen({ route, navigation }: Props) {
   const [startLoading, setStartLoading] = useState(false);
   const [error, setError] = useState('');
   const [addedFriends, setAddedFriends] = useState<Set<string>>(new Set());
+  const [roomClosed, setRoomClosed] = useState('');
 
   // Lobby polish state
   const [tipIndex, setTipIndex] = useState(0);
@@ -170,7 +171,6 @@ export default function RoomScreen({ route, navigation }: Props) {
   const prevPlayerCountRef = useRef(0);
   const readySoundPlayed = useRef(false);
   const playerCountScale = useSharedValue(1);
-  const codeGlow = useSharedValue(0.3);
   const startBtnScale = useSharedValue(1);
 
   // Answer reveal state
@@ -259,7 +259,10 @@ export default function RoomScreen({ route, navigation }: Props) {
 
         setPlayers(newPlayers);
         if (data.status === 'active') setPhase('loading');
-      }).catch(console.error);
+      }).catch((err: any) => {
+        // Server returns specific error messages for expired/abandoned/started rooms
+        if (err?.message) setRoomClosed(err.message);
+      });
 
     fetchRoom();
     const interval = setInterval(fetchRoom, 2000);
@@ -273,16 +276,6 @@ export default function RoomScreen({ route, navigation }: Props) {
     return () => clearInterval(interval);
   }, [phase]);
 
-  // Room code glow animation
-  useEffect(() => {
-    codeGlow.value = withRepeat(
-      withSequence(
-        withTiming(0.7, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
-        withTiming(0.3, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
-      ),
-      -1, true,
-    );
-  }, []);
 
   // WebSocket for real-time game events
   useEffect(() => {
@@ -479,28 +472,55 @@ export default function RoomScreen({ route, navigation }: Props) {
   const playerCountAnimStyle = useAnimatedStyle(() => ({
     transform: [{ scale: playerCountScale.value }],
   }));
-  const codeGlowStyle = useAnimatedStyle(() => ({
-    textShadowColor: 'rgba(6,182,212,0.6)',
-    textShadowRadius: 4 + codeGlow.value * 12,
-    textShadowOffset: { width: 0, height: 0 },
-  }));
   const startBtnAnimStyle = useAnimatedStyle(() => ({
     transform: [{ scale: startBtnScale.value }],
   }));
+
+  // ── ROOM CLOSED (expired / abandoned / already started) ──
+  if (roomClosed) {
+    return (
+      <LinearGradient colors={gradients.bg} style={s.flex}>
+        <View style={[s.center, { padding: 32 }]}>
+          <PizzaMascot mood="wrong" size={110} />
+          <Text style={{ color: colors.textPrimary, fontSize: 20, fontWeight: '700', textAlign: 'center', marginTop: 16 }}>
+            {roomClosed}
+          </Text>
+          <TouchableOpacity
+            style={[s.btn, s.btnGhost, { marginTop: 24 }]}
+            onPress={() => navigation.navigate('MainTabs')}
+          >
+            <Text style={s.btnGhostText}>Back to Dashboard</Text>
+          </TouchableOpacity>
+        </View>
+      </LinearGradient>
+    );
+  }
 
   // ── LOBBY ──
   if (phase === 'lobby') {
     const theme = getCategoryTheme(category);
     const [c1, c2] = parseGradientColors(theme.gradient);
     return (
-      <LinearGradient colors={[c1 + '22', gradients.bg[1], c2 + '22']} style={s.flex}>
-        {/* Floating particles background */}
+      <LinearGradient colors={gradients.bg} style={s.flex}>
+        {/* Subtle twinkle background */}
         <View style={StyleSheet.absoluteFill} pointerEvents="none">
           <FloatingParticles />
         </View>
 
-        <ScrollView contentContainerStyle={[s.lobbyContainer, { paddingTop: insets.top + 16, paddingBottom: insets.bottom + 24 }]}>
-          <TouchableOpacity style={[s.closeBtn, { top: insets.top + 12 }]} onPress={() => navigation.navigate('MainTabs')}>
+        {/* Scrollable top section */}
+        <ScrollView
+          style={s.flex}
+          contentContainerStyle={[s.lobbyScrollContent, { paddingTop: insets.top + 16 }]}
+        >
+          <TouchableOpacity
+            style={[s.closeBtn, { top: insets.top + 12 }]}
+            onPress={async () => {
+              if (isHost) {
+                try { await api.post(`/rooms/${roomId}/abandon`, {}); } catch {}
+              }
+              navigation.navigate('MainTabs');
+            }}
+          >
             <Text style={s.closeBtnText}>✕</Text>
           </TouchableOpacity>
 
@@ -513,71 +533,54 @@ export default function RoomScreen({ route, navigation }: Props) {
             </Animated.View>
           )}
 
-          {/* Lottie mascot */}
-          <Animated.View entering={FadeIn.delay(300)}>
-            <LobbyMascot size={140} />
-          </Animated.View>
-
-          {/* Category badge */}
+          {/* Category badge — compact */}
           {category ? (
-            <Animated.View entering={FadeInDown.delay(400).duration(400)}>
-              <LinearGradient
-                colors={[c1, c2]}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 1 }}
-                style={[s.categoryBadge, { borderWidth: 1, borderColor: theme.accent + '44', shadowColor: theme.accent, shadowOpacity: 0.3, shadowRadius: 12, shadowOffset: { width: 0, height: 0 }, elevation: 6 }]}
-              >
-                <Text style={[s.categoryEmoji, { fontSize: 32 }]}>{theme.emoji}</Text>
-                <Text style={s.categoryName}>{category}</Text>
-              </LinearGradient>
-            </Animated.View>
+            <LinearGradient colors={[c1, c2]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.categoryBadge}>
+              <Text style={s.categoryEmoji}>{theme.emoji}</Text>
+              <Text style={s.categoryName}>{category}</Text>
+            </LinearGradient>
           ) : null}
 
-          {/* Room code with glow */}
-          <Animated.View entering={FadeInDown.delay(500).duration(400)}>
-            <View style={s.codeBox}>
-              <Text style={s.codeLabel}>Room Code</Text>
-              <Animated.Text style={[s.codeValue, codeGlowStyle]}>{roomCode}</Animated.Text>
-              <TouchableOpacity style={[s.copyBtn, copied && { backgroundColor: 'rgba(34,197,94,0.2)', borderColor: 'rgba(34,197,94,0.3)' }]} onPress={copyCode}>
-                <Text style={[s.copyBtnText, copied && { color: '#22C55E' }]}>{copied ? '✓ Copied' : 'Copy'}</Text>
-              </TouchableOpacity>
-            </View>
-          </Animated.View>
+          {/* Room code — single row */}
+          <View style={s.codeRow}>
+            <Text style={s.codeLabel}>Code</Text>
+            <Text style={s.codeValue}>{roomCode}</Text>
+            <TouchableOpacity style={[s.copyBtn, copied && { backgroundColor: 'rgba(34,197,94,0.2)', borderColor: 'rgba(34,197,94,0.3)' }]} onPress={copyCode}>
+              <Text style={[s.copyBtnText, copied && { color: '#22C55E' }]}>{copied ? '✓ Copied' : 'Copy'}</Text>
+            </TouchableOpacity>
+          </View>
 
           {/* Share invite */}
-          <Animated.View entering={FadeInDown.delay(600).duration(400)}>
-            <View style={s.shareRow}>
-              <TouchableOpacity style={[s.shareBtn, s.flex1]} onPress={shareRoom} activeOpacity={0.7}>
-                <Text style={s.shareBtnText}>📤 Share Invite Link</Text>
-              </TouchableOpacity>
-            </View>
-            <Text style={s.shareHint}>Friends can join via the link — no account needed.</Text>
-          </Animated.View>
+          <View style={s.shareRow}>
+            <TouchableOpacity style={[s.shareBtn, s.flex1]} onPress={shareRoom} activeOpacity={0.7}>
+              <Text style={s.shareBtnText}>📤 Share Invite</Text>
+            </TouchableOpacity>
+          </View>
+          <Text style={s.shareHint}>Friends can join via the link — no account needed.</Text>
 
-          {/* Player list with join burst */}
-          <Animated.View entering={FadeInDown.delay(700).duration(400)}>
-            <View style={s.playerList}>
-              <Animated.Text style={[s.playerListTitle, playerCountAnimStyle]}>
-                Players ({players.length})
-              </Animated.Text>
-              {/* Join burst effect */}
-              {joinBurstKey > 0 && (
-                <View style={{ position: 'absolute', right: 16, top: 16 }}>
-                  <JoinBurst key={joinBurstKey} />
-                </View>
-              )}
+          {/* Player list with join burst — max height, scrollable internally */}
+          <View style={s.playerList}>
+            <Animated.Text style={[s.playerListTitle, playerCountAnimStyle]}>
+              Players ({players.length})
+            </Animated.Text>
+            {joinBurstKey > 0 && (
+              <View style={{ position: 'absolute', right: 16, top: 16 }}>
+                <JoinBurst key={joinBurstKey} />
+              </View>
+            )}
+            <ScrollView style={s.playerScroll} nestedScrollEnabled>
               {players.map((p, i) => (
-                <Animated.View key={p.playerId ?? i} entering={FadeInDown.delay(i * 80).springify()} style={s.playerRow}>
+                <View key={p.playerId ?? i} style={s.playerRow}>
                   <Text style={s.playerRank}>{i + 1}</Text>
                   <Text style={s.playerName}>{p.username}{p.isHost ? ' 👑' : ''}</Text>
-                </Animated.View>
+                </View>
               ))}
-            </View>
-          </Animated.View>
+            </ScrollView>
+          </View>
 
           {error ? <Text style={s.error}>{error}</Text> : null}
 
-          {/* Start / Waiting */}
+          {/* Start / Waiting — right below players */}
           {isHost ? (
             <Animated.View style={startBtnAnimStyle}>
               <TouchableOpacity
@@ -596,12 +599,15 @@ export default function RoomScreen({ route, navigation }: Props) {
               <Text style={s.waitingText}>Waiting for host to start...</Text>
             </View>
           )}
+        </ScrollView>
 
-          {/* Rotating tips */}
+        {/* Fixed bottom: mascot + tip */}
+        <View style={[s.lobbyBottom, { paddingBottom: insets.bottom + 12 }]}>
+          <LobbyMascot size={130} />
           <Animated.Text key={tipIndex} entering={FadeIn.duration(400)} style={s.tipText}>
             {LOBBY_TIPS[tipIndex]}
           </Animated.Text>
-        </ScrollView>
+        </View>
       </LinearGradient>
     );
   }
@@ -828,29 +834,31 @@ const s = StyleSheet.create({
   center: { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 16 },
   loadingText: { color: colors.textMuted, fontSize: 16 },
   // Lobby
-  lobbyContainer: { padding: 20, gap: 16, alignItems: 'stretch' },
+  lobbyScrollContent: { paddingHorizontal: 20, gap: 12, alignItems: 'stretch', paddingBottom: 8 },
+  lobbyBottom: { paddingHorizontal: 20, alignItems: 'center', gap: 8 },
   closeBtn: { position: 'absolute', right: 20, zIndex: 10, width: 32, height: 32, borderRadius: 16, backgroundColor: 'rgba(255,255,255,0.1)', justifyContent: 'center', alignItems: 'center' },
   closeBtnText: { color: colors.textPrimary, fontSize: 16 },
   lobbyTitle: { color: colors.textPrimary, fontSize: 26, fontWeight: '800', textAlign: 'center', marginTop: 36 },
-  categoryBadge: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10, borderRadius: 16, padding: 14 },
-  categoryEmoji: { fontSize: 28 },
-  categoryName: { color: '#fff', fontSize: 18, fontWeight: '700' },
-  codeBox: { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 16, padding: 16, alignItems: 'center', gap: 8, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
+  categoryBadge: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, borderRadius: 12, padding: 10 },
+  categoryEmoji: { fontSize: 22 },
+  categoryName: { color: '#fff', fontSize: 15, fontWeight: '700' },
+  codeRow: { flexDirection: 'row', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 12, paddingHorizontal: 14, paddingVertical: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', gap: 10 },
   codeLabel: { color: colors.textMuted, fontSize: 12, textTransform: 'uppercase', letterSpacing: 1 },
-  codeValue: { color: colors.textPrimary, fontSize: 36, fontWeight: '800', letterSpacing: 6 },
+  codeValue: { color: colors.textPrimary, fontSize: 22, fontWeight: '800', letterSpacing: 3, flex: 1 },
   copyBtn: { backgroundColor: 'rgba(255,255,255,0.08)', paddingHorizontal: 16, paddingVertical: 6, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
   copyBtnText: { color: colors.textPrimary, fontSize: 13, fontWeight: '600' },
   shareRow: { flexDirection: 'row', gap: 10 },
   shareBtn: { backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: 12, padding: 14, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
   shareBtnText: { color: colors.textPrimary, fontSize: 14, fontWeight: '600' },
   shareHint: { color: colors.textMuted, fontSize: 13, textAlign: 'center' },
-  playerList: { backgroundColor: colors.surface, borderRadius: 16, padding: 16, gap: 8, borderWidth: 1, borderColor: colors.border },
+  playerList: { backgroundColor: colors.surface, borderRadius: 16, padding: 16, gap: 8, borderWidth: 1, borderColor: colors.border, maxHeight: 160 },
+  playerScroll: { gap: 8 },
   playerListTitle: { color: colors.textPrimary, fontSize: 15, fontWeight: '700', marginBottom: 4 },
   playerRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   playerRank: { color: colors.textMuted, fontSize: 14, width: 20 },
   playerName: { color: colors.textPrimary, fontSize: 15, fontWeight: '500' },
   error: { color: colors.red, fontSize: 14, textAlign: 'center' },
-  startBtn: { backgroundColor: colors.cyan, borderRadius: 14, padding: 16, alignItems: 'center' },
+  startBtn: { backgroundColor: colors.cyan, borderRadius: 12, paddingVertical: 12, paddingHorizontal: 16, alignItems: 'center' },
   startBtnDisabled: { opacity: 0.4 },
   startBtnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
   waitingBox: { backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: 14, padding: 16, alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.08)' },

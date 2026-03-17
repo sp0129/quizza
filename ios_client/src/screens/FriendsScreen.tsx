@@ -50,14 +50,19 @@ export default function FriendsScreen({ navigation }: Props) {
   const [searchLoading, setSearchLoading] = useState(false);
   const [addingIds, setAddingIds] = useState<Set<string>>(new Set());
   const [selectedFriend, setSelectedFriend] = useState<Friend | null>(null);
+  const [pendingFriends, setPendingFriends] = useState<Friend[]>([]);
 
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
-  // Fetch friends list
+  // Fetch friends list + pending outgoing
   const fetchFriends = useCallback(async () => {
     try {
-      const data = await api.get<Friend[]>('/friends');
-      setFriends(data);
+      const [accepted, pending] = await Promise.all([
+        api.get<Friend[]>('/friends'),
+        api.get<Friend[]>('/friends/pending'),
+      ]);
+      setFriends(accepted);
+      setPendingFriends(pending);
     } catch {
       // Keep existing
     } finally {
@@ -103,10 +108,9 @@ export default function FriendsScreen({ navigation }: Props) {
     try {
       await api.post('/friends', { username: friendUser.username });
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      // Refresh friends list
-      const updated = await api.get<Friend[]>('/friends');
-      setFriends(updated);
-      // Update search result to show as friend
+      // Refresh friends + pending lists
+      fetchFriends();
+      // Update search result to show as pending
       setSearchResults((prev) =>
         prev.map((u) => (u.id === friendUser.id ? { ...u, friend_status: 'pending' as const } : u)),
       );
@@ -336,6 +340,28 @@ export default function FriendsScreen({ navigation }: Props) {
           ListHeaderComponent={
             <Text style={styles.listHeader}>YOUR FRIENDS ({friends.length})</Text>
           }
+          ListFooterComponent={pendingFriends.length > 0 ? (
+            <View style={styles.pendingSection}>
+              <Text style={styles.listHeader}>PENDING ({pendingFriends.length})</Text>
+              {pendingFriends.map((p) => (
+                <View key={p.id} style={[styles.friendRow, { opacity: 0.5 }]}>
+                  <View style={styles.avatar}>
+                    {getAvatar(p.avatar_id) ? (
+                      <Image source={getAvatar(p.avatar_id)!.image} style={styles.avatarImage} resizeMode="cover" />
+                    ) : (
+                      <Text style={styles.avatarText}>{p.username[0]?.toUpperCase()}</Text>
+                    )}
+                  </View>
+                  <View style={styles.userInfo}>
+                    <Text style={styles.userName} numberOfLines={1}>{p.username}</Text>
+                  </View>
+                  <View style={styles.pendingTag}>
+                    <Text style={styles.pendingTagText}>Pending</Text>
+                  </View>
+                </View>
+              ))}
+            </View>
+          ) : null}
         />
       )}
 
@@ -570,6 +596,22 @@ const styles = StyleSheet.create({
   pendingBadgeText: {
     color: colors.text.secondary,
     fontSize: 13,
+    fontWeight: '600',
+    fontStyle: 'italic',
+  },
+  pendingSection: {
+    marginTop: 16,
+    gap: 0,
+  },
+  pendingTag: {
+    backgroundColor: 'rgba(255,255,255,0.08)',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  pendingTagText: {
+    color: colors.text.secondary,
+    fontSize: 12,
     fontWeight: '600',
     fontStyle: 'italic',
   },

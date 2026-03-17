@@ -92,6 +92,29 @@ router.get('/requests', requireAuth, async (req: AuthRequest, res: Response): Pr
   }
 });
 
+// GET /friends/pending — my outgoing pending friend requests
+router.get('/pending', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  try {
+    const result = await pool.query(
+      `SELECT u.id, u.username, u.avatar_id
+       FROM friendships f
+       JOIN users u ON u.id = CASE
+         WHEN f.user_a_id = $1 THEN f.user_b_id
+         ELSE f.user_a_id
+       END
+       WHERE (f.user_a_id = $1 OR f.user_b_id = $1)
+         AND f.requester_id = $1
+         AND f.status = 'pending'
+       ORDER BY f.created_at DESC`,
+      [req.userId]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // POST /friends/requests/:id/accept — accept a friend request
 router.post('/requests/:id/accept', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {

@@ -95,12 +95,40 @@ export function cleanCategoryName(name: string): string {
 }
 
 export const CATEGORY_SORT_ORDER: number[] = [
-  19, 17, 18, 2007, 2001, 2002, 30,
-  23, 20, 22, 24, 9,
-  11, 14, 12, 2006, 13, 15, 16, 29, 31, 32,
-  26, 2003, 2004, 2005,
-  21, 27, 28,
-  25, 10,
+  // Fun & entertainment first
+  9,     // General Knowledge
+  11,    // Film
+  14,    // Television
+  12,    // Music
+  2006,  // Pop Music
+  26,    // Celebrities
+  2003,  // Harry Potter
+  2004,  // Game of Thrones
+  2005,  // Marvel
+  15,    // Video Games
+  21,    // Sports
+  13,    // Musicals & Theatre
+  31,    // Anime & Manga
+  32,    // Cartoons
+  16,    // Board Games
+  // Culture & knowledge
+  29,    // Books
+  25,    // Art
+  10,    // Books (general)
+  27,    // Animals
+  22,    // Geography
+  23,    // History
+  20,    // Mythology
+  24,    // Politics
+  // STEM
+  17,    // Science & Nature
+  2001,  // Chemistry
+  2002,  // Biology
+  2007,  // Computer Science
+  18,    // Computers
+  30,    // Gadgets
+  19,    // Mathematics
+  28,    // Vehicles
 ];
 
 export function getCategoryTheme(categoryName: string, categoryId?: number): CategoryTheme {

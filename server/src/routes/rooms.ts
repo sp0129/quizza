@@ -83,13 +83,31 @@ router.post('/join', requireAuth, async (req: AuthRequest, res: Response): Promi
   }
 
   try {
+    // Look up room by code (any status)
     const roomResult = await pool.query(
-      `SELECT * FROM rooms WHERE room_code = $1 AND status = 'waiting'`,
+      `SELECT * FROM rooms WHERE room_code = $1`,
       [roomCode.toUpperCase()]
     );
     const room = roomResult.rows[0];
     if (!room) {
-      res.status(404).json({ error: 'Room not found or already started' });
+      res.status(404).json({ error: 'Room not found' });
+      return;
+    }
+
+    // Check if expired (>30 min old)
+    const ageMs = Date.now() - new Date(room.created_at).getTime();
+    if (ageMs > 30 * 60 * 1000) {
+      res.status(410).json({ error: 'This room has expired' });
+      return;
+    }
+
+    // Check if game already started or finished
+    if (room.status === 'active') {
+      res.status(410).json({ error: 'This game has already started' });
+      return;
+    }
+    if (room.status === 'finished' || room.status === 'abandoned') {
+      res.status(410).json({ error: 'This room is no longer active' });
       return;
     }
 
@@ -128,12 +146,37 @@ router.post('/join', requireAuth, async (req: AuthRequest, res: Response): Promi
   }
 });
 
+// POST /rooms/:roomId/abandon — host abandons the room
+router.post('/:roomId/abandon', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  try {
+    await pool.query(
+      `UPDATE rooms SET status = 'abandoned' WHERE id = $1 AND host_id = $2 AND status = 'waiting'`,
+      [req.params.roomId, req.userId]
+    );
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // GET /rooms/:roomId — get room info + players
 router.get('/:roomId', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const roomResult = await pool.query('SELECT * FROM rooms WHERE id = $1', [req.params.roomId]);
     const room = roomResult.rows[0];
     if (!room) { res.status(404).json({ error: 'Room not found' }); return; }
+
+    // Check expiry (>30 min) or abandoned
+    const ageMs = Date.now() - new Date(room.created_at).getTime();
+    if (room.status === 'waiting' && ageMs > 30 * 60 * 1000) {
+      res.status(410).json({ error: 'This room has expired' });
+      return;
+    }
+    if (room.status === 'abandoned') {
+      res.status(410).json({ error: 'The host left this room' });
+      return;
+    }
 
     const playersResult = await pool.query(
       `SELECT player_id, username, score, finished FROM room_players WHERE room_id = $1 ORDER BY joined_at`,

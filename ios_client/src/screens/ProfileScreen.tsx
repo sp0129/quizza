@@ -366,22 +366,22 @@ const s = StyleSheet.create({
   avatarGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 12,
-    justifyContent: 'center',
+    gap: 10,
+    justifyContent: 'space-between',
   },
   avatarOption: {
-    width: 100, height: 116,
-    borderRadius: 16,
+    width: '31%' as any, aspectRatio: 0.85,
+    borderRadius: 14,
     backgroundColor: 'rgba(30,41,59,0.6)',
     justifyContent: 'center', alignItems: 'center',
     borderWidth: 2, borderColor: 'transparent',
-    gap: 6,
+    gap: 4, paddingVertical: 8,
   },
   avatarOptionSelected: {
     borderColor: '#7C3AED',
     backgroundColor: 'rgba(124,58,237,0.15)',
   },
-  avatarOptionImage: { width: 72, height: 72 },
+  avatarOptionImage: { width: 80, height: 80 },
   avatarOptionLabel: { color: colors.textMuted, fontSize: 12, fontWeight: '600' },
   avatarOptionLabelSelected: { color: colors.textPrimary },
   // Sound toggle
