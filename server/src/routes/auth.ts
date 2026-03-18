@@ -23,19 +23,15 @@ async function verifyAppleToken(token: string): Promise<{ sub: string; email?: s
   if (!appleKey) throw new Error('Apple key not found');
   const publicKey = crypto.createPublicKey({ key: appleKey, format: 'jwk' });
   const pem = publicKey.export({ type: 'spki', format: 'pem' }) as string;
-  const payload = (decoded as any).payload;
-  const expected = process.env.APPLE_APP_ID ?? 'com.quizza.app';
-  console.log('Apple auth debug — token aud:', payload?.aud, '| expected:', expected);
-  try {
-    return jwt.verify(token, pem, {
-      algorithms: ['RS256'],
-      issuer: 'https://appleid.apple.com',
-      audience: expected,
-    }) as { sub: string; email?: string };
-  } catch (err: any) {
-    console.error('Apple token verify failed:', err.message, '| token aud:', payload?.aud, '| expected:', expected);
-    throw err;
-  }
+  // Accept both production bundle ID and Expo Go's bundle ID
+  const audiences = (process.env.APPLE_APP_ID ?? 'com.quizza.app')
+    .split(',')
+    .concat('host.exp.Exponent');
+  return jwt.verify(token, pem, {
+    algorithms: ['RS256'],
+    issuer: 'https://appleid.apple.com',
+    audience: audiences,
+  }) as { sub: string; email?: string };
 }
 
 function buildAppleUsername(
