@@ -11,3 +11,4 @@ web-build/
 ios/
 .env
 *.ipa
+eas.json

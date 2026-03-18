@@ -1,12 +1,21 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let _resend: Resend | null = null;
+function getResend(): Resend {
+  if (!_resend) {
+    if (!process.env.RESEND_API_KEY) {
+      console.warn('RESEND_API_KEY not set — emails will be skipped');
+    }
+    _resend = new Resend(process.env.RESEND_API_KEY ?? 'missing');
+  }
+  return _resend;
+}
 
 const FROM = 'Quizza <noreply@quizza.app>';
 
 export async function sendVerificationEmail(to: string, token: string): Promise<void> {
   const deepLink = `quizza://verify?token=${token}`;
-  await resend.emails.send({
+  await getResend().emails.send({
     from: FROM,
     to,
     subject: 'Verify your Quizza account',
@@ -16,7 +25,7 @@ export async function sendVerificationEmail(to: string, token: string): Promise<
 
 export async function sendPasswordResetEmail(to: string, token: string): Promise<void> {
   const deepLink = `quizza://reset?token=${token}`;
-  await resend.emails.send({
+  await getResend().emails.send({
     from: FROM,
     to,
     subject: 'Reset your Quizza password',
@@ -29,7 +38,7 @@ export async function sendPasswordResetConfirmation(to: string): Promise<void> {
     dateStyle: 'medium',
     timeStyle: 'short',
   });
-  await resend.emails.send({
+  await getResend().emails.send({
     from: FROM,
     to,
     subject: 'Your Quizza password was reset',
