@@ -1,726 +1,4006 @@
 {
-  "category": "Chemistry",
-  "category_id": 2001,
-  "questions": [
-  {
-    "question": "What is the chemical symbol for water?",
-    "correct_answer": "H2O",
-    "incorrect_answers": ["HO2", "H2O2", "OH2"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
-    "correct_answer": "Carbon dioxide",
-    "incorrect_answers": ["Oxygen", "Nitrogen", "Hydrogen"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the most abundant gas in Earth's atmosphere?",
-    "correct_answer": "Nitrogen",
-    "incorrect_answers": ["Oxygen", "Carbon dioxide", "Argon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element has the chemical symbol 'Au'?",
-    "correct_answer": "Gold",
-    "incorrect_answers": ["Silver", "Copper", "Aluminum"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the pH of a neutral solution, such as pure water?",
-    "correct_answer": "7",
-    "incorrect_answers": ["0", "1", "14"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which subatomic particle has a negative charge?",
-    "correct_answer": "Electron",
-    "incorrect_answers": ["Proton", "Neutron", "Positron"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the lightest element on the periodic table?",
-    "correct_answer": "Hydrogen",
-    "incorrect_answers": ["Helium", "Lithium", "Oxygen"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which metal is liquid at room temperature?",
-    "correct_answer": "Mercury",
-    "incorrect_answers": ["Iron", "Lead", "Aluminum"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the common name for the compound Sodium Chloride (NaCl)?",
-    "correct_answer": "Table salt",
-    "incorrect_answers": ["Baking soda", "Sugar", "Vinegar"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas is released when an acid reacts with a carbonate?",
-    "correct_answer": "Carbon dioxide",
-    "incorrect_answers": ["Oxygen", "Hydrogen", "Nitrogen"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Oxygen?",
-    "correct_answer": "O",
-    "incorrect_answers": ["Ox", "O2", "Om"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What are the vertical columns in the periodic table called?",
-    "correct_answer": "Groups",
-    "incorrect_answers": ["Periods", "Rows", "Sections"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What type of bond is formed when atoms share electrons?",
-    "correct_answer": "Covalent bond",
-    "incorrect_answers": ["Ionic bond", "Metallic bond", "Hydrogen bond"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which acid is commonly found in vinegar?",
-    "correct_answer": "Acetic acid",
-    "incorrect_answers": ["Citric acid", "Hydrochloric acid", "Sulfuric acid"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the process when a solid turns directly into a gas?",
-    "correct_answer": "Sublimation",
-    "incorrect_answers": ["Evaporation", "Condensation", "Melting"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which subatomic particle has no electrical charge?",
-    "correct_answer": "Neutron",
-    "incorrect_answers": ["Proton", "Electron", "Quark"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Silver?",
-    "correct_answer": "Ag",
-    "incorrect_answers": ["Si", "Au", "Sl"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas do humans need to breathe in to survive?",
-    "correct_answer": "Oxygen",
-    "incorrect_answers": ["Carbon dioxide", "Nitrogen", "Helium"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the atomic number of Carbon?",
-    "correct_answer": "6",
-    "incorrect_answers": ["12", "1", "8"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the center of an atom called?",
-    "correct_answer": "Nucleus",
-    "incorrect_answers": ["Core", "Electron cloud", "Shell"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas is commonly used in balloons because it is lighter than air?",
-    "correct_answer": "Helium",
-    "incorrect_answers": ["Oxygen", "Carbon dioxide", "Argon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical formula for Methane?",
-    "correct_answer": "CH4",
-    "incorrect_answers": ["CO2", "H2O", "NH3"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which subatomic particle has a positive charge?",
-    "correct_answer": "Proton",
-    "incorrect_answers": ["Neutron", "Electron", "Anion"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Iron?",
-    "correct_answer": "Fe",
-    "incorrect_answers": ["Ir", "In", "I"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the scale used to measure how acidic or basic a substance is?",
-    "correct_answer": "pH scale",
-    "incorrect_answers": ["Richter scale", "Mohs scale", "Celsius scale"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which noble gas has 'A' as its first letter?",
-    "correct_answer": "Argon",
-    "incorrect_answers": ["Neon", "Helium", "Krypton"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the most abundant element in the universe?",
-    "correct_answer": "Hydrogen",
-    "incorrect_answers": ["Oxygen", "Helium", "Carbon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the common name for the compound Sodium Bicarbonate?",
-    "correct_answer": "Baking soda",
-    "incorrect_answers": ["Table salt", "Sugar", "Soap"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is found in all organic compounds?",
-    "correct_answer": "Carbon",
-    "incorrect_answers": ["Nitrogen", "Oxygen", "Iron"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Potassium?",
-    "correct_answer": "K",
-    "incorrect_answers": ["P", "Po", "Pt"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What happens to the density of water when it freezes into ice?",
-    "correct_answer": "It decreases",
-    "incorrect_answers": ["It increases", "It stays the same", "It doubles"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is known as 'quicksilver'?",
-    "correct_answer": "Mercury",
-    "incorrect_answers": ["Silver", "Platinum", "Lead"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What type of reaction releases energy in the form of heat?",
-    "correct_answer": "Exothermic",
-    "incorrect_answers": ["Endothermic", "Catalytic", "Neutral"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical formula for Glucose?",
-    "correct_answer": "C6H12O6",
-    "incorrect_answers": ["C12H22O11", "CH4", "CO2"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is used in diamonds and graphite?",
-    "correct_answer": "Carbon",
-    "incorrect_answers": ["Silicon", "Lead", "Boron"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the horizontal rows in the periodic table?",
-    "correct_answer": "Periods",
-    "incorrect_answers": ["Groups", "Families", "Sections"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas is produced during the process of respiration?",
-    "correct_answer": "Carbon dioxide",
-    "incorrect_answers": ["Oxygen", "Nitrogen", "Hydrogen"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Lead?",
-    "correct_answer": "Pb",
-    "incorrect_answers": ["Le", "L", "Pd"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is formed when an acid and a base react together?",
-    "correct_answer": "Salt and water",
-    "incorrect_answers": ["Gas and heat", "Metal and oxygen", "Acid rain"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element has the atomic number 1?",
-    "correct_answer": "Hydrogen",
-    "incorrect_answers": ["Helium", "Oxygen", "Lithium"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Nitrogen?",
-    "correct_answer": "N",
-    "incorrect_answers": ["Ni", "Na", "Nt"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Sodium?",
-    "correct_answer": "Na",
-    "incorrect_answers": ["S", "So", "Sn"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which subatomic particles are found in the nucleus of an atom?",
-    "correct_answer": "Protons and Neutrons",
-    "incorrect_answers": ["Protons and Electrons", "Electrons and Neutrons", "Only Electrons"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the process where iron reacts with oxygen and water?",
-    "correct_answer": "Rusting",
-    "incorrect_answers": ["Melting", "Boiling", "Freezing"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical formula for Hydrogen Peroxide?",
-    "correct_answer": "H2O2",
-    "incorrect_answers": ["H2O", "HO2", "H2O3"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the only letter that does not appear on the periodic table?",
-    "correct_answer": "J",
-    "incorrect_answers": ["Q", "X", "Z"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the main component of natural gas?",
-    "correct_answer": "Methane",
-    "incorrect_answers": ["Ethane", "Propane", "Butane"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is used to make steel?",
-    "correct_answer": "Iron",
-    "incorrect_answers": ["Copper", "Aluminum", "Gold"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Helium?",
-    "correct_answer": "He",
-    "incorrect_answers": ["H", "Hi", "Hl"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for an atom that has gained or lost electrons?",
-    "correct_answer": "Ion",
-    "incorrect_answers": ["Isotope", "Molecule", "Nucleus"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Copper?",
-    "correct_answer": "Cu",
-    "incorrect_answers": ["Co", "Cr", "Cp"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas is used in fire extinguishers to put out fires?",
-    "correct_answer": "Carbon dioxide",
-    "incorrect_answers": ["Oxygen", "Nitrogen", "Methane"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Gold?",
-    "correct_answer": "Au",
-    "incorrect_answers": ["Ag", "Gd", "Go"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the law that states mass is neither created nor destroyed in a chemical reaction?",
-    "correct_answer": "Law of Conservation of Mass",
-    "incorrect_answers": ["Newton's First Law", "Boyles' Law", "Law of Gravity"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which subatomic particles orbit the nucleus?",
-    "correct_answer": "Electrons",
-    "incorrect_answers": ["Protons", "Neutrons", "Quarks"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Calcium?",
-    "correct_answer": "Ca",
-    "incorrect_answers": ["Cl", "C", "Cm"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is found in bananas and is helpful for preventing cramps?",
-    "correct_answer": "Potassium",
-    "incorrect_answers": ["Sodium", "Calcium", "Iron"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Chlorine?",
-    "correct_answer": "Cl",
-    "incorrect_answers": ["C", "Ch", "Cr"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which state of matter has a definite shape and volume?",
-    "correct_answer": "Solid",
-    "incorrect_answers": ["Liquid", "Gas", "Plasma"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical formula for Carbon Dioxide?",
-    "correct_answer": "CO2",
-    "incorrect_answers": ["CO", "C2O", "CoO2"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which noble gas is often used in bright, colorful signs?",
-    "correct_answer": "Neon",
-    "incorrect_answers": ["Argon", "Xenon", "Radon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Magnesium?",
-    "correct_answer": "Mg",
-    "incorrect_answers": ["Mn", "M", "Ma"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which subatomic particle determines the atomic number of an element?",
-    "correct_answer": "Proton",
-    "incorrect_answers": ["Neutron", "Electron", "Photon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Phosphorus?",
-    "correct_answer": "P",
-    "incorrect_answers": ["Ph", "Po", "Ps"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for a substance that speeds up a chemical reaction without being consumed?",
-    "correct_answer": "Catalyst",
-    "incorrect_answers": ["Reactant", "Solvent", "Product"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Sulfur?",
-    "correct_answer": "S",
-    "incorrect_answers": ["Su", "Sl", "Sr"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is a major component of bones and teeth?",
-    "correct_answer": "Calcium",
-    "incorrect_answers": ["Potassium", "Iron", "Carbon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Aluminum?",
-    "correct_answer": "Al",
-    "incorrect_answers": ["A", "Am", "Au"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What type of mixture is uniform throughout, like salt water?",
-    "correct_answer": "Homogeneous",
-    "incorrect_answers": ["Heterogeneous", "Mechanical", "Layered"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Tin?",
-    "correct_answer": "Sn",
-    "incorrect_answers": ["Ti", "T", "Tn"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas is used in medical anesthesia and known as 'laughing gas'?",
-    "correct_answer": "Nitrous oxide",
-    "incorrect_answers": ["Carbon dioxide", "Oxygen", "Helium"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Zinc?",
-    "correct_answer": "Zn",
-    "incorrect_answers": ["Zi", "Z", "Zc"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for the electrons in the outermost shell of an atom?",
-    "correct_answer": "Valence electrons",
-    "incorrect_answers": ["Core electrons", "Shared electrons", "Free electrons"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Nickel?",
-    "correct_answer": "Ni",
-    "incorrect_answers": ["N", "Nk", "Ne"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is essential for making red blood cells and carrying oxygen?",
-    "correct_answer": "Iron",
-    "incorrect_answers": ["Copper", "Calcium", "Zinc"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Boron?",
-    "correct_answer": "B",
-    "incorrect_answers": ["Bo", "Br", "Ba"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which state of matter has no definite shape or volume?",
-    "correct_answer": "Gas",
-    "incorrect_answers": ["Solid", "Liquid", "Glass"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Fluorine?",
-    "correct_answer": "F",
-    "incorrect_answers": ["Fl", "Fe", "Fr"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is often used to sanitize swimming pools?",
-    "correct_answer": "Chlorine",
-    "incorrect_answers": ["Bromine", "Iodine", "Fluorine"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Neon?",
-    "correct_answer": "Ne",
-    "incorrect_answers": ["N", "No", "Ni"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for a substance that can dissolve other substances?",
-    "correct_answer": "Solvent",
-    "incorrect_answers": ["Solute", "Solution", "Catalyst"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Iodine?",
-    "correct_answer": "I",
-    "incorrect_answers": ["Id", "In", "Io"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which noble gas is found in the Earth's crust and is a radioactive health hazard?",
-    "correct_answer": "Radon",
-    "incorrect_answers": ["Helium", "Neon", "Argon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Silicon?",
-    "correct_answer": "Si",
-    "incorrect_answers": ["S", "Sn", "Sl"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for the smallest unit of a compound?",
-    "correct_answer": "Molecule",
-    "incorrect_answers": ["Atom", "Ion", "Proton"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Platinum?",
-    "correct_answer": "Pt",
-    "incorrect_answers": ["P", "Pl", "Pa"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element is used to coat iron to prevent rusting, in a process called galvanizing?",
-    "correct_answer": "Zinc",
-    "incorrect_answers": ["Tin", "Copper", "Silver"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Titanium?",
-    "correct_answer": "Ti",
-    "incorrect_answers": ["T", "Tm", "Tn"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for two or more different elements chemically bonded together?",
-    "correct_answer": "Compound",
-    "incorrect_answers": ["Mixture", "Isotope", "Alloy"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Chromium?",
-    "correct_answer": "Cr",
-    "incorrect_answers": ["Ch", "Cm", "C"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which gas makes up about 21% of Earth's atmosphere?",
-    "correct_answer": "Oxygen",
-    "incorrect_answers": ["Nitrogen", "Carbon dioxide", "Helium"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Manganese?",
-    "correct_answer": "Mn",
-    "incorrect_answers": ["Ma", "Mg", "Me"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the scientist who created the first version of the periodic table?",
-    "correct_answer": "Dmitri Mendeleev",
-    "incorrect_answers": ["Isaac Newton", "Albert Einstein", "Marie Curie"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Barium?",
-    "correct_answer": "Ba",
-    "incorrect_answers": ["B", "Br", "Be"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What type of reaction involves the burning of a substance in oxygen?",
-    "correct_answer": "Combustion",
-    "incorrect_answers": ["Neutralization", "Oxidation", "Decomposition"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Tungsten?",
-    "correct_answer": "W",
-    "incorrect_answers": ["T", "Tu", "Tn"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which element has the highest melting point?",
-    "correct_answer": "Tungsten",
-    "incorrect_answers": ["Iron", "Gold", "Carbon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Arsenic?",
-    "correct_answer": "As",
-    "incorrect_answers": ["Ar", "Ac", "A"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Xenon?",
-    "correct_answer": "Xe",
-    "incorrect_answers": ["X", "Xn", "Xe2"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the chemical symbol for Bromine?",
-    "correct_answer": "Br",
-    "incorrect_answers": ["B", "Bm", "Be"],
-    "difficulty": "easy"
-  },
-    {
-      "question": "What is the chemical formula for water?",
-      "correct_answer": "H2O",
-      "incorrect_answers": ["HO2", "H2O2", "OH"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the chemical symbol for gold?",
-      "correct_answer": "Au",
-      "incorrect_answers": ["Go", "Gd", "Ag"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the lightest element on the periodic table?",
-      "correct_answer": "Hydrogen",
-      "incorrect_answers": ["Helium", "Lithium", "Carbon"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is table salt's chemical name?",
-      "correct_answer": "Sodium chloride",
-      "incorrect_answers": ["Potassium chloride", "Sodium bicarbonate", "Calcium carbonate"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is diamond made of?",
-      "correct_answer": "Carbon",
-      "incorrect_answers": ["Silicon", "Nitrogen", "Sulfur"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is baking soda's chemical name?",
-      "correct_answer": "Sodium bicarbonate",
-      "incorrect_answers": ["Sodium chloride", "Calcium carbonate", "Potassium carbonate"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What gas do we breathe in most from the air around us?",
-      "correct_answer": "Nitrogen",
-      "incorrect_answers": ["Oxygen", "Carbon dioxide", "Argon"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is dry ice made of?",
-      "correct_answer": "Solid carbon dioxide",
-      "incorrect_answers": ["Solid water", "Solid nitrogen", "Solid oxygen"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the chemical symbol for iron?",
-      "correct_answer": "Fe",
-      "incorrect_answers": ["Ir", "In", "Io"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What do we call the center of an atom?",
-      "correct_answer": "Nucleus",
-      "incorrect_answers": ["Core", "Shell", "Neutron"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the pH of pure water at room temperature?",
-      "correct_answer": "7",
-      "incorrect_answers": ["0", "14", "5"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is rust?",
-      "correct_answer": "Iron oxide",
-      "incorrect_answers": ["Iron sulfide", "Iron carbonate", "Iron chloride"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which gas makes up about 21% of Earth's atmosphere?",
-      "correct_answer": "Oxygen",
-      "incorrect_answers": ["Nitrogen", "Carbon dioxide", "Argon"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What type of reaction releases heat into the surroundings?",
-      "correct_answer": "Exothermic reaction",
-      "incorrect_answers": ["Endothermic reaction", "Oxidation reaction", "Decomposition reaction"],
-      "difficulty": "medium"
-    },
-    {
-      "question": "What element makes up most of the Sun?",
-      "correct_answer": "Hydrogen",
-      "incorrect_answers": ["Helium", "Oxygen", "Carbon"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the chemical symbol for silver?",
-      "correct_answer": "Ag",
-      "incorrect_answers": ["Si", "Sv", "Sl"],
-      "difficulty": "medium"
-    },
-    {
-      "question": "What is vinegar mainly made of?",
-      "correct_answer": "Acetic acid",
-      "incorrect_answers": ["Citric acid", "Lactic acid", "Hydrochloric acid"],
-      "difficulty": "medium"
-    },
-    {
-      "question": "Which subatomic particle has a negative charge?",
-      "correct_answer": "Electron",
-      "incorrect_answers": ["Proton", "Neutron", "Photon"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the most abundant element in the Earth's crust?",
-      "correct_answer": "Oxygen",
-      "incorrect_answers": ["Silicon", "Aluminum", "Iron"],
-      "difficulty": "medium"
-    },
-    {
-      "question": "What process turns a solid directly into a gas without passing through liquid?",
-      "correct_answer": "Sublimation",
-      "incorrect_answers": ["Evaporation", "Condensation", "Melting"],
-      "difficulty": "medium"
-    }
-  ]
+    "category": "Chemistry",
+    "category_id": 2001,
+    "questions": [
+        {
+            "question": "What is the chemical symbol for water?",
+            "correct_answer": "H2O",
+            "incorrect_answers": [
+                "HO2",
+                "H2O2",
+                "OH2"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+            "correct_answer": "Carbon dioxide",
+            "incorrect_answers": [
+                "Oxygen",
+                "Nitrogen",
+                "Hydrogen"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the most abundant gas in Earth's atmosphere?",
+            "correct_answer": "Nitrogen",
+            "incorrect_answers": [
+                "Oxygen",
+                "Carbon dioxide",
+                "Argon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element has the chemical symbol 'Au'?",
+            "correct_answer": "Gold",
+            "incorrect_answers": [
+                "Silver",
+                "Copper",
+                "Aluminum"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the pH of a neutral solution?",
+            "correct_answer": "7",
+            "incorrect_answers": [
+                "0",
+                "1",
+                "14"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which subatomic particle has a negative charge?",
+            "correct_answer": "Electron",
+            "incorrect_answers": [
+                "Proton",
+                "Neutron",
+                "Positron"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the lightest element on the periodic table?",
+            "correct_answer": "Hydrogen",
+            "incorrect_answers": [
+                "Helium",
+                "Lithium",
+                "Oxygen"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which metal is liquid at room temperature?",
+            "correct_answer": "Mercury",
+            "incorrect_answers": [
+                "Iron",
+                "Lead",
+                "Aluminum"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the common name for Sodium Chloride?",
+            "correct_answer": "Table salt",
+            "incorrect_answers": [
+                "Baking soda",
+                "Sugar",
+                "Vinegar"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas is released when an acid reacts with a carbonate?",
+            "correct_answer": "Carbon dioxide",
+            "incorrect_answers": [
+                "Oxygen",
+                "Hydrogen",
+                "Nitrogen"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Oxygen?",
+            "correct_answer": "O",
+            "incorrect_answers": [
+                "Ox",
+                "O2",
+                "Om"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are the vertical columns in the periodic table called?",
+            "correct_answer": "Groups",
+            "incorrect_answers": [
+                "Periods",
+                "Rows",
+                "Sections"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What type of bond is formed when atoms share electrons?",
+            "correct_answer": "Covalent bond",
+            "incorrect_answers": [
+                "Ionic bond",
+                "Metallic bond",
+                "Hydrogen bond"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which acid is commonly found in vinegar?",
+            "correct_answer": "Acetic acid",
+            "incorrect_answers": [
+                "Citric acid",
+                "Hydrochloric acid",
+                "Sulfuric acid"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the name of the process when a solid turns directly into a gas?",
+            "correct_answer": "Sublimation",
+            "incorrect_answers": [
+                "Evaporation",
+                "Condensation",
+                "Melting"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which subatomic particle has no electrical charge?",
+            "correct_answer": "Neutron",
+            "incorrect_answers": [
+                "Proton",
+                "Electron",
+                "Quark"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Silver?",
+            "correct_answer": "Ag",
+            "incorrect_answers": [
+                "Si",
+                "Au",
+                "Sl"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas do humans need to breathe to survive?",
+            "correct_answer": "Oxygen",
+            "incorrect_answers": [
+                "Carbon dioxide",
+                "Nitrogen",
+                "Helium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the atomic number of Carbon?",
+            "correct_answer": "6",
+            "incorrect_answers": [
+                "12",
+                "1",
+                "8"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the center of an atom called?",
+            "correct_answer": "Nucleus",
+            "incorrect_answers": [
+                "Core",
+                "Electron cloud",
+                "Shell"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas is commonly used in balloons because it is lighter than air?",
+            "correct_answer": "Helium",
+            "incorrect_answers": [
+                "Oxygen",
+                "Carbon dioxide",
+                "Argon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Methane?",
+            "correct_answer": "CH4",
+            "incorrect_answers": [
+                "CO2",
+                "H2O",
+                "NH3"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which subatomic particle has a positive charge?",
+            "correct_answer": "Proton",
+            "incorrect_answers": [
+                "Neutron",
+                "Electron",
+                "Anion"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Iron?",
+            "correct_answer": "Fe",
+            "incorrect_answers": [
+                "Ir",
+                "In",
+                "I"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the name of the scale used to measure acidity?",
+            "correct_answer": "pH scale",
+            "incorrect_answers": [
+                "Richter scale",
+                "Mohs scale",
+                "Celsius scale"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which noble gas has the symbol 'Ar'?",
+            "correct_answer": "Argon",
+            "incorrect_answers": [
+                "Neon",
+                "Helium",
+                "Krypton"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the most abundant element in the universe?",
+            "correct_answer": "Hydrogen",
+            "incorrect_answers": [
+                "Oxygen",
+                "Helium",
+                "Carbon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the common name for Sodium Bicarbonate?",
+            "correct_answer": "Baking soda",
+            "incorrect_answers": [
+                "Table salt",
+                "Sugar",
+                "Soap"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is found in all organic compounds?",
+            "correct_answer": "Carbon",
+            "incorrect_answers": [
+                "Nitrogen",
+                "Oxygen",
+                "Iron"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Potassium?",
+            "correct_answer": "K",
+            "incorrect_answers": [
+                "P",
+                "Po",
+                "Pt"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What happens to the density of water when it freezes?",
+            "correct_answer": "It decreases",
+            "incorrect_answers": [
+                "It increases",
+                "It stays the same",
+                "It doubles"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is known as 'quicksilver'?",
+            "correct_answer": "Mercury",
+            "incorrect_answers": [
+                "Silver",
+                "Platinum",
+                "Lead"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What type of reaction releases energy as heat?",
+            "correct_answer": "Exothermic",
+            "incorrect_answers": [
+                "Endothermic",
+                "Catalytic",
+                "Neutral"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Glucose?",
+            "correct_answer": "C6H12O6",
+            "incorrect_answers": [
+                "C12H22O11",
+                "CH4",
+                "CO2"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is diamond made of?",
+            "correct_answer": "Carbon",
+            "incorrect_answers": [
+                "Silicon",
+                "Lead",
+                "Boron"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are the horizontal rows in the periodic table called?",
+            "correct_answer": "Periods",
+            "incorrect_answers": [
+                "Groups",
+                "Families",
+                "Sections"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas is produced during respiration?",
+            "correct_answer": "Carbon dioxide",
+            "incorrect_answers": [
+                "Oxygen",
+                "Nitrogen",
+                "Hydrogen"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Lead?",
+            "correct_answer": "Pb",
+            "incorrect_answers": [
+                "Le",
+                "L",
+                "Pd"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is formed when an acid and a base react together?",
+            "correct_answer": "Salt and water",
+            "incorrect_answers": [
+                "Gas and heat",
+                "Metal and oxygen",
+                "Acid rain"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element has the atomic number 1?",
+            "correct_answer": "Hydrogen",
+            "incorrect_answers": [
+                "Helium",
+                "Oxygen",
+                "Lithium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Nitrogen?",
+            "correct_answer": "N",
+            "incorrect_answers": [
+                "Ni",
+                "Na",
+                "Nt"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Sodium?",
+            "correct_answer": "Na",
+            "incorrect_answers": [
+                "S",
+                "So",
+                "Sn"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which subatomic particles are found in the nucleus?",
+            "correct_answer": "Protons and neutrons",
+            "incorrect_answers": [
+                "Protons and electrons",
+                "Electrons and neutrons",
+                "Only electrons"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the process where iron reacts with oxygen and water called?",
+            "correct_answer": "Rusting",
+            "incorrect_answers": [
+                "Melting",
+                "Boiling",
+                "Freezing"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Hydrogen Peroxide?",
+            "correct_answer": "H2O2",
+            "incorrect_answers": [
+                "H2O",
+                "HO2",
+                "H2O3"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the only letter that does not appear on the periodic table?",
+            "correct_answer": "J",
+            "incorrect_answers": [
+                "Q",
+                "X",
+                "Z"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the main component of natural gas?",
+            "correct_answer": "Methane",
+            "incorrect_answers": [
+                "Ethane",
+                "Propane",
+                "Butane"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is used to make steel?",
+            "correct_answer": "Iron",
+            "incorrect_answers": [
+                "Copper",
+                "Aluminum",
+                "Gold"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Helium?",
+            "correct_answer": "He",
+            "incorrect_answers": [
+                "H",
+                "Hi",
+                "Hl"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is an atom that has gained or lost electrons called?",
+            "correct_answer": "Ion",
+            "incorrect_answers": [
+                "Isotope",
+                "Molecule",
+                "Nucleus"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Copper?",
+            "correct_answer": "Cu",
+            "incorrect_answers": [
+                "Co",
+                "Cr",
+                "Cp"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas is used in fire extinguishers?",
+            "correct_answer": "Carbon dioxide",
+            "incorrect_answers": [
+                "Oxygen",
+                "Nitrogen",
+                "Methane"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the law that states mass cannot be created or destroyed in a chemical reaction?",
+            "correct_answer": "Law of Conservation of Mass",
+            "incorrect_answers": [
+                "Newton's First Law",
+                "Boyle's Law",
+                "Law of Gravity"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which subatomic particles orbit the nucleus?",
+            "correct_answer": "Electrons",
+            "incorrect_answers": [
+                "Protons",
+                "Neutrons",
+                "Quarks"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Calcium?",
+            "correct_answer": "Ca",
+            "incorrect_answers": [
+                "Cl",
+                "C",
+                "Cm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element found in bananas helps prevent muscle cramps?",
+            "correct_answer": "Potassium",
+            "incorrect_answers": [
+                "Sodium",
+                "Calcium",
+                "Iron"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Chlorine?",
+            "correct_answer": "Cl",
+            "incorrect_answers": [
+                "C",
+                "Ch",
+                "Cr"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which state of matter has a definite shape and volume?",
+            "correct_answer": "Solid",
+            "incorrect_answers": [
+                "Liquid",
+                "Gas",
+                "Plasma"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Carbon Dioxide?",
+            "correct_answer": "CO2",
+            "incorrect_answers": [
+                "CO",
+                "C2O",
+                "CoO2"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which noble gas is used in bright, colorful signs?",
+            "correct_answer": "Neon",
+            "incorrect_answers": [
+                "Argon",
+                "Xenon",
+                "Radon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Magnesium?",
+            "correct_answer": "Mg",
+            "incorrect_answers": [
+                "Mn",
+                "M",
+                "Ma"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which subatomic particle determines the atomic number of an element?",
+            "correct_answer": "Proton",
+            "incorrect_answers": [
+                "Neutron",
+                "Electron",
+                "Photon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Phosphorus?",
+            "correct_answer": "P",
+            "incorrect_answers": [
+                "Ph",
+                "Po",
+                "Ps"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is a substance that speeds up a reaction without being consumed called?",
+            "correct_answer": "Catalyst",
+            "incorrect_answers": [
+                "Reactant",
+                "Solvent",
+                "Product"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Sulfur?",
+            "correct_answer": "S",
+            "incorrect_answers": [
+                "Su",
+                "Sl",
+                "Sr"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is a major component of bones and teeth?",
+            "correct_answer": "Calcium",
+            "incorrect_answers": [
+                "Potassium",
+                "Iron",
+                "Carbon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Aluminum?",
+            "correct_answer": "Al",
+            "incorrect_answers": [
+                "A",
+                "Am",
+                "Au"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What type of mixture is uniform throughout, like salt water?",
+            "correct_answer": "Homogeneous",
+            "incorrect_answers": [
+                "Heterogeneous",
+                "Mechanical",
+                "Layered"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Tin?",
+            "correct_answer": "Sn",
+            "incorrect_answers": [
+                "Ti",
+                "T",
+                "Tn"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas is known as 'laughing gas'?",
+            "correct_answer": "Nitrous oxide",
+            "incorrect_answers": [
+                "Carbon dioxide",
+                "Oxygen",
+                "Helium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Zinc?",
+            "correct_answer": "Zn",
+            "incorrect_answers": [
+                "Zi",
+                "Z",
+                "Zc"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are electrons in the outermost shell of an atom called?",
+            "correct_answer": "Valence electrons",
+            "incorrect_answers": [
+                "Core electrons",
+                "Shared electrons",
+                "Free electrons"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Nickel?",
+            "correct_answer": "Ni",
+            "incorrect_answers": [
+                "N",
+                "Nk",
+                "Ne"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is essential for red blood cells?",
+            "correct_answer": "Iron",
+            "incorrect_answers": [
+                "Copper",
+                "Calcium",
+                "Zinc"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Boron?",
+            "correct_answer": "B",
+            "incorrect_answers": [
+                "Bo",
+                "Br",
+                "Ba"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which state of matter has no definite shape or volume?",
+            "correct_answer": "Gas",
+            "incorrect_answers": [
+                "Solid",
+                "Liquid",
+                "Glass"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Fluorine?",
+            "correct_answer": "F",
+            "incorrect_answers": [
+                "Fl",
+                "Fe",
+                "Fr"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is often used to sanitize swimming pools?",
+            "correct_answer": "Chlorine",
+            "incorrect_answers": [
+                "Bromine",
+                "Iodine",
+                "Fluorine"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Neon?",
+            "correct_answer": "Ne",
+            "incorrect_answers": [
+                "N",
+                "No",
+                "Ni"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the term for a substance that dissolves other substances?",
+            "correct_answer": "Solvent",
+            "incorrect_answers": [
+                "Solute",
+                "Solution",
+                "Catalyst"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Iodine?",
+            "correct_answer": "I",
+            "incorrect_answers": [
+                "Id",
+                "In",
+                "Io"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which noble gas is radioactive and found in the Earth's crust?",
+            "correct_answer": "Radon",
+            "incorrect_answers": [
+                "Helium",
+                "Neon",
+                "Argon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Silicon?",
+            "correct_answer": "Si",
+            "incorrect_answers": [
+                "S",
+                "Sn",
+                "Sl"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the smallest unit of a compound called?",
+            "correct_answer": "Molecule",
+            "incorrect_answers": [
+                "Atom",
+                "Ion",
+                "Proton"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Platinum?",
+            "correct_answer": "Pt",
+            "incorrect_answers": [
+                "P",
+                "Pl",
+                "Pa"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is used to coat iron in galvanizing?",
+            "correct_answer": "Zinc",
+            "incorrect_answers": [
+                "Tin",
+                "Copper",
+                "Silver"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Titanium?",
+            "correct_answer": "Ti",
+            "incorrect_answers": [
+                "T",
+                "Tm",
+                "Tn"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is two or more elements chemically bonded together called?",
+            "correct_answer": "Compound",
+            "incorrect_answers": [
+                "Mixture",
+                "Isotope",
+                "Alloy"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Chromium?",
+            "correct_answer": "Cr",
+            "incorrect_answers": [
+                "Ch",
+                "Cm",
+                "C"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which gas makes up about 21% of Earth's atmosphere?",
+            "correct_answer": "Oxygen",
+            "incorrect_answers": [
+                "Nitrogen",
+                "Carbon dioxide",
+                "Helium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Manganese?",
+            "correct_answer": "Mn",
+            "incorrect_answers": [
+                "Ma",
+                "Mg",
+                "Me"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Who created the first periodic table?",
+            "correct_answer": "Dmitri Mendeleev",
+            "incorrect_answers": [
+                "Isaac Newton",
+                "Albert Einstein",
+                "Marie Curie"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Barium?",
+            "correct_answer": "Ba",
+            "incorrect_answers": [
+                "B",
+                "Br",
+                "Be"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What type of reaction involves burning a substance in oxygen?",
+            "correct_answer": "Combustion",
+            "incorrect_answers": [
+                "Neutralization",
+                "Decomposition",
+                "Synthesis"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Tungsten?",
+            "correct_answer": "W",
+            "incorrect_answers": [
+                "T",
+                "Tu",
+                "Tn"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element has the highest melting point?",
+            "correct_answer": "Tungsten",
+            "incorrect_answers": [
+                "Iron",
+                "Gold",
+                "Titanium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Arsenic?",
+            "correct_answer": "As",
+            "incorrect_answers": [
+                "Ar",
+                "Ac",
+                "A"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Xenon?",
+            "correct_answer": "Xe",
+            "incorrect_answers": [
+                "X",
+                "Xn",
+                "Xo"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Bromine?",
+            "correct_answer": "Br",
+            "incorrect_answers": [
+                "B",
+                "Bm",
+                "Be"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is rust chemically known as?",
+            "correct_answer": "Iron oxide",
+            "incorrect_answers": [
+                "Iron sulfide",
+                "Iron carbonate",
+                "Iron chloride"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is dry ice made of?",
+            "correct_answer": "Solid carbon dioxide",
+            "incorrect_answers": [
+                "Solid water",
+                "Solid nitrogen",
+                "Solid oxygen"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element makes up most of the Sun?",
+            "correct_answer": "Hydrogen",
+            "incorrect_answers": [
+                "Helium",
+                "Oxygen",
+                "Carbon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Cobalt?",
+            "correct_answer": "Co",
+            "incorrect_answers": [
+                "Cb",
+                "Ct",
+                "Cu"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Lithium?",
+            "correct_answer": "Li",
+            "incorrect_answers": [
+                "L",
+                "Lt",
+                "Lh"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Ammonia?",
+            "correct_answer": "NH3",
+            "incorrect_answers": [
+                "NO2",
+                "N2O",
+                "N2H4"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Carbon?",
+            "correct_answer": "C",
+            "incorrect_answers": [
+                "Ca",
+                "Cr",
+                "Co"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Hydrogen?",
+            "correct_answer": "H",
+            "incorrect_answers": [
+                "He",
+                "Hy",
+                "Hg"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many elements are in a water molecule?",
+            "correct_answer": "Two",
+            "incorrect_answers": [
+                "One",
+                "Three",
+                "Four"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Mercury?",
+            "correct_answer": "Hg",
+            "incorrect_answers": [
+                "Me",
+                "Mr",
+                "Mc"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What color does litmus paper turn in an acid?",
+            "correct_answer": "Red",
+            "incorrect_answers": [
+                "Blue",
+                "Green",
+                "Yellow"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What color does litmus paper turn in a base?",
+            "correct_answer": "Blue",
+            "incorrect_answers": [
+                "Red",
+                "Green",
+                "Yellow"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is the main component of sand?",
+            "correct_answer": "Silicon",
+            "incorrect_answers": [
+                "Carbon",
+                "Calcium",
+                "Aluminum"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for table sugar (sucrose)?",
+            "correct_answer": "C12H22O11",
+            "incorrect_answers": [
+                "C6H12O6",
+                "CH4",
+                "C2H6O"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the fourth state of matter beyond solid, liquid, and gas?",
+            "correct_answer": "Plasma",
+            "incorrect_answers": [
+                "Gel",
+                "Crystal",
+                "Vapor"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Beryllium?",
+            "correct_answer": "Be",
+            "incorrect_answers": [
+                "B",
+                "Br",
+                "Ba"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the most common isotope of Hydrogen called?",
+            "correct_answer": "Protium",
+            "incorrect_answers": [
+                "Deuterium",
+                "Tritium",
+                "Hydrium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Krypton?",
+            "correct_answer": "Kr",
+            "incorrect_answers": [
+                "K",
+                "Ky",
+                "Kp"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What type of bond forms between a metal and a nonmetal?",
+            "correct_answer": "Ionic bond",
+            "incorrect_answers": [
+                "Covalent bond",
+                "Metallic bond",
+                "Hydrogen bond"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is added to water supplies to prevent tooth decay?",
+            "correct_answer": "Fluorine",
+            "incorrect_answers": [
+                "Chlorine",
+                "Bromine",
+                "Iodine"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Ethanol?",
+            "correct_answer": "C2H5OH",
+            "incorrect_answers": [
+                "CH3OH",
+                "C3H7OH",
+                "C4H9OH"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many naturally occurring elements are there?",
+            "correct_answer": "92",
+            "incorrect_answers": [
+                "100",
+                "118",
+                "86"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Strontium?",
+            "correct_answer": "Sr",
+            "incorrect_answers": [
+                "St",
+                "S",
+                "Sm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What particle is emitted in beta decay?",
+            "correct_answer": "Electron",
+            "incorrect_answers": [
+                "Proton",
+                "Neutron",
+                "Photon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the most abundant element in the Earth's crust?",
+            "correct_answer": "Oxygen",
+            "incorrect_answers": [
+                "Silicon",
+                "Aluminum",
+                "Iron"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Uranium?",
+            "correct_answer": "U",
+            "incorrect_answers": [
+                "Ur",
+                "Un",
+                "Ul"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Radium?",
+            "correct_answer": "Ra",
+            "incorrect_answers": [
+                "R",
+                "Rd",
+                "Rm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which scientist discovered radium?",
+            "correct_answer": "Marie Curie",
+            "incorrect_answers": [
+                "Albert Einstein",
+                "Niels Bohr",
+                "Ernest Rutherford"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What gas is produced when metals react with acids?",
+            "correct_answer": "Hydrogen",
+            "incorrect_answers": [
+                "Oxygen",
+                "Carbon dioxide",
+                "Nitrogen"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Cesium?",
+            "correct_answer": "Cs",
+            "incorrect_answers": [
+                "Ce",
+                "C",
+                "Ca"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are Group 18 elements on the periodic table called?",
+            "correct_answer": "Noble gases",
+            "incorrect_answers": [
+                "Halogens",
+                "Alkali metals",
+                "Transition metals"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are Group 1 elements on the periodic table called?",
+            "correct_answer": "Alkali metals",
+            "incorrect_answers": [
+                "Noble gases",
+                "Halogens",
+                "Alkaline earth metals"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are Group 17 elements on the periodic table called?",
+            "correct_answer": "Halogens",
+            "incorrect_answers": [
+                "Noble gases",
+                "Alkali metals",
+                "Metalloids"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Sulfuric Acid?",
+            "correct_answer": "H2SO4",
+            "incorrect_answers": [
+                "HCl",
+                "HNO3",
+                "H3PO4"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Hydrochloric Acid?",
+            "correct_answer": "HCl",
+            "incorrect_answers": [
+                "H2SO4",
+                "HNO3",
+                "HF"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What process changes a liquid to a gas?",
+            "correct_answer": "Evaporation",
+            "incorrect_answers": [
+                "Condensation",
+                "Freezing",
+                "Sublimation"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What process changes a gas to a liquid?",
+            "correct_answer": "Condensation",
+            "incorrect_answers": [
+                "Evaporation",
+                "Sublimation",
+                "Melting"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Selenium?",
+            "correct_answer": "Se",
+            "incorrect_answers": [
+                "S",
+                "Sl",
+                "Sm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What does NaCl stand for?",
+            "correct_answer": "Sodium Chloride",
+            "incorrect_answers": [
+                "Nickel Chloride",
+                "Sodium Carbon",
+                "Nitrogen Chloride"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Vanadium?",
+            "correct_answer": "V",
+            "incorrect_answers": [
+                "Va",
+                "Vn",
+                "Vm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are atoms of the same element with different numbers of neutrons called?",
+            "correct_answer": "Isotopes",
+            "incorrect_answers": [
+                "Ions",
+                "Isomers",
+                "Allotropes"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Scandium?",
+            "correct_answer": "Sc",
+            "incorrect_answers": [
+                "S",
+                "Sd",
+                "Sm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What type of reaction absorbs energy from its surroundings?",
+            "correct_answer": "Endothermic",
+            "incorrect_answers": [
+                "Exothermic",
+                "Catalytic",
+                "Combustion"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Gallium?",
+            "correct_answer": "Ga",
+            "incorrect_answers": [
+                "G",
+                "Gl",
+                "Gm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What common substance has a pH of about 2?",
+            "correct_answer": "Lemon juice",
+            "incorrect_answers": [
+                "Milk",
+                "Blood",
+                "Soap"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Germanium?",
+            "correct_answer": "Ge",
+            "incorrect_answers": [
+                "G",
+                "Gr",
+                "Gm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Rubidium?",
+            "correct_answer": "Rb",
+            "incorrect_answers": [
+                "R",
+                "Ru",
+                "Rd"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What type of element is typically shiny and conducts electricity?",
+            "correct_answer": "Metal",
+            "incorrect_answers": [
+                "Nonmetal",
+                "Metalloid",
+                "Noble gas"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Molybdenum?",
+            "correct_answer": "Mo",
+            "incorrect_answers": [
+                "Ml",
+                "My",
+                "Mb"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Sodium Hydroxide (lye)?",
+            "correct_answer": "NaOH",
+            "incorrect_answers": [
+                "NaCl",
+                "Na2O",
+                "NaHCO3"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Palladium?",
+            "correct_answer": "Pd",
+            "incorrect_answers": [
+                "P",
+                "Pa",
+                "Pl"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which non-metal element is a liquid at room temperature?",
+            "correct_answer": "Bromine",
+            "incorrect_answers": [
+                "Chlorine",
+                "Iodine",
+                "Mercury"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Antimony?",
+            "correct_answer": "Sb",
+            "incorrect_answers": [
+                "An",
+                "At",
+                "Am"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Tellurium?",
+            "correct_answer": "Te",
+            "incorrect_answers": [
+                "T",
+                "Tl",
+                "Tm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Cerium?",
+            "correct_answer": "Ce",
+            "incorrect_answers": [
+                "C",
+                "Cr",
+                "Cs"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What process changes a solid to a liquid?",
+            "correct_answer": "Melting",
+            "incorrect_answers": [
+                "Freezing",
+                "Evaporation",
+                "Condensation"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Tantalum?",
+            "correct_answer": "Ta",
+            "incorrect_answers": [
+                "T",
+                "Tn",
+                "Tl"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Bismuth?",
+            "correct_answer": "Bi",
+            "incorrect_answers": [
+                "B",
+                "Bs",
+                "Bm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the universal solvent?",
+            "correct_answer": "Water",
+            "incorrect_answers": [
+                "Ethanol",
+                "Acetone",
+                "Mercury"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Zirconium?",
+            "correct_answer": "Zr",
+            "incorrect_answers": [
+                "Z",
+                "Zi",
+                "Zm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Radon?",
+            "correct_answer": "Rn",
+            "incorrect_answers": [
+                "Ra",
+                "R",
+                "Rd"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Niobium?",
+            "correct_answer": "Nb",
+            "incorrect_answers": [
+                "Ni",
+                "N",
+                "No"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Rhodium?",
+            "correct_answer": "Rh",
+            "incorrect_answers": [
+                "R",
+                "Rd",
+                "Ro"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Yttrium?",
+            "correct_answer": "Y",
+            "incorrect_answers": [
+                "Yt",
+                "Yr",
+                "Yi"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Indium?",
+            "correct_answer": "In",
+            "incorrect_answers": [
+                "I",
+                "Id",
+                "Ir"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Technetium?",
+            "correct_answer": "Tc",
+            "incorrect_answers": [
+                "Te",
+                "T",
+                "Th"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Ruthenium?",
+            "correct_answer": "Ru",
+            "incorrect_answers": [
+                "R",
+                "Rt",
+                "Rh"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Osmium?",
+            "correct_answer": "Os",
+            "incorrect_answers": [
+                "O",
+                "Om",
+                "Oi"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Iridium?",
+            "correct_answer": "Ir",
+            "incorrect_answers": [
+                "I",
+                "Id",
+                "In"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element's symbol comes from the Latin word 'natrium'?",
+            "correct_answer": "Sodium",
+            "incorrect_answers": [
+                "Nitrogen",
+                "Nickel",
+                "Neon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element's symbol comes from the Latin word 'kalium'?",
+            "correct_answer": "Potassium",
+            "incorrect_answers": [
+                "Krypton",
+                "Calcium",
+                "Carbon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element's symbol comes from the Latin word 'ferrum'?",
+            "correct_answer": "Iron",
+            "incorrect_answers": [
+                "Francium",
+                "Fluorine",
+                "Fermium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element's symbol comes from the Latin word 'plumbum'?",
+            "correct_answer": "Lead",
+            "incorrect_answers": [
+                "Platinum",
+                "Plutonium",
+                "Phosphorus"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element's symbol comes from the Latin word 'stannum'?",
+            "correct_answer": "Tin",
+            "incorrect_answers": [
+                "Titanium",
+                "Strontium",
+                "Sulfur"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element's symbol comes from the Latin word 'argentum'?",
+            "correct_answer": "Silver",
+            "incorrect_answers": [
+                "Argon",
+                "Arsenic",
+                "Aluminum"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What element's symbol comes from the Latin word 'cuprum'?",
+            "correct_answer": "Copper",
+            "incorrect_answers": [
+                "Curium",
+                "Cesium",
+                "Cobalt"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Thallium?",
+            "correct_answer": "Tl",
+            "incorrect_answers": [
+                "T",
+                "Th",
+                "Ti"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Hafnium?",
+            "correct_answer": "Hf",
+            "incorrect_answers": [
+                "H",
+                "Ha",
+                "Hn"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Carbon Monoxide?",
+            "correct_answer": "CO",
+            "incorrect_answers": [
+                "CO2",
+                "C2O",
+                "CoO"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What happens when you add an acid to a base?",
+            "correct_answer": "Neutralization occurs",
+            "incorrect_answers": [
+                "An explosion occurs",
+                "Nothing happens",
+                "A gas is always released"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the charge of a proton?",
+            "correct_answer": "+1",
+            "incorrect_answers": [
+                "-1",
+                "0",
+                "+2"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the charge of an electron?",
+            "correct_answer": "-1",
+            "incorrect_answers": [
+                "+1",
+                "0",
+                "-2"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the charge of a neutron?",
+            "correct_answer": "0",
+            "incorrect_answers": [
+                "+1",
+                "-1",
+                "+2"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What do noble gases have in common?",
+            "correct_answer": "Full outer electron shells",
+            "incorrect_answers": [
+                "They are all radioactive",
+                "They are all metals",
+                "They are all solid"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element has the atomic number 2?",
+            "correct_answer": "Helium",
+            "incorrect_answers": [
+                "Hydrogen",
+                "Lithium",
+                "Beryllium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element has the atomic number 8?",
+            "correct_answer": "Oxygen",
+            "incorrect_answers": [
+                "Carbon",
+                "Nitrogen",
+                "Fluorine"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Lanthanum?",
+            "correct_answer": "La",
+            "incorrect_answers": [
+                "L",
+                "Ln",
+                "Lt"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Thorium?",
+            "correct_answer": "Th",
+            "incorrect_answers": [
+                "T",
+                "Tr",
+                "To"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What are elements that have properties of both metals and nonmetals called?",
+            "correct_answer": "Metalloids",
+            "incorrect_answers": [
+                "Transition metals",
+                "Noble metals",
+                "Halogens"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which element is the second most abundant in Earth's crust?",
+            "correct_answer": "Silicon",
+            "incorrect_answers": [
+                "Aluminum",
+                "Iron",
+                "Calcium"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the densest naturally occurring element?",
+            "correct_answer": "Osmium",
+            "incorrect_answers": [
+                "Lead",
+                "Gold",
+                "Platinum"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the most conductive metal?",
+            "correct_answer": "Silver",
+            "incorrect_answers": [
+                "Copper",
+                "Gold",
+                "Aluminum"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What acid gives cola drinks their tangy taste?",
+            "correct_answer": "Phosphoric acid",
+            "incorrect_answers": [
+                "Sulfuric acid",
+                "Citric acid",
+                "Acetic acid"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Laughing Gas?",
+            "correct_answer": "N2O",
+            "incorrect_answers": [
+                "NO",
+                "NO2",
+                "N2O3"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Cadmium?",
+            "correct_answer": "Cd",
+            "incorrect_answers": [
+                "Ca",
+                "C",
+                "Ce"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Rhenium?",
+            "correct_answer": "Re",
+            "incorrect_answers": [
+                "R",
+                "Rh",
+                "Rn"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What common household substance has a pH of about 13?",
+            "correct_answer": "Bleach",
+            "incorrect_answers": [
+                "Vinegar",
+                "Milk",
+                "Coffee"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical symbol for Neodymium?",
+            "correct_answer": "Nd",
+            "incorrect_answers": [
+                "Ne",
+                "N",
+                "No"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is another word for a positively charged ion?",
+            "correct_answer": "Cation",
+            "incorrect_answers": [
+                "Anion",
+                "Isotope",
+                "Proton"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is another word for a negatively charged ion?",
+            "correct_answer": "Anion",
+            "incorrect_answers": [
+                "Cation",
+                "Neutron",
+                "Electron"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the most common element in the human body by mass?",
+            "correct_answer": "Oxygen",
+            "incorrect_answers": [
+                "Carbon",
+                "Hydrogen",
+                "Nitrogen"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the chemical formula for Nitric Acid?",
+            "correct_answer": "HNO3",
+            "incorrect_answers": [
+                "HCl",
+                "H2SO4",
+                "H3PO4"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the term for different structural forms of the same element?",
+            "correct_answer": "Allotropes",
+            "incorrect_answers": [
+                "Isotopes",
+                "Isomers",
+                "Polymers"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the bond formed by the attraction between positive and negative ions?",
+            "correct_answer": "Ionic bond",
+            "incorrect_answers": [
+                "Covalent bond",
+                "Metallic bond",
+                "Van der Waals force"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is Avogadro's number approximately equal to?",
+            "correct_answer": "6.022 x 10^23",
+            "incorrect_answers": [
+                "3.14 x 10^23",
+                "1.602 x 10^19",
+                "9.81 x 10^23"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the process of splitting a heavy nucleus into lighter nuclei called?",
+            "correct_answer": "Nuclear fission",
+            "incorrect_answers": [
+                "Nuclear fusion",
+                "Radioactive decay",
+                "Transmutation"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the process of combining light nuclei into a heavier nucleus called?",
+            "correct_answer": "Nuclear fusion",
+            "incorrect_answers": [
+                "Nuclear fission",
+                "Radioactive decay",
+                "Chain reaction"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the SI unit of amount of substance?",
+            "correct_answer": "Mole",
+            "incorrect_answers": [
+                "Gram",
+                "Liter",
+                "Kelvin"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the principle that states no two electrons can have the same four quantum numbers?",
+            "correct_answer": "Pauli exclusion principle",
+            "incorrect_answers": [
+                "Heisenberg principle",
+                "Hund's rule",
+                "Aufbau principle"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of reaction involves one element replacing another in a compound?",
+            "correct_answer": "Single displacement",
+            "incorrect_answers": [
+                "Double displacement",
+                "Synthesis",
+                "Decomposition"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the term for the energy required to remove an electron from an atom?",
+            "correct_answer": "Ionization energy",
+            "incorrect_answers": [
+                "Electron affinity",
+                "Electronegativity",
+                "Bond energy"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name for a mixture of two or more metals?",
+            "correct_answer": "Alloy",
+            "incorrect_answers": [
+                "Compound",
+                "Solution",
+                "Composite"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the charge of an alpha particle?",
+            "correct_answer": "+2",
+            "incorrect_answers": [
+                "+1",
+                "-1",
+                "0"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which element has the highest electronegativity?",
+            "correct_answer": "Fluorine",
+            "incorrect_answers": [
+                "Oxygen",
+                "Chlorine",
+                "Nitrogen"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the common name for Calcium Carbonate?",
+            "correct_answer": "Chalk",
+            "incorrect_answers": [
+                "Limestone only",
+                "Gypsum",
+                "Talc"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What law states that pressure and volume are inversely proportional at constant temperature?",
+            "correct_answer": "Boyle's Law",
+            "incorrect_answers": [
+                "Charles's Law",
+                "Dalton's Law",
+                "Avogadro's Law"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Ozone?",
+            "correct_answer": "O3",
+            "incorrect_answers": [
+                "O2",
+                "O4",
+                "O"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of chemical reaction breaks down a compound into simpler substances?",
+            "correct_answer": "Decomposition",
+            "incorrect_answers": [
+                "Synthesis",
+                "Combustion",
+                "Single displacement"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which acid is found in car batteries?",
+            "correct_answer": "Sulfuric acid",
+            "incorrect_answers": [
+                "Hydrochloric acid",
+                "Nitric acid",
+                "Phosphoric acid"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the common name for Ethanoic Acid?",
+            "correct_answer": "Acetic acid",
+            "incorrect_answers": [
+                "Formic acid",
+                "Citric acid",
+                "Lactic acid"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What does the atomic mass number represent?",
+            "correct_answer": "Protons plus neutrons",
+            "incorrect_answers": [
+                "Protons only",
+                "Neutrons only",
+                "Electrons plus protons"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the reaction between an acid and a base?",
+            "correct_answer": "Neutralization",
+            "incorrect_answers": [
+                "Oxidation",
+                "Reduction",
+                "Combustion"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Acetic Acid?",
+            "correct_answer": "CH3COOH",
+            "incorrect_answers": [
+                "C2H4O2",
+                "HCOOH",
+                "C3H6O3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What metal is used as the standard for atomic mass?",
+            "correct_answer": "Carbon-12",
+            "incorrect_answers": [
+                "Hydrogen-1",
+                "Oxygen-16",
+                "Nitrogen-14"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name for the group of elements including iron, cobalt, and nickel?",
+            "correct_answer": "Transition metals",
+            "incorrect_answers": [
+                "Alkali metals",
+                "Alkaline earth metals",
+                "Metalloids"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What does the 'R' stand for in the ideal gas law PV = nRT?",
+            "correct_answer": "Gas constant",
+            "incorrect_answers": [
+                "Rate",
+                "Ratio",
+                "Resistance"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the term for a substance dissolved in a solvent?",
+            "correct_answer": "Solute",
+            "incorrect_answers": [
+                "Solvent",
+                "Solution",
+                "Suspension"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of reaction combines two or more substances into one?",
+            "correct_answer": "Synthesis",
+            "incorrect_answers": [
+                "Decomposition",
+                "Single displacement",
+                "Double displacement"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the common name for Dihydrogen Monoxide?",
+            "correct_answer": "Water",
+            "incorrect_answers": [
+                "Hydrogen peroxide",
+                "Heavy water",
+                "Hydrochloric acid"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which law states that gas volume and temperature are directly proportional?",
+            "correct_answer": "Charles's Law",
+            "incorrect_answers": [
+                "Boyle's Law",
+                "Dalton's Law",
+                "Gay-Lussac's Law"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is an alpha particle composed of?",
+            "correct_answer": "2 protons and 2 neutrons",
+            "incorrect_answers": [
+                "2 electrons",
+                "1 proton and 1 neutron",
+                "4 protons"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the process of a gas turning directly into a solid called?",
+            "correct_answer": "Deposition",
+            "incorrect_answers": [
+                "Sublimation",
+                "Condensation",
+                "Freezing"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the most reactive group of metals?",
+            "correct_answer": "Alkali metals",
+            "incorrect_answers": [
+                "Transition metals",
+                "Alkaline earth metals",
+                "Noble metals"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Calcium Hydroxide (slaked lime)?",
+            "correct_answer": "Ca(OH)2",
+            "incorrect_answers": [
+                "CaO",
+                "CaCO3",
+                "CaCl2"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the hardest natural substance?",
+            "correct_answer": "Diamond",
+            "incorrect_answers": [
+                "Quartz",
+                "Sapphire",
+                "Tungsten carbide"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the weak intermolecular force caused by temporary dipoles?",
+            "correct_answer": "London dispersion forces",
+            "incorrect_answers": [
+                "Hydrogen bonds",
+                "Ionic bonds",
+                "Dipole-dipole forces"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical name for bleach?",
+            "correct_answer": "Sodium hypochlorite",
+            "incorrect_answers": [
+                "Sodium chloride",
+                "Sodium hydroxide",
+                "Sodium carbonate"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Phosphoric Acid?",
+            "correct_answer": "H3PO4",
+            "incorrect_answers": [
+                "H2SO4",
+                "HNO3",
+                "H2PO4"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What property of a metal allows it to be drawn into wires?",
+            "correct_answer": "Ductility",
+            "incorrect_answers": [
+                "Malleability",
+                "Conductivity",
+                "Luster"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What property of a metal allows it to be hammered into sheets?",
+            "correct_answer": "Malleability",
+            "incorrect_answers": [
+                "Ductility",
+                "Conductivity",
+                "Hardness"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of mixture can be separated by filtration?",
+            "correct_answer": "Suspension",
+            "incorrect_answers": [
+                "Solution",
+                "Colloid",
+                "Alloy"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the term for the amount of solute that can dissolve in a solvent at a given temperature?",
+            "correct_answer": "Solubility",
+            "incorrect_answers": [
+                "Concentration",
+                "Density",
+                "Viscosity"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which acid is found in citrus fruits?",
+            "correct_answer": "Citric acid",
+            "incorrect_answers": [
+                "Acetic acid",
+                "Lactic acid",
+                "Tartaric acid"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the common name for Potassium Nitrate?",
+            "correct_answer": "Saltpeter",
+            "incorrect_answers": [
+                "Rock salt",
+                "Epsom salt",
+                "Smelling salts"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Rust?",
+            "correct_answer": "Fe2O3",
+            "incorrect_answers": [
+                "FeO",
+                "Fe3O4",
+                "FeCl3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element is used in semiconductor chips?",
+            "correct_answer": "Silicon",
+            "incorrect_answers": [
+                "Carbon",
+                "Germanium",
+                "Tin"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the most abundant metal in the Earth's crust?",
+            "correct_answer": "Aluminum",
+            "incorrect_answers": [
+                "Iron",
+                "Calcium",
+                "Sodium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Calcium Oxide (quickite)?",
+            "correct_answer": "CaO",
+            "incorrect_answers": [
+                "Ca(OH)2",
+                "CaCO3",
+                "CaSO4"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of reaction is photosynthesis?",
+            "correct_answer": "Endothermic",
+            "incorrect_answers": [
+                "Exothermic",
+                "Thermoneutral",
+                "Isothermal"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What are Group 2 elements on the periodic table called?",
+            "correct_answer": "Alkaline earth metals",
+            "incorrect_answers": [
+                "Alkali metals",
+                "Transition metals",
+                "Halogens"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Magnesium Oxide?",
+            "correct_answer": "MgO",
+            "incorrect_answers": [
+                "Mg2O",
+                "MgO2",
+                "Mg(OH)2"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of Cu2O?",
+            "correct_answer": "Copper(I) oxide",
+            "incorrect_answers": [
+                "Copper(II) oxide",
+                "Cupric oxide",
+                "Copper peroxide"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What does an oxidizing agent do in a reaction?",
+            "correct_answer": "Gains electrons",
+            "incorrect_answers": [
+                "Loses electrons",
+                "Gains protons",
+                "Loses neutrons"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the term for a reaction in which electrons are transferred?",
+            "correct_answer": "Redox reaction",
+            "incorrect_answers": [
+                "Neutralization",
+                "Precipitation",
+                "Hydrolysis"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What acid is naturally found in the stomach?",
+            "correct_answer": "Hydrochloric acid",
+            "incorrect_answers": [
+                "Sulfuric acid",
+                "Nitric acid",
+                "Phosphoric acid"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Potassium Permanganate?",
+            "correct_answer": "KMnO4",
+            "incorrect_answers": [
+                "K2MnO4",
+                "KMn2O4",
+                "KMnO3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the maximum number of electrons in the second electron shell?",
+            "correct_answer": "8",
+            "incorrect_answers": [
+                "2",
+                "6",
+                "18"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the heaviest naturally occurring element?",
+            "correct_answer": "Uranium",
+            "incorrect_answers": [
+                "Plutonium",
+                "Lead",
+                "Bismuth"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the common name for Magnesium Sulfate?",
+            "correct_answer": "Epsom salt",
+            "incorrect_answers": [
+                "Table salt",
+                "Rock salt",
+                "Smelling salts"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the term for a homogeneous mixture of metals?",
+            "correct_answer": "Alloy",
+            "incorrect_answers": [
+                "Compound",
+                "Amalgam",
+                "Composite"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which element was formerly known as 'wolfram'?",
+            "correct_answer": "Tungsten",
+            "incorrect_answers": [
+                "Titanium",
+                "Tantalum",
+                "Thallium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of radiation can be stopped by a sheet of paper?",
+            "correct_answer": "Alpha radiation",
+            "incorrect_answers": [
+                "Beta radiation",
+                "Gamma radiation",
+                "X-ray radiation"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Potassium Hydroxide?",
+            "correct_answer": "KOH",
+            "incorrect_answers": [
+                "K2O",
+                "KCl",
+                "K2SO4"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the element with atomic number 6?",
+            "correct_answer": "Carbon",
+            "incorrect_answers": [
+                "Nitrogen",
+                "Boron",
+                "Oxygen"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the term for a substance that changes color to indicate pH?",
+            "correct_answer": "Indicator",
+            "incorrect_answers": [
+                "Buffer",
+                "Catalyst",
+                "Reagent"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element is the primary component of brass alongside copper?",
+            "correct_answer": "Zinc",
+            "incorrect_answers": [
+                "Tin",
+                "Lead",
+                "Nickel"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element is the primary component of bronze alongside copper?",
+            "correct_answer": "Tin",
+            "incorrect_answers": [
+                "Zinc",
+                "Iron",
+                "Nickel"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical name for Vitamin C?",
+            "correct_answer": "Ascorbic acid",
+            "incorrect_answers": [
+                "Citric acid",
+                "Folic acid",
+                "Acetic acid"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the maximum number of electrons in the first electron shell?",
+            "correct_answer": "2",
+            "incorrect_answers": [
+                "4",
+                "6",
+                "8"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What does a reducing agent do in a reaction?",
+            "correct_answer": "Loses electrons",
+            "incorrect_answers": [
+                "Gains electrons",
+                "Gains protons",
+                "Loses protons"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Calcium Chloride?",
+            "correct_answer": "CaCl2",
+            "incorrect_answers": [
+                "CaCl",
+                "Ca2Cl",
+                "CaCl3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the temperature at which a solid becomes a liquid?",
+            "correct_answer": "Melting point",
+            "incorrect_answers": [
+                "Boiling point",
+                "Flash point",
+                "Freezing point"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Ammonium Nitrate?",
+            "correct_answer": "NH4NO3",
+            "incorrect_answers": [
+                "NH3NO2",
+                "N2H4O3",
+                "(NH4)2NO3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What does 'aqua regia' dissolve that other acids cannot?",
+            "correct_answer": "Gold",
+            "incorrect_answers": [
+                "Diamond",
+                "Iron",
+                "Titanium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Baking Powder's active ingredient, Sodium Bicarbonate?",
+            "correct_answer": "NaHCO3",
+            "incorrect_answers": [
+                "Na2CO3",
+                "NaCl",
+                "NaOH"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What phenomenon explains why oil and water don't mix?",
+            "correct_answer": "Hydrophobicity",
+            "incorrect_answers": [
+                "Osmosis",
+                "Diffusion",
+                "Capillary action"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "How many electrons can a single covalent bond hold?",
+            "correct_answer": "2",
+            "incorrect_answers": [
+                "1",
+                "4",
+                "6"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Iron(III) Chloride?",
+            "correct_answer": "FeCl3",
+            "incorrect_answers": [
+                "FeCl2",
+                "Fe2Cl3",
+                "Fe3Cl"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the process that converts sugar to alcohol?",
+            "correct_answer": "Fermentation",
+            "incorrect_answers": [
+                "Distillation",
+                "Oxidation",
+                "Hydrolysis"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the general formula for alkanes?",
+            "correct_answer": "CnH2n+2",
+            "incorrect_answers": [
+                "CnH2n",
+                "CnHn",
+                "CnH2n-2"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the general formula for alkenes?",
+            "correct_answer": "CnH2n",
+            "incorrect_answers": [
+                "CnH2n+2",
+                "CnH2n-2",
+                "CnHn"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element is liquid near room temperature besides mercury?",
+            "correct_answer": "Gallium",
+            "incorrect_answers": [
+                "Cesium",
+                "Francium",
+                "Rubidium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the simplest alkane?",
+            "correct_answer": "Methane",
+            "incorrect_answers": [
+                "Ethane",
+                "Propane",
+                "Butane"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Silver Nitrate?",
+            "correct_answer": "AgNO3",
+            "incorrect_answers": [
+                "Ag2NO3",
+                "AgNO2",
+                "Ag(NO3)2"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "How many atoms are in one mole of any substance?",
+            "correct_answer": "6.022 x 10^23",
+            "incorrect_answers": [
+                "6.022 x 10^20",
+                "3.011 x 10^23",
+                "1.0 x 10^24"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Lead(II) Oxide?",
+            "correct_answer": "PbO",
+            "incorrect_answers": [
+                "PbO2",
+                "Pb2O",
+                "Pb2O3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What metal is the best conductor of heat?",
+            "correct_answer": "Silver",
+            "incorrect_answers": [
+                "Copper",
+                "Gold",
+                "Aluminum"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Copper(II) Sulfate?",
+            "correct_answer": "CuSO4",
+            "incorrect_answers": [
+                "Cu2SO4",
+                "CuSO3",
+                "CuS"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element is used in photographic film?",
+            "correct_answer": "Silver",
+            "incorrect_answers": [
+                "Gold",
+                "Platinum",
+                "Copper"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the second lightest element?",
+            "correct_answer": "Helium",
+            "incorrect_answers": [
+                "Lithium",
+                "Hydrogen",
+                "Beryllium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the simplest amino acid?",
+            "correct_answer": "Glycine",
+            "incorrect_answers": [
+                "Alanine",
+                "Valine",
+                "Leucine"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What color flame does copper produce when burned?",
+            "correct_answer": "Green",
+            "incorrect_answers": [
+                "Red",
+                "Blue",
+                "Yellow"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What color flame does sodium produce when burned?",
+            "correct_answer": "Yellow",
+            "incorrect_answers": [
+                "Blue",
+                "Green",
+                "Red"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What color flame does potassium produce when burned?",
+            "correct_answer": "Lilac/violet",
+            "incorrect_answers": [
+                "Yellow",
+                "Green",
+                "Red"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Zinc Oxide?",
+            "correct_answer": "ZnO",
+            "incorrect_answers": [
+                "Zn2O",
+                "ZnO2",
+                "Zn2O3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element was named after the planet Uranus?",
+            "correct_answer": "Uranium",
+            "incorrect_answers": [
+                "Neptunium",
+                "Plutonium",
+                "Americium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element was named after the planet Neptune?",
+            "correct_answer": "Neptunium",
+            "incorrect_answers": [
+                "Uranium",
+                "Plutonium",
+                "Americium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What element was named after the dwarf planet Pluto?",
+            "correct_answer": "Plutonium",
+            "incorrect_answers": [
+                "Uranium",
+                "Neptunium",
+                "Americium"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical formula for Sodium Sulfate?",
+            "correct_answer": "Na2SO4",
+            "incorrect_answers": [
+                "NaSO4",
+                "Na2SO3",
+                "NaSO3"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the common name for Calcium Sulfate Dihydrate?",
+            "correct_answer": "Gypsum",
+            "incorrect_answers": [
+                "Chalk",
+                "Limestone",
+                "Marble"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of bond holds atoms together in a metal?",
+            "correct_answer": "Metallic bond",
+            "incorrect_answers": [
+                "Ionic bond",
+                "Covalent bond",
+                "Hydrogen bond"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the concept that electrons fill lower energy orbitals first?",
+            "correct_answer": "Aufbau principle",
+            "incorrect_answers": [
+                "Hund's rule",
+                "Pauli exclusion principle",
+                "Heisenberg principle"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the hybridization of carbon in methane (CH4)?",
+            "correct_answer": "sp3",
+            "incorrect_answers": [
+                "sp",
+                "sp2",
+                "sp3d"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the thermodynamic quantity defined as H = U + PV?",
+            "correct_answer": "Enthalpy",
+            "incorrect_answers": [
+                "Entropy",
+                "Free energy",
+                "Internal energy"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the law that states entropy of the universe always increases?",
+            "correct_answer": "Second law of thermodynamics",
+            "incorrect_answers": [
+                "First law of thermodynamics",
+                "Third law of thermodynamics",
+                "Zeroth law of thermodynamics"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the hybridization of carbon in ethylene (C2H4)?",
+            "correct_answer": "sp2",
+            "incorrect_answers": [
+                "sp",
+                "sp3",
+                "sp3d"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the model that describes electron behavior as both wave and particle?",
+            "correct_answer": "Quantum mechanical model",
+            "incorrect_answers": [
+                "Bohr model",
+                "Plum pudding model",
+                "Planetary model"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the term for the minimum energy required to start a chemical reaction?",
+            "correct_answer": "Activation energy",
+            "incorrect_answers": [
+                "Ionization energy",
+                "Bond energy",
+                "Kinetic energy"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the shape of a molecule with four bonding pairs and no lone pairs?",
+            "correct_answer": "Tetrahedral",
+            "incorrect_answers": [
+                "Trigonal planar",
+                "Linear",
+                "Octahedral"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the equation that relates the equilibrium constant to temperature?",
+            "correct_answer": "Van't Hoff equation",
+            "incorrect_answers": [
+                "Arrhenius equation",
+                "Nernst equation",
+                "Henderson-Hasselbalch equation"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the oxidation state of oxygen in most compounds?",
+            "correct_answer": "-2",
+            "incorrect_answers": [
+                "-1",
+                "+2",
+                "0"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the rule that states each orbital in a subshell gets one electron before any gets a second?",
+            "correct_answer": "Hund's rule",
+            "incorrect_answers": [
+                "Pauli exclusion principle",
+                "Aufbau principle",
+                "Heisenberg principle"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What catalyst is used in the Haber process?",
+            "correct_answer": "Iron",
+            "incorrect_answers": [
+                "Platinum",
+                "Nickel",
+                "Vanadium"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is produced in the Haber process?",
+            "correct_answer": "Ammonia",
+            "incorrect_answers": [
+                "Nitric acid",
+                "Sulfuric acid",
+                "Methanol"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the bond angle in a tetrahedral molecule?",
+            "correct_answer": "109.5 degrees",
+            "incorrect_answers": [
+                "120 degrees",
+                "90 degrees",
+                "180 degrees"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What does Le Chatelier's principle describe?",
+            "correct_answer": "How equilibrium shifts when stressed",
+            "incorrect_answers": [
+                "Rate of reaction",
+                "Energy of activation",
+                "Electron configuration"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the chemical formula for Aluminum Oxide?",
+            "correct_answer": "Al2O3",
+            "incorrect_answers": [
+                "AlO",
+                "AlO2",
+                "Al3O2"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the phenomenon where a catalyst is in the same phase as reactants?",
+            "correct_answer": "Homogeneous catalysis",
+            "incorrect_answers": [
+                "Heterogeneous catalysis",
+                "Autocatalysis",
+                "Enzyme catalysis"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What type of isomers are mirror images of each other?",
+            "correct_answer": "Enantiomers",
+            "incorrect_answers": [
+                "Diastereomers",
+                "Structural isomers",
+                "Geometric isomers"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the process used to manufacture sulfuric acid industrially?",
+            "correct_answer": "Contact process",
+            "incorrect_answers": [
+                "Haber process",
+                "Ostwald process",
+                "Frasch process"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What catalyst is used in the Contact process?",
+            "correct_answer": "Vanadium pentoxide",
+            "incorrect_answers": [
+                "Iron",
+                "Platinum",
+                "Manganese dioxide"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the bond angle in a trigonal planar molecule?",
+            "correct_answer": "120 degrees",
+            "incorrect_answers": [
+                "109.5 degrees",
+                "90 degrees",
+                "180 degrees"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the equation used to calculate pH of a buffer?",
+            "correct_answer": "Henderson-Hasselbalch equation",
+            "incorrect_answers": [
+                "Nernst equation",
+                "Arrhenius equation",
+                "Van't Hoff equation"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What organic functional group has the formula -COOH?",
+            "correct_answer": "Carboxyl group",
+            "incorrect_answers": [
+                "Hydroxyl group",
+                "Aldehyde group",
+                "Carbonyl group"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the process used to manufacture nitric acid?",
+            "correct_answer": "Ostwald process",
+            "incorrect_answers": [
+                "Haber process",
+                "Contact process",
+                "Solvay process"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the term for the heat change at constant pressure?",
+            "correct_answer": "Enthalpy",
+            "incorrect_answers": [
+                "Entropy",
+                "Free energy",
+                "Work"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the VSEPR shape of a molecule with 3 bonding pairs and 1 lone pair?",
+            "correct_answer": "Trigonal pyramidal",
+            "incorrect_answers": [
+                "Tetrahedral",
+                "Trigonal planar",
+                "Bent"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the organic reaction where a hydrogen is replaced by a halogen?",
+            "correct_answer": "Halogenation",
+            "incorrect_answers": [
+                "Hydrogenation",
+                "Oxidation",
+                "Esterification"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the standard temperature in STP (Standard Temperature and Pressure)?",
+            "correct_answer": "0 degrees Celsius",
+            "incorrect_answers": [
+                "25 degrees Celsius",
+                "20 degrees Celsius",
+                "100 degrees Celsius"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the standard pressure in STP?",
+            "correct_answer": "1 atm",
+            "incorrect_answers": [
+                "2 atm",
+                "0.5 atm",
+                "760 mmHg only"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the effect where adding a common ion suppresses dissociation?",
+            "correct_answer": "Common ion effect",
+            "incorrect_answers": [
+                "Buffer effect",
+                "Le Chatelier effect",
+                "Salting out"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the molar volume of an ideal gas at STP?",
+            "correct_answer": "22.4 liters",
+            "incorrect_answers": [
+                "11.2 liters",
+                "44.8 liters",
+                "1 liter"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What type of crystal structure does table salt have?",
+            "correct_answer": "Face-centered cubic",
+            "incorrect_answers": [
+                "Body-centered cubic",
+                "Simple cubic",
+                "Hexagonal"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the constant in the equation E = hv?",
+            "correct_answer": "Planck's constant",
+            "incorrect_answers": [
+                "Boltzmann's constant",
+                "Avogadro's constant",
+                "Rydberg constant"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What type of orbital has a dumbbell shape?",
+            "correct_answer": "p orbital",
+            "incorrect_answers": [
+                "s orbital",
+                "d orbital",
+                "f orbital"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the maximum number of electrons in a d subshell?",
+            "correct_answer": "10",
+            "incorrect_answers": [
+                "6",
+                "8",
+                "14"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the maximum number of electrons in an f subshell?",
+            "correct_answer": "14",
+            "incorrect_answers": [
+                "10",
+                "12",
+                "18"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the equation relating reaction rate to temperature?",
+            "correct_answer": "Arrhenius equation",
+            "incorrect_answers": [
+                "Van't Hoff equation",
+                "Nernst equation",
+                "Clausius-Clapeyron equation"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the VSEPR shape of a molecule with 2 bonding pairs and 2 lone pairs?",
+            "correct_answer": "Bent",
+            "incorrect_answers": [
+                "Linear",
+                "Tetrahedral",
+                "Trigonal planar"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the industrial process for producing sodium carbonate?",
+            "correct_answer": "Solvay process",
+            "incorrect_answers": [
+                "Haber process",
+                "Contact process",
+                "Ostwald process"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the chemical formula for Potassium Dichromate?",
+            "correct_answer": "K2Cr2O7",
+            "incorrect_answers": [
+                "KCrO4",
+                "K2CrO4",
+                "KCr2O7"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the term for the energy released when an electron is added to a neutral atom?",
+            "correct_answer": "Electron affinity",
+            "incorrect_answers": [
+                "Ionization energy",
+                "Electronegativity",
+                "Bond energy"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What organic functional group has the formula -OH?",
+            "correct_answer": "Hydroxyl group",
+            "incorrect_answers": [
+                "Carboxyl group",
+                "Carbonyl group",
+                "Amino group"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the term for the number of moles of solute per liter of solution?",
+            "correct_answer": "Molarity",
+            "incorrect_answers": [
+                "Molality",
+                "Normality",
+                "Mole fraction"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the term for the number of moles of solute per kilogram of solvent?",
+            "correct_answer": "Molality",
+            "incorrect_answers": [
+                "Molarity",
+                "Normality",
+                "Mole fraction"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the colligative property that lowers the freezing point?",
+            "correct_answer": "Freezing point depression",
+            "incorrect_answers": [
+                "Boiling point elevation",
+                "Osmotic pressure",
+                "Vapor pressure lowering"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the hybridization of carbon in acetylene (C2H2)?",
+            "correct_answer": "sp",
+            "incorrect_answers": [
+                "sp2",
+                "sp3",
+                "sp3d"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the Nernst equation used to calculate?",
+            "correct_answer": "Cell potential under non-standard conditions",
+            "incorrect_answers": [
+                "Reaction rate",
+                "Equilibrium constant",
+                "pH of a buffer"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the electrode at which oxidation occurs called?",
+            "correct_answer": "Anode",
+            "incorrect_answers": [
+                "Cathode",
+                "Electrode",
+                "Terminal"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the electrode at which reduction occurs called?",
+            "correct_answer": "Cathode",
+            "incorrect_answers": [
+                "Anode",
+                "Electrode",
+                "Terminal"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What type of isomerism arises from different arrangements around a double bond?",
+            "correct_answer": "Geometric (cis-trans) isomerism",
+            "incorrect_answers": [
+                "Optical isomerism",
+                "Structural isomerism",
+                "Conformational isomerism"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the chemical name for washing soda?",
+            "correct_answer": "Sodium carbonate",
+            "incorrect_answers": [
+                "Sodium bicarbonate",
+                "Sodium hydroxide",
+                "Sodium sulfate"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the shape of an sp orbital?",
+            "correct_answer": "Linear",
+            "incorrect_answers": [
+                "Trigonal planar",
+                "Tetrahedral",
+                "Bent"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the phenomenon where a precipitate dissolves in excess reagent?",
+            "correct_answer": "Complex ion formation",
+            "incorrect_answers": [
+                "Dissolution",
+                "Neutralization",
+                "Hydrolysis"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the oxidation state of chromium in potassium dichromate?",
+            "correct_answer": "+6",
+            "incorrect_answers": [
+                "+3",
+                "+4",
+                "+7"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which scientist proposed the planetary model of the atom?",
+            "correct_answer": "Ernest Rutherford",
+            "incorrect_answers": [
+                "Niels Bohr",
+                "J.J. Thomson",
+                "John Dalton"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which scientist proposed the 'plum pudding' model of the atom?",
+            "correct_answer": "J.J. Thomson",
+            "incorrect_answers": [
+                "Ernest Rutherford",
+                "Niels Bohr",
+                "John Dalton"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the process that separates crude oil into fractions?",
+            "correct_answer": "Fractional distillation",
+            "incorrect_answers": [
+                "Simple distillation",
+                "Chromatography",
+                "Crystallization"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What organic functional group has the formula -NH2?",
+            "correct_answer": "Amino group",
+            "incorrect_answers": [
+                "Amide group",
+                "Nitro group",
+                "Hydroxyl group"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the reaction between an alcohol and a carboxylic acid?",
+            "correct_answer": "Esterification",
+            "incorrect_answers": [
+                "Saponification",
+                "Hydrolysis",
+                "Fermentation"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the equilibrium constant for water (Kw) at 25\u00b0C?",
+            "correct_answer": "1.0 x 10^-14",
+            "incorrect_answers": [
+                "1.0 x 10^-7",
+                "1.0 x 10^-10",
+                "1.0 x 10^-12"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the chemical name for Plaster of Paris?",
+            "correct_answer": "Calcium sulfate hemihydrate",
+            "incorrect_answers": [
+                "Calcium carbonate",
+                "Calcium hydroxide",
+                "Calcium oxide"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the first element in the actinide series?",
+            "correct_answer": "Actinium",
+            "incorrect_answers": [
+                "Thorium",
+                "Uranium",
+                "Plutonium"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the first element in the lanthanide series?",
+            "correct_answer": "Lanthanum",
+            "incorrect_answers": [
+                "Cerium",
+                "Praseodymium",
+                "Neodymium"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the chemical formula for Cyanide ion?",
+            "correct_answer": "CN-",
+            "incorrect_answers": [
+                "C2N-",
+                "CNO-",
+                "CO-"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the term for a solution that resists changes in pH?",
+            "correct_answer": "Buffer",
+            "incorrect_answers": [
+                "Indicator",
+                "Catalyst",
+                "Reagent"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the rate law order for a reaction whose rate doubles when concentration doubles?",
+            "correct_answer": "First order",
+            "incorrect_answers": [
+                "Zero order",
+                "Second order",
+                "Third order"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is Gibbs free energy equation?",
+            "correct_answer": "G = H - TS",
+            "incorrect_answers": [
+                "G = H + TS",
+                "G = U + PV",
+                "G = E - W"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What does a negative Gibbs free energy indicate?",
+            "correct_answer": "Spontaneous reaction",
+            "incorrect_answers": [
+                "Non-spontaneous reaction",
+                "Equilibrium",
+                "Endothermic reaction"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the principle that electrons act as both particles and waves?",
+            "correct_answer": "Wave-particle duality",
+            "incorrect_answers": [
+                "Heisenberg uncertainty",
+                "Pauli exclusion",
+                "Hund's rule"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the VSEPR shape of SF6?",
+            "correct_answer": "Octahedral",
+            "incorrect_answers": [
+                "Tetrahedral",
+                "Trigonal bipyramidal",
+                "Square planar"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What element has the electron configuration [Xe] 4f14 5d10 6s1?",
+            "correct_answer": "Gold",
+            "incorrect_answers": [
+                "Silver",
+                "Copper",
+                "Platinum"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the equation PV = nRT?",
+            "correct_answer": "Ideal gas law",
+            "incorrect_answers": [
+                "Boyle's law",
+                "Charles's law",
+                "Dalton's law"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the conjugate base of water?",
+            "correct_answer": "Hydroxide ion (OH-)",
+            "incorrect_answers": [
+                "Hydronium ion (H3O+)",
+                "Hydrogen (H2)",
+                "Oxide ion (O2-)"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name for an organic compound containing only carbon and hydrogen?",
+            "correct_answer": "Hydrocarbon",
+            "incorrect_answers": [
+                "Carbohydrate",
+                "Polymer",
+                "Alcohol"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the strongest type of intermolecular force?",
+            "correct_answer": "Hydrogen bonding",
+            "incorrect_answers": [
+                "London dispersion",
+                "Dipole-dipole",
+                "Ion-ion"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the process where an ester is broken down by a base?",
+            "correct_answer": "Saponification",
+            "incorrect_answers": [
+                "Esterification",
+                "Hydrolysis",
+                "Fermentation"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What law states that the total pressure of a gas mixture equals the sum of partial pressures?",
+            "correct_answer": "Dalton's Law",
+            "incorrect_answers": [
+                "Boyle's Law",
+                "Charles's Law",
+                "Henry's Law"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the coordination number of an atom in a face-centered cubic structure?",
+            "correct_answer": "12",
+            "incorrect_answers": [
+                "6",
+                "8",
+                "4"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which scientist first proposed the atomic theory of matter?",
+            "correct_answer": "John Dalton",
+            "incorrect_answers": [
+                "Democritus",
+                "J.J. Thomson",
+                "Ernest Rutherford"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the oxidation state of manganese in KMnO4?",
+            "correct_answer": "+7",
+            "incorrect_answers": [
+                "+4",
+                "+5",
+                "+6"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name for a carbon atom bonded to four different groups?",
+            "correct_answer": "Chiral center",
+            "incorrect_answers": [
+                "Symmetric center",
+                "Achiral center",
+                "Geometric center"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the standard hydrogen electrode potential defined as?",
+            "correct_answer": "0 volts",
+            "incorrect_answers": [
+                "1 volt",
+                "-1 volt",
+                "0.5 volts"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the VSEPR shape of XeF4?",
+            "correct_answer": "Square planar",
+            "incorrect_answers": [
+                "Tetrahedral",
+                "Octahedral",
+                "See-saw"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What functional group defines a ketone?",
+            "correct_answer": "C=O between two carbons",
+            "incorrect_answers": [
+                "-CHO at chain end",
+                "-COOH",
+                "-OH"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the reaction that adds hydrogen across a double bond?",
+            "correct_answer": "Hydrogenation",
+            "incorrect_answers": [
+                "Hydrolysis",
+                "Dehydration",
+                "Halogenation"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the lanthanide contraction?",
+            "correct_answer": "Decrease in atomic radius across lanthanides",
+            "incorrect_answers": [
+                "Increase in atomic radius",
+                "Loss of f electrons",
+                "Change in oxidation state"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the law that states equal volumes of gases at the same temperature and pressure contain equal numbers of molecules?",
+            "correct_answer": "Avogadro's Law",
+            "incorrect_answers": [
+                "Boyle's Law",
+                "Charles's Law",
+                "Gay-Lussac's Law"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the oxidation state of sulfur in H2SO4?",
+            "correct_answer": "+6",
+            "incorrect_answers": [
+                "+4",
+                "+2",
+                "-2"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What type of reaction mechanism involves a nucleophile attacking a carbon?",
+            "correct_answer": "Nucleophilic substitution",
+            "incorrect_answers": [
+                "Electrophilic addition",
+                "Free radical",
+                "Elimination"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the process that extracts aluminum from bauxite?",
+            "correct_answer": "Hall-Heroult process",
+            "incorrect_answers": [
+                "Haber process",
+                "Bessemer process",
+                "Contact process"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the VSEPR shape of BF3?",
+            "correct_answer": "Trigonal planar",
+            "incorrect_answers": [
+                "Tetrahedral",
+                "Linear",
+                "Pyramidal"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the term for the splitting of spectral lines in a magnetic field?",
+            "correct_answer": "Zeeman effect",
+            "incorrect_answers": [
+                "Stark effect",
+                "Doppler effect",
+                "Compton effect"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which quantum number describes the shape of an orbital?",
+            "correct_answer": "Angular momentum (l)",
+            "incorrect_answers": [
+                "Principal (n)",
+                "Magnetic (ml)",
+                "Spin (ms)"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What type of crystal has the highest melting point?",
+            "correct_answer": "Covalent network crystal",
+            "incorrect_answers": [
+                "Ionic crystal",
+                "Metallic crystal",
+                "Molecular crystal"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the VSEPR shape of PCl5?",
+            "correct_answer": "Trigonal bipyramidal",
+            "incorrect_answers": [
+                "Octahedral",
+                "Tetrahedral",
+                "Square pyramidal"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the chemical formula for Chromium(III) Oxide?",
+            "correct_answer": "Cr2O3",
+            "incorrect_answers": [
+                "CrO3",
+                "CrO",
+                "Cr3O2"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What functional group defines an aldehyde?",
+            "correct_answer": "-CHO",
+            "incorrect_answers": [
+                "-COOH",
+                "-OH",
+                "-CO-"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the reaction where an alkene reacts with water?",
+            "correct_answer": "Hydration",
+            "incorrect_answers": [
+                "Hydrogenation",
+                "Halogenation",
+                "Dehydration"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the coordination number of carbon in diamond?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+                "3",
+                "6",
+                "8"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which scientist discovered the electron?",
+            "correct_answer": "J.J. Thomson",
+            "incorrect_answers": [
+                "Ernest Rutherford",
+                "Niels Bohr",
+                "James Chadwick"
+            ],
+            "difficulty": "hard"
+        }
+    ]
 }
