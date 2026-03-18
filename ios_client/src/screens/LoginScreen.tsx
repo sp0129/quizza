@@ -52,9 +52,12 @@ export default function LoginScreen({ navigation }: Props) {
     setError('');
     setLoading(true);
     try {
+      console.log('[Apple] Starting loginWithApple...');
       await loginWithApple();
+      console.log('[Apple] loginWithApple succeeded, calling onSuccess');
       onSuccess();
     } catch (err: any) {
+      console.log('[Apple] Error:', err.code, err.message);
       if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed');
     } finally {
       setLoading(false);
