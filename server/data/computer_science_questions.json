@@ -1051,6 +1051,1062 @@
       "correct_answer": "A creational pattern that provides an interface for creating objects without specifying the exact class",
       "incorrect_answers": ["A pattern that restricts a class to one instance", "A pattern that adds behavior to an object dynamically", "A pattern that translates one interface into another"],
       "difficulty": "medium"
+    },
+    {
+      "question": "What is an abstract class?",
+      "correct_answer": "A class that cannot be instantiated directly and may contain abstract methods that subclasses must implement",
+      "incorrect_answers": ["A class with no methods", "A class that can only have static methods", "A class that is automatically deleted after use"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between an interface and an abstract class?",
+      "correct_answer": "An interface defines only method signatures with no implementation; an abstract class can have both implemented and unimplemented methods",
+      "incorrect_answers": ["They are identical concepts in all languages", "An interface can have constructors; an abstract class cannot", "An abstract class cannot be inherited"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a priority queue?",
+      "correct_answer": "A data structure where each element has a priority and the highest-priority element is dequeued first",
+      "incorrect_answers": ["A queue that processes elements alphabetically", "A queue limited to a fixed number of elements", "A queue that removes the oldest element first"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What data structure is commonly used to implement a priority queue?",
+      "correct_answer": "A heap",
+      "incorrect_answers": ["A linked list", "A hash table", "A balanced BST"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a min-heap and a max-heap?",
+      "correct_answer": "In a min-heap the smallest element is at the root; in a max-heap the largest element is at the root",
+      "incorrect_answers": ["A min-heap is always smaller in size", "A max-heap uses more memory", "There is no difference; they are the same structure"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a trie (prefix tree)?",
+      "correct_answer": "A tree-like data structure used to efficiently store and search strings by their prefixes",
+      "incorrect_answers": ["A binary tree used for sorting", "A hash table for storing keys", "A graph with three nodes per level"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is dynamic programming?",
+      "correct_answer": "A technique that solves problems by breaking them into overlapping subproblems and storing their solutions to avoid redundant computation",
+      "incorrect_answers": ["A method for dynamically allocating memory", "A way to generate code at runtime", "An approach to writing self-modifying programs"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between pass by value and pass by reference?",
+      "correct_answer": "Pass by value sends a copy of the data; pass by reference sends the memory address so changes affect the original",
+      "incorrect_answers": ["They are the same in all programming languages", "Pass by reference always creates a copy", "Pass by value is only used for objects"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a hash collision?",
+      "correct_answer": "When two different keys produce the same hash value and map to the same bucket",
+      "incorrect_answers": ["When a hash table runs out of space", "When two hash tables have the same size", "When a hash function produces a negative number"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between GET and POST HTTP methods?",
+      "correct_answer": "GET retrieves data and sends parameters in the URL; POST submits data in the request body",
+      "incorrect_answers": ["GET is more secure than POST", "POST can only send text data", "GET modifies server data; POST retrieves it"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What are the three main types of tree traversal for binary trees?",
+      "correct_answer": "In-order, pre-order, and post-order",
+      "incorrect_answers": ["Forward, backward, and sideways", "Top-down, bottom-up, and left-right", "Breadth-first, depth-first, and random"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In an in-order traversal of a binary search tree, what order are nodes visited?",
+      "correct_answer": "Left subtree, root, right subtree — producing a sorted sequence",
+      "incorrect_answers": ["Root, left subtree, right subtree", "Left subtree, right subtree, root", "Random order based on insertion"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between NoSQL and SQL databases?",
+      "correct_answer": "SQL databases use structured tables with fixed schemas; NoSQL databases use flexible schemas like documents, key-value pairs, or graphs",
+      "incorrect_answers": ["NoSQL is always faster than SQL", "SQL databases cannot handle large data", "NoSQL databases always use tables"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an adjacency list in graph representation?",
+      "correct_answer": "A collection where each vertex stores a list of its neighboring vertices",
+      "incorrect_answers": ["A 2D matrix of vertex connections", "A sorted list of all edges", "A linked list of all vertices in order"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between concurrency and parallelism?",
+      "correct_answer": "Concurrency is managing multiple tasks that may overlap in time; parallelism is executing multiple tasks simultaneously on multiple processors",
+      "incorrect_answers": ["They are the same concept", "Parallelism is a subset of concurrency with no distinction", "Concurrency requires multiple CPUs; parallelism does not"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a memory leak?",
+      "correct_answer": "When a program allocates memory but fails to release it after it is no longer needed, causing increasing memory consumption",
+      "incorrect_answers": ["When memory is corrupted by a virus", "When RAM physically deteriorates", "When a program uses too much CPU"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an event loop?",
+      "correct_answer": "A programming construct that waits for and dispatches events or messages in a program, commonly used in asynchronous I/O",
+      "incorrect_answers": ["A for loop that runs forever", "A loop that generates random events", "A hardware component in the CPU"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is type casting?",
+      "correct_answer": "Converting a value from one data type to another",
+      "incorrect_answers": ["Assigning a value to a variable", "Checking a variable's type at runtime", "Removing a variable from memory"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Strategy design pattern?",
+      "correct_answer": "A pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable at runtime",
+      "incorrect_answers": ["A pattern that ensures only one instance exists", "A pattern that chains objects to handle a request", "A pattern for lazy initialization of objects"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is middleware in web development?",
+      "correct_answer": "Software that sits between a request and a response, processing or modifying the request before it reaches the handler",
+      "incorrect_answers": ["The front-end framework used to build UI", "The database layer of an application", "The CSS that styles a webpage"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a WebSocket?",
+      "correct_answer": "A protocol that provides full-duplex, persistent communication between a client and server over a single TCP connection",
+      "incorrect_answers": ["A type of HTTP request", "A physical network port", "A JavaScript data type"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between unit testing and integration testing?",
+      "correct_answer": "Unit testing tests individual components in isolation; integration testing tests how components work together",
+      "incorrect_answers": ["Unit testing tests the full application; integration testing tests single functions", "They are different names for the same thing", "Integration testing is always automated; unit testing is manual"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a generics (or template) in programming?",
+      "correct_answer": "A feature that allows writing code that works with any data type, specified at compile time or instantiation",
+      "incorrect_answers": ["A function that generates random numbers", "A class that can only store strings", "A design pattern for creating objects"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is OAuth?",
+      "correct_answer": "An open standard for token-based authorization that allows third-party access to user resources without sharing credentials",
+      "incorrect_answers": ["A programming language for authentication", "An encryption algorithm", "A database access protocol"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is GraphQL?",
+      "correct_answer": "A query language for APIs that lets clients request exactly the data they need in a single request",
+      "incorrect_answers": ["A graph database management system", "A JavaScript charting library", "A CSS framework for layouts"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is rate limiting?",
+      "correct_answer": "A technique to control the number of requests a client can make to a server within a given time period",
+      "incorrect_answers": ["Limiting the size of API responses", "Restricting the number of database tables", "Controlling CPU clock speed"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an idempotent operation?",
+      "correct_answer": "An operation that produces the same result no matter how many times it is performed",
+      "incorrect_answers": ["An operation that runs only once", "An operation that always fails on retry", "An operation that changes state every time"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a circular buffer (ring buffer)?",
+      "correct_answer": "A fixed-size buffer that wraps around to the beginning when it reaches the end, overwriting old data",
+      "incorrect_answers": ["A buffer shaped like a circle in memory", "An infinite-capacity queue", "A linked list that loops forever"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Adapter design pattern?",
+      "correct_answer": "A structural pattern that converts the interface of a class into another interface that a client expects",
+      "incorrect_answers": ["A pattern for connecting to databases", "A pattern for creating network adapters", "A pattern that splits a class into smaller parts"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a topological sort?",
+      "correct_answer": "A linear ordering of vertices in a directed acyclic graph such that every directed edge u→v has u before v",
+      "incorrect_answers": ["Sorting elements by their geographic location", "Sorting nodes by their depth in a tree", "Sorting a list of numbers in descending order"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does HTTP status code 401 mean?",
+      "correct_answer": "Unauthorized — the request requires authentication",
+      "incorrect_answers": ["Not Found", "Internal Server Error", "Bad Request"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does HTTP status code 403 mean?",
+      "correct_answer": "Forbidden — the server understood the request but refuses to authorize it",
+      "incorrect_answers": ["Not Found", "Unauthorized", "Service Unavailable"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between horizontal and vertical scaling?",
+      "correct_answer": "Horizontal scaling adds more machines; vertical scaling adds more resources to an existing machine",
+      "incorrect_answers": ["They are the same concept", "Vertical scaling adds more machines", "Horizontal scaling is always cheaper"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a binary search tree (BST)?",
+      "correct_answer": "A binary tree where the left child is less than the parent and the right child is greater",
+      "incorrect_answers": ["A tree that stores only binary data", "A tree with exactly two levels", "A tree where all leaves have the same value"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the time complexity of inserting into a balanced BST?",
+      "correct_answer": "O(log n)",
+      "incorrect_answers": ["O(n)", "O(1)", "O(n²)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a graph cycle?",
+      "correct_answer": "A path in a graph that starts and ends at the same vertex without repeating edges",
+      "incorrect_answers": ["A graph with exactly one edge", "A loop in a programming language", "A vertex with no edges"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is functional programming?",
+      "correct_answer": "A paradigm that treats computation as the evaluation of mathematical functions, emphasizing immutability and avoiding side effects",
+      "incorrect_answers": ["Programming that only uses functions, not classes", "Programming that runs faster than OOP", "A style that requires no variables"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a higher-order function?",
+      "correct_answer": "A function that takes other functions as arguments or returns a function as its result",
+      "incorrect_answers": ["A function with more than five parameters", "A function defined inside another function", "A function that runs with elevated privileges"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a message queue in distributed systems?",
+      "correct_answer": "A component that stores messages between services, allowing asynchronous communication and decoupling",
+      "incorrect_answers": ["A priority queue for CPU scheduling", "A data structure for sorting messages alphabetically", "A buffer for storing email drafts"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of a reverse proxy?",
+      "correct_answer": "To sit in front of backend servers, forwarding client requests and providing load balancing, caching, or security",
+      "incorrect_answers": ["To block all incoming traffic", "To reverse the direction of network packets", "To encrypt DNS queries"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is paging in operating systems?",
+      "correct_answer": "A memory management scheme that divides virtual memory into fixed-size blocks called pages, mapped to physical frames",
+      "incorrect_answers": ["Scrolling through a document", "A technique for printing documents", "A method for compressing files"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a page fault?",
+      "correct_answer": "An interrupt that occurs when a program accesses a memory page not currently in physical RAM, requiring it to be loaded from disk",
+      "incorrect_answers": ["An error in a web page's HTML", "A bug in the page numbering of a document", "A failure in the CPU's paging unit"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Agile software development?",
+      "correct_answer": "An iterative approach to software delivery that builds software in increments with continuous feedback and adaptation",
+      "incorrect_answers": ["A programming language for web development", "A single long phase of development followed by testing", "A hardware design methodology"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a Scrum sprint?",
+      "correct_answer": "A fixed time period (usually 2-4 weeks) during which a team completes a set of planned work items",
+      "incorrect_answers": ["A quick one-day coding session", "A debugging session after deployment", "A performance benchmark test"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of hashing a password before storing it?",
+      "correct_answer": "To convert the password into a fixed-length irreversible string so the original password cannot be recovered if the database is compromised",
+      "incorrect_answers": ["To compress the password to save storage space", "To encrypt the password so it can be decrypted later", "To validate the password length"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an IP subnet?",
+      "correct_answer": "A logical subdivision of an IP network that groups devices and controls traffic routing",
+      "incorrect_answers": ["A backup internet connection", "A type of network cable", "A wireless access point"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does CIDR notation (e.g., /24) represent?",
+      "correct_answer": "The number of bits in the network prefix of an IP address, defining the subnet size",
+      "incorrect_answers": ["The number of devices on a network", "The speed of the network in Mbps", "The number of available ports"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a dangling pointer?",
+      "correct_answer": "A pointer that references a memory location that has been freed or deallocated",
+      "incorrect_answers": ["A pointer with no assigned value", "A pointer that points to the stack", "A pointer used in a linked list"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a soft link and a hard link in Unix?",
+      "correct_answer": "A soft link is a pointer to a file name and breaks if the target is deleted; a hard link is a direct reference to the inode and persists",
+      "incorrect_answers": ["They are the same thing with different names", "A hard link works across filesystems; a soft link does not", "A soft link consumes more disk space than a hard link"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of a DNS resolver?",
+      "correct_answer": "To translate human-readable domain names into IP addresses by querying DNS servers",
+      "incorrect_answers": ["To block malicious websites", "To assign IP addresses to devices", "To encrypt network traffic"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the time complexity of accessing an element by index in an array?",
+      "correct_answer": "O(1)",
+      "incorrect_answers": ["O(n)", "O(log n)", "O(n²)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is lazy evaluation?",
+      "correct_answer": "A strategy where expressions are not evaluated until their values are actually needed",
+      "incorrect_answers": ["Evaluating all expressions at compile time", "Skipping error-prone code blocks", "Running code only on weekends"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a container in cloud computing?",
+      "correct_answer": "A lightweight, standalone package that includes an application and all its dependencies, sharing the host OS kernel",
+      "incorrect_answers": ["A physical server in a data center", "A virtual machine with its own OS", "A storage bucket for files"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a container and a virtual machine?",
+      "correct_answer": "Containers share the host OS kernel and are lighter; VMs include a full guest OS and are more isolated",
+      "incorrect_answers": ["VMs are lighter than containers", "Containers require their own OS", "There is no meaningful difference"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the time complexity of searching in a hash table on average?",
+      "correct_answer": "O(1)",
+      "incorrect_answers": ["O(n)", "O(log n)", "O(n log n)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a stored procedure in databases?",
+      "correct_answer": "A precompiled set of SQL statements stored in the database that can be executed as a single unit",
+      "incorrect_answers": ["A method for encrypting data at rest", "A backup procedure for the database", "A design pattern for data access"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an API gateway?",
+      "correct_answer": "A server that acts as a single entry point for multiple backend services, handling routing, authentication, and rate limiting",
+      "incorrect_answers": ["A physical network router", "A database connection pool", "A front-end JavaScript framework"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is test-driven development (TDD)?",
+      "correct_answer": "A development practice where tests are written before the code, and the code is then written to pass those tests",
+      "incorrect_answers": ["Writing tests after the software is deployed", "Testing only the user interface", "Running tests on a separate computer"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of a Makefile?",
+      "correct_answer": "To define build rules and dependencies so that a project can be compiled and linked automatically",
+      "incorrect_answers": ["To create new files and directories", "To manage version control branches", "To format source code"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is mocking in software testing?",
+      "correct_answer": "Replacing real dependencies with simulated objects to isolate the unit being tested",
+      "incorrect_answers": ["Making fun of poorly written code", "Running tests without assertions", "Testing with real production data"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is sharding in databases?",
+      "correct_answer": "Splitting a large database into smaller, more manageable pieces called shards, distributed across multiple servers",
+      "incorrect_answers": ["Creating backup copies of a database", "Encrypting individual database columns", "Compressing database tables"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Liskov Substitution Principle?",
+      "correct_answer": "Objects of a subclass should be replaceable with objects of their superclass without altering the correctness of the program",
+      "incorrect_answers": ["A class should have only one reason to change", "Code should depend on abstractions, not concretions", "Classes should be open for extension but closed for modification"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Open/Closed Principle in SOLID?",
+      "correct_answer": "Software entities should be open for extension but closed for modification",
+      "incorrect_answers": ["Each class should have one responsibility", "Subclasses should be substitutable for their parents", "Clients should not depend on interfaces they don't use"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is connection pooling?",
+      "correct_answer": "Reusing a pool of pre-established database connections instead of opening and closing a new one for every request",
+      "incorrect_answers": ["Sharing a single connection across all users", "Closing connections after every query", "Connecting to multiple databases simultaneously"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a coroutine?",
+      "correct_answer": "A function that can suspend its execution and resume later, allowing cooperative multitasking",
+      "incorrect_answers": ["A function that runs on a separate thread", "A function that cannot be interrupted", "A type of error handler"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a stack overflow and a heap overflow?",
+      "correct_answer": "A stack overflow occurs when the call stack exceeds its limit (e.g., deep recursion); a heap overflow occurs when dynamically allocated memory is exceeded or corrupted",
+      "incorrect_answers": ["They are the same error", "A heap overflow only happens in Java", "A stack overflow is caused by too many global variables"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is A/B testing in software?",
+      "correct_answer": "Comparing two versions of a feature by showing them to different user groups and measuring which performs better",
+      "incorrect_answers": ["Testing code on platform A and platform B", "Running two test suites in parallel", "Comparing code written by developer A and B"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the time complexity of inserting at the beginning of a singly linked list?",
+      "correct_answer": "O(1)",
+      "incorrect_answers": ["O(n)", "O(log n)", "O(n²)"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is method overriding?",
+      "correct_answer": "Redefining a method inherited from a parent class in a subclass with a new implementation",
+      "incorrect_answers": ["Defining multiple methods with the same name but different parameters", "Calling a parent method from a child class", "Making a method private in a subclass"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of Kubernetes?",
+      "correct_answer": "To automate the deployment, scaling, and management of containerized applications",
+      "incorrect_answers": ["To write containerized applications", "To build Docker images", "To replace virtual machines entirely"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a service mesh?",
+      "correct_answer": "An infrastructure layer that handles service-to-service communication, providing features like load balancing, encryption, and observability",
+      "incorrect_answers": ["A type of Wi-Fi network", "A database replication strategy", "A front-end component library"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between optimistic and pessimistic locking?",
+      "correct_answer": "Optimistic locking assumes conflicts are rare and checks at commit time; pessimistic locking acquires locks upfront to prevent conflicts",
+      "incorrect_answers": ["They are the same technique with different names", "Optimistic locking always uses database locks", "Pessimistic locking never prevents concurrent access"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is MapReduce?",
+      "correct_answer": "A programming model for processing large data sets in parallel by mapping a function over data and then reducing the results",
+      "incorrect_answers": ["A sorting algorithm", "A JavaScript array method only", "A database indexing technique"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a bloom filter?",
+      "correct_answer": "A probabilistic data structure that tests whether an element is in a set, allowing false positives but never false negatives",
+      "incorrect_answers": ["An image processing filter", "A sorting algorithm for strings", "A network packet filter"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is technical debt?",
+      "correct_answer": "The implied cost of future rework caused by choosing a quick or easy solution now instead of a better approach",
+      "incorrect_answers": ["The cost of purchasing software licenses", "Money owed to cloud providers", "The salary paid to developers"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of a linter?",
+      "correct_answer": "To analyze source code for potential errors, bugs, and style violations without executing it",
+      "incorrect_answers": ["To compile code into machine language", "To encrypt source code files", "To deploy applications to production"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between strong typing and weak typing?",
+      "correct_answer": "Strongly typed languages enforce strict type rules and prevent implicit conversions; weakly typed languages allow more implicit type coercion",
+      "incorrect_answers": ["Strongly typed languages are slower", "Weakly typed languages prevent all bugs", "There is no practical difference"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between static and dynamic typing?",
+      "correct_answer": "Static typing checks types at compile time; dynamic typing checks types at runtime",
+      "incorrect_answers": ["Static typing is slower at runtime", "Dynamic typing requires type annotations", "They produce identical programs"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an in-memory database?",
+      "correct_answer": "A database that stores data primarily in RAM for faster read and write operations",
+      "incorrect_answers": ["A database stored on an SSD", "A database that only exists during a session", "A database with no persistence whatsoever"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the CAP theorem's 'Partition Tolerance'?",
+      "correct_answer": "The system continues to operate despite communication breakdowns between network nodes",
+      "incorrect_answers": ["The system can partition data across tables", "The system is tolerant of SQL syntax errors", "The system can handle disk partitioning"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is eventual consistency?",
+      "correct_answer": "A consistency model where, given enough time without new updates, all replicas will converge to the same value",
+      "incorrect_answers": ["Data is always immediately consistent across all nodes", "Data is never consistent across replicas", "Consistency is checked only once per day"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of a circuit breaker pattern in distributed systems?",
+      "correct_answer": "To detect failures and prevent cascading failures by stopping requests to a failing service and allowing it to recover",
+      "incorrect_answers": ["To protect electrical hardware from surges", "To limit the number of database connections", "To encrypt communication between services"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a B-tree?",
+      "correct_answer": "A self-balancing tree structure that maintains sorted data and allows searches, insertions, and deletions in logarithmic time, commonly used in databases and file systems",
+      "incorrect_answers": ["A binary tree with exactly two levels", "A tree named after its inventor whose last name starts with B", "A tree that stores only boolean values"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between symmetric and asymmetric encryption?",
+      "correct_answer": "Symmetric uses the same key for encryption and decryption; asymmetric uses a public key for encryption and a private key for decryption",
+      "incorrect_answers": ["Symmetric encryption is always stronger", "Asymmetric uses the same key for both operations", "Symmetric encryption requires two keys"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a cron job?",
+      "correct_answer": "A scheduled task on Unix-like systems that runs automatically at specified times or intervals",
+      "incorrect_answers": ["A background process that runs continuously", "A one-time script execution", "A type of database query"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between compilation and transpilation?",
+      "correct_answer": "Compilation converts source code to a lower-level language (like machine code); transpilation converts source code to another language at a similar level",
+      "incorrect_answers": ["They are the same process", "Transpilation produces machine code; compilation does not", "Compilation only works for C programs"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the halting problem?",
+      "correct_answer": "The undecidable problem of determining whether an arbitrary program will finish running or run forever",
+      "incorrect_answers": ["A bug that causes a program to crash", "A problem with stopping a running Docker container", "A CPU overheating issue"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does it mean for a problem to be NP-complete?",
+      "correct_answer": "It is in NP (solutions can be verified in polynomial time) and every other NP problem can be reduced to it in polynomial time",
+      "incorrect_answers": ["It can be solved in polynomial time", "It has no known solution", "It can only be solved using quantum computers"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the P vs NP problem?",
+      "correct_answer": "The unsolved question of whether every problem whose solution can be verified quickly (NP) can also be solved quickly (P)",
+      "incorrect_answers": ["The question of whether parallel computing is faster", "Whether Python is better than Node.js", "Whether all problems have polynomial solutions"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a Turing machine?",
+      "correct_answer": "A theoretical computational model consisting of an infinite tape, a head that reads and writes symbols, and a state machine that defines transitions",
+      "incorrect_answers": ["An early physical computer built by Alan Turing", "A machine learning algorithm", "A type of quantum computer"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Church-Turing thesis?",
+      "correct_answer": "The hypothesis that any function computable by an effective procedure can be computed by a Turing machine",
+      "incorrect_answers": ["A theorem proving that all algorithms terminate", "A mathematical proof about prime numbers", "A conjecture about the speed of quantum computers"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is amortized analysis?",
+      "correct_answer": "A method of averaging the time complexity of operations over a sequence, showing that occasional expensive operations are offset by many cheap ones",
+      "incorrect_answers": ["Measuring the worst-case time of a single operation", "Calculating the memory usage of a program", "Estimating the cost of cloud computing resources"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the amortized time complexity of appending to a dynamic array (like Python's list or Java's ArrayList)?",
+      "correct_answer": "O(1) amortized",
+      "incorrect_answers": ["O(n) always", "O(log n)", "O(n²)"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a red-black tree?",
+      "correct_answer": "A self-balancing binary search tree where each node has a color (red or black) and specific rules ensure the tree remains approximately balanced",
+      "incorrect_answers": ["A tree that stores RGB color values", "A graph with alternating colored edges", "A binary tree with exactly two colors of leaves"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum height of a red-black tree with n nodes?",
+      "correct_answer": "2 * log₂(n + 1)",
+      "incorrect_answers": ["log₂(n)", "n / 2", "n"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Byzantine Generals Problem?",
+      "correct_answer": "A problem in distributed computing where components may fail and give conflicting information, requiring consensus despite some traitorous or faulty nodes",
+      "incorrect_answers": ["A problem about military strategy simulation", "An optimization problem for routing in networks", "A memory allocation problem in operating systems"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Paxos algorithm used for?",
+      "correct_answer": "Achieving consensus among distributed nodes even in the presence of failures",
+      "incorrect_answers": ["Sorting distributed data across nodes", "Encrypting messages between servers", "Compressing data for network transfer"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Raft consensus algorithm?",
+      "correct_answer": "A consensus algorithm designed to be more understandable than Paxos, using leader election and log replication to achieve agreement among distributed nodes",
+      "incorrect_answers": ["A load balancing algorithm", "A garbage collection strategy", "A shortest path algorithm for graphs"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a vector clock in distributed systems?",
+      "correct_answer": "A mechanism for tracking causality between events across distributed nodes using a vector of logical timestamps, one per node",
+      "incorrect_answers": ["A physical clock synchronized via NTP", "A timer for rate limiting requests", "A scheduling algorithm for CPU time"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a Merkle tree?",
+      "correct_answer": "A tree where every leaf contains a hash of a data block and every non-leaf contains a hash of its children, enabling efficient and secure data verification",
+      "incorrect_answers": ["A balanced binary search tree", "A tree structure used only in Bitcoin mining", "A trie for storing cryptographic keys"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is consistent hashing?",
+      "correct_answer": "A hashing technique where adding or removing a node in a distributed system only requires remapping a fraction of the keys, rather than rehashing everything",
+      "incorrect_answers": ["A hash function that never produces collisions", "Hashing the same key always to the same bucket in any hash table", "A method for consistent database backups"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the two-phase commit protocol (2PC)?",
+      "correct_answer": "A distributed transaction protocol with a prepare phase (where participants vote) and a commit phase (where the coordinator finalizes the transaction)",
+      "incorrect_answers": ["A database backup strategy", "A method for two users to commit to the same file simultaneously", "A version control branching strategy"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a CRDT (Conflict-free Replicated Data Type)?",
+      "correct_answer": "A data structure that can be replicated across multiple nodes and merged automatically without conflicts, guaranteeing eventual consistency",
+      "incorrect_answers": ["A type of database table", "A conflict resolution strategy in Git", "A concurrent read/delete transaction"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the KMP (Knuth-Morris-Pratt) algorithm used for?",
+      "correct_answer": "Efficient string pattern matching in O(n + m) time by using a failure function to avoid re-examining characters",
+      "incorrect_answers": ["Sorting strings alphabetically", "Finding the shortest path in a graph", "Compressing text files"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Rabin-Karp algorithm?",
+      "correct_answer": "A string matching algorithm that uses hashing to find pattern matches in a text, with average-case O(n + m) time",
+      "incorrect_answers": ["A sorting algorithm for linked lists", "A graph coloring algorithm", "A cryptographic key generation method"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a suffix tree?",
+      "correct_answer": "A compressed trie of all suffixes of a string, enabling fast substring search, longest repeated substring, and other string operations",
+      "incorrect_answers": ["A binary tree storing file extensions", "A tree where only leaf nodes store data", "A balanced tree for numeric data"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the A* search algorithm?",
+      "correct_answer": "A graph search algorithm that finds the shortest path using both actual cost from the start and a heuristic estimate to the goal",
+      "incorrect_answers": ["An improved version of bubble sort", "A brute-force search through all paths", "A random walk algorithm"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Bellman-Ford algorithm, and how does it differ from Dijkstra's?",
+      "correct_answer": "Bellman-Ford finds shortest paths and can handle negative edge weights, unlike Dijkstra's, but runs in O(V*E) instead of O((V+E) log V)",
+      "incorrect_answers": ["Bellman-Ford is always faster than Dijkstra's", "Bellman-Ford only works on unweighted graphs", "Dijkstra's handles negative weights; Bellman-Ford does not"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Floyd-Warshall algorithm?",
+      "correct_answer": "A dynamic programming algorithm that finds shortest paths between all pairs of vertices in a weighted graph in O(V³) time",
+      "incorrect_answers": ["A single-source shortest path algorithm", "A sorting algorithm for graphs", "A minimum spanning tree algorithm"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the max-flow min-cut theorem?",
+      "correct_answer": "In a flow network, the maximum amount of flow from source to sink equals the minimum capacity of edges that, if removed, would disconnect source from sink",
+      "incorrect_answers": ["The maximum flow always equals the number of edges", "The minimum cut always equals the number of vertices", "Maximum flow and minimum cut are unrelated"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between Kruskal's and Prim's algorithms?",
+      "correct_answer": "Both find minimum spanning trees, but Kruskal's adds the shortest edge that doesn't form a cycle, while Prim's grows the MST from a starting vertex by adding the nearest neighbor",
+      "incorrect_answers": ["Kruskal's finds shortest paths; Prim's finds spanning trees", "They produce different trees for the same graph", "Prim's is always faster than Kruskal's"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the traveling salesman problem (TSP)?",
+      "correct_answer": "Finding the shortest route that visits every city exactly once and returns to the starting city — an NP-hard optimization problem",
+      "incorrect_answers": ["Finding the shortest path between two cities", "Assigning salespeople to regions optimally", "A polynomial-time graph coloring problem"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the time complexity of the naive recursive Fibonacci implementation?",
+      "correct_answer": "O(2^n) — exponential",
+      "incorrect_answers": ["O(n)", "O(n²)", "O(n log n)"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is cache coherence in multi-processor systems?",
+      "correct_answer": "The problem of ensuring that multiple CPU caches reflecting the same memory location remain consistent when one processor modifies the data",
+      "incorrect_answers": ["Organizing the browser cache efficiently", "Making sure CDN caches have the same content", "A database caching strategy"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MESI protocol?",
+      "correct_answer": "A cache coherence protocol with four states: Modified, Exclusive, Shared, and Invalid, used to maintain consistency across CPU caches",
+      "incorrect_answers": ["A network communication protocol", "A database transaction isolation level", "A message encryption standard"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a lock-free data structure?",
+      "correct_answer": "A concurrent data structure that guarantees system-wide progress without using traditional locks, typically using atomic operations like CAS",
+      "incorrect_answers": ["A data structure that never needs synchronization", "A read-only data structure", "A data structure that prevents all race conditions"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Compare-and-Swap (CAS) operation?",
+      "correct_answer": "An atomic instruction that compares a memory location's current value with an expected value and, if they match, replaces it with a new value",
+      "incorrect_answers": ["A sorting algorithm that compares and swaps adjacent elements", "A memory deallocation technique", "A file comparison utility"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ABA problem in concurrent programming?",
+      "correct_answer": "When a CAS operation succeeds because a value changed from A to B and back to A, making the change undetectable despite intervening modifications",
+      "incorrect_answers": ["A deadlock between three processes named A, B, and A", "A memory allocation error in C", "A naming conflict between three variables"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Dining Philosophers Problem?",
+      "correct_answer": "A classic concurrency problem illustrating synchronization challenges, where philosophers sitting around a table must share forks without deadlocking",
+      "incorrect_answers": ["A problem about optimizing restaurant seating", "A graph coloring problem", "A scheduling algorithm for database queries"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Banker's Algorithm?",
+      "correct_answer": "A deadlock avoidance algorithm that checks if granting a resource request would leave the system in a safe state where all processes can finish",
+      "incorrect_answers": ["An algorithm for financial transaction processing", "A load balancing algorithm for web servers", "A scheduling algorithm for CPU processes"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Readers-Writers Problem?",
+      "correct_answer": "A synchronization problem where multiple readers can access a resource simultaneously, but writers need exclusive access",
+      "incorrect_answers": ["A file permission issue in Unix", "A problem with concurrent database writes", "A challenge in compiling multi-file programs"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is lambda calculus?",
+      "correct_answer": "A formal system in mathematical logic for expressing computation based on function abstraction and application, forming the foundation of functional programming",
+      "incorrect_answers": ["A calculus course about lambda functions", "A type of numerical integration", "A machine learning optimization technique"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a monad in functional programming?",
+      "correct_answer": "A design pattern that wraps a value in a computational context and provides operations (bind/flatMap) to chain computations while managing side effects",
+      "incorrect_answers": ["A single-threaded execution model", "A data type for storing a single value", "A function with exactly one parameter"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Curry-Howard correspondence?",
+      "correct_answer": "The isomorphism between proofs in logic and programs in typed lambda calculus — types correspond to propositions, and programs correspond to proofs",
+      "incorrect_answers": ["A method for currying functions in Haskell", "A theorem about hash function distribution", "A correspondence between SQL and NoSQL databases"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is referential transparency?",
+      "correct_answer": "The property where an expression can always be replaced with its value without changing the program's behavior — it produces no side effects",
+      "incorrect_answers": ["The ability to pass objects by reference", "Making all variables globally accessible", "A property of transparent database transactions"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Y combinator in lambda calculus?",
+      "correct_answer": "A higher-order function that enables recursion in languages that don't natively support named self-reference",
+      "incorrect_answers": ["A startup accelerator", "A sorting algorithm", "A garbage collection technique"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Amdahl's Law?",
+      "correct_answer": "A formula that gives the theoretical maximum speedup of a program from parallelization, limited by the sequential portion of the code",
+      "incorrect_answers": ["A law stating that transistor count doubles every two years", "A theorem about network bandwidth", "A rule about database normalization"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between RISC and CISC architectures?",
+      "correct_answer": "RISC uses a small set of simple, fast instructions; CISC uses a large set of complex instructions that can do more per instruction",
+      "incorrect_answers": ["RISC is for desktops; CISC is for mobile", "CISC architectures are always faster", "There is no meaningful difference in modern CPUs"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is speculative execution in CPUs?",
+      "correct_answer": "A technique where the CPU predicts the path of a branch and executes instructions ahead of time, discarding results if the prediction is wrong",
+      "incorrect_answers": ["Running code in a sandbox for security testing", "Executing code without compiling it first", "A debugging mode that guesses variable values"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What vulnerability was exposed by the Spectre and Meltdown attacks?",
+      "correct_answer": "They exploited speculative execution and out-of-order execution in CPUs to leak sensitive data from protected memory",
+      "incorrect_answers": ["They exploited SQL injection in web servers", "They targeted buffer overflows in C programs", "They exploited weak Wi-Fi encryption"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Diffie-Hellman key exchange?",
+      "correct_answer": "A cryptographic protocol that allows two parties to establish a shared secret key over an insecure channel without prior shared secrets",
+      "incorrect_answers": ["An algorithm for encrypting files at rest", "A method for hashing passwords", "A protocol for transferring files securely"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a zero-knowledge proof?",
+      "correct_answer": "A cryptographic method where one party can prove to another that a statement is true without revealing any information beyond the truth of the statement itself",
+      "incorrect_answers": ["A proof that a program has no bugs", "A database query that returns zero results", "A method of deleting all user data"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is homomorphic encryption?",
+      "correct_answer": "A form of encryption that allows computations to be performed on ciphertext, producing an encrypted result that, when decrypted, matches the result of operations on the plaintext",
+      "incorrect_answers": ["Encryption that uses the same key for all data", "A symmetric encryption algorithm", "Encryption that only works on numeric data"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the RSA algorithm based on?",
+      "correct_answer": "The practical difficulty of factoring the product of two large prime numbers",
+      "incorrect_answers": ["The difficulty of computing square roots", "The complexity of sorting large arrays", "The difficulty of finding shortest paths in graphs"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is thrashing in operating systems?",
+      "correct_answer": "A condition where the system spends more time swapping pages between RAM and disk than executing actual work, causing severe performance degradation",
+      "incorrect_answers": ["Rapidly deleting and creating files", "A CPU overheating condition", "An infinite loop in a user program"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the working set model in memory management?",
+      "correct_answer": "A model that defines the set of pages a process is actively using within a given time window, used to prevent thrashing",
+      "incorrect_answers": ["The total amount of RAM in a system", "The set of files open in an IDE", "The number of active database connections"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the LRU (Least Recently Used) page replacement algorithm?",
+      "correct_answer": "An algorithm that evicts the page that has not been accessed for the longest time when a page fault occurs and memory is full",
+      "incorrect_answers": ["An algorithm that removes the most recently used page", "An algorithm that randomly selects a page to evict", "An algorithm that evicts the smallest page first"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Bélády's anomaly?",
+      "correct_answer": "The counterintuitive phenomenon where increasing the number of page frames can actually increase the number of page faults with certain page replacement algorithms like FIFO",
+      "incorrect_answers": ["A bug in the LRU algorithm", "A problem with cache coherence in multi-core CPUs", "A paradox in database normalization"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a skip list?",
+      "correct_answer": "A probabilistic data structure that uses multiple layers of linked lists with increasing step sizes, allowing O(log n) average search, insertion, and deletion",
+      "incorrect_answers": ["A linked list that skips every other element", "An array that ignores null values", "A queue that skips duplicate elements"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between strong and weak consistency in distributed systems?",
+      "correct_answer": "Strong consistency ensures every read returns the most recent write; weak consistency allows stale reads temporarily",
+      "incorrect_answers": ["Strong consistency is always slower and never used", "Weak consistency prevents all data loss", "They are the same under the CAP theorem"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a quorum in distributed systems?",
+      "correct_answer": "The minimum number of nodes that must agree on an operation for it to be considered successful, typically a majority",
+      "incorrect_answers": ["The total number of nodes in the cluster", "A single designated leader node", "The maximum latency allowed for a request"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the CAP theorem's practical implication for database choice?",
+      "correct_answer": "In the presence of network partitions, a system must choose between consistency and availability — you cannot have both",
+      "incorrect_answers": ["You can always have consistency, availability, and partition tolerance", "Partition tolerance is optional in modern systems", "Only SQL databases face CAP limitations"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is instruction pipelining in CPUs?",
+      "correct_answer": "A technique where multiple instruction stages (fetch, decode, execute, etc.) overlap so different instructions are in different stages simultaneously",
+      "incorrect_answers": ["Executing instructions in reverse order", "A method for sending instructions over a network", "Storing all instructions in cache before execution"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a pipeline hazard?",
+      "correct_answer": "A situation in CPU pipelining where the next instruction cannot execute in the next clock cycle due to data dependencies, control flow changes, or resource conflicts",
+      "incorrect_answers": ["A physical danger from overheating CPUs", "An error in the software build pipeline", "A network latency spike in a CI/CD pipeline"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is branch prediction?",
+      "correct_answer": "A CPU optimization technique that guesses the direction of a conditional branch before the condition is evaluated, to keep the pipeline full",
+      "incorrect_answers": ["Predicting which Git branch will be merged next", "A compiler optimization that removes unused branches", "A testing technique for code branches"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between preemptive and cooperative multitasking?",
+      "correct_answer": "In preemptive multitasking, the OS can forcibly switch tasks; in cooperative multitasking, tasks must voluntarily yield control",
+      "incorrect_answers": ["Preemptive is slower but safer", "Cooperative multitasking requires multiple CPUs", "They are identical in modern operating systems"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a memory barrier (fence)?",
+      "correct_answer": "A CPU instruction that enforces an ordering constraint on memory operations, preventing the compiler and CPU from reordering reads and writes across the barrier",
+      "incorrect_answers": ["A hardware device that limits RAM access", "A firewall for memory access", "A garbage collection boundary"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the SAT (Boolean Satisfiability) problem?",
+      "correct_answer": "The problem of determining whether there exists an assignment of variables that makes a given boolean formula true — the first problem proven NP-complete",
+      "incorrect_answers": ["A standardized test for programmers", "A problem about satellite communication", "A method for satisfying database constraints"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Cook-Levin theorem?",
+      "correct_answer": "The theorem that proves the Boolean satisfiability problem (SAT) is NP-complete, establishing the foundation for the theory of NP-completeness",
+      "incorrect_answers": ["A theorem about cooking optimal algorithms", "A theorem proving P equals NP", "A theorem about database leveling"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between NP-hard and NP-complete?",
+      "correct_answer": "NP-complete problems are both in NP and NP-hard; NP-hard problems are at least as hard as NP problems but may not be in NP themselves",
+      "incorrect_answers": ["NP-hard is easier than NP-complete", "NP-complete problems cannot be verified in polynomial time", "Every NP-hard problem is also NP-complete"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a write-ahead log (WAL) in databases?",
+      "correct_answer": "A technique where changes are written to a log before being applied to the database, ensuring durability and crash recovery",
+      "incorrect_answers": ["A log of all read operations", "A backup file created after each write", "A debug log for slow queries"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between optimistic and pessimistic concurrency control in databases?",
+      "correct_answer": "Optimistic assumes conflicts are rare and validates at commit; pessimistic acquires locks before accessing data to prevent conflicts",
+      "incorrect_answers": ["Optimistic always performs better", "Pessimistic never uses locks", "They produce different final results"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is MVCC (Multi-Version Concurrency Control)?",
+      "correct_answer": "A concurrency control method where the database keeps multiple versions of data, allowing readers to access a consistent snapshot without blocking writers",
+      "incorrect_answers": ["A version control system for databases", "A method for versioning API endpoints", "A technique for multiple video codec compression"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is tail call optimization?",
+      "correct_answer": "A compiler optimization that reuses the current function's stack frame for a tail-recursive call, preventing stack overflow from deep recursion",
+      "incorrect_answers": ["Optimizing the last line of every function", "Removing unused function calls at compile time", "A technique for speeding up loop iteration"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between a compiler's front end and back end?",
+      "correct_answer": "The front end handles lexical analysis, parsing, and semantic analysis; the back end handles code optimization and target code generation",
+      "incorrect_answers": ["The front end generates machine code; the back end parses source code", "The front end runs on the client; the back end runs on the server", "There is no distinction in modern compilers"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is SSA (Static Single Assignment) form in compilers?",
+      "correct_answer": "An intermediate representation where each variable is assigned exactly once, using phi functions at control flow merge points, simplifying many optimizations",
+      "incorrect_answers": ["A server-side authentication protocol", "A type of single sign-on system", "A method for assigning static IP addresses"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is register allocation in compiler design?",
+      "correct_answer": "The process of assigning program variables to CPU registers, minimizing memory access and optimizing performance",
+      "incorrect_answers": ["Registering a new user account", "Allocating memory on the stack", "Reserving network ports for services"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the graph coloring problem and how does it relate to register allocation?",
+      "correct_answer": "Graph coloring assigns colors to vertices so no adjacent vertices share a color; in register allocation, variables are vertices, interferences are edges, and colors are registers",
+      "incorrect_answers": ["Graph coloring is used to optimize database queries", "It determines the color scheme of a GUI", "It has no relation to register allocation"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the convex hull problem?",
+      "correct_answer": "Finding the smallest convex polygon that contains all points in a given set of 2D points",
+      "incorrect_answers": ["Finding the largest circle inside a polygon", "Sorting points by distance from the origin", "Finding the minimum spanning tree of points"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Fast Fourier Transform (FFT) used for?",
+      "correct_answer": "Efficiently computing the Discrete Fourier Transform, reducing the complexity from O(n²) to O(n log n), used in signal processing and polynomial multiplication",
+      "incorrect_answers": ["Sorting arrays of floating point numbers", "Encrypting data for secure transfer", "Compressing images using lossy encoding"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Shannon entropy?",
+      "correct_answer": "A measure of the average information or uncertainty in a random variable, used as the theoretical limit for lossless data compression",
+      "incorrect_answers": ["The disorder in a computer's memory", "The rate of data transfer on a network", "The randomness of a hash function"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the pigeonhole principle and how is it used in computer science?",
+      "correct_answer": "If n items are placed into m containers where n > m, at least one container must have more than one item — used to prove hash collisions are inevitable and in complexity proofs",
+      "incorrect_answers": ["A sorting algorithm for small datasets", "A method for data compression", "A network routing protocol"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a DAG (Directed Acyclic Graph) and where is it commonly used?",
+      "correct_answer": "A directed graph with no cycles, commonly used in build systems, dependency resolution, version control (Git commits), and scheduling",
+      "incorrect_answers": ["A graph that must have cycles", "A debugging tool for graphics", "A type of database table relationship"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the master theorem used for?",
+      "correct_answer": "Solving recurrence relations of the form T(n) = aT(n/b) + f(n), commonly arising from divide-and-conquer algorithms",
+      "incorrect_answers": ["Proving the correctness of sorting algorithms", "Calculating network throughput", "Optimizing database queries"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between a deterministic and a non-deterministic finite automaton (DFA vs NFA)?",
+      "correct_answer": "A DFA has exactly one transition for each state-input pair; an NFA can have multiple transitions or none, and can use epsilon transitions",
+      "incorrect_answers": ["A DFA is always slower than an NFA", "An NFA requires more memory than a DFA", "There is no practical difference between them"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Chomsky's hierarchy of formal languages?",
+      "correct_answer": "A classification of formal grammars into four types: Type 0 (unrestricted), Type 1 (context-sensitive), Type 2 (context-free), and Type 3 (regular), each with decreasing expressive power",
+      "incorrect_answers": ["A ranking of programming languages by popularity", "A theory about natural language processing accuracy", "A hierarchy of compiler optimization levels"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the pumping lemma used for?",
+      "correct_answer": "To prove that a language is NOT regular (or context-free), by showing it doesn't satisfy the necessary properties of regular (or context-free) languages",
+      "incorrect_answers": ["To compress data efficiently", "To prove a language is regular", "To optimize recursive functions"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a context-free grammar (CFG)?",
+      "correct_answer": "A formal grammar where every production rule has a single non-terminal on the left side, commonly used to define programming language syntax",
+      "incorrect_answers": ["A grammar that requires no context to understand", "A grammar used only for natural languages", "A grammar with no production rules"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Rice's theorem?",
+      "correct_answer": "Any non-trivial semantic property of programs is undecidable — you cannot write a general algorithm to determine whether an arbitrary program has a given property",
+      "incorrect_answers": ["A theorem about rice sorting algorithms", "A theorem proving all programs eventually terminate", "A theorem about optimal data compression"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the time complexity of matrix multiplication using Strassen's algorithm?",
+      "correct_answer": "O(n^2.807), improving on the naive O(n³) algorithm",
+      "incorrect_answers": ["O(n²)", "O(n³)", "O(n log n)"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is copy-on-write (COW)?",
+      "correct_answer": "An optimization strategy where copies of a resource share the same underlying data until one copy is modified, at which point a true copy is made",
+      "incorrect_answers": ["A method that prevents any copying of data", "A write operation that duplicates the entire database", "A file system that only allows writing once"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between hard real-time and soft real-time systems?",
+      "correct_answer": "Hard real-time systems must meet deadlines absolutely or the system fails; soft real-time systems can tolerate occasional missed deadlines with degraded performance",
+      "incorrect_answers": ["Hard real-time uses hardware; soft real-time uses software", "There is no difference between them", "Soft real-time is always faster"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is an epsilon transition in finite automata?",
+      "correct_answer": "A state transition that occurs without consuming any input symbol, allowing the automaton to change state spontaneously",
+      "incorrect_answers": ["A transition that consumes all remaining input", "A transition that resets the automaton", "A transition that only occurs on numeric input"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the space complexity of merge sort?",
+      "correct_answer": "O(n) — it requires additional space proportional to the input size for merging",
+      "incorrect_answers": ["O(1)", "O(log n)", "O(n²)"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a wait-free algorithm?",
+      "correct_answer": "A concurrent algorithm where every operation is guaranteed to complete in a bounded number of steps, regardless of contention from other threads",
+      "incorrect_answers": ["An algorithm with no waiting loops", "An algorithm that blocks until resources are available", "An algorithm optimized for single-threaded execution"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between linearizability and serializability?",
+      "correct_answer": "Linearizability is a real-time ordering guarantee for concurrent operations; serializability ensures transactions appear to execute sequentially, without requiring real-time ordering",
+      "incorrect_answers": ["They are identical concepts", "Serializability is stronger than linearizability", "Linearizability applies only to databases"],
+      "difficulty": "hard"
     }
   ]
 }
