@@ -1,0 +1,4006 @@
+{
+    "category": "TV Shows",
+    "category_id": 2008,
+    "questions": [
+        {
+            "question": "In Friends, what is the name of Ross and Monica's apartment building's coffee shop?",
+            "correct_answer": "Central Perk",
+            "incorrect_answers": [
+                "Coffee Corner",
+                "The Brew",
+                "Java Junction"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what subject does Walter White teach?",
+            "correct_answer": "Chemistry",
+            "incorrect_answers": [
+                "Physics",
+                "Biology",
+                "Math"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, what is the name of the alternate dimension?",
+            "correct_answer": "The Upside Down",
+            "incorrect_answers": [
+                "The Shadow Realm",
+                "The Other Side",
+                "The Dark World"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), what company do the characters work for?",
+            "correct_answer": "Dunder Mifflin",
+            "incorrect_answers": [
+                "Dundee Paper",
+                "Mifflin Corp",
+                "Scranton Supply"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Prison Break, what is Michael Scofield's brother's name?",
+            "correct_answer": "Lincoln Burrows",
+            "incorrect_answers": [
+                "James Whistler",
+                "Theodore Bagwell",
+                "Fernando Sucre"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, what are the three families featured in the show?",
+            "correct_answer": "Dunphys, Pritchetts, Tucker-Pritchetts",
+            "incorrect_answers": [
+                "Dunphys, Johnsons, Tuckers",
+                "Pritchetts, Smiths, Tuckers",
+                "Dunphys, Pritchetts, Marshalls"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, how many main characters are there?",
+            "correct_answer": "Six",
+            "incorrect_answers": [
+                "Five",
+                "Seven",
+                "Four"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what is Walter White's street alias?",
+            "correct_answer": "Heisenberg",
+            "incorrect_answers": [
+                "The Cook",
+                "Blue Sky",
+                "Mr. White"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, what is Sheldon's catchphrase when knocking on a door?",
+            "correct_answer": "Knock knock knock, Penny!",
+            "incorrect_answers": [
+                "Open up, Penny!",
+                "Hey Penny!",
+                "Penny, are you there?"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In How I Met Your Mother, who narrates the story to his children?",
+            "correct_answer": "Ted Mosby",
+            "incorrect_answers": [
+                "Barney Stinson",
+                "Marshall Eriksen",
+                "Robin Scherbatsky"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, what is Eleven's real name?",
+            "correct_answer": "Jane",
+            "incorrect_answers": [
+                "Sarah",
+                "Emma",
+                "Alice"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), who is the regional manager of the Scranton branch?",
+            "correct_answer": "Michael Scott",
+            "incorrect_answers": [
+                "Dwight Schrute",
+                "Jim Halpert",
+                "Andy Bernard"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what is Joey's famous pickup line?",
+            "correct_answer": "How you doin'?",
+            "incorrect_answers": [
+                "Hey there, gorgeous!",
+                "What's your sign?",
+                "Come here often?"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Prison Break, where is Lincoln Burrows initially held on death row?",
+            "correct_answer": "Fox River State Penitentiary",
+            "incorrect_answers": [
+                "Alcatraz",
+                "Shawshank Prison",
+                "Sona"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what color is the meth that Walter White produces?",
+            "correct_answer": "Blue",
+            "incorrect_answers": [
+                "White",
+                "Yellow",
+                "Clear"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Walking Dead, what is Rick Grimes's profession?",
+            "correct_answer": "Sheriff's deputy",
+            "incorrect_answers": [
+                "Firefighter",
+                "Teacher",
+                "Doctor"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Seinfeld, what is the show famously described as?",
+            "correct_answer": "A show about nothing",
+            "incorrect_answers": [
+                "A show about everything",
+                "A show about New York",
+                "A show about friendship"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, who plays the patriarch Jay Pritchett?",
+            "correct_answer": "Ed O'Neill",
+            "incorrect_answers": [
+                "Ty Burrell",
+                "Jesse Tyler Ferguson",
+                "Eric Stonestreet"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Grey's Anatomy, what is Meredith Grey's profession?",
+            "correct_answer": "Surgeon",
+            "incorrect_answers": [
+                "Nurse",
+                "Pediatrician",
+                "Psychiatrist"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, what field does Sheldon Cooper work in?",
+            "correct_answer": "Theoretical physics",
+            "incorrect_answers": [
+                "Engineering",
+                "Biology",
+                "Computer science"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In How I Met Your Mother, what is Barney Stinson's catchphrase?",
+            "correct_answer": "Legendary",
+            "incorrect_answers": [
+                "Awesome",
+                "Epic",
+                "Classic"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Lost, what happens to Oceanic Flight 815?",
+            "correct_answer": "It crashes on an island",
+            "incorrect_answers": [
+                "It's hijacked",
+                "It disappears in the ocean",
+                "It lands in the wrong country"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Dexter, what is Dexter Morgan's day job?",
+            "correct_answer": "Blood spatter analyst",
+            "incorrect_answers": [
+                "Homicide detective",
+                "Forensic pathologist",
+                "Crime scene photographer"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In House, what is Dr. House's first name?",
+            "correct_answer": "Gregory",
+            "incorrect_answers": [
+                "James",
+                "Robert",
+                "Eric"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Sherlock (BBC), who plays Sherlock Holmes?",
+            "correct_answer": "Benedict Cumberbatch",
+            "incorrect_answers": [
+                "Martin Freeman",
+                "Andrew Scott",
+                "Robert Downey Jr."
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Money Heist (La Casa de Papel), what is the Professor's real name?",
+            "correct_answer": "Sergio Marquina",
+            "incorrect_answers": [
+                "Andres de Fonollosa",
+                "Anibal Cortes",
+                "Daniel Ramos"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Squid Game, what is the prize money for winning all the games?",
+            "correct_answer": "45.6 billion won",
+            "incorrect_answers": [
+                "10 billion won",
+                "100 billion won",
+                "25 billion won"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what is Ross's profession?",
+            "correct_answer": "Paleontologist",
+            "incorrect_answers": [
+                "Archaeologist",
+                "Geologist",
+                "Biologist"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), who does Jim Halpert eventually marry?",
+            "correct_answer": "Pam Beesly",
+            "incorrect_answers": [
+                "Karen Filippelli",
+                "Katie",
+                "Kelly Kapoor"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of Walter White's wife?",
+            "correct_answer": "Skyler White",
+            "incorrect_answers": [
+                "Marie White",
+                "Jane White",
+                "Andrea White"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, in what decade is the show primarily set?",
+            "correct_answer": "1980s",
+            "incorrect_answers": [
+                "1970s",
+                "1990s",
+                "2000s"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Mandalorian, what is the popular nickname for the Child?",
+            "correct_answer": "Baby Yoda",
+            "incorrect_answers": [
+                "Mini Yoda",
+                "Little Green",
+                "Yoda Jr."
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, which character was a chef?",
+            "correct_answer": "Monica Geller",
+            "incorrect_answers": [
+                "Rachel Green",
+                "Phoebe Buffay",
+                "Ross Geller"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Prison Break, what does Michael Scofield have tattooed on his body?",
+            "correct_answer": "The prison blueprints",
+            "incorrect_answers": [
+                "A map of the city",
+                "Religious symbols",
+                "His brother's name"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Sopranos, what is Tony Soprano's profession?",
+            "correct_answer": "Mob boss",
+            "incorrect_answers": [
+                "Lawyer",
+                "Restaurant owner",
+                "Construction worker"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Parks and Recreation, what fictional town is the show set in?",
+            "correct_answer": "Pawnee, Indiana",
+            "incorrect_answers": [
+                "Springfield, Illinois",
+                "Greendale, Colorado",
+                "Scranton, Pennsylvania"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Brooklyn Nine-Nine, what precinct do the characters work in?",
+            "correct_answer": "99th Precinct",
+            "incorrect_answers": [
+                "98th Precinct",
+                "101st Precinct",
+                "12th Precinct"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what is Jesse Pinkman's catchphrase?",
+            "correct_answer": "Yeah, science!",
+            "incorrect_answers": [
+                "Let's cook!",
+                "Yo, Mr. White!",
+                "That's tight!"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Fresh Prince of Bel-Air, who plays the Fresh Prince?",
+            "correct_answer": "Will Smith",
+            "incorrect_answers": [
+                "Alfonso Ribeiro",
+                "DJ Jazzy Jeff",
+                "Carlton Banks"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, what country is Gloria originally from?",
+            "correct_answer": "Colombia",
+            "incorrect_answers": [
+                "Mexico",
+                "Brazil",
+                "Venezuela"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Ted Lasso, what sport does Ted coach?",
+            "correct_answer": "Soccer (football)",
+            "incorrect_answers": [
+                "American football",
+                "Basketball",
+                "Baseball"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Suits, what secret does Mike Ross hide?",
+            "correct_answer": "He never went to law school",
+            "incorrect_answers": [
+                "He's a former criminal",
+                "He has a fake identity",
+                "He's underage"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Boys, what is the name of the corporate superhero team?",
+            "correct_answer": "The Seven",
+            "incorrect_answers": [
+                "The Avengers",
+                "The Supers",
+                "Vought Force"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Narcos, which real-life drug lord is the focus of the first two seasons?",
+            "correct_answer": "Pablo Escobar",
+            "incorrect_answers": [
+                "El Chapo",
+                "Carlos Lehder",
+                "Amado Carrillo"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Peaky Blinders, what city is the show set in?",
+            "correct_answer": "Birmingham",
+            "incorrect_answers": [
+                "London",
+                "Manchester",
+                "Liverpool"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what is Chandler Bing's job for most of the series?",
+            "correct_answer": "Statistical analysis and data reconfiguration",
+            "incorrect_answers": [
+                "Accountant",
+                "Marketing executive",
+                "IT consultant"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Gossip Girl, what is the iconic opening line?",
+            "correct_answer": "Hey Upper East Siders, Gossip Girl here",
+            "incorrect_answers": [
+                "Welcome to Manhattan",
+                "Good morning, New York",
+                "Attention Upper East Siders"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In How I Met Your Mother, what bar do the characters hang out at?",
+            "correct_answer": "MacLaren's Pub",
+            "incorrect_answers": [
+                "Paddy's Pub",
+                "The Alibi Room",
+                "Puzzles"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, what is the name of Sheldon's girlfriend, then wife?",
+            "correct_answer": "Amy Farrah Fowler",
+            "incorrect_answers": [
+                "Bernadette Rostenkowski",
+                "Penny",
+                "Leslie Winkle"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, what is the name of the fictional town?",
+            "correct_answer": "Hawkins, Indiana",
+            "incorrect_answers": [
+                "Derry, Maine",
+                "Riverdale",
+                "Sunnydale"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Grey's Anatomy, what hospital do the characters work at?",
+            "correct_answer": "Grey Sloan Memorial Hospital",
+            "incorrect_answers": [
+                "Sacred Heart",
+                "Seattle Grace",
+                "Princeton-Plainsboro"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), what type of product does Dunder Mifflin sell?",
+            "correct_answer": "Paper",
+            "incorrect_answers": [
+                "Office furniture",
+                "Computers",
+                "Printers"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Schitt's Creek, why does the Rose family move to Schitt's Creek?",
+            "correct_answer": "They lost all their money",
+            "incorrect_answers": [
+                "They wanted a fresh start",
+                "They inherited a house",
+                "They were in witness protection"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Good Place, where does Eleanor Shellstrop think she is at the start?",
+            "correct_answer": "Heaven (The Good Place)",
+            "incorrect_answers": [
+                "A dream",
+                "A parallel universe",
+                "A simulation"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Better Call Saul, what is Saul Goodman's real name?",
+            "correct_answer": "Jimmy McGill",
+            "incorrect_answers": [
+                "James Morgan",
+                "John Goodman",
+                "Jack McGee"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In That '70s Show, in what state is the show set?",
+            "correct_answer": "Wisconsin",
+            "incorrect_answers": [
+                "Illinois",
+                "Michigan",
+                "Minnesota"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Malcolm in the Middle, what is special about Malcolm?",
+            "correct_answer": "He's a genius",
+            "incorrect_answers": [
+                "He can see the future",
+                "He's the oldest child",
+                "He has superpowers"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Ozark, what does Marty Byrde do for the cartel?",
+            "correct_answer": "Money laundering",
+            "incorrect_answers": [
+                "Drug smuggling",
+                "Contract killing",
+                "Arms dealing"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Crown, which real royal family is the show about?",
+            "correct_answer": "The British Royal Family",
+            "incorrect_answers": [
+                "The Spanish Royal Family",
+                "The Swedish Royal Family",
+                "A fictional royal family"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Succession, what is the name of the family's media company?",
+            "correct_answer": "Waystar Royco",
+            "incorrect_answers": [
+                "Pierce Media",
+                "Roy Corp",
+                "Waymark Global"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, how many seasons did the show run?",
+            "correct_answer": "10",
+            "incorrect_answers": [
+                "8",
+                "9",
+                "12"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, in what city is the show set?",
+            "correct_answer": "Albuquerque, New Mexico",
+            "incorrect_answers": [
+                "Phoenix, Arizona",
+                "El Paso, Texas",
+                "Denver, Colorado"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Walking Dead, what are the zombies commonly called?",
+            "correct_answer": "Walkers",
+            "incorrect_answers": [
+                "Zombies",
+                "Biters",
+                "Lurkers"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Black Mirror, what connects all the episodes?",
+            "correct_answer": "Technology and its consequences",
+            "incorrect_answers": [
+                "The same characters",
+                "A shared timeline",
+                "The same location"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Money Heist, what city masks do the robbers wear?",
+            "correct_answer": "Salvador Dali masks",
+            "incorrect_answers": [
+                "Guy Fawkes masks",
+                "Clown masks",
+                "Skull masks"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Squid Game, what is the first game played?",
+            "correct_answer": "Red Light, Green Light",
+            "incorrect_answers": [
+                "Tug of War",
+                "Marbles",
+                "Glass Bridge"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Desperate Housewives, what street do the characters live on?",
+            "correct_answer": "Wisteria Lane",
+            "incorrect_answers": [
+                "Maple Street",
+                "Elm Drive",
+                "Cherry Lane"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Sex and the City, who is the narrator?",
+            "correct_answer": "Carrie Bradshaw",
+            "incorrect_answers": [
+                "Charlotte York",
+                "Miranda Hobbes",
+                "Samantha Jones"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), what city is the Scranton branch located in?",
+            "correct_answer": "Scranton, Pennsylvania",
+            "incorrect_answers": [
+                "Albany, New York",
+                "Hartford, Connecticut",
+                "Stamford, Connecticut"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what is the name of Ross's first wife?",
+            "correct_answer": "Carol",
+            "incorrect_answers": [
+                "Emily",
+                "Rachel",
+                "Julie"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, who is Walter White's brother-in-law and DEA agent?",
+            "correct_answer": "Hank Schrader",
+            "incorrect_answers": [
+                "Steve Gomez",
+                "Ted Beneke",
+                "Mike Ehrmantraut"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Witcher, who plays Geralt of Rivia in the first three seasons?",
+            "correct_answer": "Henry Cavill",
+            "incorrect_answers": [
+                "Chris Hemsworth",
+                "Liam Neeson",
+                "Tom Hardy"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Wednesday, what school does Wednesday Addams attend?",
+            "correct_answer": "Nevermore Academy",
+            "incorrect_answers": [
+                "Hogwarts",
+                "Xavier's School",
+                "Darkwood Academy"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Yellowstone, who plays the patriarch John Dutton?",
+            "correct_answer": "Kevin Costner",
+            "incorrect_answers": [
+                "Sam Elliott",
+                "Harrison Ford",
+                "Josh Brolin"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Bridgerton, during which historical era is the show set?",
+            "correct_answer": "Regency era",
+            "incorrect_answers": [
+                "Victorian era",
+                "Elizabethan era",
+                "Georgian era"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Vikings, who is the legendary Norse hero the show starts with?",
+            "correct_answer": "Ragnar Lothbrok",
+            "incorrect_answers": [
+                "Bjorn Ironside",
+                "Ivar the Boneless",
+                "Rollo"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Downton Abbey, what type of building is Downton Abbey?",
+            "correct_answer": "A country estate/manor house",
+            "incorrect_answers": [
+                "A castle",
+                "A palace",
+                "A monastery"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In 24, how many hours does each season cover?",
+            "correct_answer": "24 hours",
+            "incorrect_answers": [
+                "48 hours",
+                "1 week",
+                "1 month"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Fleabag, who created and stars in the show?",
+            "correct_answer": "Phoebe Waller-Bridge",
+            "incorrect_answers": [
+                "Olivia Colman",
+                "Jodie Comer",
+                "Sandra Oh"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Brooklyn Nine-Nine, who plays Detective Jake Peralta?",
+            "correct_answer": "Andy Samberg",
+            "incorrect_answers": [
+                "Terry Crews",
+                "Joe Lo Truglio",
+                "Andre Braugher"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Parks and Recreation, who plays Leslie Knope?",
+            "correct_answer": "Amy Poehler",
+            "incorrect_answers": [
+                "Aubrey Plaza",
+                "Rashida Jones",
+                "Tina Fey"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Arrested Development, what business does the Bluth family run?",
+            "correct_answer": "A real estate development company",
+            "incorrect_answers": [
+                "A banana stand chain",
+                "A law firm",
+                "A magic shop"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The X-Files, what are Mulder and Scully investigating?",
+            "correct_answer": "Paranormal and unexplained cases",
+            "incorrect_answers": [
+                "Serial killers only",
+                "Government corruption",
+                "Cybercrimes"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Buffy the Vampire Slayer, what town does Buffy live in?",
+            "correct_answer": "Sunnydale",
+            "incorrect_answers": [
+                "Mystic Falls",
+                "Bon Temps",
+                "Forks"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Homeland, who plays CIA officer Carrie Mathison?",
+            "correct_answer": "Claire Danes",
+            "incorrect_answers": [
+                "Mandy Patinkin",
+                "Jessica Chastain",
+                "Robin Wright"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Fargo (TV series), is each season a standalone story?",
+            "correct_answer": "Yes",
+            "incorrect_answers": [
+                "No, it's one continuous story",
+                "Only seasons 1 and 2",
+                "No, but they share a timeline"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In True Detective Season 1, who plays Detective Rust Cohle?",
+            "correct_answer": "Matthew McConaughey",
+            "incorrect_answers": [
+                "Woody Harrelson",
+                "Colin Farrell",
+                "Mahershala Ali"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Westworld, what is Westworld?",
+            "correct_answer": "A theme park with android hosts",
+            "incorrect_answers": [
+                "A virtual reality game",
+                "An alternate dimension",
+                "A space colony"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Mandalorian, what is the Mandalorian's real name?",
+            "correct_answer": "Din Djarin",
+            "incorrect_answers": [
+                "Boba Fett",
+                "Jango Fett",
+                "Paz Vizsla"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Peaky Blinders, what is the name of the gang's leader?",
+            "correct_answer": "Tommy Shelby",
+            "incorrect_answers": [
+                "Arthur Shelby",
+                "John Shelby",
+                "Alfie Solomons"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what is Phoebe's most famous song?",
+            "correct_answer": "Smelly Cat",
+            "incorrect_answers": [
+                "Sticky Shoes",
+                "Crazy Dog",
+                "Funny Cat"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), what is Dwight Schrute's side job?",
+            "correct_answer": "Beet farmer",
+            "incorrect_answers": [
+                "Corn farmer",
+                "Martial arts instructor",
+                "Volunteer firefighter"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, who plays Phil Dunphy?",
+            "correct_answer": "Ty Burrell",
+            "incorrect_answers": [
+                "Ed O'Neill",
+                "Jesse Tyler Ferguson",
+                "Eric Stonestreet"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, what is Penny's last name?",
+            "correct_answer": "It was never revealed (before marriage)",
+            "incorrect_answers": [
+                "Johnson",
+                "Smith",
+                "Williams"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In How I Met Your Mother, what color is the mother's umbrella?",
+            "correct_answer": "Yellow",
+            "incorrect_answers": [
+                "Red",
+                "Blue",
+                "Green"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Lost, what is the flight number of the crashed plane?",
+            "correct_answer": "Oceanic 815",
+            "incorrect_answers": [
+                "Oceanic 612",
+                "Oceanic 316",
+                "Oceanic 108"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Walking Dead, what weapon is Negan known for?",
+            "correct_answer": "A baseball bat named Lucille",
+            "incorrect_answers": [
+                "A machete",
+                "A crossbow",
+                "A katana"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, who plays Eleven?",
+            "correct_answer": "Millie Bobby Brown",
+            "incorrect_answers": [
+                "Sadie Sink",
+                "Natalia Dyer",
+                "Winona Ryder"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of the fast food restaurant that is a drug front?",
+            "correct_answer": "Los Pollos Hermanos",
+            "incorrect_answers": [
+                "Taco Bueno",
+                "El Pollo Loco",
+                "Chicken Brothers"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Prison Break, what crime is Lincoln Burrows convicted of?",
+            "correct_answer": "Murder",
+            "incorrect_answers": [
+                "Armed robbery",
+                "Kidnapping",
+                "Drug trafficking"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, which two characters get married in the series finale?",
+            "correct_answer": "None (Ross and Rachel reunite)",
+            "incorrect_answers": [
+                "Ross and Rachel",
+                "Joey and Phoebe",
+                "Chandler and Monica"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Simpsons, what is Homer's favorite beer brand?",
+            "correct_answer": "Duff",
+            "incorrect_answers": [
+                "Buzz",
+                "Fudd",
+                "Flanders"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In South Park, what happens to Kenny in many early episodes?",
+            "correct_answer": "He dies",
+            "incorrect_answers": [
+                "He disappears",
+                "He gets arrested",
+                "He moves away"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Family Guy, what is the name of the talking dog?",
+            "correct_answer": "Brian",
+            "incorrect_answers": [
+                "Stewie",
+                "Chris",
+                "Quagmire"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Curb Your Enthusiasm, who plays the lead character?",
+            "correct_answer": "Larry David",
+            "incorrect_answers": [
+                "Jerry Seinfeld",
+                "Jason Alexander",
+                "Jeff Garlin"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Everybody Loves Raymond, who is Raymond's overbearing mother?",
+            "correct_answer": "Marie Barone",
+            "incorrect_answers": [
+                "Debra Barone",
+                "Amy Barone",
+                "Linda Barone"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Fresh Prince of Bel-Air, what is Carlton's famous dance to?",
+            "correct_answer": "It's Not Unusual by Tom Jones",
+            "incorrect_answers": [
+                "Billie Jean by Michael Jackson",
+                "Jump Around by House of Pain",
+                "Twist and Shout by The Beatles"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, how many seasons does the show have?",
+            "correct_answer": "Five",
+            "incorrect_answers": [
+                "Four",
+                "Six",
+                "Seven"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Suits, what law firm does Harvey Specter work at?",
+            "correct_answer": "Pearson Hardman",
+            "incorrect_answers": [
+                "Sterling Cooper",
+                "Lockhart Gardner",
+                "Wolfram & Hart"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Gilmore Girls, what is the name of the small town where the show is set?",
+            "correct_answer": "Stars Hollow",
+            "incorrect_answers": [
+                "Hartford",
+                "New Haven",
+                "Woodbridge"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In One Tree Hill, what sport is central to the show?",
+            "correct_answer": "Basketball",
+            "incorrect_answers": [
+                "Football",
+                "Baseball",
+                "Soccer"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Simpsons, what is the name of the town where the family lives?",
+            "correct_answer": "Springfield",
+            "incorrect_answers": [
+                "Shelbyville",
+                "Capital City",
+                "Ogdenville"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, how many children do Phil and Claire have?",
+            "correct_answer": "Three",
+            "incorrect_answers": [
+                "Two",
+                "Four",
+                "One"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Wire, in what city is the show set?",
+            "correct_answer": "Baltimore",
+            "incorrect_answers": [
+                "Philadelphia",
+                "Detroit",
+                "Chicago"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Mad Men, what industry does Don Draper work in?",
+            "correct_answer": "Advertising",
+            "incorrect_answers": [
+                "Finance",
+                "Publishing",
+                "Law"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Seinfeld, what is Kramer's first name?",
+            "correct_answer": "Cosmo",
+            "incorrect_answers": [
+                "Jerry",
+                "George",
+                "Michael"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Ted Lasso, what is the name of the football club Ted coaches?",
+            "correct_answer": "AFC Richmond",
+            "incorrect_answers": [
+                "West Ham United",
+                "Richmond FC",
+                "London FC"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In ER, what city is County General Hospital in?",
+            "correct_answer": "Chicago",
+            "incorrect_answers": [
+                "New York",
+                "Los Angeles",
+                "Boston"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In 24, who plays Jack Bauer?",
+            "correct_answer": "Kiefer Sutherland",
+            "incorrect_answers": [
+                "Dennis Haysbert",
+                "Carlos Bernard",
+                "James Badge Dale"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In It's Always Sunny in Philadelphia, what is the name of the bar?",
+            "correct_answer": "Paddy's Pub",
+            "incorrect_answers": [
+                "McPoyle's",
+                "The Waitress",
+                "Philadelphia Pub"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In House, what is Dr. House's medical specialty?",
+            "correct_answer": "Diagnostic medicine",
+            "incorrect_answers": [
+                "Surgery",
+                "Oncology",
+                "Cardiology"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, who does Monica Geller marry?",
+            "correct_answer": "Chandler Bing",
+            "incorrect_answers": [
+                "Richard Burke",
+                "Pete Becker",
+                "Ross Geller"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), what award does Dwight desperately want?",
+            "correct_answer": "Assistant Regional Manager",
+            "incorrect_answers": [
+                "Employee of the Month",
+                "Salesman of the Year",
+                "Branch Manager"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Narcos, in what country is the first season primarily set?",
+            "correct_answer": "Colombia",
+            "incorrect_answers": [
+                "Mexico",
+                "Brazil",
+                "Peru"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, what board game do the kids play?",
+            "correct_answer": "Dungeons & Dragons",
+            "incorrect_answers": [
+                "Risk",
+                "Monopoly",
+                "Clue"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what does Walter White teach at the start of the show?",
+            "correct_answer": "High school chemistry",
+            "incorrect_answers": [
+                "College physics",
+                "High school biology",
+                "College chemistry"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Boys, who is the leader of The Seven?",
+            "correct_answer": "Homelander",
+            "incorrect_answers": [
+                "Queen Maeve",
+                "Starlight",
+                "Black Noir"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Money Heist, what do the robbers name themselves after?",
+            "correct_answer": "Cities",
+            "incorrect_answers": [
+                "Countries",
+                "Colors",
+                "Animals"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Grey's Anatomy, who plays Meredith Grey?",
+            "correct_answer": "Ellen Pompeo",
+            "incorrect_answers": [
+                "Sandra Oh",
+                "Katherine Heigl",
+                "Chandra Wilson"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Seinfeld, what does George Costanza pretend to be to avoid responsibilities?",
+            "correct_answer": "An architect",
+            "incorrect_answers": [
+                "A marine biologist",
+                "A lawyer",
+                "A doctor"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, what comic book store do the characters frequent?",
+            "correct_answer": "The Comic Center of Pasadena",
+            "incorrect_answers": [
+                "Stuart's Comics",
+                "Pasadena Comics",
+                "The Comic Dungeon"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Schitt's Creek, what is the name of the father played by Eugene Levy?",
+            "correct_answer": "Johnny Rose",
+            "incorrect_answers": [
+                "David Rose",
+                "Roland Schitt",
+                "Ted Mullens"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Good Place, who plays the demon Michael?",
+            "correct_answer": "Ted Danson",
+            "incorrect_answers": [
+                "Marc Evan Jackson",
+                "William Jackson Harper",
+                "Manny Jacinto"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Yellowstone, what is the name of the family's ranch?",
+            "correct_answer": "Dutton Ranch",
+            "incorrect_answers": [
+                "Yellowstone Ranch",
+                "Montana Ranch",
+                "Big Sky Ranch"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Dexter, in what city does the show take place?",
+            "correct_answer": "Miami",
+            "incorrect_answers": [
+                "Los Angeles",
+                "New York",
+                "Tampa"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what phrase does Ross say about his divorce count?",
+            "correct_answer": "We were on a break!",
+            "incorrect_answers": [
+                "It's not my fault!",
+                "Marriage is hard!",
+                "Third time's the charm!"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), who replaces Michael Scott as regional manager?",
+            "correct_answer": "Andy Bernard (then Dwight)",
+            "incorrect_answers": [
+                "Jim Halpert",
+                "Robert California",
+                "Toby Flenderson"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Ozark, what state does the Byrde family move to?",
+            "correct_answer": "Missouri",
+            "incorrect_answers": [
+                "Arkansas",
+                "Oklahoma",
+                "Tennessee"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Brooklyn Nine-Nine, who plays Captain Holt?",
+            "correct_answer": "Andre Braugher",
+            "incorrect_answers": [
+                "Terry Crews",
+                "Joe Lo Truglio",
+                "Andy Samberg"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Parks and Recreation, what food does Leslie Knope love?",
+            "correct_answer": "Waffles",
+            "incorrect_answers": [
+                "Pancakes",
+                "Donuts",
+                "Pizza"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Prison Break, what is T-Bag's full name?",
+            "correct_answer": "Theodore Bagwell",
+            "incorrect_answers": [
+                "Thomas Bagwell",
+                "Timothy Bagwell",
+                "Travis Bagwell"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In How I Met Your Mother, what is Barney Stinson's job?",
+            "correct_answer": "Please (it's never clearly defined)",
+            "incorrect_answers": [
+                "Lawyer",
+                "Banker",
+                "Accountant"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Squid Game, what shape card does the main character choose?",
+            "correct_answer": "Circle",
+            "incorrect_answers": [
+                "Triangle",
+                "Square",
+                "Star"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what illness does Walter White have?",
+            "correct_answer": "Lung cancer",
+            "incorrect_answers": [
+                "Brain tumor",
+                "Leukemia",
+                "Heart disease"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, which character is an actor who starred in Days of Our Lives?",
+            "correct_answer": "Joey Tribbiani",
+            "incorrect_answers": [
+                "Chandler Bing",
+                "Ross Geller",
+                "Gunther"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Succession, who is the aging patriarch of the Roy family?",
+            "correct_answer": "Logan Roy",
+            "incorrect_answers": [
+                "Connor Roy",
+                "Kendall Roy",
+                "Roman Roy"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Peaky Blinders, what era is the show set in?",
+            "correct_answer": "1920s-1930s",
+            "incorrect_answers": [
+                "1890s-1900s",
+                "1940s-1950s",
+                "1910s"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Crown, who plays Queen Elizabeth II in the first two seasons?",
+            "correct_answer": "Claire Foy",
+            "incorrect_answers": [
+                "Olivia Colman",
+                "Imelda Staunton",
+                "Helena Bonham Carter"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, what is Cam and Mitchell's adopted daughter's name?",
+            "correct_answer": "Lily",
+            "incorrect_answers": [
+                "Rose",
+                "Grace",
+                "Chloe"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), what prank is Jim most famous for?",
+            "correct_answer": "Putting Dwight's stapler in Jell-O",
+            "incorrect_answers": [
+                "Moving Dwight's desk",
+                "Faxing Dwight from the future",
+                "Dressing as Dwight"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what is Rachel's last name?",
+            "correct_answer": "Green",
+            "incorrect_answers": [
+                "Geller",
+                "Bing",
+                "Buffay"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, who plays Walter White?",
+            "correct_answer": "Bryan Cranston",
+            "incorrect_answers": [
+                "Aaron Paul",
+                "Bob Odenkirk",
+                "Dean Norris"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), who plays Michael Scott?",
+            "correct_answer": "Steve Carell",
+            "incorrect_answers": [
+                "John Krasinski",
+                "Rainn Wilson",
+                "Ed Helms"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, who plays Joyce Byers?",
+            "correct_answer": "Winona Ryder",
+            "incorrect_answers": [
+                "Millie Bobby Brown",
+                "Natalia Dyer",
+                "Cara Buono"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Simpsons, how many children do Homer and Marge have?",
+            "correct_answer": "Three",
+            "incorrect_answers": [
+                "Two",
+                "Four",
+                "Five"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In South Park, what state is the show set in?",
+            "correct_answer": "Colorado",
+            "incorrect_answers": [
+                "Montana",
+                "Wyoming",
+                "Utah"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Family Guy, what is the baby's name who is a genius?",
+            "correct_answer": "Stewie",
+            "incorrect_answers": [
+                "Chris",
+                "Meg",
+                "Brian"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, what instrument does Ross play badly?",
+            "correct_answer": "Keyboard (synthesizer)",
+            "incorrect_answers": [
+                "Guitar",
+                "Drums",
+                "Trumpet"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, what is Leonard's last name?",
+            "correct_answer": "Hofstadter",
+            "incorrect_answers": [
+                "Cooper",
+                "Wolowitz",
+                "Koothrappali"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In How I Met Your Mother, what does Ted want to be?",
+            "correct_answer": "An architect",
+            "incorrect_answers": [
+                "A lawyer",
+                "A doctor",
+                "A professor"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Grey's Anatomy, what is the nickname for the group of surgical interns?",
+            "correct_answer": "The interns",
+            "incorrect_answers": [
+                "The residents",
+                "The attendings",
+                "The fellows"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, what is Phil Dunphy's profession?",
+            "correct_answer": "Real estate agent",
+            "incorrect_answers": [
+                "Lawyer",
+                "Teacher",
+                "Accountant"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Seinfeld, in what city is the show set?",
+            "correct_answer": "New York City",
+            "incorrect_answers": [
+                "Los Angeles",
+                "Chicago",
+                "Boston"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Lost, who is the leader of the survivors?",
+            "correct_answer": "Jack Shephard",
+            "incorrect_answers": [
+                "John Locke",
+                "Sawyer",
+                "Sayid"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Prison Break, what is Michael Scofield's profession?",
+            "correct_answer": "Structural engineer",
+            "incorrect_answers": [
+                "Architect",
+                "Lawyer",
+                "Doctor"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Walking Dead, who plays Rick Grimes?",
+            "correct_answer": "Andrew Lincoln",
+            "incorrect_answers": [
+                "Norman Reedus",
+                "Jon Bernthal",
+                "Steven Yeun"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Peaky Blinders, what is the Shelby family business (legitimate)?",
+            "correct_answer": "Bookmaking (betting)",
+            "incorrect_answers": [
+                "Pub ownership",
+                "Horse breeding",
+                "Coal mining"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Narcos, what is Pablo Escobar's home country?",
+            "correct_answer": "Colombia",
+            "incorrect_answers": [
+                "Mexico",
+                "Brazil",
+                "Peru"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, who is Walter White's partner in cooking meth?",
+            "correct_answer": "Jesse Pinkman",
+            "incorrect_answers": [
+                "Hank Schrader",
+                "Gus Fring",
+                "Saul Goodman"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, who plays Rachel Green?",
+            "correct_answer": "Jennifer Aniston",
+            "incorrect_answers": [
+                "Courteney Cox",
+                "Lisa Kudrow",
+                "Julia Roberts"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), who plays Dwight Schrute?",
+            "correct_answer": "Rainn Wilson",
+            "incorrect_answers": [
+                "Steve Carell",
+                "John Krasinski",
+                "Ed Helms"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, what is Chief Hopper's first name?",
+            "correct_answer": "Jim",
+            "incorrect_answers": [
+                "Bob",
+                "Ted",
+                "Mike"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Better Call Saul, what show is it a prequel to?",
+            "correct_answer": "Breaking Bad",
+            "incorrect_answers": [
+                "The Wire",
+                "Ozark",
+                "Narcos"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Boys, who plays Homelander?",
+            "correct_answer": "Antony Starr",
+            "incorrect_answers": [
+                "Karl Urban",
+                "Jack Quaid",
+                "Jensen Ackles"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Squid Game, in what country is the show set?",
+            "correct_answer": "South Korea",
+            "incorrect_answers": [
+                "Japan",
+                "China",
+                "Thailand"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, who plays Chandler Bing?",
+            "correct_answer": "Matthew Perry",
+            "incorrect_answers": [
+                "Matt LeBlanc",
+                "David Schwimmer",
+                "Paul Rudd"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, how many main male characters are there?",
+            "correct_answer": "Four",
+            "incorrect_answers": [
+                "Three",
+                "Five",
+                "Six"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Mandalorian, what franchise is the show part of?",
+            "correct_answer": "Star Wars",
+            "incorrect_answers": [
+                "Star Trek",
+                "Marvel",
+                "DC"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Black Mirror, is each episode a standalone story?",
+            "correct_answer": "Yes",
+            "incorrect_answers": [
+                "No, they're sequential",
+                "Only some seasons",
+                "No, same characters throughout"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Sherlock (BBC), who plays Dr. Watson?",
+            "correct_answer": "Martin Freeman",
+            "incorrect_answers": [
+                "Benedict Cumberbatch",
+                "Andrew Scott",
+                "Mark Gatiss"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In How I Met Your Mother, how many seasons did the show run?",
+            "correct_answer": "Nine",
+            "incorrect_answers": [
+                "Seven",
+                "Eight",
+                "Ten"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Suits, who plays Harvey Specter?",
+            "correct_answer": "Gabriel Macht",
+            "incorrect_answers": [
+                "Patrick J. Adams",
+                "Rick Hoffman",
+                "Gina Torres"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Crown, what country's monarchy is depicted?",
+            "correct_answer": "United Kingdom",
+            "incorrect_answers": [
+                "Spain",
+                "Denmark",
+                "Sweden"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Ozark, who plays Marty Byrde?",
+            "correct_answer": "Jason Bateman",
+            "incorrect_answers": [
+                "Laura Linney",
+                "Tom Pelphrey",
+                "Ben Mendelsohn"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Modern Family, who plays Gloria Pritchett?",
+            "correct_answer": "Sofia Vergara",
+            "incorrect_answers": [
+                "Julie Bowen",
+                "Sarah Hyland",
+                "Ariel Winter"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Dexter, who plays Dexter Morgan?",
+            "correct_answer": "Michael C. Hall",
+            "incorrect_answers": [
+                "James Remar",
+                "David Zayas",
+                "C.S. Lee"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Walking Dead, in what state does the show begin?",
+            "correct_answer": "Georgia",
+            "incorrect_answers": [
+                "Virginia",
+                "North Carolina",
+                "Tennessee"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Gossip Girl, in what area of New York is the show set?",
+            "correct_answer": "Upper East Side",
+            "incorrect_answers": [
+                "Brooklyn",
+                "Soho",
+                "Greenwich Village"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Breaking Bad, what does 'Better Call Saul' refer to?",
+            "correct_answer": "A criminal lawyer's advertising slogan",
+            "incorrect_answers": [
+                "A phone hotline",
+                "A radio show",
+                "A restaurant name"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, who plays Joey Tribbiani?",
+            "correct_answer": "Matt LeBlanc",
+            "incorrect_answers": [
+                "Matthew Perry",
+                "David Schwimmer",
+                "Bruce Willis"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Office (US), what does Jim put Dwight's stapler in?",
+            "correct_answer": "Jell-O",
+            "incorrect_answers": [
+                "Pudding",
+                "Concrete",
+                "Ice"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Succession, what type of company is Waystar Royco?",
+            "correct_answer": "Media and entertainment conglomerate",
+            "incorrect_answers": [
+                "Tech company",
+                "Oil company",
+                "Banking firm"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Vikings, what country do the Vikings sail from?",
+            "correct_answer": "Scandinavia (Norway/Denmark)",
+            "incorrect_answers": [
+                "England",
+                "Iceland",
+                "Germany"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Ted Lasso, from what country is Ted originally?",
+            "correct_answer": "United States",
+            "incorrect_answers": [
+                "England",
+                "Ireland",
+                "Australia"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Simpsons, what is Homer's workplace?",
+            "correct_answer": "Springfield Nuclear Power Plant",
+            "incorrect_answers": [
+                "Springfield Elementary",
+                "Kwik-E-Mart",
+                "Moe's Tavern"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Stranger Things, who is Eleven's father figure?",
+            "correct_answer": "Jim Hopper",
+            "incorrect_answers": [
+                "Dr. Brenner",
+                "Bob Newby",
+                "Ted Wheeler"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Friends, who plays Ross Geller?",
+            "correct_answer": "David Schwimmer",
+            "incorrect_answers": [
+                "Matt LeBlanc",
+                "Matthew Perry",
+                "Paul Rudd"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In The Big Bang Theory, what university do the characters work at?",
+            "correct_answer": "Caltech",
+            "incorrect_answers": [
+                "MIT",
+                "Stanford",
+                "Harvard"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Schitt's Creek, who created the show?",
+            "correct_answer": "Eugene and Dan Levy",
+            "incorrect_answers": [
+                "Tina Fey",
+                "Mike Schur",
+                "Amy Sherman-Palladino"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Prison Break, who plays Michael Scofield?",
+            "correct_answer": "Wentworth Miller",
+            "incorrect_answers": [
+                "Dominic Purcell",
+                "Robert Knepper",
+                "Amaury Nolasco"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "question": "In Better Call Saul, what is Jimmy McGill's brother's name?",
+            "correct_answer": "Chuck McGill",
+            "incorrect_answers": [
+                "Howard McGill",
+                "Kim McGill",
+                "Marco McGill"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Friends, what is the name of Ross's pet monkey?",
+            "correct_answer": "Marcel",
+            "incorrect_answers": [
+                "George",
+                "Charlie",
+                "Benny"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of Gus Fring's legitimate business?",
+            "correct_answer": "Los Pollos Hermanos",
+            "incorrect_answers": [
+                "Madrigal Electromotive",
+                "Beneke Fabricators",
+                "Gray Matter"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Office (US), what is the name of the warehouse worker who wins the lottery?",
+            "correct_answer": "Darryl Philbin",
+            "incorrect_answers": [
+                "Roy Anderson",
+                "Nate",
+                "Hidetoshi"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Stranger Things, what is the name of the lab where Eleven was experimented on?",
+            "correct_answer": "Hawkins National Laboratory",
+            "incorrect_answers": [
+                "Starcourt Labs",
+                "Umbrella Labs",
+                "Brenner Institute"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Prison Break, who is the VP behind the conspiracy in Season 1?",
+            "correct_answer": "Caroline Reynolds",
+            "incorrect_answers": [
+                "Sara Tancredi",
+                "Nika Volek",
+                "Gretchen Morgan"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Modern Family, what is Jay's dog's name?",
+            "correct_answer": "Stella",
+            "incorrect_answers": [
+                "Bella",
+                "Luna",
+                "Fifi"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In How I Met Your Mother, what is Ted's architectural masterpiece?",
+            "correct_answer": "The GNB headquarters",
+            "incorrect_answers": [
+                "The Empire State Building",
+                "Mosby Tower",
+                "The Arcadian"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Grey's Anatomy, what is the term interns use for the chief resident's favorite?",
+            "correct_answer": "The Nazi (referring to Dr. Bailey)",
+            "incorrect_answers": [
+                "Teacher's pet",
+                "The Chosen One",
+                "The Favorite"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Big Bang Theory, where does Howard go that none of his friends have?",
+            "correct_answer": "Space",
+            "incorrect_answers": [
+                "Europe",
+                "Australia",
+                "Antarctica"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Lost, what are the mysterious numbers that keep recurring?",
+            "correct_answer": "4, 8, 15, 16, 23, 42",
+            "incorrect_answers": [
+                "3, 6, 9, 12, 24, 36",
+                "1, 4, 9, 16, 25, 36",
+                "7, 14, 21, 28, 35, 42"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Sopranos, what is the name of Tony's psychiatrist?",
+            "correct_answer": "Dr. Jennifer Melfi",
+            "incorrect_answers": [
+                "Dr. Sharon Fieldstone",
+                "Dr. Wendy Rhoades",
+                "Dr. Linda Martin"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Dexter, what does Dexter call his urge to kill?",
+            "correct_answer": "The Dark Passenger",
+            "incorrect_answers": [
+                "The Shadow",
+                "The Beast",
+                "The Monster"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In House, what is Dr. House addicted to?",
+            "correct_answer": "Vicodin",
+            "incorrect_answers": [
+                "Morphine",
+                "Oxycodone",
+                "Alcohol"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Sherlock (BBC), what is the address of Sherlock's flat?",
+            "correct_answer": "221B Baker Street",
+            "incorrect_answers": [
+                "10 Downing Street",
+                "42 Wallaby Way",
+                "12 Grimmauld Place"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Money Heist, what is Tokyo's real name?",
+            "correct_answer": "Silene Oliveira",
+            "incorrect_answers": [
+                "Raquel Murillo",
+                "Alicia Sierra",
+                "Monica Gaztambide"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Squid Game, what number is the main character Gi-hun?",
+            "correct_answer": "456",
+            "incorrect_answers": [
+                "001",
+                "218",
+                "067"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Narcos, who plays Pablo Escobar?",
+            "correct_answer": "Wagner Moura",
+            "incorrect_answers": [
+                "Pedro Pascal",
+                "Boyd Holbrook",
+                "Javier Bardem"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Wire, which season focuses on the school system?",
+            "correct_answer": "Season 4",
+            "incorrect_answers": [
+                "Season 2",
+                "Season 3",
+                "Season 5"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Mad Men, what is Don Draper's real name?",
+            "correct_answer": "Dick Whitman",
+            "incorrect_answers": [
+                "Dan Draper",
+                "Donald Draper",
+                "David Walker"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Westworld, who plays Dolores Abernathy?",
+            "correct_answer": "Evan Rachel Wood",
+            "incorrect_answers": [
+                "Thandiwe Newton",
+                "Tessa Thompson",
+                "Angela Sarafyan"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The X-Files, what poster hangs in Mulder's office?",
+            "correct_answer": "I Want to Believe",
+            "incorrect_answers": [
+                "The Truth Is Out There",
+                "Trust No One",
+                "Believe the Impossible"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of Walter's former business partner?",
+            "correct_answer": "Elliott Schwartz",
+            "incorrect_answers": [
+                "Gale Boetticher",
+                "Hector Salamanca",
+                "Gustavo Fring"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Friends, what is the name of Joey's stuffed penguin?",
+            "correct_answer": "Hugsy",
+            "incorrect_answers": [
+                "Waddles",
+                "Flipper",
+                "Mr. Penguin"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Office (US), what is the name of the HR representative everyone dislikes?",
+            "correct_answer": "Toby Flenderson",
+            "incorrect_answers": [
+                "Stanley Hudson",
+                "Oscar Martinez",
+                "Kevin Malone"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Ozark, who plays Wendy Byrde?",
+            "correct_answer": "Laura Linney",
+            "incorrect_answers": [
+                "Julia Garner",
+                "Lisa Emery",
+                "Janet McTeer"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Boys, what substance gives superheroes their powers?",
+            "correct_answer": "Compound V",
+            "incorrect_answers": [
+                "Serum X",
+                "The Formula",
+                "Vought Serum"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Succession, who plays Logan Roy?",
+            "correct_answer": "Brian Cox",
+            "incorrect_answers": [
+                "Jeremy Strong",
+                "Matthew Macfadyen",
+                "Alan Ruck"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Peaky Blinders, who plays Tommy Shelby?",
+            "correct_answer": "Cillian Murphy",
+            "incorrect_answers": [
+                "Tom Hardy",
+                "Paul Anderson",
+                "Joe Cole"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Bridgerton, which sibling is the focus of Season 1?",
+            "correct_answer": "Daphne Bridgerton",
+            "incorrect_answers": [
+                "Anthony Bridgerton",
+                "Penelope Featherington",
+                "Eloise Bridgerton"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Seinfeld, what is the name of the soup vendor who refuses service?",
+            "correct_answer": "The Soup Nazi",
+            "incorrect_answers": [
+                "The Bread Master",
+                "The Food King",
+                "The Sandwich Tyrant"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Parks and Recreation, what is Ron Swanson's favorite food?",
+            "correct_answer": "Bacon and steak",
+            "incorrect_answers": [
+                "Pizza",
+                "Burgers",
+                "Ribs"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Stranger Things, what song does Max use to escape Vecna?",
+            "correct_answer": "Running Up That Hill by Kate Bush",
+            "incorrect_answers": [
+                "Should I Stay or Should I Go",
+                "Every Breath You Take",
+                "Africa by Toto"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Brooklyn Nine-Nine, what is Captain Holt's husband's name?",
+            "correct_answer": "Kevin Cozner",
+            "incorrect_answers": [
+                "Raymond Holt Jr.",
+                "Marcus",
+                "Frederick"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Vikings, who plays Ragnar Lothbrok?",
+            "correct_answer": "Travis Fimmel",
+            "incorrect_answers": [
+                "Alexander Ludwig",
+                "Gustaf Skarsgard",
+                "Clive Standen"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Downton Abbey, what historical event begins as the show starts?",
+            "correct_answer": "The sinking of the Titanic",
+            "incorrect_answers": [
+                "World War I",
+                "The Spanish Flu",
+                "The Great Depression"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Breaking Bad, what song plays in the final scene?",
+            "correct_answer": "Baby Blue by Badfinger",
+            "incorrect_answers": [
+                "Crystal Blue Persuasion",
+                "Free Bird",
+                "The Times They Are a-Changin'"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Walking Dead, what weapon does Daryl Dixon primarily use?",
+            "correct_answer": "Crossbow",
+            "incorrect_answers": [
+                "Katana",
+                "Machete",
+                "Rifle"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Fleabag, what does the main character call the love interest in Season 2?",
+            "correct_answer": "The Priest",
+            "incorrect_answers": [
+                "The Hot Guy",
+                "The Father",
+                "The Vicar"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Fargo Season 1, who plays Lorne Malvo?",
+            "correct_answer": "Billy Bob Thornton",
+            "incorrect_answers": [
+                "Martin Freeman",
+                "Colin Hanks",
+                "Bob Odenkirk"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Sex and the City, what is Carrie's signature fashion item?",
+            "correct_answer": "Manolo Blahnik shoes",
+            "incorrect_answers": [
+                "Chanel bag",
+                "Herm\u00e8s scarf",
+                "Prada sunglasses"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Gossip Girl, who is ultimately revealed as Gossip Girl?",
+            "correct_answer": "Dan Humphrey",
+            "incorrect_answers": [
+                "Serena van der Woodsen",
+                "Blair Waldorf",
+                "Nate Archibald"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In True Detective Season 1, what is the name of the mysterious serial killer they're hunting?",
+            "correct_answer": "The Yellow King",
+            "incorrect_answers": [
+                "The Scarecrow",
+                "The Night Stalker",
+                "The Preacher"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Suits, who is Harvey Specter's long-time secretary?",
+            "correct_answer": "Donna Paulsen",
+            "incorrect_answers": [
+                "Rachel Zane",
+                "Jessica Pearson",
+                "Katrina Bennett"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In That '70s Show, what is the name of the foreign exchange student?",
+            "correct_answer": "Fez",
+            "incorrect_answers": [
+                "Hyde",
+                "Kelso",
+                "Eric"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Ted Lasso, who plays Ted Lasso?",
+            "correct_answer": "Jason Sudeikis",
+            "incorrect_answers": [
+                "Brett Goldstein",
+                "Brendan Hunt",
+                "Nick Mohammed"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Crown, which season covers Princess Diana's story most heavily?",
+            "correct_answer": "Season 4",
+            "incorrect_answers": [
+                "Season 3",
+                "Season 5",
+                "Season 2"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Prison Break, what is the name of the shadowy government organization?",
+            "correct_answer": "The Company",
+            "incorrect_answers": [
+                "The Agency",
+                "The Council",
+                "The Foundation"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In How I Met Your Mother, what is Marshall's and Lily's last name?",
+            "correct_answer": "Eriksen",
+            "incorrect_answers": [
+                "Aldrin",
+                "Stinson",
+                "Scherbatsky"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Modern Family, what is Gloria's son from her first marriage named?",
+            "correct_answer": "Manny",
+            "incorrect_answers": [
+                "Luke",
+                "Alex",
+                "Joe"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Mandalorian, what is Baby Yoda's real name?",
+            "correct_answer": "Grogu",
+            "incorrect_answers": [
+                "Yaddle",
+                "Vandar",
+                "Minch"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Schitt's Creek, what is David Rose's store called?",
+            "correct_answer": "Rose Apothecary",
+            "incorrect_answers": [
+                "David's General Store",
+                "Schitt's Creek Boutique",
+                "Rose Garden"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Black Mirror, in which episode do people rate each other out of five stars?",
+            "correct_answer": "Nosedive",
+            "incorrect_answers": [
+                "White Bear",
+                "Fifteen Million Merits",
+                "The Entire History of You"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of Jesse Pinkman's girlfriend who dies of an overdose?",
+            "correct_answer": "Jane Margolis",
+            "incorrect_answers": [
+                "Andrea Cantillo",
+                "Wendy",
+                "Lydia Rodarte-Quayle"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Friends, what was the name of Ross's second wife?",
+            "correct_answer": "Emily Waltham",
+            "incorrect_answers": [
+                "Julie",
+                "Mona",
+                "Elizabeth Stevens"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Good Place, what are the four main humans called?",
+            "correct_answer": "The Soul Squad",
+            "incorrect_answers": [
+                "The Good Four",
+                "Team Cockroach",
+                "The Afterlifers"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Buffy the Vampire Slayer, who is Buffy's vampire love interest?",
+            "correct_answer": "Angel",
+            "incorrect_answers": [
+                "Spike",
+                "Oz",
+                "Xander"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Gilmore Girls, what is the name of Rory's grandfather?",
+            "correct_answer": "Richard Gilmore",
+            "incorrect_answers": [
+                "Edward Gilmore",
+                "Robert Gilmore",
+                "William Gilmore"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Homeland, what war was Nicholas Brody a prisoner in?",
+            "correct_answer": "Iraq War",
+            "incorrect_answers": [
+                "Afghanistan War",
+                "Vietnam War",
+                "Gulf War"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Sopranos, what state does Tony Soprano live in?",
+            "correct_answer": "New Jersey",
+            "incorrect_answers": [
+                "New York",
+                "Connecticut",
+                "Pennsylvania"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Wednesday, who plays Wednesday Addams?",
+            "correct_answer": "Jenna Ortega",
+            "incorrect_answers": [
+                "Christina Ricci",
+                "Emma Myers",
+                "Gwendoline Christie"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Yellowstone, in what state is the Dutton ranch?",
+            "correct_answer": "Montana",
+            "incorrect_answers": [
+                "Wyoming",
+                "Idaho",
+                "Colorado"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Witcher, what are people who hunt monsters for money called?",
+            "correct_answer": "Witchers",
+            "incorrect_answers": [
+                "Rangers",
+                "Hunters",
+                "Slayers"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Squid Game, what is the old man's (Player 001) name?",
+            "correct_answer": "Oh Il-nam",
+            "incorrect_answers": [
+                "Seong Gi-hun",
+                "Cho Sang-woo",
+                "Jang Deok-su"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Money Heist, what building do they rob in the first heist?",
+            "correct_answer": "The Royal Mint of Spain",
+            "incorrect_answers": [
+                "The Bank of Spain",
+                "The Madrid Stock Exchange",
+                "The National Museum"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Office (US), what is the name of the documentary the crew is filming?",
+            "correct_answer": "It's not named until the finale",
+            "incorrect_answers": [
+                "The Office",
+                "Paper People",
+                "Dunder Mifflin: A Story"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Lost, what is the name of the mysterious smoke monster?",
+            "correct_answer": "The Man in Black",
+            "incorrect_answers": [
+                "Jacob",
+                "Cerberus",
+                "The Shadow"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Walking Dead, who kills Glenn?",
+            "correct_answer": "Negan",
+            "incorrect_answers": [
+                "The Governor",
+                "Alpha",
+                "Shane"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Arrested Development, what is the family's most famous running gag?",
+            "correct_answer": "There's always money in the banana stand",
+            "incorrect_answers": [
+                "I've made a huge mistake",
+                "No touching!",
+                "Her?"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Malcolm in the Middle, what is the eldest brother's name?",
+            "correct_answer": "Francis",
+            "incorrect_answers": [
+                "Reese",
+                "Dewey",
+                "Jamie"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Friends, what was the name of Ross and Rachel's daughter?",
+            "correct_answer": "Emma",
+            "incorrect_answers": [
+                "Emily",
+                "Erica",
+                "Ella"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Breaking Bad, what is Hank Schrader's hobby?",
+            "correct_answer": "Brewing beer",
+            "incorrect_answers": [
+                "Woodworking",
+                "Fishing",
+                "Collecting minerals"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Office (US), what is Ryan Howard's nickname after his promotion?",
+            "correct_answer": "The Temp (then VP)",
+            "incorrect_answers": [
+                "The Kid",
+                "The Intern",
+                "Fire Guy"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Stranger Things, what is the name of the mall in Season 3?",
+            "correct_answer": "Starcourt Mall",
+            "incorrect_answers": [
+                "Hawkins Mall",
+                "Indiana Center",
+                "Gateway Mall"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Big Bang Theory, what country is Raj Koothrappali from?",
+            "correct_answer": "India",
+            "incorrect_answers": [
+                "Pakistan",
+                "Sri Lanka",
+                "Bangladesh"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Modern Family, what is Luke Dunphy known for?",
+            "correct_answer": "Not being very smart",
+            "incorrect_answers": [
+                "Being a genius",
+                "Playing sports",
+                "Being artistic"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Lost, what is John Locke's condition before the crash?",
+            "correct_answer": "He was paralyzed (wheelchair-bound)",
+            "incorrect_answers": [
+                "He was blind",
+                "He was deaf",
+                "He had amnesia"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Prison Break, who is Sara Tancredi?",
+            "correct_answer": "The prison doctor",
+            "incorrect_answers": [
+                "A lawyer",
+                "A guard",
+                "A journalist"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In How I Met Your Mother, what is the Slap Bet?",
+            "correct_answer": "Marshall can slap Barney five times",
+            "incorrect_answers": [
+                "Ted can slap anyone once",
+                "Lily can slap Robin",
+                "Barney can slap Marshall ten times"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Sopranos, what is the name of Tony's uncle?",
+            "correct_answer": "Junior Soprano",
+            "incorrect_answers": [
+                "Bobby Baccala",
+                "Paulie Walnuts",
+                "Silvio Dante"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Grey's Anatomy, who is known as 'McDreamy'?",
+            "correct_answer": "Derek Shepherd",
+            "incorrect_answers": [
+                "Mark Sloan",
+                "Alex Karev",
+                "George O'Malley"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Seinfeld, what does Kramer's apartment look like compared to Jerry's?",
+            "correct_answer": "Messy and chaotic",
+            "incorrect_answers": [
+                "Identical",
+                "Fancier",
+                "Completely empty"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Walking Dead, what is Michonne's signature weapon?",
+            "correct_answer": "Katana",
+            "incorrect_answers": [
+                "Crossbow",
+                "Baseball bat",
+                "Machete"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Breaking Bad, who plays Gustavo Fring?",
+            "correct_answer": "Giancarlo Esposito",
+            "incorrect_answers": [
+                "Bryan Cranston",
+                "Bob Odenkirk",
+                "Jonathan Banks"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Boys, what is Billy Butcher's nationality?",
+            "correct_answer": "British",
+            "incorrect_answers": [
+                "American",
+                "Australian",
+                "Irish"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Ozark, what is the name of Ruth Langmore's actor?",
+            "correct_answer": "Julia Garner",
+            "incorrect_answers": [
+                "Laura Linney",
+                "Lisa Emery",
+                "Sofia Hublitz"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Parks and Recreation, who plays Ron Swanson?",
+            "correct_answer": "Nick Offerman",
+            "incorrect_answers": [
+                "Chris Pratt",
+                "Adam Scott",
+                "Rob Lowe"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Peaky Blinders, what real historical figure does Tommy meet in Season 2?",
+            "correct_answer": "Winston Churchill",
+            "incorrect_answers": [
+                "King George V",
+                "Lloyd George",
+                "Neville Chamberlain"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Brooklyn Nine-Nine, what is Rosa Diaz known for?",
+            "correct_answer": "Being tough and secretive",
+            "incorrect_answers": [
+                "Being bubbly and outgoing",
+                "Being clumsy",
+                "Being the funniest detective"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The Crown, which Prime Minister is played by John Lithgow?",
+            "correct_answer": "Winston Churchill",
+            "incorrect_answers": [
+                "Harold Macmillan",
+                "Anthony Eden",
+                "Harold Wilson"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Narcos Season 3, which cartel is the focus?",
+            "correct_answer": "Cali Cartel",
+            "incorrect_answers": [
+                "Medellin Cartel",
+                "Guadalajara Cartel",
+                "Juarez Cartel"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Suits, who plays Mike Ross?",
+            "correct_answer": "Patrick J. Adams",
+            "incorrect_answers": [
+                "Gabriel Macht",
+                "Rick Hoffman",
+                "Dul\u00e9 Hill"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Squid Game, what is the second game played?",
+            "correct_answer": "Ppopgi (Dalgona candy)",
+            "incorrect_answers": [
+                "Tug of War",
+                "Marbles",
+                "Glass Bridge"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Better Call Saul, who plays Mike Ehrmantraut?",
+            "correct_answer": "Jonathan Banks",
+            "incorrect_answers": [
+                "Bob Odenkirk",
+                "Michael McKean",
+                "Giancarlo Esposito"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Westworld, in what time period is the Western theme park set?",
+            "correct_answer": "The American frontier era",
+            "incorrect_answers": [
+                "Medieval times",
+                "Ancient Rome",
+                "World War II"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Ted Lasso, who plays Rebecca Welton?",
+            "correct_answer": "Hannah Waddingham",
+            "incorrect_answers": [
+                "Juno Temple",
+                "Sarah Niles",
+                "Ellie Taylor"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Money Heist, what is the Professor's relationship to Berlin?",
+            "correct_answer": "Brothers",
+            "incorrect_answers": [
+                "Father and son",
+                "Cousins",
+                "No relation"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Succession, what is Kendall Roy's drug of choice?",
+            "correct_answer": "Cocaine",
+            "incorrect_answers": [
+                "Heroin",
+                "Alcohol",
+                "Pills"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Dexter, what is the name of the Season 4 villain played by John Lithgow?",
+            "correct_answer": "The Trinity Killer (Arthur Mitchell)",
+            "incorrect_answers": [
+                "The Ice Truck Killer",
+                "The Doomsday Killer",
+                "The Skinner"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In The X-Files, what is Mulder's first name?",
+            "correct_answer": "Fox",
+            "incorrect_answers": [
+                "Frank",
+                "Fred",
+                "Flynn"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "question": "In Friends, what game show does Joey audition for as a host?",
+            "correct_answer": "Bamboozled",
+            "incorrect_answers": [
+                "Pyramid",
+                "Wheel of Fortune",
+                "Jeopardy"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of the junkyard owner who helps Walt and Jesse?",
+            "correct_answer": "Old Joe",
+            "incorrect_answers": [
+                "Big Jim",
+                "Crazy Eight",
+                "Skinny Pete"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Office (US), what is Kevin Malone's famous chili incident called by fans?",
+            "correct_answer": "Kevin's Famous Chili",
+            "incorrect_answers": [
+                "The Chili Disaster",
+                "Malone's Mess",
+                "The Big Spill"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Stranger Things, what is the name of Eleven's 'sister' from the lab?",
+            "correct_answer": "Kali (Eight)",
+            "incorrect_answers": [
+                "Max",
+                "Robin",
+                "Erica"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Prison Break, what origami figure does Michael repeatedly make?",
+            "correct_answer": "A crane",
+            "incorrect_answers": [
+                "A rose",
+                "A swan",
+                "A butterfly"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Modern Family, what song does Phil Dunphy want played at his funeral?",
+            "correct_answer": "In the Arms of an Angel",
+            "incorrect_answers": [
+                "My Way",
+                "Wind Beneath My Wings",
+                "Tears in Heaven"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Friends, what is the name of Phoebe's twin sister?",
+            "correct_answer": "Ursula",
+            "incorrect_answers": [
+                "Erica",
+                "Denise",
+                "Sandra"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Big Bang Theory, what is Sheldon's IQ?",
+            "correct_answer": "187",
+            "incorrect_answers": [
+                "160",
+                "200",
+                "175"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In How I Met Your Mother, what is the name of Barney's Playbook strategy involving a scuba suit?",
+            "correct_answer": "The SCUBA",
+            "incorrect_answers": [
+                "The Mermaid",
+                "The Snorkel",
+                "The Deep End"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of the company Walt co-founded?",
+            "correct_answer": "Gray Matter Technologies",
+            "incorrect_answers": [
+                "White Industries",
+                "Schwartz Labs",
+                "Blue Sky Corp"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Sopranos, what is the name of Tony's strip club?",
+            "correct_answer": "Bada Bing!",
+            "incorrect_answers": [
+                "Crazy Horse",
+                "The Golden Rail",
+                "Scores"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Lost, what year does the Oceanic Six return to the island?",
+            "correct_answer": "2007",
+            "incorrect_answers": [
+                "2005",
+                "2006",
+                "2008"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Dexter, what is the code Dexter follows called?",
+            "correct_answer": "The Code of Harry",
+            "incorrect_answers": [
+                "The Dark Code",
+                "The Dexter Code",
+                "The Morgan Rules"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In House, what is Dr. Wilson's first name?",
+            "correct_answer": "James",
+            "incorrect_answers": [
+                "Robert",
+                "Eric",
+                "Chris"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Sherlock (BBC), what is Moriarty's first name?",
+            "correct_answer": "Jim",
+            "incorrect_answers": [
+                "James",
+                "John",
+                "Sebastian"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Wire, who says 'You come at the king, you best not miss'?",
+            "correct_answer": "Omar Little",
+            "incorrect_answers": [
+                "Avon Barksdale",
+                "Marlo Stanfield",
+                "Stringer Bell"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Mad Men, what is the name of the original advertising agency?",
+            "correct_answer": "Sterling Cooper",
+            "incorrect_answers": [
+                "Draper Price",
+                "Campbell & Associates",
+                "Olson Agency"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Narcos, what was the name of Escobar's cartel?",
+            "correct_answer": "Medellin Cartel",
+            "incorrect_answers": [
+                "Cali Cartel",
+                "Sinaloa Cartel",
+                "Bogota Cartel"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Peaky Blinders, what does Tommy Shelby keep in his cap?",
+            "correct_answer": "Razor blades",
+            "incorrect_answers": [
+                "Money",
+                "A knife",
+                "Cigarettes"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Friends, what is the name of the apartment building's superintendent?",
+            "correct_answer": "Mr. Treeger",
+            "incorrect_answers": [
+                "Mr. Heckles",
+                "Mr. Zelner",
+                "Mr. Waltham"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Breaking Bad, what is the maximum purity Walt achieves for his meth?",
+            "correct_answer": "99.1%",
+            "incorrect_answers": [
+                "96%",
+                "97.5%",
+                "100%"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Office (US), what fake disease does Dwight create?",
+            "correct_answer": "Count Choculitis",
+            "incorrect_answers": [
+                "Spontaneous Dental Hydroplosion",
+                "Hot Dog Fingers",
+                "Paper Lung"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Seinfeld, what is George's answering machine song based on?",
+            "correct_answer": "Greatest American Hero theme",
+            "incorrect_answers": [
+                "Believe It or Not",
+                "Theme from Rocky",
+                "My Way"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Mandalorian, what is beskar?",
+            "correct_answer": "Mandalorian iron/armor material",
+            "incorrect_answers": [
+                "A weapon type",
+                "A planet",
+                "A bounty rank"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Better Call Saul, what illness does Chuck McGill claim to have?",
+            "correct_answer": "Electromagnetic hypersensitivity",
+            "incorrect_answers": [
+                "Agoraphobia",
+                "Chronic fatigue syndrome",
+                "Multiple chemical sensitivity"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Westworld, what is the name of the park's co-creator played by Anthony Hopkins?",
+            "correct_answer": "Robert Ford",
+            "incorrect_answers": [
+                "Arnold Weber",
+                "William",
+                "Bernard Lowe"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The X-Files, what is Scully's first name?",
+            "correct_answer": "Dana",
+            "incorrect_answers": [
+                "Sarah",
+                "Monica",
+                "Diane"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Black Mirror, what is the name of the episode where people can block others in real life?",
+            "correct_answer": "White Christmas",
+            "incorrect_answers": [
+                "White Bear",
+                "Nosedive",
+                "Hang the DJ"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Money Heist, what is Berlin's real name?",
+            "correct_answer": "Andres de Fonollosa",
+            "incorrect_answers": [
+                "Sergio Marquina",
+                "Anibal Cortes",
+                "Martin Berrote"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Grey's Anatomy, what is the term the interns use for themselves initially?",
+            "correct_answer": "MAGIC (Meredith, Alex, George, Izzie, Cristina)",
+            "incorrect_answers": [
+                "The Dream Team",
+                "The Fab Five",
+                "The Interns"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Ozark, what is the name of the local crime family the Byrdes deal with?",
+            "correct_answer": "The Snells",
+            "incorrect_answers": [
+                "The Langmores",
+                "The Cosgroves",
+                "The Navarro"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Boys, what is Homelander's civilian name?",
+            "correct_answer": "John",
+            "incorrect_answers": [
+                "William",
+                "James",
+                "Robert"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Succession, what media company does the Roy family compete against?",
+            "correct_answer": "Pierce Global Media (PGM)",
+            "incorrect_answers": [
+                "Waystar Global",
+                "Atlas Media",
+                "Shire Media"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Friends, how many categories does Monica have for her towels?",
+            "correct_answer": "11",
+            "incorrect_answers": [
+                "7",
+                "9",
+                "14"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Office (US), what is the full name of Michael Scott's movie?",
+            "correct_answer": "Threat Level Midnight",
+            "incorrect_answers": [
+                "Danger Zone",
+                "Secret Agent Michael Scarn",
+                "Golden Face"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Stranger Things, what D&D monster do the kids name the Season 1 monster after?",
+            "correct_answer": "Demogorgon",
+            "incorrect_answers": [
+                "Mind Flayer",
+                "Beholder",
+                "Vecna"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Prison Break, what is the name of the prison in Season 3?",
+            "correct_answer": "Sona",
+            "incorrect_answers": [
+                "Fox River",
+                "Ogygia",
+                "Fort Wayne"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In How I Met Your Mother, what is Robin Scherbatsky's pop star alter ego?",
+            "correct_answer": "Robin Sparkles",
+            "incorrect_answers": [
+                "Robin Stars",
+                "Robin Shimmer",
+                "Robin Glitter"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Big Bang Theory, what is the name of Raj's dog?",
+            "correct_answer": "Cinnamon",
+            "incorrect_answers": [
+                "Pepper",
+                "Cookie",
+                "Ginger"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Buffy the Vampire Slayer, what is the name of the group that helps Buffy?",
+            "correct_answer": "The Scooby Gang",
+            "incorrect_answers": [
+                "The Slayerettes",
+                "The Chosen Ones",
+                "The Watchers"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Lost, what is Sawyer's real name?",
+            "correct_answer": "James Ford",
+            "incorrect_answers": [
+                "Tom Sawyer",
+                "Jack Ford",
+                "James Sawyer"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Squid Game, what game is played in the final round?",
+            "correct_answer": "Squid Game",
+            "incorrect_answers": [
+                "Marbles",
+                "Glass Bridge",
+                "Red Light Green Light"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Seinfeld, what is the name of the episode where everyone tries to avoid being the first to do something?",
+            "correct_answer": "The Contest",
+            "incorrect_answers": [
+                "The Bet",
+                "The Challenge",
+                "The Wager"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Walking Dead, what is the name of the walled community Rick's group finds?",
+            "correct_answer": "Alexandria",
+            "incorrect_answers": [
+                "Hilltop",
+                "The Kingdom",
+                "Woodbury"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of the cartel assassin twins?",
+            "correct_answer": "The Cousins (Leonel and Marco)",
+            "incorrect_answers": [
+                "The Brothers",
+                "The Twins",
+                "The Salamanca Duo"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Ted Lasso, what is the name of the team's star player who is traded?",
+            "correct_answer": "Jamie Tartt",
+            "incorrect_answers": [
+                "Dani Rojas",
+                "Sam Obisanya",
+                "Roy Kent"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Fargo Season 2, in what decade is the season set?",
+            "correct_answer": "1970s",
+            "incorrect_answers": [
+                "1960s",
+                "1980s",
+                "1950s"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Brooklyn Nine-Nine, what is the name of Jake's nemesis?",
+            "correct_answer": "The Pontiac Bandit (Doug Judy)",
+            "incorrect_answers": [
+                "The Vulture",
+                "Figgis",
+                "Wuntch"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Parks and Recreation, what is the name of the miniature horse?",
+            "correct_answer": "Li'l Sebastian",
+            "incorrect_answers": [
+                "Li'l Horsey",
+                "Champion",
+                "Twinkle"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Downton Abbey, what is the name of the family's butler?",
+            "correct_answer": "Mr. Carson",
+            "incorrect_answers": [
+                "Mr. Bates",
+                "Thomas Barrow",
+                "Mr. Molesley"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Vikings, which son of Ragnar is known as 'the Boneless'?",
+            "correct_answer": "Ivar",
+            "incorrect_answers": [
+                "Bjorn",
+                "Ubbe",
+                "Hvitserk"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Homeland, what condition does Carrie Mathison have?",
+            "correct_answer": "Bipolar disorder",
+            "incorrect_answers": [
+                "Schizophrenia",
+                "PTSD",
+                "OCD"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Sopranos, what animal does Tony become attached to at his pool?",
+            "correct_answer": "Ducks",
+            "incorrect_answers": [
+                "A cat",
+                "A dog",
+                "A deer"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Curb Your Enthusiasm, what is Larry David famous for co-creating?",
+            "correct_answer": "Seinfeld",
+            "incorrect_answers": [
+                "Friends",
+                "The Office",
+                "Cheers"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In ER, who plays Dr. Doug Ross?",
+            "correct_answer": "George Clooney",
+            "incorrect_answers": [
+                "Anthony Edwards",
+                "Noah Wyle",
+                "Eriq La Salle"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In 24, what government agency does Jack Bauer work for?",
+            "correct_answer": "CTU (Counter Terrorist Unit)",
+            "incorrect_answers": [
+                "FBI",
+                "CIA",
+                "NSA"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Fresh Prince of Bel-Air, what is the name of the Banks family butler?",
+            "correct_answer": "Geoffrey",
+            "incorrect_answers": [
+                "Jeeves",
+                "Alfred",
+                "Winston"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Schitt's Creek, what is Alexis Rose's catchphrase?",
+            "correct_answer": "Ew, David!",
+            "incorrect_answers": [
+                "Oh my God, David!",
+                "Gross, David!",
+                "Stop it, David!"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Good Place, how many times is Eleanor's neighborhood rebooted?",
+            "correct_answer": "Over 800 times",
+            "incorrect_answers": [
+                "12 times",
+                "100 times",
+                "Over 500 times"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Desperate Housewives, who is revealed as the narrator and is actually dead?",
+            "correct_answer": "Mary Alice Young",
+            "incorrect_answers": [
+                "Bree Van de Kamp",
+                "Edie Britt",
+                "Katherine Mayfair"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In That '70s Show, what is the name of the fictional town?",
+            "correct_answer": "Point Place",
+            "incorrect_answers": [
+                "Green Bay",
+                "Milwaukee",
+                "Madison"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Gossip Girl, what is Blair Waldorf's signature accessory?",
+            "correct_answer": "Headband",
+            "incorrect_answers": [
+                "Scarf",
+                "Brooch",
+                "Handbag"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In One Tree Hill, what are the last names of the two half-brothers?",
+            "correct_answer": "Scott",
+            "incorrect_answers": [
+                "Davis",
+                "Baker",
+                "Sawyer"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Gilmore Girls, what is the name of Luke's diner?",
+            "correct_answer": "Luke's Diner",
+            "incorrect_answers": [
+                "Luke's Coffee Shop",
+                "William's Diner",
+                "The Stars Hollow Diner"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In It's Always Sunny in Philadelphia, what year did the show premiere?",
+            "correct_answer": "2005",
+            "incorrect_answers": [
+                "2003",
+                "2006",
+                "2008"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Suits, what university does Mike Ross claim to have attended?",
+            "correct_answer": "Harvard Law School",
+            "incorrect_answers": [
+                "Yale Law School",
+                "Columbia Law School",
+                "Stanford Law School"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Witcher, what is the name of Geralt's horse?",
+            "correct_answer": "Roach",
+            "incorrect_answers": [
+                "Shadow",
+                "Storm",
+                "Thunder"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Wednesday, what type of creature is Wednesday's roommate Enid?",
+            "correct_answer": "Werewolf",
+            "incorrect_answers": [
+                "Vampire",
+                "Siren",
+                "Gorgon"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Bridgerton, who is Lady Whistledown?",
+            "correct_answer": "Penelope Featherington",
+            "incorrect_answers": [
+                "Eloise Bridgerton",
+                "Queen Charlotte",
+                "Cressida Cowper"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Friends, what apartment number do Monica and Rachel live in (corrected mid-series)?",
+            "correct_answer": "20",
+            "incorrect_answers": [
+                "4",
+                "15",
+                "19"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Breaking Bad, what is the name of the magnet heist episode?",
+            "correct_answer": "Live Free or Die",
+            "incorrect_answers": [
+                "Magnets, Bitch!",
+                "Dead Freight",
+                "Say My Name"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Office (US), what is Creed Bratton's real-life name?",
+            "correct_answer": "Creed Bratton",
+            "incorrect_answers": [
+                "William Charles Schneider",
+                "Steve Carell",
+                "Craig Robinson"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Grey's Anatomy, what was the original name of the hospital?",
+            "correct_answer": "Seattle Grace Hospital",
+            "incorrect_answers": [
+                "Grey Memorial Hospital",
+                "Seattle General",
+                "Mercy West"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Modern Family, what country does Lily originally come from?",
+            "correct_answer": "Vietnam",
+            "incorrect_answers": [
+                "China",
+                "South Korea",
+                "Cambodia"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Sopranos, how does the series finale end?",
+            "correct_answer": "A sudden cut to black",
+            "incorrect_answers": [
+                "Tony is shot",
+                "Tony turns himself in",
+                "Tony flees the country"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Dexter, what is the name of the Season 1 antagonist known as the Ice Truck Killer?",
+            "correct_answer": "Brian Moser",
+            "incorrect_answers": [
+                "Miguel Prado",
+                "Arthur Mitchell",
+                "Jordan Chase"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In House, what caused Dr. House's limp?",
+            "correct_answer": "Muscle death (infarction) in his leg",
+            "incorrect_answers": [
+                "A motorcycle accident",
+                "A gunshot wound",
+                "A birth defect"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Money Heist, what song do the robbers frequently sing?",
+            "correct_answer": "Bella Ciao",
+            "incorrect_answers": [
+                "Despacito",
+                "La Bamba",
+                "Volare"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Sex and the City, how many seasons did the original series run?",
+            "correct_answer": "Six",
+            "incorrect_answers": [
+                "Four",
+                "Five",
+                "Seven"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Yellowstone, what is Beth Dutton's signature personality trait?",
+            "correct_answer": "Ruthless and confrontational",
+            "incorrect_answers": [
+                "Shy and reserved",
+                "Kind and gentle",
+                "Quiet and thoughtful"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In South Park, what is Cartman's first name?",
+            "correct_answer": "Eric",
+            "incorrect_answers": [
+                "Kyle",
+                "Stan",
+                "Kenny"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Family Guy, what is Stewie Griffin's ambition in early seasons?",
+            "correct_answer": "World domination",
+            "incorrect_answers": [
+                "Becoming president",
+                "Time travel",
+                "Destroying Meg"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In True Detective Season 1, what state is the show set in?",
+            "correct_answer": "Louisiana",
+            "incorrect_answers": [
+                "Texas",
+                "Mississippi",
+                "Alabama"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Crown, who played Prince Philip in the first two seasons?",
+            "correct_answer": "Matt Smith",
+            "incorrect_answers": [
+                "Tobias Menzies",
+                "Jonathan Pryce",
+                "Josh O'Connor"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Fleabag, what is the name of Fleabag's dead best friend?",
+            "correct_answer": "Boo",
+            "incorrect_answers": [
+                "Claire",
+                "Belinda",
+                "Olivia"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Better Call Saul, what is Kim Wexler's profession?",
+            "correct_answer": "Lawyer",
+            "incorrect_answers": [
+                "Accountant",
+                "Police officer",
+                "Real estate agent"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Everybody Loves Raymond, what is Robert Barone's job?",
+            "correct_answer": "Police officer",
+            "incorrect_answers": [
+                "Accountant",
+                "Teacher",
+                "Firefighter"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Friends, what is the name of Joey's agent?",
+            "correct_answer": "Estelle Leonard",
+            "incorrect_answers": [
+                "June Gable",
+                "Janice Litman",
+                "Jill Green"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Breaking Bad, what is the street address of the White family home?",
+            "correct_answer": "308 Negra Arroyo Lane",
+            "incorrect_answers": [
+                "742 Evergreen Terrace",
+                "1600 Los Alamos Road",
+                "425 Desert View Drive"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Office (US), what was the name of Michael Scott's screenplay?",
+            "correct_answer": "Threat Level Midnight",
+            "incorrect_answers": [
+                "Agent Michael Scarn",
+                "The Negotiator",
+                "Dunder Mifflin Infinity"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Stranger Things, what is Dr. Brenner's nickname?",
+            "correct_answer": "Papa",
+            "incorrect_answers": [
+                "Father",
+                "The Doctor",
+                "Chief"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In How I Met Your Mother, what is the name of the mother?",
+            "correct_answer": "Tracy McConnell",
+            "incorrect_answers": [
+                "Victoria",
+                "Robin Scherbatsky",
+                "Stella Zinman"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Lost, what was the DHARMA Initiative?",
+            "correct_answer": "A scientific research project on the island",
+            "incorrect_answers": [
+                "A military operation",
+                "A religious cult",
+                "A government spy program"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Walking Dead, what is Eugene Porter's big lie?",
+            "correct_answer": "That he knows the cure",
+            "incorrect_answers": [
+                "That he's a soldier",
+                "That he's a doctor",
+                "That he's from Washington"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Modern Family, what is Haley Dunphy's career in later seasons?",
+            "correct_answer": "Fashion/lifestyle influencer",
+            "incorrect_answers": [
+                "Lawyer",
+                "Doctor",
+                "Teacher"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Big Bang Theory, what is Howard Wolowitz's degree?",
+            "correct_answer": "Master's in Engineering",
+            "incorrect_answers": [
+                "PhD in Physics",
+                "PhD in Engineering",
+                "Bachelor's in Physics"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Seinfeld, what is the name of George's fianc\u00e9e who dies from licking envelopes?",
+            "correct_answer": "Susan Ross",
+            "incorrect_answers": [
+                "Elaine Benes",
+                "Marisa Tomei",
+                "Jane"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In The Sopranos, what is the name of the restaurant where key meetings happen?",
+            "correct_answer": "Vesuvio",
+            "incorrect_answers": [
+                "Satriale's",
+                "The Bing",
+                "Nuovo Vesuvio"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Prison Break, what is the name of the alias Michael uses in Season 4?",
+            "correct_answer": "James Whistler",
+            "incorrect_answers": [
+                "Charles Westmoreland",
+                "Paul Kellerman",
+                "Alexander Mahone"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "question": "In Grey's Anatomy, what is the name of Cristina Yang's final hospital?",
+            "correct_answer": "Klausman Institute for Medical Research (Zurich)",
+            "incorrect_answers": [
+                "Mayo Clinic",
+                "Johns Hopkins",
+                "Cleveland Clinic"
+            ],
+            "difficulty": "hard"
+        }
+    ]
+}
