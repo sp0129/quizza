@@ -55,6 +55,7 @@ export default function ProfileScreen({ navigation }: Props) {
   const [username, setUsername] = useState(user?.username ?? '');
   const [usernameLoading, setUsernameLoading] = useState(false);
   const [usernameError, setUsernameError] = useState('');
+  const [editingUsername, setEditingUsername] = useState(false);
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
   const [savingAvatarId, setSavingAvatarId] = useState<number | null>(null);
   const [soundOn, setSoundOn] = useState(isSoundEnabled());
@@ -71,13 +72,14 @@ export default function ProfileScreen({ navigation }: Props) {
 
   const saveUsername = async () => {
     const trimmed = username.trim();
-    if (!trimmed || trimmed === user?.username) return;
+    if (!trimmed || trimmed === user?.username) { setEditingUsername(false); return; }
     if (trimmed.length < 3) { setUsernameError('Minimum 3 characters'); return; }
     setUsernameError('');
     setUsernameLoading(true);
     try {
       const updated = await api.put<{ username: string }>('/users/me', { username: trimmed });
       refreshUser({ username: updated.username });
+      setEditingUsername(false);
     } catch (err: any) {
       setUsernameError(err.message);
     } finally {
@@ -200,7 +202,7 @@ export default function ProfileScreen({ navigation }: Props) {
           <Text style={s.cardHint}>This is how other players find and challenge you.</Text>
           <View style={s.row}>
             <TextInput
-              style={[s.input, s.flex1]}
+              style={[s.input, s.flex1, !editingUsername && s.inputDisabled]}
               value={username}
               onChangeText={setUsername}
               autoCapitalize="none"
@@ -208,14 +210,24 @@ export default function ProfileScreen({ navigation }: Props) {
               placeholderTextColor={colors.textMuted}
               returnKeyType="done"
               onSubmitEditing={saveUsername}
+              editable={editingUsername}
             />
-            <TouchableOpacity
-              style={[s.saveBtn, (usernameLoading || username.trim() === user?.username) && s.saveBtnDisabled]}
-              onPress={saveUsername}
-              disabled={usernameLoading || username.trim() === user?.username}
-            >
-              {usernameLoading ? <ActivityIndicator color="#fff" size="small" /> : <Text style={s.saveBtnText}>Save</Text>}
-            </TouchableOpacity>
+            {editingUsername ? (
+              <TouchableOpacity
+                style={[s.saveBtn, (usernameLoading || username.trim() === user?.username) && s.saveBtnDisabled]}
+                onPress={saveUsername}
+                disabled={usernameLoading || username.trim() === user?.username}
+              >
+                {usernameLoading ? <ActivityIndicator color="#fff" size="small" /> : <Text style={s.saveBtnText}>Save</Text>}
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity
+                style={s.editBtn}
+                onPress={() => setEditingUsername(true)}
+              >
+                <Text style={s.editBtnText}>Edit</Text>
+              </TouchableOpacity>
+            )}
           </View>
           {usernameError ? <Text style={s.error}>{usernameError}</Text> : null}
         </View>
@@ -450,12 +462,19 @@ const s = StyleSheet.create({
     color: colors.textPrimary, fontSize: 15,
     borderWidth: 1, borderColor: colors.border,
   },
+  inputDisabled: { opacity: 0.5 },
   saveBtn: {
     backgroundColor: colors.green, borderRadius: 12,
     paddingHorizontal: 16, paddingVertical: 12,
   },
   saveBtnDisabled: { opacity: 0.4 },
   saveBtnText: { color: '#fff', fontSize: 14, fontWeight: '700' },
+  editBtn: {
+    backgroundColor: 'rgba(124,58,237,0.2)', borderRadius: 12,
+    paddingHorizontal: 16, paddingVertical: 12,
+    borderWidth: 1, borderColor: 'rgba(124,58,237,0.3)',
+  },
+  editBtnText: { color: '#A78BFA', fontSize: 14, fontWeight: '700' },
   error: { color: colors.red, fontSize: 13 },
   searchRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   searchName: { flex: 1, color: colors.textPrimary, fontSize: 15 },
