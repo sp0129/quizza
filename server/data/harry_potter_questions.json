@@ -3,87 +3,33 @@
   "category_id": 2003,
   "questions": [
     {
-    "question": "What house does Harry Potter get sorted into at Hogwarts?",
-    "correct_answer": "Gryffindor",
-    "incorrect_answers": ["Slytherin", "Ravenclaw", "Hufflepuff"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the three-headed dog that guards the Philosopher's Stone?",
-    "correct_answer": "Fluffy",
-    "incorrect_answers": ["Fang", "Aragog", "Norbert"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who was the founder of S.P.E.W.?",
-    "correct_answer": "Hermione Granger",
-    "incorrect_answers": ["Ron Weasley", "Albus Dumbledore", "Dobby"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the ice cream shop in Diagon Alley?",
-    "correct_answer": "Florean Fortescue's Ice Cream Parlour",
-    "incorrect_answers": ["Madam Puddifoot's", "Honeydukes", "Borgin and Burkes"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the five-digit code dialed into the telephone booth to enter the Ministry of Magic?",
-    "correct_answer": "6-2-4-4-2",
-    "incorrect_answers": ["1-2-3-4-5", "7-2-6-3-7", "9-8-7-6-5"],
-    "difficulty": "hard"
-  },
-  {
-    "question": "Which row in the Hall of Prophecy contains the prophecy about Harry and Voldemort?",
-    "correct_answer": "Row 97",
-    "incorrect_answers": ["Row 13", "Row 54", "Row 101"],
-    "difficulty": "hard"
-  },
-  {
-    "question": "Who was the first victim of the basilisk when the Chamber of Secrets was first opened fifty years ago?",
-    "correct_answer": "Moaning Myrtle",
-    "incorrect_answers": ["Nearly Headless Nick", "James Potter", "Peeves"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the house-elf who belonged to Hepzibah Smith?",
-    "correct_answer": "Hokey",
-    "incorrect_answers": ["Winky", "Kreacher", "Dobby"],
-    "difficulty": "hard"
-  },
-  {
-    "question": "What kind of wood is Harry Potter's first wand made of?",
-    "correct_answer": "Holly",
-    "incorrect_answers": ["Yew", "Vine", "Hawthorn"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who kills Nagini in the final battle?",
-    "correct_answer": "Neville Longbottom",
-    "incorrect_answers": ["Harry Potter", "Ron Weasley", "Molly Weasley"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the spell used to repel a Boggart?",
-    "correct_answer": "Riddikulus",
-    "incorrect_answers": ["Expelliarmus", "Stupefy", "Alohomora"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which character is an unregistered Animagus who turns into a beetle?",
-    "correct_answer": "Rita Skeeter",
-    "incorrect_answers": ["Minerva McGonagall", "James Potter", "Peter Pettigrew"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the Apparition instructor who comes to Hogwarts in the sixth year?",
-    "correct_answer": "Wilkie Twycross",
-    "incorrect_answers": ["Horace Slughorn", "Stan Shunpike", "Cuthbert Binns"],
-    "difficulty": "hard"
-  },
-    {
       "question": "What house does Harry Potter get sorted into at Hogwarts?",
       "correct_answer": "Gryffindor",
       "incorrect_answers": ["Slytherin", "Ravenclaw", "Hufflepuff"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the three-headed dog that guards the Philosopher's Stone?",
+      "correct_answer": "Fluffy",
+      "incorrect_answers": ["Fang", "Aragog", "Norbert"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What kind of wood is Harry Potter's first wand made of?",
+      "correct_answer": "Holly",
+      "incorrect_answers": ["Yew", "Vine", "Hawthorn"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who kills Nagini in the final battle?",
+      "correct_answer": "Neville Longbottom",
+      "incorrect_answers": ["Harry Potter", "Ron Weasley", "Molly Weasley"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the spell used to repel a Boggart?",
+      "correct_answer": "Riddikulus",
+      "incorrect_answers": ["Expelliarmus", "Stupefy", "Alohomora"],
       "difficulty": "easy"
     },
     {
@@ -136,7 +82,7 @@
     },
     {
       "question": "What does the Mirror of Erised show the viewer?",
-      "correct_answer": "Their heart's deepest desire",
+      "correct_answer": "Their deepest desire",
       "incorrect_answers": ["The future", "Their greatest fear", "Hidden secrets"],
       "difficulty": "easy"
     },
@@ -153,16 +99,400 @@
       "difficulty": "easy"
     },
     {
+      "question": "What position does Harry play on the Quidditch team?",
+      "correct_answer": "Seeker",
+      "incorrect_answers": ["Keeper", "Chaser", "Beater"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the incantation for the spell that disarms an opponent?",
+      "correct_answer": "Expelliarmus",
+      "incorrect_answers": ["Stupefy", "Protego", "Accio"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Hagrid's boarhound?",
+      "correct_answer": "Fang",
+      "incorrect_answers": ["Fluffy", "Padfoot", "Buckbeak"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What sport do wizards play on broomsticks?",
+      "correct_answer": "Quidditch",
+      "incorrect_answers": ["Broomball", "Wizardball", "Skyball"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Harry's best female friend?",
+      "correct_answer": "Hermione Granger",
+      "incorrect_answers": ["Ginny Weasley", "Luna Lovegood", "Cho Chang"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the Sorting Hat do?",
+      "correct_answer": "Sorts students into houses",
+      "incorrect_answers": ["Teaches spells", "Guards the castle", "Reads minds"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Lord Voldemort's real name?",
+      "correct_answer": "Tom Marvolo Riddle",
+      "incorrect_answers": ["Severus Snape", "Gellert Grindelwald", "Salazar Slytherin"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the spell 'Alohomora' do?",
+      "correct_answer": "Unlocks doors",
+      "incorrect_answers": ["Creates light", "Summons objects", "Stuns a person"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the headmaster of Hogwarts when Harry first arrives?",
+      "correct_answer": "Albus Dumbledore",
+      "incorrect_answers": ["Severus Snape", "Minerva McGonagall", "Horace Slughorn"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the pub that serves as the entrance to Diagon Alley?",
+      "correct_answer": "The Leaky Cauldron",
+      "incorrect_answers": ["The Three Broomsticks", "The Hog's Head", "Madam Puddifoot's"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of creature is Buckbeak?",
+      "correct_answer": "Hippogriff",
+      "incorrect_answers": ["Dragon", "Phoenix", "Thestral"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the wizarding bank?",
+      "correct_answer": "Gringotts",
+      "incorrect_answers": ["Galleons Bank", "Vault & Key", "The Ministry Bank"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who runs Gringotts bank?",
+      "correct_answer": "Goblins",
+      "incorrect_answers": ["House-elves", "Wizards", "Dwarves"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Neville Longbottom's pet toad?",
+      "correct_answer": "Trevor",
+      "incorrect_answers": ["Scabbers", "Dennis", "Arnold"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What spell is used to summon objects?",
+      "correct_answer": "Accio",
+      "incorrect_answers": ["Lumos", "Stupefy", "Obliviate"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Dumbledore's phoenix?",
+      "correct_answer": "Fawkes",
+      "incorrect_answers": ["Hedwig", "Norbert", "Buckbeak"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the street where the Dursleys live?",
+      "correct_answer": "Privet Drive",
+      "incorrect_answers": ["Spinner's End", "Grimmauld Place", "Diagon Alley"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What house is Draco Malfoy sorted into?",
+      "correct_answer": "Slytherin",
+      "incorrect_answers": ["Gryffindor", "Ravenclaw", "Hufflepuff"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What core does Harry's wand contain?",
+      "correct_answer": "Phoenix feather",
+      "incorrect_answers": ["Dragon heartstring", "Unicorn hair", "Basilisk fang"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who teaches Transfiguration at Hogwarts?",
+      "correct_answer": "Minerva McGonagall",
+      "incorrect_answers": ["Severus Snape", "Filius Flitwick", "Pomona Sprout"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What shape is Harry's famous scar?",
+      "correct_answer": "Lightning bolt",
+      "incorrect_answers": ["Star", "Crescent moon", "Triangle"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What subject does Severus Snape teach in Harry's first year?",
+      "correct_answer": "Potions",
+      "incorrect_answers": ["Defense Against the Dark Arts", "Transfiguration", "Herbology"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do wizards call non-magical people?",
+      "correct_answer": "Muggles",
+      "incorrect_answers": ["Squibs", "No-Majs", "Mundanes"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What creature is Dobby?",
+      "correct_answer": "House-elf",
+      "incorrect_answers": ["Goblin", "Gnome", "Pixie"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What spell produces a Patronus?",
+      "correct_answer": "Expecto Patronum",
+      "incorrect_answers": ["Lumos Maxima", "Protego", "Riddikulus"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What form does Harry's Patronus take?",
+      "correct_answer": "Stag",
+      "incorrect_answers": ["Doe", "Otter", "Jack Russell Terrier"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Fred Weasley's twin brother?",
+      "correct_answer": "George",
+      "incorrect_answers": ["Ron", "Charlie", "Percy"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who gives Harry the Invisibility Cloak?",
+      "correct_answer": "Dumbledore",
+      "incorrect_answers": ["Sirius Black", "Hagrid", "Snape"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Hagrid's baby dragon in the first book?",
+      "correct_answer": "Norbert",
+      "incorrect_answers": ["Norberta", "Fluffy", "Fawkes"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many Weasley children are there?",
+      "correct_answer": "Seven",
+      "incorrect_answers": ["Five", "Six", "Eight"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the candy that makes you hop?",
+      "correct_answer": "Chocolate Frogs",
+      "incorrect_answers": ["Bertie Bott's Beans", "Acid Pops", "Fizzing Whizzbees"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal can Professor McGonagall turn into?",
+      "correct_answer": "Cat",
+      "incorrect_answers": ["Owl", "Rat", "Dog"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the spell that erases memories?",
+      "correct_answer": "Obliviate",
+      "incorrect_answers": ["Confundo", "Stupefy", "Silencio"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the golden Snitch do in Quidditch?",
+      "correct_answer": "Ends the game when caught",
+      "incorrect_answers": ["Scores 50 points", "Knocks players off brooms", "Blocks the Quaffle"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What object frees Dobby from the Malfoys?",
+      "correct_answer": "A sock",
+      "incorrect_answers": ["A hat", "A glove", "A scarf"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Weasley twins' joke shop?",
+      "correct_answer": "Weasleys' Wizard Wheezes",
+      "incorrect_answers": ["Zonko's Joke Shop", "Fred & George's Pranks", "The Weasley Emporium"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color are the Hogwarts Express carriages?",
+      "correct_answer": "Scarlet",
+      "incorrect_answers": ["Blue", "Green", "Black"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What sweet has flavors like earwax and vomit?",
+      "correct_answer": "Bertie Bott's Every Flavour Beans",
+      "incorrect_answers": ["Chocolate Frogs", "Drooble's Gum", "Acid Pops"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What potion allows you to take on someone else's appearance?",
+      "correct_answer": "Polyjuice Potion",
+      "incorrect_answers": ["Felix Felicis", "Veritaserum", "Amortentia"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the gamekeeper of Hogwarts?",
+      "correct_answer": "Rubeus Hagrid",
+      "incorrect_answers": ["Argus Filch", "Aberforth Dumbledore", "Neville Longbottom"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Harry's mother?",
+      "correct_answer": "Lily",
+      "incorrect_answers": ["Rose", "Petunia", "Molly"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the fastest broomstick Harry receives?",
+      "correct_answer": "Firebolt",
+      "incorrect_answers": ["Nimbus 2000", "Nimbus 2001", "Cleansweep Seven"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal represents Slytherin house?",
+      "correct_answer": "Snake",
+      "incorrect_answers": ["Lion", "Eagle", "Badger"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the conductor of the Knight Bus?",
+      "correct_answer": "Stan Shunpike",
+      "incorrect_answers": ["Ernie Prang", "Mundungus Fletcher", "Dedalus Diggle"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the magical map that shows everyone at Hogwarts?",
+      "correct_answer": "The Marauder's Map",
+      "incorrect_answers": ["The Hogwarts Chart", "The Wizard's Atlas", "Dumbledore's Map"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What class does Professor Binns teach?",
+      "correct_answer": "History of Magic",
+      "incorrect_answers": ["Potions", "Divination", "Arithmancy"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Hermione's cat?",
+      "correct_answer": "Crookshanks",
+      "incorrect_answers": ["Mrs. Norris", "Scabbers", "Arnold"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many points is catching the Snitch worth?",
+      "correct_answer": "150",
+      "incorrect_answers": ["100", "200", "50"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What creature guards Azkaban prison?",
+      "correct_answer": "Dementors",
+      "incorrect_answers": ["Inferi", "Boggarts", "Death Eaters"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the Potions professor in Harry's sixth year?",
+      "correct_answer": "Horace Slughorn",
+      "incorrect_answers": ["Severus Snape", "Alastor Moody", "Remus Lupin"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Filch's cat?",
+      "correct_answer": "Mrs. Norris",
+      "incorrect_answers": ["Crookshanks", "Scabbers", "Fang"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the Killing Curse 'Avada Kedavra' produce?",
+      "correct_answer": "A green flash of light",
+      "incorrect_answers": ["A red flash of light", "A blue flash of light", "A white flash of light"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Dursleys' son?",
+      "correct_answer": "Dudley",
+      "incorrect_answers": ["Dennis", "Derek", "Douglas"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who teaches Herbology at Hogwarts?",
+      "correct_answer": "Pomona Sprout",
+      "incorrect_answers": ["Minerva McGonagall", "Filius Flitwick", "Severus Snape"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Voldemort's snake called?",
+      "correct_answer": "Nagini",
+      "incorrect_answers": ["Basilisk", "Fluffy", "Aragog"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of dragon does Harry face in the Triwizard Tournament?",
+      "correct_answer": "Hungarian Horntail",
+      "incorrect_answers": ["Norwegian Ridgeback", "Swedish Short-Snout", "Common Welsh Green"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the spell 'Stupefy' do?",
+      "correct_answer": "Stuns the target",
+      "incorrect_answers": ["Kills the target", "Disarms the target", "Levitates the target"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who does Harry marry?",
+      "correct_answer": "Ginny Weasley",
+      "incorrect_answers": ["Hermione Granger", "Luna Lovegood", "Cho Chang"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What number is Harry's vault at Gringotts?",
+      "correct_answer": "687",
+      "incorrect_answers": ["713", "492", "711"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What class does Professor Trelawney teach?",
+      "correct_answer": "Divination",
+      "incorrect_answers": ["Herbology", "Astronomy", "Arithmancy"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the headquarters of the Order of the Phoenix?",
+      "correct_answer": "12 Grimmauld Place",
+      "incorrect_answers": ["The Burrow", "Hogwarts", "Godric's Hollow"],
+      "difficulty": "easy"
+    },
+    {
       "question": "What does Hermione use to attend multiple classes at the same time in year three?",
       "correct_answer": "A Time-Turner",
       "incorrect_answers": ["A Portkey", "The Invisibility Cloak", "A Remembrall"],
       "difficulty": "medium"
     },
     {
-      "question": "What position does Harry play on the Quidditch team?",
-      "correct_answer": "Seeker",
-      "incorrect_answers": ["Keeper", "Chaser", "Beater"],
-      "difficulty": "easy"
+      "question": "Who was the founder of S.P.E.W.?",
+      "correct_answer": "Hermione Granger",
+      "incorrect_answers": ["Ron Weasley", "Albus Dumbledore", "Dobby"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the ice cream shop in Diagon Alley?",
+      "correct_answer": "Florean Fortescue's",
+      "incorrect_answers": ["Madam Puddifoot's", "Honeydukes", "Borgin and Burkes"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who was the first victim of the basilisk when the Chamber of Secrets was first opened fifty years ago?",
+      "correct_answer": "Moaning Myrtle",
+      "incorrect_answers": ["Nearly Headless Nick", "James Potter", "Peeves"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character is an unregistered Animagus who turns into a beetle?",
+      "correct_answer": "Rita Skeeter",
+      "incorrect_answers": ["Minerva McGonagall", "James Potter", "Peter Pettigrew"],
+      "difficulty": "medium"
     },
     {
       "question": "Who is the ghost of Gryffindor tower?",
@@ -172,29 +502,15 @@
     },
     {
       "question": "What are the three Deathly Hallows?",
-      "correct_answer": "The Elder Wand, the Resurrection Stone, and the Invisibility Cloak",
-      "incorrect_answers": [
-        "The Sorcerer's Stone, the Time-Turner, and the Marauder's Map",
-        "The Elder Wand, the Philosopher's Stone, and the Invisibility Cloak",
-        "The Resurrection Stone, the Horcrux locket, and the Elder Wand"
-      ],
+      "correct_answer": "Elder Wand, Resurrection Stone, Invisibility Cloak",
+      "incorrect_answers": ["Sorcerer's Stone, Time-Turner, Marauder's Map", "Elder Wand, Philosopher's Stone, Invisibility Cloak", "Resurrection Stone, Horcrux locket, Elder Wand"],
       "difficulty": "medium"
     },
     {
       "question": "Who created the Marauder's Map?",
       "correct_answer": "Moony, Wormtail, Padfoot, and Prongs",
-      "incorrect_answers": [
-        "Fred and George Weasley",
-        "Dumbledore and Flamel",
-        "Filch and Peeves"
-      ],
+      "incorrect_answers": ["Fred and George Weasley", "Dumbledore and Flamel", "Filch and Peeves"],
       "difficulty": "medium"
-    },
-    {
-      "question": "What is the incantation for the spell that disarms an opponent?",
-      "correct_answer": "Expelliarmus",
-      "incorrect_answers": ["Stupefy", "Protego", "Accio"],
-      "difficulty": "easy"
     },
     {
       "question": "What is the name of the lucky potion Harry uses in book six?",
@@ -207,6 +523,474 @@
       "correct_answer": "Severus Snape",
       "incorrect_answers": ["Voldemort", "Draco Malfoy", "Sirius Black"],
       "difficulty": "medium"
+    },
+    {
+      "question": "What form does Hermione's Patronus take?",
+      "correct_answer": "Otter",
+      "incorrect_answers": ["Cat", "Doe", "Horse"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Dumbledore's full name?",
+      "correct_answer": "Albus Percival Wulfric Brian Dumbledore",
+      "incorrect_answers": ["Albus Severus Brian Dumbledore", "Albus Percival Godric Dumbledore", "Albus Brian Wulfric Percival Dumbledore"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does S.P.E.W. stand for?",
+      "correct_answer": "Society for the Promotion of Elfish Welfare",
+      "incorrect_answers": ["Society for the Protection of Elfish Workers", "Society for the Promotion of Elf Wizardry", "Society for the Protection of Elfish Welfare"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Animagus form of Sirius Black?",
+      "correct_answer": "Dog",
+      "incorrect_answers": ["Stag", "Rat", "Wolf"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Animagus form of Peter Pettigrew?",
+      "correct_answer": "Rat",
+      "incorrect_answers": ["Dog", "Stag", "Cat"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What potion forces the drinker to tell the truth?",
+      "correct_answer": "Veritaserum",
+      "incorrect_answers": ["Felix Felicis", "Amortentia", "Polyjuice Potion"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Tom Riddle's mother?",
+      "correct_answer": "Merope Gaunt",
+      "incorrect_answers": ["Morfin Gaunt", "Cecilia Riddle", "Hepzibah Smith"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What spell does Hermione use to wipe her parents' memories?",
+      "correct_answer": "Obliviate",
+      "incorrect_answers": ["Confundo", "Imperius", "Stupefy"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who becomes the Keeper of Keys after Hagrid?",
+      "correct_answer": "No one — Hagrid remains Keeper",
+      "incorrect_answers": ["Filch", "Dobby", "Neville"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Nymphadora Tonks' preferred name?",
+      "correct_answer": "Tonks",
+      "incorrect_answers": ["Nymphadora", "Dora", "Nymph"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What creature does Lupin turn into during a full moon?",
+      "correct_answer": "Werewolf",
+      "incorrect_answers": ["Vampire", "Boggart", "Animagus dog"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What horcrux was hidden in Bellatrix Lestrange's vault?",
+      "correct_answer": "Hufflepuff's Cup",
+      "incorrect_answers": ["Slytherin's Locket", "Ravenclaw's Diadem", "The diary"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What did Dumbledore see when he looked in the Mirror of Erised?",
+      "correct_answer": "Thick woolen socks",
+      "incorrect_answers": ["His family alive", "Himself as Minister", "Grindelwald defeated"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the room that appears when you need it most?",
+      "correct_answer": "Room of Requirement",
+      "incorrect_answers": ["Chamber of Secrets", "Room of Hidden Things", "Dumbledore's Office"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who was the Defense Against the Dark Arts teacher in Harry's third year?",
+      "correct_answer": "Remus Lupin",
+      "incorrect_answers": ["Alastor Moody", "Gilderoy Lockhart", "Dolores Umbridge"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What object is a Portkey that takes Harry to the graveyard in book four?",
+      "correct_answer": "The Triwizard Cup",
+      "incorrect_answers": ["A boot", "A newspaper", "A quill"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many Horcruxes did Voldemort create intentionally?",
+      "correct_answer": "Six",
+      "incorrect_answers": ["Five", "Seven", "Eight"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Marauder nickname for James Potter?",
+      "correct_answer": "Prongs",
+      "incorrect_answers": ["Padfoot", "Moony", "Wormtail"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Marauder nickname for Sirius Black?",
+      "correct_answer": "Padfoot",
+      "incorrect_answers": ["Prongs", "Moony", "Wormtail"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What creature pulls the carriages at Hogwarts that only some students can see?",
+      "correct_answer": "Thestrals",
+      "incorrect_answers": ["Hippogriffs", "Abraxans", "Centaurs"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who petrifies Hermione in the second book?",
+      "correct_answer": "The Basilisk",
+      "incorrect_answers": ["Tom Riddle", "Draco Malfoy", "Gilderoy Lockhart"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What did Hagrid buy in the Hog's Head that turned out to be a baby dragon?",
+      "correct_answer": "A dragon egg",
+      "incorrect_answers": ["A basilisk fang", "A phoenix egg", "A hippogriff chick"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the Wolfsbane Potion do?",
+      "correct_answer": "Lets a werewolf keep their mind during transformation",
+      "incorrect_answers": ["Cures lycanthropy", "Prevents transformation", "Makes the werewolf invisible"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What form does Snape's Patronus take?",
+      "correct_answer": "Doe",
+      "incorrect_answers": ["Stag", "Raven", "Snake"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who kills Dumbledore?",
+      "correct_answer": "Severus Snape",
+      "incorrect_answers": ["Draco Malfoy", "Bellatrix Lestrange", "Voldemort"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the spell that causes unbearable pain?",
+      "correct_answer": "Cruciatus Curse (Crucio)",
+      "incorrect_answers": ["Avada Kedavra", "Imperius Curse", "Sectumsempra"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the headmaster of Durmstrang Institute?",
+      "correct_answer": "Igor Karkaroff",
+      "incorrect_answers": ["Viktor Krum", "Gellert Grindelwald", "Barty Crouch"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Tonks' special ability?",
+      "correct_answer": "Metamorphmagus",
+      "incorrect_answers": ["Animagus", "Legilimens", "Parselmouth"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Weasley family's owl?",
+      "correct_answer": "Errol",
+      "incorrect_answers": ["Hedwig", "Pigwidgeon", "Fawkes"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who does Ron impersonate using Polyjuice Potion in book seven to infiltrate the Ministry?",
+      "correct_answer": "Reg Cattermole",
+      "incorrect_answers": ["Albert Runcorn", "Mafalda Hopkirk", "Pius Thicknesse"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the password to the prefects' bathroom in Goblet of Fire?",
+      "correct_answer": "Pine fresh",
+      "incorrect_answers": ["Lemon drop", "Balderdash", "Caput Draconis"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who killed Sirius Black?",
+      "correct_answer": "Bellatrix Lestrange",
+      "incorrect_answers": ["Lucius Malfoy", "Voldemort", "Peter Pettigrew"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the five-digit code dialed into the telephone booth to enter the Ministry of Magic?",
+      "correct_answer": "6-2-4-4-2",
+      "incorrect_answers": ["1-2-3-4-5", "7-2-6-3-7", "9-8-7-6-5"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which row in the Hall of Prophecy contains the prophecy about Harry and Voldemort?",
+      "correct_answer": "Row 97",
+      "incorrect_answers": ["Row 13", "Row 54", "Row 101"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the house-elf who belonged to Hepzibah Smith?",
+      "correct_answer": "Hokey",
+      "incorrect_answers": ["Winky", "Kreacher", "Dobby"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Apparition instructor who comes to Hogwarts in the sixth year?",
+      "correct_answer": "Wilkie Twycross",
+      "incorrect_answers": ["Horace Slughorn", "Stan Shunpike", "Cuthbert Binns"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of Aragog's wife?",
+      "correct_answer": "Mosag",
+      "incorrect_answers": ["Shelob", "Arachne", "Nagini"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the incantation of the spell Snape invented that causes deep slashing wounds?",
+      "correct_answer": "Sectumsempra",
+      "incorrect_answers": ["Langlock", "Levicorpus", "Crucio"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What address does Dumbledore add to Number Twelve Grimmauld Place's Fidelius Charm?",
+      "correct_answer": "He is the Secret Keeper",
+      "incorrect_answers": ["The house is unplottable", "Mad-Eye Moody casts it", "Snape hides it"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Nicolas Flamel's age, approximately, in the first book?",
+      "correct_answer": "665",
+      "incorrect_answers": ["500", "300", "1000"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are the names of Draco Malfoy's two cronies?",
+      "correct_answer": "Crabbe and Goyle",
+      "incorrect_answers": ["Nott and Zabini", "Flint and Pucey", "Montague and Warrington"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the core of Draco Malfoy's wand?",
+      "correct_answer": "Unicorn hair",
+      "incorrect_answers": ["Dragon heartstring", "Phoenix feather", "Thestral tail hair"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Hogwarts founder's relic became a Horcrux hidden inside Hogwarts?",
+      "correct_answer": "Rowena Ravenclaw's Diadem",
+      "incorrect_answers": ["Godric Gryffindor's Sword", "Helga Hufflepuff's Cup", "Salazar Slytherin's Locket"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the centaur who replaces Professor Trelawney?",
+      "correct_answer": "Firenze",
+      "incorrect_answers": ["Bane", "Ronan", "Magorian"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the street address of the Riddle House?",
+      "correct_answer": "Little Hangleton",
+      "incorrect_answers": ["Great Hangleton", "Spinner's End", "Godric's Hollow"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does Dumbledore claim to see in the Mirror of Erised (which he later reveals to be false)?",
+      "correct_answer": "Thick woolen socks",
+      "incorrect_answers": ["His family alive and healthy", "A lemon drop factory", "Himself holding all the Hallows"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the orphanage where Tom Riddle grew up?",
+      "correct_answer": "Wool's Orphanage",
+      "incorrect_answers": ["St. Brutus's", "Stonewall", "Mrs. Cole's Home"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Weasley family ghoul?",
+      "correct_answer": "The ghoul in the attic",
+      "incorrect_answers": ["Gerald", "Peeves", "The Bloody Baron"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What spell did Voldemort use to create the cave's protective barrier around the locket Horcrux?",
+      "correct_answer": "A Drink of Despair potion",
+      "incorrect_answers": ["Fiendfyre", "Protego Totalum", "Cruciatus Curse"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the pub in Hogsmeade where Dumbledore's Army holds its first meeting?",
+      "correct_answer": "The Hog's Head",
+      "incorrect_answers": ["The Three Broomsticks", "The Leaky Cauldron", "Madam Puddifoot's"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the owner of the Hog's Head pub?",
+      "correct_answer": "Aberforth Dumbledore",
+      "incorrect_answers": ["Mundungus Fletcher", "Madam Rosmerta", "Tom the barman"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the core of the Elder Wand?",
+      "correct_answer": "Thestral tail hair",
+      "incorrect_answers": ["Phoenix feather", "Dragon heartstring", "Unicorn hair"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the last word of the original Harry Potter series?",
+      "correct_answer": "Well",
+      "incorrect_answers": ["Scar", "Hogwarts", "Always"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the potion textbook Harry uses in Half-Blood Prince?",
+      "correct_answer": "Advanced Potion-Making",
+      "incorrect_answers": ["Magical Drafts and Potions", "One Thousand Magical Herbs", "Moste Potente Potions"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the spell that makes the caster's wand act like a compass to point north?",
+      "correct_answer": "Point Me",
+      "incorrect_answers": ["Orientis", "Directio", "Four-Point Spell"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which goblin helps Harry, Ron, and Hermione break into Gringotts?",
+      "correct_answer": "Griphook",
+      "incorrect_answers": ["Bogrod", "Ragnok", "Gornuk"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the number of the vault that stores the Philosopher's Stone at Gringotts?",
+      "correct_answer": "713",
+      "incorrect_answers": ["687", "711", "492"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What type of dragon guards the deep vaults at Gringotts?",
+      "correct_answer": "Ukrainian Ironbelly",
+      "incorrect_answers": ["Hungarian Horntail", "Norwegian Ridgeback", "Common Welsh Green"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Black family house-elf?",
+      "correct_answer": "Kreacher",
+      "incorrect_answers": ["Dobby", "Winky", "Hokey"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the first password to Gryffindor Tower mentioned in the series?",
+      "correct_answer": "Caput Draconis",
+      "incorrect_answers": ["Pig snout", "Wattlebird", "Balderdash"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the charm placed on the Weasley tent at the Quidditch World Cup to make it bigger inside?",
+      "correct_answer": "Undetectable Extension Charm",
+      "incorrect_answers": ["Engorgement Charm", "Enlarging Spell", "Capacious Charm"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In what year was the Chamber of Secrets first opened?",
+      "correct_answer": "1943",
+      "incorrect_answers": ["1945", "1938", "1950"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Metamorphmagus in the Order of the Phoenix?",
+      "correct_answer": "Nymphadora Tonks",
+      "incorrect_answers": ["Hestia Jones", "Emmeline Vance", "Nymphadora Lupin"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does the spell 'Langlock' do?",
+      "correct_answer": "Glues the target's tongue to the roof of their mouth",
+      "incorrect_answers": ["Locks all doors in range", "Silences the target", "Paralyzes the target's legs"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What magazine does Luna Lovegood's father publish?",
+      "correct_answer": "The Quibbler",
+      "incorrect_answers": ["The Daily Prophet", "Witch Weekly", "Transfiguration Today"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the curse that Hermione uses on the DA sign-up sheet to jinx anyone who betrays them?",
+      "correct_answer": "A Protean Charm jinx that causes 'SNEAK' to appear on the traitor's face",
+      "incorrect_answers": ["A Bat-Bogey Hex", "A Tongue-Tying Curse", "A Stinging Jinx"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many staircases does Hogwarts have?",
+      "correct_answer": "142",
+      "incorrect_answers": ["100", "77", "200"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What flavor of Dumbledore's favorite Muggle sweet does he use as a Hogwarts password?",
+      "correct_answer": "Lemon drop",
+      "incorrect_answers": ["Sherbet lemon", "Pear drop", "Cockroach cluster"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Death Eater who is also a werewolf?",
+      "correct_answer": "Fenrir Greyback",
+      "incorrect_answers": ["Antonin Dolohov", "Augustus Rookwood", "Walden Macnair"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What did Neville's Boggart turn into?",
+      "correct_answer": "Professor Snape",
+      "incorrect_answers": ["His grandmother", "Voldemort", "A spider"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are the names of Harry and Ginny's three children?",
+      "correct_answer": "James, Albus, and Lily",
+      "incorrect_answers": ["Sirius, Remus, and Lily", "James, Sirius, and Rose", "Arthur, Fred, and Rose"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the name of the Quidditch team that competed in the World Cup final against Ireland?",
+      "correct_answer": "Bulgaria",
+      "incorrect_answers": ["Transylvania", "Luxembourg", "Peru"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the plant that screams when uprooted?",
+      "correct_answer": "Mandrake",
+      "incorrect_answers": ["Venomous Tentacula", "Devil's Snare", "Whomping Willow"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the original owner of the locket Horcrux before Voldemort?",
+      "correct_answer": "Merope Gaunt",
+      "incorrect_answers": ["Hepzibah Smith", "Morfin Gaunt", "Regulus Black"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What spell does Molly Weasley use to kill Bellatrix Lestrange?",
+      "correct_answer": "Unknown — a curse that hit her in the chest",
+      "incorrect_answers": ["Avada Kedavra", "Sectumsempra", "Stupefy"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of Voldemort's father?",
+      "correct_answer": "Tom Riddle Sr.",
+      "incorrect_answers": ["Marvolo Gaunt", "Morfin Gaunt", "Thomas Riddle"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What potion smells different to each person, reflecting what attracts them?",
+      "correct_answer": "Amortentia",
+      "incorrect_answers": ["Felix Felicis", "Veritaserum", "Draught of Living Death"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Beauxbatons champion in the Triwizard Tournament?",
+      "correct_answer": "Fleur Delacour",
+      "incorrect_answers": ["Gabrielle Delacour", "Olympe Maxime", "Cho Chang"],
+      "difficulty": "hard"
     }
   ]
 }
