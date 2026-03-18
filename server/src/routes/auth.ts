@@ -24,9 +24,8 @@ async function verifyAppleToken(token: string): Promise<{ sub: string; email?: s
   const publicKey = crypto.createPublicKey({ key: appleKey, format: 'jwk' });
   const pem = publicKey.export({ type: 'spki', format: 'pem' }) as string;
   // Accept both production bundle ID and Expo Go's bundle ID
-  const audiences = (process.env.APPLE_APP_ID ?? 'com.quizza.app')
-    .split(',')
-    .concat('host.exp.Exponent');
+  const primary = process.env.APPLE_APP_ID ?? 'com.quizza.app';
+  const audiences: [string, ...string[]] = [primary, 'host.exp.Exponent'];
   return jwt.verify(token, pem, {
     algorithms: ['RS256'],
     issuer: 'https://appleid.apple.com',
