@@ -6,6 +6,7 @@
     { "id": 2004, "name": "Game of Thrones", "file": "game_of_thrones_questions.json" },
     { "id": 2005, "name": "Marvel Movies",   "file": "marvel-movies.json" },
     {"id": 2006,  "name": "Pop Music",        "file": "pop_music_questions.json"},
-    {"id": 2007,  "name": "Computer Science", "file": "computer_science_questions.json"}
+    {"id": 2007,  "name": "Computer Science", "file": "computer_science_questions.json"},
+    {"id": 2008,  "name": "TV Shows", "file": "tv_shows_questions.json"}
   ]
 }
