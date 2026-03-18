@@ -214,9 +214,9 @@ export default function ProfileScreen({ navigation }: Props) {
             />
             {editingUsername ? (
               <TouchableOpacity
-                style={[s.saveBtn, (usernameLoading || username.trim() === user?.username) && s.saveBtnDisabled]}
+                style={[s.saveBtn, usernameLoading && s.saveBtnDisabled]}
                 onPress={saveUsername}
-                disabled={usernameLoading || username.trim() === user?.username}
+                disabled={usernameLoading}
               >
                 {usernameLoading ? <ActivityIndicator color="#fff" size="small" /> : <Text style={s.saveBtnText}>Save</Text>}
               </TouchableOpacity>
