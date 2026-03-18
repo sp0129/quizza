@@ -55,6 +55,7 @@ export default function ProfileScreen({ navigation }: Props) {
   const [username, setUsername] = useState(user?.username ?? '');
   const [usernameLoading, setUsernameLoading] = useState(false);
   const [usernameError, setUsernameError] = useState('');
+  const [editingUsername, setEditingUsername] = useState(false);
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
   const [savingAvatarId, setSavingAvatarId] = useState<number | null>(null);
   const [soundOn, setSoundOn] = useState(isSoundEnabled());
@@ -71,13 +72,14 @@ export default function ProfileScreen({ navigation }: Props) {
 
   const saveUsername = async () => {
     const trimmed = username.trim();
-    if (!trimmed || trimmed === user?.username) return;
+    if (!trimmed || trimmed === user?.username) { setEditingUsername(false); return; }
     if (trimmed.length < 3) { setUsernameError('Minimum 3 characters'); return; }
     setUsernameError('');
     setUsernameLoading(true);
     try {
       const updated = await api.put<{ username: string }>('/users/me', { username: trimmed });
       refreshUser({ username: updated.username });
+      setEditingUsername(false);
     } catch (err: any) {
       setUsernameError(err.message);
     } finally {
@@ -161,6 +163,37 @@ export default function ProfileScreen({ navigation }: Props) {
             </View>
           </TouchableOpacity>
           <Text style={s.avatarHint}>Tap to change avatar</Text>
+
+          {/* Username — inline edit */}
+          <View style={s.usernameRow}>
+            {editingUsername ? (
+              <>
+                <TextInput
+                  style={s.usernameInput}
+                  value={username}
+                  onChangeText={setUsername}
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  autoFocus
+                  returnKeyType="done"
+                  onSubmitEditing={saveUsername}
+                />
+                <TouchableOpacity onPress={saveUsername} disabled={usernameLoading} style={s.usernameAction}>
+                  {usernameLoading
+                    ? <ActivityIndicator color={colors.green} size="small" />
+                    : <Text style={s.usernameSaveIcon}>✓</Text>}
+                </TouchableOpacity>
+              </>
+            ) : (
+              <>
+                <Text style={s.usernameDisplay}>{user?.username}</Text>
+                <TouchableOpacity onPress={() => setEditingUsername(true)} style={s.usernameAction}>
+                  <Text style={s.usernameEditIcon}>✏️</Text>
+                </TouchableOpacity>
+              </>
+            )}
+          </View>
+          {usernameError ? <Text style={s.error}>{usernameError}</Text> : null}
         </View>
 
         {/* Avatar picker */}
@@ -275,32 +308,6 @@ export default function ProfileScreen({ navigation }: Props) {
           </View>
         </View>
 
-        {/* Username */}
-        <View style={s.card}>
-          <Text style={s.cardLabel}>Username</Text>
-          <Text style={s.cardHint}>This is how other players find and challenge you.</Text>
-          <View style={s.row}>
-            <TextInput
-              style={[s.input, s.flex1]}
-              value={username}
-              onChangeText={setUsername}
-              autoCapitalize="none"
-              autoCorrect={false}
-              placeholderTextColor={colors.textMuted}
-              returnKeyType="done"
-              onSubmitEditing={saveUsername}
-            />
-            <TouchableOpacity
-              style={[s.saveBtn, (usernameLoading || username.trim() === user?.username) && s.saveBtnDisabled]}
-              onPress={saveUsername}
-              disabled={usernameLoading || username.trim() === user?.username}
-            >
-              {usernameLoading ? <ActivityIndicator color="#fff" size="small" /> : <Text style={s.saveBtnText}>Save</Text>}
-            </TouchableOpacity>
-          </View>
-          {usernameError ? <Text style={s.error}>{usernameError}</Text> : null}
-        </View>
-
         {/* Logout */}
         <TouchableOpacity
           style={s.logoutBtn}
@@ -345,6 +352,38 @@ const s = StyleSheet.create({
   },
   avatarEditText: { fontSize: 12 },
   avatarHint: { color: colors.textMuted, fontSize: 13 },
+  usernameRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginTop: 4,
+  },
+  usernameDisplay: {
+    color: colors.textPrimary,
+    fontSize: 18,
+    fontWeight: '700',
+  },
+  usernameInput: {
+    color: colors.textPrimary,
+    fontSize: 18,
+    fontWeight: '700',
+    borderBottomWidth: 1,
+    borderBottomColor: colors.green,
+    paddingVertical: 2,
+    paddingHorizontal: 4,
+    minWidth: 100,
+  },
+  usernameAction: {
+    padding: 4,
+  },
+  usernameEditIcon: {
+    fontSize: 14,
+  },
+  usernameSaveIcon: {
+    fontSize: 18,
+    color: colors.green,
+    fontWeight: '800',
+  },
   // Avatar picker
   avatarPickerCard: {
     backgroundColor: colors.surface,
