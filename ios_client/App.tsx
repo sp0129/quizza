@@ -161,6 +161,7 @@ function MainTabs() {
 
 function RootNavigator() {
   const { user, loading } = useAuth();
+  console.log('[Nav] user:', user?.username ?? null, 'loading:', loading);
 
   if (loading) {
     return (
