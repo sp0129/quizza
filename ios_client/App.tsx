@@ -174,7 +174,7 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false, animation: 'slide_from_right' }}>
       {user ? (
-        <>
+        <Stack.Group screenOptions={{ animationTypeForReplace: 'push' }} navigationKey="auth">
           <Stack.Screen name="MainTabs" component={MainTabs} />
           <Stack.Screen name="Category" component={CategoryScreen} />
           <Stack.Screen name="Game" component={GameScreen} />
@@ -187,16 +187,16 @@ function RootNavigator() {
           <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
           <Stack.Screen name="ResetPassword" component={ResetPasswordScreen} />
           <Stack.Screen name="EmailVerification" component={EmailVerificationScreen} />
-        </>
+        </Stack.Group>
       ) : (
-        <>
+        <Stack.Group navigationKey="unauth">
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
           <Stack.Screen name="ResetPassword" component={ResetPasswordScreen} />
           <Stack.Screen name="EmailVerification" component={EmailVerificationScreen} />
           <Stack.Screen name="GuestJoin" component={GuestJoinScreen} />
-        </>
+        </Stack.Group>
       )}
     </Stack.Navigator>
   );
