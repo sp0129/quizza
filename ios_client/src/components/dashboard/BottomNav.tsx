@@ -20,6 +20,8 @@ interface BottomNavProps {
   activeTab: string;
   onTabPress: (key: string) => void;
   badges?: { [key: string]: number };
+  disabledTabs?: string[];
+  onDisabledPress?: (key: string) => void;
 }
 
 const TABS: TabItem[] = [
@@ -34,11 +36,13 @@ function TabButton({
   isActive,
   badge,
   onPress,
+  disabled,
 }: {
   tab: TabItem;
   isActive: boolean;
   badge?: number;
   onPress: () => void;
+  disabled?: boolean;
 }) {
   const badgeScale = useSharedValue(1);
 
@@ -57,20 +61,23 @@ function TabButton({
 
   return (
     <TouchableOpacity
-      style={styles.tab}
+      style={[styles.tab, disabled && styles.tabDisabled]}
       onPress={() => {
         Haptics.selectionAsync();
         onPress();
       }}
-      activeOpacity={0.7}
+      activeOpacity={disabled ? 0.5 : 0.7}
     >
-      <Text style={[styles.tabIcon, isActive && styles.tabIconActive]}>
-        {tab.icon}
-      </Text>
-      <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>
+      <View style={disabled ? styles.disabledIconWrap : undefined}>
+        <Text style={[styles.tabIcon, isActive && !disabled && styles.tabIconActive, disabled && styles.tabIconDisabled]}>
+          {tab.icon}
+        </Text>
+        {disabled && <Text style={styles.lockBadge}>🔒</Text>}
+      </View>
+      <Text style={[styles.tabLabel, isActive && !disabled && styles.tabLabelActive, disabled && styles.tabLabelDisabled]}>
         {tab.label}
       </Text>
-      {badge !== undefined && badge > 0 && (
+      {badge !== undefined && badge > 0 && !disabled && (
         <Animated.View style={[styles.tabBadge, badgeStyle]}>
           <Text style={styles.tabBadgeText}>{badge > 99 ? '99+' : badge}</Text>
         </Animated.View>
@@ -79,21 +86,31 @@ function TabButton({
   );
 }
 
-function BottomNav({ activeTab, onTabPress, badges = {} }: BottomNavProps) {
+function BottomNav({ activeTab, onTabPress, badges = {}, disabledTabs = [], onDisabledPress }: BottomNavProps) {
   const insets = useSafeAreaInsets();
 
   return (
     <View style={[styles.container, { paddingBottom: insets.bottom }]}>
       <View style={styles.bar}>
-        {TABS.map((tab) => (
-          <TabButton
-            key={tab.key}
-            tab={tab}
-            isActive={activeTab === tab.key}
-            badge={badges[tab.key]}
-            onPress={() => onTabPress(tab.key)}
-          />
-        ))}
+        {TABS.map((tab) => {
+          const isDisabled = disabledTabs.includes(tab.key);
+          return (
+            <TabButton
+              key={tab.key}
+              tab={tab}
+              isActive={activeTab === tab.key}
+              badge={badges[tab.key]}
+              disabled={isDisabled}
+              onPress={() => {
+                if (isDisabled && onDisabledPress) {
+                  onDisabledPress(tab.key);
+                } else {
+                  onTabPress(tab.key);
+                }
+              }}
+            />
+          );
+        })}
       </View>
     </View>
   );
@@ -155,5 +172,24 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 9,
     fontWeight: '800',
+  },
+  tabDisabled: {
+    opacity: 0.4,
+  },
+  tabIconDisabled: {
+    opacity: 0.5,
+  },
+  tabLabelDisabled: {
+    color: colors.text.secondary,
+    opacity: 0.5,
+  },
+  disabledIconWrap: {
+    position: 'relative' as const,
+  },
+  lockBadge: {
+    position: 'absolute' as const,
+    top: -4,
+    right: -10,
+    fontSize: 8,
   },
 });

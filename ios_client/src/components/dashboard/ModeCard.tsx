@@ -25,9 +25,10 @@ interface ModeCardProps {
   onPress: () => void;
   subtitle?: string;
   gem?: GemColors;
+  disabled?: boolean;
 }
 
-function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: ModeCardProps) {
+function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem, disabled }: ModeCardProps) {
   const scale = useSharedValue(1);
 
   const g = gem ?? { base: color, light: color, dark: color };
@@ -40,11 +41,11 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: Mo
   const tapGesture = Gesture.Tap()
     .onBegin(() => {
       'worklet';
-      scale.value = withTiming(0.97, { duration: 80 });
+      if (!disabled) scale.value = withTiming(0.97, { duration: 80 });
     })
     .onFinalize((_e, success) => {
       'worklet';
-      scale.value = withSpring(1, { mass: 0.7, damping: 12, stiffness: 120 });
+      if (!disabled) scale.value = withSpring(1, { mass: 0.7, damping: 12, stiffness: 120 });
       if (success) runOnJS(handlePress)();
     });
 
@@ -58,37 +59,40 @@ function ModeCard({ icon, label, color, badgeCount, onPress, subtitle, gem }: Mo
         style={[
           styles.outer,
           animStyle,
+          disabled && styles.outerDisabled,
           {
-            shadowColor: g.base,
+            shadowColor: disabled ? '#000' : g.base,
             shadowOffset: { width: 0, height: 3 },
-            shadowOpacity: 0.2,
+            shadowOpacity: disabled ? 0.05 : 0.2,
             shadowRadius: 10,
-            elevation: 6,
+            elevation: disabled ? 1 : 6,
           },
         ]}
       >
         <LinearGradient
-          colors={[g.light, g.base, g.dark]}
+          colors={disabled ? ['#374151', '#1F2937', '#111827'] : [g.light, g.base, g.dark]}
           locations={[0, 0.4, 1]}
           style={styles.gradient}
         >
           {/* Soft top highlight */}
-          <LinearGradient
-            colors={['rgba(255,255,255,0.28)', 'rgba(255,255,255,0)']}
-            style={styles.topHighlight}
-          />
+          {!disabled && (
+            <LinearGradient
+              colors={['rgba(255,255,255,0.28)', 'rgba(255,255,255,0)']}
+              style={styles.topHighlight}
+            />
+          )}
 
           {/* Content */}
           <View style={styles.content}>
-            <Text style={styles.icon}>{icon}</Text>
+            <Text style={[styles.icon, disabled && styles.iconDisabled]}>{disabled ? '🔒' : icon}</Text>
             <View style={styles.textCol}>
-              <Text style={styles.label}>{label}</Text>
-              {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+              <Text style={[styles.label, disabled && styles.labelDisabled]}>{label}</Text>
+              {subtitle && <Text style={[styles.subtitle, disabled && styles.subtitleDisabled]}>{disabled ? 'Account required' : subtitle}</Text>}
             </View>
           </View>
 
           {/* Badge */}
-          {badgeCount !== undefined && badgeCount > 0 && (
+          {badgeCount !== undefined && badgeCount > 0 && !disabled && (
             <View style={styles.badge}>
               <Text style={styles.badgeText}>{badgeCount}</Text>
             </View>
@@ -163,5 +167,17 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 11,
     fontWeight: '800',
+  },
+  outerDisabled: {
+    opacity: 0.55,
+  },
+  iconDisabled: {
+    opacity: 0.6,
+  },
+  labelDisabled: {
+    color: 'rgba(255,255,255,0.5)',
+  },
+  subtitleDisabled: {
+    color: 'rgba(255,255,255,0.3)',
   },
 });

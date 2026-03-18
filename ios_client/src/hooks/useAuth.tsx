@@ -69,8 +69,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signup = async (username: string, email: string, password: string) => {
-    const data = await api.post<{ token: string; user: User }>('/auth/signup', { username, email, password });
-    await storeAuth(data.token, data.user);
+    // Signup no longer returns a token — user must verify email first
+    await api.post<{ message: string; email: string }>('/auth/signup', { username, email, password });
   };
 
   const loginAsGuest = async (username?: string) => {

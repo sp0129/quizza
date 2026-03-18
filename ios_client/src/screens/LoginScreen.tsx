@@ -23,8 +23,10 @@ export default function LoginScreen({ navigation }: Props) {
   const onSuccess = () => {
     // If Login was pushed onto the authenticated stack (e.g. by a guest),
     // navigate back to Dashboard. In the unauthenticated stack the
-    // navigator switch handles it automatically.
-    try { navigation.navigate('MainTabs' as any); } catch {}
+    // navigator switch handles it automatically — no navigation needed.
+    if (navigation.canGoBack()) {
+      navigation.navigate('MainTabs' as any);
+    }
   };
 
   const handleLogin = async () => {
@@ -35,6 +37,11 @@ export default function LoginScreen({ navigation }: Props) {
       await login(email.trim().toLowerCase(), password);
       onSuccess();
     } catch (err: any) {
+      // If email not verified, navigate to verification screen
+      if (err.code === 'EMAIL_NOT_VERIFIED' || err.message?.includes('verify your email')) {
+        navigation.navigate('EmailVerification' as any, { email: email.trim().toLowerCase() });
+        return;
+      }
       setError(err.message);
     } finally {
       setLoading(false);
@@ -101,7 +108,7 @@ export default function LoginScreen({ navigation }: Props) {
               secureTextEntry
             />
 
-            <TouchableOpacity onPress={() => navigation.navigate('ResetPassword' as any)} style={s.forgotLink}>
+            <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword' as any)} style={s.forgotLink}>
               <Text style={s.forgotText}>Forgot password?</Text>
             </TouchableOpacity>
 

@@ -115,12 +115,8 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const handleOnboardingCreateRoom = useCallback(async () => {
     await dismissOnboarding();
-    if (isGuest) {
-      navigation.navigate('Signup');
-      return;
-    }
     navigation.navigate('Category', { mode: 'room' });
-  }, [dismissOnboarding, isGuest, navigation]);
+  }, [dismissOnboarding, navigation]);
 
   // Fetch user metrics
   useEffect(() => {
@@ -219,16 +215,19 @@ export default function DashboardScreen({ navigation }: Props) {
   }, [navigation]);
 
   const handleGroupPlay = useCallback(() => {
-    if (isGuest) {
-      navigation.navigate('Signup');
-      return;
-    }
     navigation.navigate('Category', { mode: 'room' });
-  }, [navigation, isGuest]);
+  }, [navigation]);
 
   const handleChallenge = useCallback(() => {
     if (isGuest) {
-      navigation.navigate('Signup');
+      Alert.alert(
+        'Account Required',
+        'Create a free account to challenge friends.',
+        [
+          { text: 'Not Now', style: 'cancel' },
+          { text: 'Sign Up', onPress: () => navigation.navigate('Signup') },
+        ],
+      );
       return;
     }
     navigation.navigate('Friends');
@@ -370,6 +369,7 @@ export default function DashboardScreen({ navigation }: Props) {
                 badgeCount={pendingCount}
                 onPress={handleChallenge}
                 subtitle="vs your friends"
+                disabled={isGuest}
               />
             </View>
             <View style={styles.modeGridRow}>
@@ -394,7 +394,7 @@ export default function DashboardScreen({ navigation }: Props) {
         </Animated.View>
 
         {/* ═══ FRIEND REQUESTS ═══ */}
-        {friendRequests.length > 0 && (
+        {!isGuest && friendRequests.length > 0 && (
           <Animated.View entering={FadeInDown.delay(350).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>👋</Text>
@@ -437,7 +437,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ INCOMING CHALLENGES ═══ */}
-        {incomingChallenges.length > 0 && (
+        {!isGuest && incomingChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(400).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>⚔️</Text>
@@ -470,7 +470,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ OUTGOING / WAITING CHALLENGES ═══ */}
-        {waitingChallenges.length > 0 && (
+        {!isGuest && waitingChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(420).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>⏳</Text>
@@ -503,7 +503,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ COMPLETED CHALLENGES ═══ */}
-        {completedChallenges.length > 0 && (
+        {!isGuest && completedChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(450).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>📋</Text>

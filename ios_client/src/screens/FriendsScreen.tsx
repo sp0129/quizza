@@ -40,7 +40,7 @@ interface UserSearchResult {
 
 export default function FriendsScreen({ navigation }: Props) {
   const insets = useSafeAreaInsets();
-  const { user } = useAuth();
+  const { user, isGuest } = useAuth();
   const inputRef = useRef<TextInput>(null);
 
   const [friends, setFriends] = useState<Friend[]>([]);
@@ -166,6 +166,34 @@ export default function FriendsScreen({ navigation }: Props) {
   }, [user?.username]);
 
   const isSearching = query.trim().length >= 2;
+
+  if (isGuest) {
+    return (
+      <View style={styles.root}>
+        <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
+          <View style={{ width: 36 }} />
+          <Text style={styles.title}>Friends</Text>
+          <View style={{ width: 36 }} />
+        </View>
+        <View style={styles.emptyContainer}>
+          <Animated.View entering={FadeInDown.delay(100).duration(400)} style={styles.emptyContent}>
+            <Text style={styles.emptyIcon}>🔒</Text>
+            <Text style={styles.emptyTitle}>Account Required</Text>
+            <Text style={styles.emptyDesc}>
+              Create a free account to add friends, send challenges, and build your trivia squad.
+            </Text>
+            <TouchableOpacity
+              style={styles.searchPromptBtn}
+              onPress={() => navigation.navigate('Signup' as any)}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.searchPromptText}>Create Account</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.root}>

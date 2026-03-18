@@ -49,7 +49,7 @@ export function UserAvatar({ avatarId, username, size }: { avatarId?: number; us
 }
 
 export default function ProfileScreen({ navigation }: Props) {
-  const { user, refreshUser, logout } = useAuth();
+  const { user, refreshUser, logout, isGuest } = useAuth();
   const insets = useSafeAreaInsets();
 
   const [username, setUsername] = useState(user?.username ?? '');
@@ -98,6 +98,41 @@ export default function ProfileScreen({ navigation }: Props) {
       setSavingAvatarId(null);
     }
   };
+
+  if (isGuest) {
+    return (
+      <View style={s.root}>
+        <LinearGradient colors={gradients.bg} style={StyleSheet.absoluteFill} pointerEvents="none" />
+        <View style={[s.content, { paddingTop: insets.top + 16, flex: 1, justifyContent: 'center' }]}>
+          <View style={s.header}>
+            <View style={{ width: 36 }} />
+            <Text style={s.headerTitle}>Profile</Text>
+            <View style={{ width: 36 }} />
+          </View>
+          <View style={{ alignItems: 'center', gap: 16, paddingHorizontal: 20 }}>
+            <Text style={{ fontSize: 56 }}>🔒</Text>
+            <Text style={{ color: colors.textPrimary, fontSize: 20, fontWeight: '800' }}>Account Required</Text>
+            <Text style={{ color: colors.textMuted, fontSize: 14, textAlign: 'center', lineHeight: 20 }}>
+              Create a free account to customize your profile, change your avatar, and track your stats.
+            </Text>
+            <TouchableOpacity
+              style={[s.saveBtn, { paddingHorizontal: 32, paddingVertical: 14, marginTop: 8 }]}
+              onPress={() => navigation.navigate('Signup' as any)}
+              activeOpacity={0.8}
+            >
+              <Text style={[s.saveBtnText, { fontSize: 16 }]}>Create Account</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={s.logoutBtn}
+              onPress={() => logout()}
+            >
+              <Text style={s.logoutBtnText}>Log Out</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={s.root}>

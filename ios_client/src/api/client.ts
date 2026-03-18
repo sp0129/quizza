@@ -21,7 +21,12 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
     },
   });
   const data = await res.json();
-  if (!res.ok) throw new Error(data.error ?? 'Request failed');
+  if (!res.ok) {
+    const err = new Error(data.error ?? 'Request failed') as any;
+    if (data.code) err.code = data.code;
+    if (data.email) err.email = data.email;
+    throw err;
+  }
   return data as T;
 }
 

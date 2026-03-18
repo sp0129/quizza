@@ -7,6 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import * as Linking from 'expo-linking';
+import { Alert } from 'react-native';
 import { AuthProvider, useAuth } from './src/hooks/useAuth';
 import { colors } from './src/theme';
 import BottomNav from './src/components/dashboard/BottomNav';
@@ -14,6 +15,9 @@ import { initSoundSetting } from './src/utils/sounds';
 
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
+import ForgotPasswordScreen from './src/screens/ForgotPasswordScreen';
+import ResetPasswordScreen from './src/screens/ResetPasswordScreen';
+import EmailVerificationScreen from './src/screens/EmailVerificationScreen';
 import DashboardScreen from './src/screens/DashboardScreen';
 import CategoryScreen from './src/screens/CategoryScreen';
 import GameScreen from './src/screens/GameScreen';
@@ -23,7 +27,6 @@ import ProfileScreen from './src/screens/ProfileScreen';
 import FriendsScreen from './src/screens/FriendsScreen';
 import LeaderboardScreen from './src/screens/LeaderboardScreen';
 import ResultsScreen from './src/screens/ResultsScreen';
-import ResetPasswordScreen from './src/screens/ResetPasswordScreen';
 
 // Tab navigator param list
 export type TabParamList = {
@@ -38,7 +41,9 @@ export type RootStackParamList = {
   // Auth
   Login: undefined;
   Signup: undefined;
-  ResetPassword: undefined;
+  ForgotPassword: undefined;
+  ResetPassword: { token: string };
+  EmailVerification: { email?: string; token?: string };
   GuestJoin: { roomCode: string };
   // App
   MainTabs: undefined;
@@ -91,6 +96,10 @@ const linking: LinkingOptions<RootStackParamList> = {
   config: {
     screens: {
       GuestJoin: 'join/:roomCode',
+      // Deep links: quizza://verify?token=ABC → EmailVerification screen
+      EmailVerification: 'verify',
+      // Deep links: quizza://reset?token=ABC → ResetPassword screen
+      ResetPassword: 'reset',
     },
   },
 };
@@ -103,6 +112,8 @@ const TAB_KEY_MAP: Record<string, keyof TabParamList> = {
 };
 
 function MainTabs() {
+  const { isGuest } = useAuth();
+
   return (
     <Tab.Navigator
       screenOptions={{ headerShown: false, lazy: false }}
@@ -124,6 +135,17 @@ function MainTabs() {
                 key === 'friends' ? 'Friends' :
                 key === 'profile' ? 'Profile' : 'Home';
               navigation.navigate(routeName);
+            }}
+            disabledTabs={isGuest ? ['friends', 'profile'] : []}
+            onDisabledPress={() => {
+              Alert.alert(
+                'Account Required',
+                'Create a free account to access this feature.',
+                [
+                  { text: 'Not Now', style: 'cancel' },
+                  { text: 'Sign Up', onPress: () => navigation.navigate('Signup') },
+                ],
+              );
             }}
           />
         );
@@ -161,12 +183,17 @@ function RootNavigator() {
           {/* Guests can navigate here to create a real account */}
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+          <Stack.Screen name="ResetPassword" component={ResetPasswordScreen} />
+          <Stack.Screen name="EmailVerification" component={EmailVerificationScreen} />
         </>
       ) : (
         <>
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
           <Stack.Screen name="ResetPassword" component={ResetPasswordScreen} />
+          <Stack.Screen name="EmailVerification" component={EmailVerificationScreen} />
           <Stack.Screen name="GuestJoin" component={GuestJoinScreen} />
         </>
       )}

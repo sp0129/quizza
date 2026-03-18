@@ -21,7 +21,7 @@ export default function SignupScreen({ navigation }: Props) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const onSuccess = () => {
+  const onAppleSuccess = () => {
     try { navigation.navigate('MainTabs' as any); } catch {}
   };
 
@@ -35,7 +35,8 @@ export default function SignupScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await signup(username.trim(), email.trim().toLowerCase(), password);
-      onSuccess();
+      // Navigate to verification screen instead of auto-login
+      navigation.navigate('EmailVerification', { email: email.trim().toLowerCase() });
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -109,7 +110,7 @@ export default function SignupScreen({ navigation }: Props) {
               onPress={async () => {
                 setError('');
                 setLoading(true);
-                try { await loginWithApple(); onSuccess(); }
+                try { await loginWithApple(); onAppleSuccess(); }
                 catch (err: any) { if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed'); }
                 finally { setLoading(false); }
               }}
