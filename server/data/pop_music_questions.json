@@ -304,6 +304,840 @@
     "difficulty": "easy"
   },
   {
+      "question": "Which Michael Jackson album is the best-selling album of all time?",
+      "correct_answer": "Thriller",
+      "incorrect_answers": ["Bad", "Dangerous", "Off the Wall"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist sang 'Like a Virgin' in 1984?",
+      "correct_answer": "Madonna",
+      "incorrect_answers": ["Cyndi Lauper", "Whitney Houston", "Janet Jackson"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which boy band sang 'I Want It That Way'?",
+      "correct_answer": "Backstreet Boys",
+      "incorrect_answers": ["*NSYNC", "98 Degrees", "Westlife"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'I Will Always Love You' in the movie 'The Bodyguard'?",
+      "correct_answer": "Whitney Houston",
+      "incorrect_answers": ["Mariah Carey", "Celine Dion", "Toni Braxton"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Purple Rain' in 1984?",
+      "correct_answer": "Prince",
+      "incorrect_answers": ["Michael Jackson", "David Bowie", "Stevie Wonder"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Drake's 2018 hit that became a viral dance challenge?",
+      "correct_answer": "In My Feelings",
+      "incorrect_answers": ["God's Plan", "Hotline Bling", "One Dance"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist sang 'Wannabe' in 1996?",
+      "correct_answer": "Spice Girls",
+      "incorrect_answers": ["TLC", "Destiny's Child", "All Saints"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the 1999 hit 'Livin' La Vida Loca'?",
+      "correct_answer": "Ricky Martin",
+      "incorrect_answers": ["Enrique Iglesias", "Marc Anthony", "Julio Iglesias"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s band sang 'Take On Me'?",
+      "correct_answer": "a-ha",
+      "incorrect_answers": ["Duran Duran", "Depeche Mode", "Tears for Fears"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'My Heart Will Go On' from the movie 'Titanic'?",
+      "correct_answer": "Celine Dion",
+      "incorrect_answers": ["Whitney Houston", "Mariah Carey", "Barbra Streisand"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Lose Yourself' from the movie '8 Mile'?",
+      "correct_answer": "Eminem",
+      "incorrect_answers": ["50 Cent", "Jay-Z", "Kanye West"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s artist sang 'Girls Just Want to Have Fun'?",
+      "correct_answer": "Cyndi Lauper",
+      "incorrect_answers": ["Madonna", "Pat Benatar", "Debbie Harry"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who performed the 1992 hit 'End of the Road'?",
+      "correct_answer": "Boyz II Men",
+      "incorrect_answers": ["New Edition", "Bell Biv DeVoe", "Jodeci"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which band sang 'Smells Like Teen Spirit' in 1991?",
+      "correct_answer": "Nirvana",
+      "incorrect_answers": ["Pearl Jam", "Soundgarden", "Alice in Chains"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'No Scrubs' in 1999?",
+      "correct_answer": "TLC",
+      "incorrect_answers": ["Destiny's Child", "En Vogue", "SWV"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the hit 'Stronger' with the lyric 'what doesn't kill you makes you stronger'?",
+      "correct_answer": "Kelly Clarkson",
+      "incorrect_answers": ["Demi Lovato", "Pink", "Christina Aguilera"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which band released 'Bohemian Rhapsody', which returned to the charts after a 2018 biopic?",
+      "correct_answer": "Queen",
+      "incorrect_answers": ["The Beatles", "Led Zeppelin", "The Rolling Stones"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Crazy in Love' featuring Jay-Z in 2003?",
+      "correct_answer": "Beyoncé",
+      "incorrect_answers": ["Rihanna", "Alicia Keys", "Ciara"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s duo sang 'Wake Me Up Before You Go-Go'?",
+      "correct_answer": "Wham!",
+      "incorrect_answers": ["Hall & Oates", "Pet Shop Boys", "Eurythmics"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist sang 'Hotline Bling' in 2015?",
+      "correct_answer": "Drake",
+      "incorrect_answers": ["The Weeknd", "Future", "Bryson Tiller"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the 2014 hit 'All About That Bass'?",
+      "correct_answer": "Meghan Trainor",
+      "incorrect_answers": ["Ariana Grande", "Iggy Azalea", "Carly Rae Jepsen"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist sang 'SexyBack' in 2006?",
+      "correct_answer": "Justin Timberlake",
+      "incorrect_answers": ["Usher", "Ne-Yo", "Chris Brown"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Man! I Feel Like a Woman!' in 1997?",
+      "correct_answer": "Shania Twain",
+      "incorrect_answers": ["Faith Hill", "Sheryl Crow", "Alanis Morissette"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which boy band released 'Bye Bye Bye' in 2000?",
+      "correct_answer": "*NSYNC",
+      "incorrect_answers": ["Backstreet Boys", "98 Degrees", "LFO"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Don't Speak' in 1995?",
+      "correct_answer": "No Doubt",
+      "incorrect_answers": ["Garbage", "Alanis Morissette", "The Cranberries"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the hit 'Yeah!' featuring Lil Jon and Ludacris?",
+      "correct_answer": "Usher",
+      "incorrect_answers": ["Nelly", "R. Kelly", "Akon"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang the 1987 hit 'Never Gonna Give You Up'?",
+      "correct_answer": "Rick Astley",
+      "incorrect_answers": ["George Michael", "Phil Collins", "Billy Ocean"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Blank Space' and 'Shake It Off' from the album '1989'?",
+      "correct_answer": "Taylor Swift",
+      "incorrect_answers": ["Katy Perry", "Ariana Grande", "Selena Gomez"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Counting Stars' in 2013?",
+      "correct_answer": "OneRepublic",
+      "incorrect_answers": ["Imagine Dragons", "Maroon 5", "Fun."],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s band sang 'Sweet Child O' Mine'?",
+      "correct_answer": "Guns N' Roses",
+      "incorrect_answers": ["Bon Jovi", "Def Leppard", "Motley Crue"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Bleeding Love' in 2007?",
+      "correct_answer": "Leona Lewis",
+      "incorrect_answers": ["Adele", "Amy Winehouse", "Duffy"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2016 hit 'Cheap Thrills'?",
+      "correct_answer": "Sia",
+      "incorrect_answers": ["Rihanna", "Ariana Grande", "Selena Gomez"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Livin' on a Prayer' in 1986?",
+      "correct_answer": "Bon Jovi",
+      "incorrect_answers": ["Def Leppard", "Journey", "Foreigner"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Gold Digger' featuring Jamie Foxx?",
+      "correct_answer": "Kanye West",
+      "incorrect_answers": ["Jay-Z", "Lil Wayne", "T.I."],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Torn' in 1997?",
+      "correct_answer": "Natalie Imbruglia",
+      "incorrect_answers": ["Alanis Morissette", "Jewel", "Lisa Loeb"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which band sang 'It's My Life' in 2000?",
+      "correct_answer": "Bon Jovi",
+      "incorrect_answers": ["Nickelback", "3 Doors Down", "Creed"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the 2015 hit 'Can't Feel My Face'?",
+      "correct_answer": "The Weeknd",
+      "incorrect_answers": ["Bruno Mars", "Sam Smith", "Shawn Mendes"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s artist is known as the 'Material Girl'?",
+      "correct_answer": "Madonna",
+      "incorrect_answers": ["Cyndi Lauper", "Debbie Harry", "Whitney Houston"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Unwritten' in 2004, which became the theme for 'The Hills'?",
+      "correct_answer": "Natasha Bedingfield",
+      "incorrect_answers": ["Hilary Duff", "Ashlee Simpson", "Kelly Clarkson"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2010 hit 'Just the Way You Are'?",
+      "correct_answer": "Bruno Mars",
+      "incorrect_answers": ["Jason Mraz", "John Legend", "Ed Sheeran"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Ironic' in 1995?",
+      "correct_answer": "Alanis Morissette",
+      "incorrect_answers": ["Fiona Apple", "Sheryl Crow", "Tori Amos"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which group released 'Waterfalls' in 1995?",
+      "correct_answer": "TLC",
+      "incorrect_answers": ["En Vogue", "Salt-N-Pepa", "Destiny's Child"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Every Breath You Take' in 1983?",
+      "correct_answer": "The Police",
+      "incorrect_answers": ["U2", "Duran Duran", "The Cure"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'We Found Love' featuring Calvin Harris in 2011?",
+      "correct_answer": "Rihanna",
+      "incorrect_answers": ["Beyoncé", "Katy Perry", "Lady Gaga"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Hollaback Girl' in 2004?",
+      "correct_answer": "Gwen Stefani",
+      "incorrect_answers": ["Fergie", "Pink", "Christina Aguilera"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the hit 'Stitches' in 2015?",
+      "correct_answer": "Shawn Mendes",
+      "incorrect_answers": ["Charlie Puth", "Ed Sheeran", "Troye Sivan"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the album 'Born to Die' in 2012?",
+      "correct_answer": "Lana Del Rey",
+      "incorrect_answers": ["Florence Welch", "Marina", "Lorde"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s band sang 'Don't Stop Believin''?",
+      "correct_answer": "Journey",
+      "incorrect_answers": ["REO Speedwagon", "Styx", "Boston"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang the 1997 hit 'MMMBop'?",
+      "correct_answer": "Hanson",
+      "incorrect_answers": ["Hansen", "LFO", "Dream Street"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Levitating' in 2020?",
+      "correct_answer": "Dua Lipa",
+      "incorrect_answers": ["Doja Cat", "Ariana Grande", "Megan Thee Stallion"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Bills, Bills, Bills' in 1999?",
+      "correct_answer": "Destiny's Child",
+      "incorrect_answers": ["TLC", "3LW", "All Saints"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Get Lucky' with Pharrell Williams in 2013?",
+      "correct_answer": "Daft Punk",
+      "incorrect_answers": ["Calvin Harris", "David Guetta", "Avicii"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Roar' in 2013?",
+      "correct_answer": "Katy Perry",
+      "incorrect_answers": ["Pink", "Kelly Clarkson", "Demi Lovato"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the hit 'Stay With Me' in 2014?",
+      "correct_answer": "Sam Smith",
+      "incorrect_answers": ["Ed Sheeran", "Hozier", "George Ezra"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'What's Love Got to Do with It' in 1984?",
+      "correct_answer": "Tina Turner",
+      "incorrect_answers": ["Diana Ross", "Aretha Franklin", "Donna Summer"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which band released 'Somebody That I Used to Know' in 2011?",
+      "correct_answer": "Gotye",
+      "incorrect_answers": ["MGMT", "Foster the People", "Fun."],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the 2020 hit 'WAP' featuring Megan Thee Stallion?",
+      "correct_answer": "Cardi B",
+      "incorrect_answers": ["Nicki Minaj", "Doja Cat", "Lizzo"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s band sang 'Everybody Wants to Rule the World'?",
+      "correct_answer": "Tears for Fears",
+      "incorrect_answers": ["Depeche Mode", "The Cure", "New Order"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'With or Without You' in 1987?",
+      "correct_answer": "U2",
+      "incorrect_answers": ["INXS", "Simple Minds", "The Cure"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2019 hit 'Señorita' with Camila Cabello?",
+      "correct_answer": "Shawn Mendes",
+      "incorrect_answers": ["Ed Sheeran", "Justin Bieber", "Charlie Puth"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Under Pressure' with David Bowie in 1981?",
+      "correct_answer": "Queen",
+      "incorrect_answers": ["The Rolling Stones", "Led Zeppelin", "The Who"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'We Belong Together' in 2005?",
+      "correct_answer": "Mariah Carey",
+      "incorrect_answers": ["Whitney Houston", "Alicia Keys", "Mary J. Blige"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Drops of Jupiter' in 2001?",
+      "correct_answer": "Train",
+      "incorrect_answers": ["Matchbox Twenty", "Goo Goo Dolls", "Third Eye Blind"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2022 hit 'About Damn Time'?",
+      "correct_answer": "Lizzo",
+      "incorrect_answers": ["Doja Cat", "Megan Thee Stallion", "SZA"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'I Gotta Feeling' in 2009?",
+      "correct_answer": "Black Eyed Peas",
+      "incorrect_answers": ["LMFAO", "Far East Movement", "Flo Rida"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which band released 'Chasing Cars' in 2006?",
+      "correct_answer": "Snow Patrol",
+      "incorrect_answers": ["Keane", "Travis", "Coldplay"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Rhythm Nation' in 1989?",
+      "correct_answer": "Janet Jackson",
+      "incorrect_answers": ["Paula Abdul", "Madonna", "Whitney Houston"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Thank U, Next' as a single in 2018?",
+      "correct_answer": "Ariana Grande",
+      "incorrect_answers": ["Dua Lipa", "Billie Eilish", "Camila Cabello"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Kiss from a Rose' in 1994?",
+      "correct_answer": "Seal",
+      "incorrect_answers": ["Lenny Kravitz", "Maxwell", "Terence Trent D'Arby"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which group released 'Sweetest Thing' as a single in 1998?",
+      "correct_answer": "U2",
+      "incorrect_answers": ["Oasis", "Radiohead", "R.E.M."],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Shallow' with Bradley Cooper in the 2018 film 'A Star Is Born'?",
+      "correct_answer": "Lady Gaga",
+      "incorrect_answers": ["Beyoncé", "Adele", "Ariana Grande"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2017 hit 'Humble'?",
+      "correct_answer": "Kendrick Lamar",
+      "incorrect_answers": ["J. Cole", "Drake", "Travis Scott"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Creep' in 1992?",
+      "correct_answer": "Radiohead",
+      "incorrect_answers": ["Nirvana", "The Smashing Pumpkins", "Oasis"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which pop artist released '24K Magic' in 2016?",
+      "correct_answer": "Bruno Mars",
+      "incorrect_answers": ["The Weeknd", "Justin Timberlake", "Jason Derulo"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Vogue' in 1990?",
+      "correct_answer": "Madonna",
+      "incorrect_answers": ["Janet Jackson", "Paula Abdul", "Gloria Estefan"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2023 hit 'Kill Bill'?",
+      "correct_answer": "SZA",
+      "incorrect_answers": ["Doja Cat", "Summer Walker", "H.E.R."],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Wonderwall' in 1995?",
+      "correct_answer": "Oasis",
+      "incorrect_answers": ["Blur", "Pulp", "Radiohead"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Closer' with Halsey in 2016?",
+      "correct_answer": "The Chainsmokers",
+      "incorrect_answers": ["Marshmello", "Zedd", "Calvin Harris"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Smooth' featuring Rob Thomas in 1999?",
+      "correct_answer": "Santana",
+      "incorrect_answers": ["Dave Matthews Band", "Lenny Kravitz", "John Mayer"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2021 hit 'Montero (Call Me By Your Name)'?",
+      "correct_answer": "Lil Nas X",
+      "incorrect_answers": ["Doja Cat", "Jack Harlow", "The Kid Laroi"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Jump' in 1984?",
+      "correct_answer": "Van Halen",
+      "incorrect_answers": ["Def Leppard", "Bon Jovi", "Whitesnake"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Rockabye' with Sean Paul and Anne-Marie in 2016?",
+      "correct_answer": "Clean Bandit",
+      "incorrect_answers": ["Major Lazer", "DJ Snake", "Kygo"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the 2022 hit 'Anti-Hero'?",
+      "correct_answer": "Taylor Swift",
+      "incorrect_answers": ["Olivia Rodrigo", "Billie Eilish", "Dua Lipa"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s duo sang 'Sweet Dreams (Are Made of This)'?",
+      "correct_answer": "Eurythmics",
+      "incorrect_answers": ["Pet Shop Boys", "Soft Cell", "Yazoo"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'All Star' in 1999, later featured in the movie 'Shrek'?",
+      "correct_answer": "Smash Mouth",
+      "incorrect_answers": ["Third Eye Blind", "Sugar Ray", "Lit"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2020 hit 'Blinding Lights'?",
+      "correct_answer": "The Weeknd",
+      "incorrect_answers": ["Dua Lipa", "Harry Styles", "Post Malone"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'I Wanna Dance with Somebody' in 1987?",
+      "correct_answer": "Whitney Houston",
+      "incorrect_answers": ["Madonna", "Janet Jackson", "Tina Turner"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Sunflower' with Post Malone for the 'Spider-Verse' soundtrack?",
+      "correct_answer": "Swae Lee",
+      "incorrect_answers": ["Juice WRLD", "Travis Scott", "Khalid"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'It's Gonna Be Me' in 2000?",
+      "correct_answer": "*NSYNC",
+      "incorrect_answers": ["Backstreet Boys", "O-Town", "98 Degrees"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s band sang 'Africa'?",
+      "correct_answer": "Toto",
+      "incorrect_answers": ["Foreigner", "Chicago", "Asia"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the 2023 album 'Midnights'?",
+      "correct_answer": "Taylor Swift",
+      "incorrect_answers": ["Beyoncé", "SZA", "Miley Cyrus"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist sang 'Dance Monkey' in 2019?",
+      "correct_answer": "Tones and I",
+      "incorrect_answers": ["Billie Eilish", "Lizzo", "Dua Lipa"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Careless Whisper' in 1984?",
+      "correct_answer": "George Michael",
+      "incorrect_answers": ["Phil Collins", "Lionel Richie", "Billy Joel"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Savage Love' in 2020?",
+      "correct_answer": "Jawsh 685 and Jason Derulo",
+      "incorrect_answers": ["BTS and Halsey", "Doja Cat and SZA", "The Weeknd and Ariana Grande"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'I Kissed a Girl' in 2008?",
+      "correct_answer": "Katy Perry",
+      "incorrect_answers": ["Pink", "Lady Gaga", "Ke$ha"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which group released the 1997 hit 'Tubthumping'?",
+      "correct_answer": "Chumbawamba",
+      "incorrect_answers": ["The Verve", "Blur", "Oasis"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Sucker' in 2019?",
+      "correct_answer": "Jonas Brothers",
+      "incorrect_answers": ["Maroon 5", "OneRepublic", "Panic! At The Disco"],
+      "difficulty": "easy"
+    },
+  {
+      "question": "Which Michael Jackson song features the iconic moonwalk debut on TV?",
+      "correct_answer": "Billie Jean",
+      "incorrect_answers": ["Beat It", "Thriller", "Bad"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the first song to debut at #1 on the Billboard Hot 100?",
+      "correct_answer": "You Are Not Alone by Michael Jackson",
+      "incorrect_answers": ["Fantasy by Mariah Carey", "Scream by Michael Jackson", "Vogue by Madonna"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Britney Spears album featured 'I'm a Slave 4 U' and marked her edgier image?",
+      "correct_answer": "Britney",
+      "incorrect_answers": ["In the Zone", "Blackout", "Circus"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which artist's 2011 album '4' was named after her birthday, September 4th?",
+      "correct_answer": "Beyoncé",
+      "incorrect_answers": ["Rihanna", "Adele", "Lady Gaga"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which member of *NSYNC went on to star in films like 'The Social Network'?",
+      "correct_answer": "Justin Timberlake",
+      "incorrect_answers": ["JC Chasez", "Lance Bass", "Joey Fatone"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the first K-pop song to reach #1 on the Billboard Hot 100?",
+      "correct_answer": "Dynamite by BTS",
+      "incorrect_answers": ["Gangnam Style by PSY", "How You Like That by Blackpink", "DDU-DU DDU-DU by Blackpink"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which producer created the 'Wall of Sound' technique and worked with The Ramones in the 80s?",
+      "correct_answer": "Phil Spector",
+      "incorrect_answers": ["Quincy Jones", "Rick Rubin", "George Martin"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the name of the Fugees' best-selling 1996 album?",
+      "correct_answer": "The Score",
+      "incorrect_answers": ["Blunted on Reality", "The Miseducation", "Carnival"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 80s pop star had hits with 'Karma Chameleon' and 'Do You Really Want to Hurt Me'?",
+      "correct_answer": "Culture Club",
+      "incorrect_answers": ["Duran Duran", "Depeche Mode", "Spandau Ballet"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the name of Lauryn Hill's groundbreaking 1998 solo album?",
+      "correct_answer": "The Miseducation of Lauryn Hill",
+      "incorrect_answers": ["The Score", "When the Pawn", "Baduizm"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Taylor Swift album was the first pop album she released after leaving country music?",
+      "correct_answer": "1989",
+      "incorrect_answers": ["Red", "Reputation", "Lover"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which artist holds the record for the most consecutive weeks at #1 on the UK Singles Chart with 'Killing Me Softly'?",
+      "correct_answer": "Fugees",
+      "incorrect_answers": ["Wet Wet Wet", "Bryan Adams", "Whitney Houston"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 90s alternative band released the album 'OK Computer'?",
+      "correct_answer": "Radiohead",
+      "incorrect_answers": ["The Verve", "Blur", "Pulp"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is SZA's real first name?",
+      "correct_answer": "Solána",
+      "incorrect_answers": ["Sabrina", "Sierra", "Simone"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which song by Outkast features the famous chant 'Alright alright alright alright'?",
+      "correct_answer": "Hey Ya!",
+      "incorrect_answers": ["Roses", "Ms. Jackson", "The Way You Move"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which pop star starred in the 2018 remake of 'A Star Is Born' alongside Bradley Cooper?",
+      "correct_answer": "Lady Gaga",
+      "incorrect_answers": ["Beyoncé", "Rihanna", "Ariana Grande"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the name of the charity single that raised funds for Ethiopian famine relief in 1984?",
+      "correct_answer": "Do They Know It's Christmas?",
+      "incorrect_answers": ["We Are the World", "Tears Are Not Enough", "Live Aid"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which rapper's debut album 'Invasion of Privacy' won the Grammy for Best Rap Album in 2019?",
+      "correct_answer": "Cardi B",
+      "incorrect_answers": ["Nicki Minaj", "Megan Thee Stallion", "Doja Cat"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Spice Girl was known as 'Scary Spice'?",
+      "correct_answer": "Mel B",
+      "incorrect_answers": ["Mel C", "Victoria Beckham", "Emma Bunton"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 80s new wave band released the album 'Rio' in 1982?",
+      "correct_answer": "Duran Duran",
+      "incorrect_answers": ["Spandau Ballet", "The Human League", "Ultravox"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which artist sampled Sting's 'Every Breath You Take' for the 1997 hit 'I'll Be Missing You'?",
+      "correct_answer": "Puff Daddy",
+      "incorrect_answers": ["Jay-Z", "Nas", "Notorious B.I.G."],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the concert festival that Beyoncé headlined in 2018, dubbed 'Beychella'?",
+      "correct_answer": "Coachella",
+      "incorrect_answers": ["Glastonbury", "Lollapalooza", "Bonnaroo"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 90s group released the album 'CrazySexyCool'?",
+      "correct_answer": "TLC",
+      "incorrect_answers": ["SWV", "En Vogue", "Destiny's Child"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Nirvana album contains the song 'Come as You Are'?",
+      "correct_answer": "Nevermind",
+      "incorrect_answers": ["In Utero", "Bleach", "Unplugged in New York"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which country did ABBA represent when they won the 1974 Eurovision Song Contest?",
+      "correct_answer": "Sweden",
+      "incorrect_answers": ["Norway", "Denmark", "Finland"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What instrument does Lizzo famously play during her live performances?",
+      "correct_answer": "Flute",
+      "incorrect_answers": ["Saxophone", "Trumpet", "Clarinet"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which pop star's 'Bangerz' tour in 2014 was controversial for its provocative performances?",
+      "correct_answer": "Miley Cyrus",
+      "incorrect_answers": ["Ke$ha", "Nicki Minaj", "Rihanna"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 80s song by Depeche Mode became an anthem for the electronic music movement?",
+      "correct_answer": "Enjoy the Silence",
+      "incorrect_answers": ["Blue Monday", "West End Girls", "Tainted Love"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which artist released the concept album 'good kid, m.A.A.d city' in 2012?",
+      "correct_answer": "Kendrick Lamar",
+      "incorrect_answers": ["J. Cole", "Kanye West", "Childish Gambino"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the original name of the band that became Maroon 5?",
+      "correct_answer": "Kara's Flowers",
+      "incorrect_answers": ["Saturday Afternoon", "The Fourth Wall", "Adam's Apple"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which song did Sinéad O'Connor famously perform while tearing up a photo of the Pope on SNL?",
+      "correct_answer": "War",
+      "incorrect_answers": ["Nothing Compares 2 U", "Mandinka", "The Emperor's New Clothes"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which K-pop girl group released 'How You Like That' and 'Pink Venom'?",
+      "correct_answer": "Blackpink",
+      "incorrect_answers": ["Twice", "Red Velvet", "Aespa"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Rihanna album features both 'Umbrella' and 'Don't Stop the Music'?",
+      "correct_answer": "Good Girl Gone Bad",
+      "incorrect_answers": ["Rated R", "Loud", "Talk That Talk"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which artist co-wrote and produced Rihanna's 'Umbrella'?",
+      "correct_answer": "The-Dream",
+      "incorrect_answers": ["Pharrell Williams", "Timbaland", "Max Martin"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which album by Fleetwood Mac, released in 1977, is one of the best-selling albums of all time?",
+      "correct_answer": "Rumours",
+      "incorrect_answers": ["Tango in the Night", "Tusk", "Mirage"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which pop group's debut single was 'Wannabe' and went to #1 in 37 countries?",
+      "correct_answer": "Spice Girls",
+      "incorrect_answers": ["All Saints", "Atomic Kitten", "Sugababes"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Travis Scott song features a famous roller coaster-themed music video?",
+      "correct_answer": "SICKO MODE",
+      "incorrect_answers": ["Goosebumps", "Antidote", "Highest in the Room"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which pop artist's real name is Robyn Rihanna Fenty?",
+      "correct_answer": "Rihanna",
+      "incorrect_answers": ["Beyoncé", "SZA", "Doja Cat"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 1985 charity single featured 46 artists including Michael Jackson and Lionel Richie?",
+      "correct_answer": "We Are the World",
+      "incorrect_answers": ["Do They Know It's Christmas?", "That's What Friends Are For", "Hands Across America"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which producer is known for his signature tag 'DJ Khaled!' and collaborated with numerous pop stars?",
+      "correct_answer": "DJ Khaled",
+      "incorrect_answers": ["Metro Boomin", "Mike Will Made It", "Murda Beatz"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Taylor Swift album did she re-record first as a 'Taylor's Version'?",
+      "correct_answer": "Fearless",
+      "incorrect_answers": ["Red", "Speak Now", "1989"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 90s boy band had members AJ, Howie, Nick, Kevin, and Brian?",
+      "correct_answer": "Backstreet Boys",
+      "incorrect_answers": ["*NSYNC", "98 Degrees", "New Kids on the Block"],
+      "difficulty": "medium"
+    },
+  {
     "question": "Which artist holds the record for the most Grammys won in a single night by a female artist (6), achieved in 2010?",
     "correct_answer": "Beyoncé",
     "incorrect_answers": ["Adele", "Taylor Swift", "Lady Gaga"],
@@ -602,7 +1436,283 @@
     "correct_answer": "Taylor Swift",
     "incorrect_answers": ["Beyoncé", "The Weeknd", "Coldplay"],
     "difficulty": "medium"
-  }
+  },
+  {
+      "question": "Which Michael Jackson music video was the first to be inducted into the Library of Congress?",
+      "correct_answer": "Thriller",
+      "incorrect_answers": ["Bad", "Billie Jean", "Smooth Criminal"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which album by Prince was originally released with an unpronounceable symbol as his name?",
+      "correct_answer": "Come",
+      "incorrect_answers": ["Gold", "Emancipation", "The Gold Experience"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the first music video ever played on MTV when it launched on August 1, 1981?",
+      "correct_answer": "Video Killed the Radio Star by The Buggles",
+      "incorrect_answers": ["You Better Run by Pat Benatar", "Rapture by Blondie", "Take On Me by a-ha"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which producer crafted the 'Minneapolis Sound' and wrote songs for The Bangles under a pseudonym?",
+      "correct_answer": "Prince",
+      "incorrect_answers": ["Jimmy Jam", "Terry Lewis", "Babyface"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What year did Madonna's 'Like a Prayer' music video cause Pepsi to drop her as a spokesperson?",
+      "correct_answer": "1989",
+      "incorrect_answers": ["1987", "1990", "1991"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Mariah Carey album holds the record for spawning the most #1 singles from a single album (with 5)?",
+      "correct_answer": "Daydream",
+      "incorrect_answers": ["Butterfly", "Music Box", "The Emancipation of Mimi"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which songwriter has written or co-written 25 Billboard #1 hits, including for Britney Spears, Katy Perry, and Taylor Swift?",
+      "correct_answer": "Max Martin",
+      "incorrect_answers": ["Dr. Luke", "Benny Blanco", "Shellback"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the unreleased Prince album that was locked in a vault and finally released in 2019?",
+      "correct_answer": "Originals",
+      "incorrect_answers": ["Welcome 2 America", "Piano & A Microphone", "The Vault"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Whitney Houston song was originally recorded by Dolly Parton in 1973?",
+      "correct_answer": "I Will Always Love You",
+      "incorrect_answers": ["Greatest Love of All", "Saving All My Love for You", "How Will I Know"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which album by Radiohead was released in 2007 on a 'pay what you want' model?",
+      "correct_answer": "In Rainbows",
+      "incorrect_answers": ["Kid A", "Amnesiac", "The King of Limbs"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the name of the supergroup formed by Jack White, Brendan Benson, and members of The Greenhornes?",
+      "correct_answer": "The Raconteurs",
+      "incorrect_answers": ["The Dead Weather", "The White Stripes", "Broken Boy Soldiers"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which George Michael song was written as a tribute to his late partner and debuted at #1 in 1996?",
+      "correct_answer": "Jesus to a Child",
+      "incorrect_answers": ["Praying for Time", "Father Figure", "One More Try"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which artist's 1991 album 'Achtung Baby' marked a dramatic shift from anthemic rock to electronic experimentation?",
+      "correct_answer": "U2",
+      "incorrect_answers": ["R.E.M.", "Depeche Mode", "The Cure"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What pseudonym did Sia use when she wrote 'Diamonds' for Rihanna before her own solo career took off?",
+      "correct_answer": "She used her real name, Sia Furler",
+      "incorrect_answers": ["Sydney Skye", "Aurora Bloom", "Maddie Chandelier"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Destiny's Child album was the last to feature all four original members before the lineup change?",
+      "correct_answer": "The Writing's on the Wall",
+      "incorrect_answers": ["Destiny's Child", "Survivor", "Destiny Fulfilled"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which 80s synthpop band's 'Blue Monday' is the best-selling 12-inch single of all time?",
+      "correct_answer": "New Order",
+      "incorrect_answers": ["Depeche Mode", "Orchestral Manoeuvres in the Dark", "Soft Cell"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Before becoming a judge on 'American Idol', which artist had a 1988 hit with 'Straight Up'?",
+      "correct_answer": "Paula Abdul",
+      "incorrect_answers": ["Janet Jackson", "Taylor Dayne", "Debbie Gibson"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Kanye West album was recorded primarily during his recovery from a near-fatal car accident?",
+      "correct_answer": "The College Dropout",
+      "incorrect_answers": ["Late Registration", "808s & Heartbreak", "Graduation"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which indie band's 2004 album 'Funeral' was ranked by many critics as the best album of the 2000s?",
+      "correct_answer": "Arcade Fire",
+      "incorrect_answers": ["The National", "Modest Mouse", "Death Cab for Cutie"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the name of the Björk album that was composed using only vocal samples and beatboxing?",
+      "correct_answer": "Medúlla",
+      "incorrect_answers": ["Homogenic", "Vespertine", "Biophilia"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which female artist won Record of the Year at the Grammys three separate times between 2009 and 2017?",
+      "correct_answer": "Adele",
+      "incorrect_answers": ["Beyoncé", "Taylor Swift", "Lady Gaga"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Phil Collins song from 1981 was allegedly inspired by witnessing a drowning and not helping?",
+      "correct_answer": "In the Air Tonight",
+      "incorrect_answers": ["Against All Odds", "Another Day in Paradise", "One More Night"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which 90s band featured the sibling rivalry between Liam and Noel Gallagher?",
+      "correct_answer": "Oasis",
+      "incorrect_answers": ["Blur", "The Verve", "Suede"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the longest-running #1 hit on the Billboard Hot 100 as of 2023, holding the top spot for 20 weeks?",
+      "correct_answer": "A Bar Song (Tipsy) by Shaboozey",
+      "incorrect_answers": ["Old Town Road by Lil Nas X", "Despacito by Luis Fonsi", "One Sweet Day by Mariah Carey"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Missy Elliott music video featured her wearing an inflated black garbage bag suit?",
+      "correct_answer": "The Rain (Supa Dupa Fly)",
+      "incorrect_answers": ["Get Ur Freak On", "Work It", "Lose Control"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which critically acclaimed 2003 album by OutKast was actually a double album with each member releasing a solo disc?",
+      "correct_answer": "Speakerboxxx/The Love Below",
+      "incorrect_answers": ["Stankonia", "Aquemini", "ATLiens"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Janet Jackson album caused controversy with its explicit content and was the first to debut at #1 on the Billboard 200?",
+      "correct_answer": "Janet",
+      "incorrect_answers": ["The Velvet Rope", "All for You", "Rhythm Nation 1814"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the name of the leaked Beyoncé demo that was meant for another artist and became 'Listen' from Dreamgirls?",
+      "correct_answer": "Listen was always written for the Dreamgirls film",
+      "incorrect_answers": ["The song was originally for Whitney Houston", "It was a leaked Destiny's Child track", "It was written for Jennifer Hudson first"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which David Bowie persona was 'killed off' during a final concert at the Hammersmith Odeon in 1973?",
+      "correct_answer": "Ziggy Stardust",
+      "incorrect_answers": ["Aladdin Sane", "The Thin White Duke", "Major Tom"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which rock band's 1991 'Black Album' has sold over 16 million copies in the US alone?",
+      "correct_answer": "Metallica",
+      "incorrect_answers": ["Nirvana", "Guns N' Roses", "AC/DC"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which producer and artist created the 'chipmunk soul' sampling technique used on Kanye West's early albums?",
+      "correct_answer": "Kanye West himself",
+      "incorrect_answers": ["Just Blaze", "RZA", "No I.D."],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the original working title of the Spice Girls' debut single 'Wannabe'?",
+      "correct_answer": "Feed Your Love",
+      "incorrect_answers": ["Girl Power", "Spice Up Your Life", "Say You'll Be There"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Fiona Apple album has a 90-word title that is often abbreviated to 'When the Pawn'?",
+      "correct_answer": "When the Pawn...",
+      "incorrect_answers": ["Tidal", "Extraordinary Machine", "The Idler Wheel"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which 80s band had a hit with 'Relax' that was banned by the BBC, which only increased its sales?",
+      "correct_answer": "Frankie Goes to Hollywood",
+      "incorrect_answers": ["Soft Cell", "Dead or Alive", "Bronski Beat"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which singer-songwriter's 1997 album 'OK Computer' was partly inspired by Noam Chomsky's writings?",
+      "correct_answer": "Radiohead",
+      "incorrect_answers": ["Manic Street Preachers", "Massive Attack", "Portishead"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which R&B artist released the album 'Confessions' in 2004, which sold over 1 million copies in its first week?",
+      "correct_answer": "Usher",
+      "incorrect_answers": ["R. Kelly", "Ne-Yo", "Chris Brown"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the original band name that Lady Gaga performed under before going solo?",
+      "correct_answer": "Stefani Germanotta Band (SGBand)",
+      "incorrect_answers": ["The Plastics", "Haus of Gaga", "Team Love Child"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Tori Amos album features the song 'Cornflake Girl' and was released in 1994?",
+      "correct_answer": "Under the Pink",
+      "incorrect_answers": ["Little Earthquakes", "Boys for Pele", "From the Choirgirl Hotel"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which artist released the experimental album 'Vespertine' in 2001, featuring harps, music boxes, and microbeats?",
+      "correct_answer": "Björk",
+      "incorrect_answers": ["Sigur Rós", "Radiohead", "Portishead"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the name of the short-lived supergroup featuring Robert Plant and Jimmy Page that reunited in the late 90s?",
+      "correct_answer": "Page and Plant",
+      "incorrect_answers": ["The Firm", "Led Zeppelin II", "Honeydrippers"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Kendrick Lamar album was the first hip-hop album to win the Pulitzer Prize for Music?",
+      "correct_answer": "DAMN.",
+      "incorrect_answers": ["To Pimp a Butterfly", "good kid, m.A.A.d city", "Mr. Morale & The Big Steppers"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which 80s pop star's 'Freedom! '90' music video famously featured supermodels instead of the artist himself?",
+      "correct_answer": "George Michael",
+      "incorrect_answers": ["Prince", "Phil Collins", "Peter Gabriel"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which album by My Bloody Valentine, released in 1991, is considered the definitive shoegaze record?",
+      "correct_answer": "Loveless",
+      "incorrect_answers": ["Isn't Anything", "Souvlaki", "Nowhere"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which artist released the surprise visual album 'Lemonade' on Tidal in 2016 with no prior announcement?",
+      "correct_answer": "Beyoncé",
+      "incorrect_answers": ["Rihanna", "Frank Ocean", "Kanye West"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the name of the concert where Freddie Mercury gave his legendary 'Ay-Oh' call-and-response with 72,000 fans?",
+      "correct_answer": "Live Aid",
+      "incorrect_answers": ["Wembley Stadium '86", "Rock in Rio", "Knebworth"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Frank Ocean album was preceded by a 45-minute visual film called 'Endless'?",
+      "correct_answer": "Blonde",
+      "incorrect_answers": ["Channel Orange", "Nostalgia, Ultra", "In My Room"],
+      "difficulty": "hard"
+    }
 
 ]
 }
