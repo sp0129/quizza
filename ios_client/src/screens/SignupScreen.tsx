@@ -22,7 +22,9 @@ export default function SignupScreen({ navigation }: Props) {
   const [loading, setLoading] = useState(false);
 
   const onAppleSuccess = () => {
-    try { navigation.navigate('MainTabs' as any); } catch {}
+    if (navigation.canGoBack()) {
+      navigation.navigate('MainTabs' as any);
+    }
   };
 
   const handleSignup = async () => {
