@@ -2,7 +2,7 @@
   "expo": {
     "name": "Quizza",
     "slug": "quizza",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "icon": "./assets/icon.png",
@@ -15,7 +15,7 @@
       "supportsTablet": false,
       "bundleIdentifier": "com.quizza.app",
       "usesAppleSignIn": true,
-      "buildNumber": "15",
+      "buildNumber": "16",
       "associatedDomains": [
         "applinks:quizza-eta.vercel.app"
       ],
