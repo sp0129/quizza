@@ -327,16 +327,16 @@ router.post('/:id/submit', requireAuth, async (req: AuthRequest, res: Response):
       [total_score, username, id]
     );
 
-    // Compute submitter's rank
+    // Compute submitter's rank (exclude own submission from count)
     const rankResult = await pool.query(
       `SELECT COUNT(*) + 1 AS rank
        FROM open_challenge_submissions
-       WHERE challenge_id = $1 AND is_visible = TRUE
-         AND (total_score > $2
-           OR (total_score = $2 AND correct_count > $3)
-           OR (total_score = $2 AND correct_count = $3 AND time_seconds < $4)
-           OR (total_score = $2 AND correct_count = $3 AND time_seconds = $4 AND submitted_at < $5))`,
-      [id, total_score, correct_count, time_seconds, new Date()]
+       WHERE challenge_id = $1 AND is_visible = TRUE AND user_id != $2
+         AND (total_score > $3
+           OR (total_score = $3 AND correct_count > $4)
+           OR (total_score = $3 AND correct_count = $4 AND time_seconds < $5)
+           OR (total_score = $3 AND correct_count = $4 AND time_seconds = $5 AND submitted_at < $6))`,
+      [id, me, total_score, correct_count, time_seconds, new Date()]
     );
 
     res.json({
