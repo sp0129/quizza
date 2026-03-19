@@ -818,8 +818,10 @@ export default function GameScreen({ route, navigation }: Props) {
       } : {}),
       ...(openChallengeId ? { openChallengeId } : {}),
       ...(createChallenge ? { createChallenge: true } : {}),
+      questionCount: questions.length,
+      timer: QUESTION_TIME,
     });
-  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category, questionResults, questions.length, totalTimeTaken, questionSetId, openChallengeId, createChallenge]);
+  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category, questionResults, questions.length, totalTimeTaken, questionSetId, openChallengeId, createChallenge, QUESTION_TIME]);
 
   // --- Quit handler ---
   const handleQuit = () => {

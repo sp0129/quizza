@@ -95,6 +95,8 @@ export type RootStackParamList = {
     totalTimeTaken?: number;
     openChallengeId?: string;
     createChallenge?: boolean;
+    questionCount?: number;
+    timer?: number;
   };
 };
 

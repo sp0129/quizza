@@ -117,6 +117,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
     totalTimeTaken,
     openChallengeId,
     createChallenge,
+    questionCount: lastQuestionCount,
+    timer: lastTimer,
   } = route.params;
 
   const insets = useSafeAreaInsets();
@@ -405,10 +407,26 @@ export default function ResultsScreen({ route, navigation }: Props) {
     });
   }, [challengeId, opponentUsername, opponentHandle, navigation, removeChallenge]);
 
-  const handlePlayAgain = useCallback(() => {
+  const [playAgainLoading, setPlayAgainLoading] = useState(false);
+
+  const handlePlayAgain = useCallback(async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    navigation.navigate('Category', { mode: 'solo', preselectedCategory: category });
-  }, [navigation, category]);
+    setPlayAgainLoading(true);
+    try {
+      const r = await api.post<{ gameId: string; questionSetId: string }>(
+        '/games/solo', { category, questionCount: lastQuestionCount ?? 10 }
+      );
+      navigation.replace('Game', {
+        gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
+        category, timer: lastTimer ?? 30, questionCount: lastQuestionCount ?? 10,
+      });
+    } catch {
+      // Fallback to category picker if API fails
+      navigation.navigate('Category', { mode: 'solo', preselectedCategory: category });
+    } finally {
+      setPlayAgainLoading(false);
+    }
+  }, [navigation, category, lastQuestionCount, lastTimer]);
 
   const handleBackToHome = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -575,13 +593,18 @@ export default function ResultsScreen({ route, navigation }: Props) {
         {/* ═══ ACTION BUTTONS ═══ */}
         {(stage === 'outcome' || stage === 'complete') && (
           <Animated.View style={[styles.buttonsContainer, buttonsStyle]}>
-            {/* PRIMARY: Play Again (all modes) */}
+            {/* PRIMARY: Play Again (all modes) — same category, questions, timer */}
             <TouchableOpacity
               style={styles.playAgainBtn}
               onPress={handlePlayAgain}
               activeOpacity={0.8}
+              disabled={playAgainLoading}
             >
-              <Text style={styles.playAgainBtnText}>▶ Play {category} Again</Text>
+              {playAgainLoading ? (
+                <ActivityIndicator color="#FFFFFF" size="small" />
+              ) : (
+                <Text style={styles.playAgainBtnText}>▶ Play {category} Again</Text>
+              )}
             </TouchableOpacity>
 
             {/* Rematch (duel mode) */}
