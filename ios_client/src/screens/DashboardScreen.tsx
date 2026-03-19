@@ -437,7 +437,7 @@ export default function DashboardScreen({ navigation }: Props) {
         {isStateB && (
           <>
             <HeroSection
-              onExploreChallenges={() => navigation.navigate('MainTabs' as any)}
+              onExploreChallenges={() => (navigation as any).navigate('OpenChallenges')}
               delay={100}
             />
             {lastPlayedCategory && (
