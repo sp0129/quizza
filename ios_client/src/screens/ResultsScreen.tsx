@@ -31,6 +31,7 @@ import ConfettiOverlay from '../components/ConfettiOverlay';
 import PizzaMascot from '../components/PizzaMascot';
 import { playSound } from '../utils/sounds';
 import { useDashboardStore } from '../stores/dashboard';
+import LottieView from 'lottie-react-native';
 import { api } from '../api/client';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Results'>;
@@ -564,7 +565,17 @@ export default function ResultsScreen({ route, navigation }: Props) {
         {/* ═══ CHALLENGE RANK (open challenge results) ═══ */}
         {(stage === 'outcome' || stage === 'complete') && openChallengeId && submitted && challengeRank != null && (
           <Animated.View style={[styles.rankBanner, buttonsStyle]}>
-            <Text style={styles.rankBannerText}>You ranked #{challengeRank}</Text>
+            {challengeRank === 1 && (
+              <LottieView
+                source={require('../assets/lottie/rank1-celebration.lottie')}
+                autoPlay
+                loop={false}
+                style={styles.rank1Lottie}
+              />
+            )}
+            <Text style={[styles.rankBannerText, challengeRank === 1 && styles.rank1Text]}>
+              {challengeRank === 1 ? '🏆 #1 on the leaderboard!' : `You ranked #${challengeRank}`}
+            </Text>
           </Animated.View>
         )}
 
@@ -888,12 +899,23 @@ const styles = StyleSheet.create({
     marginTop: 16,
     borderWidth: 1,
     borderColor: '#7C3AED40',
+    alignItems: 'center',
   },
   rankBannerText: {
     fontSize: 16,
     fontWeight: '700',
     color: '#7C3AED',
     textAlign: 'center',
+  },
+  rank1Text: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#F59E0B',
+  },
+  rank1Lottie: {
+    width: 120,
+    height: 120,
+    marginBottom: -8,
   },
   viewLeaderboardBtn: {
     backgroundColor: '#7C3AED',
