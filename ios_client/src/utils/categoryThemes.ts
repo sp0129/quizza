@@ -98,14 +98,19 @@ export function cleanCategoryName(name: string): string {
 }
 
 export const CATEGORY_SORT_ORDER: number[] = [
-  // Mixed Bag — the default pick
+  // Top picks — casual, accessible, fun
   2009,  // Mixed Bag
-  // Fun & entertainment first
   9,     // General Knowledge
-  11,    // Film
-  14,    // Television
-  12,    // Music
   2006,  // Pop Music
+  2008,  // Bingeworthy
+  27,    // Animals
+  23,    // History
+  22,    // Geography
+  20,    // Mythology
+  // Entertainment (deeper)
+  14,    // Television
+  11,    // Film
+  12,    // Music
   26,    // Celebrities
   2003,  // Harry Potter
   2004,  // Game of Thrones
@@ -120,10 +125,6 @@ export const CATEGORY_SORT_ORDER: number[] = [
   29,    // Books
   25,    // Art
   10,    // Books (general)
-  27,    // Animals
-  22,    // Geography
-  23,    // History
-  20,    // Mythology
   24,    // Politics
   // STEM
   17,    // Science & Nature
