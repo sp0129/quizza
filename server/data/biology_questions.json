@@ -9,19 +9,19 @@
     "difficulty": "easy"
   },
   {
-    "question": "Which organelle is commonly known as the 'powerhouse of the cell'?",
+    "question": "Which organelle is known as the 'powerhouse of the cell'?",
     "correct_answer": "Mitochondria",
     "incorrect_answers": ["Nucleus", "Ribosome", "Chloroplast"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the name of the process by which plants convert sunlight into food?",
+    "question": "What process do plants use to convert sunlight into food?",
     "correct_answer": "Photosynthesis",
     "incorrect_answers": ["Respiration", "Fermentation", "Transpiration"],
     "difficulty": "easy"
   },
   {
-    "question": "What molecule carries genetic information in most living organisms?",
+    "question": "What molecule carries genetic information?",
     "correct_answer": "DNA",
     "incorrect_answers": ["RNA", "Protein", "Glucose"],
     "difficulty": "easy"
@@ -39,13 +39,13 @@
     "difficulty": "easy"
   },
   {
-    "question": "What is the process of cell division in regular body cells called?",
+    "question": "What is cell division in regular body cells called?",
     "correct_answer": "Mitosis",
     "incorrect_answers": ["Meiosis", "Binary Fission", "Budding"],
     "difficulty": "easy"
   },
   {
-    "question": "How many chambers are there in a human heart?",
+    "question": "How many chambers does the human heart have?",
     "correct_answer": "4",
     "incorrect_answers": ["2", "3", "6"],
     "difficulty": "easy"
@@ -57,15 +57,9 @@
     "difficulty": "easy"
   },
   {
-    "question": "What is the scientific name for the study of animals?",
+    "question": "What is the scientific study of animals called?",
     "correct_answer": "Zoology",
     "incorrect_answers": ["Botany", "Ecology", "Genetics"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which part of the plant is primarily responsible for absorbing water and nutrients?",
-    "correct_answer": "Roots",
-    "incorrect_answers": ["Leaves", "Stem", "Flower"],
     "difficulty": "easy"
   },
   {
@@ -81,31 +75,31 @@
     "difficulty": "easy"
   },
   {
-    "question": "Which blood cells are responsible for fighting infection?",
+    "question": "Which blood cells fight infection?",
     "correct_answer": "White blood cells",
     "incorrect_answers": ["Red blood cells", "Platelets", "Plasma"],
     "difficulty": "easy"
   },
   {
     "question": "What is the main function of red blood cells?",
-    "correct_answer": "To transport oxygen",
-    "incorrect_answers": ["To fight germs", "To clot blood", "To digest food"],
+    "correct_answer": "Carry oxygen",
+    "incorrect_answers": ["Fight germs", "Clot blood", "Digest food"],
     "difficulty": "easy"
   },
   {
-    "question": "Where is the DNA of a eukaryotic cell primarily located?",
+    "question": "Where is DNA located in a eukaryotic cell?",
     "correct_answer": "Nucleus",
     "incorrect_answers": ["Cytoplasm", "Cell membrane", "Ribosome"],
     "difficulty": "easy"
   },
   {
-    "question": "What structure in a plant cell provides support and rigidity?",
+    "question": "What structure gives a plant cell rigidity?",
     "correct_answer": "Cell wall",
     "incorrect_answers": ["Cell membrane", "Vacuole", "Nucleus"],
     "difficulty": "easy"
   },
   {
-    "question": "Which organ in the human body is responsible for producing insulin?",
+    "question": "Which organ produces insulin?",
     "correct_answer": "Pancreas",
     "incorrect_answers": ["Liver", "Kidney", "Stomach"],
     "difficulty": "easy"
@@ -117,13 +111,13 @@
     "difficulty": "easy"
   },
   {
-    "question": "What are animals that have a backbone called?",
+    "question": "What are animals with a backbone called?",
     "correct_answer": "Vertebrates",
     "incorrect_answers": ["Invertebrates", "Mammals", "Amphibians"],
     "difficulty": "easy"
   },
   {
-    "question": "Which organ filters waste from the blood to produce urine?",
+    "question": "Which organ filters waste from blood?",
     "correct_answer": "Kidney",
     "incorrect_answers": ["Bladder", "Liver", "Spleen"],
     "difficulty": "easy"
@@ -135,115 +129,91 @@
     "difficulty": "easy"
   },
   {
-    "question": "What is the name of the iron-containing protein that carries oxygen in blood?",
+    "question": "What protein carries oxygen in blood?",
     "correct_answer": "Hemoglobin",
     "incorrect_answers": ["Insulin", "Collagen", "Keratin"],
     "difficulty": "easy"
   },
   {
-    "question": "Which system of the body is responsible for movement?",
-    "correct_answer": "Muscular system",
-    "incorrect_answers": ["Nervous system", "Digestive system", "Skeletal system"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What process do bacteria use to reproduce?",
+    "question": "How do bacteria reproduce?",
     "correct_answer": "Binary fission",
     "incorrect_answers": ["Mitosis", "Pollination", "Meiosis"],
     "difficulty": "easy"
   },
   {
-    "question": "What type of organism can make its own food?",
+    "question": "What type of organism makes its own food?",
     "correct_answer": "Autotroph",
     "incorrect_answers": ["Heterotroph", "Parasite", "Scavenger"],
     "difficulty": "easy"
   },
   {
-    "question": "Which organ in the human body produces bile?",
+    "question": "Which organ produces bile?",
     "correct_answer": "Liver",
     "incorrect_answers": ["Gallbladder", "Pancreas", "Kidney"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the long-term sleep-like state some animals enter during winter?",
+    "question": "What is the sleep-like state animals enter in winter?",
     "correct_answer": "Hibernation",
     "incorrect_answers": ["Estivation", "Migration", "Incubation"],
     "difficulty": "easy"
   },
   {
-    "question": "How many pairs of chromosomes do humans typically have?",
+    "question": "How many pairs of chromosomes do humans have?",
     "correct_answer": "23",
     "incorrect_answers": ["46", "12", "20"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the term for an organism's physical appearance?",
-    "correct_answer": "Phenotype",
-    "incorrect_answers": ["Genotype", "Allele", "Mutation"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which vitamin is produced when your skin is exposed to sunlight?",
+    "question": "Which vitamin does sunlight help your body produce?",
     "correct_answer": "Vitamin D",
     "incorrect_answers": ["Vitamin A", "Vitamin C", "Vitamin K"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the main function of the large intestine?",
-    "correct_answer": "Water absorption",
-    "incorrect_answers": ["Protein digestion", "Pumping blood", "Filtering toxins"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What do you call an animal that eats both plants and animals?",
+    "question": "What do you call an animal that eats both plants and meat?",
     "correct_answer": "Omnivore",
     "incorrect_answers": ["Herbivore", "Carnivore", "Insectivore"],
     "difficulty": "easy"
   },
   {
-    "question": "Which part of the eye is sensitive to light?",
+    "question": "Which part of the eye detects light?",
     "correct_answer": "Retina",
     "incorrect_answers": ["Cornea", "Iris", "Lens"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the name for a change in the DNA sequence of a gene?",
+    "question": "What is a change in DNA called?",
     "correct_answer": "Mutation",
     "incorrect_answers": ["Selection", "Evolution", "Adaptation"],
     "difficulty": "easy"
   },
   {
-    "question": "Which organ in the human body is responsible for memory?",
+    "question": "Which organ controls memory and thinking?",
     "correct_answer": "Brain",
     "incorrect_answers": ["Heart", "Spinal cord", "Liver"],
     "difficulty": "easy"
   },
   {
-    "question": "What do we call the process of birds traveling south for the winter?",
+    "question": "What do we call birds traveling south for winter?",
     "correct_answer": "Migration",
     "incorrect_answers": ["Hibernation", "Evolution", "Succession"],
     "difficulty": "easy"
   },
   {
-    "question": "Which gas do plants release during photosynthesis?",
-    "correct_answer": "Oxygen",
-    "incorrect_answers": ["Carbon dioxide", "Nitrogen", "Argon"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the protective outer layer of a tree trunk called?",
+    "question": "What is the protective outer layer of a tree?",
     "correct_answer": "Bark",
     "incorrect_answers": ["Skin", "Pith", "Xylem"],
     "difficulty": "easy"
   },
   {
-    "question": "Which blood type is considered the 'universal donor'?",
+    "question": "Which blood type is the universal donor?",
     "correct_answer": "O negative",
     "incorrect_answers": ["AB positive", "A positive", "B negative"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the term for the variety of life in a particular habitat?",
+    "question": "What term means the variety of life in a habitat?",
     "correct_answer": "Biodiversity",
     "incorrect_answers": ["Ecology", "Community", "Population"],
     "difficulty": "easy"
@@ -267,7 +237,7 @@
     "difficulty": "easy"
   },
   {
-    "question": "What is the name for the 'jelly-like' substance inside a cell?",
+    "question": "What is the jelly-like substance inside a cell?",
     "correct_answer": "Cytoplasm",
     "incorrect_answers": ["Nucleoplasm", "Plasma", "Sap"],
     "difficulty": "easy"
@@ -279,37 +249,31 @@
     "difficulty": "easy"
   },
   {
-    "question": "Which insects are famous for their ability to produce honey?",
+    "question": "Which insects produce honey?",
     "correct_answer": "Bees",
     "incorrect_answers": ["Ants", "Wasps", "Butterflies"],
     "difficulty": "easy"
   },
   {
-    "question": "What are the breeding organs of a plant?",
+    "question": "What are the reproductive organs of a plant?",
     "correct_answer": "Flowers",
     "incorrect_answers": ["Leaves", "Roots", "Stems"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the term for a group of the same species living in one area?",
-    "correct_answer": "Population",
-    "incorrect_answers": ["Community", "Ecosystem", "Biome"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What do we call animals that are active during the night?",
+    "question": "What do we call animals active at night?",
     "correct_answer": "Nocturnal",
     "incorrect_answers": ["Diurnal", "Aquatic", "Terrestrial"],
     "difficulty": "easy"
   },
   {
-    "question": "Which organelle is responsible for making proteins?",
+    "question": "Which organelle makes proteins?",
     "correct_answer": "Ribosome",
     "incorrect_answers": ["Lysosome", "Vacuole", "Golgi body"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the name of the tube that carries food from the mouth to the stomach?",
+    "question": "What tube carries food from mouth to stomach?",
     "correct_answer": "Esophagus",
     "incorrect_answers": ["Trachea", "Urethra", "Intestine"],
     "difficulty": "easy"
@@ -321,37 +285,31 @@
     "difficulty": "easy"
   },
   {
-    "question": "What is the term for the maintenance of a stable internal environment?",
+    "question": "What is maintaining a stable internal environment called?",
     "correct_answer": "Homeostasis",
     "incorrect_answers": ["Metabolism", "Photosynthesis", "Osmosis"],
     "difficulty": "easy"
   },
   {
-    "question": "Which animal group is warm-blooded, has hair, and feeds milk to its young?",
+    "question": "Which animal group is warm-blooded and feeds milk to young?",
     "correct_answer": "Mammals",
     "incorrect_answers": ["Reptiles", "Birds", "Amphibians"],
     "difficulty": "easy"
   },
   {
-    "question": "What part of the human brain controls balance and coordination?",
-    "correct_answer": "Cerebellum",
-    "incorrect_answers": ["Cerebrum", "Medulla", "Thalamus"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for the process of water moving across a cell membrane?",
+    "question": "What is the process of water moving across a membrane?",
     "correct_answer": "Osmosis",
     "incorrect_answers": ["Diffusion", "Active transport", "Evaporation"],
     "difficulty": "easy"
   },
   {
-    "question": "Which type of blood vessel carries blood away from the heart?",
+    "question": "Which blood vessel carries blood away from the heart?",
     "correct_answer": "Artery",
     "incorrect_answers": ["Vein", "Capillary", "Nerve"],
     "difficulty": "easy"
   },
   {
-    "question": "What do we call the remains or traces of ancient organisms?",
+    "question": "What are remains of ancient organisms called?",
     "correct_answer": "Fossils",
     "incorrect_answers": ["Artifacts", "Sediment", "Minerals"],
     "difficulty": "easy"
@@ -363,213 +321,21 @@
     "difficulty": "easy"
   },
   {
-    "question": "Which organ in the human body is primarily responsible for breathing?",
-    "correct_answer": "Lungs",
-    "incorrect_answers": ["Heart", "Diaphragm", "Throat"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the primary function of the skeletal system?",
-    "correct_answer": "Support and protection",
-    "incorrect_answers": ["Digestion", "Pumping blood", "Thinking"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What type of symmetry do humans have?",
-    "correct_answer": "Bilateral symmetry",
-    "incorrect_answers": ["Radial symmetry", "Asymmetry", "Spherical symmetry"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the scientific name for the jawbone?",
-    "correct_answer": "Mandible",
-    "incorrect_answers": ["Maxilla", "Scapula", "Clavicle"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which organ stores bile until it is needed for digestion?",
-    "correct_answer": "Gallbladder",
-    "incorrect_answers": ["Liver", "Spleen", "Appendix"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for the double-helix molecule of life?",
-    "correct_answer": "DNA",
-    "incorrect_answers": ["ATP", "Hemoglobin", "Glucose"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What are organisms that break down dead plants and animals called?",
-    "correct_answer": "Decomposers",
-    "incorrect_answers": ["Producers", "Consumers", "Predators"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which vitamin is famous for being found in citrus fruits like oranges?",
-    "correct_answer": "Vitamin C",
-    "incorrect_answers": ["Vitamin B12", "Vitamin E", "Vitamin D"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for a group of similar cells working together?",
-    "correct_answer": "Tissue",
-    "incorrect_answers": ["Organ", "Organ system", "Organelle"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What are the male reproductive cells in humans called?",
-    "correct_answer": "Sperm",
-    "incorrect_answers": ["Egg", "Zygote", "Embryo"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What are the female reproductive cells in humans called?",
-    "correct_answer": "Eggs",
-    "incorrect_answers": ["Sperm", "Hormones", "Antibodies"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which system of the body sends electrical signals to control actions?",
-    "correct_answer": "Nervous system",
-    "incorrect_answers": ["Endocrine system", "Circulatory system", "Immune system"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for an animal that lives both on land and in water?",
-    "correct_answer": "Amphibian",
-    "incorrect_answers": ["Reptile", "Mammal", "Crustacean"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What are the tiny holes in plant leaves that allow gas exchange?",
-    "correct_answer": "Stomata",
-    "incorrect_answers": ["Pores", "Vents", "Chloroplasts"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which blood vessel is the largest in the human body?",
-    "correct_answer": "Aorta",
-    "incorrect_answers": ["Vena Cava", "Carotid", "Pulmonary"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for the process of a caterpillar turning into a butterfly?",
-    "correct_answer": "Metamorphosis",
-    "incorrect_answers": ["Evolution", "Germination", "Mitosis"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which subatomic particle is not found in the nucleus of an atom?",
-    "correct_answer": "Electron",
-    "incorrect_answers": ["Proton", "Neutron", "Positron"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for the role an organism plays in its ecosystem?",
-    "correct_answer": "Niche",
-    "incorrect_answers": ["Habitat", "Biome", "Community"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What are the basic units of heredity?",
-    "correct_answer": "Genes",
-    "incorrect_answers": ["Proteins", "Chromosomes", "Cells"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which organelle acts as the 'brain' or control center of the cell?",
-    "correct_answer": "Nucleus",
-    "incorrect_answers": ["Mitochondria", "Lysosome", "Vacuole"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for the total sum of chemical reactions in a body?",
-    "correct_answer": "Metabolism",
-    "incorrect_answers": ["Digestion", "Homeostasis", "Catabolism"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which type of animal is cold-blooded and has scales?",
-    "correct_answer": "Reptile",
-    "incorrect_answers": ["Amphibian", "Mammal", "Bird"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the primary function of the large intestine?",
-    "correct_answer": "To absorb water",
-    "incorrect_answers": ["To digest protein", "To store bile", "To pump blood"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What do we call the process of seeds starting to grow?",
-    "correct_answer": "Germination",
-    "incorrect_answers": ["Pollination", "Fertilization", "Transpiration"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which animal is the largest mammal in the world?",
-    "correct_answer": "Blue Whale",
-    "incorrect_answers": ["African Elephant", "Giraffe", "Great White Shark"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for the fluid portion of blood?",
-    "correct_answer": "Plasma",
-    "incorrect_answers": ["Serum", "Platelet", "Hemoglobin"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What do we call a trait that helps an organism survive in its environment?",
-    "correct_answer": "Adaptation",
-    "incorrect_answers": ["Mutation", "Variation", "Drift"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which organ helps us breathe by contracting and expanding the chest?",
-    "correct_answer": "Diaphragm",
-    "incorrect_answers": ["Heart", "Ribcage", "Larynx"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the term for an organism made of many cells?",
-    "correct_answer": "Multicellular",
-    "incorrect_answers": ["Unicellular", "Eukaryotic", "Prokaryotic"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which system of the body breaks down food into nutrients?",
-    "correct_answer": "Digestive system",
-    "incorrect_answers": ["Circulatory system", "Respiratory system", "Excretory system"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for the colored part of the human eye?",
+    "question": "What is the colored part of the eye called?",
     "correct_answer": "Iris",
     "incorrect_answers": ["Pupil", "Sclera", "Lens"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the process of water evaporating from plant leaves called?",
+    "question": "What is water evaporating from plant leaves called?",
     "correct_answer": "Transpiration",
     "incorrect_answers": ["Evaporation", "Condensation", "Sublimation"],
     "difficulty": "easy"
   },
   {
-    "question": "Which organelle is responsible for storing water and waste in a plant cell?",
-    "correct_answer": "Large vacuole",
-    "incorrect_answers": ["Nucleus", "Mitochondria", "Chloroplast"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for a group of tissues working together for a specific function?",
-    "correct_answer": "Organ",
-    "incorrect_answers": ["Organ system", "Organism", "Colony"],
-    "difficulty": "easy"
-  },
-  {
     "question": "What type of blood vessel connects arteries and veins?",
     "correct_answer": "Capillary",
-    "incorrect_answers": ["Arteriole", "Venule", "Nerve"],
+    "incorrect_answers": ["Arteriole", "Venule", "Lymph vessel"],
     "difficulty": "easy"
   },
   {
@@ -579,148 +345,1450 @@
     "difficulty": "easy"
   },
   {
-    "question": "Which gas is primarily responsible for the greenhouse effect?",
-    "correct_answer": "Carbon dioxide",
-    "incorrect_answers": ["Oxygen", "Nitrogen", "Helium"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name for the basic unit of the nervous system?",
+    "question": "What is the basic unit of the nervous system?",
     "correct_answer": "Neuron",
     "incorrect_answers": ["Nephron", "Axon", "Synapse"],
     "difficulty": "easy"
   },
   {
-    "question": "Which organelle is the site of photosynthesis in plant cells?",
+    "question": "Where does photosynthesis occur in plant cells?",
     "correct_answer": "Chloroplast",
     "incorrect_answers": ["Mitochondria", "Nucleus", "Ribosome"],
     "difficulty": "easy"
   },
   {
-    "question": "What is the name of the first part of the small intestine?",
-    "correct_answer": "Duodenum",
-    "incorrect_answers": ["Jejunum", "Ileum", "Colon"],
+    "question": "What is the fastest land animal?",
+    "correct_answer": "Cheetah",
+    "incorrect_answers": ["Lion", "Gazelle", "Horse"],
     "difficulty": "easy"
   },
-    {
-      "question": "What is the powerhouse of the cell?",
-      "correct_answer": "Mitochondria",
-      "incorrect_answers": ["Nucleus", "Ribosome", "Golgi apparatus"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What organ pumps blood through the body?",
-      "correct_answer": "Heart",
-      "incorrect_answers": ["Lung", "Liver", "Kidney"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the largest organ of the human body?",
-      "correct_answer": "Skin",
-      "incorrect_answers": ["Liver", "Brain", "Intestines"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "How many bones does an adult human body have?",
-      "correct_answer": "206",
-      "incorrect_answers": ["186", "212", "256"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What gas do plants release during photosynthesis?",
-      "correct_answer": "Oxygen",
-      "incorrect_answers": ["Carbon dioxide", "Nitrogen", "Hydrogen"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the longest bone in the human body?",
-      "correct_answer": "Femur (thigh bone)",
-      "incorrect_answers": ["Tibia", "Humerus", "Fibula"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the fastest land animal?",
-      "correct_answer": "Cheetah",
-      "incorrect_answers": ["Lion", "Gazelle", "Horse"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "How many legs does a spider have?",
-      "correct_answer": "8",
-      "incorrect_answers": ["6", "10", "4"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What vitamin does sunlight help our body produce?",
-      "correct_answer": "Vitamin D",
-      "incorrect_answers": ["Vitamin A", "Vitamin C", "Vitamin B12"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the largest animal on Earth?",
-      "correct_answer": "Blue whale",
-      "incorrect_answers": ["African elephant", "Giant squid", "Sperm whale"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "How many chambers does the human heart have?",
-      "correct_answer": "4",
-      "incorrect_answers": ["2", "3", "6"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What do we call animals that eat only plants?",
-      "correct_answer": "Herbivores",
-      "incorrect_answers": ["Carnivores", "Omnivores", "Decomposers"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the study of plants called?",
-      "correct_answer": "Botany",
-      "incorrect_answers": ["Zoology", "Mycology", "Ecology"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the most common blood type in humans?",
-      "correct_answer": "O positive",
-      "incorrect_answers": ["A positive", "B positive", "AB positive"],
-      "difficulty": "medium"
-    },
-    {
-      "question": "Where does digestion begin in the human body?",
-      "correct_answer": "The mouth",
-      "incorrect_answers": ["The stomach", "The small intestine", "The esophagus"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the largest internal organ in the human body?",
-      "correct_answer": "Liver",
-      "incorrect_answers": ["Stomach", "Brain", "Kidney"],
-      "difficulty": "medium"
-    },
-    {
-      "question": "What do you call a group of lions?",
-      "correct_answer": "A pride",
-      "incorrect_answers": ["A pack", "A herd", "A colony"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What molecule carries genetic information in most living organisms?",
-      "correct_answer": "DNA",
-      "incorrect_answers": ["RNA", "Protein", "ATP"],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which blood type is known as the universal donor?",
-      "correct_answer": "O negative",
-      "incorrect_answers": ["AB positive", "A positive", "B negative"],
-      "difficulty": "medium"
-    },
-    {
-      "question": "What process do plants use to convert sunlight into food?",
-      "correct_answer": "Photosynthesis",
-      "incorrect_answers": ["Respiration", "Transpiration", "Fermentation"],
-      "difficulty": "easy"
-    }
+  {
+    "question": "How many legs does a spider have?",
+    "correct_answer": "8",
+    "incorrect_answers": ["6", "10", "4"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the largest animal on Earth?",
+    "correct_answer": "Blue whale",
+    "incorrect_answers": ["African elephant", "Giant squid", "Giraffe"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do you call a group of lions?",
+    "correct_answer": "A pride",
+    "incorrect_answers": ["A pack", "A herd", "A colony"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Where does digestion begin?",
+    "correct_answer": "The mouth",
+    "incorrect_answers": ["The stomach", "Small intestine", "Esophagus"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a caterpillar turning into a butterfly called?",
+    "correct_answer": "Metamorphosis",
+    "incorrect_answers": ["Evolution", "Germination", "Mitosis"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the tiny holes in leaves for gas exchange?",
+    "correct_answer": "Stomata",
+    "incorrect_answers": ["Pores", "Vents", "Lenticels"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the largest blood vessel in the body?",
+    "correct_answer": "Aorta",
+    "incorrect_answers": ["Vena cava", "Carotid", "Femoral"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the basic units of heredity?",
+    "correct_answer": "Genes",
+    "incorrect_answers": ["Proteins", "Chromosomes", "Cells"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do seeds need to start growing?",
+    "correct_answer": "Water",
+    "incorrect_answers": ["Sunlight", "Soil", "Fertilizer"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What pigment gives skin its color?",
+    "correct_answer": "Melanin",
+    "incorrect_answers": ["Keratin", "Collagen", "Carotene"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many lungs does a human have?",
+    "correct_answer": "2",
+    "incorrect_answers": ["1", "3", "4"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are baby frogs called?",
+    "correct_answer": "Tadpoles",
+    "incorrect_answers": ["Larvae", "Fry", "Pups"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many teeth does an adult human have?",
+    "correct_answer": "32",
+    "incorrect_answers": ["28", "36", "24"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a baby cow called?",
+    "correct_answer": "Calf",
+    "incorrect_answers": ["Foal", "Lamb", "Kid"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do fish use to breathe?",
+    "correct_answer": "Gills",
+    "incorrect_answers": ["Lungs", "Skin", "Fins"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What covers the body of most fish?",
+    "correct_answer": "Scales",
+    "incorrect_answers": ["Fur", "Feathers", "Shells"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which blood vessel carries blood back to the heart?",
+    "correct_answer": "Vein",
+    "incorrect_answers": ["Artery", "Capillary", "Aorta"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do you call an animal with no backbone?",
+    "correct_answer": "Invertebrate",
+    "incorrect_answers": ["Vertebrate", "Amphibian", "Reptile"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many kidneys does a human have?",
+    "correct_answer": "2",
+    "incorrect_answers": ["1", "3", "4"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the soft tissue inside bones called?",
+    "correct_answer": "Marrow",
+    "incorrect_answers": ["Cartilage", "Collagen", "Calcium"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the largest land animal?",
+    "correct_answer": "African elephant",
+    "incorrect_answers": ["Giraffe", "Hippo", "Rhino"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What connects muscles to bones?",
+    "correct_answer": "Tendons",
+    "incorrect_answers": ["Ligaments", "Cartilage", "Nerves"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What connects bones to other bones?",
+    "correct_answer": "Ligaments",
+    "incorrect_answers": ["Tendons", "Muscles", "Cartilage"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What mineral makes bones strong?",
+    "correct_answer": "Calcium",
+    "incorrect_answers": ["Iron", "Sodium", "Potassium"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which animal can change its skin color?",
+    "correct_answer": "Chameleon",
+    "incorrect_answers": ["Iguana", "Gecko", "Frog"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do bats use to navigate in the dark?",
+    "correct_answer": "Echolocation",
+    "incorrect_answers": ["Sight", "Smell", "Magnetism"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many arms does an octopus have?",
+    "correct_answer": "8",
+    "incorrect_answers": ["6", "10", "12"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What tube carries air to the lungs?",
+    "correct_answer": "Trachea",
+    "incorrect_answers": ["Esophagus", "Bronchus", "Larynx"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which animal is the tallest in the world?",
+    "correct_answer": "Giraffe",
+    "incorrect_answers": ["Elephant", "Ostrich", "Camel"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the human body mostly made of?",
+    "correct_answer": "Water",
+    "incorrect_answers": ["Carbon", "Protein", "Fat"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many senses do humans typically have?",
+    "correct_answer": "5",
+    "incorrect_answers": ["4", "6", "3"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the opening in the center of the eye?",
+    "correct_answer": "Pupil",
+    "incorrect_answers": ["Iris", "Cornea", "Retina"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a baby kangaroo called?",
+    "correct_answer": "Joey",
+    "incorrect_answers": ["Pup", "Kit", "Cub"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which bird is the largest in the world?",
+    "correct_answer": "Ostrich",
+    "incorrect_answers": ["Emu", "Albatross", "Condor"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which animal produces wool?",
+    "correct_answer": "Sheep",
+    "incorrect_answers": ["Goat", "Llama", "Rabbit"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the largest fish in the ocean?",
+    "correct_answer": "Whale shark",
+    "incorrect_answers": ["Great white", "Blue whale", "Manta ray"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many pairs of ribs do humans have?",
+    "correct_answer": "12",
+    "incorrect_answers": ["10", "14", "8"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What gas do humans exhale?",
+    "correct_answer": "Carbon dioxide",
+    "incorrect_answers": ["Oxygen", "Nitrogen", "Hydrogen"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What fluid does your mouth produce for digestion?",
+    "correct_answer": "Saliva",
+    "incorrect_answers": ["Bile", "Mucus", "Plasma"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which blood component helps clotting?",
+    "correct_answer": "Platelets",
+    "incorrect_answers": ["Red blood cells", "White blood cells", "Plasma"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a group of wolves called?",
+    "correct_answer": "Pack",
+    "incorrect_answers": ["Herd", "Flock", "Colony"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What vitamin is found in citrus fruits like oranges?",
+    "correct_answer": "Vitamin C",
+    "incorrect_answers": ["Vitamin B12", "Vitamin E", "Vitamin D"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a group of fish called?",
+    "correct_answer": "School",
+    "incorrect_answers": ["Pack", "Flock", "Herd"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What part of the plant absorbs water from the soil?",
+    "correct_answer": "Roots",
+    "incorrect_answers": ["Leaves", "Stem", "Flower"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which organ stores bile until needed?",
+    "correct_answer": "Gallbladder",
+    "incorrect_answers": ["Liver", "Spleen", "Appendix"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are organisms that break down dead matter called?",
+    "correct_answer": "Decomposers",
+    "incorrect_answers": ["Producers", "Consumers", "Predators"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is another name for your voice box?",
+    "correct_answer": "Larynx",
+    "incorrect_answers": ["Pharynx", "Trachea", "Epiglottis"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What muscle helps you breathe by moving up and down?",
+    "correct_answer": "Diaphragm",
+    "incorrect_answers": ["Heart", "Ribcage", "Lungs"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the outer layer of skin called?",
+    "correct_answer": "Epidermis",
+    "incorrect_answers": ["Dermis", "Hypodermis", "Cortex"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which organ removes old red blood cells?",
+    "correct_answer": "Spleen",
+    "incorrect_answers": ["Liver", "Kidney", "Pancreas"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the study of body structure called?",
+    "correct_answer": "Anatomy",
+    "incorrect_answers": ["Physiology", "Pathology", "Ecology"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a baby horse called?",
+    "correct_answer": "Foal",
+    "incorrect_answers": ["Calf", "Lamb", "Pup"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What flexible tissue cushions joints?",
+    "correct_answer": "Cartilage",
+    "incorrect_answers": ["Tendon", "Ligament", "Marrow"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What part of a plant makes food using sunlight?",
+    "correct_answer": "Leaf",
+    "incorrect_answers": ["Root", "Stem", "Flower"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a baby sheep called?",
+    "correct_answer": "Lamb",
+    "incorrect_answers": ["Kid", "Calf", "Foal"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What sense does the tongue control?",
+    "correct_answer": "Taste",
+    "incorrect_answers": ["Smell", "Touch", "Hearing"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the main gas in the air we breathe?",
+    "correct_answer": "Nitrogen",
+    "incorrect_answers": ["Oxygen", "Carbon dioxide", "Argon"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which body part do you use to smell?",
+    "correct_answer": "Nose",
+    "incorrect_answers": ["Tongue", "Ears", "Eyes"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a baby cat called?",
+    "correct_answer": "Kitten",
+    "incorrect_answers": ["Puppy", "Cub", "Kit"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What part of the body stores urine?",
+    "correct_answer": "Bladder",
+    "incorrect_answers": ["Kidney", "Liver", "Stomach"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do caterpillars turn into?",
+    "correct_answer": "Butterflies",
+    "incorrect_answers": ["Moths", "Beetles", "Bees"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the total sum of chemical reactions in the body?",
+    "correct_answer": "Metabolism",
+    "incorrect_answers": ["Digestion", "Homeostasis", "Respiration"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What type of animal is cold-blooded with scales?",
+    "correct_answer": "Reptile",
+    "incorrect_answers": ["Amphibian", "Mammal", "Bird"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a group of same species in one area called?",
+    "correct_answer": "Population",
+    "incorrect_answers": ["Community", "Ecosystem", "Biome"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the role an organism plays in its ecosystem?",
+    "correct_answer": "Niche",
+    "incorrect_answers": ["Habitat", "Biome", "Community"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do plants release during photosynthesis?",
+    "correct_answer": "Oxygen",
+    "incorrect_answers": ["Carbon dioxide", "Nitrogen", "Water vapor"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the fluid portion of blood called?",
+    "correct_answer": "Plasma",
+    "incorrect_answers": ["Serum", "Hemoglobin", "Platelet"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What trait helps an organism survive?",
+    "correct_answer": "Adaptation",
+    "incorrect_answers": ["Mutation", "Variation", "Extinction"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a term for an organism made of many cells?",
+    "correct_answer": "Multicellular",
+    "incorrect_answers": ["Unicellular", "Prokaryotic", "Colonial"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the process of seeds starting to grow?",
+    "correct_answer": "Germination",
+    "incorrect_answers": ["Pollination", "Fertilization", "Budding"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the term for an animal that lives on land and water?",
+    "correct_answer": "Amphibian",
+    "incorrect_answers": ["Reptile", "Mammal", "Crustacean"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which organelle stores water in plant cells?",
+    "correct_answer": "Vacuole",
+    "incorrect_answers": ["Nucleus", "Mitochondria", "Chloroplast"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a group of tissues working together called?",
+    "correct_answer": "Organ",
+    "incorrect_answers": ["Organ system", "Organism", "Colony"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What term means a group of similar cells?",
+    "correct_answer": "Tissue",
+    "incorrect_answers": ["Organ", "System", "Organelle"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the body system that breaks down food?",
+    "correct_answer": "Digestive system",
+    "incorrect_answers": ["Circulatory system", "Respiratory system", "Excretory system"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What type of animal is a whale?",
+    "correct_answer": "Mammal",
+    "incorrect_answers": ["Fish", "Reptile", "Amphibian"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a baby dog called?",
+    "correct_answer": "Puppy",
+    "incorrect_answers": ["Kitten", "Cub", "Pup"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many wings does a bee have?",
+    "correct_answer": "4",
+    "incorrect_answers": ["2", "6", "8"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What carries messages from the brain to the body?",
+    "correct_answer": "Nerves",
+    "incorrect_answers": ["Veins", "Muscles", "Bones"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the body's largest muscle?",
+    "correct_answer": "Gluteus maximus",
+    "incorrect_answers": ["Bicep", "Quadricep", "Heart"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the average human body temperature?",
+    "correct_answer": "98.6°F (37°C)",
+    "incorrect_answers": ["96°F", "100°F", "95°F"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Where does blood get oxygen in the body?",
+    "correct_answer": "Lungs",
+    "incorrect_answers": ["Heart", "Liver", "Brain"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do we call animals that are active during the day?",
+    "correct_answer": "Diurnal",
+    "incorrect_answers": ["Nocturnal", "Crepuscular", "Seasonal"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many nostrils does a human have?",
+    "correct_answer": "2",
+    "incorrect_answers": ["1", "3", "4"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do we call shedding of skin in reptiles?",
+    "correct_answer": "Molting",
+    "incorrect_answers": ["Shedding", "Peeling", "Sloughing"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What protects the brain inside the head?",
+    "correct_answer": "Skull",
+    "incorrect_answers": ["Spine", "Ribcage", "Pelvis"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What type of animal is a turtle?",
+    "correct_answer": "Reptile",
+    "incorrect_answers": ["Amphibian", "Mammal", "Fish"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What sugar gives muscles quick energy?",
+    "correct_answer": "Glucose",
+    "incorrect_answers": ["Fructose", "Sucrose", "Lactose"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the sticky thread spiders produce?",
+    "correct_answer": "Silk",
+    "incorrect_answers": ["Web", "String", "Fiber"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What part of the body makes blood cells?",
+    "correct_answer": "Bone marrow",
+    "incorrect_answers": ["Heart", "Liver", "Spleen"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which organ produces stomach acid?",
+    "correct_answer": "Stomach",
+    "incorrect_answers": ["Pancreas", "Liver", "Gallbladder"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many toes does a human have?",
+    "correct_answer": "10",
+    "incorrect_answers": ["8", "12", "20"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What system sends electrical signals to control the body?",
+    "correct_answer": "Nervous system",
+    "incorrect_answers": ["Endocrine system", "Circulatory system", "Immune system"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a collarbone also called?",
+    "correct_answer": "Clavicle",
+    "incorrect_answers": ["Scapula", "Sternum", "Humerus"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do we call the process of pollen reaching a flower?",
+    "correct_answer": "Pollination",
+    "incorrect_answers": ["Germination", "Fertilization", "Budding"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a backbone also called?",
+    "correct_answer": "Spine",
+    "incorrect_answers": ["Sternum", "Pelvis", "Ribcage"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What membrane vibrates when sound enters the ear?",
+    "correct_answer": "Eardrum",
+    "incorrect_answers": ["Cochlea", "Hammer", "Stirrup"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the skeletal system's main function?",
+    "correct_answer": "Support",
+    "incorrect_answers": ["Digestion", "Breathing", "Thinking"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the system that fights disease in the body?",
+    "correct_answer": "Immune system",
+    "incorrect_answers": ["Nervous system", "Endocrine system", "Skeletal system"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the top of a mushroom called?",
+    "correct_answer": "Cap",
+    "incorrect_answers": ["Stem", "Gill", "Spore"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a group of birds called?",
+    "correct_answer": "Flock",
+    "incorrect_answers": ["Herd", "Pack", "School"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do we call the thick liquid bees make?",
+    "correct_answer": "Honey",
+    "incorrect_answers": ["Nectar", "Wax", "Pollen"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What body part bends at the knee?",
+    "correct_answer": "Leg",
+    "incorrect_answers": ["Arm", "Neck", "Wrist"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the colored powder inside flowers?",
+    "correct_answer": "Pollen",
+    "incorrect_answers": ["Nectar", "Spores", "Seeds"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many eyes do most spiders have?",
+    "correct_answer": "8",
+    "incorrect_answers": ["2", "4", "6"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the breathing organ of a fish?",
+    "correct_answer": "Gills",
+    "incorrect_answers": ["Lungs", "Skin", "Swim bladder"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a baby goat called?",
+    "correct_answer": "Kid",
+    "incorrect_answers": ["Lamb", "Calf", "Foal"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What type of animal is a frog?",
+    "correct_answer": "Amphibian",
+    "incorrect_answers": ["Reptile", "Fish", "Insect"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the joint at the shoulder called?",
+    "correct_answer": "Ball and socket",
+    "incorrect_answers": ["Hinge", "Pivot", "Fixed"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which organ cleans and filters blood?",
+    "correct_answer": "Liver",
+    "incorrect_answers": ["Heart", "Stomach", "Lung"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the main nutrient in bread and pasta?",
+    "correct_answer": "Carbohydrates",
+    "incorrect_answers": ["Protein", "Fat", "Vitamins"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do we call an animal that hunts other animals?",
+    "correct_answer": "Predator",
+    "incorrect_answers": ["Prey", "Parasite", "Scavenger"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the hard white part of a tooth?",
+    "correct_answer": "Enamel",
+    "incorrect_answers": ["Dentin", "Pulp", "Root"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many legs does an insect have?",
+    "correct_answer": "6",
+    "incorrect_answers": ["4", "8", "10"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a group of cows called?",
+    "correct_answer": "Herd",
+    "incorrect_answers": ["Flock", "Pack", "School"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the only mammal that can fly?",
+    "correct_answer": "Bat",
+    "incorrect_answers": ["Flying squirrel", "Sugar glider", "Eagle"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What animal has the longest neck?",
+    "correct_answer": "Giraffe",
+    "incorrect_answers": ["Ostrich", "Swan", "Flamingo"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which animal carries its baby in a pouch?",
+    "correct_answer": "Kangaroo",
+    "incorrect_answers": ["Rabbit", "Fox", "Deer"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do we call an animal that eats dead animals?",
+    "correct_answer": "Scavenger",
+    "incorrect_answers": ["Predator", "Herbivore", "Parasite"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is another word for a red blood cell?",
+    "correct_answer": "Erythrocyte",
+    "incorrect_answers": ["Leukocyte", "Thrombocyte", "Lymphocyte"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What body system moves blood around?",
+    "correct_answer": "Circulatory system",
+    "incorrect_answers": ["Nervous system", "Digestive system", "Respiratory system"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the largest type of bear?",
+    "correct_answer": "Polar bear",
+    "incorrect_answers": ["Grizzly bear", "Black bear", "Panda"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What gives feathers and flamingos their pink color?",
+    "correct_answer": "Carotenoids",
+    "incorrect_answers": ["Melanin", "Chlorophyll", "Hemoglobin"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What type of teeth do humans use for grinding food?",
+    "correct_answer": "Molars",
+    "incorrect_answers": ["Canines", "Incisors", "Premolars"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the main organ of the respiratory system?",
+    "correct_answer": "Lungs",
+    "incorrect_answers": ["Heart", "Nose", "Trachea"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What part of the cell contains chromosomes?",
+    "correct_answer": "Nucleus",
+    "incorrect_answers": ["Cytoplasm", "Ribosome", "Membrane"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What do we call the layer of fat under the skin?",
+    "correct_answer": "Blubber",
+    "incorrect_answers": ["Cartilage", "Muscle", "Marrow"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which ocean animal has eight tentacles?",
+    "correct_answer": "Octopus",
+    "incorrect_answers": ["Squid", "Jellyfish", "Starfish"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What animal is known for its black and white coloring and eating bamboo?",
+    "correct_answer": "Panda",
+    "incorrect_answers": ["Zebra", "Penguin", "Skunk"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What part of a bird allows it to fly?",
+    "correct_answer": "Wings",
+    "incorrect_answers": ["Beak", "Talons", "Feathers"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name for a young frog that has a tail?",
+    "correct_answer": "Tadpole",
+    "incorrect_answers": ["Larva", "Nymph", "Fry"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the waxy coating on leaves that prevents water loss?",
+    "correct_answer": "Cuticle",
+    "incorrect_answers": ["Epidermis", "Cortex", "Bark"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the main nutrient in meat and eggs?",
+    "correct_answer": "Protein",
+    "incorrect_answers": ["Carbohydrates", "Fat", "Fiber"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What part of a flower becomes the fruit?",
+    "correct_answer": "Ovary",
+    "incorrect_answers": ["Petal", "Stamen", "Sepal"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the branch of biology that studies ecosystems?",
+    "correct_answer": "Ecology",
+    "incorrect_answers": ["Genetics", "Anatomy", "Zoology"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What organ do you breathe through underwater with a snorkel?",
+    "correct_answer": "Lungs",
+    "incorrect_answers": ["Gills", "Skin", "Mouth"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is an organism that lives on or in another organism?",
+    "correct_answer": "Parasite",
+    "incorrect_answers": ["Predator", "Prey", "Host"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What pigment makes leaves turn yellow in fall?",
+    "correct_answer": "Carotene",
+    "incorrect_answers": ["Chlorophyll", "Melanin", "Hemoglobin"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the most common blood type in humans?",
+    "correct_answer": "O positive",
+    "incorrect_answers": ["A positive", "B positive", "AB positive"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the largest internal organ?",
+    "correct_answer": "Liver",
+    "incorrect_answers": ["Stomach", "Brain", "Kidney"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is an organism's physical appearance called?",
+    "correct_answer": "Phenotype",
+    "incorrect_answers": ["Genotype", "Allele", "Mutation"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What part of the brain controls balance?",
+    "correct_answer": "Cerebellum",
+    "incorrect_answers": ["Cerebrum", "Medulla", "Thalamus"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the first part of the small intestine?",
+    "correct_answer": "Duodenum",
+    "incorrect_answers": ["Jejunum", "Ileum", "Colon"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What type of symmetry do humans have?",
+    "correct_answer": "Bilateral",
+    "incorrect_answers": ["Radial", "Asymmetric", "Spherical"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the scientific name for the jawbone?",
+    "correct_answer": "Mandible",
+    "incorrect_answers": ["Maxilla", "Scapula", "Clavicle"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which gas is mainly responsible for the greenhouse effect?",
+    "correct_answer": "Carbon dioxide",
+    "incorrect_answers": ["Oxygen", "Nitrogen", "Helium"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What type of cell division produces sex cells?",
+    "correct_answer": "Meiosis",
+    "incorrect_answers": ["Mitosis", "Binary fission", "Budding"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the term for an organism's genetic makeup?",
+    "correct_answer": "Genotype",
+    "incorrect_answers": ["Phenotype", "Karyotype", "Prototype"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which hormone regulates blood sugar levels?",
+    "correct_answer": "Insulin",
+    "incorrect_answers": ["Adrenaline", "Estrogen", "Cortisol"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the tough protein in hair and nails?",
+    "correct_answer": "Keratin",
+    "incorrect_answers": ["Collagen", "Elastin", "Melanin"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What do we call species that no longer exist?",
+    "correct_answer": "Extinct",
+    "incorrect_answers": ["Endangered", "Invasive", "Endemic"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which blood type is the universal receiver?",
+    "correct_answer": "AB positive",
+    "incorrect_answers": ["O negative", "A positive", "B negative"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the main structural protein in skin?",
+    "correct_answer": "Collagen",
+    "incorrect_answers": ["Keratin", "Elastin", "Fibrin"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What part of the brain controls basic life functions?",
+    "correct_answer": "Medulla oblongata",
+    "incorrect_answers": ["Cerebrum", "Cerebellum", "Thalamus"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the energy currency of the cell?",
+    "correct_answer": "ATP",
+    "incorrect_answers": ["DNA", "RNA", "Glucose"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are the light-sensitive cells in the retina called?",
+    "correct_answer": "Rods and cones",
+    "incorrect_answers": ["Neurons", "Lenses", "Fibers"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which body system produces hormones?",
+    "correct_answer": "Endocrine system",
+    "incorrect_answers": ["Nervous system", "Immune system", "Digestive system"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the scientific term for programmed cell death?",
+    "correct_answer": "Apoptosis",
+    "incorrect_answers": ["Necrosis", "Mitosis", "Osmosis"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which part of the ear is shaped like a snail shell?",
+    "correct_answer": "Cochlea",
+    "incorrect_answers": ["Eardrum", "Hammer", "Stirrup"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name for the voice box?",
+    "correct_answer": "Larynx",
+    "incorrect_answers": ["Pharynx", "Trachea", "Bronchus"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What carries lymph fluid through the body?",
+    "correct_answer": "Lymph vessels",
+    "incorrect_answers": ["Arteries", "Veins", "Nerves"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the thick liquid that protects stomach walls?",
+    "correct_answer": "Mucus",
+    "incorrect_answers": ["Bile", "Saliva", "Plasma"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What structure separates the chest from the abdomen?",
+    "correct_answer": "Diaphragm",
+    "incorrect_answers": ["Ribcage", "Sternum", "Peritoneum"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the finger-like projections in the small intestine?",
+    "correct_answer": "Villi",
+    "incorrect_answers": ["Cilia", "Flagella", "Alveoli"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What pigment makes autumn leaves turn red?",
+    "correct_answer": "Anthocyanin",
+    "incorrect_answers": ["Chlorophyll", "Carotene", "Xanthophyll"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What cell structure controls what enters and exits?",
+    "correct_answer": "Cell membrane",
+    "incorrect_answers": ["Cell wall", "Nucleus", "Cytoplasm"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the tough outer covering of an insect?",
+    "correct_answer": "Exoskeleton",
+    "incorrect_answers": ["Endoskeleton", "Shell", "Carapace"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which gland is called the master gland?",
+    "correct_answer": "Pituitary gland",
+    "incorrect_answers": ["Thyroid", "Adrenal", "Pineal"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the study of fungi called?",
+    "correct_answer": "Mycology",
+    "incorrect_answers": ["Botany", "Virology", "Ecology"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which organelle packages and ships proteins?",
+    "correct_answer": "Golgi apparatus",
+    "incorrect_answers": ["Ribosome", "Lysosome", "Vacuole"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the longest cell in the human body?",
+    "correct_answer": "Nerve cell",
+    "incorrect_answers": ["Muscle cell", "Red blood cell", "Bone cell"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which enzyme in saliva breaks down starch?",
+    "correct_answer": "Amylase",
+    "incorrect_answers": ["Lipase", "Protease", "Lactase"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the gap between two nerve cells called?",
+    "correct_answer": "Synapse",
+    "incorrect_answers": ["Axon", "Dendrite", "Node"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What plant tissue transports water upward?",
+    "correct_answer": "Xylem",
+    "incorrect_answers": ["Phloem", "Cambium", "Cortex"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What plant tissue transports sugar downward?",
+    "correct_answer": "Phloem",
+    "incorrect_answers": ["Xylem", "Cambium", "Epidermis"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What protects the ends of chromosomes?",
+    "correct_answer": "Telomeres",
+    "incorrect_answers": ["Centromeres", "Histones", "Codons"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the relationship where both species benefit?",
+    "correct_answer": "Mutualism",
+    "incorrect_answers": ["Parasitism", "Commensalism", "Competition"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What hormone triggers the fight-or-flight response?",
+    "correct_answer": "Adrenaline",
+    "incorrect_answers": ["Insulin", "Melatonin", "Estrogen"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the largest part of the brain?",
+    "correct_answer": "Cerebrum",
+    "incorrect_answers": ["Cerebellum", "Brainstem", "Thalamus"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What hormone helps regulate sleep?",
+    "correct_answer": "Melatonin",
+    "incorrect_answers": ["Serotonin", "Cortisol", "Dopamine"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the covering around nerve fibers called?",
+    "correct_answer": "Myelin sheath",
+    "incorrect_answers": ["Axon", "Dendrite", "Synapse"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What process moves substances against their concentration?",
+    "correct_answer": "Active transport",
+    "incorrect_answers": ["Diffusion", "Osmosis", "Filtration"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a relationship where one organism benefits and the other is harmed?",
+    "correct_answer": "Parasitism",
+    "incorrect_answers": ["Mutualism", "Commensalism", "Symbiosis"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are antibodies made of?",
+    "correct_answer": "Proteins",
+    "incorrect_answers": ["Lipids", "Carbohydrates", "Nucleic acids"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the process of cell eating called?",
+    "correct_answer": "Phagocytosis",
+    "incorrect_answers": ["Pinocytosis", "Exocytosis", "Osmosis"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What part of the kidney filters blood?",
+    "correct_answer": "Nephron",
+    "incorrect_answers": ["Ureter", "Bladder", "Cortex"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the largest white blood cell?",
+    "correct_answer": "Monocyte",
+    "incorrect_answers": ["Lymphocyte", "Neutrophil", "Basophil"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What type of joint allows the most movement?",
+    "correct_answer": "Ball and socket",
+    "incorrect_answers": ["Hinge", "Pivot", "Gliding"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the resting membrane potential of a neuron?",
+    "correct_answer": "-70 mV",
+    "incorrect_answers": ["+30 mV", "-90 mV", "0 mV"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What enzyme unwinds DNA during replication?",
+    "correct_answer": "Helicase",
+    "incorrect_answers": ["Polymerase", "Ligase", "Primase"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the final electron acceptor in aerobic respiration?",
+    "correct_answer": "Oxygen",
+    "incorrect_answers": ["Carbon dioxide", "Water", "NADH"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "How many ATP molecules does one glucose produce in aerobic respiration?",
+    "correct_answer": "36-38",
+    "incorrect_answers": ["2", "12", "24"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the name for organisms that thrive in extreme heat?",
+    "correct_answer": "Thermophiles",
+    "incorrect_answers": ["Halophiles", "Acidophiles", "Psychrophiles"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What nitrogenous bases pair together in DNA?",
+    "correct_answer": "A-T and C-G",
+    "incorrect_answers": ["A-C and T-G", "A-G and C-T", "A-U and C-G"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the process of RNA being made from DNA?",
+    "correct_answer": "Transcription",
+    "incorrect_answers": ["Translation", "Replication", "Transduction"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the process of protein being made from RNA?",
+    "correct_answer": "Translation",
+    "incorrect_answers": ["Transcription", "Replication", "Elongation"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What cycle describes the stages of cellular respiration in mitochondria?",
+    "correct_answer": "Krebs cycle",
+    "incorrect_answers": ["Calvin cycle", "Water cycle", "Cell cycle"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What type of bond holds the two strands of DNA together?",
+    "correct_answer": "Hydrogen bonds",
+    "incorrect_answers": ["Covalent bonds", "Ionic bonds", "Peptide bonds"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the light-independent reaction of photosynthesis called?",
+    "correct_answer": "Calvin cycle",
+    "incorrect_answers": ["Krebs cycle", "Electron chain", "Glycolysis"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What organelle contains digestive enzymes?",
+    "correct_answer": "Lysosome",
+    "incorrect_answers": ["Ribosome", "Peroxisome", "Vacuole"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the term for a permanent gene change passed to offspring?",
+    "correct_answer": "Germline mutation",
+    "incorrect_answers": ["Somatic mutation", "Point mutation", "Silent mutation"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the Hardy-Weinberg principle about?",
+    "correct_answer": "Allele frequency",
+    "incorrect_answers": ["Natural selection", "Genetic drift", "Gene flow"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What structure in bacteria contains extra DNA?",
+    "correct_answer": "Plasmid",
+    "incorrect_answers": ["Nucleoid", "Capsule", "Flagellum"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the net ATP gain from glycolysis?",
+    "correct_answer": "2 ATP",
+    "incorrect_answers": ["4 ATP", "6 ATP", "36 ATP"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What type of RNA carries amino acids to the ribosome?",
+    "correct_answer": "tRNA",
+    "incorrect_answers": ["mRNA", "rRNA", "snRNA"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the term for organisms that can cause disease?",
+    "correct_answer": "Pathogens",
+    "incorrect_answers": ["Antigens", "Antibodies", "Allergens"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the fluid-filled space inside the chloroplast?",
+    "correct_answer": "Stroma",
+    "incorrect_answers": ["Thylakoid", "Matrix", "Lumen"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What are the stacked membranes inside chloroplasts?",
+    "correct_answer": "Thylakoids",
+    "incorrect_answers": ["Cristae", "Stroma", "Grana"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the movement of molecules from high to low concentration?",
+    "correct_answer": "Diffusion",
+    "incorrect_answers": ["Active transport", "Endocytosis", "Exocytosis"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What type of immunity comes from vaccination?",
+    "correct_answer": "Active immunity",
+    "incorrect_answers": ["Passive immunity", "Innate immunity", "Natural immunity"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the binomial name for humans?",
+    "correct_answer": "Homo sapiens",
+    "incorrect_answers": ["Homo erectus", "Pan troglodytes", "Homo habilis"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What codon signals the start of translation?",
+    "correct_answer": "AUG",
+    "incorrect_answers": ["UAA", "UGA", "UAG"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which kingdom do mushrooms belong to?",
+    "correct_answer": "Fungi",
+    "incorrect_answers": ["Plantae", "Protista", "Animalia"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the inner membrane fold of a mitochondrion?",
+    "correct_answer": "Cristae",
+    "incorrect_answers": ["Thylakoid", "Stroma", "Matrix"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What enzyme joins DNA fragments together?",
+    "correct_answer": "Ligase",
+    "incorrect_answers": ["Helicase", "Polymerase", "Primase"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the non-coding section of a gene called?",
+    "correct_answer": "Intron",
+    "incorrect_answers": ["Exon", "Codon", "Promoter"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the coding section of a gene called?",
+    "correct_answer": "Exon",
+    "incorrect_answers": ["Intron", "Codon", "Operon"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What pigment captures light energy in photosystem II?",
+    "correct_answer": "Chlorophyll a",
+    "incorrect_answers": ["Chlorophyll b", "Carotenoid", "Phycocyanin"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is a group of three bases on mRNA called?",
+    "correct_answer": "Codon",
+    "incorrect_answers": ["Anticodon", "Intron", "Exon"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is crossing over during meiosis?",
+    "correct_answer": "Gene exchange",
+    "incorrect_answers": ["Cell death", "DNA repair", "Gene silencing"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What type of selection favors the average phenotype?",
+    "correct_answer": "Stabilizing",
+    "incorrect_answers": ["Directional", "Disruptive", "Sexual"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What molecule donates electrons in photosynthesis?",
+    "correct_answer": "Water",
+    "incorrect_answers": ["Carbon dioxide", "NADPH", "Oxygen"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the first stage of cellular respiration?",
+    "correct_answer": "Glycolysis",
+    "incorrect_answers": ["Krebs cycle", "Fermentation", "Electron transport"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What condition results from having three copies of chromosome 21?",
+    "correct_answer": "Down syndrome",
+    "incorrect_answers": ["Turner syndrome", "Klinefelter syndrome", "Cri du chat"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the pH of human blood?",
+    "correct_answer": "7.4",
+    "incorrect_answers": ["6.8", "7.0", "8.0"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What molecule is the main electron carrier in respiration?",
+    "correct_answer": "NADH",
+    "incorrect_answers": ["FADH2", "ATP", "CoA"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What type of inheritance does blood type follow?",
+    "correct_answer": "Codominance",
+    "incorrect_answers": ["Simple dominance", "Polygenic", "Epistasis"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the site of protein synthesis on the ribosome?",
+    "correct_answer": "A site",
+    "incorrect_answers": ["P site", "E site", "S site"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is random change in allele frequency called?",
+    "correct_answer": "Genetic drift",
+    "incorrect_answers": ["Gene flow", "Natural selection", "Mutation"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the oxygen-carrying molecule in muscles?",
+    "correct_answer": "Myoglobin",
+    "incorrect_answers": ["Hemoglobin", "Ferritin", "Albumin"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What structure forms during mitosis to pull chromosomes apart?",
+    "correct_answer": "Spindle fibers",
+    "incorrect_answers": ["Centrioles", "Centromeres", "Chromatin"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the term for a cell with two sets of chromosomes?",
+    "correct_answer": "Diploid",
+    "incorrect_answers": ["Haploid", "Polyploid", "Aneuploid"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What sugar is found in DNA but not RNA?",
+    "correct_answer": "Deoxyribose",
+    "incorrect_answers": ["Ribose", "Glucose", "Fructose"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the enzyme that copies DNA?",
+    "correct_answer": "DNA polymerase",
+    "incorrect_answers": ["RNA polymerase", "Helicase", "Ligase"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the term for a cell with one set of chromosomes?",
+    "correct_answer": "Haploid",
+    "incorrect_answers": ["Diploid", "Triploid", "Polyploid"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "Where does the electron transport chain occur?",
+    "correct_answer": "Inner mitochondrial membrane",
+    "incorrect_answers": ["Cytoplasm", "Nucleus", "Cell membrane"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the end product of fermentation in yeast?",
+    "correct_answer": "Ethanol and CO2",
+    "incorrect_answers": ["Lactic acid", "Acetic acid", "Methanol"],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the end product of fermentation in muscles?",
+    "correct_answer": "Lactic acid",
+    "incorrect_answers": ["Ethanol", "Pyruvate", "Glucose"],
+    "difficulty": "hard"
+  }
   ]
 }
