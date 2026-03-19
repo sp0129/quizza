@@ -8,13 +8,13 @@
 
 ## Core Philosophy
 
-**Enable EVERYTHING. Advertise Open Challenges. Make it visually engaging and fun.**
+**Get them into a game FAST. First game → First dopamine hit → Repeat play.**
 
-- ✅ All game modes accessible (Solo, Open Challenges, Create Room, Join Room; 1v1 Challenge unlocks with friends)
-- ✅ Nothing grayed out or disabled
-- ✅ Visually rich with mascot/animation (not sparse 4-button grid)
-- ✅ Open Challenges is the STAR of the show (hero section)
-- ✅ Full feature parity with standard users
+- ✅ All game modes accessible (Solo, Open Challenges, Create Room, Join Room; Duel unlocks with friends)
+- ✅ Nothing grayed out or disabled — but clear visual hierarchy (one primary action)
+- ✅ Progressive reveal: 0 games = minimal (just play), 1+ games = full experience (hero, progress, challenges)
+- ✅ Mascot used sparingly at key moments, not continuously animated
+- ✅ Open Challenges promoted AFTER first game (user needs context first)
 - ✅ Centered content with smart spacing
 
 -----
@@ -33,154 +33,165 @@
 //   - 0 games, 0 friends → new user (truly fresh)
 //   - 3 games, 0 friends → new user (still solo, still learning)
 //   - 0 games, 1 friend → new user (added friend before playing — keep hand-holding)
-//   - 1 game, 1 friend  → NOT new user (has a friend + knows how to play → show 1v1 Challenge)
+//   - 1 game, 1 friend  → NOT new user (has a friend + knows how to play → Duel unlocks)
 //   - 5 games, 0 friends → NOT new user (experienced solo player, knows the app)
 
 const isNewUser =
   (stats.friends_count === 0 && stats.games_played_total < 5) ||
   (stats.friends_count > 0 && stats.games_played_total === 0);
 
-// Single DashboardScreen component with conditional sections:
-// isNewUser → show HeroSection + ProgressSection
-// !isNewUser → show MetricsRow + ChallengesFeed + ResultsFeed
-// GameModeGrid + tabs are identical for both
+// Single DashboardScreen component with three rendering states:
+// State A (isNewUser && games_played_total === 0) → Mascot + "Play Your First Game" + secondary rooms
+// State B (isNewUser && games_played_total > 0)   → HeroSection + GameModeGrid + ProgressSection
+// Standard (!isNewUser)                           → MetricsRow + GameModeGrid + ChallengesFeed + ResultsFeed
+// Tabs are identical across all states
 ```
 
 ### Why We Don’t Disable Features
 
 **Old thinking**: “Hide features until they add friends”
-**New thinking**: “Show them everything is available. Friends unlock 1v1 challenges, not core features.”
+**New thinking**: “Show them everything is available. Friends unlock Duels, not core features.”
 
 **What triggers transition to standard dashboard:**
 
-- Adding a friend + completing at least 1 game → standard (1v1 Challenge unlocks via half-sheet)
+- Adding a friend + completing at least 1 game → standard (Duel unlocks via half-sheet)
 - Completing 5+ games solo → standard (they clearly know the app)
 - Note: only COMPLETED games count (all modes — solo, room, challenge). Abandoned/quit games are never stored.
 
 **What changes on standard dashboard:**
 
 - Hero section gone → replaced by standard metrics row (daily streak, wins, win rate)
-- ⚔️ Challenge button opens half-sheet with BOTH "Challenge a Friend" and "Create Open Challenge"
+- ⚔️ Challenge button opens half-sheet with BOTH “Duel a Friend” and “Create Open Challenge”
   (vs new user where it goes straight to Create Open Challenge)
 - Friends tab content populates (becomes useful)
-- Incoming challenges section appears (they can be challenged)
-- Results section populates (head-to-head results with friends)
+- Incoming duels section appears (they can be challenged by friends)
+- Results section populates (duel results with friends)
 
-**Note on stats:** The new user dashboard does NOT show "wins" or "win rate" — those only make sense with competitive games. New user progress shows: Games Played, Best Score, and Daily Streak.
+**Note on stats:** The new user dashboard does NOT show “wins” or “win rate” — those only make sense with competitive games. New user progress shows: Games Played, Best Score, and Daily Streak.
 
 -----
 
-## New User Home Screen - Full Design
+## New User Home Screen — Two Internal States
 
-### Header
+The new user experience has **two internal states** based on games played. This is progressive disclosure: show less initially, reveal as engagement grows.
+
+-----
+
+### State A: Never Played (0 games) — “Just Get Them Playing”
+
+The entire screen is focused on ONE action: play your first game. No hero, no challenges, no competing CTAs. Minimal friction.
 
 ```
 ┌──────────────────────────────────────┐
 │ [Avatar] Hi @username! 👋            │
-│                      [+ Add Friend]  │ ← Subtle CTA, top right
+│                      [+ Add Friend]  │ ← Subtle, top right
+│                                      │
+│                                      │
+│         [Mascot — static,            │
+│          welcoming pose]             │ ← NOT continuously animated
+│                                      │
+│    “Ready to test your knowledge?”   │
+│    “Quick thinking = bigger scores!” │
+│                                      │
+│   ┌──────────────────────────────┐   │
+│   │    ▶ Play Your First Game    │   │ ← ONE dominant primary CTA
+│   └──────────────────────────────┘   │ ← Navigates to Solo category picker
+│                                      │
+├──────────────────────────────────────┤
+│                                      │
+│ Also available:                      │ ← Secondary, visually quiet
+│ ┌────────────┐  ┌────────────┐       │
+│ │ Join Room  │  │ Create Room│       │ ← Smaller, subdued buttons
+│ │ 🚪 Enter   │  │ 👥 Host    │       │ ← Available but not competing
+│ │ a code     │  │ a game     │       │
+│ └────────────┘  └────────────┘       │
 │                                      │
 └──────────────────────────────────────┘
 ```
 
-**Copy varies by progress (2 states only):**
-
-- Never played: “Hi @username! 👋”
-- Has played at least 1 game: “Welcome back, @username! 🎮”
-
------
-
-### Hero Section (Open Challenges Advertised)
-
-**Large, animated, eye-catching:**
-
-```
-┌────────────────────────────────────────┐
-│                                        │
-│  ✨ DISCOVER NEW CHALLENGES ✨         │
-│                                        │
-│  [Animated Pizza/Dog mascot]           │
-│  [Dancing, pointing, encouraging]      │
-│  [Bounces gently in loop]              │
-│                                        │
-│  "Test your knowledge against"         │
-│  "the community"                       │
-│                                        │
-│  🔥 Science                            │
-│  📚 History                            │
-│  🎬 Movies                             │
-│  🧠 Geography                          │
-│  ... and more                          │
-│                                        │
-│  [Explore Open Challenges →]           │ ← CTA (taps to Challenges tab)
-│  "See all challenges"                  │
-│                                        │
-└────────────────────────────────────────┘
-```
-
-**Animation Ideas:**
-
-- Mascot bounces and looks at user
-- Arrow button pulses gently (“Come here!”)
-- Background subtle color shift (not distracting)
-
-**Copy Strategy:**
-
-- Emphasize discovery (“new challenges”)
-- Show available categories (static list, no live counts — better to show nothing than “0 playing”)
-- Keep it aspirational but honest
+**Why this works:**
+- One clear action. No decision paralysis.
+- Speed messaging planted from the start (“Quick thinking = bigger scores!”)
+- Rooms available but secondary (covers the “friend invited me to join” use case)
+- ⚔️ Challenge button NOT shown yet — they don't know what challenges are
+- Mascot is static/welcoming, not bouncing continuously
 
 -----
 
-### Game Mode Buttons (4 Active Options)
+### State B: Has Played (1+ games) — “Full New User Experience”
 
-**Arranged in a thoughtful 2x2 grid with descriptions:**
+After their first game, the dashboard expands. They now have context for what challenges mean.
 
 ```
 ┌──────────────────────────────────────┐
-│ 🎮 PLAY NOW                           │
+│ [Avatar] Welcome back, @username! 🎮 │
+│                      [+ Add Friend]  │
+│                                      │
 ├──────────────────────────────────────┤
+│                                      │
+│  ✨ DISCOVER CHALLENGES ✨            │ ← Hero section appears
+│                                      │
+│  [Mascot — subtle idle animation]    │
+│                                      │
+│  “Test your knowledge against”       │
+│  “the community”                     │
+│                                      │
+│  🔥 Science  📚 History              │
+│  🎬 Movies   🧠 Geography            │
+│  ... and more                        │
+│                                      │
+│  [Explore Open Challenges →]         │ ← CTA → Challenges tab
+│                                      │
+├──────────────────────────────────────┤
+│ 🎮 PLAY NOW                          │
 │                                      │
 │ ┌─────────────────┬─────────────────┐│
 │ │ [Solo Play]     │ [Challenge]    ││
-│ │ 🎯              │ ⚔️              ││
-│ │ Play alone &    │ Challenge a    ││
-│ │ build your      │ friend or the  ││
-│ │ streak          │ community      ││
-│ │                 │                ││
-│ │ [Play]          │ [Go]           ││
+│ │ 🎯 Play alone   │ ⚔️ Dare the    ││
+│ │ & build your    │ community      ││
+│ │ streak          │                ││
 │ └─────────────────┴─────────────────┘│
 │                                      │
 │ ┌─────────────────┬─────────────────┐│
 │ │ [Create Room]   │ [Join Room]    ││
-│ │ 👥              │ 🚪              ││
-│ │ Play with       │ Enter a code   ││
-│ │ friends via     │ to join a      ││
-│ │ code            │ friend's game  ││
-│ │                 │                ││
-│ │ [Create]        │ [Join]         ││
+│ │ 👥 Host a game  │ 🚪 Enter a code││
 │ └─────────────────┴─────────────────┘│
+│                                      │
+├──────────────────────────────────────┤
+│ 🏆 YOUR PROGRESS                     │
+│                                      │
+│ 🔥 Daily Streak: 2 days! 🚀          │
+│ “Keep it going!”                     │
+│                                      │
+│ ⭐ Best Score: 720 points            │
+│ “Can you beat your best?”            │
+│                                      │
+│ 📊 Games Played: 3                   │
+│ “Speed is your secret weapon!”       │
+│                                      │
+│ [Create a Challenge ⚔️]              │ ← Create Open Challenge flow
+│ [Explore Challenges 🏟️]              │ ← Challenges tab
 │                                      │
 └──────────────────────────────────────┘
 ```
 
-**Design Notes:**
+**Streak is a DAILY PLAY STREAK** (played at least one game per day). Replaces win streak everywhere (new user + standard dashboard). Encourages daily return.
 
-- All 4 buttons same visual weight (none disabled/grayed)
-- Icons + emojis make it visually interesting
-- Short copy (2-3 words max)
-- ⚔️ Challenge button is dual-purpose (opens half-sheet with two options)
-- Same 2x2 grid for BOTH new users and standard users — consistent layout
-- Buttons are tappable, lead to respective features
+**Streak copy:**
+- 0 days: “Start your streak today! 🔥” (NOT “0 days”)
+- 1+ days: “Keep it going!”
 
 -----
 
 ### Challenge Button — Behavior by User Type
 
-#### New Users: Direct to Create Open Challenge
+#### New Users (1+ games): Direct to Create Open Challenge
 
-For new users, tapping ⚔️ Challenge goes **straight to the Create Open Challenge flow** (no half-sheet). They don't have friends to 1v1, so there's no reason to show that option.
+For new users, tapping ⚔️ Challenge goes **straight to the Create Open Challenge flow** (no half-sheet). They don't have friends to duel, so there's no reason to show that option.
 
-→ Tap ⚔️ → Category picker → play (identical to solo) → results framed as "Post this challenge?"
+→ Tap ⚔️ → Category picker → play (identical to solo) → results framed as “Post this challenge?”
+
+During gameplay, show a subtle banner: **”Creating a challenge 🏟️”** so the user has context throughout.
 
 #### Standard Users: Half-Sheet with Two Options
 
@@ -191,7 +202,7 @@ For standard users (have friends + games), tapping ⚔️ Challenge opens a bott
 │ ⚔️ CHALLENGE                           │
 │                                        │
 │ ┌────────────────────────────────────┐ │
-│ │ 👤 Challenge a Friend              │ │
+│ │ 👤 Duel a Friend                   │ │
 │ │ Pick a friend and go head-to-head  │ │
 │ └────────────────────────────────────┘ │
 │                                        │
@@ -204,11 +215,13 @@ For standard users (have friends + games), tapping ⚔️ Challenge opens a bott
 └────────────────────────────────────────┘
 ```
 
-**"Challenge a Friend" flow:**
-→ Friend picker → select category → play → results (1v1 mode)
+**”Duel a Friend” flow:**
+→ Friend picker → select category → play → results (duel mode)
 
-**"Create Open Challenge" flow:**
-→ Select category → play (identical to solo) → results screen framed as "Post this challenge?"
+**”Create Open Challenge” flow:**
+→ Select category → play (identical to solo) → results screen framed as “Post this challenge?”
+
+During gameplay for Create Open Challenge, show banner: **”Creating a challenge 🏟️”**
 
 ### Results Screen Framing — Solo vs Create Challenge
 
@@ -216,65 +229,13 @@ The gameplay is identical. Only the results screen differs:
 
 | Entry Point | Results Screen Framing |
 |---|---|
-| **Solo** | Score → outcome → "Post as Challenge" (optional button, bonus nudge on perfect) |
-| **Create Open Challenge** | Score → outcome → "Your challenge is ready! Post it?" (expected action, primary CTA) |
+| **Solo** | Score → outcome → “Post as Challenge” (optional button, bonus nudge on perfect) |
+| **Create Open Challenge** | Score → outcome → “Your challenge is ready! Post it?” (expected action, primary CTA) |
 
-For "Create Open Challenge", the results screen:
-- Primary CTA: "Post Challenge" (prominent green button)
-- Secondary: "Not Now" (subtle text link — they can skip posting without losing their score, e.g. if they did poorly)
+For “Create Open Challenge”, the results screen:
+- Primary CTA: “Post Challenge” (prominent green button)
+- Secondary: “Not Now” (subtle text link — they can skip posting without losing their score, e.g. if they did poorly)
 - Perfect bonus copy still plays if applicable
-
------
-
-### Your Progress Section
-
-**Motivational, shows growth. Two states: never played / has played.**
-
-**Streak here is a DAILY PLAY STREAK** (played at least one game per day), NOT a consecutive win streak. This is different from the standard dashboard's win streak. Daily streak works for solo-only users and encourages daily return.
-
-**Never played (0 games):**
-
-```
-┌──────────────────────────────────────┐
-│ 🏆 YOUR PROGRESS                     │
-├──────────────────────────────────────┤
-│                                      │
-│ 🔥 Daily Streak: 0 days              │
-│ "Play a game to start your streak!"  │
-│                                      │
-│ ⭐ Best Score: — (None yet)          │
-│ "Your first score is coming!"        │
-│                                      │
-│ 📊 Games Played: 0                   │
-│ "Every game makes you smarter!"      │
-│                                      │
-│ [Play Solo Now] ← Primary CTA        │
-│ or [Explore Challenges] ← Secondary  │
-│                                      │
-└──────────────────────────────────────┘
-```
-
-**Has played (1+ games):**
-
-```
-┌──────────────────────────────────────┐
-│ 🏆 YOUR PROGRESS                     │
-├──────────────────────────────────────┤
-│                                      │
-│ 🔥 Daily Streak: 2 days! 🚀          │
-│ "Keep it going!"                     │
-│                                      │
-│ ⭐ Best Score: 720 points            │
-│ "Can you beat your best?"            │
-│                                      │
-│ 📊 Games Played: 3                   │
-│ "Speed is your secret weapon!"       │
-│                                      │
-│ [Create a Challenge ⚔️]              │ ← Navigates to Create Open Challenge flow
-│ [Explore Challenges 🏟️]              │ ← Navigates to Challenges tab
-│                                      │
-└──────────────────────────────────────┘
-```
 
 -----
 
@@ -343,7 +304,7 @@ For "Create Open Challenge", the results screen:
 │ "Your first friend is waiting..."   │
 │                                     │
 │ Add a friend to:                    │
-│ ✅ Challenge each other             │
+│ ✅ Duel each other                  │
 │ ✅ Play group games together        │
 │ ✅ See head-to-head results         │
 │ ✅ Build rivalries                  │
@@ -363,27 +324,38 @@ For "Create Open Challenge", the results screen:
 
 ## Transition: From New User to Standard Dashboard
 
-### Transition Triggers
+### Internal Transition: 0 games → 1+ games (within new user)
+
+After first game completes, the user returns to a dashboard that has expanded significantly. To avoid a jarring "everything changed" moment, ease the transition:
+
+1. **Hero section fades in** with a `FadeInDown` entrance animation (not instant)
+2. **Game mode grid** slides in below
+3. **Progress section** fades in last with the user's first stats populated
+4. Optional: a brief **toast or banner** at the top: "Nice one! Here's what's next 🎉" — disappears after 3 seconds
+
+This gives the user a guided "reveal" rather than a sudden wall of new content. Each section appears in sequence (staggered ~200ms) so it feels intentional, not broken.
+
+### Transition to Standard Dashboard
 
 **Path A — Social user (adds friend first):**
-1. Signs up → new user dashboard (0 games, 0 friends)
-2. Adds a friend → still new user (0 games, 1 friend — keep hand-holding)
-3. Plays first game → exits new user (1 game + 1 friend → standard dashboard with 1v1 Challenge)
+1. Signs up → State A (0 games — "Play Your First Game")
+2. Adds a friend → still new user State A (0 games, 1 friend — keep hand-holding)
+3. Plays first game → exits new user (1 game + 1 friend → standard dashboard, Duel unlocks)
 
 **Path B — Solo grinder (plays without adding friends):**
-1. Signs up → new user dashboard (0 games, 0 friends)
-2. Plays 1-4 games → still new user (learning, no friends)
-3. Plays 5th game → exits new user (experienced enough to see standard dashboard)
+1. Signs up → State A (0 games)
+2. Plays first game → State B (hero, grid, progress)
+3. Plays 5th game → exits new user (standard dashboard)
 
 **Path C — Quick start (adds friend + plays immediately):**
-1. Signs up → new user dashboard
-2. Adds friend + plays first game → exits new user
+1. Signs up → State A
+2. Adds friend + plays first game → exits new user directly
 
-**Visual Changes on Transition:**
+**Visual Changes on Transition to Standard:**
 
-1. Hero section replaced by standard metrics row
-2. ⚔️ Challenge button now opens half-sheet (with "Challenge a Friend" + "Create Open Challenge") instead of going directly to Create Open Challenge
-3. Progress/stats populate with real data
+1. Hero section gone → replaced by standard metrics row (daily streak, wins, win rate)
+2. ⚔️ Challenge button now opens half-sheet (with "Duel a Friend" + "Create Open Challenge") instead of going directly to Create Open Challenge
+3. Incoming duels / results sections appear
 4. All 5 tabs remain the same — no tabs appear/disappear
 
 **No celebration popup needed** — the UI changes naturally are enough
@@ -394,22 +366,26 @@ For "Create Open Challenge", the results screen:
 
 ### Layout is a ScrollView (standard mobile pattern)
 
-Content priority order (top to bottom):
+**State A (0 games)** — content priority:
+1. **Header** — Avatar + greeting
+2. **Mascot + Primary CTA** — "Play Your First Game" (dominates the screen)
+3. **Secondary Room Buttons** — smaller, below
 
+**State B (1+ games)** — content priority:
 1. **Header** — Avatar + greeting + Add Friend CTA
-2. **Hero Section** — Open Challenges advertisement (largest visual block, mascot animation)
-3. **Game Mode Grid** — 2x2 buttons
+2. **Hero Section** — Open Challenges advertisement (largest visual block)
+3. **Game Mode Grid** — 2x2 buttons (Solo, Challenge, Create Room, Join Room)
 4. **Progress Section** — Stats + CTAs
 
-On taller phones (iPhone 14+) this may fit without scrolling. On shorter phones (iPhone SE) it scrolls naturally. This is fine — hero is immersive at the top, actionable content below.
+On taller phones (iPhone 14+) State B may fit without scrolling. On shorter phones it scrolls. This is fine — hero is immersive at the top, actionable content below. State A will almost always fit without scrolling (that's intentional — no friction).
 
 ### Why Not Sparse
 
-- Mascot animation in hero fills space
+- Mascot fills space at key moments (State A welcome, State B hero)
 - Large, readable buttons
 - Generous padding between sections
 - Color/emoji makes it visually interesting
-- Static category list provides visual richness
+- Static category list provides visual richness in hero
 
 -----
 
@@ -509,12 +485,15 @@ For non-perfect solo games, keep the existing "Post as Challenge" button without
 
 |Context         |Copy                                              |
 |----------------|--------------------------------------------------|
-|Hero section    |”Test your brain speed against the community!”    |
-|After first game|”You’re on fire! 🔥”                               |
+|0 games — CTA   |”Play Your First Game” (single dominant action)   |
+|0 games — hint  |”Quick thinking = bigger scores!”                 |
+|1+ games — hero |”Test your knowledge against the community”       |
+|1+ games — greeting|”Welcome back, @username! 🎮”                  |
 |Challenges tab  |”Discover” (not “Play”)                           |
 |Empty Friends   |”Your first friend is waiting…”                   |
+|Streak 0 days   |”Start your streak today! 🔥” (NOT “0 days”)      |
 |Button CTAs     |Action words: “Discover”, “Play”, “Create”, “Join”|
-|Speed hint      |”Quick thinking = bigger scores!”                 |
+|1v1 games       |”Duel” (not “Challenge a Friend”)                 |
 
 ### Avoid Gatekeeping Language
 
@@ -545,11 +524,13 @@ For non-perfect solo games, keep the existing "Post as Challenge" button without
 
 ### Phase 2: Layout & Structure (High Priority)
 
-- [ ] Build `HeroSection` component (mascot placeholder + categories + CTA)
+- [ ] Build State A (0 games): mascot + "Play Your First Game" CTA + secondary room buttons
+- [ ] Build `HeroSection` component for State B (mascot + categories + Explore CTA)
 - [ ] Build `ProgressSection` component (daily streak, best score, games played + CTAs)
-- [ ] Add conditional rendering in DashboardScreen (`isNewUser` toggles hero vs metrics, progress vs feeds)
+- [ ] Add conditional rendering in DashboardScreen (0 games vs 1+ games vs standard)
 - [ ] Implement ⚔️ Challenge button behavior (direct to open challenge for new users, half-sheet for standard)
-- [ ] Build half-sheet component for standard user challenge picker
+- [ ] Build half-sheet component for standard user challenge picker ("Duel a Friend" + "Create Open Challenge")
+- [ ] Add "Creating a challenge 🏟️" banner to GameScreen when entering via Create Open Challenge
 
 ### Phase 3: Polish & Empty States (Medium Priority)
 
@@ -571,7 +552,7 @@ For non-perfect solo games, keep the existing "Post as Challenge" button without
 
 |Metric                                         |Target|Rationale                         |
 |-----------------------------------------------|------|----------------------------------|
-|% users viewing challenges tab in first session|70%+  |Hero section drives discovery     |
+|% users viewing challenges tab in first 3 sessions|70%+  |Hero appears after first game, drives discovery|
 |% users playing first game in 24h              |60%+  |Accessible buttons + encouragement|
 |% users posting first challenge within 7d      |45%+  |Progress section shows option     |
 |% users adding first friend within 14d         |40%+  |Multiple CTAs across dashboard    |
