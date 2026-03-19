@@ -23,7 +23,7 @@ export default function HeroSection({ onExploreChallenges, delay = 0 }: HeroSect
         {/* Right: explorer avatar, tilted */}
         <View style={styles.imageCol}>
           <Image
-            source={require('../../assets/avatars/explorer.png')}
+            source={require('../../assets/avatars/explorer-hero.png')}
             style={styles.explorerImage}
             resizeMode="contain"
           />
@@ -88,14 +88,14 @@ const styles = StyleSheet.create({
     color: colors.gold,
   },
   imageCol: {
-    width: 100,
+    width: 110,
     alignItems: 'center',
-    marginLeft: 8,
+    marginLeft: 4,
   },
   explorerImage: {
-    width: 95,
-    height: 95,
-    transform: [{ rotate: '8deg' }],
+    width: 105,
+    height: 105,
+    transform: [{ rotate: '6deg' }],
   },
   categoryRow: {
     flexDirection: 'row',
