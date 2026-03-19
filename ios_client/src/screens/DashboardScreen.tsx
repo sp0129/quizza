@@ -33,7 +33,12 @@ import ModeCard from '../components/dashboard/ModeCard';
 import ChallengePill from '../components/dashboard/ChallengePill';
 import UserSearchOverlay from '../components/dashboard/UserSearchOverlay';
 import EmptyState from '../components/dashboard/EmptyState';
+import HeroSection from '../components/dashboard/HeroSection';
+import ProgressSection from '../components/dashboard/ProgressSection';
+import QuickPlayBar from '../components/dashboard/QuickPlayBar';
+import ChallengeHalfSheet from '../components/dashboard/ChallengeHalfSheet';
 import OnboardingOverlay from '../components/OnboardingOverlay';
+import PizzaMascot from '../components/PizzaMascot';
 import type { RootStackParamList } from '../../App';
 import type { Challenge, SearchedUser } from '../stores/dashboard';
 
@@ -74,10 +79,14 @@ export default function DashboardScreen({ navigation }: Props) {
   const [dailyStreak, setDailyStreak] = useState(0);
   const [lastPlayedCategory, setLastPlayedCategory] = useState<string | null>(null);
 
+  const [challengeSheetVisible, setChallengeSheetVisible] = useState(false);
+
   const isNewUser = gamesPlayedTotal !== null && (
     (friendsCount === 0 && gamesPlayedTotal < 5) ||
     (friendsCount > 0 && gamesPlayedTotal === 0)
   );
+  const isStateA = isNewUser && gamesPlayedTotal === 0;
+  const isStateB = isNewUser && gamesPlayedTotal !== null && gamesPlayedTotal > 0;
 
   // Friend requests
   interface FriendRequest {
@@ -252,8 +261,14 @@ export default function DashboardScreen({ navigation }: Props) {
       );
       return;
     }
-    navigation.navigate('Friends');
-  }, [isGuest, navigation]);
+    // New users: go straight to create open challenge (solo → post)
+    if (isNewUser) {
+      navigation.navigate('Category', { mode: 'solo' });
+      return;
+    }
+    // Standard users: show half-sheet with Duel + Create Open Challenge
+    setChallengeSheetVisible(true);
+  }, [isGuest, isNewUser, navigation]);
 
   // Room join
   const joinRoom = useCallback(async () => {
@@ -363,60 +378,122 @@ export default function DashboardScreen({ navigation }: Props) {
           </Animated.View>
         )}
 
-        {/* Metrics row */}
-        <Animated.View entering={FadeInDown.delay(150).duration(400)} style={styles.metricsRow}>
-          <MetricsPill icon="🔥" label="Streak" value={metrics.streak} color="#F97316" />
-          <MetricsPill icon="🏆" label="Wins" value={metrics.wins} color={colors.brand.primary} />
-          <MetricsPill icon="📊" label="Win %" value={metrics.winRate} suffix="%" color={colors.brand.secondary} />
-        </Animated.View>
-
-        {/* ═══ GAME MODES (2×2 Grid) ═══ */}
-        <Animated.View entering={FadeInDown.delay(250).duration(400)} style={styles.modeSection}>
-          <Text style={styles.sectionLabel}>GAME MODES</Text>
-          <View style={styles.modeGrid}>
-            <View style={styles.modeGridRow}>
-              <ModeCard
-                icon="🎯"
-                label="Solo"
-                color="#0F5A9F"
-                gem={{ base: '#0F5A9F', light: '#1E90FF', dark: '#0A3A6B' }}
+        {/* ═══ STATE A: Never played (0 games) — single CTA ═══ */}
+        {isStateA && (
+          <>
+            <Animated.View entering={FadeInDown.delay(150).duration(400)} style={styles.stateAContainer}>
+              <PizzaMascot mood="happy" size={100} />
+              <Text style={styles.stateATitle}>Ready to test your knowledge?</Text>
+              <Text style={styles.stateAHint}>Quick thinking = bigger scores!</Text>
+              <TouchableOpacity
+                style={styles.stateACta}
                 onPress={handleSolo}
-                subtitle="Play now"
+                activeOpacity={0.8}
+              >
+                <Text style={styles.stateACtaText}>▶ Play Your First Game</Text>
+              </TouchableOpacity>
+            </Animated.View>
+            <Animated.View entering={FadeInDown.delay(300).duration(400)} style={styles.stateASecondary}>
+              <Text style={styles.stateASecondaryLabel}>Also available:</Text>
+              <View style={styles.stateASecondaryRow}>
+                <TouchableOpacity style={styles.stateASecondaryBtn} onPress={() => setJoinModalVisible(true)} activeOpacity={0.7}>
+                  <Text style={styles.stateASecondaryIcon}>🚪</Text>
+                  <Text style={styles.stateASecondaryText}>Join Room</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.stateASecondaryBtn} onPress={handleGroupPlay} activeOpacity={0.7}>
+                  <Text style={styles.stateASecondaryIcon}>👥</Text>
+                  <Text style={styles.stateASecondaryText}>Create Room</Text>
+                </TouchableOpacity>
+              </View>
+            </Animated.View>
+          </>
+        )}
+
+        {/* ═══ STATE B: Has played (1+ games, still new user) ═══ */}
+        {isStateB && (
+          <>
+            {lastPlayedCategory && (
+              <QuickPlayBar
+                category={lastPlayedCategory}
+                onPress={() => navigation.navigate('Category', { mode: 'solo', preselectedCategory: lastPlayedCategory })}
+                delay={100}
               />
-              <ModeCard
-                icon="⚔️"
-                label="Challenge"
-                color="#B8571A"
-                gem={{ base: '#B8571A', light: '#EA8C35', dark: '#7A3A0F' }}
-                badgeCount={pendingCount}
-                onPress={handleChallenge}
-                subtitle="vs your friends"
-                disabled={isGuest}
-              />
+            )}
+            <HeroSection
+              onExploreChallenges={() => navigation.navigate('MainTabs' as any)}
+              delay={200}
+            />
+          </>
+        )}
+
+        {/* ═══ STANDARD: Metrics row (not new user) ═══ */}
+        {!isNewUser && (
+          <Animated.View entering={FadeInDown.delay(150).duration(400)} style={styles.metricsRow}>
+            <MetricsPill icon="🔥" label="Streak" value={metrics.streak} color="#F97316" />
+            <MetricsPill icon="🏆" label="Wins" value={metrics.wins} color={colors.brand.primary} />
+            <MetricsPill icon="📊" label="Win %" value={metrics.winRate} suffix="%" color={colors.brand.secondary} />
+          </Animated.View>
+        )}
+
+        {/* ═══ GAME MODES (2×2 Grid) — State B + Standard ═══ */}
+        {!isStateA && (
+          <Animated.View entering={FadeInDown.delay(isStateB ? 350 : 250).duration(400)} style={styles.modeSection}>
+            <Text style={styles.sectionLabel}>{isStateB ? 'OR EXPLORE' : 'GAME MODES'}</Text>
+            <View style={styles.modeGrid}>
+              <View style={styles.modeGridRow}>
+                <ModeCard
+                  icon="🎯"
+                  label="Solo"
+                  color="#0F5A9F"
+                  gem={{ base: '#0F5A9F', light: '#1E90FF', dark: '#0A3A6B' }}
+                  onPress={handleSolo}
+                  subtitle={isStateB ? 'New category' : 'Play now'}
+                />
+                <ModeCard
+                  icon="⚔️"
+                  label={isNewUser ? 'Play & Challenge' : 'Challenge'}
+                  color="#B8571A"
+                  gem={{ base: '#B8571A', light: '#EA8C35', dark: '#7A3A0F' }}
+                  badgeCount={isNewUser ? 0 : pendingCount}
+                  onPress={handleChallenge}
+                  subtitle={isNewUser ? 'Play now, dare others' : 'vs your friends'}
+                  disabled={isGuest}
+                />
+              </View>
+              <View style={styles.modeGridRow}>
+                <ModeCard
+                  icon="➕"
+                  label="Create Room"
+                  color="#6B21A8"
+                  gem={{ base: '#6B21A8', light: '#A855F7', dark: '#4A1271' }}
+                  onPress={handleGroupPlay}
+                  subtitle="Play w/ friends"
+                />
+                <ModeCard
+                  icon="🚪"
+                  label="Join Room"
+                  color="#0E7490"
+                  gem={{ base: '#0E7490', light: '#22D3EE', dark: '#064E5B' }}
+                  onPress={() => setJoinModalVisible(true)}
+                  subtitle="Enter a code"
+                />
+              </View>
             </View>
-            <View style={styles.modeGridRow}>
-              <ModeCard
-                icon="➕"
-                label="Create Room"
-                color="#6B21A8"
-                gem={{ base: '#6B21A8', light: '#A855F7', dark: '#4A1271' }}
-                onPress={handleGroupPlay}
-                subtitle="Play w/ friends"
-              />
-              <ModeCard
-                icon="🚪"
-                label="Join Room"
-                color="#0E7490"
-                gem={{ base: '#0E7490', light: '#22D3EE', dark: '#064E5B' }}
-                onPress={() => setJoinModalVisible(true)}
-                subtitle="Enter a code"
-              />
-            </View>
-          </View>
-        </Animated.View>
+          </Animated.View>
+        )}
+
+        {/* ═══ PROGRESS SECTION (State B only) ═══ */}
+        {isStateB && (
+          <ProgressSection
+            dailyStreak={dailyStreak}
+            bestScore={bestScore}
+            gamesPlayed={gamesPlayedTotal ?? 0}
+            delay={500}
+          />
+        )}
 
         {/* ═══ FRIEND REQUESTS ═══ */}
-        {!isGuest && friendRequests.length > 0 && (
+        {!isGuest && !isNewUser && friendRequests.length > 0 && (
           <Animated.View entering={FadeInDown.delay(350).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>👋</Text>
@@ -459,7 +536,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ INCOMING CHALLENGES ═══ */}
-        {!isGuest && incomingChallenges.length > 0 && (
+        {!isGuest && !isNewUser && incomingChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(400).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>⚔️</Text>
@@ -492,7 +569,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ OUTGOING / WAITING CHALLENGES ═══ */}
-        {!isGuest && waitingChallenges.length > 0 && (
+        {!isGuest && !isNewUser && waitingChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(420).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>⏳</Text>
@@ -525,7 +602,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ COMPLETED CHALLENGES ═══ */}
-        {!isGuest && completedChallenges.length > 0 && (
+        {!isGuest && !isNewUser && completedChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(450).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>📋</Text>
@@ -579,8 +656,8 @@ export default function DashboardScreen({ navigation }: Props) {
           </Animated.View>
         )}
 
-        {/* Empty state: no challenges at all */}
-        {!challengesLoading && !hasAnyChallenges && !isGuest && (
+        {/* Empty state: no challenges at all (standard users only) */}
+        {!challengesLoading && !hasAnyChallenges && !isGuest && !isNewUser && (
           <Animated.View entering={FadeInDown.delay(400).duration(400)}>
             <EmptyState
               icon="🎯"
@@ -646,6 +723,20 @@ export default function DashboardScreen({ navigation }: Props) {
         </TouchableOpacity>
       )}
 
+      {/* Challenge half-sheet for standard users */}
+      <ChallengeHalfSheet
+        visible={challengeSheetVisible}
+        onDuelFriend={() => {
+          setChallengeSheetVisible(false);
+          navigation.navigate('Friends');
+        }}
+        onCreateChallenge={() => {
+          setChallengeSheetVisible(false);
+          navigation.navigate('Category', { mode: 'solo' });
+        }}
+        onClose={() => setChallengeSheetVisible(false)}
+      />
+
       {/* Onboarding overlay for first-time users */}
       <OnboardingOverlay
         visible={showOnboarding}
@@ -670,6 +761,75 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingTop: 12,
     gap: 24,
+  },
+
+  // State A: Never played (0 games)
+  stateAContainer: {
+    alignItems: 'center',
+    paddingVertical: 20,
+    gap: 12,
+  },
+  stateATitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: colors.text.primary,
+    textAlign: 'center',
+  },
+  stateAHint: {
+    fontSize: 14,
+    color: colors.text.secondary,
+    textAlign: 'center',
+  },
+  stateACta: {
+    backgroundColor: '#22C55E',
+    borderRadius: 16,
+    height: 56,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 8,
+    borderBottomWidth: 4,
+    borderBottomColor: '#16A34A',
+    shadowColor: '#22C55E',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 10,
+    elevation: 6,
+  },
+  stateACtaText: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: '800',
+  },
+  stateASecondary: {
+    paddingHorizontal: 4,
+  },
+  stateASecondaryLabel: {
+    fontSize: 12,
+    color: colors.text.secondary,
+    marginBottom: 8,
+  },
+  stateASecondaryRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  stateASecondaryBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    backgroundColor: colors.bg.surface,
+    borderRadius: 12,
+    paddingVertical: 12,
+    borderWidth: 1,
+    borderColor: colors.border + '30',
+  },
+  stateASecondaryIcon: { fontSize: 16 },
+  stateASecondaryText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: colors.text.secondary,
   },
 
   // Guest banner
