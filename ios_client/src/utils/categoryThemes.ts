@@ -42,9 +42,11 @@ const ID_MAP: Record<number, CategoryTheme> = {
   30: { gradient: 'linear-gradient(135deg, #0e7490 0%, #052e3d 100%)', accent: '#024970', emoji: '📡' },
   31: { gradient: 'linear-gradient(135deg, #9d174d 0%, #500724 100%)', accent: '#71137a', emoji: '🎌' },
   32: { gradient: 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)', accent: '#015c8b', emoji: '🃏' },
+  2009: { gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)', accent: '#7c3aed', emoji: '🎲' },
 };
 
 const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
+  ['mixed bag',       { gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)', accent: '#7c3aed', emoji: '🎲' }],
   ['harry potter',    { gradient: 'linear-gradient(135deg, #6d28d9 0%, #2e1065 100%)', accent: '#6623a3', emoji: '⚡' }],
   ['game of thrones', { gradient: 'linear-gradient(135deg, #991b1b 0%, #450a0a 100%)', accent: '#9a1a1a', emoji: '🐉' }],
   ['chemistry',       { gradient: 'linear-gradient(135deg, #166534 0%, #052e16 100%)', accent: '#036949', emoji: '🧪' }],
@@ -65,6 +67,7 @@ const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
   ['geography',       { gradient: 'linear-gradient(135deg, #047857 0%, #022c22 100%)', accent: '#0e592a', emoji: '🗺️' }],
   ['computer',        { gradient: 'linear-gradient(135deg, #0e7490 0%, #052e3d 100%)', accent: '#05657c', emoji: '💻' }],
   ['video game',      { gradient: 'linear-gradient(135deg, #991b1b 0%, #450a0a 100%)', accent: '#a33d08', emoji: '🎮' }],
+  ['bingeworthy',     { gradient: 'linear-gradient(135deg, #3730a3 0%, #1e1b4b 100%)', accent: '#8d6002', emoji: '📺' }],
   ['television',      { gradient: 'linear-gradient(135deg, #3730a3 0%, #1e1b4b 100%)', accent: '#8d6002', emoji: '📺' }],
   ['tv',              { gradient: 'linear-gradient(135deg, #3730a3 0%, #1e1b4b 100%)', accent: '#8d6002', emoji: '📺' }],
   ['art',             { gradient: 'linear-gradient(135deg, #c2410c 0%, #7c2d12 100%)', accent: '#662c09', emoji: '🎨' }],
@@ -95,6 +98,8 @@ export function cleanCategoryName(name: string): string {
 }
 
 export const CATEGORY_SORT_ORDER: number[] = [
+  // Mixed Bag — the default pick
+  2009,  // Mixed Bag
   // Fun & entertainment first
   9,     // General Knowledge
   11,    // Film
