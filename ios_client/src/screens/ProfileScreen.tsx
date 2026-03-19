@@ -267,12 +267,36 @@ export default function ProfileScreen({ navigation }: Props) {
           <View style={s.card}>
             <Text style={s.cardLabel}>Your Stats</Text>
             <View style={s.statsGrid}>
-              <View style={s.statItem}><Text style={s.statValue}>{profileStats.gamesPlayedTotal}</Text><Text style={s.statLabel}>Games</Text></View>
-              <View style={s.statItem}><Text style={s.statValue}>{profileStats.wins}</Text><Text style={s.statLabel}>Wins</Text></View>
-              <View style={s.statItem}><Text style={s.statValue}>{profileStats.winRate}%</Text><Text style={s.statLabel}>Win Rate</Text></View>
-              <View style={s.statItem}><Text style={s.statValue}>{profileStats.bestScore}</Text><Text style={s.statLabel}>Best Score</Text></View>
-              <View style={s.statItem}><Text style={s.statValue}>{profileStats.dailyStreak}</Text><Text style={s.statLabel}>Daily Streak</Text></View>
-              <View style={s.statItem}><Text style={s.statValue}>{profileStats.winStreak}</Text><Text style={s.statLabel}>Win Streak</Text></View>
+              <View style={[s.statItem, s.statItemAccent]}>
+                <Text style={s.statEmoji}>🎮</Text>
+                <Text style={s.statValue}>{profileStats.gamesPlayedTotal || '—'}</Text>
+                <Text style={s.statLabel}>Games</Text>
+              </View>
+              <View style={[s.statItem, s.statItemAccent]}>
+                <Text style={s.statEmoji}>🏆</Text>
+                <Text style={[s.statValue, profileStats.wins > 0 && { color: '#22C55E' }]}>{profileStats.wins || '—'}</Text>
+                <Text style={s.statLabel}>Wins</Text>
+              </View>
+              <View style={[s.statItem, s.statItemAccent]}>
+                <Text style={s.statEmoji}>📊</Text>
+                <Text style={[s.statValue, profileStats.winRate > 0 && { color: '#3B82F6' }]}>{profileStats.winRate > 0 ? `${profileStats.winRate}%` : '—'}</Text>
+                <Text style={s.statLabel}>Win Rate</Text>
+              </View>
+              <View style={s.statItem}>
+                <Text style={s.statEmoji}>⭐</Text>
+                <Text style={[s.statValue, profileStats.bestScore > 0 && { color: '#F59E0B' }]}>{profileStats.bestScore || '—'}</Text>
+                <Text style={s.statLabel}>Best Score</Text>
+              </View>
+              <View style={s.statItem}>
+                <Text style={s.statEmoji}>🔥</Text>
+                <Text style={[s.statValue, profileStats.dailyStreak > 0 && { color: '#F97316' }]}>{profileStats.dailyStreak || '—'}</Text>
+                <Text style={s.statLabel}>Daily Streak</Text>
+              </View>
+              <View style={s.statItem}>
+                <Text style={s.statEmoji}>⚔️</Text>
+                <Text style={[s.statValue, profileStats.winStreak > 0 && { color: '#7C3AED' }]}>{profileStats.winStreak || '—'}</Text>
+                <Text style={s.statLabel}>Win Streak</Text>
+              </View>
             </View>
           </View>
         )}
@@ -480,10 +504,21 @@ const s = StyleSheet.create({
   },
   cardLabel: { color: colors.textPrimary, fontSize: 16, fontWeight: '700' },
   cardHint: { color: colors.textMuted, fontSize: 13, marginTop: -4 },
-  statsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, marginTop: 8 },
-  statItem: { width: '28%', alignItems: 'center' as const },
-  statValue: { fontSize: 20, fontWeight: '800', color: colors.textPrimary },
-  statLabel: { fontSize: 11, color: colors.textMuted, fontWeight: '600', marginTop: 2 },
+  statsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginTop: 10 },
+  statItem: {
+    width: '30%',
+    alignItems: 'center' as const,
+    paddingVertical: 10,
+    borderRadius: 12,
+  },
+  statItemAccent: {
+    backgroundColor: 'rgba(255,255,255,0.03)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.06)',
+  },
+  statEmoji: { fontSize: 18, marginBottom: 4 },
+  statValue: { fontSize: 22, fontWeight: '800', color: colors.textPrimary },
+  statLabel: { fontSize: 10, color: colors.textMuted, fontWeight: '600', marginTop: 3, textTransform: 'uppercase' as const, letterSpacing: 0.5 },
   row: { flexDirection: 'row', gap: 10, alignItems: 'center' },
   flex1: { flex: 1 },
   input: {
