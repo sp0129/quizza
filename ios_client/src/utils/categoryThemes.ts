@@ -98,8 +98,8 @@ export function cleanCategoryName(name: string): string {
 }
 
 export const CATEGORY_SORT_ORDER: number[] = [
-  // Top picks — casual, accessible, fun
-  2009,  // Mixed Bag
+  // Top picks — shown first, not preselected
+  2009,  // Mixed Bag (recommended for new players)
   9,     // General Knowledge
   2006,  // Pop Music
   2008,  // Bingeworthy
