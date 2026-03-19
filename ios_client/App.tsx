@@ -66,6 +66,7 @@ export type RootStackParamList = {
     opponentUsername?: string;
     opponentAvatarId?: number;
     openChallengeId?: string;
+    createChallenge?: boolean;
   };
   ChallengeDetail: { challengeId: string };
   Room: {
@@ -93,6 +94,7 @@ export type RootStackParamList = {
     totalQuestions?: number;
     totalTimeTaken?: number;
     openChallengeId?: string;
+    createChallenge?: boolean;
   };
 };
 

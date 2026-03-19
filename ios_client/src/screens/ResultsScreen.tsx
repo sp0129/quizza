@@ -116,6 +116,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
     totalQuestions,
     totalTimeTaken,
     openChallengeId,
+    createChallenge,
   } = route.params;
 
   const insets = useSafeAreaInsets();
@@ -590,8 +591,36 @@ export default function ResultsScreen({ route, navigation }: Props) {
               </TouchableOpacity>
             )}
 
-            {/* Post as Challenge: earned — perfect → strong nudge, ≥60% → plain, <60% → hidden */}
-            {canPostChallenge && (
+            {/* Create Challenge flow: "Post Challenge" is the expected primary action */}
+            {createChallenge && !openChallengeId && canPostChallenge && (
+              <>
+                <Text style={styles.createChallengeLabel}>
+                  {posted ? '' : 'Your challenge is ready! Post it?'}
+                </Text>
+                <TouchableOpacity
+                  style={[styles.postChallengeBtn, posted && styles.postChallengeBtnDone]}
+                  onPress={handlePostChallenge}
+                  activeOpacity={0.8}
+                  disabled={posting || posted}
+                >
+                  {posting ? (
+                    <ActivityIndicator color="#FFFFFF" size="small" />
+                  ) : (
+                    <Text style={styles.postChallengeBtnText}>
+                      {posted ? 'Challenge Posted!' : 'Post Challenge'}
+                    </Text>
+                  )}
+                </TouchableOpacity>
+                {!posted && !posting && (
+                  <TouchableOpacity onPress={handleBackToHome} activeOpacity={0.7}>
+                    <Text style={styles.notNowText}>Not Now</Text>
+                  </TouchableOpacity>
+                )}
+              </>
+            )}
+
+            {/* Solo (not create challenge flow): earned Post as Challenge — ≥60% → plain, <60% → hidden */}
+            {!createChallenge && canPostChallenge && (
               <TouchableOpacity
                 style={[styles.postChallengeBtn, posted && styles.postChallengeBtnDone]}
                 onPress={handlePostChallenge}
@@ -855,6 +884,20 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '700',
+  },
+  createChallengeLabel: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: colors.text.primary,
+    textAlign: 'center',
+    marginBottom: 4,
+  },
+  notNowText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.text.secondary,
+    textAlign: 'center',
+    paddingVertical: 8,
   },
   postChallengeBtn: {
     backgroundColor: '#22C55E',

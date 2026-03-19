@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
   View,
   Text,
@@ -81,12 +81,24 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const [challengeSheetVisible, setChallengeSheetVisible] = useState(false);
 
+  const [showTransitionToast, setShowTransitionToast] = useState(false);
+  const prevGamesRef = useRef<number | null>(null);
+
   const isNewUser = gamesPlayedTotal !== null && (
     (friendsCount === 0 && gamesPlayedTotal < 5) ||
     (friendsCount > 0 && gamesPlayedTotal === 0)
   );
   const isStateA = isNewUser && gamesPlayedTotal === 0;
   const isStateB = isNewUser && gamesPlayedTotal !== null && gamesPlayedTotal > 0;
+
+  // Detect State A → B transition (user just played their first game)
+  useEffect(() => {
+    if (prevGamesRef.current === 0 && gamesPlayedTotal !== null && gamesPlayedTotal > 0) {
+      setShowTransitionToast(true);
+      setTimeout(() => setShowTransitionToast(false), 3000);
+    }
+    prevGamesRef.current = gamesPlayedTotal;
+  }, [gamesPlayedTotal]);
 
   // Friend requests
   interface FriendRequest {
@@ -263,7 +275,7 @@ export default function DashboardScreen({ navigation }: Props) {
     }
     // New users: go straight to create open challenge (solo → post)
     if (isNewUser) {
-      navigation.navigate('Category', { mode: 'solo' });
+      navigation.navigate('Category', { mode: 'solo', createChallenge: true } as any);
       return;
     }
     // Standard users: show half-sheet with Duel + Create Open Challenge
@@ -375,6 +387,13 @@ export default function DashboardScreen({ navigation }: Props) {
                 Create a free account to challenge friends, join rooms, and save scores →
               </Text>
             </TouchableOpacity>
+          </Animated.View>
+        )}
+
+        {/* ═══ TRANSITION TOAST: State A → B ═══ */}
+        {showTransitionToast && (
+          <Animated.View entering={FadeInDown.duration(300)} style={styles.transitionToast}>
+            <Text style={styles.transitionToastText}>Nice one! Here's what's next 🎉</Text>
           </Animated.View>
         )}
 
@@ -732,7 +751,7 @@ export default function DashboardScreen({ navigation }: Props) {
         }}
         onCreateChallenge={() => {
           setChallengeSheetVisible(false);
-          navigation.navigate('Category', { mode: 'solo' });
+          navigation.navigate('Category', { mode: 'solo', createChallenge: true } as any);
         }}
         onClose={() => setChallengeSheetVisible(false)}
       />
@@ -761,6 +780,22 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingTop: 12,
     gap: 24,
+  },
+
+  // Transition toast
+  transitionToast: {
+    backgroundColor: '#22C55E20',
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#22C55E40',
+  },
+  transitionToastText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#22C55E',
   },
 
   // State A: Never played (0 games)

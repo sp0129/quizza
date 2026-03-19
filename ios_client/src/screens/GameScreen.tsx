@@ -522,7 +522,7 @@ const vsStyles = StyleSheet.create({
 // ---------------------------------------------------------------------------
 
 export default function GameScreen({ route, navigation }: Props) {
-  const { gameId, mode, questionSetId, timer: QUESTION_TIME, opponentUsername, opponentAvatarId, openChallengeId } = route.params;
+  const { gameId, mode, questionSetId, timer: QUESTION_TIME, opponentUsername, opponentAvatarId, openChallengeId, createChallenge } = route.params;
   const { user } = useAuth();
   const insets = useSafeAreaInsets();
 
@@ -813,8 +813,9 @@ export default function GameScreen({ route, navigation }: Props) {
         totalTimeTaken,
       } : {}),
       ...(openChallengeId ? { openChallengeId } : {}),
+      ...(createChallenge ? { createChallenge: true } : {}),
     });
-  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category, questionResults, questions.length, totalTimeTaken, questionSetId, openChallengeId]);
+  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category, questionResults, questions.length, totalTimeTaken, questionSetId, openChallengeId, createChallenge]);
 
   // --- Quit handler ---
   const handleQuit = () => {
@@ -937,6 +938,13 @@ export default function GameScreen({ route, navigation }: Props) {
       {/* TOP ZONE: Status bar — progress, timer, score                     */}
       {/* ================================================================= */}
       <View style={[styles.topZone, { paddingTop: insets.top + 8 }]}>
+        {/* Creating a challenge banner */}
+        {createChallenge && (
+          <View style={styles.challengeBanner}>
+            <Text style={styles.challengeBannerText}>Creating a challenge 🏟️</Text>
+          </View>
+        )}
+
         {/* Quit button */}
         <View style={styles.topRow}>
           <TouchableOpacity style={styles.quitBtn} onPress={handleQuit}>
@@ -1049,6 +1057,19 @@ const styles = StyleSheet.create({
   topZone: {
     paddingHorizontal: 16,
     paddingBottom: 4,
+  },
+  challengeBanner: {
+    backgroundColor: '#7C3AED20',
+    borderRadius: 8,
+    paddingVertical: 4,
+    paddingHorizontal: 12,
+    alignSelf: 'center',
+    marginBottom: 4,
+  },
+  challengeBannerText: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#7C3AED',
   },
   topRow: {
     flexDirection: 'row',

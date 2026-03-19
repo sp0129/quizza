@@ -40,6 +40,7 @@ function useDebounce<T>(value: T, delay: number): T {
 // ── Main screen ────────────────────────────────────────────────
 export default function CategoryScreen({ route, navigation }: Props) {
   const { mode, target, targetAvatarId, preselectedCategory } = route.params;
+  const createChallenge = (route.params as any).createChallenge === true;
   const insets = useSafeAreaInsets();
 
   // State
@@ -164,6 +165,7 @@ export default function CategoryScreen({ route, navigation }: Props) {
         navigation.replace('Game', {
           gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
           category: selected.name, catId: selected.id, timer: timerSeconds, questionCount,
+          ...(createChallenge ? { createChallenge: true } : {}),
         });
       } else if (mode === 'room') {
         const r = await api.post<{ roomId: string; roomCode: string; questionSetId: string; category: string }>(

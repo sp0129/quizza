@@ -20,6 +20,7 @@ export default function HeroSection({ onExploreChallenges, delay = 0 }: HeroSect
       </View>
 
       <Text style={styles.subtitle}>Test your knowledge against{'\n'}the community</Text>
+      <Text style={styles.speedHint}>Quick thinking = bigger scores! ⚡</Text>
 
       <View style={styles.categoryRow}>
         <Text style={styles.categoryChip}>🔥 Science</Text>
@@ -69,6 +70,13 @@ const styles = StyleSheet.create({
     color: colors.text.primary,
     textAlign: 'center',
     lineHeight: 22,
+    marginBottom: 6,
+  },
+  speedHint: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: colors.gold,
+    textAlign: 'center',
     marginBottom: 14,
   },
   categoryRow: {
