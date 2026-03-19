@@ -17,12 +17,14 @@ interface StatusBarHeaderProps {
   avatarInitial: string;
   onProfilePress: () => void;
   avatarId?: number;
+  greeting?: string;
 }
 
 function StatusBarHeader({
   username,
   metrics,
   avatarInitial,
+  greeting,
   avatarId,
   onProfilePress,
 }: StatusBarHeaderProps) {
@@ -64,7 +66,7 @@ function StatusBarHeader({
         {/* Center: Welcome */}
         <View style={styles.center}>
           <Text style={styles.welcomeText} numberOfLines={1}>
-            Welcome back
+            {greeting ?? 'Welcome back'}
           </Text>
           <Text style={styles.usernameText} numberOfLines={1}>
             @{username}

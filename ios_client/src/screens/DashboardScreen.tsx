@@ -357,6 +357,7 @@ export default function DashboardScreen({ navigation }: Props) {
         metrics={metrics}
         avatarInitial={avatarInitial}
         avatarId={user?.avatar_id}
+        greeting={isStateA ? 'Hi! 👋' : isStateB ? 'Welcome back 🎮' : undefined}
         onProfilePress={() => navigation.navigate('Profile')}
       />
 
@@ -405,7 +406,7 @@ export default function DashboardScreen({ navigation }: Props) {
               <PizzaMascot mood="happy" size={100} />
               <Text style={styles.stateATitle}>Ready to test your knowledge?</Text>
               <Text style={styles.stateAHint}>Quick thinking = bigger scores!</Text>
-              <TouchableOpacity onPress={handleSolo} activeOpacity={0.8}>
+              <TouchableOpacity onPress={handleSolo} activeOpacity={0.8} style={{ width: '100%' }}>
                 <LinearGradient
                   colors={['#22C55E', '#16A34A']}
                   style={styles.stateACta}
@@ -812,37 +813,38 @@ const styles = StyleSheet.create({
     color: '#22C55E',
   },
 
-  // State A: Never played (0 games)
+  // State A: Never played (0 games) — vertically centered as one unit
   stateAContainer: {
     alignItems: 'center',
-    paddingVertical: 20,
-    gap: 12,
+    paddingVertical: 32,
+    paddingHorizontal: 4,
+    gap: 10,
   },
   stateATitle: {
-    fontSize: 20,
-    fontWeight: '700',
+    fontSize: 22,
+    fontWeight: '800',
     color: colors.text.primary,
     textAlign: 'center',
+    marginTop: 8,
   },
   stateAHint: {
     fontSize: 14,
     color: colors.text.secondary,
     textAlign: 'center',
+    marginBottom: 4,
   },
   stateACta: {
     borderRadius: 16,
     height: 56,
-    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 8,
     borderBottomWidth: 4,
     borderBottomColor: '#16A34A',
     shadowColor: '#22C55E',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.35,
-    shadowRadius: 10,
-    elevation: 6,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
+    elevation: 8,
   },
   stateACtaText: {
     color: '#FFFFFF',
@@ -850,17 +852,18 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   moreWaysContainer: {
-    backgroundColor: 'rgba(124,92,255,0.08)',
-    borderRadius: 14,
-    padding: 16,
+    backgroundColor: 'rgba(124,92,255,0.06)',
+    borderRadius: 16,
+    padding: 18,
     borderWidth: 1,
-    borderColor: 'rgba(124,92,255,0.15)',
+    borderColor: 'rgba(124,92,255,0.12)',
   },
   moreWaysTitle: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '700',
-    color: colors.text.primary,
-    marginBottom: 12,
+    color: colors.text.secondary,
+    letterSpacing: 0.5,
+    marginBottom: 14,
   },
   moreWaysRow: {
     flexDirection: 'row',
@@ -868,14 +871,14 @@ const styles = StyleSheet.create({
   },
   moreWaysBtn: {
     flex: 1,
-    backgroundColor: 'rgba(255,255,255,0.05)',
-    borderRadius: 12,
-    padding: 14,
+    backgroundColor: 'rgba(124,92,255,0.08)',
+    borderRadius: 14,
+    padding: 16,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(124,92,255,0.12)',
   },
-  moreWaysIcon: { fontSize: 22, marginBottom: 4 },
+  moreWaysIcon: { fontSize: 24, marginBottom: 6 },
   moreWaysBtnLabel: {
     fontSize: 14,
     fontWeight: '700',
@@ -884,7 +887,7 @@ const styles = StyleSheet.create({
   moreWaysBtnDesc: {
     fontSize: 11,
     color: colors.text.secondary,
-    marginTop: 2,
+    marginTop: 3,
   },
 
   // Guest banner
