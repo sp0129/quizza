@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
+import LottieView from 'lottie-react-native';
 import * as Haptics from 'expo-haptics';
 import { colors } from '../../theme/colors';
 
@@ -20,14 +21,13 @@ export default function HeroSection({ onExploreChallenges, delay = 0 }: HeroSect
           <Text style={styles.speedHint}>Quick thinking = bigger scores! ⚡</Text>
         </View>
 
-        {/* Right: explorer avatar, tilted */}
-        <View style={styles.imageCol}>
-          <Image
-            source={require('../../assets/avatars/explorer-hero.png')}
-            style={styles.explorerImage}
-            resizeMode="contain"
-          />
-        </View>
+        {/* Right: star mascot (same as State A for visual continuity) */}
+        <LottieView
+          source={require('../../assets/lottie/new-idea.lottie')}
+          autoPlay
+          loop
+          style={styles.mascotLottie}
+        />
       </View>
 
       {/* Category pills */}
@@ -87,15 +87,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: colors.gold,
   },
-  imageCol: {
-    width: 110,
-    alignItems: 'center',
+  mascotLottie: {
+    width: 90,
+    height: 90,
     marginLeft: 4,
-  },
-  explorerImage: {
-    width: 105,
-    height: 105,
-    transform: [{ rotate: '6deg' }],
   },
   categoryRow: {
     flexDirection: 'row',
