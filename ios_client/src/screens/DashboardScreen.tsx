@@ -436,6 +436,10 @@ export default function DashboardScreen({ navigation }: Props) {
         {/* ═══ STATE B: Has played (1+ games, still new user) ═══ */}
         {isStateB && (
           <>
+            <HeroSection
+              onExploreChallenges={() => navigation.navigate('MainTabs' as any)}
+              delay={100}
+            />
             {lastPlayedCategory && (
               <QuickPlayBar
                 category={lastPlayedCategory}
@@ -450,13 +454,9 @@ export default function DashboardScreen({ navigation }: Props) {
                     });
                   } catch {}
                 }}
-                delay={100}
+                delay={200}
               />
             )}
-            <HeroSection
-              onExploreChallenges={() => navigation.navigate('MainTabs' as any)}
-              delay={200}
-            />
           </>
         )}
 
