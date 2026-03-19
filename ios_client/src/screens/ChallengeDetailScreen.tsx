@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   Alert,
 } from 'react-native';
+import { useAuth } from '../hooks/useAuth';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
@@ -65,6 +66,7 @@ function rankEmoji(rank: number): string {
 export default function ChallengeDetailScreen({ route, navigation }: Props) {
   const { challengeId } = route.params;
   const insets = useSafeAreaInsets();
+  const { isGuest } = useAuth();
 
   const [detail, setDetail] = useState<ChallengeDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -85,6 +87,17 @@ export default function ChallengeDetailScreen({ route, navigation }: Props) {
 
   const handlePlay = async () => {
     if (!detail) return;
+    if (isGuest) {
+      Alert.alert(
+        'Account Required',
+        'Create a free account to play challenges and compete on leaderboards.',
+        [
+          { text: 'Not Now', style: 'cancel' },
+          { text: 'Sign Up', onPress: () => navigation.navigate('Signup' as any) },
+        ],
+      );
+      return;
+    }
     setStarting(true);
     try {
       const result = await api.post<{
