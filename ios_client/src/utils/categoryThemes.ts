@@ -42,6 +42,7 @@ const ID_MAP: Record<number, CategoryTheme> = {
   30: { gradient: 'linear-gradient(135deg, #0e7490 0%, #052e3d 100%)', accent: '#024970', emoji: '📡' },
   31: { gradient: 'linear-gradient(135deg, #9d174d 0%, #500724 100%)', accent: '#71137a', emoji: '🎌' },
   32: { gradient: 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)', accent: '#015c8b', emoji: '🃏' },
+  2008: { gradient: 'linear-gradient(135deg, #3730a3 0%, #1e1b4b 100%)', accent: '#8d6002', emoji: '📺' },
   2009: { gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)', accent: '#7c3aed', emoji: '🎲' },
 };
 
