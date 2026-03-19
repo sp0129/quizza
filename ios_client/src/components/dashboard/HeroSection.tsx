@@ -13,21 +13,11 @@ export default function HeroSection({ onExploreChallenges, delay = 0 }: HeroSect
   return (
     <Animated.View entering={FadeInDown.delay(delay).duration(400)} style={styles.container}>
       <View style={styles.contentRow}>
-        {/* Left: text + CTA */}
+        {/* Left: text */}
         <View style={styles.textCol}>
           <Text style={styles.title}>DISCOVER CHALLENGES</Text>
           <Text style={styles.subtitle}>Test your knowledge against the community</Text>
           <Text style={styles.speedHint}>Quick thinking = bigger scores! ⚡</Text>
-          <TouchableOpacity
-            style={styles.cta}
-            onPress={() => {
-              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-              onExploreChallenges();
-            }}
-            activeOpacity={0.8}
-          >
-            <Text style={styles.ctaText}>Explore →</Text>
-          </TouchableOpacity>
         </View>
 
         {/* Right: explorer avatar, tilted */}
@@ -39,6 +29,26 @@ export default function HeroSection({ onExploreChallenges, delay = 0 }: HeroSect
           />
         </View>
       </View>
+
+      {/* Category pills */}
+      <View style={styles.categoryRow}>
+        <Text style={styles.categoryChip}>🔥 Science</Text>
+        <Text style={styles.categoryChip}>📚 History</Text>
+        <Text style={styles.categoryChip}>🎬 Movies</Text>
+        <Text style={styles.categoryChip}>🧠 Geography</Text>
+      </View>
+
+      {/* Full-width CTA */}
+      <TouchableOpacity
+        style={styles.cta}
+        onPress={() => {
+          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+          onExploreChallenges();
+        }}
+        activeOpacity={0.8}
+      >
+        <Text style={styles.ctaText}>Explore Open Challenges →</Text>
+      </TouchableOpacity>
     </Animated.View>
   );
 }
@@ -54,6 +64,7 @@ const styles = StyleSheet.create({
   contentRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 12,
   },
   textCol: {
     flex: 1,
@@ -75,30 +86,43 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '600',
     color: colors.gold,
-    marginBottom: 4,
+  },
+  imageCol: {
+    width: 100,
+    alignItems: 'center',
+    marginLeft: 8,
+  },
+  explorerImage: {
+    width: 95,
+    height: 95,
+    transform: [{ rotate: '8deg' }],
+  },
+  categoryRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginBottom: 12,
+  },
+  categoryChip: {
+    fontSize: 12,
+    color: colors.text.secondary,
+    backgroundColor: colors.bg.elevated,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 10,
+    overflow: 'hidden',
   },
   cta: {
     backgroundColor: colors.brand.primary,
-    borderRadius: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    alignSelf: 'flex-start',
+    borderRadius: 12,
+    paddingVertical: 12,
+    alignItems: 'center',
     borderBottomWidth: 3,
     borderBottomColor: '#5B21B6',
   },
   ctaText: {
     color: '#FFFFFF',
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: '700',
-  },
-  imageCol: {
-    width: 90,
-    alignItems: 'center',
-    marginLeft: 8,
-  },
-  explorerImage: {
-    width: 85,
-    height: 85,
-    transform: [{ rotate: '8deg' }],
   },
 });
