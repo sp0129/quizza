@@ -435,29 +435,10 @@ export default function DashboardScreen({ navigation }: Props) {
 
         {/* ═══ STATE B: Has played (1+ games, still new user) ═══ */}
         {isStateB && (
-          <>
-            <HeroSection
-              onExploreChallenges={() => (navigation as any).navigate('OpenChallenges')}
-              delay={100}
-            />
-            {lastPlayedCategory && (
-              <QuickPlayBar
-                category={lastPlayedCategory}
-                onPress={async () => {
-                  try {
-                    const r = await api.post<{ gameId: string; questionSetId: string }>(
-                      '/games/solo', { category: lastPlayedCategory }
-                    );
-                    navigation.navigate('Game', {
-                      gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
-                      category: lastPlayedCategory!, timer: 30, questionCount: 10,
-                    });
-                  } catch {}
-                }}
-                delay={200}
-              />
-            )}
-          </>
+          <HeroSection
+            onExploreChallenges={() => (navigation as any).navigate('OpenChallenges')}
+            delay={100}
+          />
         )}
 
         {/* ═══ STANDARD: Metrics row (not new user) ═══ */}
@@ -472,7 +453,7 @@ export default function DashboardScreen({ navigation }: Props) {
         {/* ═══ GAME MODES (2×2 Grid) — State B + Standard ═══ */}
         {!isStateA && (
           <Animated.View entering={FadeInDown.delay(isStateB ? 350 : 250).duration(400)} style={styles.modeSection}>
-            <Text style={styles.sectionLabel}>{isStateB ? 'OR EXPLORE' : 'GAME MODES'}</Text>
+            <Text style={styles.sectionLabel}>GAME MODES</Text>
             <View style={styles.modeGrid}>
               <View style={styles.modeGridRow}>
                 <ModeCard
@@ -514,6 +495,25 @@ export default function DashboardScreen({ navigation }: Props) {
               </View>
             </View>
           </Animated.View>
+        )}
+
+        {/* ═══ QUICK PLAY (State B only) ═══ */}
+        {isStateB && lastPlayedCategory && (
+          <QuickPlayBar
+            category={lastPlayedCategory}
+            onPress={async () => {
+              try {
+                const r = await api.post<{ gameId: string; questionSetId: string }>(
+                  '/games/solo', { category: lastPlayedCategory }
+                );
+                navigation.navigate('Game', {
+                  gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
+                  category: lastPlayedCategory!, timer: 30, questionCount: 10,
+                });
+              } catch {}
+            }}
+            delay={400}
+          />
         )}
 
         {/* ═══ PROGRESS SECTION (State B only) ═══ */}
@@ -794,7 +794,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingTop: 12,
-    gap: 24,
+    gap: 16,
   },
 
   // Transition toast
