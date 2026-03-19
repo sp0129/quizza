@@ -33,12 +33,12 @@ export default function QuickPlayBar({ category, onPress, delay = 0 }: QuickPlay
 const styles = StyleSheet.create({
   bar: {
     backgroundColor: '#22C55E',
-    borderRadius: 14,
-    height: 52,
+    borderRadius: 12,
+    paddingVertical: 12,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 0,
-    borderBottomWidth: 4,
+    borderBottomWidth: 3,
     borderBottomColor: '#16A34A',
     shadowColor: '#22C55E',
     shadowOffset: { width: 0, height: 4 },

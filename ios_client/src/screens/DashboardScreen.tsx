@@ -794,7 +794,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingTop: 12,
-    gap: 16,
+    gap: 20,
   },
 
   // Transition toast
