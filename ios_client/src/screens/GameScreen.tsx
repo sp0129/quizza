@@ -41,6 +41,7 @@ interface Question {
   question: string;
   difficulty: string;
   all_answers: string[];
+  display_hint?: string;
 }
 
 interface GameResult {
@@ -1005,7 +1006,18 @@ export default function GameScreen({ route, navigation }: Props) {
                 {['Speed counts! Faster = more points ⚡', 'Quick thinking = bigger scores! ⚡', 'The faster you answer, the more you earn ⚡'][Math.floor(Math.random() * 3)]}
               </Text>
             )}
-            <Text style={styles.questionText}>{question.question}</Text>
+            {question.display_hint === 'flag' ? (
+              <>
+                <Text style={styles.questionText}>
+                  {question.question.split('\n\n')[0]}
+                </Text>
+                <Text style={styles.flagEmoji}>
+                  {question.question.split('\n\n')[1]}
+                </Text>
+              </>
+            ) : (
+              <Text style={styles.questionText}>{question.question}</Text>
+            )}
           </Animated.View>
         </View>
 
@@ -1170,6 +1182,11 @@ const styles = StyleSheet.create({
   },
   questionContainer: {
     alignItems: 'center',
+  },
+  flagEmoji: {
+    fontSize: 80,
+    textAlign: 'center',
+    marginVertical: 8,
   },
   speedTip: {
     fontSize: 11,

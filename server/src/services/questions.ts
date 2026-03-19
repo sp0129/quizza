@@ -9,6 +9,7 @@ export interface Question {
   incorrect_answers: string[];
   difficulty: 'easy' | 'medium' | 'hard';
   all_answers: string[]; // shuffled for display
+  display_hint?: string; // e.g., 'flag' for large emoji rendering
 }
 
 interface OpenTDBQuestion {
@@ -121,6 +122,7 @@ async function storeLocalQuestionSet(category: string, categoryId: number, quest
       incorrect_answers: q.incorrect_answers,
       difficulty: q.difficulty as Question['difficulty'],
       all_answers: shuffleArray([q.correct_answer, ...q.incorrect_answers]),
+      ...((q as any).display_hint ? { display_hint: (q as any).display_hint } : {}),
     }));
 
   const id = uuidv4();

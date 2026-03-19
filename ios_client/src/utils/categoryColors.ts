@@ -56,6 +56,7 @@ const CATEGORY_PALETTE: Record<number, CategoryCardColors> = {
   // Custom categories
   2008: { bg: 'rgba(99,102,241,0.12)',  accent: '#6366F1', emoji: '📺' },   // Bingeworthy
   2009: { bg: 'rgba(124,58,237,0.12)',  accent: '#7C3AED', emoji: '🎲' },   // Mixed Bag
+  2010: { bg: 'rgba(16,185,129,0.12)',  accent: '#10B981', emoji: '🏳️' },   // Flags & Capitals
 };
 
 // Keyword-based fallback for categories not in the ID map

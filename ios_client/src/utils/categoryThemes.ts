@@ -44,10 +44,12 @@ const ID_MAP: Record<number, CategoryTheme> = {
   32: { gradient: 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)', accent: '#015c8b', emoji: '🃏' },
   2008: { gradient: 'linear-gradient(135deg, #3730a3 0%, #1e1b4b 100%)', accent: '#8d6002', emoji: '📺' },
   2009: { gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)', accent: '#7c3aed', emoji: '🎲' },
+  2010: { gradient: 'linear-gradient(135deg, #10b981 0%, #065f46 100%)', accent: '#10B981', emoji: '🏳️' },
 };
 
 const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
   ['mixed bag',       { gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)', accent: '#7c3aed', emoji: '🎲' }],
+  ['flags',           { gradient: 'linear-gradient(135deg, #10b981 0%, #065f46 100%)', accent: '#10B981', emoji: '🏳️' }],
   ['harry potter',    { gradient: 'linear-gradient(135deg, #6d28d9 0%, #2e1065 100%)', accent: '#6623a3', emoji: '⚡' }],
   ['game of thrones', { gradient: 'linear-gradient(135deg, #991b1b 0%, #450a0a 100%)', accent: '#9a1a1a', emoji: '🐉' }],
   ['chemistry',       { gradient: 'linear-gradient(135deg, #166534 0%, #052e16 100%)', accent: '#036949', emoji: '🧪' }],
@@ -108,6 +110,7 @@ export const CATEGORY_SORT_ORDER: number[] = [
   23,    // History
   22,    // Geography
   20,    // Mythology
+  2010,  // Flags & Capitals
   // Entertainment (deeper)
   14,    // Television
   11,    // Film
