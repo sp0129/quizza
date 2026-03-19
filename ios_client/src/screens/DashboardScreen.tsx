@@ -522,14 +522,14 @@ export default function DashboardScreen({ navigation }: Props) {
                   won={item.won}
                   tied={item.tied}
                   seen={item.seen}
-                  onPress={async () => {
+                  onPress={() => {
                     const isSeen = item.seen;
-                    if (!isSeen) await markChallengeSeen(item.id);
                     const result: 'win' | 'loss' | 'tie' = item.won
                       ? 'win'
                       : item.tied
                         ? 'tie'
                         : 'loss';
+                    // Navigate first — mark seen after to avoid flash of win/loss color on the pill
                     navigation.navigate('Results', {
                       yourScore: item.myScore ?? 0,
                       opponentScore: item.opponentScore,
@@ -542,6 +542,7 @@ export default function DashboardScreen({ navigation }: Props) {
                       challengeId: item.id,
                       skipAnimation: isSeen,
                     });
+                    if (!isSeen) markChallengeSeen(item.id);
                   }}
                 />
               ))}
