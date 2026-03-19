@@ -161,8 +161,6 @@ function MainTabs() {
 
 function RootNavigator() {
   const { user, loading } = useAuth();
-  console.log('[Nav] user:', user?.username ?? null, 'loading:', loading);
-
   if (loading) {
     return (
       <View style={{ flex: 1, backgroundColor: colors.bg, justifyContent: 'center', alignItems: 'center' }}>
