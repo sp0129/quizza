@@ -300,10 +300,14 @@ export default function FriendsScreen({ navigation }: Props) {
         <View style={styles.emptyContainer}>
           <Animated.View entering={FadeInDown.delay(100).duration(400)} style={styles.emptyContent}>
             <Text style={styles.emptyIcon}>👋</Text>
-            <Text style={styles.emptyTitle}>No friends yet</Text>
-            <Text style={styles.emptyDesc}>
-              Search by @username or share your invite link to start building your trivia squad.
-            </Text>
+            <Text style={styles.emptyTitle}>Your first friend is waiting...</Text>
+            <Text style={styles.emptyDesc}>Add a friend to:</Text>
+            <View style={styles.benefitsList}>
+              <Text style={styles.benefitItem}>✅ Duel each other</Text>
+              <Text style={styles.benefitItem}>✅ Play group games together</Text>
+              <Text style={styles.benefitItem}>✅ See head-to-head results</Text>
+              <Text style={styles.benefitItem}>✅ Build rivalries</Text>
+            </View>
 
             <TouchableOpacity
               style={styles.searchPromptBtn}
@@ -311,16 +315,7 @@ export default function FriendsScreen({ navigation }: Props) {
               activeOpacity={0.8}
             >
               <Text style={styles.searchPromptIcon}>🔍</Text>
-              <Text style={styles.searchPromptText}>Search for Friends</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.inviteBtn}
-              onPress={shareInviteLink}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.inviteBtnIcon}>📤</Text>
-              <Text style={styles.inviteBtnText}>Share Invite Link</Text>
+              <Text style={styles.searchPromptText}>Search by Username</Text>
             </TouchableOpacity>
           </Animated.View>
         </View>
@@ -524,6 +519,17 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     textAlign: 'center',
     maxWidth: 300,
+  },
+  benefitsList: {
+    alignItems: 'flex-start',
+    gap: 6,
+    marginTop: 8,
+    marginBottom: 4,
+  },
+  benefitItem: {
+    color: colors.text.primary,
+    fontSize: 14,
+    fontWeight: '600',
   },
   searchPromptBtn: {
     flexDirection: 'row',

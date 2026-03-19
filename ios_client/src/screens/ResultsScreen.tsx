@@ -136,11 +136,32 @@ export default function ResultsScreen({ route, navigation }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [challengeRank, setChallengeRank] = useState<number | null>(null);
 
+  // Perfect bonus animation state
+  const [showPerfectBonus, setShowPerfectBonus] = useState(false);
+  const [displayScore, setDisplayScore] = useState(yourScore);
+
   // Solo result messaging
-  const canPostChallenge = gameMode === 'solo' && !openChallengeId && !!questionSetId && correctCount != null && totalQuestions != null;
+  const isPerfect = correctCount != null && totalQuestions != null && correctCount === totalQuestions;
+  const perfectBonus = isPerfect ? (totalQuestions >= 10 ? 100 : 50) : 0;
+  const correctPct = (correctCount != null && totalQuestions != null && totalQuestions > 0) ? (correctCount / totalQuestions) * 100 : 0;
+  const canPostChallenge = gameMode === 'solo' && !openChallengeId && !!questionSetId && correctCount != null && totalQuestions != null && correctPct >= 60;
   const resultMsg = (correctCount != null && totalQuestions != null)
     ? getResultMessage(correctCount, totalQuestions)
     : null;
+
+  // Perfect nudge copy variants (solo + perfect only)
+  const perfectNudgeCopy = (() => {
+    if (!isPerfect || gameMode !== 'solo' || openChallengeId) return null;
+    const n = totalQuestions ?? 10;
+    const variants = [
+      'Perfect score. Think anyone can beat that? 😈',
+      `${n} for ${n}. Let the world try 🏟️`,
+      'That was too easy for you. Share it! 🔥',
+      'Dare someone to match this 👀',
+      'Flex worthy. Post it! 💪',
+    ];
+    return variants[Math.floor(Math.random() * variants.length)];
+  })();
 
   // Auto-submit to open challenge when playing someone else's challenge
   useEffect(() => {
@@ -305,7 +326,16 @@ export default function ResultsScreen({ route, navigation }: Props) {
         withTiming(1, { duration: 300, easing: Easing.out(Easing.cubic) }),
       );
 
-      setTimeout(() => setStage('complete'), 500);
+      setTimeout(() => {
+        setStage('complete');
+        // Trigger perfect bonus animation after a beat
+        if (isPerfect && perfectBonus > 0) {
+          setTimeout(() => {
+            setShowPerfectBonus(true);
+            Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+          }, 500);
+        }
+      }, 500);
     }, 5000);
 
     return () => {
@@ -369,6 +399,11 @@ export default function ResultsScreen({ route, navigation }: Props) {
       preselectedCategory: category,
     });
   }, [challengeId, opponentUsername, opponentHandle, navigation, removeChallenge]);
+
+  const handlePlayAgain = useCallback(() => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    navigation.navigate('Category', { mode: 'solo', preselectedCategory: category });
+  }, [navigation, category]);
 
   const handleBackToHome = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -507,9 +542,44 @@ export default function ResultsScreen({ route, navigation }: Props) {
         {/* Spacer */}
         <View style={styles.spacer} />
 
+        {/* ═══ PERFECT BONUS BANNER ═══ */}
+        {(stage === 'outcome' || stage === 'complete') && showPerfectBonus && perfectBonus > 0 && (
+          <Animated.View style={[styles.perfectBanner, buttonsStyle]}>
+            <Text style={styles.perfectBannerText}>
+              {(() => {
+                const variants = [
+                  'Perfect round! 🎯', 'Flawless victory! 💎', 'Nothing but net! 🏀',
+                  'Clean sweep! 🧹', 'Nailed it! 🔨', 'Big brain energy! 🧠',
+                  'Are you cheating?! 👀', 'Okay, show-off 😏', 'Absolute legend 👑',
+                  'You made that look easy ✨',
+                ];
+                return variants[Math.floor(Math.random() * variants.length)];
+              })()}
+            </Text>
+            <Text style={styles.perfectBonusText}>+{perfectBonus} bonus</Text>
+          </Animated.View>
+        )}
+
+        {/* ═══ PERFECT NUDGE COPY (solo only) ═══ */}
+        {(stage === 'outcome' || stage === 'complete') && perfectNudgeCopy && !posted && (
+          <Animated.View style={[styles.perfectNudge, buttonsStyle]}>
+            <Text style={styles.perfectNudgeText}>{perfectNudgeCopy}</Text>
+          </Animated.View>
+        )}
+
         {/* ═══ ACTION BUTTONS ═══ */}
         {(stage === 'outcome' || stage === 'complete') && (
           <Animated.View style={[styles.buttonsContainer, buttonsStyle]}>
+            {/* PRIMARY: Play Again (all modes) */}
+            <TouchableOpacity
+              style={styles.playAgainBtn}
+              onPress={handlePlayAgain}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.playAgainBtnText}>▶ Play {category} Again</Text>
+            </TouchableOpacity>
+
+            {/* Rematch (duel mode) */}
             {hasOpponent && gameMode === 'challenge' && (
               <TouchableOpacity
                 style={styles.rematchBtn}
@@ -519,6 +589,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
                 <Text style={styles.rematchBtnText}>Rematch</Text>
               </TouchableOpacity>
             )}
+
+            {/* Post as Challenge: earned — perfect → strong nudge, ≥60% → plain, <60% → hidden */}
             {canPostChallenge && (
               <TouchableOpacity
                 style={[styles.postChallengeBtn, posted && styles.postChallengeBtnDone]}
@@ -535,6 +607,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
                 )}
               </TouchableOpacity>
             )}
+
+            {/* View Leaderboard (open challenge results) */}
             {openChallengeId && submitted && (
               <TouchableOpacity
                 style={styles.viewLeaderboardBtn}
@@ -547,12 +621,14 @@ export default function ResultsScreen({ route, navigation }: Props) {
                 <Text style={styles.viewLeaderboardBtnText}>View Leaderboard</Text>
               </TouchableOpacity>
             )}
+
+            {/* Home */}
             <TouchableOpacity
               style={styles.homeBtn}
               onPress={handleBackToHome}
               activeOpacity={0.8}
             >
-              <Text style={styles.homeBtnText}>Back to Home</Text>
+              <Text style={styles.homeBtnText}>Home</Text>
             </TouchableOpacity>
           </Animated.View>
         )}
@@ -689,6 +765,63 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
   },
+  // Play Again — primary CTA on all results screens
+  playAgainBtn: {
+    backgroundColor: '#22C55E',
+    borderRadius: 14,
+    height: 52,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomWidth: 4,
+    borderBottomColor: '#16A34A',
+    shadowColor: '#22C55E',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  playAgainBtnText: {
+    color: '#FFFFFF',
+    fontSize: 17,
+    fontWeight: '700',
+  },
+
+  // Perfect bonus
+  perfectBanner: {
+    backgroundColor: '#F59E0B20',
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    marginBottom: 8,
+    borderWidth: 1,
+    borderColor: '#F59E0B40',
+    alignItems: 'center',
+  },
+  perfectBannerText: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#F59E0B',
+  },
+  perfectBonusText: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#F59E0B',
+    marginTop: 2,
+  },
+
+  // Perfect nudge (solo only)
+  perfectNudge: {
+    marginBottom: 8,
+    alignItems: 'center',
+  },
+  perfectNudgeText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.text.secondary,
+    textAlign: 'center',
+    fontStyle: 'italic',
+  },
+
   rankBanner: {
     backgroundColor: '#7C3AED20',
     borderRadius: 12,

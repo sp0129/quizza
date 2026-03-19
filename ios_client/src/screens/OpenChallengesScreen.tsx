@@ -196,12 +196,15 @@ export default function OpenChallengesScreen() {
           <Text style={styles.cardEmoji}>{theme.emoji}</Text>
         </View>
         <View style={styles.cardCenter}>
-          <Text style={styles.cardCategory} numberOfLines={1}>{item.category}</Text>
+          <View style={styles.cardTitleRow}>
+            <Text style={styles.cardCategory} numberOfLines={1}>{item.category}</Text>
+            <View style={styles.playerCountBadge}>
+              <Text style={styles.playerCountText}>{item.player_count} 👥</Text>
+            </View>
+          </View>
+          <Text style={styles.cardMeta}>by @{item.posted_by_username}</Text>
           <Text style={styles.cardMeta}>
-            by @{item.posted_by_username} · {item.player_count} {item.player_count === 1 ? 'player' : 'players'}
-          </Text>
-          <Text style={styles.cardMeta}>
-            {played ? `High Score: ${item.high_score}  ·  Your Score: ${item.user_score}` : 'Play to see scores'}
+            {played ? `High Score: ${item.high_score}  ·  Yours: ${item.user_score}` : 'Play to see scores'}
           </Text>
         </View>
         <View style={styles.cardRight}>
@@ -544,6 +547,22 @@ const styles = StyleSheet.create({
   },
   cardEmoji: { fontSize: 20 },
   cardCenter: { flex: 1, gap: 2 },
+  cardTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  playerCountBadge: {
+    backgroundColor: colors.brand.primary + '25',
+    borderRadius: 8,
+    paddingHorizontal: 6,
+    paddingVertical: 1,
+  },
+  playerCountText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: colors.brand.primary,
+  },
   cardCategory: {
     fontSize: 15,
     fontWeight: '700',
