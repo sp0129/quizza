@@ -26,6 +26,7 @@ import { useChallenges } from '../hooks/useChallenges';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../api/client';
 import { LinearGradient } from 'expo-linear-gradient';
+import LottieView from 'lottie-react-native';
 import { colors } from '../theme/colors';
 import { getAvatar } from '../utils/avatars';
 import StatusBarHeader from '../components/dashboard/StatusBarHeader';
@@ -384,10 +385,20 @@ export default function DashboardScreen({ navigation }: Props) {
               onPress={() => navigation.navigate('Signup')}
               activeOpacity={0.8}
             >
-              <Text style={styles.guestTitle}>Playing as guest</Text>
-              <Text style={styles.guestBody}>
-                Create a free account to challenge friends, join rooms, and save scores →
-              </Text>
+              <View style={styles.guestBannerRow}>
+                <LottieView
+                  source={require('../assets/lottie/new-idea.lottie')}
+                  autoPlay
+                  loop
+                  style={styles.guestLottie}
+                />
+                <View style={styles.guestBannerText}>
+                  <Text style={styles.guestTitle}>Playing as guest</Text>
+                  <Text style={styles.guestBody}>
+                    Create a free account to challenge friends and save scores →
+                  </Text>
+                </View>
+              </View>
             </TouchableOpacity>
           </Animated.View>
         )}
@@ -403,7 +414,12 @@ export default function DashboardScreen({ navigation }: Props) {
         {isStateA && (
           <>
             <Animated.View entering={FadeInDown.delay(150).duration(400)} style={styles.stateAContainer}>
-              <PizzaMascot mood="happy" size={100} />
+              <LottieView
+                source={require('../assets/lottie/new-idea.lottie')}
+                autoPlay
+                loop
+                style={styles.stateALottie}
+              />
               <Text style={styles.stateATitle}>Ready to test your knowledge?</Text>
               <Text style={styles.stateAHint}>Quick thinking = bigger scores!</Text>
               <TouchableOpacity onPress={handleSolo} activeOpacity={0.8} style={{ width: '100%' }}>
@@ -811,6 +827,24 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '700',
     color: '#22C55E',
+  },
+
+  // Lottie mascot sizes
+  stateALottie: {
+    width: 120,
+    height: 120,
+  },
+  guestLottie: {
+    width: 60,
+    height: 60,
+  },
+  guestBannerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  guestBannerText: {
+    flex: 1,
   },
 
   // State A: Never played (0 games) — vertically centered as one unit
