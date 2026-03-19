@@ -195,7 +195,7 @@ export default function OpenChallengesScreen() {
 
     return (
       <TouchableOpacity
-        style={styles.card}
+        style={[styles.card, { borderLeftWidth: 4, borderLeftColor: theme.accent }]}
         activeOpacity={0.7}
         onPress={() => {
           Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -254,15 +254,18 @@ export default function OpenChallengesScreen() {
           keyExtractor={c => c}
           contentContainerStyle={styles.chipRow}
           renderItem={({ item: cat }) => {
-            const theme = getCategoryTheme(cat);
+            const catTheme = getCategoryTheme(cat);
             const active = categoryFilter === cat;
             return (
               <TouchableOpacity
-                style={[styles.chip, active && styles.chipActive]}
+                style={[
+                  styles.chip,
+                  active && { backgroundColor: catTheme.accent + '25', borderColor: catTheme.accent },
+                ]}
                 onPress={() => handleCategoryPress(cat)}
                 activeOpacity={0.7}
               >
-                <Text style={styles.chipText}>{theme.emoji} {cat}</Text>
+                <Text style={[styles.chipText, active && { color: catTheme.accent }]}>{catTheme.emoji} {cat}</Text>
               </TouchableOpacity>
             );
           }}
@@ -291,7 +294,7 @@ export default function OpenChallengesScreen() {
 
     return (
       <TouchableOpacity
-        style={[styles.card, expired && styles.cardExpired]}
+        style={[styles.card, { borderLeftWidth: 4, borderLeftColor: theme.accent }, expired && styles.cardExpired]}
         activeOpacity={0.7}
         onPress={() => {
           Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);

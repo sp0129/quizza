@@ -25,6 +25,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useChallenges } from '../hooks/useChallenges';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../api/client';
+import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '../theme/colors';
 import { getAvatar } from '../utils/avatars';
 import StatusBarHeader from '../components/dashboard/StatusBarHeader';
@@ -404,24 +405,27 @@ export default function DashboardScreen({ navigation }: Props) {
               <PizzaMascot mood="happy" size={100} />
               <Text style={styles.stateATitle}>Ready to test your knowledge?</Text>
               <Text style={styles.stateAHint}>Quick thinking = bigger scores!</Text>
-              <TouchableOpacity
-                style={styles.stateACta}
-                onPress={handleSolo}
-                activeOpacity={0.8}
-              >
-                <Text style={styles.stateACtaText}>▶ Play Your First Game</Text>
+              <TouchableOpacity onPress={handleSolo} activeOpacity={0.8}>
+                <LinearGradient
+                  colors={['#22C55E', '#16A34A']}
+                  style={styles.stateACta}
+                >
+                  <Text style={styles.stateACtaText}>▶ Play Your First Game</Text>
+                </LinearGradient>
               </TouchableOpacity>
             </Animated.View>
-            <Animated.View entering={FadeInDown.delay(300).duration(400)} style={styles.stateASecondary}>
-              <Text style={styles.stateASecondaryLabel}>Also available:</Text>
-              <View style={styles.stateASecondaryRow}>
-                <TouchableOpacity style={styles.stateASecondaryBtn} onPress={() => setJoinModalVisible(true)} activeOpacity={0.7}>
-                  <Text style={styles.stateASecondaryIcon}>🚪</Text>
-                  <Text style={styles.stateASecondaryText}>Join Room</Text>
+            <Animated.View entering={FadeInDown.delay(300).duration(400)} style={styles.moreWaysContainer}>
+              <Text style={styles.moreWaysTitle}>🎮 More Ways to Play</Text>
+              <View style={styles.moreWaysRow}>
+                <TouchableOpacity style={styles.moreWaysBtn} onPress={() => setJoinModalVisible(true)} activeOpacity={0.7}>
+                  <Text style={styles.moreWaysIcon}>🚪</Text>
+                  <Text style={styles.moreWaysBtnLabel}>Join Room</Text>
+                  <Text style={styles.moreWaysBtnDesc}>Enter a code</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.stateASecondaryBtn} onPress={handleGroupPlay} activeOpacity={0.7}>
-                  <Text style={styles.stateASecondaryIcon}>👥</Text>
-                  <Text style={styles.stateASecondaryText}>Create Room</Text>
+                <TouchableOpacity style={styles.moreWaysBtn} onPress={handleGroupPlay} activeOpacity={0.7}>
+                  <Text style={styles.moreWaysIcon}>👥</Text>
+                  <Text style={styles.moreWaysBtnLabel}>Create Room</Text>
+                  <Text style={styles.moreWaysBtnDesc}>Play with friends</Text>
                 </TouchableOpacity>
               </View>
             </Animated.View>
@@ -826,7 +830,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   stateACta: {
-    backgroundColor: '#22C55E',
     borderRadius: 16,
     height: 56,
     width: '100%',
@@ -846,35 +849,42 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '800',
   },
-  stateASecondary: {
-    paddingHorizontal: 4,
-  },
-  stateASecondaryLabel: {
-    fontSize: 12,
-    color: colors.text.secondary,
-    marginBottom: 8,
-  },
-  stateASecondaryRow: {
-    flexDirection: 'row',
-    gap: 10,
-  },
-  stateASecondaryBtn: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 6,
-    backgroundColor: colors.bg.surface,
-    borderRadius: 12,
-    paddingVertical: 12,
+  moreWaysContainer: {
+    backgroundColor: 'rgba(124,92,255,0.08)',
+    borderRadius: 14,
+    padding: 16,
     borderWidth: 1,
-    borderColor: colors.border + '30',
+    borderColor: 'rgba(124,92,255,0.15)',
   },
-  stateASecondaryIcon: { fontSize: 16 },
-  stateASecondaryText: {
-    fontSize: 13,
-    fontWeight: '600',
+  moreWaysTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: colors.text.primary,
+    marginBottom: 12,
+  },
+  moreWaysRow: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  moreWaysBtn: {
+    flex: 1,
+    backgroundColor: 'rgba(255,255,255,0.05)',
+    borderRadius: 12,
+    padding: 14,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.08)',
+  },
+  moreWaysIcon: { fontSize: 22, marginBottom: 4 },
+  moreWaysBtnLabel: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: colors.text.primary,
+  },
+  moreWaysBtnDesc: {
+    fontSize: 11,
     color: colors.text.secondary,
+    marginTop: 2,
   },
 
   // Guest banner

@@ -496,8 +496,14 @@ export default function ResultsScreen({ route, navigation }: Props) {
           <View style={styles.scoresContainer}>
             {/* Versus row: You | vs | Opponent */}
             <View style={styles.vsRow}>
-              {/* Your score */}
-              <Animated.View style={[styles.vsBlock, myScoreStyle]}>
+              {/* Your score — category-colored glow */}
+              <Animated.View style={[styles.vsBlock, myScoreStyle, {
+                shadowColor: theme.accent,
+                shadowOffset: { width: 0, height: 0 },
+                shadowOpacity: 0.3,
+                shadowRadius: 20,
+                elevation: 8,
+              }]}>
                 <Text style={styles.vsLabel}>You</Text>
                 <CountingNumber
                   target={displayScore}
@@ -594,17 +600,14 @@ export default function ResultsScreen({ route, navigation }: Props) {
         {(stage === 'outcome' || stage === 'complete') && (
           <Animated.View style={[styles.buttonsContainer, buttonsStyle]}>
             {/* PRIMARY: Play Again (all modes) — same category, questions, timer */}
-            <TouchableOpacity
-              style={styles.playAgainBtn}
-              onPress={handlePlayAgain}
-              activeOpacity={0.8}
-              disabled={playAgainLoading}
-            >
-              {playAgainLoading ? (
-                <ActivityIndicator color="#FFFFFF" size="small" />
-              ) : (
-                <Text style={styles.playAgainBtnText}>▶ Play {category} Again</Text>
-              )}
+            <TouchableOpacity onPress={handlePlayAgain} activeOpacity={0.8} disabled={playAgainLoading}>
+              <LinearGradient colors={['#22C55E', '#16A34A']} style={styles.playAgainBtn}>
+                {playAgainLoading ? (
+                  <ActivityIndicator color="#FFFFFF" size="small" />
+                ) : (
+                  <Text style={styles.playAgainBtnText}>▶ Play {category} Again</Text>
+                )}
+              </LinearGradient>
             </TouchableOpacity>
 
             {/* Rematch (duel mode) */}
@@ -823,7 +826,6 @@ const styles = StyleSheet.create({
   },
   // Play Again — primary CTA on all results screens
   playAgainBtn: {
-    backgroundColor: '#22C55E',
     borderRadius: 14,
     height: 52,
     justifyContent: 'center',
