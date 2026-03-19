@@ -39,14 +39,15 @@ router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Prom
 router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const userId = req.userId!;
   try {
-    // Core stats: wins, losses, games played
+    // Core stats: wins, losses, games played (only competitive games with an opponent)
     const statsResult = await pool.query(
       `SELECT
          COUNT(*) FILTER (WHERE status = 'completed') AS games_played,
          COUNT(*) FILTER (WHERE status = 'completed' AND winner_id = $1) AS wins,
          COUNT(*) FILTER (WHERE status = 'completed' AND winner_id IS NOT NULL AND winner_id != $1) AS losses
        FROM games
-       WHERE player_a_id = $1 OR player_b_id = $1`,
+       WHERE (player_a_id = $1 OR player_b_id = $1)
+         AND player_b_id IS NOT NULL`,
       [userId]
     );
     const { games_played, wins, losses } = statsResult.rows[0];
@@ -56,10 +57,11 @@ router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Pr
     const decided = totalWins + totalLosses;
     const winRate = decided > 0 ? Math.round((totalWins / decided) * 100) : 0;
 
-    // Win streak: count consecutive recent wins
+    // Win streak: count consecutive recent wins (competitive only)
     const recentGames = await pool.query(
       `SELECT winner_id FROM games
        WHERE (player_a_id = $1 OR player_b_id = $1)
+         AND player_b_id IS NOT NULL
          AND status = 'completed'
          AND winner_id IS NOT NULL
        ORDER BY completed_at DESC
@@ -110,7 +112,8 @@ router.get('/:username', async (req: Request, res: Response): Promise<void> => {
          ROUND(AVG(CASE WHEN player_a_id = $1 THEN player_a_score ELSE player_b_score END)
                FILTER (WHERE status = 'completed'), 1) AS avg_score
        FROM games
-       WHERE player_a_id = $1 OR player_b_id = $1`,
+       WHERE (player_a_id = $1 OR player_b_id = $1)
+         AND player_b_id IS NOT NULL`,
       [user.id]
     );
 
