@@ -138,6 +138,16 @@ export default function ChallengeDetailScreen({ route, navigation }: Props) {
   const theme = getCategoryTheme(detail.category);
   const alreadyPlayed = detail.user_attempt != null;
   const expired = new Date(detail.expires_at) < new Date();
+  const count = detail.player_count;
+
+  // Contextual CTA message based on player count
+  const ctaMessage = (() => {
+    if (count <= 1) return 'Be the first to take this challenge!';
+    if (count <= 5) return 'Think you can come out on top?';
+    if (count <= 20) return `${count} players so far. Can you crack the top 5?`;
+    if (count <= 50) return `${count} players and counting. Can you make the top 10?`;
+    return `${count} players have tried. Do you have what it takes?`;
+  })();
 
   return (
     <LinearGradient colors={gradients.game} style={styles.flex}>
@@ -164,34 +174,70 @@ export default function ChallengeDetailScreen({ route, navigation }: Props) {
           Posted by @{detail.posted_by_username} · {timeAgo(detail.posted_at)}
         </Text>
 
-        {/* Stats row */}
+        {/* Stats row — hide high score if not played */}
         <View style={styles.statsRow}>
           <View style={styles.statBox}>
-            <Text style={styles.statValue}>{detail.player_count}</Text>
-            <Text style={styles.statLabel}>{detail.player_count === 1 ? 'Player' : 'Players'}</Text>
+            <Text style={styles.statValue}>{count}</Text>
+            <Text style={styles.statLabel}>{count === 1 ? 'Player' : 'Players'}</Text>
           </View>
-          <View style={styles.statBox}>
-            <Text style={styles.statValue}>{detail.high_score}</Text>
-            <Text style={styles.statLabel}>High Score</Text>
-          </View>
-          {alreadyPlayed && (
+          {alreadyPlayed ? (
+            <>
+              <View style={styles.statBox}>
+                <Text style={styles.statValue}>{detail.high_score}</Text>
+                <Text style={styles.statLabel}>High Score</Text>
+              </View>
+              <View style={styles.statBox}>
+                <Text style={[styles.statValue, { color: colors.correct }]}>{detail.user_attempt!.total_score}</Text>
+                <Text style={styles.statLabel}>Your Score</Text>
+              </View>
+            </>
+          ) : (
             <View style={styles.statBox}>
-              <Text style={[styles.statValue, { color: colors.correct }]}>{detail.user_attempt!.total_score}</Text>
-              <Text style={styles.statLabel}>Your Score</Text>
+              <Text style={styles.statValue}>?</Text>
+              <Text style={styles.statLabel}>High Score</Text>
             </View>
           )}
         </View>
 
-        {/* User rank */}
+        {/* User rank (only after playing) */}
         {alreadyPlayed && (
           <View style={styles.rankBanner}>
             <Text style={styles.rankText}>
-              Your Rank: #{detail.user_attempt!.rank} of {detail.player_count}
+              Your Rank: #{detail.user_attempt!.rank} of {count}
             </Text>
           </View>
         )}
 
-        {/* Leaderboard */}
+        {/* Play button — ABOVE leaderboard so it's always accessible */}
+        <View style={styles.actionSection}>
+          {expired ? (
+            <View style={styles.expiredBanner}>
+              <Text style={styles.expiredText}>This challenge has expired</Text>
+            </View>
+          ) : alreadyPlayed ? (
+            <View style={styles.playedBanner}>
+              <Text style={styles.playedText}>You've already played this challenge</Text>
+            </View>
+          ) : (
+            <View style={styles.ctaSection}>
+              <Text style={styles.ctaMessage}>{ctaMessage}</Text>
+              <TouchableOpacity
+                style={styles.playBtn}
+                onPress={handlePlay}
+                activeOpacity={0.8}
+                disabled={starting}
+              >
+                {starting ? (
+                  <ActivityIndicator color="#FFFFFF" size="small" />
+                ) : (
+                  <Text style={styles.playBtnText}>Play This Challenge</Text>
+                )}
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+
+        {/* Leaderboard — scores hidden until played */}
         <Text style={styles.sectionTitle}>Leaderboard</Text>
         {detail.leaderboard.length === 0 ? (
           <Text style={styles.emptyLeaderboard}>No submissions yet</Text>
@@ -208,36 +254,17 @@ export default function ChallengeDetailScreen({ route, navigation }: Props) {
               <Text style={[styles.lbUsername, entry.is_current_user && styles.lbUsernameCurrent]} numberOfLines={1}>
                 {entry.is_current_user ? 'YOU' : `@${entry.username}`}
               </Text>
-              <Text style={styles.lbScore}>{entry.total_score} pts</Text>
+              {alreadyPlayed ? (
+                <Text style={styles.lbScore}>{entry.total_score} pts</Text>
+              ) : (
+                <Text style={styles.lbScoreHidden}>???</Text>
+              )}
             </View>
           ))
         )}
-
-        {/* Play button */}
-        <View style={styles.actionSection}>
-          {expired ? (
-            <View style={styles.expiredBanner}>
-              <Text style={styles.expiredText}>This challenge has expired</Text>
-            </View>
-          ) : alreadyPlayed ? (
-            <View style={styles.playedBanner}>
-              <Text style={styles.playedText}>You've already played this challenge</Text>
-            </View>
-          ) : (
-            <TouchableOpacity
-              style={styles.playBtn}
-              onPress={handlePlay}
-              activeOpacity={0.8}
-              disabled={starting}
-            >
-              {starting ? (
-                <ActivityIndicator color="#FFFFFF" size="small" />
-              ) : (
-                <Text style={styles.playBtnText}>Play This Challenge</Text>
-              )}
-            </TouchableOpacity>
-          )}
-        </View>
+        {!alreadyPlayed && detail.leaderboard.length > 0 && (
+          <Text style={styles.hiddenHint}>Play to reveal scores</Text>
+        )}
       </ScrollView>
     </LinearGradient>
   );
@@ -332,9 +359,24 @@ const styles = StyleSheet.create({
   lbUsername: { flex: 1, fontSize: 14, fontWeight: '600', color: colors.text.primary },
   lbUsernameCurrent: { color: colors.brand.primary },
   lbScore: { fontSize: 14, fontWeight: '700', color: colors.text.secondary },
+  lbScoreHidden: { fontSize: 14, fontWeight: '700', color: colors.text.secondary + '40' },
+  hiddenHint: {
+    fontSize: 12,
+    color: colors.text.secondary,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    marginTop: 8,
+  },
 
   // Actions
-  actionSection: { marginTop: 24 },
+  actionSection: { marginBottom: 20 },
+  ctaSection: { gap: 12 },
+  ctaMessage: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: colors.text.primary,
+    textAlign: 'center',
+  },
   playBtn: {
     backgroundColor: '#22C55E',
     borderRadius: 14,

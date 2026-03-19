@@ -181,8 +181,7 @@ export default function OpenChallengesScreen() {
             by @{item.posted_by_username} · {item.player_count} {item.player_count === 1 ? 'player' : 'players'}
           </Text>
           <Text style={styles.cardMeta}>
-            High Score: {item.high_score}
-            {played ? `  ·  Your Score: ${item.user_score}` : ''}
+            {played ? `High Score: ${item.high_score}  ·  Your Score: ${item.user_score}` : 'Play to see scores'}
           </Text>
         </View>
         <View style={styles.cardRight}>
