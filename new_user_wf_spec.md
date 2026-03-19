@@ -152,9 +152,9 @@ After their first game, the dashboard expands. They now have context for what ch
 │ 🎮 OR EXPLORE                        │
 │                                      │
 │ ┌─────────────────┬─────────────────┐│
-│ │ [Solo Play]     │ [Challenge]    ││
-│ │ 🎯 New          │ ⚔️ Dare the    ││
-│ │ category        │ community      ││
+│ │ [Solo Play]     │[Play&Challenge]││
+│ │ 🎯 New          │ ⚔️ Play now,   ││
+│ │ category        │ dare others    ││
 │ └─────────────────┴─────────────────┘│
 │                                      │
 │ ┌─────────────────┬─────────────────┐│
@@ -198,7 +198,7 @@ After their first game, the dashboard expands. They now have context for what ch
 
 #### New Users (1+ games): Direct to Create Open Challenge
 
-For new users, tapping ⚔️ Challenge goes **straight to the Create Open Challenge flow** (no half-sheet). They don't have friends to duel, so there's no reason to show that option.
+For new users, the button reads **"Play & Challenge" ⚔️** (not just "Challenge" — less intimidating, clearer mental model: play first, challenge comes after). Tapping it goes **straight to the Create Open Challenge flow** (no half-sheet). They don't have friends to duel, so there's no reason to show that option.
 
 → Tap ⚔️ → Category picker → play (identical to solo) → results framed as “Post this challenge?”
 
