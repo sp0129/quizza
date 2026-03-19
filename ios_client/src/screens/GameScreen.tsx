@@ -522,7 +522,7 @@ const vsStyles = StyleSheet.create({
 // ---------------------------------------------------------------------------
 
 export default function GameScreen({ route, navigation }: Props) {
-  const { gameId, mode, questionSetId, timer: QUESTION_TIME, opponentUsername, opponentAvatarId } = route.params;
+  const { gameId, mode, questionSetId, timer: QUESTION_TIME, opponentUsername, opponentAvatarId, openChallengeId } = route.params;
   const { user } = useAuth();
   const insets = useSafeAreaInsets();
 
@@ -535,6 +535,7 @@ export default function GameScreen({ route, navigation }: Props) {
   const [lastResult, setLastResult] = useState<GameResult | null>(null);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [questionResults, setQuestionResults] = useState<(boolean | null)[]>([]);
+  const [totalTimeTaken, setTotalTimeTaken] = useState(0);
 
   // --- Answer button visibility (random pop-in reveal) ---
   const [buttonsVisible, setButtonsVisible] = useState(false);
@@ -690,6 +691,7 @@ export default function GameScreen({ route, navigation }: Props) {
     if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
 
     const timeTaken = forcedTime ?? Math.round((Date.now() - questionStartRef.current) / 1000);
+    setTotalTimeTaken(t => t + Math.min(timeTaken, 30));
     setSelectedAnswer(answer);
     setPhase('answered');
     setTimerActive(false);
@@ -794,6 +796,8 @@ export default function GameScreen({ route, navigation }: Props) {
     const gameMode: 'challenge' | 'solo' | 'group' =
       mode === 'async' || mode === 'sync' ? 'challenge' : 'solo';
 
+    const correctCount = questionResults.filter(r => r === true).length;
+
     navigation.replace('Results', {
       yourScore: mine,
       opponentScore: opponent,
@@ -801,8 +805,16 @@ export default function GameScreen({ route, navigation }: Props) {
       gameMode,
       result: gameResult,
       timestamp: new Date().toISOString(),
+      // Open Challenges data (solo games)
+      ...(mode === 'solo' ? {
+        questionSetId,
+        correctCount,
+        totalQuestions: questions.length,
+        totalTimeTaken,
+      } : {}),
+      ...(openChallengeId ? { openChallengeId } : {}),
     });
-  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category]);
+  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category, questionResults, questions.length, totalTimeTaken, questionSetId, openChallengeId]);
 
   // --- Quit handler ---
   const handleQuit = () => {

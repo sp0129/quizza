@@ -27,10 +27,13 @@ import ProfileScreen from './src/screens/ProfileScreen';
 import FriendsScreen from './src/screens/FriendsScreen';
 import LeaderboardScreen from './src/screens/LeaderboardScreen';
 import ResultsScreen from './src/screens/ResultsScreen';
+import OpenChallengesScreen from './src/screens/OpenChallengesScreen';
+import ChallengeDetailScreen from './src/screens/ChallengeDetailScreen';
 
 // Tab navigator param list
 export type TabParamList = {
   Home: undefined;
+  OpenChallenges: undefined;
   Leaderboard: undefined;
   Friends: undefined;
   Profile: undefined;
@@ -62,7 +65,9 @@ export type RootStackParamList = {
     questionCount?: number;
     opponentUsername?: string;
     opponentAvatarId?: number;
+    openChallengeId?: string;
   };
+  ChallengeDetail: { challengeId: string };
   Room: {
     roomId: string;
     questionSetId: string;
@@ -82,6 +87,12 @@ export type RootStackParamList = {
     result: 'win' | 'loss' | 'tie';
     challengeId?: string;
     skipAnimation?: boolean;
+    // Open Challenges — passed from solo games
+    questionSetId?: string;
+    correctCount?: number;
+    totalQuestions?: number;
+    totalTimeTaken?: number;
+    openChallengeId?: string;
   };
 };
 
@@ -106,6 +117,7 @@ const linking: LinkingOptions<RootStackParamList> = {
 
 const TAB_KEY_MAP: Record<string, keyof TabParamList> = {
   Home: 'Home',
+  OpenChallenges: 'OpenChallenges',
   Leaderboard: 'Leaderboard',
   Friends: 'Friends',
   Profile: 'Profile',
@@ -121,6 +133,7 @@ function MainTabs() {
         const activeRoute = state.routes[state.index].name;
         const tabKey =
           activeRoute === 'Home' ? 'home' :
+          activeRoute === 'OpenChallenges' ? 'open-challenges' :
           activeRoute === 'Leaderboard' ? 'leaderboard' :
           activeRoute === 'Friends' ? 'friends' :
           activeRoute === 'Profile' ? 'profile' : 'home';
@@ -131,6 +144,7 @@ function MainTabs() {
             onTabPress={(key) => {
               const routeName =
                 key === 'home' ? 'Home' :
+                key === 'open-challenges' ? 'OpenChallenges' :
                 key === 'leaderboard' ? 'Leaderboard' :
                 key === 'friends' ? 'Friends' :
                 key === 'profile' ? 'Profile' : 'Home';
@@ -152,6 +166,7 @@ function MainTabs() {
       }}
     >
       <Tab.Screen name="Home" component={DashboardScreen} />
+      <Tab.Screen name="OpenChallenges" component={OpenChallengesScreen} />
       <Tab.Screen name="Leaderboard" component={LeaderboardScreen} />
       <Tab.Screen name="Friends" component={FriendsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
@@ -178,6 +193,7 @@ function RootNavigator() {
           <Stack.Screen name="Game" component={GameScreen} />
           <Stack.Screen name="Room" component={RoomScreen} />
           <Stack.Screen name="Results" component={ResultsScreen} />
+          <Stack.Screen name="ChallengeDetail" component={ChallengeDetailScreen} />
           <Stack.Screen name="GuestJoin" component={GuestJoinScreen} />
           {/* Guests can navigate here to create a real account */}
           <Stack.Screen name="Signup" component={SignupScreen} />

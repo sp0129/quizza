@@ -26,6 +26,7 @@ interface BottomNavProps {
 
 const TABS: TabItem[] = [
   { key: 'home', icon: '🏠', label: 'Home' },
+  { key: 'open-challenges', icon: '🎯', label: 'Challenges' },
   { key: 'leaderboard', icon: '🏆', label: 'Board' },
   { key: 'friends', icon: '👥', label: 'Friends' },
   { key: 'profile', icon: '👤', label: 'Profile' },

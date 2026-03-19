@@ -9,6 +9,7 @@ import gameRoutes from './routes/games';
 import questionRoutes from './routes/questions';
 import userRoutes from './routes/users';
 import challengeRoutes from './routes/challenges';
+import openChallengeRoutes from './routes/openChallenges';
 import roomRoutes from './routes/rooms';
 import friendRoutes from './routes/friends';
 import { syncGameManager } from './services/syncGame';
@@ -40,6 +41,7 @@ app.use('/games', gameRoutes);
 app.use('/users', userRoutes);
 app.use('/friends', friendRoutes);
 app.use('/challenges', challengeRoutes);
+app.use('/open-challenges', openChallengeRoutes);
 app.use('/rooms', roomRoutes);
 app.use('/', questionRoutes); // /categories and /questions/set/:id
 

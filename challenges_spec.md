@@ -29,7 +29,7 @@
 1. Option: “Post as Challenge” → challenge appears on public board
 1. Other users browse challenges, filter by category, join
 1. They play same questions, see their rank on leaderboard
-1. Can repeat to improve their rank
+1. One attempt only — no replays (they already know the answers)
 
 ### Non-Competitive Philosophy
 
@@ -49,81 +49,84 @@
 
 ### Scoring
 
-**CRITICAL**: All rankings are **score-based**, not **correctness-based**. Two players with same correctness (e.g., 8/10) can have different scores due to speed.
+**CRITICAL**: Open Challenges use the **exact same** `calculatePoints()` function from `server/src/services/scoring.ts` as all other game modes (Solo, Sync, Room). There is NO separate scoring formula.
 
-#### Display vs Ranking
+#### Per-Question Scoring (`calculatePoints`)
 
-- **Display to User**: `total_score` (0-1000+ scale, e.g., “850”, “1250”) — always show on results and leaderboards
-- **Ranking**: Also `total_score` — determines leaderboard position
-- **Never display** `{correct}/{total}` format (like “8/10”)
+```typescript
+// server/src/services/scoring.ts — single source of truth for ALL modes
+function calculatePoints(isCorrect: boolean, timeTakenSeconds: number): number {
+  if (!isCorrect) return 0;
+  const clamped = Math.min(Math.max(timeTakenSeconds, 0), 29);
+  return Math.round(100 - (clamped / 29) * 50);
+}
+```
 
-#### Score Calculation
+- **Wrong answer or timeout** → **0 points**
+- **Correct answer** → **50 to 100 points**, scaled linearly by speed:
+  - Instant (0s) → 100 points
+  - Slowest correct (29s) → 50 points
+- **Total score** = sum of per-question points
 
-- **Base points**: `(correct_count / total_questions) × 1000`
-  - Example: 8/10 correct = (8/10) × 1000 = 800 points
-  - Example: 4/5 correct = (4/5) × 1000 = 800 points
-- **Speed bonus**: `(time_remaining / total_time) × (100 × total_questions)`
-  - Example 10Q: Finished in 120s of 180s = (60/180) × 1000 = 333 bonus points
-  - Example 5Q: Finished in 60s of 90s = (30/90) × 1000 = 333 bonus points
-- **Total Score**: Base points + Speed bonus = 0-1000+ range
+#### Score Ranges
+
+| Mode | Max Score (all correct, instant) | Min Score (all correct, slowest) |
+|------|--------------------------------|----------------------------------|
+| 5Q   | 500                            | 250                              |
+| 10Q  | 1000                           | 500                              |
 
 #### Examples Showing Score vs Correctness Difference
 
 **Scenario A: Fast vs Slow (Same Correctness)**
 
 ```
-Player 1: 8/10 correct in 90 seconds
-  - Base: 800 points
-  - Speed bonus: (90/180) × 1000 = 500 points
-  - Total Score: 1300 points → Rank #1
+Player 1: 8/10 correct, avg 5s per question
+  - Per correct question: ~91 pts each
+  - Total Score: 728 pts → Rank #1
 
-Player 2: 8/10 correct in 150 seconds
-  - Base: 800 points
-  - Speed bonus: (30/180) × 1000 = 166 points
-  - Total Score: 966 points → Rank #2
+Player 2: 8/10 correct, avg 20s per question
+  - Per correct question: ~66 pts each
+  - Total Score: 528 pts → Rank #2
 
-Display shows both as "8/10" but Player 1 ranks higher due to speed.
+Same correctness, different ranks — speed matters.
 ```
 
 **Scenario B: Different Correctness**
 
 ```
-Player 1: 10/10 correct in 170 seconds
-  - Base: 1000 points
-  - Speed bonus: (10/180) × 1000 = 55 points
-  - Total Score: 1055 points → Rank #2
+Player 1: 10/10 correct, avg 25s per question
+  - Per correct question: ~57 pts each
+  - Total Score: 570 pts → Rank #2
 
-Player 2: 8/10 correct in 90 seconds
-  - Base: 800 points
-  - Speed bonus: (90/180) × 1000 = 500 points
-  - Total Score: 1300 points → Rank #1
+Player 2: 8/10 correct, avg 3s per question
+  - Per correct question: ~95 pts each
+  - Total Score: 760 pts → Rank #1
 
-Display shows "10/10" vs "8/10" but Player 2 ranks higher due to speed.
+Fewer correct answers but faster — ranks higher.
 ```
 
 #### Key Implementation Notes
 
-1. **Always display `total_score`** (0-1000+ points) on results and leaderboards
+1. **Always use `calculatePoints()` from `services/scoring.ts`** — never reimplement scoring logic
+1. **Display `total_score`** (sum of per-question points) on results and leaderboards
 1. **Messaging is based on correctness percentage** (for simplicity/UX)
-1. **Ranking is also by `total_score`** (speed-adjusted)
-1. **Ties possible**: Two players with same `total_score` → show in order by `submitted_at` (earliest first)
-1. **Speed matters**: This is by design — a fast 8/10 scores higher than slow 9/10
+1. **Ranking by `total_score`** — `ORDER BY total_score DESC, correct_count DESC, time_seconds ASC, submitted_at ASC`
+1. **Ties possible**: Same `total_score` → earliest `submitted_at` first
 
 -----
 
-## ⚠️ CRITICAL: Score-Based Display and Ranking
+## ⚠️ CRITICAL: Single Scoring System
 
-**This is the most important rule for Open Challenges:**
+**The most important rule: Open Challenges use the same `calculatePoints()` as every other mode. No separate formula.**
 
 ### ALL displays and rankings use `total_score`
 
 |Aspect            |Rule                                                                                    |
 |------------------|----------------------------------------------------------------------------------------|
-|**What User Sees**|`total_score` (e.g., “850 points”, “1250 points”)                                       |
-|**Ranking Logic** |Sort by `total_score DESC, submitted_at ASC`                                            |
+|**What User Sees**|`total_score` (e.g., “850 points”, “720 points”)                                        |
+|**Ranking Logic** |Sort by `total_score DESC, correct_count DESC, time_seconds ASC, submitted_at ASC`                                            |
 |**Messaging**     |Based on correctness percentage (e.g., 8/10 = 80% = “Great job!”) but score is displayed|
-|**Comparison**    |Score includes both correctness AND speed                                               |
-|**Never Show**    |Don’t display `{correct}/{total}` format like “8/10”                                    |
+|**Comparison**    |Score = sum of per-question `calculatePoints()` (correctness + speed per question)      |
 
 ### Examples
 
@@ -131,36 +134,36 @@ Display shows "10/10" vs "8/10" but Player 2 ranks higher due to speed.
 
 ```
 Perfect! 🎯
-Score: 1450 points
+Score: 950 points
 Category: Science
 ```
 
-**Example 2: Leaderboard Display**
+**Example 2: Leaderboard Display (10Q)**
 
 ```
-🥇 @alice (1450 points)
-🥈 @bob (1250 points)
-🥉 @carol (1300 points)
-4. @sumit (1200 points)
+🥇 @alice (950 points)
+🥈 @bob (820 points)
+🥉 @carol (760 points)
+4. @sumit (680 points)
 ```
 
 **Example 3: What Determines Messaging**
 
 ```
-User gets 8/10 correct in 90 seconds
-total_score = 1450
-Display: "1450 points"
-Message: "Great job! 👏" (based on 80% correctness)
+User gets 8/10 correct, avg 8s per question
+total_score = 720
+Display: “720 points”
+Message: “Great job! 👏” (based on 80% correctness)
 ```
 
 **Example 4: Why Order Matters**
 
 ```
-Display: @alice and @bob both answered 9/10
+@alice and @bob both answered 9/10
 But:
-  @alice: 1450 points (fast)
-  @bob: 1200 points (slow)
-Rank: @alice #1, @bob #2 (even though same correctness)
+  @alice: 860 points (fast, avg 4s)
+  @bob: 630 points (slow, avg 22s)
+Rank: @alice #1, @bob #2 (same correctness, different speed)
 ```
 
 -----
@@ -219,21 +222,6 @@ interface ChallengeSubmission {
 }
 ```
 
-### User Challenge Stats (Schema - Optional, for v2)
-
-```typescript
-interface UserChallengeStats {
-  user_id: string;
-  challenge_id: string;
-  
-  attempts: number; // How many times user played
-  best_score: number; // Highest total_score
-  best_correct: number; // Correct count at best_score
-  current_rank: number; // Cached rank
-  
-  updated_at: Date;
-}
-```
 
 -----
 
@@ -292,8 +280,8 @@ interface UserChallengeStats {
 │                                     │
 │ 🔥 Science (47 players)             │
 │    Posted by @sumit                 │
-│    High Score: 1450                │
-│    Your Best: 950 ← if played      │
+│    High Score: 950                 │
+│    Your Best: 720 ← if played      │
 │    ▶ Play                           │
 │                                     │
 │ [Infinite Scroll - Load More...]    │
@@ -338,15 +326,15 @@ interface UserChallengeStats {
 │ Posted by @sumit (3 days ago)     │
 │                                   │
 │ 47 people have played             │
-│ High Score: 1450                 │ ← Display: correct/total
-│ Your Best: 1200 (if played)       │ ← Display: correct/total
+│ High Score: 950                  │
+│ Your Best: 720 (if played)        │
 │                                   │
 │ Leaderboard (Top 5):              │
-│ 🥇 @trivia_king (1450)           │ ← Ranked by total_score
-│ 🥈 @quiz_master (1380)            │ ← (speed affects ranking)
-│ 🥉 @sumit (1300)                  │ ← Same correctness ≠ same rank
-│ 4. @alice (950)                  │ ← Faster players rank higher
-│ 5. @bob (920)                    │ ← Even with same answers
+│ 🥇 @trivia_king (950)            │ ← Ranked by total_score
+│ 🥈 @quiz_master (880)             │ ← (speed affects ranking)
+│ 🥉 @sumit (820)                   │ ← Same correctness ≠ same rank
+│ 4. @alice (760)                  │ ← Faster players rank higher
+│ 5. @bob (680)                    │ ← Even with same answers
 │ [See all 47...]                   │
 │                                   │
 │ [Play This Challenge]             │
@@ -381,20 +369,20 @@ interface UserChallengeStats {
 │ 87 total players               │
 ├────────────────────────────────┤
 │                                │
-│ 🥇 @trivia_king (1450)        │
-│ 🥈 @quiz_master (1380)         │
-│ 🥉 @sumit (1300)               │
-│ 4. @alice (950)               │
-│ 5. @bob (920)                 │
-│ 6. YOU (950) ← highlighted    │
-│ 7. @carol (850)               │
-│ 8. @dave (820)                │
-│ 9. @eve (750)                 │
-│ 10. @frank (720)              │
+│ 🥇 @trivia_king (950)         │
+│ 🥈 @quiz_master (880)          │
+│ 🥉 @sumit (820)                │
+│ 4. @alice (760)               │
+│ 5. @bob (680)                 │
+│ 6. YOU (720) ← highlighted    │
+│ 7. @carol (650)               │
+│ 8. @dave (600)                │
+│ 9. @eve (550)                 │
+│ 10. @frank (500)              │
 │                                │
 │ [Load More...] ← pagination    │
 │                                │
-│ [Play Again] [Close]           │
+│ [Close]                        │
 │                                │
 └────────────────────────────────┘
 ```
@@ -423,25 +411,25 @@ interface UserChallengeStats {
 ├────────────────────────────┤
 │                            │
 │ 🔥 Science (87 players)    │
-│    Your Score: 9/10        │
+│    Your Score: 820         │
 │    Your Rank: 4th          │
-│    High Score: 1450       │
+│    High Score: 950        │
 │    Posted: 3 days ago      │
 │    Expires: 4 days         │
 │    ▶ View Leaderboard      │
 │                            │
 │ 🎬 Movies (12 players)     │
-│    Your Score: 7/10        │
+│    Your Score: 680         │
 │    Your Rank: 2nd 🥈       │
-│    High Score: 850        │
+│    High Score: 720        │
 │    Posted: 1 day ago       │
 │    Expires: 6 days         │
 │    ▶ View Leaderboard      │
 │                            │
 │ 📚 History (2 players)     │
-│    Your Score: 8/10        │
+│    Your Score: 760         │
 │    Your Rank: 1st 🥇       │
-│    High Score: 850        │
+│    High Score: 760        │
 │    Posted: 2 hours ago     │
 │    Expires: 7 days         │
 │    ▶ View Leaderboard      │
@@ -511,7 +499,7 @@ function getResultMessage(correctCount: number, totalQuestions: number): { messa
 ┌──────────────────────────────┐
 │ Perfect! 🎯                  │ ← Message (based on correct_count)
 │                              │
-│ Score: 1000                  │ ← Actual total_score
+│ Score: 950                   │ ← Actual total_score
 │ ← For context only
 │ Time: 120 seconds            │
 │                              │
@@ -527,15 +515,14 @@ function getResultMessage(correctCount: number, totalQuestions: number): { messa
 ┌──────────────────────────────┐
 │ Outstanding! 🌟              │ ← Message (based on correct_count)
 │                              │
-│ Your Score: 950              │ ← Actual total_score
-│ Correct: 9/10                │ ← For context
+│ Your Score: 720              │ ← Actual total_score
 │                              │
 │ Science Leaderboard:         │
-│ 🥇 @trivia_king (1450)       │ ← Ranked by total_score
-│ 🥈 @quiz_master (1380)       │
-│ 🥉 YOU (950)                 │ ← Your rank
-│ 4. @sumit (920)              │
-│ 5. @alice (850)              │
+│ 🥇 @trivia_king (950)        │ ← Ranked by total_score
+│ 🥈 @quiz_master (880)        │
+│ 🥉 YOU (720)                 │ ← Your rank
+│ 4. @sumit (680)              │
+│ 5. @alice (650)              │
 │                              │
 │ [Post Your Own Challenge]    │
 │ [Play Another] [Home]        │
@@ -693,7 +680,7 @@ function getResultMessage(correctCount: number, totalQuestions: number): { messa
 }
 ```
 
-**Ranking Rule**: Sorted by `total_score DESC, submitted_at ASC`. **Rankings are always score-based**, not correctness-based.
+**Ranking Rule**: Sorted by `total_score DESC, correct_count DESC, time_seconds ASC, submitted_at ASC`. **Rankings are always score-based**, not correctness-based.
 
 -----
 
@@ -919,9 +906,10 @@ CREATE INDEX idx_submissions_challenge_score
 
 ### Scenario 3: Duplicate Submission
 
-- Same user plays same challenge multiple times
-- Only best score counts for ranking
-- All submissions recorded (for stats/analytics)
+- A user can only play a given challenge **once**
+- Enforce via UNIQUE constraint on `(challenge_id, user_id)`
+- If user has already submitted, return 409 Conflict
+- Rationale: replays are unfair since the user already knows the answers
 
 ### Scenario 4: Category Not Found
 
@@ -942,7 +930,7 @@ CREATE INDEX idx_submissions_challenge_score
 |% Users posting challenge    |40%+  |Analytics event: “challenge_posted”                        |
 |Challenges with ≥1 submission|70%+  |DB query: challenges with player_count > 1                 |
 |Avg submissions per challenge|15+   |DB query: COUNT / total_challenges                         |
-|Repeat plays per user        |25%+  |DB query: users with multiple submissions on same challenge|
+|Unique challenges played/user |5+    |DB query: COUNT(DISTINCT challenge_id) per user            |
 |Day-7 retention              |35%+  |Cohort analysis: open_challenges active users              |
 |Avg session time             |+20%  |Analytics: compare solo-only vs open-challenges users      |
 
@@ -952,7 +940,7 @@ CREATE INDEX idx_submissions_challenge_score
 
 When implementing, remember:
 
-1. **Score vs Correctness**: Always display `correct_count/total_questions`, never raw 0-1000 score
+1. **Single scoring system**: Always use `calculatePoints()` from `services/scoring.ts` — never reimplement or create alternate formulas
 1. **Messaging**: Use percentage-based thresholds, not raw scores
 1. **Non-Competitive Language**: Never say “beat”, “won”, “lost”. Use “ranked”, “scored”
 1. **Real Usernames**: Human connection is key; show actual usernames everywhere

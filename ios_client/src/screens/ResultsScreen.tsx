@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   AccessibilityInfo,
+  ActivityIndicator,
   Dimensions,
 } from 'react-native';
 import Animated, {
@@ -30,8 +31,24 @@ import ConfettiOverlay from '../components/ConfettiOverlay';
 import PizzaMascot from '../components/PizzaMascot';
 import { playSound } from '../utils/sounds';
 import { useDashboardStore } from '../stores/dashboard';
+import { api } from '../api/client';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Results'>;
+
+// ---------------------------------------------------------------------------
+// Result messaging based on correctness percentage (from challenges_spec.md)
+// ---------------------------------------------------------------------------
+
+function getResultMessage(correctCount: number, totalQuestions: number): { message: string; emoji: string } {
+  const pct = (correctCount / totalQuestions) * 100;
+  if (pct === 100) return { message: 'Perfect!', emoji: '\uD83C\uDFAF' };
+  if (pct >= 80)  return { message: 'Outstanding!', emoji: '\uD83C\uDF1F' };
+  if (pct >= 60)  return { message: 'Great job!', emoji: '\uD83D\uDC4F' };
+  if (pct >= 40)  return { message: 'Well played!', emoji: '\uD83D\uDC4D' };
+  if (pct >= 20)  return { message: 'Not bad!', emoji: '\uD83D\uDCAA' };
+  if (pct > 0)    return { message: `Getting there! You learned ${totalQuestions} new things.`, emoji: '\uD83D\uDE80' };
+  return { message: `New to this? You just learned ${totalQuestions} things!`, emoji: '\uD83C\uDF31' };
+}
 
 type Stage = 'anticipation' | 'scores' | 'outcome' | 'complete';
 
@@ -94,6 +111,11 @@ export default function ResultsScreen({ route, navigation }: Props) {
     challengeId,
     opponentUsername,
     skipAnimation,
+    questionSetId,
+    correctCount,
+    totalQuestions,
+    totalTimeTaken,
+    openChallengeId,
   } = route.params;
 
   const insets = useSafeAreaInsets();
@@ -104,6 +126,38 @@ export default function ResultsScreen({ route, navigation }: Props) {
   const [stage, setStage] = useState<Stage>(skip ? 'complete' : 'anticipation');
   const [reduceMotion, setReduceMotion] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+
+  // Open Challenge posting state
+  const [posting, setPosting] = useState(false);
+  const [posted, setPosted] = useState(false);
+
+  // Open Challenge submission state (when playing someone else's challenge)
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [challengeRank, setChallengeRank] = useState<number | null>(null);
+
+  // Solo result messaging
+  const canPostChallenge = gameMode === 'solo' && !openChallengeId && !!questionSetId && correctCount != null && totalQuestions != null;
+  const resultMsg = (correctCount != null && totalQuestions != null)
+    ? getResultMessage(correctCount, totalQuestions)
+    : null;
+
+  // Auto-submit to open challenge when playing someone else's challenge
+  useEffect(() => {
+    if (!openChallengeId || correctCount == null || totalQuestions == null || totalTimeTaken == null || submitted || submitting) return;
+    setSubmitting(true);
+    api.post<{ rank: number }>(`/open-challenges/${openChallengeId}/submit`, {
+      correct_count: correctCount,
+      total_questions: totalQuestions,
+      total_score: yourScore,
+      time_seconds: totalTimeTaken,
+    }).then(res => {
+      setChallengeRank(res.rank);
+      setSubmitted(true);
+    }).catch(() => {
+      // Silently fail — user can still see their score
+    }).finally(() => setSubmitting(false));
+  }, [openChallengeId, correctCount, totalQuestions, totalTimeTaken, yourScore]);
 
   // Check reduce motion preference
   useEffect(() => {
@@ -131,13 +185,15 @@ export default function ResultsScreen({ route, navigation }: Props) {
     : result === 'win' ? '#22C55E' : result === 'loss' ? '#EF4444' : '#F59E0B';
 
   const outcomeText =
-    gameMode === 'solo'
-      ? 'Well played!'
-      : result === 'win'
-        ? 'YOU WON!'
-        : result === 'loss'
-          ? 'Better luck next time!'
-          : "It's a tie!";
+    gameMode === 'solo' && resultMsg
+      ? `${resultMsg.message} ${resultMsg.emoji}`
+      : gameMode === 'solo'
+        ? 'Well played!'
+        : result === 'win'
+          ? 'YOU WON!'
+          : result === 'loss'
+            ? 'Better luck next time!'
+            : "It's a tie!";
 
 
   // ---------------------------------------------------------------------------
@@ -319,6 +375,27 @@ export default function ResultsScreen({ route, navigation }: Props) {
     navigation.navigate('MainTabs');
   }, [navigation]);
 
+  const handlePostChallenge = useCallback(async () => {
+    if (!questionSetId || correctCount == null || totalQuestions == null || totalTimeTaken == null) return;
+    setPosting(true);
+    try {
+      await api.post('/open-challenges', {
+        question_set_id: questionSetId,
+        category,
+        mode: totalQuestions === 5 ? '5Q' : '10Q',
+        correct_count: correctCount,
+        total_score: yourScore,
+        time_seconds: totalTimeTaken,
+      });
+      setPosted(true);
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    } catch {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+    } finally {
+      setPosting(false);
+    }
+  }, [questionSetId, category, correctCount, totalQuestions, totalTimeTaken, yourScore]);
+
   // ---------------------------------------------------------------------------
   // Time formatting
   // ---------------------------------------------------------------------------
@@ -420,6 +497,13 @@ export default function ResultsScreen({ route, navigation }: Props) {
           </Animated.View>
         )}
 
+        {/* ═══ CHALLENGE RANK (open challenge results) ═══ */}
+        {(stage === 'outcome' || stage === 'complete') && openChallengeId && submitted && challengeRank != null && (
+          <Animated.View style={[styles.rankBanner, buttonsStyle]}>
+            <Text style={styles.rankBannerText}>You ranked #{challengeRank}</Text>
+          </Animated.View>
+        )}
+
         {/* Spacer */}
         <View style={styles.spacer} />
 
@@ -433,6 +517,34 @@ export default function ResultsScreen({ route, navigation }: Props) {
                 activeOpacity={0.8}
               >
                 <Text style={styles.rematchBtnText}>Rematch</Text>
+              </TouchableOpacity>
+            )}
+            {canPostChallenge && (
+              <TouchableOpacity
+                style={[styles.postChallengeBtn, posted && styles.postChallengeBtnDone]}
+                onPress={handlePostChallenge}
+                activeOpacity={0.8}
+                disabled={posting || posted}
+              >
+                {posting ? (
+                  <ActivityIndicator color="#FFFFFF" size="small" />
+                ) : (
+                  <Text style={styles.postChallengeBtnText}>
+                    {posted ? 'Challenge Posted!' : 'Post as Challenge'}
+                  </Text>
+                )}
+              </TouchableOpacity>
+            )}
+            {openChallengeId && submitted && (
+              <TouchableOpacity
+                style={styles.viewLeaderboardBtn}
+                onPress={() => {
+                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  navigation.navigate('ChallengeDetail', { challengeId: openChallengeId });
+                }}
+                activeOpacity={0.8}
+              >
+                <Text style={styles.viewLeaderboardBtnText}>View Leaderboard</Text>
               </TouchableOpacity>
             )}
             <TouchableOpacity
@@ -573,6 +685,65 @@ const styles = StyleSheet.create({
     elevation: 6,
   },
   rematchBtnText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  rankBanner: {
+    backgroundColor: '#7C3AED20',
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    marginTop: 16,
+    borderWidth: 1,
+    borderColor: '#7C3AED40',
+  },
+  rankBannerText: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#7C3AED',
+    textAlign: 'center',
+  },
+  viewLeaderboardBtn: {
+    backgroundColor: '#7C3AED',
+    borderRadius: 14,
+    height: 48,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomWidth: 4,
+    borderBottomColor: '#5B21B6',
+    shadowColor: '#7C3AED',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  viewLeaderboardBtnText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  postChallengeBtn: {
+    backgroundColor: '#22C55E',
+    borderRadius: 14,
+    height: 48,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomWidth: 4,
+    borderBottomColor: '#16A34A',
+    shadowColor: '#22C55E',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  postChallengeBtnDone: {
+    backgroundColor: '#334155',
+    borderBottomColor: '#1E293B',
+    shadowColor: '#000000',
+    shadowOpacity: 0.25,
+  },
+  postChallengeBtnText: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '700',
