@@ -15,7 +15,7 @@
       "supportsTablet": false,
       "bundleIdentifier": "com.quizza.app",
       "usesAppleSignIn": true,
-      "buildNumber": "16",
+      "buildNumber": "18",
       "associatedDomains": [
         "applinks:quizza-eta.vercel.app"
       ],
