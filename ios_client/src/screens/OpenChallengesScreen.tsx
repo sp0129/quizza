@@ -45,7 +45,7 @@ interface ChallengesResponse {
 }
 
 type SortOption = 'most_played' | 'newest';
-type TabOption = 'browse' | 'mine';
+type TabOption = 'browse' | 'friends' | 'mine';
 
 const PAGE_SIZE = 20;
 
@@ -63,11 +63,14 @@ export default function OpenChallengesScreen() {
   const [categories, setCategories] = useState<string[]>([]);
   const offsetRef = useRef(0);
 
-  // Tab toggle: browse vs mine
+  // Tab toggle: browse vs friends vs mine
   const [tab, setTab] = useState<TabOption>('browse');
   const [myChallenges, setMyChallenges] = useState<MyChallenge[]>([]);
+  const [friendChallenges, setFriendChallenges] = useState<OpenChallenge[]>([]);
   const [myLoading, setMyLoading] = useState(false);
+  const [friendsLoading, setFriendsLoading] = useState(false);
   const [myRefreshing, setMyRefreshing] = useState(false);
+  const [friendsRefreshing, setFriendsRefreshing] = useState(false);
 
   const fetchChallenges = useCallback(async (reset: boolean) => {
     try {
@@ -104,11 +107,23 @@ export default function OpenChallengesScreen() {
     }
   }, []);
 
-  // Initial load + reload on sort/filter change
+  const fetchFriendChallenges = useCallback(async () => {
+    try {
+      const data = await api.get<{ challenges: OpenChallenge[] }>('/open-challenges/friends');
+      setFriendChallenges(data.challenges);
+    } catch (err) {
+      console.error(err);
+    }
+  }, []);
+
+  // Initial load + reload on sort/filter/tab change
   useEffect(() => {
     if (tab === 'browse') {
       setLoading(true);
       fetchChallenges(true).finally(() => setLoading(false));
+    } else if (tab === 'friends') {
+      setFriendsLoading(true);
+      fetchFriendChallenges().finally(() => setFriendsLoading(false));
     } else {
       setMyLoading(true);
       fetchMyChallenges().finally(() => setMyLoading(false));
@@ -119,8 +134,9 @@ export default function OpenChallengesScreen() {
   useFocusEffect(
     useCallback(() => {
       if (tab === 'browse') fetchChallenges(true);
+      else if (tab === 'friends') fetchFriendChallenges();
       else fetchMyChallenges();
-    }, [fetchChallenges, fetchMyChallenges, tab])
+    }, [fetchChallenges, fetchFriendChallenges, fetchMyChallenges, tab])
   );
 
   const handleRefresh = async () => {
@@ -128,6 +144,10 @@ export default function OpenChallengesScreen() {
       setRefreshing(true);
       await fetchChallenges(true);
       setRefreshing(false);
+    } else if (tab === 'friends') {
+      setFriendsRefreshing(true);
+      await fetchFriendChallenges();
+      setFriendsRefreshing(false);
     } else {
       setMyRefreshing(true);
       await fetchMyChallenges();
@@ -303,14 +323,27 @@ export default function OpenChallengesScreen() {
     );
   };
 
+  const renderFriendsEmpty = () => {
+    if (friendsLoading) return null;
+    return (
+      <View style={styles.emptyContainer}>
+        <Text style={styles.emptyEmoji}>👥</Text>
+        <Text style={styles.emptyTitle}>No friend challenges yet</Text>
+        <Text style={styles.emptySubtitle}>
+          When your friends post challenges, they'll show up here!
+        </Text>
+      </View>
+    );
+  };
+
   return (
     <LinearGradient colors={gradients.game} style={styles.flex}>
       <View style={[styles.container, { paddingTop: insets.top + 12 }]}>
         <Text style={styles.title}>Open Challenges</Text>
 
-        {/* Browse / Mine toggle */}
+        {/* Browse / Friends / Mine toggle */}
         <View style={styles.tabRow}>
-          {(['browse', 'mine'] as TabOption[]).map(t => (
+          {(['browse', 'friends', 'mine'] as TabOption[]).map(t => (
             <TouchableOpacity
               key={t}
               style={[styles.tabBtn, tab === t && styles.tabBtnActive]}
@@ -318,7 +351,7 @@ export default function OpenChallengesScreen() {
               activeOpacity={0.7}
             >
               <Text style={[styles.tabBtnText, tab === t && styles.tabBtnTextActive]}>
-                {t === 'browse' ? 'Browse' : 'Mine'}
+                {t === 'browse' ? 'Browse' : t === 'friends' ? 'Friends' : 'Mine'}
               </Text>
             </TouchableOpacity>
           ))}
@@ -350,6 +383,27 @@ export default function OpenChallengesScreen() {
                 loadingMore ? (
                   <ActivityIndicator color={colors.text.secondary} style={styles.footer} />
                 ) : null
+              }
+            />
+          )
+        ) : tab === 'friends' ? (
+          friendsLoading ? (
+            <View style={styles.loadingContainer}>
+              <ActivityIndicator color={colors.brand.primary} size="large" />
+            </View>
+          ) : (
+            <FlatList
+              data={friendChallenges}
+              renderItem={renderChallenge}
+              keyExtractor={item => item.id}
+              contentContainerStyle={styles.list}
+              ListEmptyComponent={renderFriendsEmpty}
+              refreshControl={
+                <RefreshControl
+                  refreshing={friendsRefreshing}
+                  onRefresh={handleRefresh}
+                  tintColor={colors.text.secondary}
+                />
               }
             />
           )

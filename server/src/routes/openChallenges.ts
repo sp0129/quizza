@@ -128,6 +128,32 @@ router.get('/', requireAuth, async (req: AuthRequest, res: Response): Promise<vo
   }
 });
 
+// GET /friends — Challenges posted by the current user's friends
+router.get('/friends', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const me = req.userId!;
+
+  try {
+    const result = await pool.query(
+      `SELECT oc.*, ocs.total_score AS user_score, ocs.correct_count AS user_correct_count
+       FROM open_challenges oc
+       LEFT JOIN open_challenge_submissions ocs ON ocs.challenge_id = oc.id AND ocs.user_id = $1
+       WHERE oc.is_visible = TRUE AND oc.expires_at > NOW()
+         AND oc.posted_by_user_id != $1
+         AND oc.posted_by_user_id IN (
+           SELECT CASE WHEN user_a_id = $1 THEN user_b_id ELSE user_a_id END
+           FROM friendships
+           WHERE (user_a_id = $1 OR user_b_id = $1) AND status = 'accepted'
+         )
+       ORDER BY oc.posted_at DESC`,
+      [me]
+    );
+    res.json({ challenges: result.rows });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // GET /mine — Challenges posted by the current user with their stats
 router.get('/mine', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const me = req.userId!;
