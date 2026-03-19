@@ -137,13 +137,15 @@ export default function ResultsScreen({ route, navigation }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [challengeRank, setChallengeRank] = useState<number | null>(null);
 
-  // Perfect bonus animation state
-  const [showPerfectBonus, setShowPerfectBonus] = useState(false);
-  const [displayScore, setDisplayScore] = useState(yourScore);
-
   // Solo result messaging
   const isPerfect = correctCount != null && totalQuestions != null && correctCount === totalQuestions;
   const perfectBonus = isPerfect ? (totalQuestions >= 10 ? 100 : 50) : 0;
+
+  // Perfect bonus animation state
+  const [showPerfectBonus, setShowPerfectBonus] = useState(false);
+  // Display base score first, then tick up when bonus appears
+  const baseScore = isPerfect ? yourScore - perfectBonus : yourScore;
+  const [displayScore, setDisplayScore] = useState(baseScore);
   const correctPct = (correctCount != null && totalQuestions != null && totalQuestions > 0) ? (correctCount / totalQuestions) * 100 : 0;
   const canPostChallenge = gameMode === 'solo' && !openChallengeId && !!questionSetId && correctCount != null && totalQuestions != null && correctPct >= 60;
   const resultMsg = (correctCount != null && totalQuestions != null)
@@ -334,6 +336,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
           setTimeout(() => {
             setShowPerfectBonus(true);
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+            // Tick score up to include bonus after banner appears
+            setTimeout(() => setDisplayScore(yourScore), 400);
           }, 500);
         }
       }, 500);
@@ -478,7 +482,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
               <Animated.View style={[styles.vsBlock, myScoreStyle]}>
                 <Text style={styles.vsLabel}>You</Text>
                 <CountingNumber
-                  target={yourScore}
+                  target={displayScore}
                   duration={skipCountDelay ? 0 : 500}
                   delay={skipCountDelay ? 0 : 100}
                   style={styles.vsScore}

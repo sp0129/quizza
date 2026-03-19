@@ -434,7 +434,17 @@ export default function DashboardScreen({ navigation }: Props) {
             {lastPlayedCategory && (
               <QuickPlayBar
                 category={lastPlayedCategory}
-                onPress={() => navigation.navigate('Category', { mode: 'solo', preselectedCategory: lastPlayedCategory })}
+                onPress={async () => {
+                  try {
+                    const r = await api.post<{ gameId: string; questionSetId: string }>(
+                      '/games/solo', { category: lastPlayedCategory }
+                    );
+                    navigation.navigate('Game', {
+                      gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
+                      category: lastPlayedCategory!, timer: 30, questionCount: 10,
+                    });
+                  } catch {}
+                }}
                 delay={100}
               />
             )}

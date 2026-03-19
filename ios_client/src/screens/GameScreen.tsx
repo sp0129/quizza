@@ -139,10 +139,14 @@ function FloatingPoints({ points, triggerKey }: { points: number; triggerKey: nu
 
   if (triggerKey === 0) return null;
 
+  // Speed feedback label
+  const speedLabel = points >= 90 ? 'Lightning! ⚡' : points >= 75 ? 'Quick! ⚡' : '';
+
   return (
-    <Animated.Text style={[styles.floatingPoints, style]}>
-      +{points}
-    </Animated.Text>
+    <Animated.View style={[styles.floatingPointsWrap, style]}>
+      <Text style={styles.floatingPoints}>+{points}</Text>
+      {speedLabel ? <Text style={styles.floatingSpeedLabel}>{speedLabel}</Text> : null}
+    </Animated.View>
   );
 }
 
@@ -994,6 +998,11 @@ export default function GameScreen({ route, navigation }: Props) {
             <Text style={styles.questionCounter}>
               Question {currentIndex + 1} of {questions.length}
             </Text>
+            {currentIndex === 0 && (
+              <Text style={styles.speedTip}>
+                {['Speed counts! Faster = more points ⚡', 'Quick thinking = bigger scores! ⚡', 'The faster you answer, the more you earn ⚡'][Math.floor(Math.random() * 3)]}
+              </Text>
+            )}
             <Text style={styles.questionText}>{question.question}</Text>
           </Animated.View>
         </View>
@@ -1124,13 +1133,21 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: colors.gold,
   },
-  floatingPoints: {
+  floatingPointsWrap: {
     position: 'absolute',
     right: -28,
     top: -4,
+    alignItems: 'center',
+  },
+  floatingPoints: {
     fontSize: 13,
     fontWeight: '700',
     color: colors.correct,
+  },
+  floatingSpeedLabel: {
+    fontSize: 9,
+    fontWeight: '700',
+    color: colors.gold,
   },
 
   // Timer row
@@ -1151,6 +1168,12 @@ const styles = StyleSheet.create({
   },
   questionContainer: {
     alignItems: 'center',
+  },
+  speedTip: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: colors.gold,
+    marginBottom: 4,
   },
   questionCounter: {
     fontSize: 13,

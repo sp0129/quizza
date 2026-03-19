@@ -52,6 +52,16 @@ const PAGE_SIZE = 20;
 export default function OpenChallengesScreen() {
   const navigation = useNavigation<Nav>();
   const insets = useSafeAreaInsets();
+  const [isNewUser, setIsNewUser] = useState(false);
+
+  useEffect(() => {
+    api.get<{ gamesPlayedTotal?: number; friendsCount?: number }>('/users/me/stats')
+      .then(s => {
+        const gpt = s.gamesPlayedTotal ?? 0;
+        const fc = s.friendsCount ?? 0;
+        setIsNewUser((fc === 0 && gpt < 5) || (fc > 0 && gpt === 0));
+      }).catch(() => {});
+  }, []);
 
   const [challenges, setChallenges] = useState<OpenChallenge[]>([]);
   const [loading, setLoading] = useState(true);
@@ -342,7 +352,8 @@ export default function OpenChallengesScreen() {
   return (
     <LinearGradient colors={gradients.game} style={styles.flex}>
       <View style={[styles.container, { paddingTop: insets.top + 12 }]}>
-        <Text style={styles.title}>Open Challenges</Text>
+        <Text style={styles.title}>{isNewUser ? 'Discover Challenges' : 'Open Challenges'}</Text>
+        {isNewUser && <Text style={styles.subtitle}>Test yourself against the community</Text>}
 
         {/* Browse / Friends / Mine toggle */}
         <View style={styles.tabRow}>
@@ -444,6 +455,11 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '800',
     color: colors.text.primary,
+    marginBottom: 4,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: colors.text.secondary,
     marginBottom: 8,
   },
   loadingContainer: {

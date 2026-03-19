@@ -60,9 +60,20 @@ export default function ProfileScreen({ navigation }: Props) {
   const [savingAvatarId, setSavingAvatarId] = useState<number | null>(null);
   const [soundOn, setSoundOn] = useState(isSoundEnabled());
   const [gamePrefs, setGamePrefs] = useState<GamePreferences>({ timer: 30, questionCount: 10, difficulty: 'all' });
+  const [profileStats, setProfileStats] = useState<{
+    gamesPlayedTotal: number; wins: number; winRate: number; winStreak: number; bestScore: number; dailyStreak: number;
+  } | null>(null);
 
   useEffect(() => {
     getGamePreferences().then(setGamePrefs);
+    api.get<any>('/users/me/stats').then(s => setProfileStats({
+      gamesPlayedTotal: s.gamesPlayedTotal ?? 0,
+      wins: s.wins ?? 0,
+      winRate: s.winRate ?? 0,
+      winStreak: s.winStreak ?? 0,
+      bestScore: s.bestScore ?? 0,
+      dailyStreak: s.streak ?? 0,
+    })).catch(() => {});
   }, []);
 
   const updatePref = (update: Partial<GamePreferences>) => {
@@ -250,6 +261,21 @@ export default function ProfileScreen({ navigation }: Props) {
             </TouchableOpacity>
           </View>
         </View>
+
+        {/* Stats card */}
+        {profileStats && (
+          <View style={s.card}>
+            <Text style={s.cardLabel}>Your Stats</Text>
+            <View style={s.statsGrid}>
+              <View style={s.statItem}><Text style={s.statValue}>{profileStats.gamesPlayedTotal}</Text><Text style={s.statLabel}>Games</Text></View>
+              <View style={s.statItem}><Text style={s.statValue}>{profileStats.wins}</Text><Text style={s.statLabel}>Wins</Text></View>
+              <View style={s.statItem}><Text style={s.statValue}>{profileStats.winRate}%</Text><Text style={s.statLabel}>Win Rate</Text></View>
+              <View style={s.statItem}><Text style={s.statValue}>{profileStats.bestScore}</Text><Text style={s.statLabel}>Best Score</Text></View>
+              <View style={s.statItem}><Text style={s.statValue}>{profileStats.dailyStreak}</Text><Text style={s.statLabel}>Daily Streak</Text></View>
+              <View style={s.statItem}><Text style={s.statValue}>{profileStats.winStreak}</Text><Text style={s.statLabel}>Win Streak</Text></View>
+            </View>
+          </View>
+        )}
 
         {/* Game mode settings */}
         <View style={s.card}>
@@ -454,6 +480,10 @@ const s = StyleSheet.create({
   },
   cardLabel: { color: colors.textPrimary, fontSize: 16, fontWeight: '700' },
   cardHint: { color: colors.textMuted, fontSize: 13, marginTop: -4 },
+  statsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, marginTop: 8 },
+  statItem: { width: '28%', alignItems: 'center' as const },
+  statValue: { fontSize: 20, fontWeight: '800', color: colors.textPrimary },
+  statLabel: { fontSize: 11, color: colors.textMuted, fontWeight: '600', marginTop: 2 },
   row: { flexDirection: 'row', gap: 10, alignItems: 'center' },
   flex1: { flex: 1 },
   input: {

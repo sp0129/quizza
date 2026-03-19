@@ -173,6 +173,9 @@ export default function ChallengeDetailScreen({ route, navigation }: Props) {
         <Text style={styles.postedBy}>
           Posted by @{detail.posted_by_username} · {timeAgo(detail.posted_at)}
         </Text>
+        {!alreadyPlayed && !expired && (
+          <Text style={styles.speedHint}>It's not just what you know — it's how fast you know it ⚡</Text>
+        )}
 
         {/* Stats row — hide high score if not played */}
         <View style={styles.statsRow}>
@@ -302,7 +305,8 @@ const styles = StyleSheet.create({
   modeBadge5: { backgroundColor: colors.cyan + '30' },
   modeBadge10: { backgroundColor: colors.brand.primary + '30' },
   modeBadgeText: { fontSize: 12, fontWeight: '700', color: colors.text.primary },
-  postedBy: { fontSize: 13, color: colors.text.secondary, marginBottom: 20 },
+  postedBy: { fontSize: 13, color: colors.text.secondary, marginBottom: 6 },
+  speedHint: { fontSize: 12, color: colors.gold, fontWeight: '600', fontStyle: 'italic', marginBottom: 16 },
 
   // Stats
   statsRow: {
