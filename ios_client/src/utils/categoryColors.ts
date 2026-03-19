@@ -52,6 +52,10 @@ const CATEGORY_PALETTE: Record<number, CategoryCardColors> = {
   // Arts & Books
   25:   { bg: 'rgba(249,115,22,0.12)',  accent: '#F97316', emoji: '🎨' },   // Art
   10:   { bg: 'rgba(168,85,247,0.12)',  accent: '#A855F7', emoji: '📚' },   // Books
+
+  // Custom categories
+  2008: { bg: 'rgba(99,102,241,0.12)',  accent: '#6366F1', emoji: '📺' },   // Bingeworthy
+  2009: { bg: 'rgba(124,58,237,0.12)',  accent: '#7C3AED', emoji: '🎲' },   // Mixed Bag
 };
 
 // Keyword-based fallback for categories not in the ID map
