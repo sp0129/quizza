@@ -120,7 +120,7 @@ The entire screen is focused on ONE action: play your first game. No hero, no ch
 
 ### State B: Has Played (1+ games) — “Full New User Experience”
 
-After their first game, the dashboard expands. They now have context for what challenges mean.
+After their first game, the dashboard expands. They now have context for what challenges mean. The **Play Again quick-action** is the dominant element — keep the loop tight.
 
 ```
 ┌──────────────────────────────────────┐
@@ -129,7 +129,13 @@ After their first game, the dashboard expands. They now have context for what ch
 │                                      │
 ├──────────────────────────────────────┤
 │                                      │
-│  ✨ DISCOVER CHALLENGES ✨            │ ← Hero section appears
+│ ┌──────────────────────────────────┐ │
+│ │ ▶ Play Movies Again 🎬          │ │ ← Quick-action: last played category
+│ └──────────────────────────────────┘ │ ← Skips category picker, starts immediately
+│                                      │ ← Dominant, above everything else
+├──────────────────────────────────────┤
+│                                      │
+│  ✨ DISCOVER CHALLENGES ✨            │ ← Hero section
 │                                      │
 │  [Mascot — subtle idle animation]    │
 │                                      │
@@ -143,13 +149,12 @@ After their first game, the dashboard expands. They now have context for what ch
 │  [Explore Open Challenges →]         │ ← CTA → Challenges tab
 │                                      │
 ├──────────────────────────────────────┤
-│ 🎮 PLAY NOW                          │
+│ 🎮 OR EXPLORE                        │
 │                                      │
 │ ┌─────────────────┬─────────────────┐│
 │ │ [Solo Play]     │ [Challenge]    ││
-│ │ 🎯 Play alone   │ ⚔️ Dare the    ││
-│ │ & build your    │ community      ││
-│ │ streak          │                ││
+│ │ 🎯 New          │ ⚔️ Dare the    ││
+│ │ category        │ community      ││
 │ └─────────────────┴─────────────────┘│
 │                                      │
 │ ┌─────────────────┬─────────────────┐│
@@ -167,13 +172,19 @@ After their first game, the dashboard expands. They now have context for what ch
 │ “Can you beat your best?”            │
 │                                      │
 │ 📊 Games Played: 3                   │
-│ “Speed is your secret weapon!”       │
-│                                      │
-│ [Create a Challenge ⚔️]              │ ← Create Open Challenge flow
-│ [Explore Challenges 🏟️]              │ ← Challenges tab
 │                                      │
 └──────────────────────────────────────┘
 ```
+
+**Quick-action bar:**
+- Shows last played category with “Play {Category} Again {emoji}”
+- Skips category picker — goes straight to game (same category, new questions)
+- Most prominent element after header
+- If user hasn't played yet (shouldn't happen in State B, but defensive): falls back to “Play Solo 🎯”
+
+**Grid section labeled “OR EXPLORE”** — positions it as the alternative to the quick-action, not the primary path. Grid buttons stay equal weight for consistency with standard dashboard.
+
+**Progress section simplified** — stats only, no extra CTAs. “Create a Challenge” push is earned on the results screen (see below), not spammed on the dashboard.
 
 **Streak is a DAILY PLAY STREAK** (played at least one game per day). Replaces win streak everywhere (new user + standard dashboard). Encourages daily return.
 
@@ -223,18 +234,48 @@ For standard users (have friends + games), tapping ⚔️ Challenge opens a bott
 
 During gameplay for Create Open Challenge, show banner: **”Creating a challenge 🏟️”**
 
-### Results Screen Framing — Solo vs Create Challenge
+### Results Screen — “Play Again” is ALWAYS the Primary CTA
 
-The gameplay is identical. Only the results screen differs:
+Across ALL game modes, the results screen's dominant action is **Play Again** (same category, new questions). This is the habit loop. Everything else is secondary.
 
-| Entry Point | Results Screen Framing |
+```
+┌──────────────────────────────┐
+│ {Outcome message + score}    │
+│ {Perfect bonus if applicable}│
+│                              │
+│ ┌──────────────────────────┐ │
+│ │ ▶ Play {Category} Again  │ │ ← PRIMARY CTA (always, every mode)
+│ └──────────────────────────┘ │
+│                              │
+│ {Secondary actions below}    │
+│                              │
+└──────────────────────────────┘
+```
+
+### Secondary Actions by Entry Point
+
+| Entry Point | Secondary Actions |
 |---|---|
-| **Solo** | Score → outcome → “Post as Challenge” (optional button, bonus nudge on perfect) |
-| **Create Open Challenge** | Score → outcome → “Your challenge is ready! Post it?” (expected action, primary CTA) |
+| **Solo** | “Post as Challenge” (shown conditionally — see below) · “Home” |
+| **Create Open Challenge** | “Post Challenge” (prominent, expected) · “Not Now” · “Home” |
+| **Duel** | “Rematch” · “Home” |
+| **Open Challenge (playing)** | “View Leaderboard” · “Home” |
+| **Room** | “Home” |
 
-For “Create Open Challenge”, the results screen:
-- Primary CTA: “Post Challenge” (prominent green button)
-- Secondary: “Not Now” (subtle text link — they can skip posting without losing their score, e.g. if they did poorly)
+### “Post as Challenge” — Earned, Not Spammed
+
+The challenge nudge on the Solo results screen is conditional on performance:
+
+- **Perfect game**: Strong nudge with custom copy (“Think anyone can beat that? 😈”) + prominent button
+- **Good game (≥60% correct)**: Plain “Post as Challenge” button shown, no extra copy
+- **Poor game (<60% correct)**: No “Post as Challenge” button — don't encourage posting a score they're not proud of
+
+### Create Open Challenge Results
+
+For games entered via the Create Open Challenge flow:
+- “Post Challenge” is prominent (this was the intent)
+- “Not Now” as subtle text link (they can skip if they did poorly)
+- “Play Again” is still the primary CTA above both — they might want to try for a better score before posting
 - Perfect bonus copy still plays if applicable
 
 -----
@@ -272,12 +313,12 @@ For “Create Open Challenge”, the results screen:
 │ Sort: [Most Played] [Newest]        │
 │ Filter: [All] [Science] [Movies]    │
 │                                     │
-│ 🔥 Science                          │
+│ 🔥 Science         [42 players]     │ ← Player count as prominent badge
 │    Posted by @sumit                 │
 │    Play to see scores               │ ← Scores hidden until played
 │    ▶ Discover                       │
 │                                     │
-│ 📚 History                          │
+│ 📚 History          [18 players]    │
 │    Posted by @historian             │
 │    Play to see scores               │
 │    ▶ Discover                       │
@@ -319,6 +360,8 @@ For “Create Open Challenge”, the results screen:
 ## Screen 4: Profile Tab
 
 **No changes needed for new users — same Profile screen as standard users.** The existing profile already shows stats, avatar, and settings. No new user-specific modifications required.
+
+**Win streak lives here** — while the home dashboard shows daily play streak (retention mechanic), the Profile tab's stats section should include win streak (consecutive competitive wins) for users who care about competitive metrics. This keeps it accessible without cluttering the main dashboard.
 
 -----
 
@@ -458,7 +501,11 @@ When the perfect bonus is in **solo mode**, follow up the bonus animation with a
 - "Dare someone to match this 👀" → [Post as Challenge]
 - "Flex worthy. Post it! 💪" → [Post as Challenge]
 
-For non-perfect solo games, keep the existing "Post as Challenge" button without the extra nudge copy — the nudge is a reward for the perfect moment only.
+For non-perfect solo games:
+- **≥60% correct**: plain "Post as Challenge" button, no nudge copy
+- **<60% correct**: no "Post as Challenge" button at all — don't push them to share a score they're not proud of
+
+The nudge is earned, not spammed. Three tiers: perfect → strong push, good → quiet option, poor → not shown.
 
 ### Where to Surface Speed Messaging
 
@@ -517,7 +564,8 @@ For non-perfect solo games, keep the existing "Post as Challenge" button without
 
 ### Phase 1: Backend + Detection (High Priority)
 
-- [ ] Add `games_played_total`, `best_score`, `daily_streak` to `/users/me/stats` endpoint
+- [ ] Add `games_played_total`, `best_score`, `daily_streak`, `last_played_category` to `/users/me/stats` endpoint
+- [ ] Keep `win_streak` in stats (for Profile tab)
 - [ ] Add `friends_count` to stats (or derive client-side from friends list)
 - [ ] Implement perfect accuracy bonus in game completion logic (server-side)
 - [ ] Implement `isNewUser` detection logic in DashboardScreen
@@ -525,12 +573,17 @@ For non-perfect solo games, keep the existing "Post as Challenge" button without
 ### Phase 2: Layout & Structure (High Priority)
 
 - [ ] Build State A (0 games): mascot + "Play Your First Game" CTA + secondary room buttons
+- [ ] Build State B quick-action bar: "Play {Category} Again" (skips category picker)
 - [ ] Build `HeroSection` component for State B (mascot + categories + Explore CTA)
-- [ ] Build `ProgressSection` component (daily streak, best score, games played + CTAs)
-- [ ] Add conditional rendering in DashboardScreen (0 games vs 1+ games vs standard)
+- [ ] Build `ProgressSection` component (daily streak, best score, games played — no extra CTAs)
+- [ ] Add conditional rendering in DashboardScreen (State A vs State B vs standard)
+- [ ] Staggered entrance animation for State A → B transition (FadeInDown, 200ms stagger)
 - [ ] Implement ⚔️ Challenge button behavior (direct to open challenge for new users, half-sheet for standard)
 - [ ] Build half-sheet component for standard user challenge picker ("Duel a Friend" + "Create Open Challenge")
 - [ ] Add "Creating a challenge 🏟️" banner to GameScreen when entering via Create Open Challenge
+- [ ] Make "Play {Category} Again" the primary CTA on ALL results screens (every mode)
+- [ ] Implement earned "Post as Challenge" logic (perfect → strong nudge, ≥60% → plain button, <60% → hidden)
+- [ ] Player count badge styling on challenge browse cards
 
 ### Phase 3: Polish & Empty States (Medium Priority)
 
@@ -554,9 +607,10 @@ For non-perfect solo games, keep the existing "Post as Challenge" button without
 |-----------------------------------------------|------|----------------------------------|
 |% users viewing challenges tab in first 3 sessions|70%+  |Hero appears after first game, drives discovery|
 |% users playing first game in 24h              |60%+  |Accessible buttons + encouragement|
-|% users posting first challenge within 7d      |45%+  |Progress section shows option     |
+|% users posting first challenge within 7d      |45%+  |Earned nudge on good/perfect games|
 |% users adding first friend within 14d         |40%+  |Multiple CTAs across dashboard    |
-|Day-7 retention (new users)                    |30%+  |Mascot + streaks + progress       |
+|Avg games in first session                     |3+    |Play Again loop keeps users engaged|
+|Day-7 retention (new users)                    |30%+  |Daily streak + Play Again loop    |
 
 -----
 
@@ -567,7 +621,9 @@ All data for new user detection and progress display is derivable from existing 
 - **games_played_total**: `COUNT(*) FROM games WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed'` (all modes, including solo)
 - **friends_count**: `COUNT(*) FROM friendships WHERE (user_a_id = $1 OR user_b_id = $1) AND status = 'accepted'`
 - **best_score**: `MAX(CASE WHEN player_a_id = $1 THEN player_a_score ELSE player_b_score END) FROM games WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed'` (new field to add to stats endpoint)
-- **daily_streak**: Derived from `completed_at` dates — count consecutive days (from today backward) with at least one completed game. Streak includes today if they've played; only breaks at end of day with no game. (New calculation to add to stats endpoint. Replaces win streak everywhere — standard dashboard too.)
+- **daily_streak**: Derived from `completed_at` dates — count consecutive days (from today backward) with at least one completed game. Streak includes today if they've played; only breaks at end of day with no game. (New calculation to add to stats endpoint. Replaces win streak on home dashboard.)
+- **win_streak**: Existing calculation — keep in stats endpoint for Profile tab. Not shown on home dashboard.
+- **last_played_category**: `SELECT category FROM games WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed' ORDER BY completed_at DESC LIMIT 1` (for "Play {Category} Again" quick-action)
 - **first_game_completed_at**: `MIN(completed_at) FROM games WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed'` (if needed)
 
 No `UserOnboarding` table. Analytics (CTA clicks, tab views) can be added client-side later via Mixpanel/Amplitude if needed.
@@ -587,6 +643,10 @@ No `UserOnboarding` table. Analytics (CTA clicks, tab views) can be added client
 1. **Mobile-first** — test on iPhone/Android first
 1. **Perfect bonus is server-side** — calculated in the game completion logic alongside `calculatePoints()`, so the DB score includes the bonus. The animation on the results screen is purely visual (the bonus is already in the total)
 1. **Abandoned games are never stored** — if a user quits mid-game, no game record is saved. Only completed games count toward the `games_played` threshold for new user detection
-1. **Daily streak replaces win streak everywhere** — needs to be added to the stats endpoint. Count consecutive days (from today backward) where the user completed at least one game. This replaces the existing win streak on BOTH new user and standard dashboards. Win rate already covers the competitive metric.
-1. **Best score is new** — needs to be added to the stats endpoint. `MAX(player_a_score)` from completed games.
+1. **Daily streak on home, win streak on profile** — daily streak replaces win streak on the home dashboard (both new user and standard). Win streak moves to Profile tab stats. Both need to be in the stats endpoint.
+1. **Best score is new** — needs to be added to the stats endpoint. `MAX(CASE WHEN player_a_id = $1 THEN player_a_score ELSE player_b_score END)` from completed games.
+1. **last_played_category is new** — needed for "Play {Category} Again" quick-action. Add to stats endpoint.
 1. **games_played for detection must count ALL completed games** — including solo. This is different from the standard dashboard's competitive-only stats. The stats endpoint should return both: `games_played_total` (for detection) and `games_played_competitive` / `wins` (for standard metrics).
+1. **"Play Again" is the primary CTA on every results screen** — across all modes. Same category, new questions. Skips category picker. Everything else is secondary.
+1. **"Post as Challenge" is earned** — only shown on solo results when ≥60% correct. Strong nudge copy only on perfect games. Not shown at all below 60%. Not shown on dashboard progress section.
+1. **Player count badge on challenge cards** — make `player_count` visually prominent on browse cards (badge style, not buried in meta text). This is the one signal that makes discovery feel alive.
