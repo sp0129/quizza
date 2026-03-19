@@ -270,10 +270,15 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
     const totalQuestions = qs.questions.length;
     if (questionIndex === totalQuestions - 1) {
       const scoreResult = await pool.query(
-        'SELECT COALESCE(SUM(points_awarded), 0) AS total FROM game_answers WHERE game_id = $1 AND player_id = $2',
+        'SELECT COALESCE(SUM(points_awarded), 0) AS total, COUNT(*) FILTER (WHERE is_correct) AS correct_count FROM game_answers WHERE game_id = $1 AND player_id = $2',
         [game.id, userId]
       );
-      const totalScore = parseInt(scoreResult.rows[0].total);
+      let totalScore = parseInt(scoreResult.rows[0].total);
+      const correctCount = parseInt(scoreResult.rows[0].correct_count);
+
+      // Perfect accuracy bonus: +100 for 10Q, +50 for 5Q
+      const perfectBonus = correctCount === totalQuestions ? (totalQuestions >= 10 ? 100 : 50) : 0;
+      totalScore += perfectBonus;
 
       const isPlayerA = game.player_a_id === userId;
       const scoreColumn = isPlayerA ? 'player_a_score' : 'player_b_score';
@@ -314,7 +319,7 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
       }
 
       const finalOpponentScore = otherScore !== null ? parseInt(otherScore) : undefined;
-      res.json({ isCorrect, points, totalScore, gameComplete: true, correctAnswer: question.correct_answer, opponentScore: finalOpponentScore });
+      res.json({ isCorrect, points, totalScore, gameComplete: true, correctAnswer: question.correct_answer, opponentScore: finalOpponentScore, perfectBonus });
     } else {
       // For sync mode, notify the manager that this player answered
       if (game.game_mode === 'sync') {

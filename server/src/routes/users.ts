@@ -39,8 +39,8 @@ router.get('/search', requireAuth, async (req: AuthRequest, res: Response): Prom
 router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   const userId = req.userId!;
   try {
-    // Core stats: wins, losses, games played (only competitive games with an opponent)
-    const statsResult = await pool.query(
+    // Competitive stats: wins, losses, games played (only games with an opponent)
+    const competitiveResult = await pool.query(
       `SELECT
          COUNT(*) FILTER (WHERE status = 'completed') AS games_played,
          COUNT(*) FILTER (WHERE status = 'completed' AND winner_id = $1) AS wins,
@@ -50,14 +50,42 @@ router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Pr
          AND player_b_id IS NOT NULL`,
       [userId]
     );
-    const { games_played, wins, losses } = statsResult.rows[0];
-    const gamesPlayed = parseInt(games_played) || 0;
-    const totalWins = parseInt(wins) || 0;
-    const totalLosses = parseInt(losses) || 0;
+    const gamesPlayed = parseInt(competitiveResult.rows[0].games_played) || 0;
+    const totalWins = parseInt(competitiveResult.rows[0].wins) || 0;
+    const totalLosses = parseInt(competitiveResult.rows[0].losses) || 0;
     const decided = totalWins + totalLosses;
     const winRate = decided > 0 ? Math.round((totalWins / decided) * 100) : 0;
 
-    // Win streak: count consecutive recent wins (competitive only)
+    // Total stats: ALL completed games (including solo) — for new user detection + progress
+    const totalResult = await pool.query(
+      `SELECT
+         COUNT(*) AS games_played_total,
+         MAX(CASE WHEN player_a_id = $1 THEN player_a_score ELSE player_b_score END) AS best_score
+       FROM games
+       WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed'`,
+      [userId]
+    );
+    const gamesPlayedTotal = parseInt(totalResult.rows[0].games_played_total) || 0;
+    const bestScore = parseInt(totalResult.rows[0].best_score) || 0;
+
+    // Last played category (for "Play {Category} Again" quick-action)
+    const lastCategoryResult = await pool.query(
+      `SELECT category FROM games
+       WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed'
+       ORDER BY completed_at DESC LIMIT 1`,
+      [userId]
+    );
+    const lastPlayedCategory = lastCategoryResult.rows[0]?.category || null;
+
+    // Friends count
+    const friendsResult = await pool.query(
+      `SELECT COUNT(*) AS count FROM friendships
+       WHERE (user_a_id = $1 OR user_b_id = $1) AND status = 'accepted'`,
+      [userId]
+    );
+    const friendsCount = parseInt(friendsResult.rows[0].count) || 0;
+
+    // Win streak: consecutive recent competitive wins (for Profile tab)
     const recentGames = await pool.query(
       `SELECT winner_id FROM games
        WHERE (player_a_id = $1 OR player_b_id = $1)
@@ -68,21 +96,51 @@ router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Pr
        LIMIT 50`,
       [userId]
     );
-    let streak = 0;
+    let winStreak = 0;
     for (const row of recentGames.rows) {
-      if (row.winner_id === userId) streak++;
+      if (row.winner_id === userId) winStreak++;
       else break;
     }
 
+    // Daily streak: consecutive days with at least one completed game (from today backward)
+    const dailyDatesResult = await pool.query(
+      `SELECT DISTINCT DATE(completed_at) AS play_date FROM games
+       WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed'
+       ORDER BY play_date DESC`,
+      [userId]
+    );
+    let dailyStreak = 0;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    for (const row of dailyDatesResult.rows) {
+      const playDate = new Date(row.play_date);
+      playDate.setHours(0, 0, 0, 0);
+      const expectedDate = new Date(today);
+      expectedDate.setDate(expectedDate.getDate() - dailyStreak);
+      if (playDate.getTime() === expectedDate.getTime()) {
+        dailyStreak++;
+      } else {
+        break;
+      }
+    }
+
     // Derived stats
-    const level = Math.max(1, Math.floor(gamesPlayed / 5) + 1);
-    const xp = gamesPlayed * 10;
-    const xpToNextLevel = ((level) * 5 - gamesPlayed) * 10;
+    const level = Math.max(1, Math.floor(gamesPlayedTotal / 5) + 1);
+    const xp = gamesPlayedTotal * 10;
+    const xpToNextLevel = ((level) * 5 - gamesPlayedTotal) * 10;
 
     res.json({
-      streak,
+      // Competitive (standard dashboard)
+      streak: dailyStreak,
+      winStreak,
       wins: totalWins,
       winRate,
+      // Total (new user detection + progress)
+      gamesPlayedTotal,
+      bestScore,
+      lastPlayedCategory,
+      friendsCount,
+      // Derived
       level,
       gems: totalWins * 5,
       xp,

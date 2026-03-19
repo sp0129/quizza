@@ -67,6 +67,18 @@ export default function DashboardScreen({ navigation }: Props) {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
+  // New user detection
+  const [gamesPlayedTotal, setGamesPlayedTotal] = useState<number | null>(null);
+  const [friendsCount, setFriendsCount] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
+  const [dailyStreak, setDailyStreak] = useState(0);
+  const [lastPlayedCategory, setLastPlayedCategory] = useState<string | null>(null);
+
+  const isNewUser = gamesPlayedTotal !== null && (
+    (friendsCount === 0 && gamesPlayedTotal < 5) ||
+    (friendsCount > 0 && gamesPlayedTotal === 0)
+  );
+
   // Friend requests
   interface FriendRequest {
     id: string;
@@ -123,6 +135,7 @@ export default function DashboardScreen({ navigation }: Props) {
     api
       .get<{
         streak?: number;
+        winStreak?: number;
         wins?: number;
         winRate?: number;
         rank?: number;
@@ -130,6 +143,10 @@ export default function DashboardScreen({ navigation }: Props) {
         gems?: number;
         xp?: number;
         xpToNextLevel?: number;
+        gamesPlayedTotal?: number;
+        bestScore?: number;
+        lastPlayedCategory?: string | null;
+        friendsCount?: number;
       }>('/users/me/stats')
       .then((stats) => {
         setMetrics({
@@ -142,6 +159,11 @@ export default function DashboardScreen({ navigation }: Props) {
           xp: stats.xp ?? 0,
           xpToNextLevel: stats.xpToNextLevel ?? 100,
         });
+        setGamesPlayedTotal(stats.gamesPlayedTotal ?? 0);
+        setFriendsCount(stats.friendsCount ?? 0);
+        setBestScore(stats.bestScore ?? 0);
+        setDailyStreak(stats.streak ?? 0);
+        setLastPlayedCategory(stats.lastPlayedCategory ?? null);
       })
       .catch(() => {});
   }, [setMetrics]);

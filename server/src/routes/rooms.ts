@@ -264,14 +264,21 @@ router.post('/:roomId/answer', requireAuth, async (req: AuthRequest, res: Respon
     roomGameManager.recordAnswer(req.params.roomId, me, questionIndex);
 
     let totalScore: number | undefined;
+    let perfectBonus = 0;
 
     // On last question, tally final score
     if (questionIndex === qs.questions.length - 1) {
       const scoreResult = await pool.query(
-        `SELECT COALESCE(SUM(points_awarded), 0) AS total FROM room_answers WHERE room_id = $1 AND player_id = $2`,
+        `SELECT COALESCE(SUM(points_awarded), 0) AS total, COUNT(*) FILTER (WHERE is_correct) AS correct_count FROM room_answers WHERE room_id = $1 AND player_id = $2`,
         [room.id, me]
       );
       totalScore = parseInt(scoreResult.rows[0].total);
+      const correctCount = parseInt(scoreResult.rows[0].correct_count);
+      const totalQuestions = qs.questions.length;
+
+      // Perfect accuracy bonus: +100 for 10Q, +50 for 5Q
+      perfectBonus = correctCount === totalQuestions ? (totalQuestions >= 10 ? 100 : 50) : 0;
+      totalScore += perfectBonus;
 
       await pool.query(
         `UPDATE room_players SET score = $1, finished = true WHERE room_id = $2 AND player_id = $3`,
@@ -297,7 +304,7 @@ router.post('/:roomId/answer', requireAuth, async (req: AuthRequest, res: Respon
       roomGameManager.broadcastScoreUpdate(room.id, leaderboard);
     }
 
-    res.json({ isCorrect, points, correctAnswer: question.correct_answer, ...(totalScore !== undefined ? { totalScore } : {}) });
+    res.json({ isCorrect, points, correctAnswer: question.correct_answer, ...(totalScore !== undefined ? { totalScore, perfectBonus } : {}) });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
