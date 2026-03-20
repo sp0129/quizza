@@ -42,7 +42,7 @@ import ChallengeHalfSheet from '../components/dashboard/ChallengeHalfSheet';
 import OnboardingOverlay from '../components/OnboardingOverlay';
 import TransitionOverlay from '../components/TransitionOverlay';
 import PizzaMascot from '../components/PizzaMascot';
-import { useFocusEffect } from '@react-navigation/native';
+import { useFocusEffect, useIsFocused } from '@react-navigation/native';
 import type { RootStackParamList } from '../../App';
 import type { Challenge, SearchedUser } from '../stores/dashboard';
 
@@ -199,7 +199,11 @@ export default function DashboardScreen({ navigation }: Props) {
       .catch(() => {});
   }, [setMetrics]);
 
-  useFocusEffect(useCallback(() => { fetchStats(); }, [fetchStats]));
+  // Refetch stats whenever screen is focused (including returning from stack screens)
+  const isFocused = useIsFocused();
+  useEffect(() => {
+    if (isFocused) fetchStats();
+  }, [isFocused, fetchStats]);
 
   // Fetch friend requests
   const fetchFriendRequests = useCallback(async () => {
