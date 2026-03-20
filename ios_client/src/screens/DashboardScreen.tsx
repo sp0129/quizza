@@ -199,11 +199,19 @@ export default function DashboardScreen({ navigation }: Props) {
       .catch(() => {});
   }, [setMetrics]);
 
-  // Refetch stats whenever screen is focused (including returning from stack screens)
-  const isFocused = useIsFocused();
+  // Refetch stats on mount and whenever returning from other screens
+  useEffect(() => { fetchStats(); }, []);
+
+  // Poll for stats changes every 3 seconds while component is mounted
+  // This is the most reliable way to catch Game/Results → Home transitions
+  // since focus events don't fire (tab never loses focus in the stack)
   useEffect(() => {
-    if (isFocused) fetchStats();
-  }, [isFocused, fetchStats]);
+    const interval = setInterval(() => {
+      if (!statsLoaded) return; // Don't poll before initial load
+      fetchStats();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [fetchStats, statsLoaded]);
 
   // Fetch friend requests
   const fetchFriendRequests = useCallback(async () => {
