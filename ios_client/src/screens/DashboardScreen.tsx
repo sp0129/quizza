@@ -41,6 +41,7 @@ import QuickPlayBar from '../components/dashboard/QuickPlayBar';
 import ChallengeHalfSheet from '../components/dashboard/ChallengeHalfSheet';
 import OnboardingOverlay from '../components/OnboardingOverlay';
 import PizzaMascot from '../components/PizzaMascot';
+import { useFocusEffect } from '@react-navigation/native';
 import type { RootStackParamList } from '../../App';
 import type { Challenge, SearchedUser } from '../stores/dashboard';
 
@@ -153,8 +154,8 @@ export default function DashboardScreen({ navigation }: Props) {
     navigation.navigate('Category', { mode: 'room' });
   }, [dismissOnboarding, navigation]);
 
-  // Fetch user metrics
-  useEffect(() => {
+  // Fetch user metrics — re-fetches every time dashboard gains focus
+  const fetchStats = useCallback(() => {
     api
       .get<{
         streak?: number;
@@ -190,6 +191,8 @@ export default function DashboardScreen({ navigation }: Props) {
       })
       .catch(() => {});
   }, [setMetrics]);
+
+  useFocusEffect(useCallback(() => { fetchStats(); }, [fetchStats]));
 
   // Fetch friend requests
   const fetchFriendRequests = useCallback(async () => {
