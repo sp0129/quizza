@@ -90,9 +90,10 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const prevGamesRef = useRef<number | null>(null);
 
-  // Before stats load, assume new user (show State A) to avoid flash of State C
+  // Stats-based detection — only evaluated after stats load
+  // Before stats load, dashboard content is hidden (splash covers the gap)
   const gpt = gamesPlayedTotal ?? 0;
-  const isNewUser = !statsLoaded || (
+  const isNewUser = statsLoaded && (
     (friendsCount === 0 && gpt < 5) ||
     (friendsCount > 0 && gpt === 0)
   );
@@ -372,6 +373,12 @@ export default function DashboardScreen({ navigation }: Props) {
   const username = user?.username ?? 'Player';
   const avatarInitial = username[0]?.toUpperCase() ?? 'P';
   const hasAnyChallenges = incomingChallenges.length > 0 || waitingChallenges.length > 0 || completedChallenges.length > 0;
+
+  // Don't render dashboard content until stats are loaded
+  // The animated splash overlay covers this gap — user sees the dancing star
+  if (!statsLoaded) {
+    return <View style={[styles.root, styles.container]} />;
+  }
 
   return (
     <View style={[styles.root, styles.container]}>
