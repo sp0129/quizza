@@ -151,9 +151,21 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
     }
   }
 
+  // Resolve OpenTDB category ID from name if not provided
+  const OPENTDB_CATEGORIES: Record<string, number> = {
+    'general knowledge': 9, 'books': 10, 'film': 11, 'music': 12,
+    'musicals & theatres': 13, 'television': 14, 'video games': 15,
+    'board games': 16, 'science & nature': 17, 'computers': 18,
+    'mathematics': 19, 'mythology': 20, 'sports': 21, 'geography': 22,
+    'history': 23, 'politics': 24, 'art': 25, 'celebrities': 26,
+    'animals': 27, 'vehicles': 28, 'comics': 29, 'gadgets': 30,
+    'anime & manga': 31, 'cartoon & animations': 32,
+  };
+  const resolvedId = categoryId ?? OPENTDB_CATEGORIES[category.toLowerCase()];
+
   // Fetch from Open Trivia DB
-  let url = categoryId
-    ? `https://opentdb.com/api.php?amount=15&category=${categoryId}&type=multiple&encode=url3986`
+  let url = resolvedId
+    ? `https://opentdb.com/api.php?amount=15&category=${resolvedId}&type=multiple&encode=url3986`
     : `https://opentdb.com/api.php?amount=15&type=multiple&encode=url3986`;
   if (difficulty && difficulty !== 'all') {
     url += `&difficulty=${difficulty}`;
