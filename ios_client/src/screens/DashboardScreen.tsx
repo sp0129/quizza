@@ -78,6 +78,7 @@ export default function DashboardScreen({ navigation }: Props) {
 
   // New user detection
   const [gamesPlayedTotal, setGamesPlayedTotal] = useState<number | null>(null);
+  const [statsLoaded, setStatsLoaded] = useState(false);
   const [friendsCount, setFriendsCount] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [dailyStreak, setDailyStreak] = useState(0);
@@ -88,12 +89,14 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const prevGamesRef = useRef<number | null>(null);
 
-  const isNewUser = gamesPlayedTotal !== null && (
-    (friendsCount === 0 && gamesPlayedTotal < 5) ||
-    (friendsCount > 0 && gamesPlayedTotal === 0)
+  // Before stats load, assume new user (show State A) to avoid flash of State C
+  const gpt = gamesPlayedTotal ?? 0;
+  const isNewUser = !statsLoaded || (
+    (friendsCount === 0 && gpt < 5) ||
+    (friendsCount > 0 && gpt === 0)
   );
-  const isStateA = isNewUser && gamesPlayedTotal === 0;
-  const isStateB = isNewUser && gamesPlayedTotal !== null && gamesPlayedTotal > 0;
+  const isStateA = isNewUser && gpt === 0;
+  const isStateB = isNewUser && gpt > 0;
 
   // Detect State A → B/C transition (user just played their first game)
   const [showTransitionOverlay, setShowTransitionOverlay] = useState(false);
@@ -191,6 +194,7 @@ export default function DashboardScreen({ navigation }: Props) {
         setDailyStreak(stats.streak ?? 0);
         setLastPlayedCategory(stats.lastPlayedCategory ?? null);
         setLastPlayedQuestionCount(stats.lastPlayedQuestionCount ?? 10);
+        setStatsLoaded(true);
       })
       .catch(() => {});
   }, [setMetrics]);
