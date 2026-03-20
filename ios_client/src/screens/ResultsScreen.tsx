@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   AccessibilityInfo,
   ActivityIndicator,
+  Alert,
   Dimensions,
 } from 'react-native';
 import Animated, {
@@ -32,6 +33,7 @@ import PizzaMascot from '../components/PizzaMascot';
 import { playSound } from '../utils/sounds';
 import { useDashboardStore } from '../stores/dashboard';
 import LottieView from 'lottie-react-native';
+import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
 import { setDashboardNeedsRefresh } from '../utils/refreshFlag';
 
@@ -124,6 +126,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
   } = route.params;
 
   const insets = useSafeAreaInsets();
+  const { isGuest } = useAuth();
   const theme = getCategoryTheme(category);
   const removeChallenge = useDashboardStore((s) => s.removeChallenge);
 
@@ -439,6 +442,13 @@ export default function ResultsScreen({ route, navigation }: Props) {
   }, [navigation]);
 
   const handlePostChallenge = useCallback(async () => {
+    if (isGuest) {
+      Alert.alert('Account Required', 'Create a free account to post challenges and compete on leaderboards.', [
+        { text: 'Not Now', style: 'cancel' },
+        { text: 'Sign Up', onPress: () => (navigation as any).navigate('Signup') },
+      ]);
+      return;
+    }
     if (!questionSetId || correctCount == null || totalQuestions == null || totalTimeTaken == null) return;
     setPosting(true);
     try {

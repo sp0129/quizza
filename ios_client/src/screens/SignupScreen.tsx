@@ -37,8 +37,9 @@ export default function SignupScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await signup(username.trim(), email.trim().toLowerCase(), password);
-      // Auth state updated — force navigation in case auto-switch doesn't fire
-      navigation.reset({ index: 0, routes: [{ name: 'MainTabs' }] });
+      // Guest → signup: already in auth stack, navigate explicitly
+      // Fresh signup: auth state change switches stacks, navigate fails silently
+      try { (navigation as any).navigate('MainTabs'); } catch {}
     } catch (err: any) {
       setError(err.message);
       setLoading(false);
