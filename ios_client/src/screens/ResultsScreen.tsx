@@ -33,6 +33,7 @@ import { playSound } from '../utils/sounds';
 import { useDashboardStore } from '../stores/dashboard';
 import LottieView from 'lottie-react-native';
 import { api } from '../api/client';
+import { setDashboardNeedsRefresh } from '../utils/refreshFlag';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Results'>;
 
@@ -127,6 +128,9 @@ export default function ResultsScreen({ route, navigation }: Props) {
   const removeChallenge = useDashboardStore((s) => s.removeChallenge);
 
   const skip = !!skipAnimation;
+
+  // Signal dashboard to refresh stats when user returns
+  useEffect(() => { setDashboardNeedsRefresh(); }, []);
   const [stage, setStage] = useState<Stage>(skip ? 'complete' : 'anticipation');
   const [reduceMotion, setReduceMotion] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);

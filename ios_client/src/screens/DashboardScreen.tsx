@@ -43,6 +43,7 @@ import OnboardingOverlay from '../components/OnboardingOverlay';
 import TransitionOverlay from '../components/TransitionOverlay';
 import PizzaMascot from '../components/PizzaMascot';
 import { useFocusEffect, useIsFocused } from '@react-navigation/native';
+import { consumeDashboardRefresh } from '../utils/refreshFlag';
 import type { RootStackParamList } from '../../App';
 import type { Challenge, SearchedUser } from '../stores/dashboard';
 
@@ -202,13 +203,16 @@ export default function DashboardScreen({ navigation }: Props) {
   // Refetch stats on mount and whenever returning from other screens
   useEffect(() => { fetchStats(); }, []);
 
-  // Poll for stats changes only during State A (waiting for first game completion)
-  // Stops polling once user transitions out of State A
+  // Check for refresh flag frequently — set by Results screen when a game completes
+  // Much cheaper than polling the API — just checks a boolean in memory
   useEffect(() => {
-    if (!isStateA) return;
-    const interval = setInterval(fetchStats, 3000);
+    const interval = setInterval(() => {
+      if (consumeDashboardRefresh()) {
+        fetchStats();
+      }
+    }, 500);
     return () => clearInterval(interval);
-  }, [isStateA, fetchStats]);
+  }, [fetchStats]);
 
   // Fetch friend requests
   const fetchFriendRequests = useCallback(async () => {
