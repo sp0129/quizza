@@ -4,6 +4,8 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
   StyleSheet,
   FlatList,
   ActivityIndicator,
@@ -243,6 +245,7 @@ export default function FriendsScreen({ navigation }: Props) {
           data={searchResults}
           keyExtractor={(item) => item.id}
           keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
           contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: insets.bottom + 20 }}
           renderItem={({ item }) => (
             <View style={styles.userRow}>
@@ -297,6 +300,7 @@ export default function FriendsScreen({ navigation }: Props) {
         </View>
       ) : friends.length === 0 ? (
         /* Empty state for cold start */
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.emptyContainer}>
           <Animated.View entering={FadeInDown.delay(100).duration(400)} style={styles.emptyContent}>
             <Text style={styles.emptyIcon}>👋</Text>
@@ -319,6 +323,7 @@ export default function FriendsScreen({ navigation }: Props) {
             </TouchableOpacity>
           </Animated.View>
         </View>
+        </TouchableWithoutFeedback>
       ) : (
         /* Friends list */
         <FlatList
