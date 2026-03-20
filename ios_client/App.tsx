@@ -8,7 +8,9 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import * as Linking from 'expo-linking';
 import { Alert } from 'react-native';
+import { useState } from 'react';
 import { AuthProvider, useAuth } from './src/hooks/useAuth';
+import AnimatedSplash from './src/components/AnimatedSplash';
 import { colors } from './src/theme';
 import BottomNav from './src/components/dashboard/BottomNav';
 import { initSoundSetting } from './src/utils/sounds';
@@ -224,6 +226,8 @@ function RootNavigator() {
 initSoundSetting();
 
 export default function App() {
+  const [splashDone, setSplashDone] = useState(false);
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
@@ -233,6 +237,7 @@ export default function App() {
             <RootNavigator />
           </NavigationContainer>
         </AuthProvider>
+        {!splashDone && <AnimatedSplash onFinish={() => setSplashDone(true)} />}
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
