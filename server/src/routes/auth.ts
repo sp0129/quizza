@@ -87,28 +87,15 @@ router.post('/signup', async (req: Request, res: Response): Promise<void> => {
     const userId = uuidv4();
     await pool.query(
       `INSERT INTO users (id, username, email, password_hash, is_verified)
-       VALUES ($1, $2, $3, $4, FALSE)`,
+       VALUES ($1, $2, $3, $4, TRUE)`,
       [userId, username, email.toLowerCase(), passwordHash]
     );
 
-    // Generate verification token
-    const rawToken = generateToken();
-    const hashed = hashToken(rawToken);
-    const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24 hours
-    await pool.query(
-      `INSERT INTO verification_tokens (user_id, hashed_token, expires_at)
-       VALUES ($1, $2, $3)`,
-      [userId, hashed, expiresAt]
-    );
-
-    // Send verification email (fire-and-forget so signup isn't blocked)
-    sendVerificationEmail(email.toLowerCase(), rawToken).catch(err =>
-      console.error('Failed to send verification email:', err)
-    );
-
+    // Sign them in immediately — no email verification needed
+    const token = jwt.sign({ userId }, process.env.JWT_SECRET!, { expiresIn: '30d' });
     res.status(201).json({
-      message: `Verification email sent to ${email}. Check your inbox.`,
-      email: email.toLowerCase(),
+      token,
+      user: { id: userId, username, email: email.toLowerCase() },
     });
   } catch (err: any) {
     if (err.code === '23505') {
@@ -227,14 +214,7 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    if (!user.is_verified) {
-      res.status(403).json({
-        error: 'Please verify your email before logging in.',
-        code: 'EMAIL_NOT_VERIFIED',
-        email: user.email,
-      });
-      return;
-    }
+    // Email verification no longer required for login
 
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET!, { expiresIn: '7d' });
     const { password_hash, is_verified, ...safeUser } = user;

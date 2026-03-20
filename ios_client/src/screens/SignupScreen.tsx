@@ -37,8 +37,7 @@ export default function SignupScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await signup(username.trim(), email.trim().toLowerCase(), password);
-      // Navigate to verification screen instead of auto-login
-      navigation.navigate('EmailVerification', { email: email.trim().toLowerCase() });
+      // Signed in automatically — navigate to app
     } catch (err: any) {
       setError(err.message);
     } finally {
