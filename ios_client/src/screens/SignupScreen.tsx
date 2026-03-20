@@ -37,9 +37,13 @@ export default function SignupScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await signup(username.trim(), email.trim().toLowerCase(), password);
-      // Guest → signup: already in auth stack, navigate explicitly
-      // Fresh signup: auth state change switches stacks, navigate fails silently
-      try { (navigation as any).navigate('MainTabs'); } catch {}
+      // Guest → signup: already in auth stack, navigate to MainTabs
+      // Fresh signup: auth state change handles it automatically
+      const state = navigation.getState();
+      const hasMainTabs = state?.routes?.some((r: any) => r.name === 'MainTabs');
+      if (hasMainTabs) {
+        (navigation as any).navigate('MainTabs');
+      }
     } catch (err: any) {
       setError(err.message);
       setLoading(false);
