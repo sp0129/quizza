@@ -157,7 +157,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
   const baseScore = isPerfect ? yourScore - perfectBonus : yourScore;
   const [displayScore, setDisplayScore] = useState(baseScore);
   const correctPct = (correctCount != null && totalQuestions != null && totalQuestions > 0) ? (correctCount / totalQuestions) * 100 : 0;
-  const canPostChallenge = gameMode === 'solo' && !openChallengeId && !!questionSetId && correctCount != null && totalQuestions != null && correctPct >= 60;
+  const canPostChallenge = gameMode === 'solo' && !openChallengeId && !!questionSetId && correctCount != null && totalQuestions != null && (createChallenge || correctPct >= 60);
   const resultMsg = (correctCount != null && totalQuestions != null)
     ? getResultMessage(correctCount, totalQuestions)
     : null;
