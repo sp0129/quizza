@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -15,31 +15,44 @@ interface AnimatedSplashProps {
 
 export default function AnimatedSplash({ onFinish }: AnimatedSplashProps) {
   const [lottieFinished, setLottieFinished] = useState(false);
-  const opacity = useSharedValue(1);
+  const containerOpacity = useSharedValue(1);
+  const textOpacity = useSharedValue(0);
+
+  // Text fades in after a short delay
+  useEffect(() => {
+    textOpacity.value = withDelay(
+      400,
+      withTiming(1, { duration: 500, easing: Easing.out(Easing.cubic) })
+    );
+  }, []);
 
   useEffect(() => {
     if (lottieFinished) {
-      // Fade out after a brief hold
-      opacity.value = withDelay(
-        300,
-        withTiming(0, { duration: 400, easing: Easing.out(Easing.cubic) })
+      // Brief hold then fade out
+      containerOpacity.value = withDelay(
+        200,
+        withTiming(0, { duration: 300, easing: Easing.out(Easing.cubic) })
       );
-      setTimeout(() => onFinish(), 700);
+      setTimeout(() => onFinish(), 500);
     }
   }, [lottieFinished]);
 
-  // Fallback: if Lottie doesn't fire onAnimationFinish, auto-dismiss after 3s
+  // Fallback: auto-dismiss after 2s
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (!lottieFinished) {
         setLottieFinished(true);
       }
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timeout);
   }, []);
 
   const fadeStyle = useAnimatedStyle(() => ({
-    opacity: opacity.value,
+    opacity: containerOpacity.value,
+  }));
+
+  const textStyle = useAnimatedStyle(() => ({
+    opacity: textOpacity.value,
   }));
 
   return (
@@ -51,7 +64,7 @@ export default function AnimatedSplash({ onFinish }: AnimatedSplashProps) {
         style={styles.lottie}
         onAnimationFinish={() => setLottieFinished(true)}
       />
-      <Text style={styles.appName}>Quizza</Text>
+      <Animated.Text style={[styles.appName, textStyle]}>Quizza</Animated.Text>
     </Animated.View>
   );
 }
@@ -69,10 +82,10 @@ const styles = StyleSheet.create({
     height: 200,
   },
   appName: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: '800',
-    color: '#F1F5F9',
-    marginTop: 16,
-    letterSpacing: 2,
+    color: '#F59E0B',
+    marginTop: 12,
+    letterSpacing: 3,
   },
 });
