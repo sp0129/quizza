@@ -70,12 +70,16 @@ router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Pr
 
     // Last played category (for "Play {Category} Again" quick-action)
     const lastCategoryResult = await pool.query(
-      `SELECT category FROM games
-       WHERE (player_a_id = $1 OR player_b_id = $1) AND status = 'completed'
-       ORDER BY completed_at DESC LIMIT 1`,
+      `SELECT g.category, qs.source,
+              (SELECT array_length(qs.questions::jsonb, 1)) as question_count
+       FROM games g
+       LEFT JOIN question_sets qs ON qs.id = g.question_set_id
+       WHERE (g.player_a_id = $1 OR g.player_b_id = $1) AND g.status = 'completed'
+       ORDER BY g.completed_at DESC LIMIT 1`,
       [userId]
     );
     const lastPlayedCategory = lastCategoryResult.rows[0]?.category || null;
+    const lastPlayedQuestionCount = lastCategoryResult.rows[0]?.question_count || null;
 
     // Friends count
     const friendsResult = await pool.query(
@@ -139,6 +143,7 @@ router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Pr
       gamesPlayedTotal,
       bestScore,
       lastPlayedCategory,
+      lastPlayedQuestionCount,
       friendsCount,
       // Derived
       level,

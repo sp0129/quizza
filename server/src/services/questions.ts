@@ -140,6 +140,17 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
     return storeLocalQuestionSet(category, categoryId, questionCount, difficulty);
   }
 
+  // If no categoryId provided, check if category name matches a local category
+  if (categoryId === undefined) {
+    const localData = loadLocalData();
+    const localMatch = localData.question_banks.find(
+      b => b.category.toLowerCase() === category.toLowerCase()
+    );
+    if (localMatch) {
+      return storeLocalQuestionSet(category, localMatch.category_id, questionCount, difficulty);
+    }
+  }
+
   // Fetch from Open Trivia DB
   let url = categoryId
     ? `https://opentdb.com/api.php?amount=15&category=${categoryId}&type=multiple&encode=url3986`

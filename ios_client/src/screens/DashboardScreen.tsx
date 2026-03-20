@@ -81,6 +81,7 @@ export default function DashboardScreen({ navigation }: Props) {
   const [bestScore, setBestScore] = useState(0);
   const [dailyStreak, setDailyStreak] = useState(0);
   const [lastPlayedCategory, setLastPlayedCategory] = useState<string | null>(null);
+  const [lastPlayedQuestionCount, setLastPlayedQuestionCount] = useState<number>(10);
 
   const [challengeSheetVisible, setChallengeSheetVisible] = useState(false);
 
@@ -188,6 +189,7 @@ export default function DashboardScreen({ navigation }: Props) {
         setBestScore(stats.bestScore ?? 0);
         setDailyStreak(stats.streak ?? 0);
         setLastPlayedCategory(stats.lastPlayedCategory ?? null);
+        setLastPlayedQuestionCount(stats.lastPlayedQuestionCount ?? 10);
       })
       .catch(() => {});
   }, [setMetrics]);
@@ -522,12 +524,13 @@ export default function DashboardScreen({ navigation }: Props) {
             category={lastPlayedCategory}
             onPress={async () => {
               try {
+                const qc = lastPlayedQuestionCount;
                 const r = await api.post<{ gameId: string; questionSetId: string }>(
-                  '/games/solo', { category: lastPlayedCategory }
+                  '/games/solo', { category: lastPlayedCategory, questionCount: qc }
                 );
                 navigation.navigate('Game', {
                   gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
-                  category: lastPlayedCategory!, timer: 30, questionCount: 10,
+                  category: lastPlayedCategory!, timer: 30, questionCount: qc,
                 });
               } catch {}
             }}
