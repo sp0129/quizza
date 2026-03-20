@@ -40,6 +40,7 @@ import ProgressSection from '../components/dashboard/ProgressSection';
 import QuickPlayBar from '../components/dashboard/QuickPlayBar';
 import ChallengeHalfSheet from '../components/dashboard/ChallengeHalfSheet';
 import OnboardingOverlay from '../components/OnboardingOverlay';
+import TransitionOverlay from '../components/TransitionOverlay';
 import PizzaMascot from '../components/PizzaMascot';
 import { useFocusEffect } from '@react-navigation/native';
 import type { RootStackParamList } from '../../App';
@@ -85,7 +86,6 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const [challengeSheetVisible, setChallengeSheetVisible] = useState(false);
 
-  const [showTransitionToast, setShowTransitionToast] = useState(false);
   const prevGamesRef = useRef<number | null>(null);
 
   const isNewUser = gamesPlayedTotal !== null && (
@@ -95,11 +95,11 @@ export default function DashboardScreen({ navigation }: Props) {
   const isStateA = isNewUser && gamesPlayedTotal === 0;
   const isStateB = isNewUser && gamesPlayedTotal !== null && gamesPlayedTotal > 0;
 
-  // Detect State A → B transition (user just played their first game)
+  // Detect State A → B/C transition (user just played their first game)
+  const [showTransitionOverlay, setShowTransitionOverlay] = useState(false);
   useEffect(() => {
     if (prevGamesRef.current === 0 && gamesPlayedTotal !== null && gamesPlayedTotal > 0) {
-      setShowTransitionToast(true);
-      setTimeout(() => setShowTransitionToast(false), 3000);
+      setShowTransitionOverlay(true);
     }
     prevGamesRef.current = gamesPlayedTotal;
   }, [gamesPlayedTotal]);
@@ -171,6 +171,7 @@ export default function DashboardScreen({ navigation }: Props) {
         gamesPlayedTotal?: number;
         bestScore?: number;
         lastPlayedCategory?: string | null;
+        lastPlayedQuestionCount?: number;
         friendsCount?: number;
       }>('/users/me/stats')
       .then((stats) => {
@@ -408,12 +409,7 @@ export default function DashboardScreen({ navigation }: Props) {
           </Animated.View>
         )}
 
-        {/* ═══ TRANSITION TOAST: State A → B ═══ */}
-        {showTransitionToast && (
-          <Animated.View entering={FadeInDown.duration(300)} style={styles.transitionToast}>
-            <Text style={styles.transitionToastText}>Nice one! Here's what's next 🎉</Text>
-          </Animated.View>
-        )}
+        {/* Transition overlay renders outside scroll — see bottom of component */}
 
         {/* ═══ STATE A: Never played (0 games) — single CTA ═══ */}
         {isStateA && (
@@ -779,6 +775,12 @@ export default function DashboardScreen({ navigation }: Props) {
         </TouchableOpacity>
       )}
 
+      {/* Transition overlay: State A → B/C celebration */}
+      <TransitionOverlay
+        visible={showTransitionOverlay}
+        onDismiss={() => setShowTransitionOverlay(false)}
+      />
+
       {/* Challenge half-sheet for standard users */}
       <ChallengeHalfSheet
         visible={challengeSheetVisible}
@@ -817,22 +819,6 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingTop: 12,
     gap: 20,
-  },
-
-  // Transition toast
-  transitionToast: {
-    backgroundColor: '#22C55E20',
-    borderRadius: 12,
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    alignItems: 'center',
-    borderWidth: 1,
-    borderColor: '#22C55E40',
-  },
-  transitionToastText: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: '#22C55E',
   },
 
   // Lottie mascot sizes
