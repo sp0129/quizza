@@ -297,8 +297,15 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
       const freshGame = freshGameResult.rows[0];
       const otherScore = isPlayerA ? freshGame.player_b_score : freshGame.player_a_score;
 
-      // If both players have finished, determine winner
-      if (otherScore !== null) {
+      // Solo game (no opponent) — mark completed immediately
+      if (freshGame.player_b_id === null) {
+        await pool.query(
+          `UPDATE games SET status = 'completed', completed_at = NOW() WHERE id = $1`,
+          [game.id]
+        );
+      }
+      // Competitive game — if both players have finished, determine winner
+      else if (otherScore !== null) {
         const myScore = totalScore;
         let winnerId: string | null = null;
         if (myScore > otherScore) winnerId = userId;
