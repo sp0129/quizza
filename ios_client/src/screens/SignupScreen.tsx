@@ -37,10 +37,10 @@ export default function SignupScreen({ navigation }: Props) {
     setLoading(true);
     try {
       await signup(username.trim(), email.trim().toLowerCase(), password);
-      // Signed in automatically — navigate to app
+      // Auth state updated — force navigation in case auto-switch doesn't fire
+      navigation.reset({ index: 0, routes: [{ name: 'MainTabs' }] });
     } catch (err: any) {
       setError(err.message);
-    } finally {
       setLoading(false);
     }
   };
