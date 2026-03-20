@@ -470,6 +470,30 @@ export default function DashboardScreen({ navigation }: Props) {
         {!isStateA && (
           <Animated.View entering={FadeInDown.delay(isStateB ? 350 : 250).duration(400)} style={styles.modeSection}>
             <Text style={styles.sectionLabel}>GAME MODES</Text>
+
+            {/* Quick resume row (State B only) */}
+            {isStateB && lastPlayedCategory && (
+              <TouchableOpacity
+                style={styles.quickResumeRow}
+                activeOpacity={0.7}
+                onPress={async () => {
+                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+                  try {
+                    const r = await api.post<{ gameId: string; questionSetId: string }>(
+                      '/games/solo', { category: lastPlayedCategory }
+                    );
+                    navigation.navigate('Game', {
+                      gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
+                      category: lastPlayedCategory!, timer: 30, questionCount: 10,
+                    });
+                  } catch {}
+                }}
+              >
+                <Text style={styles.quickResumeText}>▶ Play {lastPlayedCategory} Again</Text>
+                <Text style={styles.quickResumeArrow}>→</Text>
+              </TouchableOpacity>
+            )}
+
             <View style={styles.modeGrid}>
               <View style={styles.modeGridRow}>
                 <ModeCard
@@ -513,24 +537,7 @@ export default function DashboardScreen({ navigation }: Props) {
           </Animated.View>
         )}
 
-        {/* ═══ QUICK PLAY (State B only) ═══ */}
-        {isStateB && lastPlayedCategory && (
-          <QuickPlayBar
-            category={lastPlayedCategory}
-            onPress={async () => {
-              try {
-                const r = await api.post<{ gameId: string; questionSetId: string }>(
-                  '/games/solo', { category: lastPlayedCategory }
-                );
-                navigation.navigate('Game', {
-                  gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
-                  category: lastPlayedCategory!, timer: 30, questionCount: 10,
-                });
-              } catch {}
-            }}
-            delay={400}
-          />
-        )}
+        {/* QuickPlayBar moved inside game modes section above */}
 
         {/* ═══ PROGRESS SECTION (State B only) ═══ */}
         {isStateB && (
@@ -1048,6 +1055,28 @@ const styles = StyleSheet.create({
   modeSection: {
     paddingHorizontal: 20,
     gap: 10,
+  },
+  quickResumeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(34,197,94,0.1)',
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    marginBottom: 6,
+    borderWidth: 1,
+    borderColor: 'rgba(34,197,94,0.2)',
+  },
+  quickResumeText: {
+    flex: 1,
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#22C55E',
+  },
+  quickResumeArrow: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#22C55E',
   },
   modeGrid: {
     gap: 10,
