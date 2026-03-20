@@ -71,7 +71,7 @@ router.get('/me/stats', requireAuth, async (req: AuthRequest, res: Response): Pr
     // Last played category (for "Play {Category} Again" quick-action)
     const lastCategoryResult = await pool.query(
       `SELECT g.category, qs.source,
-              (SELECT array_length(qs.questions::jsonb, 1)) as question_count
+              jsonb_array_length(qs.questions) as question_count
        FROM games g
        LEFT JOIN question_sets qs ON qs.id = g.question_set_id
        WHERE (g.player_a_id = $1 OR g.player_b_id = $1) AND g.status = 'completed'
