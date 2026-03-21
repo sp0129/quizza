@@ -571,7 +571,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ FRIEND REQUESTS ═══ */}
-        {!isGuest && !isNewUser && friendRequests.length > 0 && (
+        {!isGuest && friendRequests.length > 0 && (
           <Animated.View entering={FadeInDown.delay(350).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>👋</Text>
@@ -614,7 +614,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ INCOMING CHALLENGES ═══ */}
-        {!isGuest && !isNewUser && incomingChallenges.length > 0 && (
+        {!isGuest && incomingChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(400).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>⚔️</Text>
@@ -647,7 +647,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ OUTGOING / WAITING CHALLENGES ═══ */}
-        {!isGuest && !isNewUser && waitingChallenges.length > 0 && (
+        {!isGuest && waitingChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(420).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>⏳</Text>
@@ -680,7 +680,7 @@ export default function DashboardScreen({ navigation }: Props) {
         )}
 
         {/* ═══ COMPLETED CHALLENGES ═══ */}
-        {!isGuest && !isNewUser && completedChallenges.length > 0 && (
+        {!isGuest && completedChallenges.length > 0 && (
           <Animated.View entering={FadeInDown.delay(450).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionIcon}>📋</Text>
