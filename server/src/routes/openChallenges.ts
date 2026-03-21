@@ -281,6 +281,25 @@ router.post('/:id/start', requireAuth, async (req: AuthRequest, res: Response): 
       [gameId, challenge.question_set_id, me, challenge.category]
     );
 
+    // Lock this challenge for this user immediately — prevents replay exploit
+    // (quitting mid-game then replaying with knowledge of the answers).
+    // Submit endpoint will UPDATE this row with real scores.
+    const userResult = await pool.query('SELECT username FROM users WHERE id = $1', [me]);
+    const username: string = userResult.rows[0].username;
+    const expectedQuestions = challenge.mode === '5Q' ? 5 : 10;
+    await pool.query(
+      `INSERT INTO open_challenge_submissions (id, challenge_id, user_id, username, correct_count, total_questions, total_score, time_seconds)
+       VALUES ($1, $2, $3, $4, 0, $5, 0, 0)
+       ON CONFLICT (challenge_id, user_id) DO NOTHING`,
+      [uuidv4(), id, me, username, expectedQuestions]
+    );
+
+    // Increment player count now (not on submit)
+    await pool.query(
+      `UPDATE open_challenges SET player_count = player_count + 1, updated_at = NOW() WHERE id = $1`,
+      [id]
+    );
+
     res.json({
       gameId,
       questionSetId: challenge.question_set_id,
@@ -333,20 +352,46 @@ router.post('/:id/submit', requireAuth, async (req: AuthRequest, res: Response):
     const userResult = await pool.query('SELECT username FROM users WHERE id = $1', [me]);
     const username: string = userResult.rows[0].username;
 
-    const submissionId = uuidv4();
-
-    // Insert submission — UNIQUE(challenge_id, user_id) prevents duplicates
-    await pool.query(
-      `INSERT INTO open_challenge_submissions (id, challenge_id, user_id, username, correct_count, total_questions, total_score, time_seconds)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
-      [submissionId, id, me, username, correct_count, total_questions, total_score, time_seconds]
+    // Update the placeholder submission created at play time with real scores.
+    // If no placeholder exists (shouldn't happen), insert fresh.
+    const updateResult = await pool.query(
+      `UPDATE open_challenge_submissions
+       SET correct_count = $1, total_score = $2, time_seconds = $3, submitted_at = NOW()
+       WHERE challenge_id = $4 AND user_id = $5 AND total_score = 0
+       RETURNING id`,
+      [correct_count, total_score, time_seconds, id, me]
     );
 
-    // Update cached stats atomically
+    let submissionId: string;
+    if (updateResult.rows[0]) {
+      submissionId = updateResult.rows[0].id;
+    } else {
+      // Either already submitted with real score (duplicate), or no placeholder
+      const existing = await pool.query(
+        'SELECT id, total_score FROM open_challenge_submissions WHERE challenge_id = $1 AND user_id = $2',
+        [id, me]
+      );
+      if (existing.rows[0] && existing.rows[0].total_score > 0) {
+        res.status(409).json({ error: 'You have already played this challenge' });
+        return;
+      }
+      // No placeholder — insert fresh (fallback)
+      submissionId = uuidv4();
+      await pool.query(
+        `INSERT INTO open_challenge_submissions (id, challenge_id, user_id, username, correct_count, total_questions, total_score, time_seconds)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+        [submissionId, id, me, username, correct_count, total_questions, total_score, time_seconds]
+      );
+      await pool.query(
+        `UPDATE open_challenges SET player_count = player_count + 1, updated_at = NOW() WHERE id = $1`,
+        [id]
+      );
+    }
+
+    // Update high score if beaten
     await pool.query(
       `UPDATE open_challenges
-       SET player_count = player_count + 1,
-           high_score = CASE WHEN $1 > high_score THEN $1 ELSE high_score END,
+       SET high_score = CASE WHEN $1 > high_score THEN $1 ELSE high_score END,
            high_score_username = CASE WHEN $1 > high_score THEN $2 ELSE high_score_username END,
            updated_at = NOW()
        WHERE id = $3`,
