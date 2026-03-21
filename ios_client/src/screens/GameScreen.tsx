@@ -806,6 +806,8 @@ export default function GameScreen({ route, navigation }: Props) {
     navigation.replace('Results', {
       yourScore: mine,
       opponentScore: opponent,
+      opponentUsername,
+      opponentHandle: opponentUsername ? `@${opponentUsername}` : undefined,
       category: route.params.category ?? 'Trivia',
       gameMode,
       result: gameResult,
@@ -822,7 +824,7 @@ export default function GameScreen({ route, navigation }: Props) {
       questionCount: questions.length,
       timer: QUESTION_TIME,
     });
-  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category, questionResults, questions.length, totalTimeTaken, questionSetId, openChallengeId, createChallenge, QUESTION_TIME]);
+  }, [phase, finalScores, score, mode, opponentQuit, navigation, route.params.category, questionResults, questions.length, totalTimeTaken, questionSetId, openChallengeId, createChallenge, QUESTION_TIME, opponentUsername]);
 
   // --- Quit handler ---
   const handleQuit = () => {
