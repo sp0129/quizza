@@ -33,19 +33,35 @@ async function verifyAppleToken(token: string): Promise<{ sub: string; email?: s
   }) as { sub: string; email?: string };
 }
 
+const FUN_NAME_PREFIXES = [
+  'Trivia', 'Quiz', 'Brain', 'Star', 'Clever', 'Swift', 'Epic',
+  'Cosmic', 'Lucky', 'Mighty', 'Bold', 'Sharp', 'Quick', 'Pixel',
+];
+const FUN_NAME_SUFFIXES = [
+  'Hero', 'Wizard', 'Scout', 'Ace', 'Mind', 'Fox', 'Bolt',
+  'Spark', 'Flash', 'Sage', 'Ninja', 'Owl', 'Tiger', 'Wave',
+];
+
+function generateFunUsername(): string {
+  const prefix = FUN_NAME_PREFIXES[Math.floor(Math.random() * FUN_NAME_PREFIXES.length)];
+  const suffix = FUN_NAME_SUFFIXES[Math.floor(Math.random() * FUN_NAME_SUFFIXES.length)];
+  const num = Math.floor(Math.random() * 900 + 100);
+  return prefix + suffix + num;
+}
+
+function randomAvatarId(): number {
+  return Math.floor(Math.random() * 9) + 1; // 1-9
+}
+
 function buildAppleUsername(
   fullName: { givenName?: string; familyName?: string } | null,
   email: string | undefined,
-  userId: string,
 ): string {
-  let base = '';
   if (fullName?.givenName) {
-    base = (fullName.givenName + (fullName.familyName?.[0] ?? '')).replace(/[^a-zA-Z0-9]/g, '');
-  } else if (email) {
-    base = email.split('@')[0].replace(/[^a-zA-Z0-9]/g, '');
+    const base = (fullName.givenName + (fullName.familyName?.[0] ?? '')).replace(/[^a-zA-Z0-9]/g, '');
+    if (base.length >= 2) return base + Math.floor(Math.random() * 900 + 100);
   }
-  base = base.slice(0, 12) || 'Player';
-  return base + '_' + userId.slice(0, 4);
+  return generateFunUsername();
 }
 
 // ─── In-memory rate-limit tracker for forgot-password ────────────────
@@ -85,10 +101,11 @@ router.post('/signup', async (req: Request, res: Response): Promise<void> => {
   try {
     const passwordHash = await bcrypt.hash(password, 12);
     const userId = uuidv4();
+    const avatarId = randomAvatarId();
     await pool.query(
-      `INSERT INTO users (id, username, email, password_hash, is_verified)
-       VALUES ($1, $2, $3, $4, TRUE)`,
-      [userId, username, email.toLowerCase(), passwordHash]
+      `INSERT INTO users (id, username, email, password_hash, is_verified, avatar_id)
+       VALUES ($1, $2, $3, $4, TRUE, $5)`,
+      [userId, username, email.toLowerCase(), passwordHash, avatarId]
     );
 
     // Sign them in immediately — no email verification needed
@@ -369,11 +386,12 @@ router.post('/guest', async (req: Request, res: Response): Promise<void> => {
 
   try {
     await pool.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS is_guest BOOLEAN NOT NULL DEFAULT FALSE`);
+    const avatarId = randomAvatarId();
     const result = await pool.query(
-      `INSERT INTO users (id, username, email, password_hash, is_guest, is_verified)
-       VALUES ($1, $2, $3, $4, TRUE, TRUE)
+      `INSERT INTO users (id, username, email, password_hash, is_guest, is_verified, avatar_id)
+       VALUES ($1, $2, $3, $4, TRUE, TRUE, $5)
        RETURNING id, email, created_at`,
-      [id, internalUsername, email, passwordHash]
+      [id, internalUsername, email, passwordHash, avatarId]
     );
     const row = result.rows[0];
     const token = jwt.sign({ userId: row.id }, process.env.JWT_SECRET!, { expiresIn: '24h' });
@@ -407,15 +425,16 @@ router.post('/apple', async (req: Request, res: Response): Promise<void> => {
     }
 
     const userId = uuidv4();
-    const username = buildAppleUsername(fullName ?? null, claims.email, userId);
+    const username = buildAppleUsername(fullName ?? null, claims.email);
     const userEmail = claims.email ?? `apple_${appleId.slice(0, 8)}@apple.local`;
+    const avatarId = randomAvatarId();
 
     const inserted = await pool.query(
-      `INSERT INTO users (id, username, email, password_hash, apple_id, is_guest, is_verified)
-       VALUES ($1, $2, $3, $4, $5, FALSE, TRUE)
+      `INSERT INTO users (id, username, email, password_hash, apple_id, is_guest, is_verified, avatar_id)
+       VALUES ($1, $2, $3, $4, $5, FALSE, TRUE, $6)
        ON CONFLICT (apple_id) DO UPDATE SET apple_id = EXCLUDED.apple_id
        RETURNING id, username, email, avatar_id, is_guest`,
-      [userId, username, userEmail, uuidv4(), appleId]
+      [userId, username, userEmail, uuidv4(), appleId, avatarId]
     );
     const newUser = inserted.rows[0];
     const token = jwt.sign({ userId: newUser.id }, process.env.JWT_SECRET!, { expiresIn: '30d' });

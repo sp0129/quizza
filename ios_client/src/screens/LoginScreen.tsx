@@ -1,29 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View, Text, TextInput, TouchableOpacity, StyleSheet,
   KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator,
+  Image,
 } from 'react-native';
+import Animated, {
+  FadeIn, FadeInDown, FadeInUp,
+  useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing,
+} from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as AppleAuthentication from 'expo-apple-authentication';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
-import PizzaMascot from '../components/PizzaMascot';
-import { colors, gradients } from '../theme';
 import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
+const TAGLINES = [
+  '20,000+ questions. 35+ categories.',
+  'Challenge friends. Crush strangers.',
+  '35+ categories. One will humble you.',
+  'Every trivia night, in your pocket.',
+];
+
 export default function LoginScreen({ navigation }: Props) {
   const { login, loginWithApple, loginAsGuest } = useAuth();
+  const insets = useSafeAreaInsets();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [taglineIndex, setTaglineIndex] = useState(0);
+
+  // Gentle sway animation for mascot
+  const sway = useSharedValue(0);
+  useEffect(() => {
+    sway.value = withRepeat(
+      withSequence(
+        withTiming(6, { duration: 2000, easing: Easing.inOut(Easing.ease) }),
+        withTiming(-6, { duration: 2000, easing: Easing.inOut(Easing.ease) }),
+      ),
+      -1, // infinite
+      true,
+    );
+  }, []);
+  const swayStyle = useAnimatedStyle(() => ({
+    transform: [{ rotate: `${sway.value}deg` }],
+  }));
+
+  // Rotate taglines
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTaglineIndex(i => (i + 1) % TAGLINES.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   const onSuccess = () => {
-    // If Login was pushed onto the authenticated stack (e.g. by a guest),
-    // navigate back to Dashboard. In the unauthenticated stack the
-    // navigator switch handles it automatically — no navigation needed.
     if (navigation.canGoBack()) {
       navigation.navigate('MainTabs' as any);
     }
@@ -37,7 +71,6 @@ export default function LoginScreen({ navigation }: Props) {
       await login(email.trim().toLowerCase(), password);
       onSuccess();
     } catch (err: any) {
-      // If email not verified, navigate to verification screen
       if (err.code === 'EMAIL_NOT_VERIFIED' || err.message?.includes('verify your email')) {
         navigation.navigate('EmailVerification' as any, { email: email.trim().toLowerCase() });
         return;
@@ -75,24 +108,36 @@ export default function LoginScreen({ navigation }: Props) {
   };
 
   return (
-    <LinearGradient colors={gradients.bg} style={s.flex}>
+    <LinearGradient colors={['#0F172A', '#1E293B', '#0F172A']} style={s.flex}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={s.flex}>
-        <ScrollView contentContainerStyle={s.container} keyboardShouldPersistTaps="handled">
-          <View style={s.mascotArea}>
-            <View style={s.bubble}>
-              <Text style={s.bubbleText}>Let's get quizzing! 🍕</Text>
-            </View>
-            <PizzaMascot mood="excited" size={130} />
-          </View>
+        <ScrollView
+          contentContainerStyle={[s.container, { paddingTop: insets.top + 20, paddingBottom: insets.bottom + 20 }]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
+          {/* Hero section */}
+          <Animated.View entering={FadeIn.duration(600)} style={s.heroArea}>
+            <Animated.Image
+              source={require('../assets/mascot/explorer-star.png')}
+              style={[s.mascotImage, swayStyle]}
+              resizeMode="contain"
+            />
+            <Text style={s.appName}>Quizza</Text>
+            <Animated.Text
+              key={taglineIndex}
+              entering={FadeIn.duration(500)}
+              style={s.tagline}
+            >
+              {TAGLINES[taglineIndex]}
+            </Animated.Text>
+          </Animated.View>
 
-          <View style={s.card}>
-            <Text style={s.title}>Quizza</Text>
-            <Text style={s.subtitle}>Log in</Text>
-
+          {/* Login card */}
+          <Animated.View entering={FadeInUp.delay(200).duration(500)} style={s.card}>
             <TextInput
               style={s.input}
               placeholder="Email"
-              placeholderTextColor={colors.textMuted}
+              placeholderTextColor="rgba(148,163,184,0.6)"
               value={email}
               onChangeText={setEmail}
               keyboardType="email-address"
@@ -102,7 +147,7 @@ export default function LoginScreen({ navigation }: Props) {
             <TextInput
               style={s.input}
               placeholder="Password"
-              placeholderTextColor={colors.textMuted}
+              placeholderTextColor="rgba(148,163,184,0.6)"
               value={password}
               onChangeText={setPassword}
               secureTextEntry
@@ -115,39 +160,45 @@ export default function LoginScreen({ navigation }: Props) {
             {error ? <Text style={s.error}>{error}</Text> : null}
 
             <TouchableOpacity
-              style={[s.btn, s.btnGreen, loading && s.btnDisabled]}
+              style={[s.loginBtn, loading && s.btnDisabled]}
               onPress={handleLogin}
               disabled={loading}
+              activeOpacity={0.8}
             >
               {loading
                 ? <ActivityIndicator color="#fff" />
-                : <Text style={s.btnText}>Log in</Text>}
+                : <Text style={s.loginBtnText}>Log in</Text>}
             </TouchableOpacity>
 
             <View style={s.divider}>
               <View style={s.dividerLine} />
-              <Text style={s.dividerText}>or</Text>
+              <Text style={s.dividerText}>or continue with</Text>
               <View style={s.dividerLine} />
             </View>
 
             <AppleAuthentication.AppleAuthenticationButton
               buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN}
               buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
-              cornerRadius={12}
+              cornerRadius={14}
               style={s.appleBtn}
               onPress={handleApple}
             />
 
-            <TouchableOpacity style={s.guestBtn} onPress={handleGuest} disabled={loading}>
-              <Text style={s.guestBtnText}>Play as Guest (Solo only)</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={s.link}>
-              <Text style={s.linkText}>
-                No account? <Text style={s.linkAccent}>Sign up</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={s.signupLink}>
+              <Text style={s.signupText}>
+                No account? <Text style={s.signupAccent}>Sign up free</Text>
               </Text>
             </TouchableOpacity>
-          </View>
+          </Animated.View>
+
+          {/* Guest mode */}
+          <Animated.View entering={FadeInDown.delay(400).duration(400)}>
+            <TouchableOpacity style={s.guestBtn} onPress={handleGuest} disabled={loading} activeOpacity={0.7}>
+              <Text style={s.guestText}>
+                Just browsing? <Text style={s.guestAccent}>Try solo mode</Text> — no account needed
+              </Text>
+            </TouchableOpacity>
+          </Animated.View>
         </ScrollView>
       </KeyboardAvoidingView>
     </LinearGradient>
@@ -156,48 +207,144 @@ export default function LoginScreen({ navigation }: Props) {
 
 const s = StyleSheet.create({
   flex: { flex: 1 },
-  container: { flexGrow: 1, justifyContent: 'center', padding: 24 },
-  mascotArea: { alignItems: 'center', marginBottom: 28 },
-  bubble: {
-    backgroundColor: colors.surface,
-    paddingHorizontal: 16, paddingVertical: 10,
-    borderRadius: 16, marginBottom: 16,
-    borderWidth: 1, borderColor: colors.border,
+  container: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 24,
   },
-  bubbleText: { color: colors.textPrimary, fontSize: 15, fontWeight: '600' },
-  card: {
-    backgroundColor: colors.surface,
-    borderRadius: 20, padding: 24,
-    borderWidth: 1, borderColor: colors.border,
+
+  // Hero
+  heroArea: {
+    alignItems: 'center',
+    marginBottom: 28,
   },
-  title: { color: colors.textPrimary, fontSize: 28, fontWeight: '800', textAlign: 'center', marginBottom: 4 },
-  subtitle: { color: colors.textMuted, fontSize: 16, textAlign: 'center', marginBottom: 24 },
-  input: {
-    backgroundColor: 'rgba(30,41,59,0.6)',
-    borderRadius: 12, padding: 14,
-    color: colors.textPrimary, fontSize: 16,
-    borderWidth: 1, borderColor: colors.border,
+  mascotImage: {
+    width: 110,
+    height: 110,
     marginBottom: 12,
   },
-  error: { color: colors.red, fontSize: 14, marginBottom: 12 },
-  btn: { borderRadius: 12, padding: 16, alignItems: 'center', marginTop: 4 },
-  btnGreen: { backgroundColor: colors.green },
-  btnDisabled: { opacity: 0.6 },
-  btnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
-  divider: { flexDirection: 'row', alignItems: 'center', marginVertical: 16, gap: 10 },
-  dividerLine: { flex: 1, height: 1, backgroundColor: colors.border },
-  dividerText: { color: colors.textMuted, fontSize: 13 },
-  appleBtn: { width: '100%', height: 50, marginBottom: 12 },
-  guestBtn: {
-    borderRadius: 12, padding: 14, alignItems: 'center',
-    borderWidth: 1, borderColor: colors.border,
-    backgroundColor: 'rgba(255,255,255,0.05)',
-    marginBottom: 4,
+  appName: {
+    color: '#F1F5F9',
+    fontSize: 38,
+    fontWeight: '900',
+    letterSpacing: 2,
+    textAlign: 'center',
   },
-  guestBtnText: { color: colors.textMuted, fontSize: 15, fontWeight: '600' },
-  forgotLink: { alignSelf: 'flex-end', marginBottom: 4, marginTop: -4 },
-  forgotText: { color: colors.textMuted, fontSize: 13 },
-  link: { marginTop: 16, alignItems: 'center' },
-  linkText: { color: colors.textMuted, fontSize: 14 },
-  linkAccent: { color: colors.green, fontWeight: '600' },
+  tagline: {
+    color: '#F59E0B',
+    fontSize: 15,
+    fontWeight: '600',
+    textAlign: 'center',
+    marginTop: 8,
+    height: 20,
+  },
+
+  // Card
+  card: {
+    backgroundColor: 'rgba(30, 41, 59, 0.55)',
+    borderRadius: 24,
+    padding: 24,
+    borderWidth: 1,
+    borderColor: 'rgba(71, 85, 105, 0.4)',
+  },
+  input: {
+    backgroundColor: 'rgba(15, 23, 42, 0.5)',
+    borderRadius: 14,
+    padding: 16,
+    color: '#F1F5F9',
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(71, 85, 105, 0.35)',
+    marginBottom: 12,
+  },
+  forgotLink: {
+    alignSelf: 'flex-end',
+    marginBottom: 8,
+    marginTop: -4,
+  },
+  forgotText: {
+    color: '#94A3B8',
+    fontSize: 13,
+  },
+  error: {
+    color: '#EF4444',
+    fontSize: 14,
+    marginBottom: 12,
+    textAlign: 'center',
+  },
+
+  // Login button
+  loginBtn: {
+    backgroundColor: '#22C55E',
+    borderRadius: 14,
+    height: 52,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#22C55E',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  loginBtnText: {
+    color: '#FFFFFF',
+    fontSize: 17,
+    fontWeight: '700',
+  },
+  btnDisabled: { opacity: 0.6 },
+
+  // Divider
+  divider: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 18,
+    gap: 12,
+  },
+  dividerLine: {
+    flex: 1,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: 'rgba(71, 85, 105, 0.5)',
+  },
+  dividerText: {
+    color: '#64748B',
+    fontSize: 13,
+  },
+
+  // Apple button
+  appleBtn: {
+    width: '100%',
+    height: 52,
+    marginBottom: 16,
+  },
+
+  // Signup link
+  signupLink: {
+    alignItems: 'center',
+    marginTop: 4,
+  },
+  signupText: {
+    color: '#94A3B8',
+    fontSize: 14,
+  },
+  signupAccent: {
+    color: '#22C55E',
+    fontWeight: '700',
+  },
+
+  // Guest mode
+  guestBtn: {
+    alignItems: 'center',
+    marginTop: 20,
+    paddingVertical: 12,
+  },
+  guestText: {
+    color: '#64748B',
+    fontSize: 13,
+    textAlign: 'center',
+  },
+  guestAccent: {
+    color: '#94A3B8',
+    fontWeight: '600',
+    textDecorationLine: 'underline',
+  },
 });

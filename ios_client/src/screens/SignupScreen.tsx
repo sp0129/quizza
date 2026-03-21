@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import * as AppleAuthentication from 'expo-apple-authentication';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/useAuth';
-import PizzaMascot from '../components/PizzaMascot';
+import { Image } from 'react-native';
 import { colors, gradients } from '../theme';
 import type { RootStackParamList } from '../../App';
 
@@ -51,11 +51,15 @@ export default function SignupScreen({ navigation }: Props) {
   };
 
   return (
-    <LinearGradient colors={gradients.bg} style={s.flex}>
+    <LinearGradient colors={['#0F172A', '#1E293B', '#0F172A']} style={s.flex}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={s.flex}>
         <ScrollView contentContainerStyle={s.container} keyboardShouldPersistTaps="handled">
           <View style={s.mascotArea}>
-            <PizzaMascot mood="happy" size={110} />
+            <Image
+              source={require('../assets/mascot/explorer-star.png')}
+              style={{ width: 110, height: 110 }}
+              resizeMode="contain"
+            />
           </View>
 
           <View style={s.card}>

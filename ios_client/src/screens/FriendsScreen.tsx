@@ -12,12 +12,14 @@ import {
   Alert,
   Share,
   Image,
+  RefreshControl,
 } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import * as Clipboard from 'expo-clipboard';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useFocusEffect } from '@react-navigation/native';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../api/client';
 import { colors } from '../theme/colors';
@@ -53,22 +55,19 @@ export default function FriendsScreen({ navigation }: Props) {
   const [addingIds, setAddingIds] = useState<Set<string>>(new Set());
   const [selectedFriend, setSelectedFriend] = useState<Friend | null>(null);
   const [pendingFriends, setPendingFriends] = useState<Friend[]>([]);
-  const [incomingRequests, setIncomingRequests] = useState<Friend[]>([]);
-  const [respondingIds, setRespondingIds] = useState<Set<string>>(new Set());
+  const [refreshing, setRefreshing] = useState(false);
 
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
   // Fetch friends list + pending outgoing
   const fetchFriends = useCallback(async () => {
     try {
-      const [accepted, pending, incoming] = await Promise.all([
+      const [accepted, pending] = await Promise.all([
         api.get<Friend[]>('/friends'),
         api.get<Friend[]>('/friends/pending'),
-        api.get<Friend[]>('/friends/requests'),
       ]);
       setFriends(accepted);
       setPendingFriends(pending);
-      setIncomingRequests(incoming);
     } catch {
       // Keep existing
     } finally {
@@ -76,9 +75,22 @@ export default function FriendsScreen({ navigation }: Props) {
     }
   }, []);
 
+  const lastFetchRef = useRef<number>(0);
+
   useEffect(() => {
     fetchFriends();
+    lastFetchRef.current = Date.now();
   }, [fetchFriends]);
+
+  // Re-fetch when tab gains focus, throttled to once per 30s
+  useFocusEffect(
+    useCallback(() => {
+      if (Date.now() - lastFetchRef.current > 30_000) {
+        fetchFriends();
+        lastFetchRef.current = Date.now();
+      }
+    }, [fetchFriends])
+  );
 
   // Debounced search
   useEffect(() => {
@@ -152,32 +164,6 @@ export default function FriendsScreen({ navigation }: Props) {
     },
     [],
   );
-
-  const acceptRequest = useCallback(async (friend: Friend) => {
-    setRespondingIds(prev => new Set(prev).add(friend.id));
-    try {
-      await api.post(`/friends/requests/${friend.id}/accept`, {});
-      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      setIncomingRequests(prev => prev.filter(f => f.id !== friend.id));
-      fetchFriends();
-    } catch (err: any) {
-      Alert.alert('Error', err.message || 'Could not accept request');
-    } finally {
-      setRespondingIds(prev => { const next = new Set(prev); next.delete(friend.id); return next; });
-    }
-  }, [fetchFriends]);
-
-  const declineRequest = useCallback(async (friend: Friend) => {
-    setRespondingIds(prev => new Set(prev).add(friend.id));
-    try {
-      await api.post(`/friends/requests/${friend.id}/reject`, {});
-      setIncomingRequests(prev => prev.filter(f => f.id !== friend.id));
-    } catch (err: any) {
-      Alert.alert('Error', err.message || 'Could not decline request');
-    } finally {
-      setRespondingIds(prev => { const next = new Set(prev); next.delete(friend.id); return next; });
-    }
-  }, []);
 
   const shareInviteLink = useCallback(async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -328,7 +314,7 @@ export default function FriendsScreen({ navigation }: Props) {
         <View style={styles.loadingContainer}>
           <ActivityIndicator color={colors.brand.primary} size="large" />
         </View>
-      ) : friends.length === 0 && incomingRequests.length === 0 && pendingFriends.length === 0 ? (
+      ) : friends.length === 0 && pendingFriends.length === 0 ? (
         /* Empty state for cold start */
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.emptyContainer}>
@@ -360,6 +346,18 @@ export default function FriendsScreen({ navigation }: Props) {
           data={friends}
           keyExtractor={(item) => item.id}
           contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: insets.bottom + 20 }}
+          refreshControl={
+            <RefreshControl
+              refreshing={refreshing}
+              onRefresh={async () => {
+                setRefreshing(true);
+                await fetchFriends();
+                lastFetchRef.current = Date.now();
+                setRefreshing(false);
+              }}
+              tintColor={colors.text.secondary}
+            />
+          }
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.friendRow}
@@ -396,48 +394,9 @@ export default function FriendsScreen({ navigation }: Props) {
             </TouchableOpacity>
           )}
           ListHeaderComponent={
-            <>
-              {incomingRequests.length > 0 && (
-                <View style={styles.pendingSection}>
-                  <Text style={styles.listHeader}>FRIEND REQUESTS ({incomingRequests.length})</Text>
-                  {incomingRequests.map((r) => (
-                    <View key={r.id} style={[styles.friendRow, { borderLeftWidth: 3, borderLeftColor: colors.brand.primary }]}>
-                      <View style={styles.avatar}>
-                        {getAvatar(r.avatar_id) ? (
-                          <Image source={getAvatar(r.avatar_id)!.image} style={styles.avatarImage} resizeMode="cover" />
-                        ) : (
-                          <Text style={styles.avatarText}>{r.username[0]?.toUpperCase()}</Text>
-                        )}
-                      </View>
-                      <View style={styles.userInfo}>
-                        <Text style={styles.userName} numberOfLines={1}>{r.username}</Text>
-                      </View>
-                      <TouchableOpacity
-                        style={styles.addBtn}
-                        onPress={() => acceptRequest(r)}
-                        disabled={respondingIds.has(r.id)}
-                      >
-                        {respondingIds.has(r.id) ? (
-                          <ActivityIndicator color="#FFFFFF" size="small" />
-                        ) : (
-                          <Text style={styles.addBtnText}>Accept</Text>
-                        )}
-                      </TouchableOpacity>
-                      <TouchableOpacity
-                        style={styles.removeBtn}
-                        onPress={() => declineRequest(r)}
-                        disabled={respondingIds.has(r.id)}
-                      >
-                        <Text style={styles.removeBtnText}>✕</Text>
-                      </TouchableOpacity>
-                    </View>
-                  ))}
-                </View>
-              )}
-              {friends.length > 0 && (
-                <Text style={styles.listHeader}>YOUR FRIENDS ({friends.length})</Text>
-              )}
-            </>
+            friends.length > 0 ? (
+              <Text style={styles.listHeader}>YOUR FRIENDS ({friends.length})</Text>
+            ) : null
           }
           ListFooterComponent={pendingFriends.length > 0 ? (
             <View style={styles.pendingSection}>

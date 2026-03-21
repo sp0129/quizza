@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
-  ScrollView, TextInput, ActivityIndicator, Alert, Linking, Image,
+  ScrollView, TextInput, ActivityIndicator, Alert, Linking, Image, RefreshControl,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -63,10 +63,10 @@ export default function ProfileScreen({ navigation }: Props) {
   const [profileStats, setProfileStats] = useState<{
     gamesPlayedTotal: number; wins: number; winRate: number; winStreak: number; bestScore: number; dailyStreak: number;
   } | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
-  useEffect(() => {
-    getGamePreferences().then(setGamePrefs);
-    api.get<any>('/users/me/stats').then(s => setProfileStats({
+  const fetchProfileStats = () => {
+    return api.get<any>('/users/me/stats').then(s => setProfileStats({
       gamesPlayedTotal: s.gamesPlayedTotal ?? 0,
       wins: s.wins ?? 0,
       winRate: s.winRate ?? 0,
@@ -74,6 +74,11 @@ export default function ProfileScreen({ navigation }: Props) {
       bestScore: s.bestScore ?? 0,
       dailyStreak: s.streak ?? 0,
     })).catch(() => {});
+  };
+
+  useEffect(() => {
+    getGamePreferences().then(setGamePrefs);
+    fetchProfileStats();
   }, []);
 
   const updatePref = (update: Partial<GamePreferences>) => {
@@ -154,6 +159,17 @@ export default function ProfileScreen({ navigation }: Props) {
         style={s.scroll}
         contentContainerStyle={[s.content, { paddingTop: insets.top + 16, paddingBottom: insets.bottom + 32 }]}
         keyboardShouldPersistTaps="handled"
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={async () => {
+              setRefreshing(true);
+              await fetchProfileStats();
+              setRefreshing(false);
+            }}
+            tintColor={colors.textMuted}
+          />
+        }
       >
         {/* Header */}
         <View style={s.header}>
