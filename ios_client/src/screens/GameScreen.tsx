@@ -29,6 +29,7 @@ import { colors, gradients } from '../theme/colors';
 import { useAuth } from '../hooks/useAuth';
 import { getAvatar } from '../utils/avatars';
 import { playSound } from '../utils/sounds';
+import ErrorOverlay from '../components/ErrorOverlay';
 import type { RootStackParamList } from '../../App';
 
 // ---------------------------------------------------------------------------
@@ -554,6 +555,13 @@ export default function GameScreen({ route, navigation }: Props) {
   const [finalScores, setFinalScores] = useState<{ mine: number; opponent?: number } | null>(null);
   const [opponentQuit, setOpponentQuit] = useState(false);
 
+  // --- Error overlay state ---
+  const [errorOverlay, setErrorOverlay] = useState<{
+    visible: boolean;
+    canRetry: boolean;
+    pendingAnswer?: { answer: string; forcedTime?: number };
+  }>({ visible: false, canRetry: true });
+
   // --- Visual state ---
   const [mascotMood, setMascotMood] = useState<MascotMood>('thinking');
   const [mascotKey, setMascotKey] = useState(0);
@@ -618,7 +626,10 @@ export default function GameScreen({ route, navigation }: Props) {
       } else {
         startQuestionSequence();
       }
-    }).catch(console.error);
+    }).catch((err) => {
+      console.error(err);
+      setErrorOverlay({ visible: true, canRetry: false });
+    });
   }, [questionSetId, startQuestionSequence, isChallenge]);
 
   // --- WebSocket for sync mode ---
@@ -755,6 +766,11 @@ export default function GameScreen({ route, navigation }: Props) {
       }
     } catch (err) {
       console.error(err);
+      setErrorOverlay(prev => ({
+        visible: true,
+        canRetry: prev.canRetry,
+        pendingAnswer: { answer, forcedTime: forcedTime ?? Math.round((Date.now() - questionStartRef.current) / 1000) },
+      }));
     }
   }, [phase, currentIndex, gameId, mode, score, startQuestionSequence]);
 
@@ -862,6 +878,13 @@ export default function GameScreen({ route, navigation }: Props) {
           <ActivityIndicator color={colors.button} size="large" />
           <Text style={styles.loadingText}>Loading questions…</Text>
         </View>
+        <ErrorOverlay
+          visible={errorOverlay.visible}
+          title="Connection Lost"
+          message="Couldn't load the game. Check your connection and try again."
+          primaryLabel="Go Back"
+          onPrimary={() => navigation.navigate('MainTabs')}
+        />
       </LinearGradient>
     );
   }
@@ -1065,6 +1088,65 @@ export default function GameScreen({ route, navigation }: Props) {
           </Text>
         )}
       </View>
+      <ErrorOverlay
+        visible={errorOverlay.visible}
+        title="Connection Lost"
+        message={errorOverlay.canRetry
+          ? "Couldn't reach the server. Check your connection and try again."
+          : "Still can't connect. You can quit and your progress will be saved."}
+        primaryLabel={errorOverlay.canRetry ? 'Retry' : 'Quit Game'}
+        onPrimary={async () => {
+          if (errorOverlay.canRetry && errorOverlay.pendingAnswer) {
+            const { answer, forcedTime } = errorOverlay.pendingAnswer;
+            setErrorOverlay({ visible: false, canRetry: false });
+            try {
+              const result = await api.post<GameResult>(`/games/${gameId}/answer`, {
+                questionIndex: currentIndex,
+                selectedAnswer: answer === '__timeout__' ? '' : answer,
+                timeTakenSeconds: Math.min(forcedTime ?? 30, 30),
+              });
+              setLastResult(result);
+              if (result.points) {
+                setScore(s => s + result.points);
+                setLastPoints(result.points);
+                setPointsTrigger(k => k + 1);
+              }
+              setQuestionResults(prev => {
+                const next = [...prev];
+                next[currentIndex] = result.isCorrect;
+                return next;
+              });
+              triggerMascot(result.isCorrect ? 'celebrating' : 'wrong');
+              playSound(result.isCorrect ? 'correct' : 'wrong');
+              if (result.gameComplete) {
+                setFinalScores(prev => ({
+                  ...prev,
+                  mine: result.totalScore ?? score,
+                  ...(result.opponentScore !== undefined ? { opponent: result.opponentScore } : {}),
+                }));
+                setTimeout(() => setPhase('finished'), 1500);
+              } else {
+                setTimeout(() => {
+                  setCurrentIndex(i => i + 1);
+                  setSelectedAnswer(null);
+                  setLastResult(null);
+                  setTimerKey(k => k + 1);
+                  setQuestionAnimKey(k => k + 1);
+                  setMascotMood('thinking');
+                  setMascotKey(k => k + 1);
+                  startQuestionSequence();
+                }, 1500);
+              }
+            } catch {
+              setErrorOverlay({ visible: true, canRetry: false });
+            }
+          } else {
+            navigation.navigate('MainTabs');
+          }
+        }}
+        secondaryLabel={errorOverlay.canRetry ? 'Quit Game' : undefined}
+        onSecondary={errorOverlay.canRetry ? () => navigation.navigate('MainTabs') : undefined}
+      />
     </LinearGradient>
   );
 }

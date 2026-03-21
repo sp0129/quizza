@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
 import * as AppleAuthentication from 'expo-apple-authentication';
 import { api, setAuthToken, onAuthExpired } from '../api/client';
+import ErrorOverlay from '../components/ErrorOverlay';
 
 export interface User {
   id: string;
@@ -38,6 +39,7 @@ function randomGuestName(): string {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [authExpired, setAuthExpired] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -55,10 +57,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
     })();
 
-    // If any API call gets a 401, force logout so user sees login screen
+    // If any API call gets a 401, show error overlay (credentials already cleared by api client)
     onAuthExpired(() => {
-      setUser(null);
-      setAuthToken(null);
+      setAuthExpired(true);
     });
   }, []);
 
@@ -122,6 +123,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       login, signup, loginAsGuest, loginWithApple, refreshUser, logout,
     }}>
       {children}
+      <ErrorOverlay
+        visible={authExpired}
+        title="Session Expired"
+        message="Your session has ended. Please log in again to continue."
+        primaryLabel="Log In Again"
+        onPrimary={() => {
+          setAuthExpired(false);
+          setUser(null);
+          setAuthToken(null);
+        }}
+      />
     </AuthContext.Provider>
   );
 }

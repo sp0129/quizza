@@ -27,7 +27,7 @@ import RoomScreen from './src/screens/RoomScreen';
 import GuestJoinScreen from './src/screens/GuestJoinScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import FriendsScreen from './src/screens/FriendsScreen';
-import LeaderboardScreen from './src/screens/LeaderboardScreen';
+
 import ResultsScreen from './src/screens/ResultsScreen';
 import OpenChallengesScreen from './src/screens/OpenChallengesScreen';
 import ChallengeDetailScreen from './src/screens/ChallengeDetailScreen';
@@ -36,7 +36,6 @@ import ChallengeDetailScreen from './src/screens/ChallengeDetailScreen';
 export type TabParamList = {
   Home: undefined;
   OpenChallenges: undefined;
-  Leaderboard: undefined;
   Friends: undefined;
   Profile: undefined;
 };
@@ -55,7 +54,6 @@ export type RootStackParamList = {
   Dashboard: undefined;
   Profile: undefined;
   Friends: undefined;
-  Leaderboard: undefined;
   Category: { mode: 'solo' | 'room' | 'challenge'; target?: string; targetAvatarId?: number; preselectedCategory?: string };
   Game: {
     gameId: string;
@@ -124,7 +122,6 @@ const linking: LinkingOptions<RootStackParamList> = {
 const TAB_KEY_MAP: Record<string, keyof TabParamList> = {
   Home: 'Home',
   OpenChallenges: 'OpenChallenges',
-  Leaderboard: 'Leaderboard',
   Friends: 'Friends',
   Profile: 'Profile',
 };
@@ -140,7 +137,6 @@ function MainTabs() {
         const tabKey =
           activeRoute === 'Home' ? 'home' :
           activeRoute === 'OpenChallenges' ? 'open-challenges' :
-          activeRoute === 'Leaderboard' ? 'leaderboard' :
           activeRoute === 'Friends' ? 'friends' :
           activeRoute === 'Profile' ? 'profile' : 'home';
 
@@ -151,7 +147,6 @@ function MainTabs() {
               const routeName =
                 key === 'home' ? 'Home' :
                 key === 'open-challenges' ? 'OpenChallenges' :
-                key === 'leaderboard' ? 'Leaderboard' :
                 key === 'friends' ? 'Friends' :
                 key === 'profile' ? 'Profile' : 'Home';
               navigation.navigate(routeName);
@@ -173,7 +168,6 @@ function MainTabs() {
     >
       <Tab.Screen name="Home" component={DashboardScreen} />
       <Tab.Screen name="OpenChallenges" component={OpenChallengesScreen} />
-      <Tab.Screen name="Leaderboard" component={LeaderboardScreen} />
       <Tab.Screen name="Friends" component={FriendsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>

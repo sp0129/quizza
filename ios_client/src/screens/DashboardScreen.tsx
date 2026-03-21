@@ -80,6 +80,7 @@ export default function DashboardScreen({ navigation }: Props) {
   // New user detection
   const [gamesPlayedTotal, setGamesPlayedTotal] = useState<number | null>(null);
   const [statsLoaded, setStatsLoaded] = useState(false);
+  const [statsFailed, setStatsFailed] = useState(false);
   const [friendsCount, setFriendsCount] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [dailyStreak, setDailyStreak] = useState(0);
@@ -90,10 +91,10 @@ export default function DashboardScreen({ navigation }: Props) {
 
   const prevGamesRef = useRef<number | null>(null);
 
-  // Stats-based detection — only evaluated after stats load
-  // Before stats load, dashboard content is hidden (splash covers the gap)
+  // Stats-based detection — only evaluated after successful stats load
+  // If stats fetch failed (e.g. no network), don't assume new user
   const gpt = gamesPlayedTotal ?? 0;
-  const isNewUser = statsLoaded && (
+  const isNewUser = statsLoaded && !statsFailed && (
     (friendsCount === 0 && gpt < 5) ||
     (friendsCount > 0 && gpt === 0)
   );
@@ -196,9 +197,10 @@ export default function DashboardScreen({ navigation }: Props) {
         setDailyStreak(stats.streak ?? 0);
         setLastPlayedCategory(stats.lastPlayedCategory ?? null);
         setLastPlayedQuestionCount(stats.lastPlayedQuestionCount ?? 10);
+        setStatsFailed(false);
         setStatsLoaded(true);
       })
-      .catch(() => { setStatsLoaded(true); });
+      .catch(() => { setStatsFailed(true); setStatsLoaded(true); });
   }, [setMetrics]);
 
   // Refetch stats on mount and whenever returning from other screens
@@ -253,7 +255,7 @@ export default function DashboardScreen({ navigation }: Props) {
   // Pull-to-refresh
   const handleRefresh = useCallback(async () => {
     setRefreshing(true);
-    await Promise.all([fetchChallenges(), fetchFriendRequests()]);
+    await Promise.all([fetchStats(), fetchChallenges(), fetchFriendRequests()]);
     setRefreshing(false);
   }, [fetchChallenges, fetchFriendRequests]);
 

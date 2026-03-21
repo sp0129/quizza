@@ -5,9 +5,11 @@ const BASE = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
 // Token held in memory; populated by AuthProvider on startup
 let _token: string | null = null;
 let _onAuthExpired: (() => void) | null = null;
+let _authExpiredFired = false;
 
 export function setAuthToken(token: string | null) {
   _token = token;
+  if (token) _authExpiredFired = false;
 }
 
 export function getAuthToken(): string | null {
@@ -42,7 +44,9 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const data = await res.json();
   if (!res.ok) {
     // Token rejected — clear stored credentials and force re-login
-    if (res.status === 401 && _token) {
+    // Only fire once to avoid spamming multiple overlays from parallel requests
+    if (res.status === 401 && _token && !_authExpiredFired) {
+      _authExpiredFired = true;
       _token = null;
       SecureStore.deleteItemAsync('token').catch(() => {});
       SecureStore.deleteItemAsync('user').catch(() => {});
