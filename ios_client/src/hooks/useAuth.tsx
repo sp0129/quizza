@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
 import * as AppleAuthentication from 'expo-apple-authentication';
-import { api, setAuthToken } from '../api/client';
+import { api, setAuthToken, onAuthExpired } from '../api/client';
 
 export interface User {
   id: string;
@@ -54,6 +54,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setLoading(false);
       }
     })();
+
+    // If any API call gets a 401, force logout so user sees login screen
+    onAuthExpired(() => {
+      setUser(null);
+      setAuthToken(null);
+    });
   }, []);
 
   const storeAuth = async (token: string, u: User) => {

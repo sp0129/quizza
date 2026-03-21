@@ -198,7 +198,7 @@ export default function DashboardScreen({ navigation }: Props) {
         setLastPlayedQuestionCount(stats.lastPlayedQuestionCount ?? 10);
         setStatsLoaded(true);
       })
-      .catch(() => {});
+      .catch(() => { setStatsLoaded(true); });
   }, [setMetrics]);
 
   // Refetch stats on mount and whenever returning from other screens

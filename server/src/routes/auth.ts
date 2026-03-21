@@ -216,7 +216,7 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
 
     // Email verification no longer required for login
 
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET!, { expiresIn: '7d' });
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET!, { expiresIn: '30d' });
     const { password_hash, is_verified, ...safeUser } = user;
     res.json({ token, user: safeUser });
   } catch (err) {
