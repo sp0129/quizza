@@ -297,12 +297,22 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
       const freshGame = freshGameResult.rows[0];
       const otherScore = isPlayerA ? freshGame.player_b_score : freshGame.player_a_score;
 
-      // Solo game (no opponent) — mark completed immediately
+      // Solo game (no opponent AND no pending invitation) — mark completed immediately
+      // Challenge games also have player_b_id = null until the opponent accepts,
+      // so we must check for a pending invitation before completing.
       if (freshGame.player_b_id === null) {
-        await pool.query(
-          `UPDATE games SET status = 'completed', completed_at = NOW() WHERE id = $1`,
+        const invCheck = await pool.query(
+          `SELECT id FROM invitations WHERE game_id = $1 LIMIT 1`,
           [game.id]
         );
+        if (invCheck.rows.length === 0) {
+          // True solo game — complete it
+          await pool.query(
+            `UPDATE games SET status = 'completed', completed_at = NOW() WHERE id = $1`,
+            [game.id]
+          );
+        }
+        // else: challenge game waiting for opponent — leave status as-is
       }
       // Competitive game — if both players have finished, determine winner
       else if (otherScore !== null) {
