@@ -392,6 +392,47 @@ export default function ProfileScreen({ navigation }: Props) {
           <Text style={s.logoutBtnText}>Log Out</Text>
         </TouchableOpacity>
 
+        {/* Delete Account */}
+        <TouchableOpacity
+          style={s.deleteBtn}
+          onPress={() => {
+            Alert.alert(
+              'Delete Account',
+              'This will permanently delete your account, stats, and all game history. This cannot be undone.',
+              [
+                { text: 'Cancel', style: 'cancel' },
+                {
+                  text: 'Delete My Account',
+                  style: 'destructive',
+                  onPress: () => {
+                    Alert.alert(
+                      'Are you absolutely sure?',
+                      'All your data will be gone forever.',
+                      [
+                        { text: 'Keep Account', style: 'cancel' },
+                        {
+                          text: 'Yes, Delete Everything',
+                          style: 'destructive',
+                          onPress: async () => {
+                            try {
+                              await api.delete('/users/me');
+                              await logout();
+                            } catch (err: any) {
+                              Alert.alert('Error', err.message || 'Could not delete account');
+                            }
+                          },
+                        },
+                      ],
+                    );
+                  },
+                },
+              ],
+            );
+          }}
+        >
+          <Text style={s.deleteBtnText}>Delete Account</Text>
+        </TouchableOpacity>
+
         {/* Privacy Policy */}
         <TouchableOpacity onPress={() => Linking.openURL('https://quizza-eta.vercel.app/privacy.html')} style={s.privacyLink}>
           <Text style={s.privacyText}>Privacy Policy</Text>
@@ -581,6 +622,15 @@ const s = StyleSheet.create({
     borderWidth: 1, borderColor: 'rgba(239,68,68,0.3)',
   },
   logoutBtnText: { color: colors.red, fontSize: 16, fontWeight: '700' },
+  deleteBtn: {
+    alignItems: 'center',
+    paddingVertical: 12,
+    marginTop: 8,
+  },
+  deleteBtnText: {
+    color: colors.textMuted,
+    fontSize: 13,
+  },
   privacyLink: { alignItems: 'center', paddingVertical: 8 },
   privacyText: { color: colors.textMuted, fontSize: 12, textDecorationLine: 'underline' },
 });

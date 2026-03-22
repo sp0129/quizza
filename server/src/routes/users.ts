@@ -229,4 +229,28 @@ router.put('/:userId', requireAuth, async (req: AuthRequest, res: Response): Pro
   }
 });
 
+// DELETE /users/me — permanently delete account and all associated data
+router.delete('/me', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const me = req.userId!;
+  try {
+    // Delete in dependency order
+    await pool.query('DELETE FROM open_challenge_submissions WHERE user_id = $1', [me]);
+    await pool.query('DELETE FROM open_challenges WHERE posted_by_user_id = $1', [me]);
+    await pool.query('DELETE FROM room_answers WHERE player_id = $1', [me]);
+    await pool.query('DELETE FROM room_players WHERE player_id = $1', [me]);
+    await pool.query('DELETE FROM game_answers WHERE player_id = $1', [me]);
+    await pool.query('DELETE FROM invitations WHERE inviter_id = $1 OR invitee_id = $1', [me]);
+    await pool.query('DELETE FROM games WHERE player_a_id = $1 OR player_b_id = $1', [me]);
+    await pool.query('DELETE FROM friendships WHERE user_a_id = $1 OR user_b_id = $1', [me]);
+    await pool.query('DELETE FROM matchmaking_queue WHERE user_id = $1', [me]);
+    await pool.query('DELETE FROM password_reset_tokens WHERE user_id = $1', [me]);
+    await pool.query('DELETE FROM verification_tokens WHERE user_id = $1', [me]);
+    await pool.query('DELETE FROM users WHERE id = $1', [me]);
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 export default router;

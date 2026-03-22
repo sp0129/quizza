@@ -134,6 +134,28 @@ export default function ResultsScreen({ route, navigation }: Props) {
 
   // Signal dashboard to refresh stats when user returns
   useEffect(() => { setDashboardNeedsRefresh(); }, []);
+
+  // Prompt for App Store review after wins (not every time — 3rd win, then every 60 days)
+  useEffect(() => {
+    if (result !== 'win' || skip) return;
+    (async () => {
+      try {
+        const { isAvailableAsync, requestReview } = await import('expo-store-review');
+        if (!(await isAvailableAsync())) return;
+        const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+        const WINS_KEY = 'quizza_review_wins';
+        const LAST_KEY = 'quizza_review_last';
+        const wins = parseInt(await AsyncStorage.getItem(WINS_KEY) ?? '0') + 1;
+        await AsyncStorage.setItem(WINS_KEY, String(wins));
+        if (wins < 3) return;
+        const last = parseInt(await AsyncStorage.getItem(LAST_KEY) ?? '0');
+        if (Date.now() - last < 60 * 24 * 60 * 60 * 1000) return;
+        await AsyncStorage.setItem(LAST_KEY, String(Date.now()));
+        // Small delay so the win animation plays first
+        setTimeout(() => requestReview(), 2000);
+      } catch {}
+    })();
+  }, []);
   const [stage, setStage] = useState<Stage>(skip ? 'complete' : 'anticipation');
   const [reduceMotion, setReduceMotion] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
