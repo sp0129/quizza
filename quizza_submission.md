@@ -47,7 +47,8 @@
   - No pricing mentions
 
 - [ ] **Keywords Field** (100 characters max, comma-separated)
-  - `trivia,quiz,multiplayer,brain game,trivia game,knowledge,1v1,challenge,friends game,group,battle`
+  - `multiplayer,brain,pub,quiz,knowledge,battle,1v1,party,fast,compete,group`
+  - Note: "trivia", "social", "game", "friends", "challenge", "live" are already indexed from title/subtitle
 
 - [ ] **Age Rating**
   - Complete questionnaire in App Store Connect
@@ -83,9 +84,36 @@
   - Hold approved build until marketing is ready
   - Coordinate launch day with social posts, community notifications
 
+## Pre-Launch Actions (Before Submission)
+
+- [ ] **Seed reviews via TestFlight** (MOST IMPORTANT)
+  - Get 15-25 real testers playing 3-5 games each
+  - They'll trigger the in-app review prompt (80%+ score on 2nd+ game)
+  - Target: 4.5+ rating, 15+ reviews before public launch
+  - This is the single highest ROI action — costs nothing
+
+- [ ] **Outcome-based screenshot copy**
+  - "Think fast. Score higher."
+  - "Play live with friends"
+  - "Challenge the world"
+  - "Every second counts"
+  - NOT feature-based ("35 categories") — outcome-based converts better
+
+- [ ] **App Store description — first 2 lines**
+  - "Not just what you know — how fast you know it. Play live trivia, challenge friends, and compete with the world."
+
+- [ ] **Record 3-5 gameplay clips from TestFlight**
+  - Screen-record: close games, perfect scores, clutch wins
+  - Post on TikTok + Instagram Reels on launch day
+  - The product footage IS the ad — no production budget needed
+
+- [ ] **Seed community challenges**
+  - Ensure 10-15 diverse open challenges exist across popular categories
+  - New users need something to compete against day 1
+
 ## Post-Launch v1.1 Priorities
 
-- [ ] Streak local notifications (UNUserNotificationCenter — no server needed, highest-ROI retention lever)
+- [ ] PostHog analytics (game_completed, share_clicked, challenge_posted, invite_sent — can't improve what you can't measure)
 - [ ] Push notifications for challenges (expo-notifications + APNs + server infrastructure)
 - [ ] Deep links for 1v1 challenge invites (Universal Links + AASA)
 - [ ] Image-based share cards (react-native-view-shot)
