@@ -326,6 +326,13 @@ router.post('/:gameId/answer', requireAuth, async (req: AuthRequest, res: Respon
           [winnerId, game.id]
         );
 
+        // Mark the finishing player's challenge as seen (they see the result immediately)
+        const seenColumn = isPlayerA ? 'inviter_seen' : 'invitee_seen';
+        await pool.query(
+          `UPDATE invitations SET ${seenColumn} = TRUE WHERE game_id = $1`,
+          [game.id]
+        );
+
         // Notify sync game manager if applicable
         if (freshGame.game_mode === 'sync') {
           const otherPlayerId = isPlayerA ? freshGame.player_b_id : freshGame.player_a_id;

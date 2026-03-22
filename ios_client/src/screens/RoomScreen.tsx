@@ -768,6 +768,7 @@ export default function RoomScreen({ route, navigation }: Props) {
           {(() => {
             const suggestions = leaderboard.filter(e =>
               e.username !== user?.username &&
+              !e.is_guest &&
               !existingFriends.has(e.username) &&
               !addedFriends.has(e.username)
             );

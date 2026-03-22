@@ -225,7 +225,10 @@ class RoomGameManager {
       }
 
       const lbResult = await pool.query(
-        `SELECT username, score, finished FROM room_players WHERE room_id = $1 ORDER BY score DESC`,
+        `SELECT rp.username, rp.score, rp.finished, u.is_guest
+         FROM room_players rp
+         JOIN users u ON u.id = rp.player_id
+         WHERE rp.room_id = $1 ORDER BY rp.score DESC`,
         [roomId]
       );
       this.broadcastRoomFinished(roomId, lbResult.rows);
