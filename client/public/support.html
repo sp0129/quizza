@@ -3,86 +3,341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support – Quizza</title>
+  <title>Support — Quizza</title>
+  <meta name="description" content="Get help with Quizza. Contact us, report bugs, or request account deletion." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@800;900&family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:  #0d1f35;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.5);
+      --border: rgba(255,255,255,0.09);
+      --card:  rgba(255,255,255,0.04);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #0d0f1a;
-      color: #c8cfe0;
-      line-height: 1.7;
-      padding: 40px 20px 80px;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
     }
-    .container { max-width: 760px; margin: 0 auto; }
-    header { text-align: center; margin-bottom: 48px; }
-    header h1 { font-size: 2rem; color: #fff; margin-bottom: 8px; }
-    header p { color: #8892a4; font-size: 0.9rem; }
-    h2 {
-      font-size: 1.15rem;
-      color: #7eb8f7;
-      margin: 36px 0 12px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #1e2336;
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 80% -10%, rgba(34,197,94,0.08) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 40% at 10% 100%, rgba(245,158,11,0.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
     }
-    p, li { font-size: 0.95rem; color: #b0bac8; margin-bottom: 10px; }
-    ul { padding-left: 22px; }
-    li { margin-bottom: 6px; }
-    a { color: #7eb8f7; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .card {
-      background: #141726;
-      border: 1px solid #2a3050;
+    .page {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 48px;
+    }
+    .nav-logo {
+      font-family: 'Fredoka One', cursive;
+      font-weight: 400;
+      font-size: 22px;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      letter-spacing: 2px;
+    }
+    .nav-logo img { width: 24px; height: 24px; border-radius: 5px; }
+    .nav-back {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--white); }
+
+    /* HEADER */
+    .page-header {
+      margin-bottom: 40px;
+    }
+    .page-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .page-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: clamp(32px, 7vw, 46px);
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .page-sub {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* CONTACT CARDS */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 480px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      transition: border-color 0.2s;
+    }
+    .contact-card:hover { border-color: rgba(34,197,94,0.3); }
+    .contact-card.primary {
+      border-color: rgba(34,197,94,0.25);
+      background: rgba(34,197,94,0.06);
+      grid-column: 1 / -1;
+    }
+    .card-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .card-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .card-value a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    .card-value a:hover { text-decoration: underline; }
+    .card-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.45;
+    }
+
+    /* TOPICS */
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .topic-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 40px;
+    }
+    .topic-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      transition: background 0.15s;
+    }
+    .topic-item:hover { background: rgba(255,255,255,0.03); }
+    .topic-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .topic-body { flex: 1; }
+    .topic-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+    .topic-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .topic-desc a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    .topic-desc a:hover { text-decoration: underline; }
+
+    /* RESPONSE TIME */
+    .response-bar {
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 24px;
-      margin: 24px 0;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      font-size: 13px;
+      color: var(--muted);
     }
-    .card p { margin-bottom: 6px; }
-    .label { color: #8892a4; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .value { color: #fff; font-size: 1.05rem; }
-    footer { margin-top: 60px; text-align: center; color: #4a5268; font-size: 0.82rem; }
+    .response-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .footer-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-inner span, .footer-inner a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-inner a:hover { color: var(--white); }
+    .footer-links { display: flex; gap: 20px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Support</h1>
-      <p>Quizza &nbsp;·&nbsp; We're here to help</p>
-    </header>
 
-    <p>
-      If you're experiencing issues with Quizza, have a question, or want to share feedback,
-      we'd love to hear from you. Please reach out using the contact information below and
-      we'll get back to you as soon as possible.
-    </p>
+<div class="page">
+  <nav>
+    <a href="/" class="nav-logo"><img src="/explorer-star.png" alt="" /> Quizza</a>
+    <a href="/" class="nav-back">← Back to home</a>
+  </nav>
 
-    <div class="card">
-      <p class="label">Email</p>
-      <p class="value"><a href="mailto:contact@epidatainsights.com">contact@epidatainsights.com</a></p>
+  <header class="page-header">
+    <p class="page-tag">Support</p>
+    <h1 class="page-title">We're here to help</h1>
+    <p class="page-sub">Questions, bugs, feedback — reach out and we'll get back to you.</p>
+  </header>
+
+  <div class="contact-grid">
+    <div class="contact-card primary">
+      <div class="card-label">Email us</div>
+      <div class="card-value"><a href="mailto:contact@epidatainsights.com">contact@epidatainsights.com</a></div>
+      <div class="card-note">For all support requests, bug reports, and account issues.</div>
     </div>
-
-    <div class="card">
-      <p class="label">Developed by</p>
-      <p class="value"><a href="https://epidatainsights.com" target="_blank" rel="noopener">epidatainsights.com</a></p>
+    <div class="contact-card">
+      <div class="card-label">Developed by</div>
+      <div class="card-value"><a href="https://epidatainsights.com" target="_blank" rel="noopener">epidatainsights.com</a></div>
     </div>
-
-    <h2>Common Topics</h2>
-    <ul>
-      <li><strong>Account issues</strong> – trouble logging in, resetting your password, or linking Apple Sign-In.</li>
-      <li><strong>Bug reports</strong> – something not working as expected? Let us know what happened and we'll look into it.</li>
-      <li><strong>Feature requests</strong> – have an idea to make Quizza better? We're all ears.</li>
-      <li><strong>Account deletion</strong> – to request deletion of your account and all associated data, email us and we'll process it within 30 days.</li>
-      <li><strong>Privacy concerns</strong> – see our <a href="/privacy.html">Privacy Policy</a> or email us directly.</li>
-    </ul>
-
-    <h2>Response Time</h2>
-    <p>
-      We aim to respond to all inquiries within 48 hours. For urgent issues affecting your
-      ability to use the app, please include "Urgent" in your email subject line.
-    </p>
-
-    <footer>
-      <p>&copy; 2026 Quizza by <a href="https://epidatainsights.com" target="_blank" rel="noopener">EpiData Insights</a>. All rights reserved.</p>
-    </footer>
+    <div class="contact-card">
+      <div class="card-label">App version</div>
+      <div class="card-value" style="color: var(--white);">Quizza for iOS</div>
+      <div class="card-note">App ID: 6760268516</div>
+    </div>
   </div>
+
+  <div class="response-bar">
+    <div class="response-dot"></div>
+    We typically respond within 1–2 business days.
+  </div>
+
+  <p class="section-title">Common topics</p>
+  <div class="topic-list">
+    <div class="topic-item">
+      <div class="topic-icon">🔐</div>
+      <div class="topic-body">
+        <div class="topic-name">Account & login issues</div>
+        <div class="topic-desc">Trouble signing in, resetting your password, or linking Apple Sign-In. Email us with your username.</div>
+      </div>
+    </div>
+    <div class="topic-item">
+      <div class="topic-icon">🐛</div>
+      <div class="topic-body">
+        <div class="topic-name">Bug reports</div>
+        <div class="topic-desc">Something not working as expected? Describe what happened and which screen you were on — we'll look into it.</div>
+      </div>
+    </div>
+    <div class="topic-item">
+      <div class="topic-icon">💡</div>
+      <div class="topic-body">
+        <div class="topic-name">Feature requests</div>
+        <div class="topic-desc">Have an idea to make Quizza better? We're genuinely all ears.</div>
+      </div>
+    </div>
+    <div class="topic-item">
+      <div class="topic-icon">🗑️</div>
+      <div class="topic-body">
+        <div class="topic-name">Account deletion</div>
+        <div class="topic-desc">To permanently delete your account and all associated data, email us with the subject line "Delete my account." We'll process it within 30 days. You can also delete directly from the app under Profile → Delete Account.</div>
+      </div>
+    </div>
+    <div class="topic-item">
+      <div class="topic-icon">🔒</div>
+      <div class="topic-body">
+        <div class="topic-name">Privacy concerns</div>
+        <div class="topic-desc">See our <a href="/privacy.html">Privacy Policy</a> or email us directly for any data-related questions.</div>
+      </div>
+    </div>
+    <div class="topic-item">
+      <div class="topic-icon">❓</div>
+      <div class="topic-body">
+        <div class="topic-name">Question disputes</div>
+        <div class="topic-desc">Think a trivia answer is wrong? Tell us the category and question — we review every report.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span style="display:flex;align-items:center;gap:5px;"><img src="/explorer-star.png" alt="" style="width:16px;height:16px;" /> Quizza · © 2026</span>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
