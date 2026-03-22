@@ -3,175 +3,295 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Quizza</title>
+  <title>Privacy Policy — Quizza</title>
+  <meta name="description" content="Quizza Privacy Policy. How we collect, use, and protect your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@800;900&family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:  #0d1f35;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.5);
+      --text:  rgba(255,255,255,0.72);
+      --border: rgba(255,255,255,0.09);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #0d0f1a;
-      color: #c8cfe0;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
       line-height: 1.7;
-      padding: 40px 20px 80px;
     }
-    .container { max-width: 760px; margin: 0 auto; }
-    header { text-align: center; margin-bottom: 48px; }
-    header h1 { font-size: 2rem; color: #fff; margin-bottom: 8px; }
-    header p { color: #8892a4; font-size: 0.9rem; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 80% -10%, rgba(34,197,94,0.08) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 40% at 10% 100%, rgba(245,158,11,0.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .page {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 48px;
+    }
+    .nav-logo {
+      font-family: 'Fredoka One', cursive;
+      font-weight: 400;
+      font-size: 22px;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      letter-spacing: 2px;
+    }
+    .nav-logo img { width: 24px; height: 24px; border-radius: 5px; }
+    .nav-back {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--white); }
+
+    /* HEADER */
+    .page-header { margin-bottom: 40px; }
+    .page-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .page-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: clamp(28px, 7vw, 42px);
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .page-sub {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* CONTENT */
     h2 {
-      font-size: 1.15rem;
-      color: #7eb8f7;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--white);
       margin: 36px 0 12px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #1e2336;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
     }
-    p, li { font-size: 0.95rem; color: #b0bac8; margin-bottom: 10px; }
-    ul { padding-left: 22px; }
-    li { margin-bottom: 6px; }
-    a { color: #7eb8f7; text-decoration: none; }
+    p { margin-bottom: 12px; font-size: 14px; }
+    strong { color: rgba(255,255,255,0.85); }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 14px; margin-bottom: 6px; }
+    a { color: var(--green); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .chip {
-      display: inline-block;
-      background: #1a1f35;
-      border: 1px solid #2a3050;
-      border-radius: 6px;
-      padding: 2px 10px;
-      font-size: 0.82rem;
-      color: #8892a4;
-      margin-bottom: 4px;
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: auto;
     }
-    footer { margin-top: 60px; text-align: center; color: #4a5268; font-size: 0.82rem; }
+    .footer-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-inner span, .footer-inner a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-inner a:hover { color: var(--white); }
+    .footer-links { display: flex; gap: 20px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Privacy Policy</h1>
-      <p>Quizza &nbsp;·&nbsp; Effective date: March 8, 2026 &nbsp;·&nbsp; Last updated: March 8, 2026</p>
-    </header>
 
-    <p>
-      This Privacy Policy explains how Quizza ("we", "us", or "our") collects, uses, and protects
-      information when you use our mobile application and related services (collectively, the "App").
-      By using Quizza, you agree to the practices described in this policy.
-    </p>
+<div class="page">
+  <nav>
+    <a href="/" class="nav-logo"><img src="/explorer-star.png" alt="" /> Quizza</a>
+    <a href="/" class="nav-back">← Back to home</a>
+  </nav>
 
-    <h2>1. Information We Collect</h2>
-    <p><strong>Account information</strong></p>
-    <ul>
-      <li><strong>Email address</strong> – collected when you create an account with email/password.</li>
-      <li><strong>Username</strong> – a display name you choose.</li>
-      <li><strong>Password</strong> – stored as a one-way hash; we never store your plain-text password.</li>
-      <li><strong>Apple ID</strong> – if you sign in with Apple, we receive a unique identifier and, optionally, your name and email as provided by Apple. We do not receive your Apple password.</li>
-    </ul>
+  <header class="page-header">
+    <p class="page-tag">Legal</p>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-sub">Effective date: March 8, 2026 · Last updated: March 8, 2026</p>
+  </header>
 
-    <p><strong>Guest accounts</strong></p>
-    <ul>
-      <li>If you use the app as a guest, we create a temporary anonymous account. No email or personal details are required. Guest data may be deleted if you do not convert to a full account.</li>
-    </ul>
+  <p>
+    This Privacy Policy explains how Quizza ("we", "us", or "our") collects, uses, and protects
+    information when you use our mobile application and related services (collectively, the "App").
+    By using Quizza, you agree to the practices described in this policy.
+  </p>
 
-    <p><strong>Game &amp; usage data</strong></p>
-    <ul>
-      <li>Quiz answers, scores, and timestamps.</li>
-      <li>Game history and leaderboard positions.</li>
-      <li>Room and challenge participation records.</li>
-    </ul>
+  <h2>1. Information We Collect</h2>
 
-    <p><strong>Social data</strong></p>
-    <ul>
-      <li>Friend connections you initiate within the app.</li>
-      <li>Challenge invitations sent or received.</li>
-    </ul>
+  <p><strong>Account information</strong></p>
+  <ul>
+    <li><strong>Email address</strong> – collected when you create an account with email/password.</li>
+    <li><strong>Username</strong> – a display name you choose.</li>
+    <li><strong>Password</strong> – stored as a one-way hash; we never store your plain-text password.</li>
+    <li><strong>Apple ID</strong> – if you sign in with Apple, we receive a unique identifier and, optionally, your name and email as provided by Apple. We do not receive your Apple password.</li>
+  </ul>
 
-    <p><strong>Technical data</strong></p>
-    <ul>
-      <li>Authentication tokens stored locally on your device.</li>
-      <li>Basic server logs (IP address, request timestamps) for security and debugging. Logs are retained for a maximum of 30 days.</li>
-    </ul>
+  <p><strong>Guest accounts</strong></p>
+  <ul>
+    <li>If you use the app as a guest, we create a temporary anonymous account. No email or personal details are required. Guest data may be deleted if you do not convert to a full account.</li>
+  </ul>
 
-    <p><strong>What we do NOT collect</strong></p>
-    <ul>
-      <li>Location data.</li>
-      <li>Contacts, camera, or microphone access.</li>
-      <li>Device advertising identifiers.</li>
-      <li>Any data for advertising or ad-targeting purposes.</li>
-    </ul>
+  <p><strong>Game &amp; usage data</strong></p>
+  <ul>
+    <li>Quiz answers, scores, and timestamps.</li>
+    <li>Game history and leaderboard positions.</li>
+    <li>Room and challenge participation records.</li>
+  </ul>
 
-    <h2>2. How We Use Your Information</h2>
-    <ul>
-      <li>To create and manage your account.</li>
-      <li>To operate core app features: solo games, challenges, multiplayer rooms, and leaderboards.</li>
-      <li>To enable social features such as friends and challenge invitations.</li>
-      <li>To maintain app security and prevent abuse.</li>
-      <li>To diagnose bugs and improve the app experience.</li>
-    </ul>
-    <p>We do not sell, rent, or trade your personal information to third parties.</p>
+  <p><strong>Social data</strong></p>
+  <ul>
+    <li>Friend connections you initiate within the app.</li>
+    <li>Challenge invitations sent or received.</li>
+  </ul>
 
-    <h2>3. Third-Party Services</h2>
-    <p>Quizza uses the following third-party services:</p>
-    <ul>
-      <li>
-        <strong>Open Trivia Database (OpenTDB)</strong> – We fetch trivia questions from
-        <a href="https://opentdb.com" target="_blank" rel="noopener">opentdb.com</a>.
-        No personal data is sent to OpenTDB.
-      </li>
-      <li>
-        <strong>Sign in with Apple</strong> – Handled entirely by Apple. Apple's
-        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>
-        applies to that interaction.
-      </li>
-    </ul>
-    <p>We do not integrate third-party analytics SDKs, advertising networks, or social media trackers.</p>
+  <p><strong>Technical data</strong></p>
+  <ul>
+    <li>Authentication tokens stored locally on your device.</li>
+    <li>Basic server logs (IP address, request timestamps) for security and debugging. Logs are retained for a maximum of 30 days.</li>
+  </ul>
 
-    <h2>4. Data Retention</h2>
-    <ul>
-      <li>Account data is retained for as long as your account is active.</li>
-      <li>You may request deletion of your account and associated data at any time (see Section 7).</li>
-      <li>Guest accounts with no activity for 90 days may be automatically deleted.</li>
-      <li>Server logs are deleted after 30 days.</li>
-    </ul>
+  <p><strong>What we do NOT collect</strong></p>
+  <ul>
+    <li>Location data.</li>
+    <li>Contacts, camera, or microphone access.</li>
+    <li>Device advertising identifiers.</li>
+    <li>Any data for advertising or ad-targeting purposes.</li>
+  </ul>
 
-    <h2>5. Data Security</h2>
-    <p>
-      We use industry-standard practices to protect your data, including password hashing (bcrypt),
-      JWT-based authentication, and encrypted connections (HTTPS/WSS). No method of transmission
-      over the internet is 100% secure, and we cannot guarantee absolute security.
-    </p>
+  <h2>2. How We Use Your Information</h2>
+  <ul>
+    <li>To create and manage your account.</li>
+    <li>To operate core app features: solo games, challenges, multiplayer rooms, and leaderboards.</li>
+    <li>To enable social features such as friends and challenge invitations.</li>
+    <li>To maintain app security and prevent abuse.</li>
+    <li>To diagnose bugs and improve the app experience.</li>
+  </ul>
+  <p>We do not sell, rent, or trade your personal information to third parties.</p>
 
-    <h2>6. Children's Privacy</h2>
-    <p>
-      Quizza is not directed to children under 13. We do not knowingly collect personal information
-      from children under 13. If you believe a child has provided us personal data, please contact
-      us and we will delete it promptly.
-    </p>
+  <h2>3. Third-Party Services</h2>
+  <p>Quizza uses the following third-party services:</p>
+  <ul>
+    <li>
+      <strong>Open Trivia Database (OpenTDB)</strong> – We fetch trivia questions from
+      <a href="https://opentdb.com" target="_blank" rel="noopener">opentdb.com</a>.
+      No personal data is sent to OpenTDB.
+    </li>
+    <li>
+      <strong>Sign in with Apple</strong> – Handled entirely by Apple. Apple's
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>
+      applies to that interaction.
+    </li>
+  </ul>
+  <p>We do not integrate third-party analytics SDKs, advertising networks, or social media trackers.</p>
 
-    <h2>7. Your Rights &amp; Choices</h2>
-    <ul>
-      <li><strong>Access</strong> – You can view your profile and game history in the app.</li>
-      <li><strong>Correction</strong> – You can update your username in the app settings.</li>
-      <li><strong>Deletion</strong> – You can request deletion of your account and all associated data by contacting us at the email below. We will process the request within 30 days.</li>
-      <li><strong>Data portability</strong> – Contact us to request a copy of your data.</li>
-    </ul>
-    <p>
-      If you are in the European Economic Area, United Kingdom, or California, additional rights
-      may apply under GDPR or CCPA. Contact us to exercise these rights.
-    </p>
+  <h2>4. Data Retention</h2>
+  <ul>
+    <li>Account data is retained for as long as your account is active.</li>
+    <li>You may request deletion of your account and associated data at any time (see Section 7).</li>
+    <li>Guest accounts with no activity for 90 days may be automatically deleted.</li>
+    <li>Server logs are deleted after 30 days.</li>
+  </ul>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. When we do, we will update the
-      "Last updated" date at the top of this page. Continued use of the App after changes
-      constitutes acceptance of the revised policy.
-    </p>
+  <h2>5. Data Security</h2>
+  <p>
+    We use industry-standard practices to protect your data, including password hashing (bcrypt),
+    JWT-based authentication, and encrypted connections (HTTPS/WSS). No method of transmission
+    over the internet is 100% secure, and we cannot guarantee absolute security.
+  </p>
 
-    <h2>9. Contact Us</h2>
-    <p>
-      If you have any questions or requests regarding this Privacy Policy, please contact us at:<br />
-      <a href="mailto:privacy@quizza.app">privacy@quizza.app</a>
-    </p>
+  <h2>6. Children's Privacy</h2>
+  <p>
+    Quizza is not directed to children under 13. We do not knowingly collect personal information
+    from children under 13. If you believe a child has provided us personal data, please contact
+    us and we will delete it promptly.
+  </p>
 
-    <footer>
-      <p>&copy; 2026 Quizza. All rights reserved.</p>
-    </footer>
+  <h2>7. Your Rights &amp; Choices</h2>
+  <ul>
+    <li><strong>Access</strong> – You can view your profile and game history in the app.</li>
+    <li><strong>Correction</strong> – You can update your username in the app under Profile.</li>
+    <li><strong>Deletion</strong> – You can delete your account directly in the app under Profile → Delete Account. Alternatively, email us and we will process the request within 30 days.</li>
+    <li><strong>Data portability</strong> – Contact us to request a copy of your data.</li>
+  </ul>
+  <p>
+    If you are in the European Economic Area, United Kingdom, or California, additional rights
+    may apply under GDPR or CCPA. Contact us to exercise these rights.
+  </p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>
+    We may update this Privacy Policy from time to time. When we do, we will update the
+    "Last updated" date at the top of this page. Continued use of the App after changes
+    constitutes acceptance of the revised policy.
+  </p>
+
+  <h2>9. Contact Us</h2>
+  <p>
+    If you have any questions or requests regarding this Privacy Policy, please contact us at:<br />
+    <a href="mailto:contact@epidatainsights.com">contact@epidatainsights.com</a>
+  </p>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span style="display:flex;align-items:center;gap:5px;"><img src="/explorer-star.png" alt="" style="width:16px;height:16px;" /> Quizza · &copy; 2026</span>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+    </div>
   </div>
+</footer>
+
 </body>
 </html>
