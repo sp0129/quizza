@@ -1,30 +1,732 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quizza — Social Trivia Game</title>
-    <meta name="description" content="20,000+ questions. 35+ categories. Challenge your friends." />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-itunes-app" content="app-id=6760268516" />
 
-    <!-- Open Graph (Facebook, iMessage, WhatsApp, etc.) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Quizza — Social Trivia Game" />
-    <meta property="og:description" content="20,000+ questions. 35+ categories. Challenge your friends." />
-    <meta property="og:image" content="https://quizza-eta.vercel.app/og-image.png" />
-    <meta property="og:url" content="https://quizza-eta.vercel.app" />
+  <title>Quizza — Social Trivia for People Who Know Things</title>
+  <meta name="description" content="20,000+ questions. 35+ categories. Play live, challenge friends, take on the community. Get Quizza on the App Store." />
 
-    <!-- Twitter/X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Quizza — Social Trivia Game" />
-    <meta name="twitter:description" content="20,000+ questions. 35+ categories. Challenge your friends." />
-    <meta name="twitter:image" content="https://quizza-eta.vercel.app/og-image.png" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- OG / Social -->
+  <meta property="og:title" content="Quizza — Social Trivia" />
+  <meta property="og:description" content="20,000+ questions. 35+ categories. Your people are waiting." />
+  <meta property="og:image" content="https://quizza-eta.vercel.app/og-image.png" />
+  <meta property="og:url" content="https://quizza-eta.vercel.app" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quizza — Social Trivia" />
+  <meta name="twitter:description" content="20,000+ questions. 35+ categories. Your people are waiting." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:   #0d1f35;
+      --navy2:  #112240;
+      --green:  #22c55e;
+      --green2: #16a34a;
+      --amber:  #f59e0b;
+      --white:  #ffffff;
+      --muted:  rgba(255,255,255,0.55);
+      --border: rgba(255,255,255,0.10);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── BACKGROUND GLOWS ── */
+    .bg-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glow-1 {
+      width: 600px; height: 600px;
+      background: rgba(34, 197, 94, 0.10);
+      top: -200px; right: -200px;
+    }
+    .glow-2 {
+      width: 500px; height: 500px;
+      background: rgba(245, 158, 11, 0.07);
+      bottom: -100px; left: -150px;
+    }
+    .glow-3 {
+      width: 300px; height: 300px;
+      background: rgba(34, 197, 94, 0.06);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100dvh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo img { width: 28px; height: 28px; }
+    .nav-pill {
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      width: 100%;
+      max-width: 700px;
+      padding: 16px 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* mascot */
+    .mascot-wrap {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      margin-bottom: 24px;
+    }
+    .mascot-ring {
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 2px solid rgba(34,197,94,0.25);
+      animation: ring-pulse 3s ease-in-out infinite;
+    }
+    .mascot-ring-2 {
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      border: 1px solid rgba(34,197,94,0.12);
+      animation: ring-pulse 3s ease-in-out infinite 0.5s;
+    }
+    @keyframes ring-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.04); }
+    }
+    .mascot-bg {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(34,197,94,0.08);
+      border: 1.5px solid rgba(34,197,94,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: mascot-bob 3s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+    }
+    .mascot-bg img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+    }
+    @keyframes mascot-bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .mascot-shadow {
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 12px;
+      background: rgba(34,197,94,0.15);
+      border-radius: 50%;
+      filter: blur(6px);
+      animation: shadow-breathe 3s ease-in-out infinite;
+    }
+    @keyframes shadow-breathe {
+      0%, 100% { width: 80px; opacity: 0.8; }
+      50% { width: 60px; opacity: 0.4; }
+    }
+
+    /* headline */
+    .headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(36px, 8vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+    }
+    .headline .accent { color: var(--green); }
+    .headline .amber { color: var(--amber); }
+
+    .subline {
+      font-size: clamp(15px, 3.5vw, 18px);
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 420px;
+      margin-bottom: 36px;
+    }
+    .subline strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+    /* ── PRIMARY CTA ── */
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+      margin-bottom: 48px;
+    }
+
+    .btn-appstore {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 16px;
+      padding: 18px 28px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+      box-shadow: 0 0 0 0 rgba(34,197,94,0.4);
+      animation: btn-pulse 2.5s ease-in-out infinite 1s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-appstore::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    @keyframes btn-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(34,197,94,0); }
+    }
+    .btn-appstore:hover {
+      background: var(--green2);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(34,197,94,0.25);
+      animation: none;
+    }
+    .btn-appstore:active { transform: scale(0.97); }
+
+    .apple-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+    .btn-appstore-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      line-height: 1.2;
+    }
+    .btn-appstore-text .top { font-size: 11px; font-weight: 500; opacity: 0.85; }
+    .btn-appstore-text .bottom { font-size: 18px; font-weight: 700; }
+
+    .cta-note {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .cta-note .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: flex;
+      gap: 0;
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 56px;
+      background: rgba(255,255,255,0.03);
+    }
+    .stat {
+      flex: 1;
+      padding: 18px 12px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-num .green { color: var(--green); }
+    .stat-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── MODES ── */
+    .modes-section {
+      width: 100%;
+      max-width: 700px;
+      padding: 0 24px;
+      margin-bottom: 56px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .modes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .mode-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .mode-card:hover {
+      border-color: rgba(34,197,94,0.3);
+      background: rgba(34,197,94,0.05);
+      transform: translateY(-2px);
+    }
+    .mode-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+    .mode-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .mode-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* ── SHARE CARD PREVIEW ── */
+    .preview-section {
+      width: 100%;
+      max-width: 700px;
+      padding: 0 24px;
+      margin-bottom: 64px;
+    }
+    .preview-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .share-cards {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: none;
+    }
+    .share-cards::-webkit-scrollbar { display: none; }
+    .share-card {
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-family: 'DM Mono', 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+      min-width: 240px;
+      transition: border-color 0.2s;
+    }
+    .share-card:hover { border-color: rgba(34,197,94,0.3); }
+    .share-card .s-emoji { font-size: 16px; }
+    .share-card .s-cat { color: var(--white); font-weight: 600; }
+    .share-card .s-score { color: var(--green); }
+    .share-card .s-hook { color: var(--muted); }
+    .share-card .s-link { color: rgba(34,197,94,0.7); font-size: 11px; }
+    .share-card .s-divider { color: rgba(255,255,255,0.2); }
+    .share-card-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ── FOOTER CTA ── */
+    .footer-cta {
+      width: 100%;
+      max-width: 700px;
+      padding: 0 24px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    .footer-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(24px, 5vw, 36px);
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+    .footer-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--white);
+      color: var(--navy);
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 15px 32px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .footer-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+    .footer-btn:active { transform: scale(0.97); }
+
+    /* ── FOOTER ── */
+    footer {
+      width: 100%;
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    footer a, footer span {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    footer a:hover { color: var(--white); }
+
+    /* ── REVEAL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: reveal-up 0.6s ease forwards;
+    }
+    @keyframes reveal-up {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.35s; }
+    .delay-4 { animation-delay: 0.5s; }
+    .delay-5 { animation-delay: 0.65s; }
+    .delay-6 { animation-delay: 0.8s; }
+    .delay-7 { animation-delay: 0.95s; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 520px) {
+      .modes-grid { grid-template-columns: 1fr; }
+      .stats-row { flex-wrap: wrap; }
+      .stat { min-width: 33%; border-bottom: 1px solid var(--border); }
+      .stat:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
+<div class="bg-glow glow-3"></div>
+
+<div class="page">
+
+  <!-- NAV -->
+  <nav class="reveal">
+    <div class="nav-logo">
+      <img src="/og-image.png" alt="Quizza" style="width:28px;height:28px;border-radius:6px;" />
+      Quizza
+    </div>
+    <div class="nav-pill">Now on iOS</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="mascot-wrap reveal delay-1">
+      <div class="mascot-ring"></div>
+      <div class="mascot-ring-2"></div>
+      <div class="mascot-bg">
+        <img src="/explorer-star.png" alt="Quizza mascot" />
+        <div class="mascot-shadow"></div>
+      </div>
+    </div>
+
+    <h1 class="headline reveal delay-2">
+      Trivia that<br/>
+      <span class="accent">actually</span> gets<br/>
+      <span class="amber">competitive</span>
+    </h1>
+
+    <p class="subline reveal delay-3">
+      <strong>20,000+ questions. 35+ categories.</strong><br/>
+      Play live with friends, challenge rivals, or take on the community.<br/>
+      Your bragging rights are one game away.
+    </p>
+
+    <!-- PRIMARY CTA -->
+    <div class="cta-group reveal delay-4">
+      <a
+        href="https://apps.apple.com/app/id6760268516"
+        class="btn-appstore"
+      >
+        <svg class="apple-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <div class="btn-appstore-text">
+          <span class="top">Download on the</span>
+          <span class="bottom">App Store</span>
+        </div>
+      </a>
+      <p class="cta-note">
+        <span class="dot"></span>
+        Free to download · iOS only · No account needed to play
+      </p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row reveal delay-5">
+      <div class="stat">
+        <div class="stat-num"><span class="green">20K+</span></div>
+        <div class="stat-label">Questions</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">35+</div>
+        <div class="stat-label">Categories</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Play Modes</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span class="green">Free</span></div>
+        <div class="stat-label">To Start</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODES -->
+  <section class="modes-section reveal delay-6">
+    <p class="section-label">Pick your battlefield</p>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <div class="mode-icon">🎯</div>
+        <div class="mode-name">Warm Up Solo</div>
+        <div class="mode-desc">20,000+ questions across 35+ categories. Jump in right now — no friends required. Yet.</div>
+      </div>
+      <div class="mode-card">
+        <div class="mode-icon">🏟️</div>
+        <div class="mode-name">Community Challenges</div>
+        <div class="mode-desc">Browse challenges from other players. Beat their score. Leave your mark.</div>
+      </div>
+      <div class="mode-card">
+        <div class="mode-icon">🚪</div>
+        <div class="mode-name">Live Game Night</div>
+        <div class="mode-desc">Share a code, play in real time. For when the group chat needs settling.</div>
+      </div>
+      <div class="mode-card">
+        <div class="mode-icon">⚔️</div>
+        <div class="mode-name">Challenge a Friend</div>
+        <div class="mode-desc">Send a direct duel. Play on your own time. Find out who really knows more.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE CARD PREVIEWS -->
+  <section class="preview-section reveal delay-7">
+    <p class="preview-label">Shareable results — your new flex</p>
+    <div class="share-cards">
+
+      <div class="share-card">
+        <div><span class="s-emoji">⚔️</span> <span class="s-cat">POP MUSIC — QUIZZA</span></div>
+        <div class="s-divider">──────────</div>
+        <div class="s-score">Beat @cocobear: 546 vs 385</div>
+        <div class="s-hook">Think you can take me? 😏</div>
+        <div class="s-link">quizza-eta.vercel.app/share</div>
+        <div class="share-card-label">1v1 Win</div>
+      </div>
+
+      <div class="share-card">
+        <div><span class="s-emoji">🧪</span> <span class="s-cat">CHEMISTRY — QUIZZA</span></div>
+        <div class="s-divider">──────────</div>
+        <div class="s-score">10/10 correct · 590 pts 🎯</div>
+        <div class="s-hook">No one's beating this. Prove me wrong.</div>
+        <div class="s-link">quizza-eta.vercel.app/share</div>
+        <div class="share-card-label">Perfect Score</div>
+      </div>
+
+      <div class="share-card">
+        <div><span class="s-emoji">🎤</span> <span class="s-cat">POP MUSIC — QUIZZA</span></div>
+        <div class="s-divider">──────────</div>
+        <div class="s-score">Lost to @cocobear: 385 vs 546</div>
+        <div class="s-hook">Who can avenge me? 😤</div>
+        <div class="s-link">quizza-eta.vercel.app/share</div>
+        <div class="share-card-label">1v1 Loss</div>
+      </div>
+
+      <div class="share-card">
+        <div><span class="s-emoji">🌍</span> <span class="s-cat">GEOGRAPHY — QUIZZA</span></div>
+        <div class="s-divider">──────────</div>
+        <div class="s-score">8/10 correct · 486 pts</div>
+        <div class="s-hook">Harder than it looks. Try it.</div>
+        <div class="s-link">quizza-eta.vercel.app/share</div>
+        <div class="share-card-label">Solo Score</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <h2 class="footer-headline">
+      20,000+ questions.<br/>Infinite bragging rights.
+    </h2>
+    <a
+      href="https://apps.apple.com/app/id6760268516"
+      class="footer-btn"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1f35">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      Get Quizza Free
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span style="display:flex;align-items:center;gap:6px;"><img src="/explorer-star.png" alt="" style="width:18px;height:18px;" /> Quizza</span>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/support.html">Support</a>
+    <span>&copy; 2026</span>
+  </footer>
+
+</div>
+
+<script>
+  // Deep link handling: if arriving from a share or challenge link,
+  // show contextual message before the App Store CTA
+  (function() {
+    const path = window.location.pathname;
+    const params = new URLSearchParams(window.location.search);
+    const challenge = params.get('challenge');
+    const category = params.get('category');
+
+    if (path === '/share' || challenge || category) {
+      const hero = document.querySelector('.hero');
+      const banner = document.createElement('div');
+      banner.style.cssText = 'background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.35);border-radius:14px;padding:14px 18px;margin-bottom:24px;font-size:14px;color:rgba(255,255,255,0.85);text-align:center;line-height:1.5;max-width:380px;width:100%;';
+
+      if (challenge) {
+        banner.innerHTML = '<div style="font-size:20px;margin-bottom:6px;">⚔️</div><strong style="color:#22c55e;">Someone challenged you!</strong><br/>Download Quizza to accept and play.';
+      } else if (category) {
+        const cat = decodeURIComponent(category);
+        banner.innerHTML = '<div style="font-size:20px;margin-bottom:6px;">🎯</div>Think you can beat this <strong style="color:#22c55e;">' + cat + '</strong> score?<br/>Download Quizza to find out.';
+      } else if (path === '/share') {
+        banner.innerHTML = '<div style="font-size:20px;margin-bottom:6px;">🏆</div><strong style="color:#22c55e;">Think you can beat this score?</strong><br/>Download Quizza and prove it.';
+      }
+
+      const mascot = document.querySelector('.mascot-wrap');
+      hero.insertBefore(banner, mascot);
+    }
+  })();
+</script>
+
+</body>
 </html>
