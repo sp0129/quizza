@@ -433,6 +433,32 @@ export default function ProfileScreen({ navigation }: Props) {
           <Text style={s.deleteBtnText}>Delete Account</Text>
         </TouchableOpacity>
 
+        {/* Tip Jar */}
+        <TouchableOpacity
+          style={s.tipBtn}
+          onPress={async () => {
+            try {
+              const IAP = await import('react-native-iap');
+              await IAP.initConnection();
+              const products = await IAP.fetchProducts({ skus: ['com.quizza.app.tip'] });
+              if (!products || products.length === 0) {
+                Alert.alert('Not Available', 'Tip jar is not available right now.');
+                return;
+              }
+              await IAP.requestPurchase({ request: { sku: 'com.quizza.app.tip' } } as any);
+              Alert.alert('Thank you! 🎉', "You're awesome. This keeps Quizza ad-free.");
+            } catch (err: any) {
+              if (err.code !== 'E_USER_CANCELLED') {
+                Alert.alert('Error', err.message || 'Purchase failed');
+              }
+            }
+          }}
+          activeOpacity={0.8}
+        >
+          <Text style={s.tipBtnText}>☕ Buy us a coffee — $2.99</Text>
+          <Text style={s.tipBtnSub}>Keep Quizza ad-free</Text>
+        </TouchableOpacity>
+
         {/* Privacy Policy */}
         <TouchableOpacity onPress={() => Linking.openURL('https://quizza-eta.vercel.app/privacy.html')} style={s.privacyLink}>
           <Text style={s.privacyText}>Privacy Policy</Text>
@@ -630,6 +656,24 @@ const s = StyleSheet.create({
   deleteBtnText: {
     color: colors.textMuted,
     fontSize: 13,
+  },
+  tipBtn: {
+    backgroundColor: 'rgba(245,158,11,0.1)',
+    borderRadius: 14,
+    padding: 16,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(245,158,11,0.25)',
+  },
+  tipBtnText: {
+    color: '#F59E0B',
+    fontSize: 15,
+    fontWeight: '700',
+  },
+  tipBtnSub: {
+    color: colors.textMuted,
+    fontSize: 12,
+    marginTop: 3,
   },
   privacyLink: { alignItems: 'center', paddingVertical: 8 },
   privacyText: { color: colors.textMuted, fontSize: 12, textDecorationLine: 'underline' },

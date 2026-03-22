@@ -11,6 +11,7 @@ import {
   RefreshControl,
   Share,
   Image,
+  AppState,
 } from 'react-native';
 import Animated, {
   FadeInDown,
@@ -44,6 +45,7 @@ import TransitionOverlay from '../components/TransitionOverlay';
 import PizzaMascot from '../components/PizzaMascot';
 import { useFocusEffect, useIsFocused } from '@react-navigation/native';
 import { consumeDashboardRefresh } from '../utils/refreshFlag';
+import { scheduleStreakReminder, cancelStreakReminder } from '../utils/streakNotification';
 import type { RootStackParamList } from '../../App';
 import type { Challenge, SearchedUser } from '../stores/dashboard';
 
@@ -226,6 +228,18 @@ export default function DashboardScreen({ navigation }: Props) {
   }, []);
 
   useEffect(() => { fetchFriendRequests(); }, [fetchFriendRequests]);
+
+  // Schedule streak reminder when app goes to background
+  useEffect(() => {
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'background' && dailyStreak > 0) {
+        scheduleStreakReminder(dailyStreak);
+      } else if (state === 'active') {
+        cancelStreakReminder();
+      }
+    });
+    return () => sub.remove();
+  }, [dailyStreak]);
 
   const handleAcceptRequest = useCallback(async (req: FriendRequest) => {
     setRespondingIds(prev => new Set(prev).add(req.id));
