@@ -384,15 +384,17 @@ export default function ProfileScreen({ navigation }: Props) {
           style={s.tipBtn}
           onPress={async () => {
             try {
-              const IAP = await import('react-native-iap');
-              await IAP.initConnection();
-              const products = await IAP.fetchProducts({ skus: ['com.quizza.app.tip'] });
-              if (!products || products.length === 0) {
+              const IAP = await import('expo-in-app-purchases');
+              await IAP.connectAsync();
+              const { results } = await IAP.getProductsAsync(['com.quizza.app.tip']);
+              if (!results || results.length === 0) {
                 Alert.alert('Not Available', 'Tip jar is not available right now.');
+                await IAP.disconnectAsync();
                 return;
               }
-              await IAP.requestPurchase({ request: { sku: 'com.quizza.app.tip' } } as any);
+              await IAP.purchaseItemAsync('com.quizza.app.tip');
               Alert.alert('Thank you! 🎉', "You're awesome. This keeps Quizza ad-free.");
+              await IAP.disconnectAsync();
             } catch (err: any) {
               if (err.code !== 'E_USER_CANCELLED') {
                 Alert.alert('Error', err.message || 'Purchase failed');

@@ -15,7 +15,7 @@
       "supportsTablet": false,
       "bundleIdentifier": "com.quizza.app",
       "usesAppleSignIn": true,
-      "buildNumber": "25",
+      "buildNumber": "30",
       "associatedDomains": [
         "applinks:quizza-eta.vercel.app"
       ],
@@ -25,7 +25,8 @@
     },
     "plugins": [
       "expo-apple-authentication",
-      "expo-secure-store"
+      "expo-secure-store",
+      "@sentry/react-native"
     ],
     "android": {
       "adaptiveIcon": {
