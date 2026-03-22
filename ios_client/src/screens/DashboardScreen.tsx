@@ -156,9 +156,9 @@ export default function DashboardScreen({ navigation }: Props) {
     await AsyncStorage.setItem(ONBOARDING_KEY, 'true');
   }, []);
 
-  const handleOnboardingCreateRoom = useCallback(async () => {
+  const handleOnboardingSolo = useCallback(async () => {
     await dismissOnboarding();
-    navigation.navigate('Category', { mode: 'room' });
+    navigation.navigate('Category', { mode: 'solo' });
   }, [dismissOnboarding, navigation]);
 
   // Fetch user metrics — re-fetches every time dashboard gains focus
@@ -824,7 +824,7 @@ export default function DashboardScreen({ navigation }: Props) {
       {/* Onboarding overlay for first-time users */}
       <OnboardingOverlay
         visible={showOnboarding}
-        onCreateRoom={handleOnboardingCreateRoom}
+        onStartSolo={handleOnboardingSolo}
         onDismiss={dismissOnboarding}
       />
     </View>
