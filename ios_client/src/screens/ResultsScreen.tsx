@@ -104,7 +104,7 @@ function CountingNumber({
 // Share text builder
 // ---------------------------------------------------------------------------
 
-const SHARE_LINK = 'https://quizza.app';
+const SHARE_LINK = 'https://quizza-eta.vercel.app';
 const SHARE_SEPARATOR = '──────────';
 
 function buildShareText(params: {
