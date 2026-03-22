@@ -401,7 +401,7 @@ export default function ProfileScreen({ navigation }: Props) {
           }}
           activeOpacity={0.8}
         >
-          <Text style={s.tipBtnText}>☕ Buy us a coffee — $2.99</Text>
+          <Text style={s.tipBtnText}>🍕 Buy us a slice — $2.99</Text>
           <Text style={s.tipBtnSub}>Keep Quizza ad-free</Text>
         </TouchableOpacity>
 
