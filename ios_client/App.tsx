@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/react-native';
 import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { NavigationContainer, LinkingOptions } from '@react-navigation/native';
@@ -216,10 +217,17 @@ function RootNavigator() {
   );
 }
 
+// Initialize Sentry error monitoring
+Sentry.init({
+  dsn: 'https://ce1b1a9bcce4b8b9d67792cf01e66481@o4511090114494464.ingest.us.sentry.io/4511090116722688',
+  enableAutoSessionTracking: true,
+  tracesSampleRate: 0.2,
+});
+
 // Initialize sound setting from storage
 initSoundSetting();
 
-export default function App() {
+function AppRoot() {
   const [splashDone, setSplashDone] = useState(false);
 
   return (
@@ -236,3 +244,5 @@ export default function App() {
     </GestureHandlerRootView>
   );
 }
+
+export default Sentry.wrap(AppRoot);
