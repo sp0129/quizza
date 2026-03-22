@@ -1,0 +1,43 @@
+{
+  "cli": {
+    "version": ">= 12.0.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://quizza-production.up.railway.app",
+        "EXPO_PUBLIC_WS_URL": "wss://quizza-production.up.railway.app",
+        "EXPO_PUBLIC_WEB_URL": "https://quizza-eta.vercel.app"
+      }
+    },
+    "production": {
+      "ios": {
+        "autoIncrement": true
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://quizza-production.up.railway.app",
+        "EXPO_PUBLIC_WS_URL": "wss://quizza-production.up.railway.app",
+        "EXPO_PUBLIC_WEB_URL": "https://quizza-eta.vercel.app",
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "khalid.nwb@gmail.com",
+        "ascAppId": "6760268516",
+        "appleTeamId": "M7CPMU8E8A"
+      }
+    }
+  }
+}
