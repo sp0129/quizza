@@ -192,8 +192,9 @@ export default function ResultsScreen({ route, navigation }: Props) {
   // Throttled to once per 60 days
   useEffect(() => {
     if (skip) return;
-    const isPerfectScore = correctCount != null && totalQuestions != null && correctCount === totalQuestions;
-    if (!isPerfectScore && result !== 'win') return;
+    const pct = (correctCount != null && totalQuestions != null && totalQuestions > 0) ? correctCount / totalQuestions : 0;
+    const isGreatGame = pct >= 0.8;
+    if (!isGreatGame && result !== 'win') return;
     (async () => {
       try {
         const { isAvailableAsync, requestReview } = await import('expo-store-review');
@@ -203,8 +204,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
         const LAST_KEY = 'quizza_review_last';
         const games = parseInt(await AsyncStorage.getItem(GAMES_KEY) ?? '0') + 1;
         await AsyncStorage.setItem(GAMES_KEY, String(games));
-        // Trigger on: first perfect game, or every 5th game played
-        const shouldPrompt = isPerfectScore || games % 5 === 0;
+        // Trigger on: first 80%+ game, or every 5th game played
+        const shouldPrompt = isGreatGame || games % 5 === 0;
         if (!shouldPrompt) return;
         const last = parseInt(await AsyncStorage.getItem(LAST_KEY) ?? '0');
         if (Date.now() - last < 60 * 24 * 60 * 60 * 1000) return;
