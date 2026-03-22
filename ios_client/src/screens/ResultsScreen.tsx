@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   Alert,
   Dimensions,
+  Share,
 } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -100,6 +101,56 @@ function CountingNumber({
 }
 
 // ---------------------------------------------------------------------------
+// Share text builder
+// ---------------------------------------------------------------------------
+
+const SHARE_LINK = 'quizza.app/?utm_source=share&utm_medium=result';
+const SHARE_SEPARATOR = '━━━━━━━━━━━━━━━';
+
+function buildShareText(params: {
+  yourScore: number;
+  opponentScore?: number;
+  opponentUsername?: string;
+  category: string;
+  gameMode: string;
+  result: 'win' | 'loss' | 'tie';
+  correctCount?: number;
+  totalQuestions?: number;
+}): string | null {
+  const { yourScore, opponentScore, opponentUsername, category, gameMode, result, correctCount, totalQuestions } = params;
+  const theme = getCategoryTheme(category);
+  const catUpper = category.toUpperCase();
+  const opponent = opponentUsername
+    ? `@${opponentUsername.slice(0, 15)}`
+    : 'my opponent';
+
+  if (gameMode === 'solo' || gameMode === 'group') {
+    if (correctCount == null || totalQuestions == null) return null;
+    const pct = correctCount / totalQuestions;
+    if (pct < 0.5) return null; // don't share bad scores
+
+    let cta: string;
+    if (pct === 1) cta = "No one's beating this. Prove me wrong.";
+    else if (pct >= 0.8) cta = 'Pretty good. Think you can match it?';
+    else cta = 'Harder than it looks. Try it.';
+
+    const perfect = pct === 1 ? ' 🎯' : '';
+    return `${theme.emoji} ${catUpper} — QUIZZA\n${SHARE_SEPARATOR}\n${correctCount}/${totalQuestions} correct · ${yourScore} pts${perfect}\n${cta}\n${SHARE_LINK}`;
+  }
+
+  // Challenge 1v1
+  const scores = `${yourScore} vs ${opponentScore ?? '?'}`;
+  if (result === 'win') {
+    return `⚔️ ${catUpper} — QUIZZA\n${SHARE_SEPARATOR}\nBeat ${opponent}: ${scores}\nThink you can take me? 😏\n${SHARE_LINK}`;
+  }
+  if (result === 'loss') {
+    return `${theme.emoji} ${catUpper} — QUIZZA\n${SHARE_SEPARATOR}\nLost to ${opponent}: ${scores}\nWho can avenge me? 😤\n${SHARE_LINK}`;
+  }
+  // tie
+  return `${theme.emoji} ${catUpper} — QUIZZA\n${SHARE_SEPARATOR}\nTied with ${opponent}: ${scores}\nDead heat. Who breaks it? 🤝\n${SHARE_LINK}`;
+}
+
+// ---------------------------------------------------------------------------
 // Main ResultsScreen
 // ---------------------------------------------------------------------------
 
@@ -159,6 +210,34 @@ export default function ResultsScreen({ route, navigation }: Props) {
   const [stage, setStage] = useState<Stage>(skip ? 'complete' : 'anticipation');
   const [reduceMotion, setReduceMotion] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+
+  // Share result
+  const shareText = buildShareText({
+    yourScore, opponentScore, opponentUsername, category, gameMode, result, correctCount, totalQuestions,
+  });
+  const sharePulse = useSharedValue(1);
+  useEffect(() => {
+    if (!shareText) return;
+    const timer = setTimeout(() => {
+      sharePulse.value = withSequence(
+        withSpring(1.08, { damping: 6, stiffness: 200 }),
+        withSpring(1, { damping: 8, stiffness: 200 }),
+      );
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
+  const sharePulseStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: sharePulse.value }],
+  }));
+  const handleShare = useCallback(async () => {
+    if (!shareText) return;
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    try {
+      await Share.share({ message: shareText });
+    } catch {
+      Alert.alert('Copied!', 'Result copied to clipboard.');
+    }
+  }, [shareText]);
 
   // Open Challenge posting state
   const [posting, setPosting] = useState(false);
@@ -728,6 +807,20 @@ export default function ResultsScreen({ route, navigation }: Props) {
               </TouchableOpacity>
             )}
 
+            {/* Share Result */}
+            {shareText && (
+              <Animated.View style={sharePulseStyle}>
+                <TouchableOpacity
+                  style={styles.shareBtn}
+                  onPress={handleShare}
+                  activeOpacity={0.8}
+                >
+                  <Text style={styles.shareBtnIcon}>📤</Text>
+                  <Text style={styles.shareBtnText}>Share Result</Text>
+                </TouchableOpacity>
+              </Animated.View>
+            )}
+
             {/* Home */}
             <TouchableOpacity
               style={styles.homeBtn}
@@ -1009,6 +1102,25 @@ const styles = StyleSheet.create({
   postChallengeBtnText: {
     color: '#FFFFFF',
     fontSize: 16,
+    fontWeight: '700',
+  },
+  shareBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(59, 130, 246, 0.15)',
+    borderRadius: 14,
+    height: 48,
+    gap: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(59, 130, 246, 0.3)',
+  },
+  shareBtnIcon: {
+    fontSize: 16,
+  },
+  shareBtnText: {
+    color: '#3B82F6',
+    fontSize: 15,
     fontWeight: '700',
   },
   homeBtn: {
