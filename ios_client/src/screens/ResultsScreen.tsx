@@ -104,8 +104,8 @@ function CountingNumber({
 // Share text builder
 // ---------------------------------------------------------------------------
 
-const SHARE_LINK = 'quizza.app/?utm_source=share&utm_medium=result';
-const SHARE_SEPARATOR = '━━━━━━━━━━━━━━━';
+const SHARE_LINK = 'https://quizza.app';
+const SHARE_SEPARATOR = '──────────';
 
 function buildShareText(params: {
   yourScore: number;
