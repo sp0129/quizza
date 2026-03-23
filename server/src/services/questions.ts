@@ -99,12 +99,17 @@ async function storeLocalQuestionSet(category: string, categoryId: number, quest
     throw new Error(`No local questions found for category "${category}" (id ${categoryId})`);
   }
 
-  let questionPool = deduplicateByQuestion(bank.questions);
+  const allQuestions = deduplicateByQuestion(bank.questions);
+  let questionPool = allQuestions;
   if (difficulty && difficulty !== 'all') {
-    questionPool = questionPool.filter(q => q.difficulty === difficulty);
+    const filtered = allQuestions.filter(q => q.difficulty === difficulty);
+    if (filtered.length > 0) {
+      questionPool = filtered;
+    }
+    // else: fall back to all difficulties silently
   }
   if (!questionPool.length) {
-    throw new Error(`No ${difficulty} questions found for this category`);
+    throw new Error(`No questions found for this category`);
   }
 
   const seed = Date.now();
@@ -171,8 +176,17 @@ export async function fetchAndStoreQuestionSet(category: string, categoryId?: nu
     url += `&difficulty=${difficulty}`;
   }
 
-  const res = await fetch(url);
-  const data = await res.json() as { response_code: number; results: OpenTDBQuestion[] };
+  let res = await fetch(url);
+  let data = await res.json() as { response_code: number; results: OpenTDBQuestion[] };
+
+  // Fallback: if no questions found for the requested difficulty, retry with all difficulties
+  if ((data.response_code !== 0 || !data.results?.length) && difficulty && difficulty !== 'all') {
+    const fallbackUrl = resolvedId
+      ? `https://opentdb.com/api.php?amount=15&category=${resolvedId}&type=multiple&encode=url3986`
+      : `https://opentdb.com/api.php?amount=15&type=multiple&encode=url3986`;
+    res = await fetch(fallbackUrl);
+    data = await res.json() as { response_code: number; results: OpenTDBQuestion[] };
+  }
 
   if (data.response_code !== 0 || !data.results?.length) {
     throw new Error('Failed to fetch questions from Open Trivia DB');
