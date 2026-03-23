@@ -5,1130 +5,2842 @@
     {
       "question": "What is the motto of House Stark?",
       "correct_answer": "Winter is Coming",
-      "incorrect_answers": ["Fire and Blood", "Ours is the Fury", "Hear Me Roar"],
+      "incorrect_answers": [
+        "Fire and Blood",
+        "Ours is the Fury",
+        "Hear Me Roar"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Which character is known as 'The Onion Knight'?",
       "correct_answer": "Davos Seaworth",
-      "incorrect_answers": ["Stannis Baratheon", "Theon Greyjoy", "Petyr Baelish"],
+      "incorrect_answers": [
+        "Stannis Baratheon",
+        "Theon Greyjoy",
+        "Petyr Baelish"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the ancestral Valyrian steel sword given to Jon Snow by Jeor Mormont?",
       "correct_answer": "Longclaw",
-      "incorrect_answers": ["Ice", "Heartsbane", "Widow's Wail"],
+      "incorrect_answers": [
+        "Ice",
+        "Heartsbane",
+        "Widow's Wail"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the capital city of the Seven Kingdoms?",
       "correct_answer": "King's Landing",
-      "incorrect_answers": ["Winterfell", "Dragonstone", "Oldtown"],
+      "incorrect_answers": [
+        "Winterfell",
+        "Dragonstone",
+        "Oldtown"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Jon Snow's direwolf?",
       "correct_answer": "Ghost",
-      "incorrect_answers": ["Grey Wind", "Lady", "Nymeria"],
+      "incorrect_answers": [
+        "Grey Wind",
+        "Lady",
+        "Nymeria"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the ancestral home of the Stark family?",
       "correct_answer": "Winterfell",
-      "incorrect_answers": ["The Eyrie", "Storm's End", "Casterly Rock"],
+      "incorrect_answers": [
+        "The Eyrie",
+        "Storm's End",
+        "Casterly Rock"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Daenerys Targaryen's largest dragon?",
       "correct_answer": "Drogon",
-      "incorrect_answers": ["Rhaegal", "Viserion", "Balerion"],
+      "incorrect_answers": [
+        "Rhaegal",
+        "Viserion",
+        "Balerion"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who executed Ned Stark?",
       "correct_answer": "Ser Ilyn Payne",
-      "incorrect_answers": ["Tywin Lannister", "Cersei Lannister", "The Hound"],
+      "incorrect_answers": [
+        "Tywin Lannister",
+        "Cersei Lannister",
+        "The Hound"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Arya Stark's sword?",
       "correct_answer": "Needle",
-      "incorrect_answers": ["Ice", "Longclaw", "Oathkeeper"],
+      "incorrect_answers": [
+        "Ice",
+        "Longclaw",
+        "Oathkeeper"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who kills the Night King?",
       "correct_answer": "Arya Stark",
-      "incorrect_answers": ["Jon Snow", "Daenerys Targaryen", "Bran Stark"],
+      "incorrect_answers": [
+        "Jon Snow",
+        "Daenerys Targaryen",
+        "Bran Stark"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the Hound's real name?",
       "correct_answer": "Sandor Clegane",
-      "incorrect_answers": ["Gregor Clegane", "Bronn", "Jaqen H'ghar"],
+      "incorrect_answers": [
+        "Gregor Clegane",
+        "Bronn",
+        "Jaqen H'ghar"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What city in Essos does Arya travel to, to train with the Faceless Men?",
       "correct_answer": "Braavos",
-      "incorrect_answers": ["Meereen", "Qarth", "Pentos"],
+      "incorrect_answers": [
+        "Meereen",
+        "Qarth",
+        "Pentos"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who sits on the Iron Throne at the very start of the show?",
       "correct_answer": "Robert Baratheon",
-      "incorrect_answers": ["Joffrey Baratheon", "Eddard Stark", "Tywin Lannister"],
+      "incorrect_answers": [
+        "Joffrey Baratheon",
+        "Eddard Stark",
+        "Tywin Lannister"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the massive wall of ice in the north of Westeros called?",
       "correct_answer": "The Wall",
-      "incorrect_answers": ["The Barrier", "The Frost Wall", "The Ice Wall"],
+      "incorrect_answers": [
+        "The Barrier",
+        "The Frost Wall",
+        "The Ice Wall"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the sworn brotherhood that guards the Wall?",
       "correct_answer": "The Night's Watch",
-      "incorrect_answers": ["The Kingsguard", "The City Watch", "The Golden Company"],
+      "incorrect_answers": [
+        "The Kingsguard",
+        "The City Watch",
+        "The Golden Company"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the motto of House Targaryen?",
       "correct_answer": "Fire and Blood",
-      "incorrect_answers": ["Winter is Coming", "Ours is the Fury", "Unbowed, Unbent, Unbroken"],
+      "incorrect_answers": [
+        "Winter is Coming",
+        "Ours is the Fury",
+        "Unbowed, Unbent, Unbroken"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the unofficial motto associated with the Lannisters?",
       "correct_answer": "A Lannister always pays his debts",
-      "incorrect_answers": ["Hear Me Roar", "Gold buys all", "Lions never kneel"],
+      "incorrect_answers": [
+        "Hear Me Roar",
+        "Gold buys all",
+        "Lions never kneel"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Tyrion Lannister's father?",
       "correct_answer": "Tywin Lannister",
-      "incorrect_answers": ["Kevan Lannister", "Robert Baratheon", "Jaime Lannister"],
+      "incorrect_answers": [
+        "Kevan Lannister",
+        "Robert Baratheon",
+        "Jaime Lannister"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Sansa Stark's direwolf?",
       "correct_answer": "Lady",
-      "incorrect_answers": ["Nymeria", "Ghost", "Summer"],
+      "incorrect_answers": [
+        "Nymeria",
+        "Ghost",
+        "Summer"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Robb Stark's direwolf?",
       "correct_answer": "Grey Wind",
-      "incorrect_answers": ["Ghost", "Shaggydog", "Summer"],
+      "incorrect_answers": [
+        "Ghost",
+        "Shaggydog",
+        "Summer"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Bran Stark's direwolf?",
       "correct_answer": "Summer",
-      "incorrect_answers": ["Ghost", "Grey Wind", "Nymeria"],
+      "incorrect_answers": [
+        "Ghost",
+        "Grey Wind",
+        "Nymeria"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Arya Stark's direwolf?",
       "correct_answer": "Nymeria",
-      "incorrect_answers": ["Lady", "Summer", "Shaggydog"],
+      "incorrect_answers": [
+        "Lady",
+        "Summer",
+        "Shaggydog"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is known as the 'Mother of Dragons'?",
       "correct_answer": "Daenerys Targaryen",
-      "incorrect_answers": ["Cersei Lannister", "Melisandre", "Margaery Tyrell"],
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Melisandre",
+        "Margaery Tyrell"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the seat of House Lannister?",
       "correct_answer": "Casterly Rock",
-      "incorrect_answers": ["King's Landing", "Highgarden", "Storm's End"],
+      "incorrect_answers": [
+        "King's Landing",
+        "Highgarden",
+        "Storm's End"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Cersei Lannister's twin brother?",
       "correct_answer": "Jaime Lannister",
-      "incorrect_answers": ["Tyrion Lannister", "Lancel Lannister", "Kevan Lannister"],
+      "incorrect_answers": [
+        "Tyrion Lannister",
+        "Lancel Lannister",
+        "Kevan Lannister"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What body part does Jaime Lannister lose?",
       "correct_answer": "His right hand",
-      "incorrect_answers": ["His left hand", "His ear", "His eye"],
+      "incorrect_answers": [
+        "His left hand",
+        "His ear",
+        "His eye"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the nickname for Jaime Lannister?",
       "correct_answer": "Kingslayer",
-      "incorrect_answers": ["Oathkeeper", "Goldhand", "The Lion"],
+      "incorrect_answers": [
+        "Oathkeeper",
+        "Goldhand",
+        "The Lion"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the master of whisperers on the Small Council?",
       "correct_answer": "Varys",
-      "incorrect_answers": ["Petyr Baelish", "Pycelle", "Qyburn"],
+      "incorrect_answers": [
+        "Petyr Baelish",
+        "Pycelle",
+        "Qyburn"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the wildling woman Jon Snow falls in love with?",
       "correct_answer": "Ygritte",
-      "incorrect_answers": ["Osha", "Gilly", "Val"],
+      "incorrect_answers": [
+        "Osha",
+        "Gilly",
+        "Val"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who says 'You know nothing, Jon Snow'?",
       "correct_answer": "Ygritte",
-      "incorrect_answers": ["Daenerys Targaryen", "Cersei Lannister", "Melisandre"],
+      "incorrect_answers": [
+        "Daenerys Targaryen",
+        "Cersei Lannister",
+        "Melisandre"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who becomes King of the Six Kingdoms at the end of the series?",
       "correct_answer": "Bran Stark",
-      "incorrect_answers": ["Jon Snow", "Tyrion Lannister", "Sansa Stark"],
+      "incorrect_answers": [
+        "Jon Snow",
+        "Tyrion Lannister",
+        "Sansa Stark"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Daenerys's first husband?",
       "correct_answer": "Khal Drogo",
-      "incorrect_answers": ["Daario Naharis", "Hizdahr zo Loraq", "Jorah Mormont"],
+      "incorrect_answers": [
+        "Daario Naharis",
+        "Hizdahr zo Loraq",
+        "Jorah Mormont"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who pushes Bran Stark out of a tower window?",
       "correct_answer": "Jaime Lannister",
-      "incorrect_answers": ["Cersei Lannister", "Petyr Baelish", "Theon Greyjoy"],
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Petyr Baelish",
+        "Theon Greyjoy"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the elite royal guard who protect the king?",
       "correct_answer": "The Kingsguard",
-      "incorrect_answers": ["The Night's Watch", "The Gold Cloaks", "The Queensguard"],
+      "incorrect_answers": [
+        "The Night's Watch",
+        "The Gold Cloaks",
+        "The Queensguard"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What are the mounted warriors who follow Khal Drogo called?",
       "correct_answer": "Dothraki",
-      "incorrect_answers": ["Unsullied", "Ironborn", "Wildlings"],
+      "incorrect_answers": [
+        "Unsullied",
+        "Ironborn",
+        "Wildlings"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the Iron Throne made from?",
       "correct_answer": "Swords",
-      "incorrect_answers": ["Iron ore", "Dragon bones", "Steel and gold"],
+      "incorrect_answers": [
+        "Iron ore",
+        "Dragon bones",
+        "Steel and gold"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "In what region of Westeros is Winterfell located?",
       "correct_answer": "The North",
-      "incorrect_answers": ["The Riverlands", "The Vale", "The Reach"],
+      "incorrect_answers": [
+        "The Riverlands",
+        "The Vale",
+        "The Reach"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the Red Woman?",
       "correct_answer": "Melisandre",
-      "incorrect_answers": ["Cersei Lannister", "Kinvara", "Quaithe"],
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Kinvara",
+        "Quaithe"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What color cloaks do members of the Night's Watch wear?",
       "correct_answer": "Black",
-      "incorrect_answers": ["White", "Grey", "Brown"],
+      "incorrect_answers": [
+        "White",
+        "Grey",
+        "Brown"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What noble house rules the Iron Islands?",
       "correct_answer": "House Greyjoy",
-      "incorrect_answers": ["House Tully", "House Martell", "House Tyrell"],
+      "incorrect_answers": [
+        "House Tully",
+        "House Martell",
+        "House Tyrell"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Theon Greyjoy's sister in the TV show?",
       "correct_answer": "Yara Greyjoy",
-      "incorrect_answers": ["Asha Greyjoy", "Lyanna Greyjoy", "Alannys Greyjoy"],
+      "incorrect_answers": [
+        "Asha Greyjoy",
+        "Lyanna Greyjoy",
+        "Alannys Greyjoy"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the headquarters of the Night's Watch called?",
       "correct_answer": "Castle Black",
-      "incorrect_answers": ["The Shadow Tower", "Eastwatch", "The Nightfort"],
+      "incorrect_answers": [
+        "The Shadow Tower",
+        "Eastwatch",
+        "The Nightfort"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who trained Arya Stark in sword fighting in King's Landing?",
       "correct_answer": "Syrio Forel",
-      "incorrect_answers": ["Jaqen H'ghar", "Brienne of Tarth", "The Hound"],
+      "incorrect_answers": [
+        "Jaqen H'ghar",
+        "Brienne of Tarth",
+        "The Hound"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What continent is across the Narrow Sea from Westeros?",
       "correct_answer": "Essos",
-      "incorrect_answers": ["Sothoryos", "Ulthos", "Asshai"],
+      "incorrect_answers": [
+        "Sothoryos",
+        "Ulthos",
+        "Asshai"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Jorah Mormont in love with?",
       "correct_answer": "Daenerys Targaryen",
-      "incorrect_answers": ["Cersei Lannister", "Missandei", "Margaery Tyrell"],
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Missandei",
+        "Margaery Tyrell"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What disease nearly kills Jorah Mormont?",
       "correct_answer": "Greyscale",
-      "incorrect_answers": ["The Pale Mare", "Moon Madness", "Winter Fever"],
+      "incorrect_answers": [
+        "The Pale Mare",
+        "Moon Madness",
+        "Winter Fever"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the seat of House Baratheon?",
       "correct_answer": "Storm's End",
-      "incorrect_answers": ["Dragonstone", "King's Landing", "Highgarden"],
+      "incorrect_answers": [
+        "Dragonstone",
+        "King's Landing",
+        "Highgarden"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who kills Tywin Lannister?",
       "correct_answer": "Tyrion Lannister",
-      "incorrect_answers": ["Jaime Lannister", "Cersei Lannister", "Arya Stark"],
+      "incorrect_answers": [
+        "Jaime Lannister",
+        "Cersei Lannister",
+        "Arya Stark"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What weapon does Tyrion use to kill Tywin?",
       "correct_answer": "A crossbow",
-      "incorrect_answers": ["A sword", "A dagger", "Poison"],
+      "incorrect_answers": [
+        "A sword",
+        "A dagger",
+        "Poison"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is known as 'The Mountain'?",
       "correct_answer": "Gregor Clegane",
-      "incorrect_answers": ["Sandor Clegane", "Hodor", "Tormund Giantsbane"],
+      "incorrect_answers": [
+        "Sandor Clegane",
+        "Hodor",
+        "Tormund Giantsbane"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What noble house has a flayed man as its sigil?",
       "correct_answer": "House Bolton",
-      "incorrect_answers": ["House Umber", "House Karstark", "House Frey"],
+      "incorrect_answers": [
+        "House Umber",
+        "House Karstark",
+        "House Frey"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Brienne's Valyrian steel sword?",
       "correct_answer": "Oathkeeper",
-      "incorrect_answers": ["Longclaw", "Widow's Wail", "Heartsbane"],
+      "incorrect_answers": [
+        "Longclaw",
+        "Widow's Wail",
+        "Heartsbane"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the Three-Eyed Raven at the end of the series?",
       "correct_answer": "Bran Stark",
-      "incorrect_answers": ["Jon Snow", "Jojen Reed", "Bloodraven"],
+      "incorrect_answers": [
+        "Jon Snow",
+        "Jojen Reed",
+        "Bloodraven"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What are the undead soldiers raised by the White Walkers called?",
       "correct_answer": "Wights",
-      "incorrect_answers": ["Walkers", "The Dead", "Wraiths"],
+      "incorrect_answers": [
+        "Walkers",
+        "The Dead",
+        "Wraiths"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who kills Ramsay Bolton?",
       "correct_answer": "Sansa Stark",
-      "incorrect_answers": ["Jon Snow", "Theon Greyjoy", "Brienne of Tarth"],
+      "incorrect_answers": [
+        "Jon Snow",
+        "Theon Greyjoy",
+        "Brienne of Tarth"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the wildling leader known as the King-Beyond-the-Wall?",
       "correct_answer": "Mance Rayder",
-      "incorrect_answers": ["Tormund Giantsbane", "The Lord of Bones", "Craster"],
+      "incorrect_answers": [
+        "Tormund Giantsbane",
+        "The Lord of Bones",
+        "Craster"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Which dragon does Jon Snow ride?",
       "correct_answer": "Rhaegal",
-      "incorrect_answers": ["Drogon", "Viserion", "Balerion"],
+      "incorrect_answers": [
+        "Drogon",
+        "Viserion",
+        "Balerion"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Gendry's father?",
       "correct_answer": "Robert Baratheon",
-      "incorrect_answers": ["Stannis Baratheon", "Ned Stark", "Tywin Lannister"],
+      "incorrect_answers": [
+        "Stannis Baratheon",
+        "Ned Stark",
+        "Tywin Lannister"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the seat of House Arryn?",
       "correct_answer": "The Eyrie",
-      "incorrect_answers": ["Riverrun", "Highgarden", "The Twins"],
+      "incorrect_answers": [
+        "Riverrun",
+        "Highgarden",
+        "The Twins"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What institution in Oldtown trains maesters?",
       "correct_answer": "The Citadel",
-      "incorrect_answers": ["The Sept", "The Academy", "The Archives"],
+      "incorrect_answers": [
+        "The Sept",
+        "The Academy",
+        "The Archives"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the common nickname for Tyrion Lannister?",
       "correct_answer": "The Imp",
-      "incorrect_answers": ["The Dwarf", "The Half-Man", "Little Lion"],
+      "incorrect_answers": [
+        "The Dwarf",
+        "The Half-Man",
+        "Little Lion"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the commander of the Unsullied?",
       "correct_answer": "Grey Worm",
-      "incorrect_answers": ["Barristan Selmy", "Jorah Mormont", "Daario Naharis"],
+      "incorrect_answers": [
+        "Barristan Selmy",
+        "Jorah Mormont",
+        "Daario Naharis"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Daenerys's advisor and translator?",
       "correct_answer": "Missandei",
-      "incorrect_answers": ["Irri", "Doreah", "Tyene Sand"],
+      "incorrect_answers": [
+        "Irri",
+        "Doreah",
+        "Tyene Sand"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "How many dragons does Daenerys hatch?",
       "correct_answer": "Three",
-      "incorrect_answers": ["Two", "Four", "One"],
+      "incorrect_answers": [
+        "Two",
+        "Four",
+        "One"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the seat of House Martell?",
       "correct_answer": "Sunspear",
-      "incorrect_answers": ["Starfall", "Yronwood", "Hellholt"],
+      "incorrect_answers": [
+        "Starfall",
+        "Yronwood",
+        "Hellholt"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the southernmost kingdom of Westeros?",
       "correct_answer": "Dorne",
-      "incorrect_answers": ["The Reach", "The Stormlands", "The Westerlands"],
+      "incorrect_answers": [
+        "The Reach",
+        "The Stormlands",
+        "The Westerlands"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the island fortress where Stannis Baratheon resides?",
       "correct_answer": "Dragonstone",
-      "incorrect_answers": ["Storm's End", "Pyke", "The Eyrie"],
+      "incorrect_answers": [
+        "Storm's End",
+        "Pyke",
+        "The Eyrie"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who does Arya serve as cupbearer to at Harrenhal?",
       "correct_answer": "Tywin Lannister",
-      "incorrect_answers": ["Roose Bolton", "The Mountain", "Joffrey Baratheon"],
+      "incorrect_answers": [
+        "Roose Bolton",
+        "The Mountain",
+        "Joffrey Baratheon"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the Stark family's maester at Winterfell?",
       "correct_answer": "Maester Luwin",
-      "incorrect_answers": ["Maester Aemon", "Maester Pycelle", "Maester Wolkan"],
+      "incorrect_answers": [
+        "Maester Aemon",
+        "Maester Pycelle",
+        "Maester Wolkan"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Samwell Tarly's best friend in the Night's Watch?",
       "correct_answer": "Jon Snow",
-      "incorrect_answers": ["Edd Tollett", "Grenn", "Pyp"],
+      "incorrect_answers": [
+        "Edd Tollett",
+        "Grenn",
+        "Pyp"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What noble house rules the Reach from Highgarden?",
       "correct_answer": "House Tyrell",
-      "incorrect_answers": ["House Tarly", "House Hightower", "House Redwyne"],
+      "incorrect_answers": [
+        "House Tarly",
+        "House Hightower",
+        "House Redwyne"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the name of Rickon Stark's direwolf?",
       "correct_answer": "Shaggydog",
-      "incorrect_answers": ["Summer", "Ghost", "Grey Wind"],
+      "incorrect_answers": [
+        "Summer",
+        "Ghost",
+        "Grey Wind"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is Jon Snow's Targaryen birth name?",
       "correct_answer": "Aegon Targaryen",
-      "incorrect_answers": ["Rhaegar Targaryen", "Aemon Targaryen", "Jaehaerys Targaryen"],
+      "incorrect_answers": [
+        "Rhaegar Targaryen",
+        "Aemon Targaryen",
+        "Jaehaerys Targaryen"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is Catelyn Stark's maiden name?",
       "correct_answer": "Tully",
-      "incorrect_answers": ["Arryn", "Tyrell", "Frey"],
+      "incorrect_answers": [
+        "Arryn",
+        "Tyrell",
+        "Frey"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What sea separates Westeros from Essos?",
       "correct_answer": "The Narrow Sea",
-      "incorrect_answers": ["The Sunset Sea", "The Shivering Sea", "The Summer Sea"],
+      "incorrect_answers": [
+        "The Sunset Sea",
+        "The Shivering Sea",
+        "The Summer Sea"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What noble house rules the Riverlands from Riverrun?",
       "correct_answer": "House Tully",
-      "incorrect_answers": ["House Frey", "House Mallister", "House Blackwood"],
+      "incorrect_answers": [
+        "House Frey",
+        "House Mallister",
+        "House Blackwood"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the large woman warrior from the island of Tarth?",
       "correct_answer": "Brienne of Tarth",
-      "incorrect_answers": ["Yara Greyjoy", "Obara Sand", "Meera Reed"],
+      "incorrect_answers": [
+        "Yara Greyjoy",
+        "Obara Sand",
+        "Meera Reed"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who does Sansa Stark marry in Season 5?",
       "correct_answer": "Ramsay Bolton",
-      "incorrect_answers": ["Petyr Baelish", "Loras Tyrell", "Robin Arryn"],
+      "incorrect_answers": [
+        "Petyr Baelish",
+        "Loras Tyrell",
+        "Robin Arryn"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the lord who orchestrates the Red Wedding?",
       "correct_answer": "Walder Frey",
-      "incorrect_answers": ["Roose Bolton", "Tywin Lannister", "Petyr Baelish"],
+      "incorrect_answers": [
+        "Roose Bolton",
+        "Tywin Lannister",
+        "Petyr Baelish"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is Gendry's profession?",
       "correct_answer": "Blacksmith",
-      "incorrect_answers": ["Butcher", "Soldier", "Farmer"],
+      "incorrect_answers": [
+        "Butcher",
+        "Soldier",
+        "Farmer"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Joffrey's younger brother who becomes king after him?",
       "correct_answer": "Tommen Baratheon",
-      "incorrect_answers": ["Stannis Baratheon", "Renly Baratheon", "Gendry Baratheon"],
+      "incorrect_answers": [
+        "Stannis Baratheon",
+        "Renly Baratheon",
+        "Gendry Baratheon"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Sam Tarly's wildling partner?",
       "correct_answer": "Gilly",
-      "incorrect_answers": ["Osha", "Ygritte", "Ros"],
+      "incorrect_answers": [
+        "Osha",
+        "Ygritte",
+        "Ros"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What sigil does House Targaryen use?",
       "correct_answer": "A three-headed dragon",
-      "incorrect_answers": ["A single dragon", "A flaming sword", "A red comet"],
+      "incorrect_answers": [
+        "A single dragon",
+        "A flaming sword",
+        "A red comet"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is Jon Snow's biological mother?",
       "correct_answer": "Lyanna Stark",
-      "incorrect_answers": ["Catelyn Stark", "Cersei Lannister", "Ashara Dayne"],
+      "incorrect_answers": [
+        "Catelyn Stark",
+        "Cersei Lannister",
+        "Ashara Dayne"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the massive sword that belonged to House Stark?",
       "correct_answer": "Ice",
-      "incorrect_answers": ["Longclaw", "Dawn", "Heartsbane"],
+      "incorrect_answers": [
+        "Longclaw",
+        "Dawn",
+        "Heartsbane"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Which god does Melisandre worship?",
       "correct_answer": "The Lord of Light",
-      "incorrect_answers": ["The Drowned God", "The Many-Faced God", "The Old Gods"],
+      "incorrect_answers": [
+        "The Drowned God",
+        "The Many-Faced God",
+        "The Old Gods"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the Bolton seat of power?",
       "correct_answer": "The Dreadfort",
-      "incorrect_answers": ["Winterfell", "Karhold", "Last Hearth"],
+      "incorrect_answers": [
+        "Winterfell",
+        "Karhold",
+        "Last Hearth"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the castle where the Red Wedding takes place?",
       "correct_answer": "The Twins",
-      "incorrect_answers": ["Riverrun", "Harrenhal", "The Dreadfort"],
+      "incorrect_answers": [
+        "Riverrun",
+        "Harrenhal",
+        "The Dreadfort"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who does Margaery Tyrell marry after Joffrey dies?",
       "correct_answer": "Tommen Baratheon",
-      "incorrect_answers": ["Loras Tyrell", "Jaime Lannister", "Trystane Martell"],
+      "incorrect_answers": [
+        "Loras Tyrell",
+        "Jaime Lannister",
+        "Trystane Martell"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What does Daenerys walk into to hatch her dragon eggs?",
       "correct_answer": "A funeral pyre",
-      "incorrect_answers": ["A volcano", "A dragon pit", "A hot spring"],
+      "incorrect_answers": [
+        "A volcano",
+        "A dragon pit",
+        "A hot spring"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the young lord of the Vale, son of Lysa Arryn?",
       "correct_answer": "Robin Arryn",
-      "incorrect_answers": ["Harold Arryn", "Jon Arryn", "Jasper Arryn"],
+      "incorrect_answers": [
+        "Harold Arryn",
+        "Jon Arryn",
+        "Jasper Arryn"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is Tormund's nickname?",
       "correct_answer": "Giantsbane",
-      "incorrect_answers": ["Thunderfist", "Wildheart", "Talltalker"],
+      "incorrect_answers": [
+        "Thunderfist",
+        "Wildheart",
+        "Talltalker"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the sellsword company hired by Cersei in the final season?",
       "correct_answer": "The Golden Company",
-      "incorrect_answers": ["The Second Sons", "The Stormcrows", "The Brave Companions"],
+      "incorrect_answers": [
+        "The Second Sons",
+        "The Stormcrows",
+        "The Brave Companions"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "Who serves as Hand of the Queen to Daenerys?",
       "correct_answer": "Tyrion Lannister",
-      "incorrect_answers": ["Jorah Mormont", "Varys", "Grey Worm"],
+      "incorrect_answers": [
+        "Jorah Mormont",
+        "Varys",
+        "Grey Worm"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What city does Daenerys rule as queen before coming to Westeros?",
       "correct_answer": "Meereen",
-      "incorrect_answers": ["Yunkai", "Astapor", "Volantis"],
+      "incorrect_answers": [
+        "Yunkai",
+        "Astapor",
+        "Volantis"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the enormous ruined castle in the Riverlands?",
       "correct_answer": "Harrenhal",
-      "incorrect_answers": ["The Twins", "Moat Cailin", "Riverrun"],
+      "incorrect_answers": [
+        "The Twins",
+        "Moat Cailin",
+        "Riverrun"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of Daenerys's mercenary lover in Essos?",
       "correct_answer": "Daario Naharis",
-      "incorrect_answers": ["Jorah Mormont", "Grey Worm", "Hizdahr zo Loraq"],
+      "incorrect_answers": [
+        "Jorah Mormont",
+        "Grey Worm",
+        "Hizdahr zo Loraq"
+      ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the flammable liquid used to defend King's Landing during the Battle of the Blackwater?",
       "correct_answer": "Wildfire",
-      "incorrect_answers": ["Dragonfire", "Burning Oil", "Essence of Nightshade"],
+      "incorrect_answers": [
+        "Dragonfire",
+        "Burning Oil",
+        "Essence of Nightshade"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Which of Daenerys's dragons was killed and resurrected by the Night King?",
       "correct_answer": "Viserion",
-      "incorrect_answers": ["Drogon", "Rhaegal", "Balerion"],
+      "incorrect_answers": [
+        "Drogon",
+        "Rhaegal",
+        "Balerion"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who poisoned Joffrey at the Purple Wedding?",
       "correct_answer": "Olenna Tyrell",
-      "incorrect_answers": ["Tyrion Lannister", "Sansa Stark", "Margaery Tyrell"],
+      "incorrect_answers": [
+        "Tyrion Lannister",
+        "Sansa Stark",
+        "Margaery Tyrell"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is Littlefinger's real name?",
       "correct_answer": "Petyr Baelish",
-      "incorrect_answers": ["Varys", "Roose Bolton", "Theon Greyjoy"],
+      "incorrect_answers": [
+        "Varys",
+        "Roose Bolton",
+        "Theon Greyjoy"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What does the phrase 'Valar Morghulis' mean?",
       "correct_answer": "All men must die",
-      "incorrect_answers": ["All men must serve", "Fire and blood", "Power is power"],
+      "incorrect_answers": [
+        "All men must serve",
+        "Fire and blood",
+        "Power is power"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What event is referred to as 'The Red Wedding'?",
       "correct_answer": "Massacre of Robb Stark at the Twins",
-      "incorrect_answers": ["Joffrey's poisoning at his wedding", "Daenerys's wedding to Khal Drogo", "Sansa's wedding to Tyrion"],
+      "incorrect_answers": [
+        "Joffrey's poisoning at his wedding",
+        "Daenerys's wedding to Khal Drogo",
+        "Sansa's wedding to Tyrion"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What materials are effective against White Walkers?",
       "correct_answer": "Dragonglass and Valyrian steel",
-      "incorrect_answers": ["Wildfire and regular steel", "Dragonfire only", "Silver and iron"],
+      "incorrect_answers": [
+        "Wildfire and regular steel",
+        "Dragonfire only",
+        "Silver and iron"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who is Jon Snow's biological father?",
       "correct_answer": "Rhaegar Targaryen",
-      "incorrect_answers": ["Eddard Stark", "Robert Baratheon", "Aemon Targaryen"],
+      "incorrect_answers": [
+        "Eddard Stark",
+        "Robert Baratheon",
+        "Aemon Targaryen"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Which city do the Unsullied come from?",
       "correct_answer": "Astapor",
-      "incorrect_answers": ["Meereen", "Yunkai", "Qarth"],
+      "incorrect_answers": [
+        "Meereen",
+        "Yunkai",
+        "Qarth"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the response to 'Valar Morghulis'?",
       "correct_answer": "Valar Dohaeris",
-      "incorrect_answers": ["Valar Morghon", "Dracarys", "Dohaerys Valar"],
+      "incorrect_answers": [
+        "Valar Morghon",
+        "Dracarys",
+        "Dohaerys Valar"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What does 'Valar Dohaeris' mean?",
       "correct_answer": "All men must serve",
-      "incorrect_answers": ["All men must die", "All men must fight", "All men must pray"],
+      "incorrect_answers": [
+        "All men must die",
+        "All men must fight",
+        "All men must pray"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the name of the poison used to kill Joffrey?",
       "correct_answer": "The Strangler",
-      "incorrect_answers": ["Tears of Lys", "The Long Farewell", "Essence of Nightshade"],
+      "incorrect_answers": [
+        "Tears of Lys",
+        "The Long Farewell",
+        "Essence of Nightshade"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who is the leader of the Brotherhood Without Banners?",
       "correct_answer": "Beric Dondarrion",
-      "incorrect_answers": ["Thoros of Myr", "The Hound", "Anguy"],
+      "incorrect_answers": [
+        "Thoros of Myr",
+        "The Hound",
+        "Anguy"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the name of the Valyrian steel dagger used in the attempt on Bran's life?",
       "correct_answer": "The Catspaw dagger",
-      "incorrect_answers": ["Needle", "Dark Sister", "Orphan-Maker"],
+      "incorrect_answers": [
+        "Needle",
+        "Dark Sister",
+        "Orphan-Maker"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who is the maester at Castle Black?",
       "correct_answer": "Maester Aemon",
-      "incorrect_answers": ["Maester Luwin", "Maester Pycelle", "Maester Wolkan"],
+      "incorrect_answers": [
+        "Maester Luwin",
+        "Maester Pycelle",
+        "Maester Wolkan"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is Maester Aemon's true family name?",
       "correct_answer": "Targaryen",
-      "incorrect_answers": ["Baratheon", "Stark", "Lannister"],
+      "incorrect_answers": [
+        "Baratheon",
+        "Stark",
+        "Lannister"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who is Theon Greyjoy's father?",
       "correct_answer": "Balon Greyjoy",
-      "incorrect_answers": ["Euron Greyjoy", "Victarion Greyjoy", "Quellon Greyjoy"],
+      "incorrect_answers": [
+        "Euron Greyjoy",
+        "Victarion Greyjoy",
+        "Quellon Greyjoy"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who kills Balon Greyjoy in the show?",
       "correct_answer": "Euron Greyjoy",
-      "incorrect_answers": ["Theon Greyjoy", "Yara Greyjoy", "A storm"],
+      "incorrect_answers": [
+        "Theon Greyjoy",
+        "Yara Greyjoy",
+        "A storm"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who fights the Mountain as Tyrion's champion in the trial by combat?",
       "correct_answer": "Oberyn Martell",
-      "incorrect_answers": ["Bronn", "Jaime Lannister", "The Hound"],
+      "incorrect_answers": [
+        "Bronn",
+        "Jaime Lannister",
+        "The Hound"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who created the White Walkers?",
       "correct_answer": "The Children of the Forest",
-      "incorrect_answers": ["The Night King", "The Three-Eyed Raven", "The First Men"],
+      "incorrect_answers": [
+        "The Night King",
+        "The Three-Eyed Raven",
+        "The First Men"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What great civilization was destroyed in the Doom?",
       "correct_answer": "Valyria",
-      "incorrect_answers": ["Ghis", "Qarth", "Asshai"],
+      "incorrect_answers": [
+        "Ghis",
+        "Qarth",
+        "Asshai"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What position does Petyr Baelish hold on the Small Council?",
       "correct_answer": "Master of Coin",
-      "incorrect_answers": ["Master of Whisperers", "Master of Laws", "Master of Ships"],
+      "incorrect_answers": [
+        "Master of Whisperers",
+        "Master of Laws",
+        "Master of Ships"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who does Stannis Baratheon burn alive as a sacrifice?",
       "correct_answer": "Shireen Baratheon",
-      "incorrect_answers": ["Selyse Baratheon", "Davos Seaworth", "Mance Rayder"],
+      "incorrect_answers": [
+        "Selyse Baratheon",
+        "Davos Seaworth",
+        "Mance Rayder"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who does Sansa Stark marry first?",
       "correct_answer": "Tyrion Lannister",
-      "incorrect_answers": ["Joffrey Baratheon", "Ramsay Bolton", "Loras Tyrell"],
+      "incorrect_answers": [
+        "Joffrey Baratheon",
+        "Ramsay Bolton",
+        "Loras Tyrell"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the name of the woman Robb Stark marries, breaking his Frey pact?",
       "correct_answer": "Talisa Maegyr",
-      "incorrect_answers": ["Margaery Tyrell", "Roslin Frey", "Jeyne Westerling"],
+      "incorrect_answers": [
+        "Margaery Tyrell",
+        "Roslin Frey",
+        "Jeyne Westerling"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is a warg?",
       "correct_answer": "Someone who can enter an animal's mind",
-      "incorrect_answers": ["A type of White Walker", "A wildling warrior", "A giant wolf"],
+      "incorrect_answers": [
+        "A type of White Walker",
+        "A wildling warrior",
+        "A giant wolf"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who is the Lord Commander of the Night's Watch before Jon Snow?",
       "correct_answer": "Jeor Mormont",
-      "incorrect_answers": ["Alliser Thorne", "Maester Aemon", "Benjen Stark"],
+      "incorrect_answers": [
+        "Alliser Thorne",
+        "Maester Aemon",
+        "Benjen Stark"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who brings Jon Snow back to life after his assassination?",
       "correct_answer": "Melisandre",
-      "incorrect_answers": ["Beric Dondarrion", "Thoros of Myr", "The Night King"],
+      "incorrect_answers": [
+        "Beric Dondarrion",
+        "Thoros of Myr",
+        "The Night King"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the name of the giant who fights for Jon Snow at Winterfell?",
       "correct_answer": "Wun Wun",
-      "incorrect_answers": ["Mag the Mighty", "Dongo", "Tormund"],
+      "incorrect_answers": [
+        "Mag the Mighty",
+        "Dongo",
+        "Tormund"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the name of Euron Greyjoy's ship?",
       "correct_answer": "The Silence",
-      "incorrect_answers": ["The Iron Victory", "The Black Wind", "The Sea Bitch"],
+      "incorrect_answers": [
+        "The Iron Victory",
+        "The Black Wind",
+        "The Sea Bitch"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who kills Petyr Baelish?",
       "correct_answer": "Arya Stark",
-      "incorrect_answers": ["Sansa Stark", "Bran Stark", "Brienne of Tarth"],
+      "incorrect_answers": [
+        "Sansa Stark",
+        "Bran Stark",
+        "Brienne of Tarth"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What phrase does Daenerys use to command her dragons to breathe fire?",
       "correct_answer": "Dracarys",
-      "incorrect_answers": ["Valar Morghulis", "Dovaogēdy", "Zaldrīzes"],
+      "incorrect_answers": [
+        "Valar Morghulis",
+        "Dovaog\u0113dy",
+        "Zaldr\u012bzes"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the name of the battle between Jon Snow and Ramsay Bolton?",
       "correct_answer": "Battle of the Bastards",
-      "incorrect_answers": ["Battle of Winterfell", "Battle of the North", "Battle of the Snows"],
+      "incorrect_answers": [
+        "Battle of Winterfell",
+        "Battle of the North",
+        "Battle of the Snows"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who is Ned Stark's illegitimate nephew that he raises as his bastard son?",
       "correct_answer": "Jon Snow",
-      "incorrect_answers": ["Theon Greyjoy", "Gendry", "Ramsay Snow"],
+      "incorrect_answers": [
+        "Theon Greyjoy",
+        "Gendry",
+        "Ramsay Snow"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What is the name of Cersei's punishment walk through King's Landing?",
       "correct_answer": "Walk of Atonement",
-      "incorrect_answers": ["Walk of Shame", "March of Penance", "Walk of Judgment"],
+      "incorrect_answers": [
+        "Walk of Shame",
+        "March of Penance",
+        "Walk of Judgment"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who becomes Queen in the North at the end of the series?",
       "correct_answer": "Sansa Stark",
-      "incorrect_answers": ["Arya Stark", "Daenerys Targaryen", "Brienne of Tarth"],
+      "incorrect_answers": [
+        "Arya Stark",
+        "Daenerys Targaryen",
+        "Brienne of Tarth"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What title does the leader of the Dothraki hold?",
       "correct_answer": "Khal",
-      "incorrect_answers": ["Khan", "King", "Chieftain"],
+      "incorrect_answers": [
+        "Khan",
+        "King",
+        "Chieftain"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who kills Daenerys Targaryen?",
       "correct_answer": "Jon Snow",
-      "incorrect_answers": ["Arya Stark", "Tyrion Lannister", "Grey Worm"],
+      "incorrect_answers": [
+        "Arya Stark",
+        "Tyrion Lannister",
+        "Grey Worm"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What building does Cersei destroy with wildfire at the end of Season 6?",
       "correct_answer": "The Great Sept of Baelor",
-      "incorrect_answers": ["The Red Keep", "The Dragonpit", "The Tower of the Hand"],
+      "incorrect_answers": [
+        "The Red Keep",
+        "The Dragonpit",
+        "The Tower of the Hand"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What nickname is given to bastards born in the North?",
       "correct_answer": "Snow",
-      "incorrect_answers": ["Stone", "Sand", "Storm"],
+      "incorrect_answers": [
+        "Stone",
+        "Sand",
+        "Storm"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "Who does the Hound fight to the death in the series finale season?",
       "correct_answer": "The Mountain",
-      "incorrect_answers": ["Brienne of Tarth", "Arya Stark", "The Night King"],
+      "incorrect_answers": [
+        "Brienne of Tarth",
+        "Arya Stark",
+        "The Night King"
+      ],
       "difficulty": "medium"
     },
     {
       "question": "What are the names of the three orders within the Night's Watch?",
       "correct_answer": "Rangers, Builders, and Stewards",
-      "incorrect_answers": ["Knights, Archers, and Cooks", "Sentinels, Craftsmen, and Guards", "Warriors, Scholars, and Peasants"],
+      "incorrect_answers": [
+        "Knights, Archers, and Cooks",
+        "Sentinels, Craftsmen, and Guards",
+        "Warriors, Scholars, and Peasants"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "In the TV series, what was Hodor's real name before his accident?",
       "correct_answer": "Wylis",
-      "incorrect_answers": ["Walder", "Horys", "Myrys"],
+      "incorrect_answers": [
+        "Walder",
+        "Horys",
+        "Myrys"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "Who was the High Sparrow before becoming the leader of the Faith?",
       "correct_answer": "A cobbler",
-      "incorrect_answers": ["A septon", "A blacksmith", "A beggar"],
+      "incorrect_answers": [
+        "A septon",
+        "A blacksmith",
+        "A beggar"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the Valyrian steel sword that Tywin Lannister has reforged from Ice?",
       "correct_answer": "Widow's Wail",
-      "incorrect_answers": ["Brightroar", "Oathkeeper", "Longclaw"],
+      "incorrect_answers": [
+        "Brightroar",
+        "Oathkeeper",
+        "Longclaw"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What poison does Ellaria Sand use to kill Myrcella Baratheon?",
       "correct_answer": "The Long Farewell",
-      "incorrect_answers": ["The Strangler", "Tears of Lys", "Basilisk venom"],
+      "incorrect_answers": [
+        "The Strangler",
+        "Tears of Lys",
+        "Basilisk venom"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the ancient pact between the First Men and the Children of the Forest?",
       "correct_answer": "The Pact",
-      "incorrect_answers": ["The Accord", "The Covenant", "The Treaty of Weirwood"],
+      "incorrect_answers": [
+        "The Accord",
+        "The Covenant",
+        "The Treaty of Weirwood"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the Valyrian steel sword belonging to House Tarly?",
       "correct_answer": "Heartsbane",
-      "incorrect_answers": ["Longclaw", "Lady Forlorn", "Red Rain"],
+      "incorrect_answers": [
+        "Longclaw",
+        "Lady Forlorn",
+        "Red Rain"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the priestess who serves the Lord of Light in Volantis?",
       "correct_answer": "Kinvara",
-      "incorrect_answers": ["Quaithe", "Melisandre", "Selyse"],
+      "incorrect_answers": [
+        "Quaithe",
+        "Melisandre",
+        "Selyse"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the King-Beyond-the-Wall who invaded Westeros with giants?",
       "correct_answer": "Mance Rayder",
-      "incorrect_answers": ["Tormund Giantsbane", "The Night King", "Rattleshirt"],
+      "incorrect_answers": [
+        "Tormund Giantsbane",
+        "The Night King",
+        "Rattleshirt"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of Stannis Baratheon's wife?",
       "correct_answer": "Selyse Baratheon",
-      "incorrect_answers": ["Shireen Baratheon", "Melisandre", "Davina Baratheon"],
+      "incorrect_answers": [
+        "Shireen Baratheon",
+        "Melisandre",
+        "Davina Baratheon"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "Who forges the two Valyrian steel swords from Ice for Tywin Lannister?",
       "correct_answer": "Tobho Mott",
-      "incorrect_answers": ["Gendry", "Mikken", "Salloreon"],
+      "incorrect_answers": [
+        "Gendry",
+        "Mikken",
+        "Salloreon"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the wildling who joins the Night's Watch and betrays Jon Snow?",
       "correct_answer": "Olly",
-      "incorrect_answers": ["Karl Tanner", "Locke", "Bowen Marsh"],
+      "incorrect_answers": [
+        "Karl Tanner",
+        "Locke",
+        "Bowen Marsh"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the giant who dies attacking the Wall at Castle Black?",
       "correct_answer": "Mag the Mighty",
-      "incorrect_answers": ["Wun Wun", "Dongo", "Giantsbane"],
+      "incorrect_answers": [
+        "Wun Wun",
+        "Dongo",
+        "Giantsbane"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "Who is the water dancer who says 'What do we say to the God of Death?'",
       "correct_answer": "Syrio Forel",
-      "incorrect_answers": ["Jaqen H'ghar", "The Waif", "Izembaro"],
+      "incorrect_answers": [
+        "Jaqen H'ghar",
+        "The Waif",
+        "Izembaro"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the correct answer to 'What do we say to the God of Death?'",
       "correct_answer": "Not today",
-      "incorrect_answers": ["Valar Morghulis", "Never", "Dracarys"],
+      "incorrect_answers": [
+        "Valar Morghulis",
+        "Never",
+        "Dracarys"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the Dothraki holy city?",
       "correct_answer": "Vaes Dothrak",
-      "incorrect_answers": ["Lhazar", "Qarth", "Meereen"],
+      "incorrect_answers": [
+        "Lhazar",
+        "Qarth",
+        "Meereen"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the term for the Dothraki temple of the Dosh Khaleen?",
       "correct_answer": "Dosh Khaleen",
-      "incorrect_answers": ["Khal's Keep", "The Horse Gate", "Vaes Khaleen"],
+      "incorrect_answers": [
+        "Khal's Keep",
+        "The Horse Gate",
+        "Vaes Khaleen"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the Night's Watch deserter executed by Ned Stark in the pilot?",
       "correct_answer": "Will",
-      "incorrect_answers": ["Waymar Royce", "Gared", "Benjen Stark"],
+      "incorrect_answers": [
+        "Waymar Royce",
+        "Gared",
+        "Benjen Stark"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the Stark family's first sword instructor killed at King's Landing?",
       "correct_answer": "Syrio Forel",
-      "incorrect_answers": ["Jory Cassel", "Rodrik Cassel", "Barristan Selmy"],
+      "incorrect_answers": [
+        "Jory Cassel",
+        "Rodrik Cassel",
+        "Barristan Selmy"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What title does the ruler of the Iron Islands traditionally hold?",
       "correct_answer": "Lord Reaper of Pyke",
-      "incorrect_answers": ["King of Salt and Rock", "Lord of the Iron Isles", "High Captain"],
+      "incorrect_answers": [
+        "King of Salt and Rock",
+        "Lord of the Iron Isles",
+        "High Captain"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of Brienne's squire who is later knighted?",
       "correct_answer": "Podrick Payne",
-      "incorrect_answers": ["Lancel Lannister", "Loras Tyrell", "Olyvar"],
+      "incorrect_answers": [
+        "Lancel Lannister",
+        "Loras Tyrell",
+        "Olyvar"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the former slave who serves as Missandei's love interest?",
       "correct_answer": "Grey Worm",
-      "incorrect_answers": ["Daario Naharis", "Jorah Mormont", "Hizdahr zo Loraq"],
+      "incorrect_answers": [
+        "Daario Naharis",
+        "Jorah Mormont",
+        "Hizdahr zo Loraq"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What book does Samwell Tarly discover the secret of Jon Snow's parentage in?",
       "correct_answer": "High Septon Maynard's diary",
-      "incorrect_answers": ["The World of Ice and Fire", "The History of the Targaryens", "The Jade Compendium"],
+      "incorrect_answers": [
+        "The World of Ice and Fire",
+        "The History of the Targaryens",
+        "The Jade Compendium"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the swamp-dwelling house that helps Bran travel north?",
       "correct_answer": "House Reed",
-      "incorrect_answers": ["House Mormont", "House Umber", "House Glover"],
+      "incorrect_answers": [
+        "House Mormont",
+        "House Umber",
+        "House Glover"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What are the names of Jojen and Meera's father?",
       "correct_answer": "Howland Reed",
-      "incorrect_answers": ["Rickard Reed", "Benjen Reed", "Willam Reed"],
+      "incorrect_answers": [
+        "Rickard Reed",
+        "Benjen Reed",
+        "Willam Reed"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What specific ability does Jojen Reed possess?",
       "correct_answer": "Greensight",
-      "incorrect_answers": ["Warging", "Skinchanging", "Firesight"],
+      "incorrect_answers": [
+        "Warging",
+        "Skinchanging",
+        "Firesight"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "Which Targaryen king built the Red Keep?",
       "correct_answer": "Maegor the Cruel",
-      "incorrect_answers": ["Aegon the Conqueror", "Jaehaerys the Conciliator", "Viserys I"],
+      "incorrect_answers": [
+        "Aegon the Conqueror",
+        "Jaehaerys the Conciliator",
+        "Viserys I"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the ancient order of warriors who worship the Lord of Light?",
       "correct_answer": "The Fiery Hand",
-      "incorrect_answers": ["The Red Guard", "The Flame Knights", "The Burning Men"],
+      "incorrect_answers": [
+        "The Red Guard",
+        "The Flame Knights",
+        "The Burning Men"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "In the show, what part of his body does Theon Greyjoy have removed by Ramsay?",
       "correct_answer": "His genitals",
-      "incorrect_answers": ["His fingers", "His tongue", "His ear"],
+      "incorrect_answers": [
+        "His fingers",
+        "His tongue",
+        "His ear"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What name does Ramsay Bolton give Theon Greyjoy as his servant?",
       "correct_answer": "Reek",
-      "incorrect_answers": ["Wretch", "Worm", "Rat"],
+      "incorrect_answers": [
+        "Wretch",
+        "Worm",
+        "Rat"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the brothel owner in King's Landing allied with Littlefinger?",
       "correct_answer": "Ros",
-      "incorrect_answers": ["Shae", "Olyvar", "Chataya"],
+      "incorrect_answers": [
+        "Shae",
+        "Olyvar",
+        "Chataya"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "Which member of the Night's Watch kills Jeor Mormont during the mutiny at Craster's Keep?",
       "correct_answer": "Karl Tanner",
-      "incorrect_answers": ["Rast", "Olly", "Alliser Thorne"],
+      "incorrect_answers": [
+        "Rast",
+        "Olly",
+        "Alliser Thorne"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of Robb Stark's battle strategy that captures Jaime Lannister?",
       "correct_answer": "The Battle of the Whispering Wood",
-      "incorrect_answers": ["The Battle of the Green Fork", "The Battle of Oxcross", "The Battle of the Camps"],
+      "incorrect_answers": [
+        "The Battle of the Green Fork",
+        "The Battle of Oxcross",
+        "The Battle of the Camps"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "How many Valyrian steel swords does Tywin Lannister have forged from Ice?",
       "correct_answer": "Two",
-      "incorrect_answers": ["One", "Three", "Four"],
+      "incorrect_answers": [
+        "One",
+        "Three",
+        "Four"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of Oberyn Martell's paramour?",
       "correct_answer": "Ellaria Sand",
-      "incorrect_answers": ["Tyene Sand", "Obara Sand", "Arianne Martell"],
+      "incorrect_answers": [
+        "Tyene Sand",
+        "Obara Sand",
+        "Arianne Martell"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What substance is used to cure Jorah Mormont's greyscale?",
       "correct_answer": "Sam surgically removes the infected skin",
-      "incorrect_answers": ["Dragonglass ointment", "Wildfire", "Milk of the poppy"],
+      "incorrect_answers": [
+        "Dragonglass ointment",
+        "Wildfire",
+        "Milk of the poppy"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the first White Walker ever created?",
       "correct_answer": "The Night King",
-      "incorrect_answers": ["The Night's King", "The Great Other", "The White Wolf"],
+      "incorrect_answers": [
+        "The Night's King",
+        "The Great Other",
+        "The White Wolf"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the council that chooses Bran as king in the finale?",
       "correct_answer": "The Great Council",
-      "incorrect_answers": ["The Small Council", "The King's Moot", "The Grand Assembly"],
+      "incorrect_answers": [
+        "The Small Council",
+        "The King's Moot",
+        "The Grand Assembly"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is Varys's nickname?",
       "correct_answer": "The Spider",
-      "incorrect_answers": ["The Snake", "The Shadow", "The Whisperer"],
+      "incorrect_answers": [
+        "The Snake",
+        "The Shadow",
+        "The Whisperer"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the secret passage beneath the Red Keep?",
       "correct_answer": "The Dragon Skulls passage",
-      "incorrect_answers": ["The Black Cells", "The Serpent's Walk", "The King's Way"],
+      "incorrect_answers": [
+        "The Black Cells",
+        "The Serpent's Walk",
+        "The King's Way"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What does Hodor's name actually mean?",
       "correct_answer": "Hold the door",
-      "incorrect_answers": ["Home of doors", "Halt the door", "Hold the dark"],
+      "incorrect_answers": [
+        "Home of doors",
+        "Halt the door",
+        "Hold the dark"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "Which Targaryen conquered Westeros with three dragons?",
       "correct_answer": "Aegon the Conqueror",
-      "incorrect_answers": ["Maegor the Cruel", "Daeron the Young Dragon", "Rhaegar Targaryen"],
+      "incorrect_answers": [
+        "Maegor the Cruel",
+        "Daeron the Young Dragon",
+        "Rhaegar Targaryen"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What are the names of Aegon the Conqueror's two sister-wives?",
       "correct_answer": "Rhaenys and Visenya",
-      "incorrect_answers": ["Alysanne and Rhaena", "Daena and Elaena", "Saera and Aerea"],
+      "incorrect_answers": [
+        "Alysanne and Rhaena",
+        "Daena and Elaena",
+        "Saera and Aerea"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What type of creature does Qyburn create from the Mountain?",
       "correct_answer": "A reanimated corpse (Robert Strong)",
-      "incorrect_answers": ["A wight", "A golem", "A shadow creature"],
+      "incorrect_answers": [
+        "A wight",
+        "A golem",
+        "A shadow creature"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the real name of Jaqen H'ghar's organization?",
       "correct_answer": "The Faceless Men",
-      "incorrect_answers": ["The Nameless", "The Many Faced", "The Shadow Guild"],
+      "incorrect_answers": [
+        "The Nameless",
+        "The Many Faced",
+        "The Shadow Guild"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the name of the horn said to be able to bring down the Wall?",
       "correct_answer": "The Horn of Winter",
-      "incorrect_answers": ["The Horn of Joramun", "Dragonbinder", "The Horn of Herrock"],
+      "incorrect_answers": [
+        "The Horn of Joramun",
+        "Dragonbinder",
+        "The Horn of Herrock"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What is the traditional succession ceremony called on the Iron Islands?",
       "correct_answer": "The Kingsmoot",
-      "incorrect_answers": ["The Iron Assembly", "The Salt Council", "The Driftwood Crown"],
+      "incorrect_answers": [
+        "The Iron Assembly",
+        "The Salt Council",
+        "The Driftwood Crown"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "Who was the Mad King that Jaime Lannister killed?",
       "correct_answer": "Aerys II Targaryen",
-      "incorrect_answers": ["Aegon IV Targaryen", "Maegor Targaryen", "Baelor Targaryen"],
+      "incorrect_answers": [
+        "Aegon IV Targaryen",
+        "Maegor Targaryen",
+        "Baelor Targaryen"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "What phrase do the Ironborn say during their drowning ritual?",
       "correct_answer": "What is dead may never die",
-      "incorrect_answers": ["We do not sow", "Ours is the fury", "The sea remembers"],
+      "incorrect_answers": [
+        "We do not sow",
+        "Ours is the fury",
+        "The sea remembers"
+      ],
       "difficulty": "hard"
     },
     {
       "question": "How did Shireen Baratheon contract greyscale?",
       "correct_answer": "From a contaminated doll",
-      "incorrect_answers": ["From a Stone Man", "From her mother", "From dirty water"],
+      "incorrect_answers": [
+        "From a Stone Man",
+        "From her mother",
+        "From dirty water"
+      ],
       "difficulty": "hard"
+    },
+    {
+      "question": "What is the seat of House Lannister?",
+      "correct_answer": "Casterly Rock",
+      "incorrect_answers": [
+        "King's Landing",
+        "Lannisport",
+        "The Golden Tooth"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is known as the 'Kingslayer'?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Robert Baratheon",
+        "Ned Stark",
+        "Stannis Baratheon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Arya Stark's sword?",
+      "correct_answer": "Needle",
+      "incorrect_answers": [
+        "Ice",
+        "Longclaw",
+        "Oathkeeper"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is across the Narrow Sea from Westeros?",
+      "correct_answer": "Braavos",
+      "incorrect_answers": [
+        "Winterfell",
+        "Dorne",
+        "The Eyrie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal is on the Baratheon sigil?",
+      "correct_answer": "Stag",
+      "incorrect_answers": [
+        "Lion",
+        "Wolf",
+        "Dragon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sits on the Small Council as Master of Whisperers?",
+      "correct_answer": "Varys",
+      "incorrect_answers": [
+        "Littlefinger",
+        "Pycelle",
+        "Tyrion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Wall's primary castle?",
+      "correct_answer": "Castle Black",
+      "incorrect_answers": [
+        "Eastwatch",
+        "The Shadow Tower",
+        "The Nightfort"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Joffrey's real father?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Robert Baratheon",
+        "Ned Stark",
+        "Stannis Baratheon"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the ancestral sword of House Stark?",
+      "correct_answer": "Ice",
+      "incorrect_answers": [
+        "Longclaw",
+        "Dawn",
+        "Heartsbane"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which house's words are 'Fire and Blood'?",
+      "correct_answer": "Targaryen",
+      "incorrect_answers": [
+        "Lannister",
+        "Baratheon",
+        "Martell"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Samwell Tarly's father's name?",
+      "correct_answer": "Randyll",
+      "incorrect_answers": [
+        "Dickon",
+        "Horas",
+        "Mace"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who kills Robb Stark at the Red Wedding?",
+      "correct_answer": "Roose Bolton",
+      "incorrect_answers": [
+        "Walder Frey",
+        "Tywin Lannister",
+        "Ramsay Bolton"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Daenerys's largest dragon?",
+      "correct_answer": "Drogon",
+      "incorrect_answers": [
+        "Rhaegal",
+        "Viserion",
+        "Balerion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What poison is used to kill Joffrey?",
+      "correct_answer": "The Strangler",
+      "incorrect_answers": [
+        "Tears of Lys",
+        "The Long Farewell",
+        "Manticore venom"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who forges the Valyrian steel swords from Ice?",
+      "correct_answer": "Tobho Mott",
+      "incorrect_answers": [
+        "Gendry",
+        "Mikken",
+        "Salloreon"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What title does Daenerys hold in Meereen?",
+      "correct_answer": "Queen",
+      "incorrect_answers": [
+        "Khaleesi",
+        "Princess",
+        "Empress"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character loses his hand?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Tyrion Lannister",
+        "Jon Snow",
+        "Theon Greyjoy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Red Woman?",
+      "correct_answer": "Melisandre",
+      "incorrect_answers": [
+        "Kinvara",
+        "Quaithe",
+        "Selyse"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who becomes King at the end of the series?",
+      "correct_answer": "Bran Stark",
+      "incorrect_answers": [
+        "Jon Snow",
+        "Sansa Stark",
+        "Tyrion Lannister"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the motto of House Greyjoy?",
+      "correct_answer": "We Do Not Sow",
+      "incorrect_answers": [
+        "What Is Dead May Never Die",
+        "Ours Is the Fury",
+        "Growing Strong"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the Three-Eyed Raven before Bran?",
+      "correct_answer": "Brynden Rivers",
+      "incorrect_answers": [
+        "Jojen Reed",
+        "The Night King",
+        "Maester Aemon"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of Jon Snow's direwolf?",
+      "correct_answer": "Ghost",
+      "incorrect_answers": [
+        "Grey Wind",
+        "Nymeria",
+        "Summer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Stark child has a direwolf named Lady?",
+      "correct_answer": "Sansa",
+      "incorrect_answers": [
+        "Arya",
+        "Bran",
+        "Rickon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is wildfire?",
+      "correct_answer": "A volatile green substance that burns with extreme heat",
+      "incorrect_answers": [
+        "Dragon breath stored in jars",
+        "A type of poison",
+        "Magical lightning"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who commands the Golden Company?",
+      "correct_answer": "Harry Strickland",
+      "incorrect_answers": [
+        "Daario Naharis",
+        "Jorah Mormont",
+        "Grey Worm"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the seat of House Arryn?",
+      "correct_answer": "The Eyrie",
+      "incorrect_answers": [
+        "Riverrun",
+        "Storm's End",
+        "Highgarden"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who teaches Arya the art of sword fighting?",
+      "correct_answer": "Syrio Forel",
+      "incorrect_answers": [
+        "Jaqen H'ghar",
+        "The Hound",
+        "Brienne of Tarth"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the assassin guild in Braavos?",
+      "correct_answer": "Faceless Men",
+      "incorrect_answers": [
+        "Sorrowful Men",
+        "Shadow Binders",
+        "Warlocks of Qarth"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is Tyrion's first wife?",
+      "correct_answer": "Tysha",
+      "incorrect_answers": [
+        "Shae",
+        "Sansa Stark",
+        "Margaery Tyrell"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Brotherhood Without Banners?",
+      "correct_answer": "An outlaw group led by Beric Dondarrion",
+      "incorrect_answers": [
+        "The Night's Watch deserters",
+        "A Lannister special force",
+        "A Braavosi mercenary company"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What substance can kill White Walkers?",
+      "correct_answer": "Dragonglass",
+      "incorrect_answers": [
+        "Regular steel",
+        "Wildfire",
+        "Milk of the poppy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Night King's weapon made of?",
+      "correct_answer": "Ice",
+      "incorrect_answers": [
+        "Dragonglass",
+        "Valyrian steel",
+        "Obsidian"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who betrays Daenerys by informing on her to Varys?",
+      "correct_answer": "Jorah Mormont",
+      "incorrect_answers": [
+        "Barristan Selmy",
+        "Daario Naharis",
+        "Missandei"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Podrick Payne's nickname?",
+      "correct_answer": "Pod",
+      "incorrect_answers": [
+        "Poddy",
+        "Payne",
+        "Squire"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which castle does Ramsay Bolton hold?",
+      "correct_answer": "Winterfell",
+      "incorrect_answers": [
+        "The Dreadfort",
+        "Moat Cailin",
+        "Last Hearth"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Dothraki word for king?",
+      "correct_answer": "Khal",
+      "incorrect_answers": [
+        "Khaleesi",
+        "Ko",
+        "Dosh"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who crowns themselves King of the Iron Islands?",
+      "correct_answer": "Euron Greyjoy",
+      "incorrect_answers": [
+        "Theon Greyjoy",
+        "Balon Greyjoy",
+        "Yara Greyjoy"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the massive Wall in the North?",
+      "correct_answer": "The Wall",
+      "incorrect_answers": [
+        "The Great Barrier",
+        "The Ice Fortress",
+        "Hadrian's Wall"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Cersei's body double during her walk of shame?",
+      "correct_answer": "Rebecca Van Cleave",
+      "incorrect_answers": [
+        "Lena Headey",
+        "Natalie Dormer",
+        "Emilia Clarke"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which character says 'Chaos is a ladder'?",
+      "correct_answer": "Petyr Baelish",
+      "incorrect_answers": [
+        "Varys",
+        "Tyrion Lannister",
+        "Cersei Lannister"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Gendry's relation to Robert Baratheon?",
+      "correct_answer": "His bastard son",
+      "incorrect_answers": [
+        "His nephew",
+        "His squire",
+        "No relation"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who gives Brienne her Valyrian steel sword?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Tywin Lannister",
+        "Renly Baratheon",
+        "Catelyn Stark"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Brienne's sword?",
+      "correct_answer": "Oathkeeper",
+      "incorrect_answers": [
+        "Widow's Wail",
+        "Longclaw",
+        "Heartsbane"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many kingdoms make up the Seven Kingdoms?",
+      "correct_answer": "Nine",
+      "incorrect_answers": [
+        "Seven",
+        "Eight",
+        "Six"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the High Sparrow?",
+      "correct_answer": "The leader of the Faith Militant",
+      "incorrect_answers": [
+        "A Maester of the Citadel",
+        "A member of the Small Council",
+        "A Northern lord"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Jorah Mormont's ancestral home?",
+      "correct_answer": "Bear Island",
+      "incorrect_answers": [
+        "Last Hearth",
+        "Deepwood Motte",
+        "Karhold"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the youngest Stark child?",
+      "correct_answer": "Rickon",
+      "incorrect_answers": [
+        "Bran",
+        "Arya",
+        "Sansa"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What language do the Unsullied speak?",
+      "correct_answer": "Valyrian",
+      "incorrect_answers": [
+        "Dothraki",
+        "Common Tongue",
+        "Ghiscari"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Theon Greyjoy's sister?",
+      "correct_answer": "Yara",
+      "incorrect_answers": [
+        "Asha",
+        "Alannys",
+        "Gwyneth"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the last person Arya kills on her list?",
+      "correct_answer": "The Night King",
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Walder Frey",
+        "Meryn Trant"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Grey Worm's real name?",
+      "correct_answer": "He doesn't remember it",
+      "incorrect_answers": [
+        "Torgo Nudho",
+        "Marselen",
+        "Stalwart Shield"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which house rules Dorne?",
+      "correct_answer": "Martell",
+      "incorrect_answers": [
+        "Dayne",
+        "Yronwood",
+        "Blackmont"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the seat of House Tyrell?",
+      "correct_answer": "Highgarden",
+      "incorrect_answers": [
+        "The Arbor",
+        "Oldtown",
+        "Horn Hill"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is Missandei?",
+      "correct_answer": "Daenerys's translator and advisor",
+      "incorrect_answers": [
+        "A Red Priestess",
+        "An Unsullied commander",
+        "A Dothraki bloodrider"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What happens at Hardhome?",
+      "correct_answer": "The Night King raises the dead after a battle",
+      "incorrect_answers": [
+        "Jon Snow is killed",
+        "Daenerys arrives with dragons",
+        "The Wall falls"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Ramsay Bolton's lover?",
+      "correct_answer": "Myranda",
+      "incorrect_answers": [
+        "Ros",
+        "Osha",
+        "Gilly"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who serves as Hand of the King to Joffrey?",
+      "correct_answer": "Tywin Lannister",
+      "incorrect_answers": [
+        "Tyrion Lannister",
+        "Cersei Lannister",
+        "Petyr Baelish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Citadel?",
+      "correct_answer": "The headquarters of the Order of Maesters",
+      "incorrect_answers": [
+        "The Iron Bank's fortress",
+        "The Faceless Men's temple",
+        "The king's library"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who does Sansa marry in the show?",
+      "correct_answer": "Ramsay Bolton",
+      "incorrect_answers": [
+        "Only Tyrion",
+        "Petyr Baelish",
+        "Robin Arryn"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Iron Bank?",
+      "correct_answer": "A powerful bank in Braavos",
+      "incorrect_answers": [
+        "The royal treasury of Westeros",
+        "A Lannister vault",
+        "A Valyrian ruin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who says 'A Lannister always pays his debts'?",
+      "correct_answer": "Multiple Lannisters \u2014 it's their unofficial motto",
+      "incorrect_answers": [
+        "Only Tyrion",
+        "Only Tywin",
+        "Only Cersei"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Hodor's real name?",
+      "correct_answer": "Wylis",
+      "incorrect_answers": [
+        "Willis",
+        "Walder",
+        "Walter"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does 'Valar Morghulis' mean?",
+      "correct_answer": "All men must die",
+      "incorrect_answers": [
+        "All men must serve",
+        "Winter is coming",
+        "Fire and blood"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'Valar Dohaeris' mean?",
+      "correct_answer": "All men must serve",
+      "incorrect_answers": [
+        "All men must die",
+        "All men must fight",
+        "All men must pay"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who kills Tywin Lannister?",
+      "correct_answer": "Tyrion Lannister",
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Jaime Lannister",
+        "Arya Stark"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Ser Davos known for smuggling?",
+      "correct_answer": "Onions",
+      "incorrect_answers": [
+        "Gold",
+        "Weapons",
+        "Wine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which dragon does the Night King kill and reanimate?",
+      "correct_answer": "Viserion",
+      "incorrect_answers": [
+        "Rhaegal",
+        "Drogon",
+        "Balerion"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the wilding who helps Jon Snow?",
+      "correct_answer": "Tormund Giantsbane",
+      "incorrect_answers": [
+        "Mance Rayder",
+        "Styr",
+        "Rattleshirt"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the leader of the wildlings?",
+      "correct_answer": "Mance Rayder",
+      "incorrect_answers": [
+        "Tormund",
+        "The Lord of Bones",
+        "Craster"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Lady Olenna Tyrell known as?",
+      "correct_answer": "The Queen of Thorns",
+      "incorrect_answers": [
+        "The Rose of Highgarden",
+        "The Iron Lady",
+        "The Grey Rose"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who poisons Myrcella Baratheon?",
+      "correct_answer": "Ellaria Sand",
+      "incorrect_answers": [
+        "Doran Martell",
+        "Oberyn Martell",
+        "The Sand Snakes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Doom of Valyria?",
+      "correct_answer": "A cataclysmic volcanic event that destroyed Valyria",
+      "incorrect_answers": [
+        "A plague that killed all dragons",
+        "An invasion by White Walkers",
+        "A great flood"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who created the Night King?",
+      "correct_answer": "The Children of the Forest",
+      "incorrect_answers": [
+        "The First Men",
+        "The Targaryens",
+        "The Three-Eyed Raven"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Daenerys's title in full?",
+      "correct_answer": "Queen of the Andals, the Rhoynar, and the First Men",
+      "incorrect_answers": [
+        "Queen of the Seven Kingdoms",
+        "Empress of Essos and Westeros",
+        "High Queen of Dragonstone"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Where is Jon Snow's true parentage revealed?",
+      "correct_answer": "The Tower of Joy",
+      "incorrect_answers": [
+        "Winterfell's crypts",
+        "The Citadel",
+        "Castle Black"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Jon Snow's Targaryen name?",
+      "correct_answer": "Aegon",
+      "incorrect_answers": [
+        "Aemon",
+        "Rhaegar",
+        "Jaehaerys"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who pushes Bran out of the tower window?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Joffrey Baratheon",
+        "The Hound"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the penalty for deserting the Night's Watch?",
+      "correct_answer": "Death",
+      "incorrect_answers": [
+        "Imprisonment",
+        "Exile",
+        "Flogging"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Oberyn Martell also known as?",
+      "correct_answer": "The Red Viper",
+      "incorrect_answers": [
+        "The Sun Snake",
+        "The Dornish Dragon",
+        "The Sand King"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who kills Oberyn Martell?",
+      "correct_answer": "The Mountain",
+      "incorrect_answers": [
+        "Tywin Lannister",
+        "Cersei Lannister",
+        "The Hound"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Littlefinger's real name?",
+      "correct_answer": "Petyr Baelish",
+      "incorrect_answers": [
+        "Peter Blackwood",
+        "Petyr Frey",
+        "Patrick Bolton"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sits on the Iron Throne when the show begins?",
+      "correct_answer": "Robert Baratheon",
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Joffrey Baratheon",
+        "Ned Stark"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the sellsword who befriends Tyrion?",
+      "correct_answer": "Bronn",
+      "incorrect_answers": [
+        "Daario",
+        "Jorah",
+        "Salladhor Saan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Night's Watch oath called?",
+      "correct_answer": "The Oath of the Night's Watch",
+      "incorrect_answers": [
+        "The Black Vow",
+        "The Wall's Pledge",
+        "The Oath of the Crow"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does Hodor die?",
+      "correct_answer": "Holding a door against wights",
+      "incorrect_answers": [
+        "Killed by the Night King",
+        "Falling from a tower",
+        "Killed by Ramsay Bolton"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color is Ghost the direwolf?",
+      "correct_answer": "White",
+      "incorrect_answers": [
+        "Grey",
+        "Black",
+        "Brown"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does Cersei blow up with wildfire?",
+      "correct_answer": "The Great Sept of Baelor",
+      "incorrect_answers": [
+        "The Red Keep",
+        "King's Landing gates",
+        "The Dragonpit"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who does Arya serve as cupbearer to?",
+      "correct_answer": "Tywin Lannister",
+      "incorrect_answers": [
+        "Joffrey Baratheon",
+        "Roose Bolton",
+        "Walder Frey"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the massive battle in Season 2?",
+      "correct_answer": "Battle of the Blackwater",
+      "incorrect_answers": [
+        "Battle of the Bastards",
+        "Battle of Hardhome",
+        "Battle of Castle Black"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is Maester Aemon related to?",
+      "correct_answer": "The Targaryens \u2014 he is Aemon Targaryen",
+      "incorrect_answers": [
+        "The Starks",
+        "The Baratheons",
+        "The Lannisters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the seat of House Tully?",
+      "correct_answer": "Riverrun",
+      "incorrect_answers": [
+        "The Twins",
+        "Harrenhal",
+        "Seagard"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who says 'You know nothing, Jon Snow'?",
+      "correct_answer": "Ygritte",
+      "incorrect_answers": [
+        "Melisandre",
+        "Daenerys",
+        "Sansa"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Mountain's real name?",
+      "correct_answer": "Gregor Clegane",
+      "incorrect_answers": [
+        "Sandor Clegane",
+        "Gregor Umber",
+        "Robert Strong"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Cleganebowl?",
+      "correct_answer": "The fight between The Mountain and The Hound",
+      "incorrect_answers": [
+        "A tournament in King's Landing",
+        "A drinking contest",
+        "A trial by combat"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Where do the Dothraki live?",
+      "correct_answer": "The Dothraki Sea (grass plains of Essos)",
+      "incorrect_answers": [
+        "The Summer Isles",
+        "Sothoryos",
+        "The Jade Sea"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the final Hand of the King in the series?",
+      "correct_answer": "Tyrion Lannister",
+      "incorrect_answers": [
+        "Davos Seaworth",
+        "Samwell Tarly",
+        "Brienne of Tarth"
+      ],
+      "difficulty": "medium"
     }
   ]
 }
