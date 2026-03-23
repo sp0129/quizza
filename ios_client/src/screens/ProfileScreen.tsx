@@ -465,6 +465,11 @@ export default function ProfileScreen({ navigation }: Props) {
         <TouchableOpacity onPress={() => Linking.openURL('https://quizza-eta.vercel.app/privacy.html')} style={s.privacyLink}>
           <Text style={s.privacyText}>Privacy Policy</Text>
         </TouchableOpacity>
+
+        {/* Attribution */}
+        <Text style={s.attributionText}>
+          Some questions sourced from Open Trivia Database (opentdb.com), licensed under CC BY-SA 4.0.
+        </Text>
       </ScrollView>
     </View>
   );
@@ -679,4 +684,5 @@ const s = StyleSheet.create({
   },
   privacyLink: { alignItems: 'center', paddingVertical: 8 },
   privacyText: { color: colors.textMuted, fontSize: 12, textDecorationLine: 'underline' },
+  attributionText: { color: 'rgba(255,255,255,0.25)', fontSize: 10, textAlign: 'center', paddingVertical: 8, lineHeight: 15 },
 });
