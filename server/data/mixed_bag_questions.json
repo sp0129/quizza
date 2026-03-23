@@ -8233,307 +8233,32 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the name of Hagrid's baby dragon in the first book?",
-      "correct_answer": "Norbert",
+      "question": "What is Taylor Swift's fan base called?",
+      "correct_answer": "Swifties",
       "incorrect_answers": [
-        "Norberta",
-        "Fluffy",
-        "Fawkes"
+        "Tay-Tays",
+        "Lovers",
+        "Midnighters"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "Who sang 'Roar' in 2013?",
+      "question": "Who released the 1999 hit 'Livin' La Vida Loca'?",
+      "correct_answer": "Ricky Martin",
+      "incorrect_answers": [
+        "Enrique Iglesias",
+        "Marc Anthony",
+        "Julio Iglesias"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who 'kissed a girl and liked it' in 2008?",
       "correct_answer": "Katy Perry",
       "incorrect_answers": [
         "Pink",
-        "Kelly Clarkson",
+        "Avril Lavigne",
         "Demi Lovato"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the chemical formula for table sugar (sucrose)?",
-      "correct_answer": "C12H22O11",
-      "incorrect_answers": [
-        "C6H12O6",
-        "CH4",
-        "C2H6O"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Lima is the capital of which country?",
-      "correct_answer": "Peru",
-      "incorrect_answers": [
-        "Chile",
-        "Ecuador",
-        "Bolivia"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Name the capital:\n\n\ud83c\udde8\ud83c\uddff",
-      "correct_answer": "Prague",
-      "incorrect_answers": [
-        "Warsaw",
-        "Budapest",
-        "Vienna"
-      ],
-      "difficulty": "easy",
-      "display_hint": "flag"
-    },
-    {
-      "question": "What does Felix Felicis do?",
-      "correct_answer": "Makes the drinker lucky",
-      "incorrect_answers": [
-        "Makes the drinker invisible",
-        "Gives the drinker strength",
-        "Makes the drinker tell the truth"
-      ],
-      "difficulty": "medium"
-    },
-    {
-      "question": "What spell makes a light appear at the tip of a wand?",
-      "correct_answer": "Lumos",
-      "incorrect_answers": [
-        "Nox",
-        "Incendio",
-        "Alohomora"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which artist released the album 'Positions'?",
-      "correct_answer": "Ariana Grande",
-      "incorrect_answers": [
-        "Doja Cat",
-        "Dua Lipa",
-        "Cardi B"
-      ],
-      "difficulty": "medium"
-    },
-    {
-      "question": "What is the difference between NoSQL and SQL databases?",
-      "correct_answer": "SQL databases use structured tables with fixed schemas; NoSQL databases use flexible schemas like documents, key-value pairs, or graphs",
-      "incorrect_answers": [
-        "NoSQL is always faster than SQL",
-        "SQL databases cannot handle large data",
-        "NoSQL databases always use tables"
-      ],
-      "difficulty": "medium"
-    },
-    {
-      "question": "Who sang 'Jump' in 1984?",
-      "correct_answer": "Van Halen",
-      "incorrect_answers": [
-        "Def Leppard",
-        "Bon Jovi",
-        "Whitesnake"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Who sang 'Creep' in 1992?",
-      "correct_answer": "Radiohead",
-      "incorrect_answers": [
-        "Nirvana",
-        "The Smashing Pumpkins",
-        "Oasis"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which artist released 'Greedy' in 2023?",
-      "correct_answer": "Tate McRae",
-      "incorrect_answers": [
-        "Dua Lipa",
-        "Olivia Rodrigo",
-        "Sabrina Carpenter"
-      ],
-      "difficulty": "medium"
-    },
-    {
-      "question": "Name this country:\n\n\ud83c\udde8\ud83c\uddfa",
-      "correct_answer": "Cuba",
-      "incorrect_answers": [
-        "Puerto Rico",
-        "Chile",
-        "Costa Rica"
-      ],
-      "difficulty": "easy",
-      "display_hint": "flag"
-    },
-    {
-      "question": "Name this country:\n\n\ud83c\uddfb\ud83c\uddea",
-      "correct_answer": "Venezuela",
-      "incorrect_answers": [
-        "Colombia",
-        "Ecuador",
-        "Guyana"
-      ],
-      "difficulty": "medium",
-      "display_hint": "flag"
-    },
-    {
-      "question": "In Friends, who plays Rachel Green?",
-      "correct_answer": "Jennifer Aniston",
-      "incorrect_answers": [
-        "Courteney Cox",
-        "Lisa Kudrow",
-        "Julia Roberts"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Who sang 'With or Without You' in 1987?",
-      "correct_answer": "U2",
-      "incorrect_answers": [
-        "INXS",
-        "Simple Minds",
-        "The Cure"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Who kills Oberyn Martell?",
-      "correct_answer": "The Mountain",
-      "incorrect_answers": [
-        "Tywin Lannister",
-        "Cersei Lannister",
-        "The Hound"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is a priority queue?",
-      "correct_answer": "A data structure where each element has a priority and the highest-priority element is dequeued first",
-      "incorrect_answers": [
-        "A queue that processes elements alphabetically",
-        "A queue limited to a fixed number of elements",
-        "A queue that removes the oldest element first"
-      ],
-      "difficulty": "medium"
-    },
-    {
-      "question": "Name the capital:\n\n\ud83c\uddeb\ud83c\uddee",
-      "correct_answer": "Helsinki",
-      "incorrect_answers": [
-        "Stockholm",
-        "Oslo",
-        "Copenhagen"
-      ],
-      "difficulty": "easy",
-      "display_hint": "flag"
-    },
-    {
-      "question": "Who kills Thanos in the beginning of 'Avengers: Endgame'?",
-      "correct_answer": "Thor",
-      "incorrect_answers": [
-        "Captain Marvel",
-        "Iron Man",
-        "Nebula"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the chemical symbol for Radium?",
-      "correct_answer": "Ra",
-      "incorrect_answers": [
-        "R",
-        "Rd",
-        "Rm"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which artist sang 'Call Me Maybe'?",
-      "correct_answer": "Carly Rae Jepsen",
-      "incorrect_answers": [
-        "Rebecca Black",
-        "Meghan Trainor",
-        "Olivia Rodrigo"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Who kills Tywin Lannister?",
-      "correct_answer": "Tyrion Lannister",
-      "incorrect_answers": [
-        "Jaime Lannister",
-        "Cersei Lannister",
-        "Arya Stark"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is a memory leak?",
-      "correct_answer": "When a program allocates memory but fails to release it after it is no longer needed, causing increasing memory consumption",
-      "incorrect_answers": [
-        "When memory is corrupted by a virus",
-        "When RAM physically deteriorates",
-        "When a program uses too much CPU"
-      ],
-      "difficulty": "medium"
-    },
-    {
-      "question": "Which animal is the tallest in the world?",
-      "correct_answer": "Giraffe",
-      "incorrect_answers": [
-        "Elephant",
-        "Ostrich",
-        "Camel"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What is the chemical symbol for Uranium?",
-      "correct_answer": "U",
-      "incorrect_answers": [
-        "Ur",
-        "Un",
-        "Ul"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Who becomes King of the Six Kingdoms at the end of the series?",
-      "correct_answer": "Bran Stark",
-      "incorrect_answers": [
-        "Jon Snow",
-        "Tyrion Lannister",
-        "Sansa Stark"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Name this country:\n\n\ud83c\udde8\ud83c\uddf4",
-      "correct_answer": "Colombia",
-      "incorrect_answers": [
-        "Ecuador",
-        "Venezuela",
-        "Romania"
-      ],
-      "difficulty": "easy",
-      "display_hint": "flag"
-    },
-    {
-      "question": "What are baby frogs called?",
-      "correct_answer": "Tadpoles",
-      "incorrect_answers": [
-        "Larvae",
-        "Fry",
-        "Pups"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "What platform does the Hogwarts Express depart from?",
-      "correct_answer": "Platform 9\u00be",
-      "incorrect_answers": [
-        "Platform 10",
-        "Platform 9",
-        "Platform 7\u00bd"
       ],
       "difficulty": "easy"
     },
@@ -8548,42 +8273,2272 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does ROM stand for?",
-      "correct_answer": "Read-Only Memory",
+      "question": "Who released the 2023 album 'Midnights'?",
+      "correct_answer": "Taylor Swift",
       "incorrect_answers": [
-        "Random Operating Memory",
-        "Readable Output Memory",
-        "Run-Only Memory"
+        "Beyonc\u00e9",
+        "SZA",
+        "Miley Cyrus"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "Who released 'Easy On Me'?",
-      "correct_answer": "Adele",
+      "question": "Which artist released the 2023 hit 'Kill Bill'?",
+      "correct_answer": "SZA",
       "incorrect_answers": [
+        "Doja Cat",
+        "Summer Walker",
+        "H.E.R."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'I Gotta Feeling' in 2009?",
+      "correct_answer": "Black Eyed Peas",
+      "incorrect_answers": [
+        "LMFAO",
+        "Far East Movement",
+        "Flo Rida"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist sang 'SexyBack' in 2006?",
+      "correct_answer": "Justin Timberlake",
+      "incorrect_answers": [
+        "Usher",
+        "Ne-Yo",
+        "Chris Brown"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Circles'?",
+      "correct_answer": "Post Malone",
+      "incorrect_answers": [
+        "Juice WRLD",
+        "The Weeknd",
+        "Khalid"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which boy band sang 'I Want It That Way'?",
+      "correct_answer": "Backstreet Boys",
+      "incorrect_answers": [
+        "*NSYNC",
+        "98 Degrees",
+        "Westlife"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Dance Monkey'?",
+      "correct_answer": "Tones and I",
+      "incorrect_answers": [
+        "Sia",
+        "Billie Eilish",
+        "Dua Lipa"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who featured on 'Se\u00f1orita' with Shawn Mendes?",
+      "correct_answer": "Camila Cabello",
+      "incorrect_answers": [
+        "Dua Lipa",
+        "Halsey",
+        "Selena Gomez"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which song by Luis Fonsi and Daddy Yankee became a global hit in 2017?",
+      "correct_answer": "Despacito",
+      "incorrect_answers": [
+        "Gasolina",
+        "Mi Gente",
+        "Taki Taki"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist's Super Bowl halftime show featured flying shark dancers?",
+      "correct_answer": "Katy Perry",
+      "incorrect_answers": [
+        "Lady Gaga",
+        "Beyonc\u00e9",
+        "Shakira"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Miley Cyrus's 2023 hit that broke Spotify streaming records?",
+      "correct_answer": "Flowers",
+      "incorrect_answers": [
+        "Midnight Sky",
+        "Used to be Young",
+        "Malibu"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which band features lead singer Adam Levine?",
+      "correct_answer": "Maroon 5",
+      "incorrect_answers": [
+        "Imagine Dragons",
+        "Coldplay",
+        "OneRepublic"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Poker Face' and 'Bad Romance'?",
+      "correct_answer": "Lady Gaga",
+      "incorrect_answers": [
+        "Madonna",
+        "Lana Del Rey",
+        "Halsey"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist had a hit with 'Bad Guy' while wearing baggy clothes?",
+      "correct_answer": "Billie Eilish",
+      "incorrect_answers": [
+        "Melanie Martinez",
+        "Willow Smith",
+        "Lizzo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'We Belong Together' in 2005?",
+      "correct_answer": "Mariah Carey",
+      "incorrect_answers": [
+        "Whitney Houston",
+        "Alicia Keys",
+        "Mary J. Blige"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which group released 'Sweetest Thing' as a single in 1998?",
+      "correct_answer": "U2",
+      "incorrect_answers": [
+        "Oasis",
+        "Radiohead",
+        "R.E.M."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released the album 'Future Nostalgia'?",
+      "correct_answer": "Dua Lipa",
+      "incorrect_answers": [
+        "Ariana Grande",
+        "Charli XCX",
+        "Doja Cat"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which group released 'Dynamite' as their first all-English single?",
+      "correct_answer": "BTS",
+      "incorrect_answers": [
+        "BLACKPINK",
+        "TWICE",
+        "EXO"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Canadian artist released 'Blinding Lights' and 'The Hills'?",
+      "correct_answer": "The Weeknd",
+      "incorrect_answers": [
+        "Drake",
+        "Shawn Mendes",
+        "Justin Bieber"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who featured on 'See You Again' with Wiz Khalifa?",
+      "correct_answer": "Charlie Puth",
+      "incorrect_answers": [
+        "Ed Sheeran",
         "Sam Smith",
-        "Lewis Capaldi",
-        "Ed Sheeran"
+        "John Legend"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is the only mammal that can fly?",
-      "correct_answer": "Bat",
+      "question": "Which artist released 'Get Lucky' with Pharrell Williams in 2013?",
+      "correct_answer": "Daft Punk",
       "incorrect_answers": [
-        "Flying squirrel",
-        "Sugar glider",
-        "Eagle"
+        "Calvin Harris",
+        "David Guetta",
+        "Avicii"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What muscle helps you breathe by moving up and down?",
-      "correct_answer": "Diaphragm",
+      "question": "Who featured on 'Savage Remix' with Megan Thee Stallion?",
+      "correct_answer": "Beyonc\u00e9",
       "incorrect_answers": [
-        "Heart",
-        "Ribcage",
-        "Lungs"
+        "Nicki Minaj",
+        "Cardi B",
+        "Doja Cat"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many members are in BTS?",
+      "correct_answer": "7",
+      "incorrect_answers": [
+        "5",
+        "6",
+        "8"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released 'Attention' in 2017?",
+      "correct_answer": "Charlie Puth",
+      "incorrect_answers": [
+        "Shawn Mendes",
+        "Ed Sheeran",
+        "Troye Sivan"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In the song 'Empire State of Mind', Jay-Z features which female singer on the chorus?",
+      "correct_answer": "Alicia Keys",
+      "incorrect_answers": [
+        "Beyonc\u00e9",
+        "Rihanna",
+        "Mary J. Blige"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who sang 'Drops of Jupiter' in 2001?",
+      "correct_answer": "Train",
+      "incorrect_answers": [
+        "Matchbox Twenty",
+        "Goo Goo Dolls",
+        "Third Eye Blind"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which pop star owns a cosmetics brand called 'Fenty Beauty'?",
+      "correct_answer": "Rihanna",
+      "incorrect_answers": [
+        "Selena Gomez",
+        "Ariana Grande",
+        "Halsey"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which music video featured Miley Cyrus swinging on a wrecking ball?",
+      "correct_answer": "Wrecking Ball",
+      "incorrect_answers": [
+        "We Can't Stop",
+        "Adore You",
+        "Malibu"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Careless Whisper' in 1984?",
+      "correct_answer": "George Michael",
+      "incorrect_answers": [
+        "Phil Collins",
+        "Lionel Richie",
+        "Billy Joel"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which British boy band was formed on 'The X Factor' in 2010?",
+      "correct_answer": "One Direction",
+      "incorrect_answers": [
+        "The Wanted",
+        "5 Seconds of Summer",
+        "Backstreet Boys"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Unholy' with Kim Petras?",
+      "correct_answer": "Sam Smith",
+      "incorrect_answers": [
+        "Troye Sivan",
+        "Lil Nas X",
+        "Elton John"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2016 hit 'Cheap Thrills'?",
+      "correct_answer": "Sia",
+      "incorrect_answers": [
+        "Rihanna",
+        "Ariana Grande",
+        "Selena Gomez"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Stitches'?",
+      "correct_answer": "Shawn Mendes",
+      "incorrect_answers": [
+        "Ed Sheeran",
+        "Charlie Puth",
+        "Troye Sivan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 80s song by Depeche Mode became an anthem for the electronic music movement?",
+      "correct_answer": "Enjoy the Silence",
+      "incorrect_answers": [
+        "Blue Monday",
+        "West End Girls",
+        "Tainted Love"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 80s band sang 'Sweet Child O' Mine'?",
+      "correct_answer": "Guns N' Roses",
+      "incorrect_answers": [
+        "Bon Jovi",
+        "Def Leppard",
+        "Motley Crue"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Under Pressure' with David Bowie in 1981?",
+      "correct_answer": "Queen",
+      "incorrect_answers": [
+        "The Rolling Stones",
+        "Led Zeppelin",
+        "The Who"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'we can't be friends (wait for your love)'?",
+      "correct_answer": "Ariana Grande",
+      "incorrect_answers": [
+        "Olivia Rodrigo",
+        "Sabrina Carpenter",
+        "Billie Eilish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What instrument does Lizzo famously play during her live performances?",
+      "correct_answer": "Flute",
+      "incorrect_answers": [
+        "Saxophone",
+        "Trumpet",
+        "Clarinet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which band's 2004 album 'American Idiot' was turned into a Broadway musical?",
+      "correct_answer": "Green Day",
+      "incorrect_answers": [
+        "Blink-182",
+        "The Killers",
+        "Fall Out Boy"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which song by Pharrell Williams asks listeners to 'clap along'?",
+      "correct_answer": "Happy",
+      "incorrect_answers": [
+        "Lucky",
+        "Get Lucky",
+        "Blurred Lines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Travis Scott song features a famous roller coaster-themed music video?",
+      "correct_answer": "SICKO MODE",
+      "incorrect_answers": [
+        "Goosebumps",
+        "Antidote",
+        "Highest in the Room"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the original name of the band that became Maroon 5?",
+      "correct_answer": "Kara's Flowers",
+      "incorrect_answers": [
+        "Saturday Afternoon",
+        "The Fourth Wall",
+        "Adam's Apple"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which girl group released 'How You Like That'?",
+      "correct_answer": "BLACKPINK",
+      "incorrect_answers": [
+        "TWICE",
+        "Little Mix",
+        "Fifth Harmony"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the 2020 hit 'Blinding Lights'?",
+      "correct_answer": "The Weeknd",
+      "incorrect_answers": [
+        "Dua Lipa",
+        "Harry Styles",
+        "Post Malone"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which band released 'Yellow' and 'Viva La Vida'?",
+      "correct_answer": "Coldplay",
+      "incorrect_answers": [
+        "The Killers",
+        "Radiohead",
+        "U2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Royals'?",
+      "correct_answer": "Lorde",
+      "incorrect_answers": [
+        "Sia",
+        "Halsey",
+        "Billie Eilish"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the password to the prefects' bathroom in Goblet of Fire?",
+      "correct_answer": "Pine fresh",
+      "incorrect_answers": [
+        "Lemon drop",
+        "Balderdash",
+        "Caput Draconis"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What magical object shows the deepest desire of one's heart?",
+      "correct_answer": "Mirror of Erised",
+      "incorrect_answers": [
+        "Pensieve",
+        "Crystal ball",
+        "Remembrall"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Dumbledore's phoenix?",
+      "correct_answer": "Fawkes",
+      "incorrect_answers": [
+        "Hedwig",
+        "Norbert",
+        "Buckbeak"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Nymphadora Tonks' preferred name?",
+      "correct_answer": "Tonks",
+      "incorrect_answers": [
+        "Nymphadora",
+        "Dora",
+        "Nymph"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Harry's best female friend?",
+      "correct_answer": "Hermione Granger",
+      "incorrect_answers": [
+        "Ginny Weasley",
+        "Luna Lovegood",
+        "Cho Chang"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Luna Lovegood's father's name?",
+      "correct_answer": "Xenophilius",
+      "incorrect_answers": [
+        "Cornelius",
+        "Lysander",
+        "Rolf"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What class does Professor Trelawney teach?",
+      "correct_answer": "Divination",
+      "incorrect_answers": [
+        "Herbology",
+        "Astronomy",
+        "Arithmancy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do students get to Hogwarts in their first year?",
+      "correct_answer": "Boats across the lake",
+      "incorrect_answers": [
+        "Thestral-drawn carriages",
+        "Flying broomsticks",
+        "Floo Network"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who wrote the textbook 'Fantastic Beasts and Where to Find Them'?",
+      "correct_answer": "Newt Scamander",
+      "incorrect_answers": [
+        "Gilderoy Lockhart",
+        "Bathilda Bagshot",
+        "Adalbert Waffling"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What potion forces the drinker to tell the truth?",
+      "correct_answer": "Veritaserum",
+      "incorrect_answers": [
+        "Felix Felicis",
+        "Amortentia",
+        "Polyjuice Potion"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who impersonates Mad-Eye Moody in Goblet of Fire?",
+      "correct_answer": "Barty Crouch Jr.",
+      "incorrect_answers": [
+        "Peter Pettigrew",
+        "Lucius Malfoy",
+        "Igor Karkaroff"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the golden Snitch do in Quidditch?",
+      "correct_answer": "Ends the game when caught",
+      "incorrect_answers": [
+        "Scores 50 points",
+        "Knocks players off brooms",
+        "Blocks the Quaffle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the headmaster of Durmstrang?",
+      "correct_answer": "Igor Karkaroff",
+      "incorrect_answers": [
+        "Viktor Krum",
+        "Gellert Grindelwald",
+        "Gregorovitch"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the incantation for the spell that disarms an opponent?",
+      "correct_answer": "Expelliarmus",
+      "incorrect_answers": [
+        "Stupefy",
+        "Protego",
+        "Accio"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the first name of Harry's godfather?",
+      "correct_answer": "Sirius",
+      "incorrect_answers": [
+        "Remus",
+        "James",
+        "Alastor"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the magical map that shows everyone's location at Hogwarts?",
+      "correct_answer": "Marauder's Map",
+      "incorrect_answers": [
+        "Hogwarts Registry",
+        "Tracking Tome",
+        "Watcher's Chart"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal represents Slytherin house?",
+      "correct_answer": "Snake",
+      "incorrect_answers": [
+        "Lion",
+        "Eagle",
+        "Badger"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What number is Harry's vault at Gringotts?",
+      "correct_answer": "687",
+      "incorrect_answers": [
+        "713",
+        "492",
+        "711"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Sirius Black's Animagus form?",
+      "correct_answer": "Dog",
+      "incorrect_answers": [
+        "Stag",
+        "Rat",
+        "Wolf"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the conductor of the Knight Bus?",
+      "correct_answer": "Stan Shunpike",
+      "incorrect_answers": [
+        "Ernie Prang",
+        "Mundungus Fletcher",
+        "Dedalus Diggle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the pub that serves as the entrance to Diagon Alley?",
+      "correct_answer": "The Leaky Cauldron",
+      "incorrect_answers": [
+        "The Three Broomsticks",
+        "The Hog's Head",
+        "Madam Puddifoot's"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What creature does Lupin turn into during a full moon?",
+      "correct_answer": "Werewolf",
+      "incorrect_answers": [
+        "Vampire",
+        "Boggart",
+        "Animagus dog"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of dragon does Harry face in the Triwizard Tournament?",
+      "correct_answer": "Hungarian Horntail",
+      "incorrect_answers": [
+        "Norwegian Ridgeback",
+        "Swedish Short-Snout",
+        "Common Welsh Green"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who does Ron impersonate using Polyjuice Potion in book seven to infiltrate the Ministry?",
+      "correct_answer": "Reg Cattermole",
+      "incorrect_answers": [
+        "Albert Runcorn",
+        "Mafalda Hopkirk",
+        "Pius Thicknesse"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Deathly Hallow did Voldemort possess?",
+      "correct_answer": "The Elder Wand",
+      "incorrect_answers": [
+        "The Cloak of Invisibility",
+        "The Resurrection Stone",
+        "All three"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Tom Riddle's mother?",
+      "correct_answer": "Merope Gaunt",
+      "incorrect_answers": [
+        "Morfin Gaunt",
+        "Cecilia Riddle",
+        "Hepzibah Smith"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What form does Harry's Patronus take?",
+      "correct_answer": "Stag",
+      "incorrect_answers": [
+        "Doe",
+        "Otter",
+        "Jack Russell Terrier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What spell does Hermione use to wipe her parents' memories?",
+      "correct_answer": "Obliviate",
+      "incorrect_answers": [
+        "Confundo",
+        "Imperius",
+        "Stupefy"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Animagus form of Sirius Black?",
+      "correct_answer": "Dog",
+      "incorrect_answers": [
+        "Stag",
+        "Rat",
+        "Wolf"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What sweet has flavors like earwax and vomit?",
+      "correct_answer": "Bertie Bott's Every Flavour Beans",
+      "incorrect_answers": [
+        "Chocolate Frogs",
+        "Drooble's Gum",
+        "Acid Pops"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Dursleys' son?",
+      "correct_answer": "Dudley",
+      "incorrect_answers": [
+        "Dennis",
+        "Derek",
+        "Douglas"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Hagrid's boarhound?",
+      "correct_answer": "Fang",
+      "incorrect_answers": [
+        "Fluffy",
+        "Padfoot",
+        "Buckbeak"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Hermione's cat called?",
+      "correct_answer": "Crookshanks",
+      "incorrect_answers": [
+        "Mrs Norris",
+        "Scabbers",
+        "Pigwidgeon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who gives Harry the Invisibility Cloak?",
+      "correct_answer": "Dumbledore",
+      "incorrect_answers": [
+        "Sirius Black",
+        "Hagrid",
+        "Snape"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What shape is Harry Potter's scar?",
+      "correct_answer": "Lightning bolt",
+      "incorrect_answers": [
+        "Star",
+        "Crescent moon",
+        "Triangle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Hermione's cat?",
+      "correct_answer": "Crookshanks",
+      "incorrect_answers": [
+        "Mrs. Norris",
+        "Scabbers",
+        "Arnold"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does Hermione use to attend multiple classes at once?",
+      "correct_answer": "Time-Turner",
+      "incorrect_answers": [
+        "Invisibility Cloak",
+        "Portkey",
+        "Vanishing Cabinet"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who killed Sirius Black?",
+      "correct_answer": "Bellatrix Lestrange",
+      "incorrect_answers": [
+        "Lucius Malfoy",
+        "Voldemort",
+        "Peter Pettigrew"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is Teddy Lupin's mother?",
+      "correct_answer": "Nymphadora Tonks",
+      "incorrect_answers": [
+        "Fleur Delacour",
+        "Ginny Weasley",
+        "Luna Lovegood"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who teaches Herbology at Hogwarts?",
+      "correct_answer": "Pomona Sprout",
+      "incorrect_answers": [
+        "Minerva McGonagall",
+        "Filius Flitwick",
+        "Severus Snape"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Weasley child works with dragons in Romania?",
+      "correct_answer": "Charlie",
+      "incorrect_answers": [
+        "Bill",
+        "Percy",
+        "Fred"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Harry's mother?",
+      "correct_answer": "Lily",
+      "incorrect_answers": [
+        "Rose",
+        "Petunia",
+        "Molly"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the three Deathly Hallows?",
+      "correct_answer": "Elder Wand, Resurrection Stone, Invisibility Cloak",
+      "incorrect_answers": [
+        "Sorcerer's Stone, Time-Turner, Marauder's Map",
+        "Elder Wand, Philosopher's Stone, Invisibility Cloak",
+        "Resurrection Stone, Horcrux locket, Elder Wand"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the caretaker of Hogwarts?",
+      "correct_answer": "Argus Filch",
+      "incorrect_answers": [
+        "Horace Slughorn",
+        "Pomona Sprout",
+        "Rubeus Hagrid"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What position does Ginny Weasley play in Quidditch?",
+      "correct_answer": "Chaser",
+      "incorrect_answers": [
+        "Seeker",
+        "Beater",
+        "Keeper"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Weasley family home?",
+      "correct_answer": "The Burrow",
+      "incorrect_answers": [
+        "The Hollow",
+        "Ottery Cottage",
+        "Red House"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who was the first victim of the basilisk when the Chamber of Secrets was first opened fifty years ago?",
+      "correct_answer": "Moaning Myrtle",
+      "incorrect_answers": [
+        "Nearly Headless Nick",
+        "James Potter",
+        "Peeves"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What object is a Portkey that takes Harry to the graveyard in book four?",
+      "correct_answer": "The Triwizard Cup",
+      "incorrect_answers": [
+        "A boot",
+        "A newspaper",
+        "A quill"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the Heir of Slytherin?",
+      "correct_answer": "Tom Riddle",
+      "incorrect_answers": [
+        "Draco Malfoy",
+        "Salazar Slytherin",
+        "Severus Snape"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What position does Harry play on the Quidditch team?",
+      "correct_answer": "Seeker",
+      "incorrect_answers": [
+        "Keeper",
+        "Chaser",
+        "Beater"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who kills Ramsay Bolton?",
+      "correct_answer": "Sansa Stark",
+      "incorrect_answers": [
+        "Jon Snow",
+        "Theon Greyjoy",
+        "Brienne of Tarth"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Joffrey's real father?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Robert Baratheon",
+        "Ned Stark",
+        "Stannis Baratheon"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the seat of House Tyrell?",
+      "correct_answer": "Highgarden",
+      "incorrect_answers": [
+        "The Arbor",
+        "Oldtown",
+        "Horn Hill"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is Joffrey's younger brother who becomes king after him?",
+      "correct_answer": "Tommen Baratheon",
+      "incorrect_answers": [
+        "Stannis Baratheon",
+        "Renly Baratheon",
+        "Gendry Baratheon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the final Hand of the King in the series?",
+      "correct_answer": "Tyrion Lannister",
+      "incorrect_answers": [
+        "Davos Seaworth",
+        "Samwell Tarly",
+        "Brienne of Tarth"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Podrick Payne's nickname?",
+      "correct_answer": "Pod",
+      "incorrect_answers": [
+        "Poddy",
+        "Payne",
+        "Squire"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who kills Petyr Baelish?",
+      "correct_answer": "Arya Stark",
+      "incorrect_answers": [
+        "Sansa Stark",
+        "Bran Stark",
+        "Brienne of Tarth"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the phrase 'Valar Morghulis' mean?",
+      "correct_answer": "All men must die",
+      "incorrect_answers": [
+        "All men must serve",
+        "Fire and blood",
+        "Power is power"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What substance can kill White Walkers?",
+      "correct_answer": "Dragonglass",
+      "incorrect_answers": [
+        "Regular steel",
+        "Wildfire",
+        "Milk of the poppy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What great civilization was destroyed in the Doom?",
+      "correct_answer": "Valyria",
+      "incorrect_answers": [
+        "Ghis",
+        "Qarth",
+        "Asshai"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what region of Westeros is Winterfell located?",
+      "correct_answer": "The North",
+      "incorrect_answers": [
+        "The Riverlands",
+        "The Vale",
+        "The Reach"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who does Arya serve as cupbearer to at Harrenhal?",
+      "correct_answer": "Tywin Lannister",
+      "incorrect_answers": [
+        "Roose Bolton",
+        "The Mountain",
+        "Joffrey Baratheon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Iron Throne made from?",
+      "correct_answer": "Swords",
+      "incorrect_answers": [
+        "Iron ore",
+        "Dragon bones",
+        "Steel and gold"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many dragons does Daenerys hatch?",
+      "correct_answer": "Three",
+      "incorrect_answers": [
+        "Two",
+        "Four",
+        "One"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who says 'A Lannister always pays his debts'?",
+      "correct_answer": "Multiple Lannisters \u2014 it's their unofficial motto",
+      "incorrect_answers": [
+        "Only Tyrion",
+        "Only Tywin",
+        "Only Cersei"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who sits on the Small Council as Master of Whisperers?",
+      "correct_answer": "Varys",
+      "incorrect_answers": [
+        "Littlefinger",
+        "Pycelle",
+        "Tyrion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who does the Hound fight to the death in the series finale season?",
+      "correct_answer": "The Mountain",
+      "incorrect_answers": [
+        "Brienne of Tarth",
+        "Arya Stark",
+        "The Night King"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does Hodor die?",
+      "correct_answer": "Holding a door against wights",
+      "incorrect_answers": [
+        "Killed by the Night King",
+        "Falling from a tower",
+        "Killed by Ramsay Bolton"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Hodor's real name?",
+      "correct_answer": "Wylis",
+      "incorrect_answers": [
+        "Willis",
+        "Walder",
+        "Walter"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who kills Robb Stark at the Red Wedding?",
+      "correct_answer": "Roose Bolton",
+      "incorrect_answers": [
+        "Walder Frey",
+        "Tywin Lannister",
+        "Ramsay Bolton"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the leader of the Brotherhood Without Banners?",
+      "correct_answer": "Beric Dondarrion",
+      "incorrect_answers": [
+        "Thoros of Myr",
+        "The Hound",
+        "Anguy"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who pushes Bran out of the tower window?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Joffrey Baratheon",
+        "The Hound"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What event is referred to as 'The Red Wedding'?",
+      "correct_answer": "Massacre of Robb Stark at the Twins",
+      "incorrect_answers": [
+        "Joffrey's poisoning at his wedding",
+        "Daenerys's wedding to Khal Drogo",
+        "Sansa's wedding to Tyrion"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the sellsword company hired by Cersei in the final season?",
+      "correct_answer": "The Golden Company",
+      "incorrect_answers": [
+        "The Second Sons",
+        "The Stormcrows",
+        "The Brave Companions"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which dragon does Jon Snow ride?",
+      "correct_answer": "Rhaegal",
+      "incorrect_answers": [
+        "Drogon",
+        "Viserion",
+        "Balerion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Night's Watch oath called?",
+      "correct_answer": "The Oath of the Night's Watch",
+      "incorrect_answers": [
+        "The Black Vow",
+        "The Wall's Pledge",
+        "The Oath of the Crow"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is Ned Stark's illegitimate nephew that he raises as his bastard son?",
+      "correct_answer": "Jon Snow",
+      "incorrect_answers": [
+        "Theon Greyjoy",
+        "Gendry",
+        "Ramsay Snow"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Euron Greyjoy's ship?",
+      "correct_answer": "The Silence",
+      "incorrect_answers": [
+        "The Iron Victory",
+        "The Black Wind",
+        "The Sea Bitch"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the seat of House Lannister?",
+      "correct_answer": "Casterly Rock",
+      "incorrect_answers": [
+        "King's Landing",
+        "Highgarden",
+        "Storm's End"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'Valar Dohaeris' mean?",
+      "correct_answer": "All men must serve",
+      "incorrect_answers": [
+        "All men must die",
+        "All men must fight",
+        "All men must pay"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who sits on the Iron Throne at the very start of the show?",
+      "correct_answer": "Robert Baratheon",
+      "incorrect_answers": [
+        "Joffrey Baratheon",
+        "Eddard Stark",
+        "Tywin Lannister"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the wildling woman Jon Snow falls in love with?",
+      "correct_answer": "Ygritte",
+      "incorrect_answers": [
+        "Osha",
+        "Gilly",
+        "Val"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What noble house rules the Iron Islands?",
+      "correct_answer": "House Greyjoy",
+      "incorrect_answers": [
+        "House Tully",
+        "House Martell",
+        "House Tyrell"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who teaches Arya the art of sword fighting?",
+      "correct_answer": "Syrio Forel",
+      "incorrect_answers": [
+        "Jaqen H'ghar",
+        "The Hound",
+        "Brienne of Tarth"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Theon Greyjoy's sister in the TV show?",
+      "correct_answer": "Yara Greyjoy",
+      "incorrect_answers": [
+        "Asha Greyjoy",
+        "Lyanna Greyjoy",
+        "Alannys Greyjoy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who gives Brienne her Valyrian steel sword?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Tywin Lannister",
+        "Renly Baratheon",
+        "Catelyn Stark"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the poison used to kill Joffrey?",
+      "correct_answer": "The Strangler",
+      "incorrect_answers": [
+        "Tears of Lys",
+        "The Long Farewell",
+        "Essence of Nightshade"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character loses his hand?",
+      "correct_answer": "Jaime Lannister",
+      "incorrect_answers": [
+        "Tyrion Lannister",
+        "Jon Snow",
+        "Theon Greyjoy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the unofficial motto associated with the Lannisters?",
+      "correct_answer": "A Lannister always pays his debts",
+      "incorrect_answers": [
+        "Hear Me Roar",
+        "Gold buys all",
+        "Lions never kneel"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of Daenerys's dragons was killed and resurrected by the Night King?",
+      "correct_answer": "Viserion",
+      "incorrect_answers": [
+        "Drogon",
+        "Rhaegal",
+        "Balerion"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the flammable liquid used to defend King's Landing during the Battle of the Blackwater?",
+      "correct_answer": "Wildfire",
+      "incorrect_answers": [
+        "Dragonfire",
+        "Burning Oil",
+        "Essence of Nightshade"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Citadel?",
+      "correct_answer": "The headquarters of the Order of Maesters",
+      "incorrect_answers": [
+        "The Iron Bank's fortress",
+        "The Faceless Men's temple",
+        "The king's library"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who does Stannis Baratheon burn alive as a sacrifice?",
+      "correct_answer": "Shireen Baratheon",
+      "incorrect_answers": [
+        "Selyse Baratheon",
+        "Davos Seaworth",
+        "Mance Rayder"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What building does Cersei destroy with wildfire at the end of Season 6?",
+      "correct_answer": "The Great Sept of Baelor",
+      "incorrect_answers": [
+        "The Red Keep",
+        "The Dragonpit",
+        "The Tower of the Hand"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the seat of House Martell?",
+      "correct_answer": "Sunspear",
+      "incorrect_answers": [
+        "Starfall",
+        "Yronwood",
+        "Hellholt"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is across the Narrow Sea from Westeros?",
+      "correct_answer": "Braavos",
+      "incorrect_answers": [
+        "Winterfell",
+        "Dorne",
+        "The Eyrie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the ancestral Valyrian steel sword given to Jon Snow by Jeor Mormont?",
+      "correct_answer": "Longclaw",
+      "incorrect_answers": [
+        "Ice",
+        "Heartsbane",
+        "Widow's Wail"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Iron Bank?",
+      "correct_answer": "A powerful bank in Braavos",
+      "incorrect_answers": [
+        "The royal treasury of Westeros",
+        "A Lannister vault",
+        "A Valyrian ruin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who says 'You know nothing, Jon Snow'?",
+      "correct_answer": "Ygritte",
+      "incorrect_answers": [
+        "Daenerys Targaryen",
+        "Cersei Lannister",
+        "Melisandre"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Jorah Mormont's ancestral home?",
+      "correct_answer": "Bear Island",
+      "incorrect_answers": [
+        "Last Hearth",
+        "Deepwood Motte",
+        "Karhold"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Wellington is the capital of which country?",
+      "correct_answer": "New Zealand",
+      "incorrect_answers": [
+        "Australia",
+        "Fiji",
+        "Papua New Guinea"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Havana is the capital of which country?",
+      "correct_answer": "Cuba",
+      "incorrect_answers": [
+        "Dominican Republic",
+        "Puerto Rico",
+        "Jamaica"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Finland?",
+      "correct_answer": "Helsinki",
+      "incorrect_answers": [
+        "Turku",
+        "Tampere",
+        "Espoo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Bucharest is the capital of which country?",
+      "correct_answer": "Romania",
+      "incorrect_answers": [
+        "Bulgaria",
+        "Hungary",
+        "Serbia"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Israel?",
+      "correct_answer": "Jerusalem (declared)",
+      "incorrect_answers": [
+        "Tel Aviv",
+        "Haifa",
+        "Eilat"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Ethiopia?",
+      "correct_answer": "Addis Ababa",
+      "incorrect_answers": [
+        "Dire Dawa",
+        "Gondar",
+        "Mekelle"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Denmark?",
+      "correct_answer": "Copenhagen",
+      "incorrect_answers": [
+        "Aarhus",
+        "Odense",
+        "Aalborg"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Iceland?",
+      "correct_answer": "Reykjavik",
+      "incorrect_answers": [
+        "Akureyri",
+        "Keflavik",
+        "Vik"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Hungary?",
+      "correct_answer": "Budapest",
+      "incorrect_answers": [
+        "Debrecen",
+        "Szeged",
+        "P\u00e9cs"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Ottawa is the capital of which country?",
+      "correct_answer": "Canada",
+      "incorrect_answers": [
+        "Australia",
+        "United States",
+        "Ireland"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Switzerland?",
+      "correct_answer": "Bern",
+      "incorrect_answers": [
+        "Zurich",
+        "Geneva",
+        "Basel"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Sweden?",
+      "correct_answer": "Stockholm",
+      "incorrect_answers": [
+        "Gothenburg",
+        "Malm\u00f6",
+        "Uppsala"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Bras\u00edlia is the capital of which country?",
+      "correct_answer": "Brazil",
+      "incorrect_answers": [
+        "Argentina",
+        "Colombia",
+        "Portugal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Romania?",
+      "correct_answer": "Bucharest",
+      "incorrect_answers": [
+        "Cluj-Napoca",
+        "Timi\u0219oara",
+        "Bra\u0219ov"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Lima is the capital of which country?",
+      "correct_answer": "Peru",
+      "incorrect_answers": [
+        "Chile",
+        "Ecuador",
+        "Bolivia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Kenya?",
+      "correct_answer": "Nairobi",
+      "incorrect_answers": [
+        "Mombasa",
+        "Kisumu",
+        "Nakuru"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Portugal?",
+      "correct_answer": "Lisbon",
+      "incorrect_answers": [
+        "Porto",
+        "Faro",
+        "Coimbra"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Bogot\u00e1 is the capital of which country?",
+      "correct_answer": "Colombia",
+      "incorrect_answers": [
+        "Venezuela",
+        "Ecuador",
+        "Peru"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Philippines?",
+      "correct_answer": "Manila",
+      "incorrect_answers": [
+        "Cebu City",
+        "Davao",
+        "Quezon City"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Czech Republic?",
+      "correct_answer": "Prague",
+      "incorrect_answers": [
+        "Brno",
+        "Ostrava",
+        "Plzen"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of United Arab Emirates?",
+      "correct_answer": "Abu Dhabi",
+      "incorrect_answers": [
+        "Dubai",
+        "Sharjah",
+        "Ajman"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Chile?",
+      "correct_answer": "Santiago",
+      "incorrect_answers": [
+        "Valpara\u00edso",
+        "Concepci\u00f3n",
+        "Antofagasta"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Colombia?",
+      "correct_answer": "Bogot\u00e1",
+      "incorrect_answers": [
+        "Medell\u00edn",
+        "Cartagena",
+        "Cali"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Santiago is the capital of which country?",
+      "correct_answer": "Chile",
+      "incorrect_answers": [
+        "Argentina",
+        "Uruguay",
+        "Ecuador"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Canberra is the capital of which country?",
+      "correct_answer": "Australia",
+      "incorrect_answers": [
+        "New Zealand",
+        "South Africa",
+        "Canada"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Nairobi is the capital of which country?",
+      "correct_answer": "Kenya",
+      "incorrect_answers": [
+        "Tanzania",
+        "Uganda",
+        "Ethiopia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the northernmost capital city in the world?",
+      "correct_answer": "Reykjavik, Iceland",
+      "incorrect_answers": [
+        "Helsinki, Finland",
+        "Oslo, Norway",
+        "Stockholm, Sweden"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Islamabad is the capital of which country?",
+      "correct_answer": "Pakistan",
+      "incorrect_answers": [
+        "India",
+        "Bangladesh",
+        "Afghanistan"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Riyadh is the capital of which country?",
+      "correct_answer": "Saudi Arabia",
+      "incorrect_answers": [
+        "UAE",
+        "Iraq",
+        "Iran"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Norway?",
+      "correct_answer": "Oslo",
+      "incorrect_answers": [
+        "Bergen",
+        "Stavanger",
+        "Trondheim"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Cuba?",
+      "correct_answer": "Havana",
+      "incorrect_answers": [
+        "Santiago de Cuba",
+        "Trinidad",
+        "Varadero"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Vietnam?",
+      "correct_answer": "Hanoi",
+      "incorrect_answers": [
+        "Ho Chi Minh City",
+        "Da Nang",
+        "Hue"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Addis Ababa is the capital of which country?",
+      "correct_answer": "Ethiopia",
+      "incorrect_answers": [
+        "Kenya",
+        "Nigeria",
+        "South Africa"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which two countries share the island of Hispaniola?",
+      "correct_answer": "Haiti and Dominican Republic",
+      "incorrect_answers": [
+        "Cuba and Jamaica",
+        "Puerto Rico and Virgin Islands",
+        "Trinidad and Tobago"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Kathmandu is the capital of which country?",
+      "correct_answer": "Nepal",
+      "incorrect_answers": [
+        "Bhutan",
+        "Tibet",
+        "Bangladesh"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of India?",
+      "correct_answer": "New Delhi",
+      "incorrect_answers": [
+        "Mumbai",
+        "Bangalore",
+        "Kolkata"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Nepal?",
+      "correct_answer": "Kathmandu",
+      "incorrect_answers": [
+        "Pokhara",
+        "Lalitpur",
+        "Bhaktapur"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Indonesia?",
+      "correct_answer": "Jakarta",
+      "incorrect_answers": [
+        "Bali",
+        "Surabaya",
+        "Bandung"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Reykjavik is the capital of which country?",
+      "correct_answer": "Iceland",
+      "incorrect_answers": [
+        "Norway",
+        "Greenland",
+        "Finland"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Jamaica?",
+      "correct_answer": "Kingston",
+      "incorrect_answers": [
+        "Montego Bay",
+        "Ocho Rios",
+        "Negril"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Bern is the capital of which country?",
+      "correct_answer": "Switzerland",
+      "incorrect_answers": [
+        "Austria",
+        "Germany",
+        "Belgium"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Saudi Arabia?",
+      "correct_answer": "Riyadh",
+      "incorrect_answers": [
+        "Jeddah",
+        "Mecca",
+        "Medina"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Abu Dhabi is the capital of which country?",
+      "correct_answer": "United Arab Emirates",
+      "incorrect_answers": [
+        "Saudi Arabia",
+        "Qatar",
+        "Bahrain"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Poland?",
+      "correct_answer": "Warsaw",
+      "incorrect_answers": [
+        "Krakow",
+        "Gdansk",
+        "Wroclaw"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Pakistan?",
+      "correct_answer": "Islamabad",
+      "incorrect_answers": [
+        "Karachi",
+        "Lahore",
+        "Peshawar"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Malaysia?",
+      "correct_answer": "Kuala Lumpur",
+      "incorrect_answers": [
+        "Penang",
+        "Johor Bahru",
+        "Putrajaya"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Kuala Lumpur is the capital of which country?",
+      "correct_answer": "Malaysia",
+      "incorrect_answers": [
+        "Indonesia",
+        "Singapore",
+        "Thailand"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the capital of Greece?",
+      "correct_answer": "Athens",
+      "incorrect_answers": [
+        "Thessaloniki",
+        "Santorini",
+        "Crete"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Hanoi is the capital of which country?",
+      "correct_answer": "Vietnam",
+      "incorrect_answers": [
+        "Thailand",
+        "Cambodia",
+        "Laos"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the capital of Peru?",
+      "correct_answer": "Lima",
+      "incorrect_answers": [
+        "Cusco",
+        "Arequipa",
+        "Machu Picchu"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'aqua regia' dissolve that other acids cannot?",
+      "correct_answer": "Gold",
+      "incorrect_answers": [
+        "Diamond",
+        "Iron",
+        "Titanium"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the common name for Ethanoic Acid?",
+      "correct_answer": "Acetic acid",
+      "incorrect_answers": [
+        "Formic acid",
+        "Citric acid",
+        "Lactic acid"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What color does litmus paper turn in a base?",
+      "correct_answer": "Blue",
+      "incorrect_answers": [
+        "Red",
+        "Green",
+        "Yellow"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the general formula for alkanes?",
+      "correct_answer": "CnH2n+2",
+      "incorrect_answers": [
+        "CnH2n",
+        "CnHn",
+        "CnH2n-2"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chemical formula for Ammonia?",
+      "correct_answer": "NH3",
+      "incorrect_answers": [
+        "NO2",
+        "N2O",
+        "N2H4"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Rhodium?",
+      "correct_answer": "Rh",
+      "incorrect_answers": [
+        "R",
+        "Rd",
+        "Ro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the SI unit of amount of substance?",
+      "correct_answer": "Mole",
+      "incorrect_answers": [
+        "Gram",
+        "Liter",
+        "Kelvin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chemical symbol for Cadmium?",
+      "correct_answer": "Cd",
+      "incorrect_answers": [
+        "Ca",
+        "C",
+        "Ce"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of reaction combines two or more substances into one?",
+      "correct_answer": "Synthesis",
+      "incorrect_answers": [
+        "Decomposition",
+        "Single displacement",
+        "Double displacement"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chemical name for Vitamin C?",
+      "correct_answer": "Ascorbic acid",
+      "incorrect_answers": [
+        "Citric acid",
+        "Folic acid",
+        "Acetic acid"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the hardest natural substance?",
+      "correct_answer": "Diamond",
+      "incorrect_answers": [
+        "Quartz",
+        "Sapphire",
+        "Tungsten carbide"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a substance that speeds up a reaction without being consumed called?",
+      "correct_answer": "Catalyst",
+      "incorrect_answers": [
+        "Reactant",
+        "Solvent",
+        "Product"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Cesium?",
+      "correct_answer": "Cs",
+      "incorrect_answers": [
+        "Ce",
+        "C",
+        "Ca"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of bond forms between a metal and a nonmetal?",
+      "correct_answer": "Ionic bond",
+      "incorrect_answers": [
+        "Covalent bond",
+        "Metallic bond",
+        "Hydrogen bond"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is diamond made of?",
+      "correct_answer": "Carbon",
+      "incorrect_answers": [
+        "Silicon",
+        "Lead",
+        "Boron"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Thallium?",
+      "correct_answer": "Tl",
+      "incorrect_answers": [
+        "T",
+        "Th",
+        "Ti"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the vertical columns in the periodic table called?",
+      "correct_answer": "Groups",
+      "incorrect_answers": [
+        "Periods",
+        "Rows",
+        "Sections"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What metal is the best conductor of heat?",
+      "correct_answer": "Silver",
+      "incorrect_answers": [
+        "Copper",
+        "Gold",
+        "Aluminum"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chemical formula for Ethanol?",
+      "correct_answer": "C2H5OH",
+      "incorrect_answers": [
+        "CH3OH",
+        "C3H7OH",
+        "C4H9OH"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Beryllium?",
+      "correct_answer": "Be",
+      "incorrect_answers": [
+        "B",
+        "Br",
+        "Ba"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the pH of a neutral solution?",
+      "correct_answer": "7",
+      "incorrect_answers": [
+        "0",
+        "1",
+        "14"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is formed when an acid and a base react together?",
+      "correct_answer": "Salt and water",
+      "incorrect_answers": [
+        "Gas and heat",
+        "Metal and oxygen",
+        "Acid rain"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of reaction releases energy as heat?",
+      "correct_answer": "Exothermic",
+      "incorrect_answers": [
+        "Endothermic",
+        "Catalytic",
+        "Neutral"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which gas is produced during respiration?",
+      "correct_answer": "Carbon dioxide",
+      "incorrect_answers": [
+        "Oxygen",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which gas do humans need to breathe to survive?",
+      "correct_answer": "Oxygen",
+      "incorrect_answers": [
+        "Carbon dioxide",
+        "Nitrogen",
+        "Helium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What element's symbol comes from the Latin word 'plumbum'?",
+      "correct_answer": "Lead",
+      "incorrect_answers": [
+        "Platinum",
+        "Plutonium",
+        "Phosphorus"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What element is the primary component of bronze alongside copper?",
+      "correct_answer": "Tin",
+      "incorrect_answers": [
+        "Zinc",
+        "Iron",
+        "Nickel"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the most abundant element in the Earth's crust?",
+      "correct_answer": "Oxygen",
+      "incorrect_answers": [
+        "Silicon",
+        "Aluminum",
+        "Iron"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Germanium?",
+      "correct_answer": "Ge",
+      "incorrect_answers": [
+        "G",
+        "Gr",
+        "Gm"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Cu2O?",
+      "correct_answer": "Copper(I) oxide",
+      "incorrect_answers": [
+        "Copper(II) oxide",
+        "Cupric oxide",
+        "Copper peroxide"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which element is the main component of sand?",
+      "correct_answer": "Silicon",
+      "incorrect_answers": [
+        "Carbon",
+        "Calcium",
+        "Aluminum"
       ],
       "difficulty": "easy"
     },
@@ -8598,12 +10553,1242 @@
       "difficulty": "easy"
     },
     {
-      "question": "Which song did Sin\u00e9ad O'Connor famously perform while tearing up a photo of the Pope on SNL?",
-      "correct_answer": "War",
+      "question": "What element was named after the planet Uranus?",
+      "correct_answer": "Uranium",
       "incorrect_answers": [
-        "Nothing Compares 2 U",
-        "Mandinka",
-        "The Emperor's New Clothes"
+        "Neptunium",
+        "Plutonium",
+        "Americium"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chemical formula for Sodium Sulfate?",
+      "correct_answer": "Na2SO4",
+      "incorrect_answers": [
+        "NaSO4",
+        "Na2SO3",
+        "NaSO3"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What element is used in semiconductor chips?",
+      "correct_answer": "Silicon",
+      "incorrect_answers": [
+        "Carbon",
+        "Germanium",
+        "Tin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which scientist discovered radium?",
+      "correct_answer": "Marie Curie",
+      "incorrect_answers": [
+        "Albert Einstein",
+        "Niels Bohr",
+        "Ernest Rutherford"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name for a mixture of two or more metals?",
+      "correct_answer": "Alloy",
+      "incorrect_answers": [
+        "Compound",
+        "Solution",
+        "Composite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is rust chemically known as?",
+      "correct_answer": "Iron oxide",
+      "incorrect_answers": [
+        "Iron sulfide",
+        "Iron carbonate",
+        "Iron chloride"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Copper?",
+      "correct_answer": "Cu",
+      "incorrect_answers": [
+        "Co",
+        "Cr",
+        "Cp"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which gas is used in fire extinguishers?",
+      "correct_answer": "Carbon dioxide",
+      "incorrect_answers": [
+        "Oxygen",
+        "Nitrogen",
+        "Methane"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What metal is used as the standard for atomic mass?",
+      "correct_answer": "Carbon-12",
+      "incorrect_answers": [
+        "Hydrogen-1",
+        "Oxygen-16",
+        "Nitrogen-14"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which element has the atomic number 2?",
+      "correct_answer": "Helium",
+      "incorrect_answers": [
+        "Hydrogen",
+        "Lithium",
+        "Beryllium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which element has the highest electronegativity?",
+      "correct_answer": "Fluorine",
+      "incorrect_answers": [
+        "Oxygen",
+        "Chlorine",
+        "Nitrogen"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which acid is found in citrus fruits?",
+      "correct_answer": "Citric acid",
+      "incorrect_answers": [
+        "Acetic acid",
+        "Lactic acid",
+        "Tartaric acid"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chemical symbol for Potassium?",
+      "correct_answer": "K",
+      "incorrect_answers": [
+        "P",
+        "Po",
+        "Pt"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the law that states mass cannot be created or destroyed in a chemical reaction?",
+      "correct_answer": "Law of Conservation of Mass",
+      "incorrect_answers": [
+        "Newton's First Law",
+        "Boyle's Law",
+        "Law of Gravity"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical formula for Glucose?",
+      "correct_answer": "C6H12O6",
+      "incorrect_answers": [
+        "C12H22O11",
+        "CH4",
+        "CO2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of reaction involves one element replacing another in a compound?",
+      "correct_answer": "Single displacement",
+      "incorrect_answers": [
+        "Double displacement",
+        "Synthesis",
+        "Decomposition"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which state of matter has a definite shape and volume?",
+      "correct_answer": "Solid",
+      "incorrect_answers": [
+        "Liquid",
+        "Gas",
+        "Plasma"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are Group 18 elements on the periodic table called?",
+      "correct_answer": "Noble gases",
+      "incorrect_answers": [
+        "Halogens",
+        "Alkali metals",
+        "Transition metals"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the colored part of the eye called?",
+      "correct_answer": "Iris",
+      "incorrect_answers": [
+        "Pupil",
+        "Sclera",
+        "Lens"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the building blocks of proteins?",
+      "correct_answer": "Amino acids",
+      "incorrect_answers": [
+        "Nucleotides",
+        "Fatty acids",
+        "Sugars"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a backbone also called?",
+      "correct_answer": "Spine",
+      "incorrect_answers": [
+        "Sternum",
+        "Pelvis",
+        "Ribcage"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which organelle stores water in plant cells?",
+      "correct_answer": "Vacuole",
+      "incorrect_answers": [
+        "Nucleus",
+        "Mitochondria",
+        "Chloroplast"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the jelly-like substance inside a cell?",
+      "correct_answer": "Cytoplasm",
+      "incorrect_answers": [
+        "Nucleoplasm",
+        "Plasma",
+        "Sap"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do plants release during photosynthesis?",
+      "correct_answer": "Oxygen",
+      "incorrect_answers": [
+        "Carbon dioxide",
+        "Nitrogen",
+        "Water vapor"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which blood vessel carries blood away from the heart?",
+      "correct_answer": "Artery",
+      "incorrect_answers": [
+        "Vein",
+        "Capillary",
+        "Nerve"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many kidneys does a human have?",
+      "correct_answer": "2",
+      "incorrect_answers": [
+        "1",
+        "3",
+        "4"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of animal is a whale?",
+      "correct_answer": "Mammal",
+      "incorrect_answers": [
+        "Fish",
+        "Reptile",
+        "Amphibian"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many lungs does a human have?",
+      "correct_answer": "2",
+      "incorrect_answers": [
+        "1",
+        "3",
+        "4"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of organism makes its own food?",
+      "correct_answer": "Autotroph",
+      "incorrect_answers": [
+        "Heterotroph",
+        "Parasite",
+        "Scavenger"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the term for an animal that lives on land and water?",
+      "correct_answer": "Amphibian",
+      "incorrect_answers": [
+        "Reptile",
+        "Mammal",
+        "Crustacean"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the tough outer covering of an insect?",
+      "correct_answer": "Exoskeleton",
+      "incorrect_answers": [
+        "Endoskeleton",
+        "Shell",
+        "Carapace"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the system that fights disease in the body?",
+      "correct_answer": "Immune system",
+      "incorrect_answers": [
+        "Nervous system",
+        "Endocrine system",
+        "Skeletal system"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which part of the eye detects light?",
+      "correct_answer": "Retina",
+      "incorrect_answers": [
+        "Cornea",
+        "Iris",
+        "Lens"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What structure gives a plant cell rigidity?",
+      "correct_answer": "Cell wall",
+      "incorrect_answers": [
+        "Cell membrane",
+        "Vacuole",
+        "Nucleus"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What part of the cell contains chromosomes?",
+      "correct_answer": "Nucleus",
+      "incorrect_answers": [
+        "Cytoplasm",
+        "Ribosome",
+        "Membrane"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What membrane vibrates when sound enters the ear?",
+      "correct_answer": "Eardrum",
+      "incorrect_answers": [
+        "Cochlea",
+        "Hammer",
+        "Stirrup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What molecule carries genetic information?",
+      "correct_answer": "DNA",
+      "incorrect_answers": [
+        "RNA",
+        "Protein",
+        "Glucose"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which vitamin does sunlight help your body produce?",
+      "correct_answer": "Vitamin D",
+      "incorrect_answers": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main structural protein in skin?",
+      "correct_answer": "Collagen",
+      "incorrect_answers": [
+        "Keratin",
+        "Elastin",
+        "Fibrin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What are the basic units of heredity?",
+      "correct_answer": "Genes",
+      "incorrect_answers": [
+        "Proteins",
+        "Chromosomes",
+        "Cells"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the hardest substance in the human body?",
+      "correct_answer": "Tooth enamel",
+      "incorrect_answers": [
+        "Bone",
+        "Cartilage",
+        "Keratin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the total sum of chemical reactions in the body?",
+      "correct_answer": "Metabolism",
+      "incorrect_answers": [
+        "Digestion",
+        "Homeostasis",
+        "Respiration"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do we call animals that are active during the day?",
+      "correct_answer": "Diurnal",
+      "incorrect_answers": [
+        "Nocturnal",
+        "Crepuscular",
+        "Seasonal"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Where does blood get oxygen in the body?",
+      "correct_answer": "Lungs",
+      "incorrect_answers": [
+        "Heart",
+        "Liver",
+        "Brain"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Where does photosynthesis occur in plant cells?",
+      "correct_answer": "Chloroplast",
+      "incorrect_answers": [
+        "Mitochondria",
+        "Nucleus",
+        "Ribosome"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which body part do you use to smell?",
+      "correct_answer": "Nose",
+      "incorrect_answers": [
+        "Tongue",
+        "Ears",
+        "Eyes"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which organ filters waste from blood?",
+      "correct_answer": "Kidney",
+      "incorrect_answers": [
+        "Bladder",
+        "Liver",
+        "Spleen"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What cell structure controls what enters and exits?",
+      "correct_answer": "Cell membrane",
+      "incorrect_answers": [
+        "Cell wall",
+        "Nucleus",
+        "Cytoplasm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the study of body structure called?",
+      "correct_answer": "Anatomy",
+      "incorrect_answers": [
+        "Physiology",
+        "Pathology",
+        "Ecology"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most basic unit of life?",
+      "correct_answer": "Cell",
+      "incorrect_answers": [
+        "Atom",
+        "Tissue",
+        "Organ"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What part of a plant makes food using sunlight?",
+      "correct_answer": "Leaf",
+      "incorrect_answers": [
+        "Root",
+        "Stem",
+        "Flower"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do fish use to breathe?",
+      "correct_answer": "Gills",
+      "incorrect_answers": [
+        "Lungs",
+        "Skin",
+        "Fins"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What term means a group of similar cells?",
+      "correct_answer": "Tissue",
+      "incorrect_answers": [
+        "Organ",
+        "System",
+        "Organelle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What connects muscles to bones?",
+      "correct_answer": "Tendons",
+      "incorrect_answers": [
+        "Ligaments",
+        "Cartilage",
+        "Nerves"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a relationship where one organism benefits and the other is harmed?",
+      "correct_answer": "Parasitism",
+      "incorrect_answers": [
+        "Mutualism",
+        "Commensalism",
+        "Symbiosis"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What pigment makes leaves turn yellow in fall?",
+      "correct_answer": "Carotene",
+      "incorrect_answers": [
+        "Chlorophyll",
+        "Melanin",
+        "Hemoglobin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the term for an organism's genetic makeup?",
+      "correct_answer": "Genotype",
+      "incorrect_answers": [
+        "Phenotype",
+        "Karyotype",
+        "Prototype"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a group of birds called?",
+      "correct_answer": "Flock",
+      "incorrect_answers": [
+        "Herd",
+        "Pack",
+        "School"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal is known for its black and white coloring and eating bamboo?",
+      "correct_answer": "Panda",
+      "incorrect_answers": [
+        "Zebra",
+        "Penguin",
+        "Skunk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of symmetry do humans have?",
+      "correct_answer": "Bilateral",
+      "incorrect_answers": [
+        "Radial",
+        "Asymmetric",
+        "Spherical"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the finger-like projections in the small intestine?",
+      "correct_answer": "Villi",
+      "incorrect_answers": [
+        "Cilia",
+        "Flagella",
+        "Alveoli"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What do we call animals active at night?",
+      "correct_answer": "Nocturnal",
+      "incorrect_answers": [
+        "Diurnal",
+        "Aquatic",
+        "Terrestrial"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the largest white blood cell?",
+      "correct_answer": "Monocyte",
+      "incorrect_answers": [
+        "Lymphocyte",
+        "Neutrophil",
+        "Basophil"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What mineral makes bones strong?",
+      "correct_answer": "Calcium",
+      "incorrect_answers": [
+        "Iron",
+        "Sodium",
+        "Potassium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do you call a group of lions?",
+      "correct_answer": "A pride",
+      "incorrect_answers": [
+        "A pack",
+        "A herd",
+        "A colony"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are animals with a backbone called?",
+      "correct_answer": "Vertebrates",
+      "incorrect_answers": [
+        "Invertebrates",
+        "Mammals",
+        "Amphibians"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of animal is a frog?",
+      "correct_answer": "Amphibian",
+      "incorrect_answers": [
+        "Reptile",
+        "Fish",
+        "Insect"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the longest cell in the human body?",
+      "correct_answer": "Nerve cell",
+      "incorrect_answers": [
+        "Muscle cell",
+        "Red blood cell",
+        "Bone cell"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What programming language is primarily used for front-end web development?",
+      "correct_answer": "JavaScript",
+      "incorrect_answers": [
+        "Python",
+        "Java",
+        "PHP"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a JWT (JSON Web Token) used for?",
+      "correct_answer": "Securely transmitting information between parties, commonly used for authentication",
+      "incorrect_answers": [
+        "Formatting API responses as JSON",
+        "Storing user data in the browser's local storage",
+        "Encrypting database passwords"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the 'cd' command do in a terminal?",
+      "correct_answer": "Changes the current directory",
+      "incorrect_answers": [
+        "Creates a new directory",
+        "Copies a file",
+        "Clears the screen"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the file extension for JavaScript files?",
+      "correct_answer": ".js",
+      "incorrect_answers": [
+        ".java",
+        ".jscript",
+        ".jsx"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a service mesh?",
+      "correct_answer": "An infrastructure layer that handles service-to-service communication, providing features like load balancing, encryption, and observability",
+      "incorrect_answers": [
+        "A type of Wi-Fi network",
+        "A database replication strategy",
+        "A front-end component library"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the CAP theorem state for distributed systems?",
+      "correct_answer": "A distributed system can guarantee at most two of: Consistency, Availability, and Partition tolerance",
+      "incorrect_answers": [
+        "All distributed systems must be consistent and available",
+        "Partition tolerance is always sacrificed",
+        "Consistency and availability are mutually exclusive"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Liskov Substitution Principle?",
+      "correct_answer": "Objects of a subclass should be replaceable with objects of their superclass without altering the correctness of the program",
+      "incorrect_answers": [
+        "A class should have only one reason to change",
+        "Code should depend on abstractions, not concretions",
+        "Classes should be open for extension but closed for modification"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of hashing a password before storing it?",
+      "correct_answer": "To convert the password into a fixed-length irreversible string so the original password cannot be recovered if the database is compromised",
+      "incorrect_answers": [
+        "To compress the password to save storage space",
+        "To encrypt the password so it can be decrypted later",
+        "To validate the password length"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does CRUD stand for and what SQL operation maps to 'Create'?",
+      "correct_answer": "CRUD is Create, Read, Update, Delete; 'Create' maps to INSERT",
+      "incorrect_answers": [
+        "CRUD is Copy, Retrieve, Update, Delete; 'Create' maps to ADD",
+        "CRUD is Create, Read, Update, Drop; 'Create' maps to NEW",
+        "CRUD is Copy, Read, Undo, Delete; 'Create' maps to PUT"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What programming language is primarily used for iOS app development?",
+      "correct_answer": "Swift",
+      "incorrect_answers": [
+        "Objective-C",
+        "Kotlin",
+        "Java"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ROM stand for?",
+      "correct_answer": "Read-Only Memory",
+      "incorrect_answers": [
+        "Random Operating Memory",
+        "Readable Output Memory",
+        "Run-Only Memory"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between optimistic and pessimistic locking?",
+      "correct_answer": "Optimistic locking assumes conflicts are rare and checks at commit time; pessimistic locking acquires locks upfront to prevent conflicts",
+      "incorrect_answers": [
+        "They are the same technique with different names",
+        "Optimistic locking always uses database locks",
+        "Pessimistic locking never prevents concurrent access"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a callback function?",
+      "correct_answer": "A function passed as an argument to another function and invoked at a later time",
+      "incorrect_answers": [
+        "A function that returns another function",
+        "A function that runs before main",
+        "A function that only runs on errors"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary function of a compiler?",
+      "correct_answer": "Translates source code into machine code",
+      "incorrect_answers": [
+        "Runs code line by line",
+        "Debugs the program",
+        "Stores program data"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a Scrum sprint?",
+      "correct_answer": "A fixed time period (usually 2-4 weeks) during which a team completes a set of planned work items",
+      "incorrect_answers": [
+        "A quick one-day coding session",
+        "A debugging session after deployment",
+        "A performance benchmark test"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does PNG stand for?",
+      "correct_answer": "Portable Network Graphics",
+      "incorrect_answers": [
+        "Picture Node Graphics",
+        "Portable Node Graph",
+        "Processed Network Graphics"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a bug in programming?",
+      "correct_answer": "An error or flaw in a program",
+      "incorrect_answers": [
+        "A type of comment",
+        "A security feature",
+        "A variable declaration"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a binary tree?",
+      "correct_answer": "A tree data structure where each node has at most two children",
+      "incorrect_answers": [
+        "A tree stored as binary data on disk",
+        "A tree with exactly two levels",
+        "A sorted list of binary numbers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of Kubernetes?",
+      "correct_answer": "To automate the deployment, scaling, and management of containerized applications",
+      "incorrect_answers": [
+        "To write containerized applications",
+        "To build Docker images",
+        "To replace virtual machines entirely"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does HTTP status code 500 indicate?",
+      "correct_answer": "Internal Server Error \u2014 something went wrong on the server",
+      "incorrect_answers": [
+        "Request not found",
+        "Unauthorized access",
+        "Request timed out"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does CIDR notation (e.g., /24) represent?",
+      "correct_answer": "The number of bits in the network prefix of an IP address, defining the subnet size",
+      "incorrect_answers": [
+        "The number of devices on a network",
+        "The speed of the network in Mbps",
+        "The number of available ports"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does TCP stand for?",
+      "correct_answer": "Transmission Control Protocol",
+      "incorrect_answers": [
+        "Transfer Communication Protocol",
+        "Terminal Control Program",
+        "Text Control Protocol"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a deadlock in operating systems?",
+      "correct_answer": "A state where two or more processes each wait for the other to release a resource",
+      "incorrect_answers": [
+        "A program that crashes due to a null pointer",
+        "An infinite loop with no exit condition",
+        "A memory leak in a process"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does VPN stand for?",
+      "correct_answer": "Virtual Private Network",
+      "incorrect_answers": [
+        "Verified Public Node",
+        "Virtual Protocol Network",
+        "Variable Private Network"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between a container and a virtual machine?",
+      "correct_answer": "Containers share the host OS kernel and are lighter; VMs include a full guest OS and are more isolated",
+      "incorrect_answers": [
+        "VMs are lighter than containers",
+        "Containers require their own OS",
+        "There is no meaningful difference"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is XSS (Cross-Site Scripting)?",
+      "correct_answer": "An attack where malicious scripts are injected into trusted websites and executed in a victim's browser",
+      "incorrect_answers": [
+        "A technique for secure data sharing between sites",
+        "A type of database encryption",
+        "A network protocol for cross-domain requests"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a comment in code?",
+      "correct_answer": "Text that is ignored during execution, used for documentation",
+      "incorrect_answers": [
+        "A type of variable",
+        "A function return value",
+        "An error message"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is duck typing?",
+      "correct_answer": "A principle where an object's suitability is determined by its methods and properties rather than its type",
+      "incorrect_answers": [
+        "A debugging technique using print statements",
+        "A pattern for copying objects",
+        "A form of strong static typing"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is method overriding?",
+      "correct_answer": "Redefining a method inherited from a parent class in a subclass with a new implementation",
+      "incorrect_answers": [
+        "Defining multiple methods with the same name but different parameters",
+        "Calling a parent method from a child class",
+        "Making a method private in a subclass"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who created the Python programming language?",
+      "correct_answer": "Guido van Rossum",
+      "incorrect_answers": [
+        "Linus Torvalds",
+        "James Gosling",
+        "Bjarne Stroustrup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is tail recursion?",
+      "correct_answer": "A form of recursion where the recursive call is the very last operation in the function, allowing stack optimization",
+      "incorrect_answers": [
+        "A recursion that always reaches its base case immediately",
+        "Recursion that starts from the end of a list",
+        "A loop disguised as recursion"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is MapReduce?",
+      "correct_answer": "A programming model for processing large data sets in parallel by mapping a function over data and then reducing the results",
+      "incorrect_answers": [
+        "A sorting algorithm",
+        "A JavaScript array method only",
+        "A database indexing technique"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Big O notation used for?",
+      "correct_answer": "Describing the time or space complexity of an algorithm in terms of input size",
+      "incorrect_answers": [
+        "Measuring actual execution time in milliseconds",
+        "Comparing memory usage between two computers",
+        "Specifying network bandwidth requirements"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a deep copy and a shallow copy?",
+      "correct_answer": "A deep copy recursively copies all nested objects; a shallow copy copies only references to nested objects",
+      "incorrect_answers": [
+        "A shallow copy is always slower",
+        "A deep copy and shallow copy are identical for primitive types and objects",
+        "A shallow copy creates a new object with all new data"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is event-driven programming?",
+      "correct_answer": "A paradigm where the program flow is determined by events such as user actions or messages",
+      "incorrect_answers": [
+        "Programming that runs on a fixed timer",
+        "Programming without loops",
+        "A style that avoids using functions"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of load balancing?",
+      "correct_answer": "To distribute incoming network traffic across multiple servers to ensure no single server is overwhelmed",
+      "incorrect_answers": [
+        "To compress data before sending it",
+        "To encrypt traffic between client and server",
+        "To cache static content near users"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a lambda function?",
+      "correct_answer": "A small anonymous function defined inline",
+      "incorrect_answers": [
+        "A recursive function",
+        "A function that returns multiple values",
+        "A function stored in a database"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does GB stand for in computing?",
+      "correct_answer": "Gigabyte",
+      "incorrect_answers": [
+        "Gigabit",
+        "Gigaboard",
+        "Graphical Block"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does UI stand for?",
+      "correct_answer": "User Interface",
+      "incorrect_answers": [
+        "Universal Input",
+        "Unified Interaction",
+        "Unit Integration"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does CLI stand for?",
+      "correct_answer": "Command Line Interface",
+      "incorrect_answers": [
+        "Computer Language Interpreter",
+        "Code Load Interface",
+        "Central Logic Input"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is static memory allocation?",
+      "correct_answer": "Memory allocated at compile time with a fixed size that cannot change at runtime",
+      "incorrect_answers": [
+        "Memory allocated on the heap",
+        "Memory shared between processes",
+        "Memory that persists after the program exits"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between GET and POST HTTP methods?",
+      "correct_answer": "GET retrieves data and sends parameters in the URL; POST submits data in the request body",
+      "incorrect_answers": [
+        "GET is more secure than POST",
+        "POST can only send text data",
+        "GET modifies server data; POST retrieves it"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a soft link and a hard link in Unix?",
+      "correct_answer": "A soft link is a pointer to a file name and breaks if the target is deleted; a hard link is a direct reference to the inode and persists",
+      "incorrect_answers": [
+        "They are the same thing with different names",
+        "A hard link works across filesystems; a soft link does not",
+        "A soft link consumes more disk space than a hard link"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does SSH stand for?",
+      "correct_answer": "Secure Shell",
+      "incorrect_answers": [
+        "System Shell Host",
+        "Secure Socket Handler",
+        "Standard Shell Host"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does PDF stand for?",
+      "correct_answer": "Portable Document Format",
+      "incorrect_answers": [
+        "Printed Document File",
+        "Public Data File",
+        "Processed Document Format"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a hash table?",
+      "correct_answer": "A data structure that maps keys to values using a hash function",
+      "incorrect_answers": [
+        "A sorted list of numbers",
+        "A type of binary tree",
+        "A graph of connected nodes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does JSON stand for?",
+      "correct_answer": "JavaScript Object Notation",
+      "incorrect_answers": [
+        "Java Source Object Network",
+        "JavaScript Online Notation",
+        "Java Structured Object Node"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is an IP subnet?",
+      "correct_answer": "A logical subdivision of an IP network that groups devices and controls traffic routing",
+      "incorrect_answers": [
+        "A backup internet connection",
+        "A type of network cable",
+        "A wireless access point"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a buffer overflow?",
+      "correct_answer": "A vulnerability where more data is written to a buffer than it can hold, overwriting adjacent memory",
+      "incorrect_answers": [
+        "A network error caused by too many connections",
+        "A database error from too many rows",
+        "A UI bug caused by too much text"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the '==' operator check?",
+      "correct_answer": "Whether two values are equal",
+      "incorrect_answers": [
+        "Whether two values are assigned",
+        "Whether a value is greater",
+        "Whether a variable exists"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the protocol Tony Stark initiates to destroy all his suits in 'Iron Man 3'?",
+      "correct_answer": "Clean Slate Protocol",
+      "incorrect_answers": [
+        "House Party Protocol",
+        "Self-Destruct Alpha",
+        "Endgame Sequence"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the mentor of Doctor Strange?",
+      "correct_answer": "The Ancient One",
+      "incorrect_answers": [
+        "Wong",
+        "Mordo",
+        "Kaecilius"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the AI in Peter Parker's first Stark-made suit?",
+      "correct_answer": "Karen",
+      "incorrect_answers": [
+        "Friday",
+        "Edith",
+        "Jarvis"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the name of the first MCU movie ever released?",
+      "correct_answer": "Iron Man",
+      "incorrect_answers": [
+        "Captain America: The First Avenger",
+        "The Incredible Hulk",
+        "Thor"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Captain America's shield made out of?",
+      "correct_answer": "Vibranium",
+      "incorrect_answers": [
+        "Adamantium",
+        "Titanium",
+        "Steel"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the cat-like creature that scratches Nick Fury's eye?",
+      "correct_answer": "Goose",
+      "incorrect_answers": [
+        "Chewie",
+        "Spot",
+        "Lucky"
       ],
       "difficulty": "medium"
     },
@@ -8618,125 +11803,934 @@
       "difficulty": "medium"
     },
     {
-      "question": "In Money Heist, what is the Professor's relationship to Berlin?",
-      "correct_answer": "Brothers",
+      "question": "What is the alias used by Natasha Romanoff when she first meets Tony Stark in 'Iron Man 2'?",
+      "correct_answer": "Natalie Rushman",
       "incorrect_answers": [
-        "Father and son",
-        "Cousins",
-        "No relation"
+        "Natalia Alianovna",
+        "Laura Barton",
+        "Yelena Belova"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What did Dumbledore see when he looked in the Mirror of Erised?",
-      "correct_answer": "Thick woolen socks",
+      "question": "What is the name of Tony Stark's daughter?",
+      "correct_answer": "Morgan Stark",
       "incorrect_answers": [
-        "His family alive",
-        "Himself as Minister",
-        "Grindelwald defeated"
+        "May Stark",
+        "Cassie Stark",
+        "Pepper Stark"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Black Panther', what is the name of the ritual challenge where T'Challa loses his powers?",
+      "correct_answer": "Ritual Combat",
+      "incorrect_answers": [
+        "The Wild Hunt",
+        "Trial by Fire",
+        "King's Ascension"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the first index of an array in most programming languages?",
-      "correct_answer": "0",
+      "question": "What kind of particles allow Ant-Man to change size?",
+      "correct_answer": "Pym Particles",
       "incorrect_answers": [
-        "1",
-        "-1",
-        "2"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which song was Shawn Mendes' first #1 hit?",
-      "correct_answer": "Stitches",
-      "incorrect_answers": [
-        "Treat You Better",
-        "There's Nothing Holdin' Me Back",
-        "In My Blood"
+        "Quantum Particles",
+        "Stark Particles",
+        "Alpha Particles"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the chemical symbol for Thorium?",
-      "correct_answer": "Th",
+      "question": "Who is the primary villain of 'Captain America: The First Avenger'?",
+      "correct_answer": "Red Skull",
       "incorrect_answers": [
-        "T",
-        "Tr",
-        "To"
+        "Baron Zemo",
+        "Crossbones",
+        "Alexander Pierce"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What do we call the layer of fat under the skin?",
-      "correct_answer": "Blubber",
+      "question": "In 'Black Widow', what is the name of the 'Red Room' leader?",
+      "correct_answer": "Dreykov",
       "incorrect_answers": [
-        "Cartilage",
-        "Muscle",
-        "Marrow"
-      ],
-      "difficulty": "easy"
-    },
-    {
-      "question": "Who is the last person Arya kills on her list?",
-      "correct_answer": "The Night King",
-      "incorrect_answers": [
-        "Cersei Lannister",
-        "Walder Frey",
-        "Meryn Trant"
+        "Alexei",
+        "Taskmaster",
+        "Melina"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "Who collaborated with Cardi B on 'WAP'?",
-      "correct_answer": "Megan Thee Stallion",
+      "question": "What is the name of the tiny universe Ant-Man travels to?",
+      "correct_answer": "Quantum Realm",
       "incorrect_answers": [
-        "Nicki Minaj",
-        "Doja Cat",
-        "Lizzo"
+        "Micro-Verse",
+        "Atomic Zone",
+        "Negative Zone"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "Which Taylor Swift album did she re-record first as a 'Taylor's Version'?",
-      "correct_answer": "Fearless",
+      "question": "Which Infinity Stone is located inside the Tesseract?",
+      "correct_answer": "Space Stone",
       "incorrect_answers": [
+        "Mind Stone",
+        "Reality Stone",
+        "Power Stone"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the cat-like alien in 'Captain Marvel'?",
+      "correct_answer": "Goose",
+      "incorrect_answers": [
+        "Duck",
+        "Swan",
+        "Maverick"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actor plays the role of Nick Fury?",
+      "correct_answer": "Samuel L. Jackson",
+      "incorrect_answers": [
+        "Morgan Freeman",
+        "Denzel Washington",
+        "Laurence Fishburne"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the father of Thor and Loki?",
+      "correct_answer": "Odin",
+      "incorrect_answers": [
+        "Bor",
+        "Laufey",
+        "Heimdall"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which hero says 'I can do this all day'?",
+      "correct_answer": "Captain America",
+      "incorrect_answers": [
+        "Iron Man",
+        "Thor",
+        "Black Widow"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the artifact Doctor Strange wears around his neck?",
+      "correct_answer": "Eye of Agamotto",
+      "incorrect_answers": [
+        "Orb of Agamotto",
+        "Cloak of Levitation",
+        "Scepter of Strange"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Peter Quill's alter ego?",
+      "correct_answer": "Star-Lord",
+      "incorrect_answers": [
+        "Space-King",
+        "Nova-Prime",
+        "Sun-Lord"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What was the name of the fake town Wanda Maximoff created in Westview?",
+      "correct_answer": "The Hex",
+      "incorrect_answers": [
+        "The Bubble",
+        "The Rift",
+        "The Mirage"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Winter Soldier', where was the secret H.Y.D.R.A. base containing Arnim Zola's consciousness?",
+      "correct_answer": "Camp Lehigh",
+      "incorrect_answers": [
+        "The Triskelion",
+        "The Hub",
+        "Siberia"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What color is the Power Stone?",
+      "correct_answer": "Purple",
+      "incorrect_answers": [
+        "Yellow",
         "Red",
-        "Speak Now",
-        "1989"
+        "Blue"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the ancient eternal who leads the team in 'Eternals'?",
+      "correct_answer": "Ajak",
+      "incorrect_answers": [
+        "Ikaris",
+        "Thena",
+        "Sersi"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "Name this country:\n\n\ud83c\uddea\ud83c\uddf9",
-      "correct_answer": "Ethiopia",
+      "question": "What kind of car does Tony Stark drive in the first 'Iron Man' movie?",
+      "correct_answer": "Audi R8",
       "incorrect_answers": [
-        "Ghana",
-        "Jamaica",
-        "Bolivia"
+        "Acura NSX",
+        "Tesla Roadster",
+        "Ford Shelby"
       ],
-      "difficulty": "medium",
-      "display_hint": "flag"
+      "difficulty": "medium"
     },
     {
-      "question": "What element's symbol comes from the Latin word 'plumbum'?",
-      "correct_answer": "Lead",
+      "question": "Who was the first person to be 'dusted' on screen during the Snap?",
+      "correct_answer": "Bucky Barnes",
       "incorrect_answers": [
-        "Platinum",
-        "Plutonium",
-        "Phosphorus"
+        "Black Panther",
+        "Groot",
+        "Spider-Man"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary material used to build the Iron Monger suit?",
+      "correct_answer": "Iron",
+      "incorrect_answers": [
+        "Gold-Titanium Alloy",
+        "Steel",
+        "Vibranium"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which eye does Nick Fury wear his eye patch over?",
+      "correct_answer": "Left",
+      "incorrect_answers": [
+        "Right",
+        "Both",
+        "Neither"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "Which country is BTS from?",
-      "correct_answer": "South Korea",
+      "question": "Who is the main villain in 'Avengers: Age of Ultron'?",
+      "correct_answer": "Ultron",
       "incorrect_answers": [
-        "Japan",
-        "China",
-        "Thailand"
+        "Thanos",
+        "Loki",
+        "Red Skull"
       ],
       "difficulty": "easy"
+    },
+    {
+      "question": "Which film features the first appearance of the character Val (Valentina Allegra de Fontaine)?",
+      "correct_answer": "The Falcon and the Winter Soldier",
+      "incorrect_answers": [
+        "Black Widow",
+        "Black Panther: Wakanda Forever",
+        "Hawkeye"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What video game is Thor playing in 'Avengers: Endgame'?",
+      "correct_answer": "Fortnite",
+      "incorrect_answers": [
+        "Call of Duty",
+        "Minecraft",
+        "Halo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the celestial whose head became the mining colony 'Knowhere'?",
+      "correct_answer": "The head of a dead Celestial",
+      "incorrect_answers": [
+        "Ego",
+        "Arishem",
+        "Tiamut"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who rescued Tony Stark and Nebula from space in 'Endgame'?",
+      "correct_answer": "Captain Marvel",
+      "incorrect_answers": [
+        "Thor",
+        "Rocket Raccoon",
+        "Doctor Strange"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the King of the Nine Realms?",
+      "correct_answer": "Odin",
+      "incorrect_answers": [
+        "Thor",
+        "Loki",
+        "Malekith"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the secret society M.O.D.O.K. leads in the Quantum Realm?",
+      "correct_answer": "He is a hunter for Kang",
+      "incorrect_answers": [
+        "A.I.M.",
+        "The Mechanized",
+        "The Seekers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does S.H.I.E.L.D. stand for?",
+      "correct_answer": "Strategic Homeland Intervention, Enforcement and Logistics Division",
+      "incorrect_answers": [
+        "Special Heroic International Enforcement and Law Division",
+        "Secret Homeland Intelligence and Espionage Liaison Department",
+        "Superhuman Intelligence and Emergency Logistics Division"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the organization that created the Winter Soldier?",
+      "correct_answer": "HYDRA",
+      "incorrect_answers": [
+        "A.I.M.",
+        "The Hand",
+        "The Ten Rings"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which planet is the Soul Stone found on?",
+      "correct_answer": "Vormir",
+      "incorrect_answers": [
+        "Titan",
+        "Xandar",
+        "Asgard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Captain Marvel', what is the real name of the Flerken known as Goose?",
+      "correct_answer": "Goose",
+      "incorrect_answers": [
+        "Chewie",
+        "Jonesy",
+        "Flerky"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the biological father of Star-Lord?",
+      "correct_answer": "Ego the Living Planet",
+      "incorrect_answers": [
+        "Yondu Udonta",
+        "Thanos",
+        "The Collector"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who killed the parents of Tony Stark?",
+      "correct_answer": "The Winter Soldier",
+      "incorrect_answers": [
+        "Obadiah Stane",
+        "Baron Zemo",
+        "Alexander Pierce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which MCU character has a pet alligator that is a variant of himself?",
+      "correct_answer": "Loki",
+      "incorrect_answers": [
+        "Thor",
+        "Sylvie",
+        "Mobius"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What color is the Mind Stone after it is removed from the Scepter?",
+      "correct_answer": "Yellow",
+      "incorrect_answers": [
+        "Blue",
+        "Orange",
+        "White"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What city do the Avengers fight in during 'Age of Ultron'?",
+      "correct_answer": "Sokovia",
+      "incorrect_answers": [
+        "New York",
+        "London",
+        "Seoul"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Norse world that is home to the Dark Elves?",
+      "correct_answer": "Svartalfheim",
+      "incorrect_answers": [
+        "Niflheim",
+        "Muspelheim",
+        "Vanaheim"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Valkyrie's horse in 'Thor: Love and Thunder'?",
+      "correct_answer": "Warsong",
+      "incorrect_answers": [
+        "Arion",
+        "Pegasus",
+        "Cloud"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which fictional African nation is the home of Black Panther?",
+      "correct_answer": "Wakanda",
+      "incorrect_answers": [
+        "Genosha",
+        "Latveria",
+        "Sokovia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Thor's enchanted hammer?",
+      "correct_answer": "Mjolnir",
+      "incorrect_answers": [
+        "Stormbreaker",
+        "Gungnir",
+        "Aegis"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the Skrull leader in 'Captain Marvel'?",
+      "correct_answer": "Talos",
+      "incorrect_answers": [
+        "Soren",
+        "Kl'rt",
+        "Gravik"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In The Wire, which season focuses on the school system?",
+      "correct_answer": "Season 4",
+      "incorrect_answers": [
+        "Season 2",
+        "Season 3",
+        "Season 5"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Breaking Bad, what illness does Walter White have?",
+      "correct_answer": "Lung cancer",
+      "incorrect_answers": [
+        "Brain tumor",
+        "Leukemia",
+        "Heart disease"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Sherlock (BBC), who plays Sherlock Holmes?",
+      "correct_answer": "Benedict Cumberbatch",
+      "incorrect_answers": [
+        "Martin Freeman",
+        "Andrew Scott",
+        "Robert Downey Jr."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Breaking Bad, what subject does Walter White teach?",
+      "correct_answer": "Chemistry",
+      "incorrect_answers": [
+        "Physics",
+        "Biology",
+        "Math"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Better Call Saul, what show is it a prequel to?",
+      "correct_answer": "Breaking Bad",
+      "incorrect_answers": [
+        "The Wire",
+        "Ozark",
+        "Narcos"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In The Office (US), what city is the Scranton branch located in?",
+      "correct_answer": "Scranton, Pennsylvania",
+      "incorrect_answers": [
+        "Albany, New York",
+        "Hartford, Connecticut",
+        "Stamford, Connecticut"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In The Office (US), who replaces Michael Scott as regional manager?",
+      "correct_answer": "Andy Bernard (then Dwight)",
+      "incorrect_answers": [
+        "Jim Halpert",
+        "Robert California",
+        "Toby Flenderson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Homeland, who plays CIA officer Carrie Mathison?",
+      "correct_answer": "Claire Danes",
+      "incorrect_answers": [
+        "Mandy Patinkin",
+        "Jessica Chastain",
+        "Robin Wright"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Peaky Blinders, who plays Tommy Shelby?",
+      "correct_answer": "Cillian Murphy",
+      "incorrect_answers": [
+        "Tom Hardy",
+        "Paul Anderson",
+        "Joe Cole"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In The Boys, what is Billy Butcher's nationality?",
+      "correct_answer": "British",
+      "incorrect_answers": [
+        "American",
+        "Australian",
+        "Irish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Westworld, who plays Dolores Abernathy?",
+      "correct_answer": "Evan Rachel Wood",
+      "incorrect_answers": [
+        "Thandiwe Newton",
+        "Tessa Thompson",
+        "Angela Sarafyan"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In The Crown, which Prime Minister is played by John Lithgow?",
+      "correct_answer": "Winston Churchill",
+      "incorrect_answers": [
+        "Harold Macmillan",
+        "Anthony Eden",
+        "Harold Wilson"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Friends, how many main characters are there?",
+      "correct_answer": "Six",
+      "incorrect_answers": [
+        "Five",
+        "Seven",
+        "Four"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Succession, what is the name of the family's media company?",
+      "correct_answer": "Waystar Royco",
+      "incorrect_answers": [
+        "Pierce Media",
+        "Roy Corp",
+        "Waymark Global"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Ted Lasso, what sport does Ted coach?",
+      "correct_answer": "Soccer (football)",
+      "incorrect_answers": [
+        "American football",
+        "Basketball",
+        "Baseball"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Fleabag, who created and stars in the show?",
+      "correct_answer": "Phoebe Waller-Bridge",
+      "incorrect_answers": [
+        "Olivia Colman",
+        "Jodie Comer",
+        "Sandra Oh"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Seinfeld, what does Kramer's apartment look like compared to Jerry's?",
+      "correct_answer": "Messy and chaotic",
+      "incorrect_answers": [
+        "Identical",
+        "Fancier",
+        "Completely empty"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In How I Met Your Mother, what is Barney Stinson's catchphrase?",
+      "correct_answer": "Legendary",
+      "incorrect_answers": [
+        "Awesome",
+        "Epic",
+        "Classic"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Succession, what type of company is Waystar Royco?",
+      "correct_answer": "Media and entertainment conglomerate",
+      "incorrect_answers": [
+        "Tech company",
+        "Oil company",
+        "Banking firm"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 24, how many hours does each season cover?",
+      "correct_answer": "24 hours",
+      "incorrect_answers": [
+        "48 hours",
+        "1 week",
+        "1 month"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Breaking Bad, what is the name of Walter's former business partner?",
+      "correct_answer": "Elliott Schwartz",
+      "incorrect_answers": [
+        "Gale Boetticher",
+        "Hector Salamanca",
+        "Gustavo Fring"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Sex and the City, who is the narrator?",
+      "correct_answer": "Carrie Bradshaw",
+      "incorrect_answers": [
+        "Charlotte York",
+        "Miranda Hobbes",
+        "Samantha Jones"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In House, what is Dr. House's first name?",
+      "correct_answer": "Gregory",
+      "incorrect_answers": [
+        "James",
+        "Robert",
+        "Eric"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In How I Met Your Mother, what does Ted want to be?",
+      "correct_answer": "An architect",
+      "incorrect_answers": [
+        "A lawyer",
+        "A doctor",
+        "A professor"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Breaking Bad, what does 'Better Call Saul' refer to?",
+      "correct_answer": "A criminal lawyer's advertising slogan",
+      "incorrect_answers": [
+        "A phone hotline",
+        "A radio show",
+        "A restaurant name"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Dexter, what is Dexter Morgan's day job?",
+      "correct_answer": "Blood spatter analyst",
+      "incorrect_answers": [
+        "Homicide detective",
+        "Forensic pathologist",
+        "Crime scene photographer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Dexter, who plays Dexter Morgan?",
+      "correct_answer": "Michael C. Hall",
+      "incorrect_answers": [
+        "James Remar",
+        "David Zayas",
+        "C.S. Lee"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Gilmore Girls, what is the name of the small town where the show is set?",
+      "correct_answer": "Stars Hollow",
+      "incorrect_answers": [
+        "Hartford",
+        "New Haven",
+        "Woodbridge"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Seinfeld, what does George Costanza pretend to be to avoid responsibilities?",
+      "correct_answer": "An architect",
+      "incorrect_answers": [
+        "A marine biologist",
+        "A lawyer",
+        "A doctor"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Better Call Saul, what is Saul Goodman's real name?",
+      "correct_answer": "Jimmy McGill",
+      "incorrect_answers": [
+        "James Morgan",
+        "John Goodman",
+        "Jack McGee"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Ozark, who plays Marty Byrde?",
+      "correct_answer": "Jason Bateman",
+      "incorrect_answers": [
+        "Laura Linney",
+        "Tom Pelphrey",
+        "Ben Mendelsohn"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Brooklyn Nine-Nine, what is Rosa Diaz known for?",
+      "correct_answer": "Being tough and secretive",
+      "incorrect_answers": [
+        "Being bubbly and outgoing",
+        "Being clumsy",
+        "Being the funniest detective"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Lost, what are the mysterious numbers that keep recurring?",
+      "correct_answer": "4, 8, 15, 16, 23, 42",
+      "incorrect_answers": [
+        "3, 6, 9, 12, 24, 36",
+        "1, 4, 9, 16, 25, 36",
+        "7, 14, 21, 28, 35, 42"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Arrested Development, what business does the Bluth family run?",
+      "correct_answer": "A real estate development company",
+      "incorrect_answers": [
+        "A banana stand chain",
+        "A law firm",
+        "A magic shop"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Narcos, in what country is the first season primarily set?",
+      "correct_answer": "Colombia",
+      "incorrect_answers": [
+        "Mexico",
+        "Brazil",
+        "Peru"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Fargo (TV series), is each season a standalone story?",
+      "correct_answer": "Yes",
+      "incorrect_answers": [
+        "No, it's one continuous story",
+        "Only seasons 1 and 2",
+        "No, but they share a timeline"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Modern Family, who plays Phil Dunphy?",
+      "correct_answer": "Ty Burrell",
+      "incorrect_answers": [
+        "Ed O'Neill",
+        "Jesse Tyler Ferguson",
+        "Eric Stonestreet"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In House, what is Dr. House addicted to?",
+      "correct_answer": "Vicodin",
+      "incorrect_answers": [
+        "Morphine",
+        "Oxycodone",
+        "Alcohol"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Breaking Bad, what color is the meth that Walter White produces?",
+      "correct_answer": "Blue",
+      "incorrect_answers": [
+        "White",
+        "Yellow",
+        "Clear"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In The Big Bang Theory, what is Penny's last name?",
+      "correct_answer": "It was never revealed (before marriage)",
+      "incorrect_answers": [
+        "Johnson",
+        "Smith",
+        "Williams"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Dexter, what does Dexter call his urge to kill?",
+      "correct_answer": "The Dark Passenger",
+      "incorrect_answers": [
+        "The Shadow",
+        "The Beast",
+        "The Monster"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Brooklyn Nine-Nine, who plays Captain Holt?",
+      "correct_answer": "Andre Braugher",
+      "incorrect_answers": [
+        "Terry Crews",
+        "Joe Lo Truglio",
+        "Andy Samberg"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Buffy the Vampire Slayer, what town does Buffy live in?",
+      "correct_answer": "Sunnydale",
+      "incorrect_answers": [
+        "Mystic Falls",
+        "Bon Temps",
+        "Forks"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Ozark, what does Marty Byrde do for the cartel?",
+      "correct_answer": "Money laundering",
+      "incorrect_answers": [
+        "Drug smuggling",
+        "Contract killing",
+        "Arms dealing"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In The Big Bang Theory, what university do the characters work at?",
+      "correct_answer": "Caltech",
+      "incorrect_answers": [
+        "MIT",
+        "Stanford",
+        "Harvard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Lost, what happens to Oceanic Flight 815?",
+      "correct_answer": "It crashes on an island",
+      "incorrect_answers": [
+        "It's hijacked",
+        "It disappears in the ocean",
+        "It lands in the wrong country"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In True Detective Season 1, what is the name of the mysterious serial killer they're hunting?",
+      "correct_answer": "The Yellow King",
+      "incorrect_answers": [
+        "The Scarecrow",
+        "The Night Stalker",
+        "The Preacher"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Seinfeld, what is Kramer's first name?",
+      "correct_answer": "Cosmo",
+      "incorrect_answers": [
+        "Jerry",
+        "George",
+        "Michael"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In Curb Your Enthusiasm, who plays the lead character?",
+      "correct_answer": "Larry David",
+      "incorrect_answers": [
+        "Jerry Seinfeld",
+        "Jason Alexander",
+        "Jeff Garlin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In The Walking Dead, what weapon does Daryl Dixon primarily use?",
+      "correct_answer": "Crossbow",
+      "incorrect_answers": [
+        "Katana",
+        "Machete",
+        "Rifle"
+      ],
+      "difficulty": "medium"
     }
   ]
 }
