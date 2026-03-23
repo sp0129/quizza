@@ -2001,6 +2001,1006 @@
         "Dune"
       ],
       "difficulty": "easy"
+    },
+    {
+      "question": "What year was the original 'Jurassic Park' released?",
+      "correct_answer": "1993",
+      "incorrect_answers": [
+        "1991",
+        "1995",
+        "1990"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who composed the iconic 'Jaws' theme?",
+      "correct_answer": "John Williams",
+      "incorrect_answers": [
+        "Hans Zimmer",
+        "Danny Elfman",
+        "Howard Shore"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the first movie to use CGI dinosaurs?",
+      "correct_answer": "Jurassic Park",
+      "incorrect_answers": [
+        "The Land Before Time",
+        "Godzilla",
+        "King Kong"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Godfather', what is the name of the family's youngest son?",
+      "correct_answer": "Michael",
+      "incorrect_answers": [
+        "Sonny",
+        "Fredo",
+        "Tom"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was Heath Ledger's last completed film?",
+      "correct_answer": "The Dark Knight",
+      "incorrect_answers": [
+        "The Imaginarium of Doctor Parnassus",
+        "Brokeback Mountain",
+        "Candy"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which 'Avengers' movie introduces Thanos as the main villain?",
+      "correct_answer": "Avengers: Infinity War",
+      "incorrect_answers": [
+        "Avengers: Age of Ultron",
+        "The Avengers",
+        "Avengers: Endgame"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Pulp Fiction', what does Marcellus Wallace's briefcase glow?",
+      "correct_answer": "Gold/orange light \u2014 its contents are never revealed",
+      "incorrect_answers": [
+        "Diamonds",
+        "A soul",
+        "Nuclear material"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the twist ending of 'Fight Club'?",
+      "correct_answer": "The narrator and Tyler Durden are the same person",
+      "incorrect_answers": [
+        "Tyler dies in the explosion",
+        "Marla is imaginary",
+        "It was all a dream"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'The Shining'?",
+      "correct_answer": "Stanley Kubrick",
+      "incorrect_answers": [
+        "Alfred Hitchcock",
+        "David Lynch",
+        "Wes Craven"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What hotel is 'The Shining' set in?",
+      "correct_answer": "The Overlook Hotel",
+      "incorrect_answers": [
+        "The Stanley Hotel",
+        "Bates Motel",
+        "The Grand Budapest Hotel"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Inception', what object does Cobb use to test if he's dreaming?",
+      "correct_answer": "A spinning top",
+      "incorrect_answers": [
+        "A coin",
+        "A watch",
+        "A dice"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many Infinity Stones are there in the MCU?",
+      "correct_answer": "6",
+      "incorrect_answers": [
+        "5",
+        "7",
+        "4"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the first 'Lord of the Rings' movie release?",
+      "correct_answer": "2001",
+      "incorrect_answers": [
+        "2000",
+        "2002",
+        "2003"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who played Gollum in 'Lord of the Rings' via motion capture?",
+      "correct_answer": "Andy Serkis",
+      "incorrect_answers": [
+        "Doug Jones",
+        "Alan Tudyk",
+        "Mark Ruffalo"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Matrix', what color pill does Neo take?",
+      "correct_answer": "Red",
+      "incorrect_answers": [
+        "Blue",
+        "Green",
+        "White"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What 1994 Disney movie is based on Shakespeare's 'Hamlet'?",
+      "correct_answer": "The Lion King",
+      "incorrect_answers": [
+        "Aladdin",
+        "Beauty and the Beast",
+        "The Little Mermaid"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who played Agent Smith in 'The Matrix'?",
+      "correct_answer": "Hugo Weaving",
+      "incorrect_answers": [
+        "Ralph Fiennes",
+        "Gary Oldman",
+        "Alan Rickman"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Gladiator', what is Maximus's full name?",
+      "correct_answer": "Maximus Decimus Meridius",
+      "incorrect_answers": [
+        "Maximus Aurelius",
+        "Maximus Spartacus",
+        "Maximus Tiberius"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which director has made the most movies with Johnny Depp?",
+      "correct_answer": "Tim Burton",
+      "incorrect_answers": [
+        "Gore Verbinski",
+        "Terry Gilliam",
+        "Rob Marshall"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What real event is 'Dunkirk' based on?",
+      "correct_answer": "The evacuation of Allied soldiers from Dunkirk beach in WWII",
+      "incorrect_answers": [
+        "The D-Day invasion",
+        "The Battle of Britain",
+        "The fall of Berlin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Interstellar', what is the name of the space station humanity builds?",
+      "correct_answer": "Cooper Station",
+      "incorrect_answers": [
+        "Miller Station",
+        "Endurance",
+        "Lazarus Station"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'Black Swan'?",
+      "correct_answer": "Darren Aronofsky",
+      "incorrect_answers": [
+        "David Fincher",
+        "Denis Villeneuve",
+        "Damien Chazelle"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the AI system in '2001: A Space Odyssey'?",
+      "correct_answer": "HAL 9000",
+      "incorrect_answers": [
+        "JARVIS",
+        "Skynet",
+        "WOPR"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Silence of the Lambs', what is Hannibal Lecter's profession?",
+      "correct_answer": "Psychiatrist",
+      "incorrect_answers": [
+        "Surgeon",
+        "Detective",
+        "Professor"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What movie won Best Picture the same year 'Saving Private Ryan' lost?",
+      "correct_answer": "Shakespeare in Love (1999 ceremony)",
+      "incorrect_answers": [
+        "Titanic",
+        "American Beauty",
+        "The English Patient"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Django Unchained', who plays the villain Calvin Candie?",
+      "correct_answer": "Leonardo DiCaprio",
+      "incorrect_answers": [
+        "Christoph Waltz",
+        "Samuel L. Jackson",
+        "Jamie Foxx"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the fictional metal in 'Black Panther'?",
+      "correct_answer": "Vibranium",
+      "incorrect_answers": [
+        "Adamantium",
+        "Unobtanium",
+        "Kryptonite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Quentin Tarantino movie is set in Nazi-occupied France?",
+      "correct_answer": "Inglourious Basterds",
+      "incorrect_answers": [
+        "Django Unchained",
+        "The Hateful Eight",
+        "Kill Bill Vol. 1"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Shutter Island', what twist is revealed at the end?",
+      "correct_answer": "Teddy Daniels is actually a patient at the asylum",
+      "incorrect_answers": [
+        "The island is imaginary",
+        "His partner is the killer",
+        "He's been dead the whole time"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What language is 'Parasite' in?",
+      "correct_answer": "Korean",
+      "incorrect_answers": [
+        "Japanese",
+        "Mandarin",
+        "Thai"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who plays the villain Loki in the MCU?",
+      "correct_answer": "Tom Hiddleston",
+      "incorrect_answers": [
+        "Benedict Cumberbatch",
+        "Cillian Murphy",
+        "Michael Fassbender"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Jaws', what is the name of the shark hunter?",
+      "correct_answer": "Quint",
+      "incorrect_answers": [
+        "Hooper",
+        "Brody",
+        "Vaughn"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What 1999 movie features the line 'I am Jack's complete lack of surprise'?",
+      "correct_answer": "Fight Club",
+      "incorrect_answers": [
+        "American Beauty",
+        "The Matrix",
+        "Office Space"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who played Hans Landa in 'Inglourious Basterds'?",
+      "correct_answer": "Christoph Waltz",
+      "incorrect_answers": [
+        "Michael Fassbender",
+        "Daniel Br\u00fchl",
+        "Til Schweiger"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the twist in 'The Usual Suspects'?",
+      "correct_answer": "Verbal Kint is Keyser S\u00f6ze",
+      "incorrect_answers": [
+        "Keyser S\u00f6ze doesn't exist",
+        "The detective is the villain",
+        "It was all a dream"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Cast Away', what is the name Tom Hanks gives to the volleyball?",
+      "correct_answer": "Wilson",
+      "incorrect_answers": [
+        "Spalding",
+        "Chuck",
+        "Jack"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which actor has played both The Joker and a Roman emperor on screen?",
+      "correct_answer": "Joaquin Phoenix (Joker and Commodus in Gladiator)",
+      "incorrect_answers": [
+        "Heath Ledger",
+        "Jack Nicholson",
+        "Jared Leto"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year was 'The Shawshank Redemption' released?",
+      "correct_answer": "1994",
+      "incorrect_answers": [
+        "1993",
+        "1995",
+        "1996"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'No Country for Old Men', what weapon does Anton Chigurh use?",
+      "correct_answer": "A captive bolt pistol (cattle gun)",
+      "incorrect_answers": [
+        "A silenced pistol",
+        "A shotgun",
+        "A knife"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'Whiplash'?",
+      "correct_answer": "Damien Chazelle",
+      "incorrect_answers": [
+        "David Fincher",
+        "Denis Villeneuve",
+        "Darren Aronofsky"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Truman Show', what is the name of the show's creator?",
+      "correct_answer": "Christof",
+      "incorrect_answers": [
+        "Chris",
+        "Christian",
+        "Chester"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the planet in 'Dune'?",
+      "correct_answer": "Arrakis",
+      "incorrect_answers": [
+        "Pandora",
+        "Tatooine",
+        "Caladan"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who voices Donkey in 'Shrek'?",
+      "correct_answer": "Eddie Murphy",
+      "incorrect_answers": [
+        "Chris Rock",
+        "Kevin Hart",
+        "Martin Lawrence"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Good Will Hunting', what university does Will work at as a janitor?",
+      "correct_answer": "MIT",
+      "incorrect_answers": [
+        "Harvard",
+        "Yale",
+        "Princeton"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the twist in 'Planet of the Apes' (1968)?",
+      "correct_answer": "The planet is actually Earth in the future",
+      "incorrect_answers": [
+        "The apes are robots",
+        "It's all a simulation",
+        "The humans created the apes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who composed the music for 'The Lord of the Rings' trilogy?",
+      "correct_answer": "Howard Shore",
+      "incorrect_answers": [
+        "John Williams",
+        "Hans Zimmer",
+        "Danny Elfman"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Departed', which real-life mobster is Jack Nicholson's character based on?",
+      "correct_answer": "Whitey Bulger",
+      "incorrect_answers": [
+        "Al Capone",
+        "John Gotti",
+        "Lucky Luciano"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the AI in 'Iron Man'?",
+      "correct_answer": "JARVIS",
+      "incorrect_answers": [
+        "FRIDAY",
+        "EDITH",
+        "ULTRON"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Memento', what condition does the main character have?",
+      "correct_answer": "Short-term memory loss (anterograde amnesia)",
+      "incorrect_answers": [
+        "Blindness",
+        "Multiple personality disorder",
+        "Sleepwalking"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'Mad Max: Fury Road'?",
+      "correct_answer": "George Miller",
+      "incorrect_answers": [
+        "Ridley Scott",
+        "James Cameron",
+        "Michael Bay"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Grand Budapest Hotel', who plays the concierge M. Gustave?",
+      "correct_answer": "Ralph Fiennes",
+      "incorrect_answers": [
+        "Bill Murray",
+        "Owen Wilson",
+        "Jeff Goldblum"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the resource fought over in 'Dune'?",
+      "correct_answer": "Spice (melange)",
+      "incorrect_answers": [
+        "Vibranium",
+        "Unobtanium",
+        "Energon"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Alien', what is the name of the ship's cat?",
+      "correct_answer": "Jonesy",
+      "incorrect_answers": [
+        "Ripley",
+        "Bishop",
+        "Dallas"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Wes Anderson movie features a stop-motion animated fox?",
+      "correct_answer": "Fantastic Mr. Fox",
+      "incorrect_answers": [
+        "Isle of Dogs",
+        "Moonrise Kingdom",
+        "The Royal Tenenbaums"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What real person does Jamie Foxx portray in 'Ray'?",
+      "correct_answer": "Ray Charles",
+      "incorrect_answers": [
+        "James Brown",
+        "Stevie Wonder",
+        "Marvin Gaye"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Social Network', who does Jesse Eisenberg play?",
+      "correct_answer": "Mark Zuckerberg",
+      "incorrect_answers": [
+        "Elon Musk",
+        "Steve Jobs",
+        "Bill Gates"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chronological order of the Star Wars prequel trilogy?",
+      "correct_answer": "The Phantom Menace, Attack of the Clones, Revenge of the Sith",
+      "incorrect_answers": [
+        "Attack of the Clones, The Phantom Menace, Revenge of the Sith",
+        "Revenge of the Sith, The Phantom Menace, Attack of the Clones",
+        "The Phantom Menace, Revenge of the Sith, Attack of the Clones"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who plays Pennywise in the 2017 version of 'It'?",
+      "correct_answer": "Bill Skarsg\u00e5rd",
+      "incorrect_answers": [
+        "Tim Curry",
+        "Robert Englund",
+        "Javier Bardem"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What movie features the quote 'You talking to me?'?",
+      "correct_answer": "Taxi Driver",
+      "incorrect_answers": [
+        "Scarface",
+        "The Godfather",
+        "Goodfellas"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Gravity', who are the two lead actors?",
+      "correct_answer": "Sandra Bullock and George Clooney",
+      "incorrect_answers": [
+        "Anne Hathaway and Matthew McConaughey",
+        "Amy Adams and Bradley Cooper",
+        "Natalie Portman and Chris Pratt"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the kingdom in 'Tangled'?",
+      "correct_answer": "Corona",
+      "incorrect_answers": [
+        "Arendelle",
+        "Genovia",
+        "Far Far Away"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Prestige', what are the two rival magicians' names?",
+      "correct_answer": "Robert Angier and Alfred Borden",
+      "incorrect_answers": [
+        "Harry Houdini and David Copperfield",
+        "Penn and Teller",
+        "Carter and Blackstone"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which studio produced 'Spirited Away'?",
+      "correct_answer": "Studio Ghibli",
+      "incorrect_answers": [
+        "Pixar",
+        "DreamWorks",
+        "Toei Animation"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year was the first 'Iron Man' movie released, launching the MCU?",
+      "correct_answer": "2008",
+      "incorrect_answers": [
+        "2006",
+        "2010",
+        "2007"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Kill Bill', what is the Bride's real name?",
+      "correct_answer": "Beatrix Kiddo",
+      "incorrect_answers": [
+        "Black Mamba",
+        "Copperhead",
+        "Vernita Green"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who plays the villain Bane in 'The Dark Knight Rises'?",
+      "correct_answer": "Tom Hardy",
+      "incorrect_answers": [
+        "Dave Bautista",
+        "Idris Elba",
+        "Michael Shannon"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What Pixar movie is about a rat in Paris who dreams of being a chef?",
+      "correct_answer": "Ratatouille",
+      "incorrect_answers": [
+        "Coco",
+        "Inside Out",
+        "Up"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Forrest Gump', what does Forrest compare life to?",
+      "correct_answer": "A box of chocolates",
+      "incorrect_answers": [
+        "A rollercoaster",
+        "A river",
+        "A game of cards"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'Arrival' (2016)?",
+      "correct_answer": "Denis Villeneuve",
+      "incorrect_answers": [
+        "Christopher Nolan",
+        "Alex Garland",
+        "Ridley Scott"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Thanos's home planet?",
+      "correct_answer": "Titan",
+      "incorrect_answers": [
+        "Xandar",
+        "Knowhere",
+        "Vormir"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Bohemian Rhapsody', what band's story is told?",
+      "correct_answer": "Queen",
+      "incorrect_answers": [
+        "The Beatles",
+        "Elton John",
+        "David Bowie"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Bruce Wayne's mansion?",
+      "correct_answer": "Wayne Manor",
+      "incorrect_answers": [
+        "Stark Tower",
+        "Xavier's School",
+        "Arkham House"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Schindler's List', what does Oskar Schindler's factory produce?",
+      "correct_answer": "Enamelware (pots and pans)",
+      "incorrect_answers": [
+        "Weapons",
+        "Uniforms",
+        "Vehicles"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who played M in the Daniel Craig James Bond films?",
+      "correct_answer": "Judi Dench (and later Ralph Fiennes)",
+      "incorrect_answers": [
+        "Helen Mirren",
+        "Maggie Smith",
+        "Ian McKellen"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What 2014 movie features a boy growing up filmed over 12 years?",
+      "correct_answer": "Boyhood",
+      "incorrect_answers": [
+        "The Tree of Life",
+        "Moonlight",
+        "Manchester by the Sea"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Catch Me If You Can', who does Leonardo DiCaprio impersonate?",
+      "correct_answer": "A pilot, doctor, and lawyer (Frank Abagnale Jr.)",
+      "incorrect_answers": [
+        "A spy",
+        "A president",
+        "A celebrity"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What animated movie features the line 'Ohana means family'?",
+      "correct_answer": "Lilo & Stitch",
+      "incorrect_answers": [
+        "Moana",
+        "Coco",
+        "Encanto"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who plays the villain Killmonger in 'Black Panther'?",
+      "correct_answer": "Michael B. Jordan",
+      "incorrect_answers": [
+        "Chadwick Boseman",
+        "Daniel Kaluuya",
+        "John Boyega"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the highest-grossing film directed by a woman?",
+      "correct_answer": "Frozen II (Jennifer Lee) or Barbie (Greta Gerwig)",
+      "incorrect_answers": [
+        "Wonder Woman",
+        "Captain Marvel",
+        "Twilight"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Se7en', what are the seven sins the killer uses?",
+      "correct_answer": "Gluttony, greed, sloth, lust, pride, envy, wrath",
+      "incorrect_answers": [
+        "Lying, stealing, cheating, killing, jealousy, anger, hate",
+        "7 random crimes",
+        "7 deadly animals"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What movie features the line 'Here's Johnny!'?",
+      "correct_answer": "The Shining",
+      "incorrect_answers": [
+        "Psycho",
+        "A Nightmare on Elm Street",
+        "Halloween"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'Saving Private Ryan'?",
+      "correct_answer": "Steven Spielberg",
+      "incorrect_answers": [
+        "Ridley Scott",
+        "Oliver Stone",
+        "Clint Eastwood"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Lion King', who voiced adult Simba in the original?",
+      "correct_answer": "Matthew Broderick",
+      "incorrect_answers": [
+        "James Earl Jones",
+        "Jeremy Irons",
+        "Nathan Lane"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year was 'Pulp Fiction' released?",
+      "correct_answer": "1994",
+      "incorrect_answers": [
+        "1992",
+        "1996",
+        "1995"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Titanic', what is the name of the necklace?",
+      "correct_answer": "The Heart of the Ocean",
+      "incorrect_answers": [
+        "The Star of Africa",
+        "The Hope Diamond",
+        "The Blue Sapphire"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'There Will Be Blood'?",
+      "correct_answer": "Paul Thomas Anderson",
+      "incorrect_answers": [
+        "Wes Anderson",
+        "Martin Scorsese",
+        "David Fincher"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Batman's car?",
+      "correct_answer": "The Batmobile",
+      "incorrect_answers": [
+        "The Dark Machine",
+        "The Knight Rider",
+        "The Bat Cruiser"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Blade Runner', what year is the movie set in?",
+      "correct_answer": "2019",
+      "incorrect_answers": [
+        "2029",
+        "2049",
+        "2001"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'Gone Girl'?",
+      "correct_answer": "David Fincher",
+      "incorrect_answers": [
+        "Denis Villeneuve",
+        "Darren Aronofsky",
+        "David Lynch"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What animated film was the first to be nominated for Best Picture at the Oscars?",
+      "correct_answer": "Beauty and the Beast (1991)",
+      "incorrect_answers": [
+        "Toy Story",
+        "The Lion King",
+        "Up"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Zodiac', what real-life case is the movie about?",
+      "correct_answer": "The Zodiac Killer in San Francisco",
+      "incorrect_answers": [
+        "Jack the Ripper",
+        "The Unabomber",
+        "BTK Killer"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who plays the lead in 'The Pursuit of Happyness'?",
+      "correct_answer": "Will Smith",
+      "incorrect_answers": [
+        "Denzel Washington",
+        "Jamie Foxx",
+        "Morgan Freeman"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Back to the Future', what speed must the DeLorean reach to time travel?",
+      "correct_answer": "88 mph",
+      "incorrect_answers": [
+        "100 mph",
+        "75 mph",
+        "60 mph"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Captain America's shield material?",
+      "correct_answer": "Vibranium",
+      "incorrect_answers": [
+        "Adamantium",
+        "Titanium",
+        "Uru"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who played the young Vito Corleone in 'The Godfather Part II'?",
+      "correct_answer": "Robert De Niro",
+      "incorrect_answers": [
+        "Al Pacino",
+        "Joe Pesci",
+        "James Caan"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What Wes Anderson movie is set on a fictional island of exiled dogs?",
+      "correct_answer": "Isle of Dogs",
+      "incorrect_answers": [
+        "Fantastic Mr. Fox",
+        "The Life Aquatic",
+        "Moonrise Kingdom"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Eternal Sunshine of the Spotless Mind', what procedure do the characters undergo?",
+      "correct_answer": "Memory erasure of their relationship",
+      "incorrect_answers": [
+        "Time travel",
+        "Dream manipulation",
+        "Personality swap"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the spaceship in 'Alien' franchise's sequel?",
+      "correct_answer": "Sulaco (in Aliens)",
+      "incorrect_answers": [
+        "Nostromo",
+        "Prometheus",
+        "Covenant"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who directed 'Moonlight', which won Best Picture in 2017?",
+      "correct_answer": "Barry Jenkins",
+      "incorrect_answers": [
+        "Jordan Peele",
+        "Steve McQueen",
+        "Ryan Coogler"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Big Lebowski', what is the Dude's real first name?",
+      "correct_answer": "Jeffrey",
+      "incorrect_answers": [
+        "Walter",
+        "Donnie",
+        "Maude"
+      ],
+      "difficulty": "medium"
     }
   ]
 }
