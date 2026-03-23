@@ -3001,6 +3001,686 @@
         "Maude"
       ],
       "difficulty": "medium"
+    },
+    {
+      "question": "What was the first film to win the Academy Award for Best Picture?",
+      "correct_answer": "Wings (1927)",
+      "incorrect_answers": [
+        "Sunrise (1927)",
+        "The Jazz Singer (1927)",
+        "Ben-Hur (1925)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was originally cast as the Terminator before Arnold Schwarzenegger?",
+      "correct_answer": "O.J. Simpson was considered",
+      "incorrect_answers": [
+        "Sylvester Stallone",
+        "Kurt Russell",
+        "Harrison Ford"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the only sequel to win Best Picture without the original winning?",
+      "correct_answer": "The Godfather Part II",
+      "incorrect_answers": [
+        "The Lord of the Rings: Return of the King",
+        "Aliens",
+        "The Dark Knight"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many takes did Stanley Kubrick require for the baseball bat scene in 'The Shining'?",
+      "correct_answer": "127 takes",
+      "incorrect_answers": [
+        "45 takes",
+        "12 takes",
+        "200 takes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What actor has been nominated for the most Oscars without winning?",
+      "correct_answer": "Peter O'Toole (8 nominations)",
+      "incorrect_answers": [
+        "Leonardo DiCaprio",
+        "Glenn Close",
+        "Amy Adams"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Apocalypse Now', what real-life war is the film set during?",
+      "correct_answer": "The Vietnam War",
+      "incorrect_answers": [
+        "World War II",
+        "Korean War",
+        "Gulf War"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie was the first to earn over $100 million at the box office?",
+      "correct_answer": "Jaws (1975)",
+      "incorrect_answers": [
+        "Star Wars (1977)",
+        "The Godfather (1972)",
+        "The Exorcist (1973)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who turned down the role of Neo in 'The Matrix' before Keanu Reeves?",
+      "correct_answer": "Will Smith",
+      "incorrect_answers": [
+        "Nicolas Cage",
+        "Brad Pitt",
+        "Johnny Depp"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the longest movie to win Best Picture?",
+      "correct_answer": "Gone with the Wind (3 hours 58 minutes)",
+      "incorrect_answers": [
+        "The Lord of the Rings: Return of the King",
+        "Ben-Hur",
+        "Lawrence of Arabia"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Citizen Kane', what is Rosebud?",
+      "correct_answer": "Charles Foster Kane's childhood sled",
+      "incorrect_answers": [
+        "His mother's name",
+        "A secret love affair",
+        "His first newspaper"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What Alfred Hitchcock movie was the first to show a toilet flushing on screen?",
+      "correct_answer": "Psycho (1960)",
+      "incorrect_answers": [
+        "Vertigo",
+        "Rear Window",
+        "The Birds"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the first Black woman to win Best Actress at the Oscars?",
+      "correct_answer": "Halle Berry (Monster's Ball, 2002)",
+      "incorrect_answers": [
+        "Whoopi Goldberg",
+        "Viola Davis",
+        "Lupita Nyong'o"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the technique used to age/de-age actors digitally in Marvel films?",
+      "correct_answer": "Digital de-aging (using visual effects and machine learning)",
+      "incorrect_answers": [
+        "Practical makeup only",
+        "Body doubles",
+        "Stop-motion compositing"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'The Shawshank Redemption', what poster is on Andy's wall at the end?",
+      "correct_answer": "Raquel Welch",
+      "incorrect_answers": [
+        "Rita Hayworth",
+        "Marilyn Monroe",
+        "Brigitte Bardot"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What film's budget was so over-inflated it nearly bankrupted 20th Century Fox?",
+      "correct_answer": "Cleopatra (1963)",
+      "incorrect_answers": [
+        "Ben-Hur",
+        "Waterworld",
+        "Heaven's Gate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who directed 'Mulholland Drive'?",
+      "correct_answer": "David Lynch",
+      "incorrect_answers": [
+        "David Cronenberg",
+        "David Fincher",
+        "Darren Aronofsky"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MacGuffin in 'Pulp Fiction'?",
+      "correct_answer": "The briefcase (its contents are never revealed)",
+      "incorrect_answers": [
+        "Marsellus Wallace's soul",
+        "A golden watch",
+        "Diamonds"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which film used a real skeleton as a prop because it was cheaper than a fake one?",
+      "correct_answer": "Poltergeist (1982)",
+      "incorrect_answers": [
+        "The Exorcist",
+        "Psycho",
+        "The Texas Chain Saw Massacre"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the cinematography technique where the camera zooms in while dollying out?",
+      "correct_answer": "Dolly zoom (or Vertigo effect)",
+      "incorrect_answers": [
+        "Hitchcock pan",
+        "Kubrick stare",
+        "Spielberg push"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'No Country for Old Men', what does Anton Chigurh use to decide fate?",
+      "correct_answer": "A coin toss",
+      "incorrect_answers": [
+        "A dice roll",
+        "A card draw",
+        "A roulette spin"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the first R-rated movie to gross $1 billion worldwide?",
+      "correct_answer": "Joker (2019)",
+      "incorrect_answers": [
+        "Deadpool",
+        "The Matrix Reloaded",
+        "It"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which director holds the record for most Best Director Oscar nominations?",
+      "correct_answer": "William Wyler (12 nominations)",
+      "incorrect_answers": [
+        "Steven Spielberg",
+        "Martin Scorsese",
+        "John Ford"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie was filmed in reverse chronological order?",
+      "correct_answer": "Memento",
+      "incorrect_answers": [
+        "Pulp Fiction",
+        "Inception",
+        "Tenet"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In '2001: A Space Odyssey', what famous classical piece plays during the opening?",
+      "correct_answer": "Also sprach Zarathustra by Richard Strauss",
+      "incorrect_answers": [
+        "Moonlight Sonata by Beethoven",
+        "Ride of the Valkyries by Wagner",
+        "The Planets by Holst"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the only horror film to win the Best Picture Oscar?",
+      "correct_answer": "The Silence of the Lambs (1992)",
+      "incorrect_answers": [
+        "The Exorcist",
+        "Get Out",
+        "Parasite"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the youngest person to win Best Director at the Oscars?",
+      "correct_answer": "Damien Chazelle (age 32 for La La Land)",
+      "incorrect_answers": [
+        "Steven Spielberg",
+        "Orson Welles",
+        "Greta Gerwig"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the editing technique that cuts between two different scenes happening simultaneously?",
+      "correct_answer": "Cross-cutting (or parallel editing)",
+      "incorrect_answers": [
+        "Jump cut",
+        "Montage",
+        "Match cut"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Blade Runner 2049', who plays the lead character Officer K?",
+      "correct_answer": "Ryan Gosling",
+      "incorrect_answers": [
+        "Harrison Ford",
+        "Jared Leto",
+        "Dave Bautista"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the first fully computer-animated feature film?",
+      "correct_answer": "Toy Story (1995)",
+      "incorrect_answers": [
+        "Shrek (2001)",
+        "A Bug's Life (1998)",
+        "Antz (1998)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which movie had its entire dialogue improvised by the cast?",
+      "correct_answer": "This Is Spinal Tap",
+      "incorrect_answers": [
+        "The Blair Witch Project",
+        "Borat",
+        "Curb Your Enthusiasm"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the longest single take in a major Hollywood movie?",
+      "correct_answer": "1917 (appears as one continuous shot using hidden cuts)",
+      "incorrect_answers": [
+        "Birdman",
+        "Rope",
+        "Victoria"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who holds the record for most on-screen deaths in movie history?",
+      "correct_answer": "Danny Trejo",
+      "incorrect_answers": [
+        "Sean Bean",
+        "John Hurt",
+        "Christopher Lee"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What Akira Kurosawa film inspired 'Star Wars'?",
+      "correct_answer": "The Hidden Fortress",
+      "incorrect_answers": [
+        "Seven Samurai",
+        "Rashomon",
+        "Yojimbo"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What film technique did 'Birdman' use to appear as one continuous shot?",
+      "correct_answer": "Long takes stitched together with hidden cuts (digital and practical)",
+      "incorrect_answers": [
+        "It was actually one take",
+        "Stop-motion compositing",
+        "Time-lapse photography"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Tenet', what word is a palindrome that also names the organization?",
+      "correct_answer": "TENET",
+      "incorrect_answers": [
+        "SATOR",
+        "ROTAS",
+        "AREPO"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the budget of the original 'Mad Max' (1979)?",
+      "correct_answer": "Around $400,000 (AUD)",
+      "incorrect_answers": [
+        "$5 million",
+        "$20 million",
+        "$1.5 million"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who composed the score for 'Inception' and 'Interstellar'?",
+      "correct_answer": "Hans Zimmer",
+      "incorrect_answers": [
+        "John Williams",
+        "Howard Shore",
+        "Alexandre Desplat"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie's production was so troubled it was nicknamed 'Apocalypse When'?",
+      "correct_answer": "Apocalypse Now",
+      "incorrect_answers": [
+        "Waterworld",
+        "Ishtar",
+        "Heaven's Gate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'The Prestige', what science fiction element is revealed at the end?",
+      "correct_answer": "Nikola Tesla's cloning machine",
+      "incorrect_answers": [
+        "Time travel",
+        "Teleportation",
+        "Mind reading"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Bechdel test?",
+      "correct_answer": "A test asking if a movie has two named women who talk to each other about something other than a man",
+      "incorrect_answers": [
+        "A box office prediction formula",
+        "An audience satisfaction rating",
+        "A cinematography quality scale"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What Stanley Kubrick movie was banned in the UK for 27 years?",
+      "correct_answer": "A Clockwork Orange",
+      "incorrect_answers": [
+        "Full Metal Jacket",
+        "Eyes Wide Shut",
+        "The Shining"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the first actor to refuse an Academy Award?",
+      "correct_answer": "George C. Scott (for Patton, 1971)",
+      "incorrect_answers": [
+        "Marlon Brando",
+        "Woody Allen",
+        "Katherine Hepburn"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What 1998 film famously won 11 Oscars tying the all-time record?",
+      "correct_answer": "Titanic",
+      "incorrect_answers": [
+        "Saving Private Ryan",
+        "Shakespeare in Love",
+        "Life is Beautiful"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Eyes Wide Shut', what was unique about the production timeline?",
+      "correct_answer": "It holds the Guinness record for the longest continuous film shoot (400 days)",
+      "incorrect_answers": [
+        "It was filmed in one take",
+        "It was shot entirely at night",
+        "No scripts were used"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie's marketing campaign included the fake missing persons posters for its cast?",
+      "correct_answer": "The Blair Witch Project",
+      "incorrect_answers": [
+        "Paranormal Activity",
+        "Cloverfield",
+        "The Ring"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which actor has the most Best Actor Oscar wins?",
+      "correct_answer": "Daniel Day-Lewis (3 wins)",
+      "incorrect_answers": [
+        "Jack Nicholson",
+        "Tom Hanks",
+        "Marlon Brando"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie coined the term 'blockbuster'?",
+      "correct_answer": "Jaws (1975) is widely credited with creating the summer blockbuster concept",
+      "incorrect_answers": [
+        "Star Wars",
+        "The Godfather",
+        "Gone with the Wind"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the 'Wilhelm scream'?",
+      "correct_answer": "A stock sound effect scream used in hundreds of movies since 1951",
+      "incorrect_answers": [
+        "A specific acting technique",
+        "A type of camera angle",
+        "A horror movie trope"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'There Will Be Blood', what is Daniel Plainview's famous last line?",
+      "correct_answer": "I'm finished!",
+      "incorrect_answers": [
+        "I drink your milkshake!",
+        "I am the Third Revelation!",
+        "Drainage!"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What film was shot entirely in a single apartment?",
+      "correct_answer": "Rope (1948) by Alfred Hitchcock",
+      "incorrect_answers": [
+        "12 Angry Men",
+        "Rear Window",
+        "Buried"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who holds the record for most appearances as the same character in movies?",
+      "correct_answer": "Samuel L. Jackson as Nick Fury (11+ MCU appearances)",
+      "incorrect_answers": [
+        "Robert Downey Jr. as Iron Man",
+        "Hugh Jackman as Wolverine",
+        "Sean Connery as James Bond"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie pioneered the use of motion capture for a main character?",
+      "correct_answer": "The Lord of the Rings: The Two Towers (Gollum)",
+      "incorrect_answers": [
+        "Avatar",
+        "The Polar Express",
+        "King Kong (2005)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the most expensive movie ever made (adjusted for inflation)?",
+      "correct_answer": "Pirates of the Caribbean: On Stranger Tides (~$379M)",
+      "incorrect_answers": [
+        "Avatar",
+        "Avengers: Endgame",
+        "Titanic"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a 'foley artist' in filmmaking?",
+      "correct_answer": "A person who creates everyday sound effects for movies (footsteps, doors, etc.)",
+      "incorrect_answers": [
+        "A stunt coordinator",
+        "A special effects designer",
+        "A dialect coach"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Kuleshov effect?",
+      "correct_answer": "A film editing effect where viewers derive meaning from the juxtaposition of two shots",
+      "incorrect_answers": [
+        "A camera lens distortion",
+        "A lighting technique",
+        "A sound design method"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which movie features the longest fight scene in cinema history?",
+      "correct_answer": "They Live (1988) \u2014 a 5+ minute alley fight",
+      "incorrect_answers": [
+        "Kill Bill Vol. 1",
+        "The Raid",
+        "John Wick"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the first movie streamed on Netflix?",
+      "correct_answer": "Netflix started streaming in 2007; their first original film was 'Beasts of No Nation' (2015)",
+      "incorrect_answers": [
+        "House of Cards",
+        "The Irishman",
+        "Bird Box"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What real-life location doubled as Tatooine in the original 'Star Wars'?",
+      "correct_answer": "Tunisia",
+      "incorrect_answers": [
+        "Morocco",
+        "Jordan",
+        "Egypt"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the term for the final shot of a movie before the credits roll?",
+      "correct_answer": "The closing shot (or final frame)",
+      "incorrect_answers": [
+        "The stinger",
+        "The denouement shot",
+        "The cutaway"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the first person of Asian descent to win Best Director at the Oscars?",
+      "correct_answer": "Ang Lee (Brokeback Mountain, 2006)",
+      "incorrect_answers": [
+        "Bong Joon-ho",
+        "Chlo\u00e9 Zhao",
+        "Hayao Miyazaki"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What Martin Scorsese movie holds the record for most uses of the F-word?",
+      "correct_answer": "The Wolf of Wall Street (569 times)",
+      "incorrect_answers": [
+        "Goodfellas",
+        "Casino",
+        "The Departed"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In the original script of 'Pretty Woman', how did the movie end?",
+      "correct_answer": "Vivian is left on the street \u2014 it was a dark drama, not a rom-com",
+      "incorrect_answers": [
+        "She marries Edward immediately",
+        "She becomes a businesswoman",
+        "Edward dies"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the 180-degree rule in filmmaking?",
+      "correct_answer": "A guideline that keeps two characters in a scene on the same side of an imaginary axis",
+      "incorrect_answers": [
+        "The camera must rotate 180 degrees per scene",
+        "Actors must face the camera at all times",
+        "Lighting must come from one direction"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What film inspired the term 'gaslighting'?",
+      "correct_answer": "Gaslight (1944)",
+      "incorrect_answers": [
+        "Psycho",
+        "Vertigo",
+        "Rebecca"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who directed 'Eraserhead'?",
+      "correct_answer": "David Lynch",
+      "incorrect_answers": [
+        "David Cronenberg",
+        "Terry Gilliam",
+        "Lars von Trier"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the 'Spielberg Face'?",
+      "correct_answer": "A shot of a character staring in wide-eyed wonder, often lit from below",
+      "incorrect_answers": [
+        "A close-up on a villain",
+        "A reaction shot during an explosion",
+        "A lens flare technique"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie was shot on an iPhone?",
+      "correct_answer": "Tangerine (2015)",
+      "incorrect_answers": [
+        "Searching",
+        "Unfriended",
+        "Paranormal Activity"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a 'stinger' or 'post-credits scene' \u2014 and which franchise popularized them?",
+      "correct_answer": "A scene after the credits \u2014 popularized by the MCU (first in Iron Man 2008)",
+      "incorrect_answers": [
+        "Invented by Pixar",
+        "Started with James Bond",
+        "Created by Christopher Nolan"
+      ],
+      "difficulty": "hard"
     }
   ]
 }
