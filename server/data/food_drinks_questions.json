@@ -1,0 +1,3006 @@
+{
+  "category": "Food & Drinks",
+  "category_id": 2011,
+  "questions": [
+    {
+      "question": "What is the main ingredient in guacamole?",
+      "correct_answer": "Avocado",
+      "incorrect_answers": [
+        "Tomato",
+        "Lime",
+        "Onion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of pasta is shaped like a bow tie?",
+      "correct_answer": "Farfalle",
+      "incorrect_answers": [
+        "Penne",
+        "Rigatoni",
+        "Fusilli"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is sushi traditionally wrapped in?",
+      "correct_answer": "Seaweed (nori)",
+      "incorrect_answers": [
+        "Rice paper",
+        "Lettuce",
+        "Banana leaf"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What fruit is traditionally placed on top of a Hawaiian pizza?",
+      "correct_answer": "Pineapple",
+      "incorrect_answers": [
+        "Mango",
+        "Peach",
+        "Banana"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in hummus?",
+      "correct_answer": "Chickpeas",
+      "incorrect_answers": [
+        "Lentils",
+        "Black beans",
+        "Kidney beans"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of bread is used in a traditional Reuben sandwich?",
+      "correct_answer": "Rye",
+      "incorrect_answers": [
+        "Sourdough",
+        "White",
+        "Wheat"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is tofu made from?",
+      "correct_answer": "Soybeans",
+      "incorrect_answers": [
+        "Rice",
+        "Wheat",
+        "Corn"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Italian dish is made with layers of pasta, meat sauce, and cheese?",
+      "correct_answer": "Lasagna",
+      "incorrect_answers": [
+        "Ravioli",
+        "Cannelloni",
+        "Manicotti"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most popular pizza topping worldwide?",
+      "correct_answer": "Pepperoni",
+      "incorrect_answers": [
+        "Mushroom",
+        "Sausage",
+        "Onion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What grain is used to make traditional Japanese sake?",
+      "correct_answer": "Rice",
+      "incorrect_answers": [
+        "Barley",
+        "Wheat",
+        "Corn"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary ingredient in a traditional omelette?",
+      "correct_answer": "Eggs",
+      "incorrect_answers": [
+        "Flour",
+        "Milk",
+        "Butter"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What vegetable is the main ingredient in coleslaw?",
+      "correct_answer": "Cabbage",
+      "incorrect_answers": [
+        "Lettuce",
+        "Kale",
+        "Spinach"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a falafel?",
+      "correct_answer": "Chickpeas",
+      "incorrect_answers": [
+        "Lentils",
+        "Rice",
+        "Potatoes"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of meat is used in a traditional Thanksgiving turkey?",
+      "correct_answer": "Turkey",
+      "incorrect_answers": [
+        "Chicken",
+        "Duck",
+        "Goose"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What nut is used to make marzipan?",
+      "correct_answer": "Almond",
+      "incorrect_answers": [
+        "Cashew",
+        "Walnut",
+        "Pistachio"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What cheese is traditionally used on a Margherita pizza?",
+      "correct_answer": "Mozzarella",
+      "incorrect_answers": [
+        "Cheddar",
+        "Parmesan",
+        "Gouda"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary ingredient in peanut butter?",
+      "correct_answer": "Peanuts",
+      "incorrect_answers": [
+        "Almonds",
+        "Cashews",
+        "Sunflower seeds"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color is a ripe banana?",
+      "correct_answer": "Yellow",
+      "incorrect_answers": [
+        "Green",
+        "Red",
+        "Orange"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is French toast made from?",
+      "correct_answer": "Bread dipped in egg and milk",
+      "incorrect_answers": [
+        "Croissant dough",
+        "Pancake batter",
+        "Waffle mix"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What fruit is dried to make raisins?",
+      "correct_answer": "Grapes",
+      "incorrect_answers": [
+        "Plums",
+        "Figs",
+        "Dates"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main spirit in a Margarita?",
+      "correct_answer": "Tequila",
+      "incorrect_answers": [
+        "Rum",
+        "Vodka",
+        "Gin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of milk is used in a traditional London Fog latte?",
+      "correct_answer": "Steamed milk (any kind)",
+      "incorrect_answers": [
+        "Only oat milk",
+        "Only coconut milk",
+        "Only almond milk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a Mojito besides rum?",
+      "correct_answer": "Mint",
+      "incorrect_answers": [
+        "Basil",
+        "Cilantro",
+        "Rosemary"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is sake originally from?",
+      "correct_answer": "Japan",
+      "incorrect_answers": [
+        "China",
+        "Korea",
+        "Thailand"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a Pi\u00f1a Colada?",
+      "correct_answer": "Coconut cream and pineapple",
+      "incorrect_answers": [
+        "Mango and lime",
+        "Banana and chocolate",
+        "Passion fruit and guava"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is espresso?",
+      "correct_answer": "A concentrated coffee brewed by forcing hot water through finely ground beans",
+      "incorrect_answers": [
+        "A type of tea",
+        "A cold brew method",
+        "Coffee with added chocolate"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What gives root beer its distinctive flavor?",
+      "correct_answer": "Sassafras",
+      "incorrect_answers": [
+        "Ginger",
+        "Vanilla",
+        "Cinnamon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main alcoholic ingredient in a Cosmopolitan?",
+      "correct_answer": "Vodka",
+      "incorrect_answers": [
+        "Gin",
+        "Tequila",
+        "Rum"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the world's most consumed beverage after water?",
+      "correct_answer": "Tea",
+      "incorrect_answers": [
+        "Coffee",
+        "Beer",
+        "Milk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of wine is Champagne?",
+      "correct_answer": "Sparkling white wine",
+      "incorrect_answers": [
+        "Red wine",
+        "Ros\u00e9 wine",
+        "Dessert wine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is paella originally from?",
+      "correct_answer": "Spain",
+      "incorrect_answers": [
+        "Italy",
+        "Mexico",
+        "Portugal"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country does sushi originate from?",
+      "correct_answer": "Japan",
+      "incorrect_answers": [
+        "China",
+        "Thailand",
+        "Korea"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is tacos from?",
+      "correct_answer": "Mexico",
+      "incorrect_answers": [
+        "Spain",
+        "Argentina",
+        "Brazil"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is kimchi from?",
+      "correct_answer": "South Korea",
+      "incorrect_answers": [
+        "Japan",
+        "China",
+        "Vietnam"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which country is famous for croissants?",
+      "correct_answer": "France",
+      "incorrect_answers": [
+        "Italy",
+        "Austria",
+        "Belgium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is curry most associated with?",
+      "correct_answer": "India",
+      "incorrect_answers": [
+        "Thailand",
+        "Japan",
+        "China"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country does moussaka traditionally come from?",
+      "correct_answer": "Greece",
+      "incorrect_answers": [
+        "Turkey",
+        "Italy",
+        "Lebanon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which country is known for inventing pizza?",
+      "correct_answer": "Italy",
+      "incorrect_answers": [
+        "Greece",
+        "United States",
+        "France"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is pho from?",
+      "correct_answer": "Vietnam",
+      "incorrect_answers": [
+        "Thailand",
+        "China",
+        "Japan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which country is fish and chips associated with?",
+      "correct_answer": "England",
+      "incorrect_answers": [
+        "Scotland",
+        "Australia",
+        "Ireland"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What spice gives curry its yellow color?",
+      "correct_answer": "Turmeric",
+      "incorrect_answers": [
+        "Saffron",
+        "Paprika",
+        "Cumin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the world's most expensive spice by weight?",
+      "correct_answer": "Saffron",
+      "incorrect_answers": [
+        "Vanilla",
+        "Cardamom",
+        "Cinnamon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of animal does venison come from?",
+      "correct_answer": "Deer",
+      "incorrect_answers": [
+        "Cow",
+        "Bison",
+        "Elk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the hottest part of a chili pepper?",
+      "correct_answer": "The seeds and inner membrane",
+      "incorrect_answers": [
+        "The skin",
+        "The tip",
+        "The stem"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What vitamin is abundant in oranges?",
+      "correct_answer": "Vitamin C",
+      "incorrect_answers": [
+        "Vitamin A",
+        "Vitamin D",
+        "Vitamin B12"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most consumed fruit in the world?",
+      "correct_answer": "Banana",
+      "incorrect_answers": [
+        "Apple",
+        "Orange",
+        "Mango"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'al dente' mean when cooking pasta?",
+      "correct_answer": "Firm to the bite",
+      "incorrect_answers": [
+        "Soft and mushy",
+        "Overcooked",
+        "Cold"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in chocolate?",
+      "correct_answer": "Cacao beans",
+      "incorrect_answers": [
+        "Coffee beans",
+        "Vanilla beans",
+        "Carob pods"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What gives bread its rise?",
+      "correct_answer": "Yeast",
+      "incorrect_answers": [
+        "Baking soda",
+        "Salt",
+        "Sugar"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is wasabi?",
+      "correct_answer": "A spicy Japanese condiment made from a plant root",
+      "incorrect_answers": [
+        "A type of seaweed",
+        "Fermented soybean paste",
+        "Green chili sauce"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What fast food chain is known for the Big Mac?",
+      "correct_answer": "McDonald's",
+      "incorrect_answers": [
+        "Burger King",
+        "Wendy's",
+        "Five Guys"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary grain in most beers?",
+      "correct_answer": "Barley",
+      "incorrect_answers": [
+        "Wheat",
+        "Rice",
+        "Corn"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What fruit is the main flavor in a traditional Key Lime Pie?",
+      "correct_answer": "Key lime",
+      "incorrect_answers": [
+        "Lemon",
+        "Regular lime",
+        "Grapefruit"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is butter made from?",
+      "correct_answer": "Cream",
+      "incorrect_answers": [
+        "Whole milk",
+        "Yogurt",
+        "Cheese curds"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What vegetable do you traditionally carve on Halloween?",
+      "correct_answer": "Pumpkin",
+      "incorrect_answers": [
+        "Squash",
+        "Watermelon",
+        "Turnip"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most widely eaten food in the world?",
+      "correct_answer": "Rice",
+      "incorrect_answers": [
+        "Wheat",
+        "Corn",
+        "Potatoes"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What bean is used to make coffee?",
+      "correct_answer": "Coffee bean (seed of the coffee cherry)",
+      "incorrect_answers": [
+        "Cacao bean",
+        "Vanilla bean",
+        "Soybean"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What sauce is traditionally served with Thanksgiving turkey?",
+      "correct_answer": "Cranberry sauce",
+      "incorrect_answers": [
+        "Apple sauce",
+        "Gravy only",
+        "BBQ sauce"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most popular cookie in America?",
+      "correct_answer": "Chocolate chip",
+      "incorrect_answers": [
+        "Oreo",
+        "Sugar cookie",
+        "Oatmeal raisin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What fruit is traditionally used to make wine?",
+      "correct_answer": "Grapes",
+      "incorrect_answers": [
+        "Apples",
+        "Berries",
+        "Plums"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is ketchup made from?",
+      "correct_answer": "Tomatoes",
+      "incorrect_answers": [
+        "Red peppers",
+        "Beets",
+        "Carrots"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a Caesar salad dressing?",
+      "correct_answer": "Anchovies",
+      "incorrect_answers": [
+        "Mayonnaise",
+        "Ranch",
+        "Olive oil only"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is gelato?",
+      "correct_answer": "Italian-style ice cream",
+      "incorrect_answers": [
+        "Frozen yogurt",
+        "Sorbet",
+        "Custard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a baguette?",
+      "correct_answer": "A long, thin French bread",
+      "incorrect_answers": [
+        "A type of pasta",
+        "A French pastry",
+        "A type of cheese"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is maple syrup made from?",
+      "correct_answer": "Maple tree sap",
+      "incorrect_answers": [
+        "Corn syrup",
+        "Honey",
+        "Sugar cane"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What meat is traditionally used in a BLT sandwich?",
+      "correct_answer": "Bacon",
+      "incorrect_answers": [
+        "Ham",
+        "Turkey",
+        "Salami"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main flavor in a snickerdoodle cookie?",
+      "correct_answer": "Cinnamon sugar",
+      "incorrect_answers": [
+        "Chocolate",
+        "Vanilla",
+        "Peanut butter"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country produces the most coffee in the world?",
+      "correct_answer": "Brazil",
+      "incorrect_answers": [
+        "Colombia",
+        "Ethiopia",
+        "Vietnam"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a pretzel traditionally shaped like?",
+      "correct_answer": "A knot or twisted loop",
+      "incorrect_answers": [
+        "A circle",
+        "A stick",
+        "A star"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does IPA stand for in beer?",
+      "correct_answer": "India Pale Ale",
+      "incorrect_answers": [
+        "International Pale Ale",
+        "Irish Pale Ale",
+        "Imperial Pale Ale"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What herb is commonly found on top of a Caprese salad?",
+      "correct_answer": "Basil",
+      "incorrect_answers": [
+        "Parsley",
+        "Oregano",
+        "Thyme"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is edamame?",
+      "correct_answer": "Young soybeans",
+      "incorrect_answers": [
+        "Rice cakes",
+        "Seaweed snacks",
+        "Tofu cubes"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the filling in a traditional cannoli?",
+      "correct_answer": "Ricotta cheese",
+      "incorrect_answers": [
+        "Cream cheese",
+        "Mascarpone",
+        "Custard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is tempura?",
+      "correct_answer": "Battered and deep-fried food",
+      "incorrect_answers": [
+        "Raw fish",
+        "Grilled meat",
+        "Steamed dumplings"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of food is a brioche?",
+      "correct_answer": "Bread",
+      "incorrect_answers": [
+        "Cake",
+        "Cookie",
+        "Pie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the liquid remaining after butter is churned?",
+      "correct_answer": "Buttermilk",
+      "incorrect_answers": [
+        "Whey",
+        "Cream",
+        "Skim milk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a souffl\u00e9?",
+      "correct_answer": "A baked egg-based dish that puffs up",
+      "incorrect_answers": [
+        "A type of soup",
+        "A cold dessert",
+        "A fried pastry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is naan?",
+      "correct_answer": "Indian flatbread",
+      "incorrect_answers": [
+        "Indian rice dish",
+        "Indian yogurt drink",
+        "Indian dessert"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does '\u00e0 la mode' mean on a dessert menu?",
+      "correct_answer": "Served with ice cream",
+      "incorrect_answers": [
+        "Served warm",
+        "Served with chocolate",
+        "Served flamb\u00e9ed"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is tzatziki?",
+      "correct_answer": "Greek yogurt and cucumber dip",
+      "incorrect_answers": [
+        "Hummus variety",
+        "Spicy red sauce",
+        "Olive tapenade"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a smoothie?",
+      "correct_answer": "Blended fruit",
+      "incorrect_answers": [
+        "Ice cream",
+        "Milk only",
+        "Protein powder"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'organic' mean on a food label?",
+      "correct_answer": "Grown without synthetic pesticides or fertilizers",
+      "incorrect_answers": [
+        "Low calorie",
+        "No sugar added",
+        "Gluten free"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between jam and jelly?",
+      "correct_answer": "Jam has fruit pieces, jelly is made from fruit juice only",
+      "incorrect_answers": [
+        "They are the same thing",
+        "Jelly has more sugar",
+        "Jam is cooked longer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of pastry is a cronut?",
+      "correct_answer": "A croissant-donut hybrid",
+      "incorrect_answers": [
+        "A cream puff",
+        "A cinnamon roll",
+        "A danish"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the world's most popular spice?",
+      "correct_answer": "Black pepper",
+      "incorrect_answers": [
+        "Salt",
+        "Cinnamon",
+        "Cumin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What food is known as 'brain freeze' associated with?",
+      "correct_answer": "Ice cream or cold drinks",
+      "incorrect_answers": [
+        "Spicy food",
+        "Sour candy",
+        "Caffeine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a crepe?",
+      "correct_answer": "A thin French pancake",
+      "incorrect_answers": [
+        "A thick waffle",
+        "A type of bread",
+        "A pastry shell"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is sriracha?",
+      "correct_answer": "A hot chili sauce",
+      "incorrect_answers": [
+        "A soy sauce",
+        "A teriyaki glaze",
+        "A sesame oil"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary ingredient in pesto?",
+      "correct_answer": "Basil",
+      "incorrect_answers": [
+        "Parsley",
+        "Spinach",
+        "Arugula"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is baklava from?",
+      "correct_answer": "Turkey (also claimed by Greece and others)",
+      "incorrect_answers": [
+        "India",
+        "Morocco",
+        "Egypt"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Scoville scale used to measure?",
+      "correct_answer": "The heat of chili peppers",
+      "incorrect_answers": [
+        "Sweetness of fruit",
+        "Acidity of wine",
+        "Saltiness of food"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What French term means 'everything in its place' in cooking?",
+      "correct_answer": "Mise en place",
+      "incorrect_answers": [
+        "Sous vide",
+        "En cro\u00fbte",
+        "Au gratin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a sweet potato and a yam?",
+      "correct_answer": "True yams are starchier and drier; most 'yams' in US stores are actually sweet potatoes",
+      "incorrect_answers": [
+        "They are exactly the same",
+        "Yams are sweeter",
+        "Sweet potatoes are white"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main ingredient in authentic Italian carbonara?",
+      "correct_answer": "Guanciale (cured pork cheek)",
+      "incorrect_answers": [
+        "Bacon",
+        "Cream",
+        "Chicken"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does 'umami' mean?",
+      "correct_answer": "The fifth basic taste \u2014 savory/meaty",
+      "incorrect_answers": [
+        "Sweet and sour combined",
+        "Extremely spicy",
+        "Bitter aftertaste"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the most expensive coffee in the world?",
+      "correct_answer": "Kopi Luwak (civet coffee)",
+      "incorrect_answers": [
+        "Jamaican Blue Mountain",
+        "Hawaiian Kona",
+        "Ethiopian Yirgacheffe"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a sommelier?",
+      "correct_answer": "A wine expert",
+      "incorrect_answers": [
+        "A pastry chef",
+        "A butcher",
+        "A food critic"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the process of removing the shell from an oyster called?",
+      "correct_answer": "Shucking",
+      "incorrect_answers": [
+        "Peeling",
+        "Cracking",
+        "Husking"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between baking soda and baking powder?",
+      "correct_answer": "Baking powder contains both a base and acid; baking soda is just a base",
+      "incorrect_answers": [
+        "They are the same thing",
+        "Baking soda is stronger",
+        "Baking powder is natural"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What cut of beef is a T-bone steak?",
+      "correct_answer": "A cut containing both strip and tenderloin separated by a T-shaped bone",
+      "incorrect_answers": [
+        "Pure tenderloin",
+        "Ribeye with bone",
+        "Sirloin with bone"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Wagyu beef?",
+      "correct_answer": "A premium Japanese beef known for intense marbling",
+      "incorrect_answers": [
+        "Any grass-fed beef",
+        "Australian beef",
+        "Organic beef"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What grape is Champagne primarily made from?",
+      "correct_answer": "Chardonnay, Pinot Noir, and Pinot Meunier",
+      "incorrect_answers": [
+        "Only Chardonnay",
+        "Sauvignon Blanc",
+        "Riesling"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main difference between bourbon and whiskey?",
+      "correct_answer": "Bourbon must be made from at least 51% corn and aged in new charred oak barrels",
+      "incorrect_answers": [
+        "Bourbon is from Scotland",
+        "Bourbon uses wheat only",
+        "There is no difference"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a reduction in cooking?",
+      "correct_answer": "A sauce thickened by simmering to evaporate liquid",
+      "incorrect_answers": [
+        "Cutting food into small pieces",
+        "Lowering the oven temperature",
+        "Removing fat from meat"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main ingredient in gnocchi?",
+      "correct_answer": "Potatoes",
+      "incorrect_answers": [
+        "Flour only",
+        "Ricotta only",
+        "Semolina"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What wine region is Bordeaux in?",
+      "correct_answer": "France",
+      "incorrect_answers": [
+        "Italy",
+        "Spain",
+        "Portugal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is ceviche?",
+      "correct_answer": "Raw fish cured in citrus juice",
+      "incorrect_answers": [
+        "Grilled fish",
+        "Fried fish",
+        "Smoked fish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the smoke point of olive oil approximately?",
+      "correct_answer": "Around 375\u00b0F (190\u00b0C)",
+      "incorrect_answers": [
+        "Around 500\u00b0F",
+        "Around 250\u00b0F",
+        "Around 600\u00b0F"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a roux?",
+      "correct_answer": "A mixture of fat and flour used to thicken sauces",
+      "incorrect_answers": [
+        "A type of broth",
+        "A French dessert",
+        "A salad dressing"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between stock and broth?",
+      "correct_answer": "Stock is made from bones; broth is made from meat",
+      "incorrect_answers": [
+        "They are identical",
+        "Broth is thicker",
+        "Stock has more salt"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What cuisine is Tom Yum soup from?",
+      "correct_answer": "Thai",
+      "incorrect_answers": [
+        "Vietnamese",
+        "Chinese",
+        "Japanese"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is prosciutto?",
+      "correct_answer": "Dry-cured Italian ham",
+      "incorrect_answers": [
+        "Italian sausage",
+        "Smoked bacon",
+        "Cooked ham"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main ingredient in risotto?",
+      "correct_answer": "Arborio rice",
+      "incorrect_answers": [
+        "Basmati rice",
+        "Jasmine rice",
+        "Wild rice"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is blanching?",
+      "correct_answer": "Briefly boiling then plunging into ice water",
+      "incorrect_answers": [
+        "Slow roasting",
+        "Deep frying",
+        "Steaming"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is ghee?",
+      "correct_answer": "Clarified butter used in Indian cooking",
+      "incorrect_answers": [
+        "Coconut oil",
+        "Sesame oil",
+        "Palm oil"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the French term for a chef's tall white hat?",
+      "correct_answer": "Toque",
+      "incorrect_answers": [
+        "Beret",
+        "Chapeau",
+        "Bonnet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What wine is traditionally served with sushi?",
+      "correct_answer": "Sake or dry Riesling",
+      "incorrect_answers": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Zinfandel"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is aioli?",
+      "correct_answer": "A garlic-flavored mayonnaise",
+      "incorrect_answers": [
+        "A type of vinegar",
+        "An olive oil dip",
+        "A mustard sauce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Japanese method of deep-frying in light batter?",
+      "correct_answer": "Tempura",
+      "incorrect_answers": [
+        "Teriyaki",
+        "Tonkatsu",
+        "Teppanyaki"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a ganache?",
+      "correct_answer": "A mixture of chocolate and cream",
+      "incorrect_answers": [
+        "A type of meringue",
+        "A caramel sauce",
+        "A fruit glaze"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What country does the cheese Gruy\u00e8re come from?",
+      "correct_answer": "Switzerland",
+      "incorrect_answers": [
+        "France",
+        "Netherlands",
+        "Italy"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is fermentation?",
+      "correct_answer": "A metabolic process where microorganisms convert sugars to acids, gases, or alcohol",
+      "incorrect_answers": [
+        "Rapid boiling",
+        "Slow freezing",
+        "Sun drying"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of flour is typically used for making pasta?",
+      "correct_answer": "Semolina (durum wheat)",
+      "incorrect_answers": [
+        "All-purpose flour",
+        "Bread flour",
+        "Cake flour"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main flavor component of vanilla extract?",
+      "correct_answer": "Vanillin",
+      "incorrect_answers": [
+        "Cinnamaldehyde",
+        "Capsaicin",
+        "Menthol"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a bain-marie?",
+      "correct_answer": "A water bath for gentle heating",
+      "incorrect_answers": [
+        "A French knife technique",
+        "A type of oven",
+        "A serving dish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the traditional base of a b\u00e9arnaise sauce?",
+      "correct_answer": "Butter and egg yolks with tarragon",
+      "incorrect_answers": [
+        "Cream and flour",
+        "Tomato and basil",
+        "Mustard and vinegar"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What gives blue cheese its blue veins?",
+      "correct_answer": "Penicillium mold",
+      "incorrect_answers": [
+        "Food coloring",
+        "Blueberries",
+        "Copper oxidation"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is sous vide cooking?",
+      "correct_answer": "Cooking food in sealed bags in a water bath at precise temperatures",
+      "incorrect_answers": [
+        "Cooking over open flame",
+        "Flash freezing",
+        "Pressure cooking"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a latte and a cappuccino?",
+      "correct_answer": "A latte has more steamed milk; a cappuccino has more foam",
+      "incorrect_answers": [
+        "A cappuccino has chocolate",
+        "A latte uses decaf",
+        "They are the same"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What are the five mother sauces in French cuisine?",
+      "correct_answer": "B\u00e9chamel, Velout\u00e9, Espagnole, Hollandaise, Tomato",
+      "incorrect_answers": [
+        "Marinara, Alfredo, Pesto, Ranch, BBQ",
+        "Ketchup, Mustard, Mayo, Soy, Hot Sauce",
+        "Gravy, Cream, Cheese, Brown, White"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is kimchi made from?",
+      "correct_answer": "Fermented vegetables, typically napa cabbage",
+      "incorrect_answers": [
+        "Fermented fish",
+        "Pickled eggs",
+        "Dried seaweed"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What country is Scotch whisky from?",
+      "correct_answer": "Scotland",
+      "incorrect_answers": [
+        "Ireland",
+        "United States",
+        "Canada"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a charcuterie board?",
+      "correct_answer": "An assortment of cured meats, cheeses, and accompaniments",
+      "incorrect_answers": [
+        "A cutting board for vegetables",
+        "A dessert platter",
+        "A sushi serving plate"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary ingredient in traditional Indian chai?",
+      "correct_answer": "Black tea with spices and milk",
+      "incorrect_answers": [
+        "Green tea",
+        "Herbal tea",
+        "White tea"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is kombucha?",
+      "correct_answer": "Fermented tea drink",
+      "incorrect_answers": [
+        "A type of sake",
+        "Sparkling water",
+        "Coconut water"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a cr\u00eape and a pancake?",
+      "correct_answer": "Cr\u00eapes are thinner and made without a leavening agent",
+      "incorrect_answers": [
+        "Cr\u00eapes are thicker",
+        "Pancakes are French",
+        "No difference"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What pasta shape means 'little ears' in Italian?",
+      "correct_answer": "Orecchiette",
+      "incorrect_answers": [
+        "Conchiglie",
+        "Rotini",
+        "Campanelle"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is tahini made from?",
+      "correct_answer": "Ground sesame seeds",
+      "incorrect_answers": [
+        "Ground peanuts",
+        "Ground chickpeas",
+        "Ground sunflower seeds"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the key ingredient that makes sourdough bread sour?",
+      "correct_answer": "Wild yeast and lactic acid bacteria (the starter)",
+      "incorrect_answers": [
+        "Vinegar",
+        "Lemon juice",
+        "Citric acid"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What country is the origin of the cocktail 'Caipirinha'?",
+      "correct_answer": "Brazil",
+      "incorrect_answers": [
+        "Cuba",
+        "Mexico",
+        "Portugal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the world's most expensive mushroom?",
+      "correct_answer": "European white truffle",
+      "incorrect_answers": [
+        "Matsutake",
+        "Morel",
+        "Chanterelle"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What chemical compound gives chili peppers their heat?",
+      "correct_answer": "Capsaicin",
+      "incorrect_answers": [
+        "Piperine",
+        "Allicin",
+        "Gingerol"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Maillard reaction?",
+      "correct_answer": "A chemical reaction between amino acids and sugars that gives browned food its flavor",
+      "incorrect_answers": [
+        "The process of caramelizing sugar",
+        "The fermentation of dough",
+        "The emulsification of oil and water"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What grape variety is Barolo wine made from?",
+      "correct_answer": "Nebbiolo",
+      "incorrect_answers": [
+        "Sangiovese",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum number of Michelin stars a restaurant can receive?",
+      "correct_answer": "Three",
+      "incorrect_answers": [
+        "Five",
+        "Four",
+        "Six"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What Japanese knife technique produces paper-thin slices?",
+      "correct_answer": "Katsuramuki",
+      "incorrect_answers": [
+        "Nakirigiri",
+        "Usuzukuri",
+        "Sogigiri"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Carolina Reaper?",
+      "correct_answer": "One of the world's hottest chili peppers",
+      "incorrect_answers": [
+        "A type of BBQ sauce",
+        "A cocktail",
+        "A variety of tomato"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is molecular gastronomy?",
+      "correct_answer": "A scientific approach to cooking using chemistry and physics techniques",
+      "incorrect_answers": [
+        "Traditional French cooking",
+        "Farm-to-table cooking",
+        "Raw food preparation"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Italian coffee drink made with espresso and grappa?",
+      "correct_answer": "Caff\u00e8 Corretto",
+      "incorrect_answers": [
+        "Caff\u00e8 Latte",
+        "Caff\u00e8 Americano",
+        "Caff\u00e8 Macchiato"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the proper temperature to serve red Burgundy wine?",
+      "correct_answer": "Around 60-65\u00b0F (15-18\u00b0C)",
+      "incorrect_answers": [
+        "Room temperature (72\u00b0F)",
+        "Chilled (45\u00b0F)",
+        "Warm (80\u00b0F)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is 'dashi' in Japanese cooking?",
+      "correct_answer": "A stock made from kelp and bonito flakes",
+      "incorrect_answers": [
+        "Soy sauce",
+        "Rice vinegar",
+        "Miso paste"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the origin of the word 'restaurant'?",
+      "correct_answer": "French word meaning 'to restore' \u2014 originally a restorative broth",
+      "incorrect_answers": [
+        "Latin for 'to feed'",
+        "Italian for 'to sit'",
+        "Spanish for 'to serve'"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What wine region is considered the birthplace of Pinot Noir?",
+      "correct_answer": "Burgundy, France",
+      "incorrect_answers": [
+        "Tuscany, Italy",
+        "Napa Valley, USA",
+        "Rioja, Spain"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the traditional method for making authentic balsamic vinegar?",
+      "correct_answer": "Aged in wooden barrels for at least 12 years",
+      "incorrect_answers": [
+        "Distilled from wine in 6 months",
+        "Fermented grapes for 1 year",
+        "Boiled grape juice cooled overnight"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name for the Japanese art of food presentation?",
+      "correct_answer": "Moritsuke",
+      "incorrect_answers": [
+        "Ikebana",
+        "Origami",
+        "Kintsugi"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What bacteria is essential for making yogurt?",
+      "correct_answer": "Lactobacillus and Streptococcus thermophilus",
+      "incorrect_answers": [
+        "E. coli",
+        "Salmonella",
+        "Staphylococcus"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the oldest known alcoholic beverage?",
+      "correct_answer": "Mead (fermented honey)",
+      "incorrect_answers": [
+        "Beer",
+        "Wine",
+        "Sake"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the highest grade of olive oil?",
+      "correct_answer": "Extra virgin",
+      "incorrect_answers": [
+        "Virgin",
+        "Pure",
+        "Light"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the term for cooking an egg in its shell at a precise low temperature?",
+      "correct_answer": "Onsen tamago",
+      "incorrect_answers": [
+        "Poaching",
+        "Coddling",
+        "Shirring"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are the four main types of Italian cured meats?",
+      "correct_answer": "Prosciutto, Salami, Bresaola, Pancetta",
+      "incorrect_answers": [
+        "Pepperoni, Hot Dog, Bacon, Ham",
+        "Chorizo, Jam\u00f3n, Lomo, Morcilla",
+        "Bratwurst, Kielbasa, Andouille, Boudin"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the most consumed cheese in the world?",
+      "correct_answer": "Mozzarella",
+      "incorrect_answers": [
+        "Cheddar",
+        "Parmesan",
+        "Gouda"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the term for a wine that has gone bad due to a faulty cork?",
+      "correct_answer": "Corked",
+      "incorrect_answers": [
+        "Oxidized",
+        "Vinegared",
+        "Soured"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What country consumes the most cheese per capita?",
+      "correct_answer": "France",
+      "incorrect_answers": [
+        "Italy",
+        "United States",
+        "Switzerland"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is XO sauce made from?",
+      "correct_answer": "Dried seafood, ham, and chili",
+      "incorrect_answers": [
+        "Oyster extract",
+        "Soy and ginger",
+        "Black bean paste"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the 'terroir' of wine?",
+      "correct_answer": "The environmental factors (soil, climate, terrain) that affect grape character",
+      "incorrect_answers": [
+        "The age of the wine",
+        "The grape variety",
+        "The winemaker's technique"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a 'mother' in vinegar making?",
+      "correct_answer": "A culture of acetic acid bacteria that converts alcohol to vinegar",
+      "incorrect_answers": [
+        "The first batch of vinegar",
+        "The original grape vine",
+        "The storage vessel"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which spirit is made from the blue agave plant?",
+      "correct_answer": "Tequila",
+      "incorrect_answers": [
+        "Mezcal (any agave)",
+        "Rum",
+        "Vodka"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the process of 'tempering' chocolate?",
+      "correct_answer": "Heating and cooling chocolate to specific temperatures for a glossy finish and snap",
+      "incorrect_answers": [
+        "Adding milk to dark chocolate",
+        "Melting chocolate slowly",
+        "Mixing cocoa with sugar"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the most expensive cut of beef?",
+      "correct_answer": "Japanese A5 Wagyu tenderloin",
+      "incorrect_answers": [
+        "American Kobe ribeye",
+        "Filet mignon",
+        "Porterhouse"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a 'flight' in the context of beverages?",
+      "correct_answer": "A tasting selection of several small pours",
+      "incorrect_answers": [
+        "A cocktail served in a tall glass",
+        "A drink served on an airplane",
+        "A type of beer glass"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name for a Japanese chef's knife?",
+      "correct_answer": "Gyuto",
+      "incorrect_answers": [
+        "Santoku",
+        "Nakiri",
+        "Deba"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What percentage of alcohol does a wine need to be classified as 'fortified'?",
+      "correct_answer": "Typically 15-22%",
+      "incorrect_answers": [
+        "5-8%",
+        "8-12%",
+        "30-40%"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the most traded spice in the world by volume?",
+      "correct_answer": "Black pepper",
+      "incorrect_answers": [
+        "Cinnamon",
+        "Cumin",
+        "Turmeric"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the traditional fermentation time for authentic Korean kimchi?",
+      "correct_answer": "Several weeks to months",
+      "incorrect_answers": [
+        "A few hours",
+        "Overnight",
+        "30 minutes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is 'lees' in winemaking?",
+      "correct_answer": "Dead yeast cells and sediment that settle after fermentation",
+      "incorrect_answers": [
+        "The grape skins",
+        "The cork residue",
+        "Added sulfites"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the main ingredient in a margarita besides tequila?",
+      "correct_answer": "Lime juice",
+      "incorrect_answers": [
+        "Orange juice",
+        "Lemon juice",
+        "Grapefruit juice"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What pastry is an \u00e9clair?",
+      "correct_answer": "A choux pastry filled with cream and topped with chocolate",
+      "incorrect_answers": [
+        "A flaky pie",
+        "A fried doughnut",
+        "A layered cake"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a traditional Greek salad?",
+      "correct_answer": "Tomato, cucumber, olives, and feta",
+      "incorrect_answers": [
+        "Lettuce and croutons",
+        "Spinach and bacon",
+        "Kale and avocado"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most popular ice cream flavor?",
+      "correct_answer": "Vanilla",
+      "incorrect_answers": [
+        "Chocolate",
+        "Strawberry",
+        "Cookie dough"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is focaccia?",
+      "correct_answer": "An Italian flatbread topped with olive oil and herbs",
+      "incorrect_answers": [
+        "A type of pizza",
+        "A pasta dish",
+        "An Italian soup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in guacamole besides avocado?",
+      "correct_answer": "Lime juice",
+      "incorrect_answers": [
+        "Sour cream",
+        "Mayo",
+        "Yogurt"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a quesadilla?",
+      "correct_answer": "A tortilla filled with cheese and grilled",
+      "incorrect_answers": [
+        "A fried taco",
+        "A type of burrito",
+        "A Mexican soup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most popular soft drink in the world?",
+      "correct_answer": "Coca-Cola",
+      "incorrect_answers": [
+        "Pepsi",
+        "Sprite",
+        "Fanta"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is popcorn?",
+      "correct_answer": "A type of corn kernel that expands when heated",
+      "incorrect_answers": [
+        "Fried rice puffs",
+        "Baked wheat balls",
+        "Dried corn chips"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is dim sum?",
+      "correct_answer": "Small Chinese dishes served with tea",
+      "incorrect_answers": [
+        "A type of sushi",
+        "Thai street food",
+        "Korean BBQ"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is fondue?",
+      "correct_answer": "Melted cheese or chocolate for dipping",
+      "incorrect_answers": [
+        "A French soup",
+        "A type of bread",
+        "A grilled sandwich"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What nut is a cashew related to?",
+      "correct_answer": "It grows on a cashew apple \u2014 related to mangoes and pistachios",
+      "incorrect_answers": [
+        "Peanut",
+        "Walnut",
+        "Hazelnut"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in trail mix?",
+      "correct_answer": "Nuts, seeds, and dried fruit",
+      "incorrect_answers": [
+        "Granola only",
+        "Chocolate chips only",
+        "Crackers and cheese"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a churro?",
+      "correct_answer": "A fried dough pastry coated in cinnamon sugar",
+      "incorrect_answers": [
+        "A type of taco",
+        "A chocolate drink",
+        "A Mexican candy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a macaron?",
+      "correct_answer": "A French meringue-based sandwich cookie",
+      "incorrect_answers": [
+        "A coconut cookie (that's a macaroon)",
+        "A chocolate truffle",
+        "A cream puff"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary ingredient in porridge?",
+      "correct_answer": "Oats",
+      "incorrect_answers": [
+        "Rice",
+        "Wheat",
+        "Corn"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a spring roll?",
+      "correct_answer": "A rolled appetizer filled with vegetables, sometimes fried",
+      "incorrect_answers": [
+        "A type of sushi",
+        "A bread roll",
+        "A dessert pastry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is raita?",
+      "correct_answer": "An Indian yogurt condiment with cucumber and spices",
+      "incorrect_answers": [
+        "A type of bread",
+        "A rice dish",
+        "A curry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the national dish of Japan?",
+      "correct_answer": "Curry rice (most commonly eaten) or sushi",
+      "incorrect_answers": [
+        "Ramen",
+        "Tempura",
+        "Sashimi"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of food is a dumpling?",
+      "correct_answer": "Dough wrapped around a filling",
+      "incorrect_answers": [
+        "A type of bread",
+        "A fried rice ball",
+        "A noodle soup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is matcha?",
+      "correct_answer": "Finely ground green tea powder",
+      "incorrect_answers": [
+        "A type of coffee",
+        "Dried herbs",
+        "A chocolate substitute"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are capers?",
+      "correct_answer": "Pickled flower buds",
+      "incorrect_answers": [
+        "Small olives",
+        "Pickled peppercorns",
+        "Dried herbs"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is bruschetta?",
+      "correct_answer": "Grilled bread topped with tomatoes, garlic, and basil",
+      "incorrect_answers": [
+        "A type of pasta",
+        "An Italian sausage",
+        "A cheese appetizer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the national drink of India?",
+      "correct_answer": "Chai (tea)",
+      "incorrect_answers": [
+        "Lassi",
+        "Coconut water",
+        "Coffee"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What makes bread 'whole wheat'?",
+      "correct_answer": "It uses the entire wheat kernel (bran, germ, and endosperm)",
+      "incorrect_answers": [
+        "It's colored brown",
+        "It has more sugar",
+        "It uses corn flour"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is tiramisu?",
+      "correct_answer": "An Italian dessert with coffee-soaked ladyfingers and mascarpone",
+      "incorrect_answers": [
+        "Italian ice cream",
+        "Chocolate cake",
+        "Fruit tart"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between white and brown eggs?",
+      "correct_answer": "The color of the hen that laid them \u2014 nutritionally identical",
+      "incorrect_answers": [
+        "Brown are organic",
+        "White have more protein",
+        "Brown are free-range"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a Moscow Mule?",
+      "correct_answer": "Vodka and ginger beer",
+      "incorrect_answers": [
+        "Rum and cola",
+        "Whiskey and lemon",
+        "Tequila and lime"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is challah?",
+      "correct_answer": "A braided Jewish bread",
+      "incorrect_answers": [
+        "A type of bagel",
+        "A Middle Eastern dip",
+        "A fried pastry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between a lemon and a lime?",
+      "correct_answer": "Lemons are yellow and larger; limes are green and smaller",
+      "incorrect_answers": [
+        "They're the same fruit at different stages",
+        "Limes are sweeter",
+        "Lemons are unripe limes"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country does the cheese Brie come from?",
+      "correct_answer": "France",
+      "incorrect_answers": [
+        "Switzerland",
+        "Netherlands",
+        "Italy"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the 'bloom' on chocolate?",
+      "correct_answer": "White coating from sugar or fat crystals rising to the surface",
+      "incorrect_answers": [
+        "Mold growth",
+        "Expiration sign",
+        "Natural cocoa butter"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a clafoutis?",
+      "correct_answer": "A French baked fruit dessert similar to a flan",
+      "incorrect_answers": [
+        "A cream soup",
+        "A type of cr\u00eape",
+        "A cheese tart"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between Mezcal and Tequila?",
+      "correct_answer": "Tequila is only from blue agave; Mezcal can use any agave species",
+      "incorrect_answers": [
+        "Mezcal is stronger",
+        "Tequila is smoky",
+        "They're the same"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is flamb\u00e9?",
+      "correct_answer": "A technique of briefly setting alcohol on fire in a dish",
+      "incorrect_answers": [
+        "Slow roasting",
+        "Cold smoking",
+        "Deep frying"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of rice is used in paella?",
+      "correct_answer": "Bomba or Calasparra rice",
+      "incorrect_answers": [
+        "Basmati",
+        "Jasmine",
+        "Arborio"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Japanese fermented soybean paste?",
+      "correct_answer": "Miso",
+      "incorrect_answers": [
+        "Tofu",
+        "Natto",
+        "Tempeh"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What cheese has holes and is from Switzerland?",
+      "correct_answer": "Emmental",
+      "incorrect_answers": [
+        "Gruy\u00e8re",
+        "Appenzeller",
+        "Raclette"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a pestle used with?",
+      "correct_answer": "A mortar (for grinding spices)",
+      "incorrect_answers": [
+        "A cutting board",
+        "A strainer",
+        "A rolling pin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main spirit in a Negroni?",
+      "correct_answer": "Gin",
+      "incorrect_answers": [
+        "Vodka",
+        "Rum",
+        "Whiskey"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is 'proof' in relation to alcohol?",
+      "correct_answer": "A measure of alcohol content \u2014 roughly double the ABV percentage",
+      "incorrect_answers": [
+        "The age of the spirit",
+        "The quality rating",
+        "The batch number"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is congee?",
+      "correct_answer": "A rice porridge popular in Asian cuisine",
+      "incorrect_answers": [
+        "A type of sushi",
+        "Fried rice",
+        "A noodle dish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the French term for a custard dessert with a caramelized sugar top?",
+      "correct_answer": "Cr\u00e8me br\u00fbl\u00e9e",
+      "incorrect_answers": [
+        "Cr\u00e8me fra\u00eeche",
+        "Cr\u00e8me anglaise",
+        "Cr\u00e8me caramel"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is garam masala?",
+      "correct_answer": "A blend of ground spices used in Indian cooking",
+      "incorrect_answers": [
+        "A single spice",
+        "A type of curry paste",
+        "A fermented condiment"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What country does feta cheese come from?",
+      "correct_answer": "Greece",
+      "incorrect_answers": [
+        "Turkey",
+        "Italy",
+        "France"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the key ingredient in a Manhattan cocktail?",
+      "correct_answer": "Rye whiskey (or bourbon)",
+      "incorrect_answers": [
+        "Vodka",
+        "Gin",
+        "Scotch"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is mirin?",
+      "correct_answer": "A sweet Japanese rice wine used in cooking",
+      "incorrect_answers": [
+        "Soy sauce variety",
+        "Rice vinegar",
+        "Sesame oil"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the proper way to store fresh basil?",
+      "correct_answer": "In a glass of water at room temperature",
+      "incorrect_answers": [
+        "In the refrigerator",
+        "In a sealed plastic bag",
+        "In the freezer"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main difference between puff pastry and phyllo dough?",
+      "correct_answer": "Puff pastry has butter folded in; phyllo is paper-thin and brushed with butter",
+      "incorrect_answers": [
+        "They are the same",
+        "Phyllo has more butter",
+        "Puff pastry is healthier"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the culinary term for cutting vegetables into thin strips?",
+      "correct_answer": "Julienne",
+      "incorrect_answers": [
+        "Brunoise",
+        "Chiffonade",
+        "Mirepoix"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the most consumed meat in the world?",
+      "correct_answer": "Pork",
+      "incorrect_answers": [
+        "Chicken",
+        "Beef",
+        "Fish"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the 'angel's share' in whiskey making?",
+      "correct_answer": "The portion of whiskey that evaporates from the barrel during aging",
+      "incorrect_answers": [
+        "The first pour from a new bottle",
+        "The highest quality batch",
+        "The distiller's sample"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What temperature does sugar caramelize at?",
+      "correct_answer": "Around 340\u00b0F (170\u00b0C)",
+      "incorrect_answers": [
+        "212\u00b0F (100\u00b0C)",
+        "450\u00b0F (232\u00b0C)",
+        "275\u00b0F (135\u00b0C)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the knife cut that produces 1/8 inch cubes?",
+      "correct_answer": "Brunoise",
+      "incorrect_answers": [
+        "Julienne",
+        "Chiffonade",
+        "Paysanne"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What country produces the most wine?",
+      "correct_answer": "Italy",
+      "incorrect_answers": [
+        "France",
+        "Spain",
+        "United States"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the traditional method of making authentic Neapolitan pizza dough?",
+      "correct_answer": "Only flour, water, salt, and yeast \u2014 fermented for at least 24 hours",
+      "incorrect_answers": [
+        "With eggs and olive oil",
+        "Quick-rise in 2 hours",
+        "With milk and butter"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between a mandoline and a mandolin?",
+      "correct_answer": "A mandoline is a kitchen slicing tool; a mandolin is a musical instrument",
+      "incorrect_answers": [
+        "They're the same thing",
+        "A mandoline is Italian",
+        "A mandolin is used for cheese"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the oldest known cheese?",
+      "correct_answer": "Traces found in Egyptian tombs dating to around 3,200 years ago",
+      "incorrect_answers": [
+        "Cheddar from 500 AD",
+        "Parmesan from 1000 AD",
+        "Gouda from 800 AD"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the proper serving temperature for white Burgundy?",
+      "correct_answer": "Around 50-55\u00b0F (10-13\u00b0C)",
+      "incorrect_answers": [
+        "Ice cold (35\u00b0F)",
+        "Room temperature (70\u00b0F)",
+        "Warm (65\u00b0F)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a 'brigade de cuisine'?",
+      "correct_answer": "The hierarchical kitchen staff system created by Auguste Escoffier",
+      "incorrect_answers": [
+        "A cooking competition",
+        "A type of French restaurant",
+        "A culinary school"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What yeast strain is primarily used in Belgian lambic beers?",
+      "correct_answer": "Wild Brettanomyces",
+      "incorrect_answers": [
+        "Saccharomyces cerevisiae",
+        "Lactobacillus",
+        "Aspergillus"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the highest quality designation for Italian olive oil?",
+      "correct_answer": "DOP (Denominazione di Origine Protetta)",
+      "incorrect_answers": [
+        "Extra virgin only",
+        "Cold pressed",
+        "First harvest"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the 'doom bar' in chocolate tempering?",
+      "correct_answer": "There is no such term \u2014 this is a trick question (Doom Bar is a beer)",
+      "incorrect_answers": [
+        "The temperature where chocolate seizes",
+        "The point of no return in melting",
+        "The ideal cooling temperature"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is 'natural wine'?",
+      "correct_answer": "Wine made with minimal intervention \u2014 no added yeasts, sulfites, or fining agents",
+      "incorrect_answers": [
+        "Organic wine",
+        "Wine without alcohol",
+        "Wine from wild grapes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the traditional Japanese breakfast called?",
+      "correct_answer": "Ichiju-sansai (one soup, three sides)",
+      "incorrect_answers": [
+        "Bento",
+        "Kaiseki",
+        "Omakase"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the reaction that turns onions brown when caramelized?",
+      "correct_answer": "Both Maillard reaction and caramelization occur simultaneously",
+      "incorrect_answers": [
+        "Only the Maillard reaction",
+        "Only caramelization",
+        "Oxidation"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the world's oldest continuously operating restaurant?",
+      "correct_answer": "Sobrino de Bot\u00edn in Madrid, Spain (est. 1725)",
+      "incorrect_answers": [
+        "Le Procope in Paris (1686)",
+        "Rules in London (1798)",
+        "Delm\u00f3nico's in New York (1837)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does ABV stand for on an alcoholic beverage?",
+      "correct_answer": "Alcohol By Volume",
+      "incorrect_answers": [
+        "Alcohol Brew Value",
+        "Annual Barrel Volume",
+        "Absolute Beverage Volume"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What temperature should a freezer be set to for food safety?",
+      "correct_answer": "0\u00b0F (-18\u00b0C) or below",
+      "incorrect_answers": [
+        "32\u00b0F (0\u00b0C)",
+        "20\u00b0F (-7\u00b0C)",
+        "10\u00b0F (-12\u00b0C)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the world's largest food company by revenue?",
+      "correct_answer": "Nestl\u00e9",
+      "incorrect_answers": [
+        "PepsiCo",
+        "Unilever",
+        "Kraft Heinz"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a gyro?",
+      "correct_answer": "Greek meat cooked on a vertical rotisserie, served in pita",
+      "incorrect_answers": [
+        "A type of sushi",
+        "An Italian sandwich",
+        "A French cr\u00eape"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a smoothie bowl?",
+      "correct_answer": "Frozen blended fruit",
+      "incorrect_answers": [
+        "Yogurt only",
+        "Ice cream",
+        "Cereal"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between brown and white sugar?",
+      "correct_answer": "Brown sugar contains molasses",
+      "incorrect_answers": [
+        "Brown is unprocessed",
+        "White has more calories",
+        "Brown is artificial"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a wrap?",
+      "correct_answer": "A tortilla rolled around fillings",
+      "incorrect_answers": [
+        "A type of sandwich bread",
+        "A fried pastry",
+        "A lettuce cup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is boba tea?",
+      "correct_answer": "Tea with chewy tapioca pearls",
+      "incorrect_answers": [
+        "Tea with jelly cubes",
+        "Tea with ice cream",
+        "Tea with whipped cream"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a daiquiri?",
+      "correct_answer": "Rum",
+      "incorrect_answers": [
+        "Vodka",
+        "Tequila",
+        "Gin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What herb is commonly used in Italian cooking?",
+      "correct_answer": "Basil",
+      "incorrect_answers": [
+        "Dill",
+        "Tarragon",
+        "Lemongrass"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a scone?",
+      "correct_answer": "A baked quick bread, often served with tea",
+      "incorrect_answers": [
+        "A type of muffin",
+        "A fried doughnut",
+        "A yeast roll"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in pad thai?",
+      "correct_answer": "Rice noodles",
+      "incorrect_answers": [
+        "Egg noodles",
+        "Ramen noodles",
+        "Glass noodles"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is panna cotta?",
+      "correct_answer": "An Italian cream dessert set with gelatin",
+      "incorrect_answers": [
+        "A type of pasta",
+        "An Italian cookie",
+        "A coffee drink"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is ramen originally from?",
+      "correct_answer": "Japan (adapted from Chinese noodle soup)",
+      "incorrect_answers": [
+        "China",
+        "Korea",
+        "Thailand"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most popular herb in the world?",
+      "correct_answer": "Basil",
+      "incorrect_answers": [
+        "Parsley",
+        "Cilantro",
+        "Mint"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a panini?",
+      "correct_answer": "An Italian pressed and grilled sandwich",
+      "incorrect_answers": [
+        "A type of pasta",
+        "A dessert",
+        "A salad"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most eaten meat in the United States?",
+      "correct_answer": "Chicken",
+      "incorrect_answers": [
+        "Beef",
+        "Pork",
+        "Turkey"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a kebab?",
+      "correct_answer": "Pieces of meat and vegetables cooked on a skewer",
+      "incorrect_answers": [
+        "A type of curry",
+        "A flatbread wrap",
+        "A rice dish"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is granola?",
+      "correct_answer": "Baked oats mixed with honey, nuts, and dried fruit",
+      "incorrect_answers": [
+        "A type of cereal grain",
+        "Ground wheat",
+        "A protein bar ingredient"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is an empanada?",
+      "correct_answer": "A filled pastry turnover",
+      "incorrect_answers": [
+        "A type of taco",
+        "A Mexican soup",
+        "A fried rice ball"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in a gin and tonic?",
+      "correct_answer": "Gin and tonic water",
+      "incorrect_answers": [
+        "Vodka and soda",
+        "Rum and cola",
+        "Whiskey and ginger ale"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a croissant filled with chocolate called?",
+      "correct_answer": "Pain au chocolat",
+      "incorrect_answers": [
+        "Chocolate croissant",
+        "Brioche au chocolat",
+        "\u00c9clair"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What gives ginger ale its flavor?",
+      "correct_answer": "Ginger",
+      "incorrect_answers": [
+        "Lemon",
+        "Vanilla",
+        "Cinnamon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the traditional Japanese soybean condiment?",
+      "correct_answer": "Soy sauce (shoyu)",
+      "incorrect_answers": [
+        "Fish sauce",
+        "Oyster sauce",
+        "Hoisin sauce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a bouquet garni?",
+      "correct_answer": "A bundle of herbs tied together for flavoring stocks and stews",
+      "incorrect_answers": [
+        "A flower arrangement",
+        "A cheese platter",
+        "A dessert garnish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between jam, jelly, and preserves?",
+      "correct_answer": "Jam has crushed fruit, jelly uses juice only, preserves have whole fruit pieces",
+      "incorrect_answers": [
+        "They're all the same",
+        "Preserves are sugar-free",
+        "Jelly has the most fruit"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the base spirit in an Old Fashioned?",
+      "correct_answer": "Bourbon or rye whiskey",
+      "incorrect_answers": [
+        "Scotch",
+        "Brandy",
+        "Rum"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes sourdough different from regular bread?",
+      "correct_answer": "It uses a wild yeast starter instead of commercial yeast",
+      "incorrect_answers": [
+        "It has vinegar added",
+        "It uses rye flour",
+        "It's baked at lower temperature"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between sashimi and sushi?",
+      "correct_answer": "Sashimi is just raw fish; sushi includes vinegared rice",
+      "incorrect_answers": [
+        "They're the same",
+        "Sashimi is cooked",
+        "Sushi has no fish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What region of Italy is pesto from?",
+      "correct_answer": "Liguria (Genoa)",
+      "incorrect_answers": [
+        "Tuscany",
+        "Sicily",
+        "Naples"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is 'deglazing' a pan?",
+      "correct_answer": "Adding liquid to a hot pan to dissolve browned bits stuck to the bottom",
+      "incorrect_answers": [
+        "Cleaning a pan with soap",
+        "Removing glaze from ceramics",
+        "Adding sugar to a sauce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of pastry is a profiterole?",
+      "correct_answer": "Choux pastry filled with cream",
+      "incorrect_answers": [
+        "Puff pastry",
+        "Shortcrust pastry",
+        "Filo pastry"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is ponzu sauce?",
+      "correct_answer": "A Japanese citrus-based soy sauce",
+      "incorrect_answers": [
+        "A spicy chili sauce",
+        "A sweet teriyaki glaze",
+        "A miso soup base"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes a stout beer dark?",
+      "correct_answer": "Roasted barley or malt",
+      "incorrect_answers": [
+        "Added caramel coloring",
+        "Chocolate",
+        "Coffee"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the traditional cooking fat in Southern US cuisine?",
+      "correct_answer": "Lard or bacon fat",
+      "incorrect_answers": [
+        "Olive oil",
+        "Coconut oil",
+        "Canola oil"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What cheese is Parmigiano-Reggiano?",
+      "correct_answer": "A hard Italian cheese aged at least 12 months",
+      "incorrect_answers": [
+        "A soft French cheese",
+        "A Dutch semi-hard cheese",
+        "A Greek crumbly cheese"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a coulis?",
+      "correct_answer": "A smooth pur\u00e9ed sauce, often fruit-based",
+      "incorrect_answers": [
+        "A thick stew",
+        "A cream soup",
+        "A salad dressing"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between heavy cream and whipping cream?",
+      "correct_answer": "Heavy cream has more fat (36%+); whipping cream has 30-36%",
+      "incorrect_answers": [
+        "They're identical",
+        "Whipping cream has more fat",
+        "Heavy cream is lighter"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the traditional bread used in a banh mi?",
+      "correct_answer": "Vietnamese-style baguette",
+      "incorrect_answers": [
+        "Pita bread",
+        "Ciabatta",
+        "Focaccia"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an amuse-bouche?",
+      "correct_answer": "A small complimentary appetizer from the chef",
+      "incorrect_answers": [
+        "A dessert course",
+        "A type of cocktail",
+        "The main course"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main grain in Ethiopian injera bread?",
+      "correct_answer": "Teff",
+      "incorrect_answers": [
+        "Wheat",
+        "Corn",
+        "Rice"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes a martini 'dirty'?",
+      "correct_answer": "Adding olive brine",
+      "incorrect_answers": [
+        "Using dark spirits",
+        "Adding chocolate",
+        "Shaking instead of stirring"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between cider and juice?",
+      "correct_answer": "Cider is unfiltered and may be fermented; juice is filtered and pasteurized",
+      "incorrect_answers": [
+        "They're the same",
+        "Cider is carbonated",
+        "Juice has more sugar"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is gochujang?",
+      "correct_answer": "Korean fermented red chili paste",
+      "incorrect_answers": [
+        "Japanese soy paste",
+        "Thai curry paste",
+        "Chinese hoisin sauce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What country does the cocktail 'Aperol Spritz' come from?",
+      "correct_answer": "Italy",
+      "incorrect_answers": [
+        "France",
+        "Spain",
+        "Austria"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of milk is traditionally used in Indian paneer?",
+      "correct_answer": "Whole cow or buffalo milk",
+      "incorrect_answers": [
+        "Goat milk",
+        "Almond milk",
+        "Coconut milk"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the base of a traditional hollandaise sauce?",
+      "correct_answer": "Egg yolks and butter",
+      "incorrect_answers": [
+        "Cream and flour",
+        "Tomato and olive oil",
+        "Yogurt and lemon"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is aquafaba?",
+      "correct_answer": "The liquid from canned chickpeas, used as an egg substitute",
+      "incorrect_answers": [
+        "Coconut water",
+        "Rice milk",
+        "Almond extract"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Italian term for 'before the meal' appetizers?",
+      "correct_answer": "Antipasto",
+      "incorrect_answers": [
+        "Primo",
+        "Secondo",
+        "Dolce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the cocktail made with Prosecco and peach pur\u00e9e?",
+      "correct_answer": "Bellini",
+      "incorrect_answers": [
+        "Mimosa",
+        "Kir Royale",
+        "Rossini"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a bisque and a chowder?",
+      "correct_answer": "Bisque is smooth and creamy; chowder is chunky",
+      "incorrect_answers": [
+        "They're the same",
+        "Bisque is chunky",
+        "Chowder has no cream"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a tasting menu?",
+      "correct_answer": "A multi-course meal of small dishes chosen by the chef",
+      "incorrect_answers": [
+        "A menu you can sample before ordering",
+        "An all-you-can-eat buffet",
+        "A prix fixe lunch menu"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What herb is traditionally used in a Bloody Mary?",
+      "correct_answer": "Celery (as garnish) with horseradish and Worcestershire",
+      "incorrect_answers": [
+        "Basil",
+        "Rosemary",
+        "Thyme"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the rarest coffee bean variety?",
+      "correct_answer": "Liberica",
+      "incorrect_answers": [
+        "Arabica",
+        "Robusta",
+        "Excelsa"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is 'supr\u00eame' in classical French cooking?",
+      "correct_answer": "A boneless, skinless chicken breast \u2014 or a rich cream sauce",
+      "incorrect_answers": [
+        "The head chef's signature dish",
+        "A supreme court of flavors",
+        "The final dessert course"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ideal internal temperature for a medium-rare steak?",
+      "correct_answer": "130-135\u00b0F (54-57\u00b0C)",
+      "incorrect_answers": [
+        "120\u00b0F (49\u00b0C)",
+        "145\u00b0F (63\u00b0C)",
+        "160\u00b0F (71\u00b0C)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What grape is Prosecco made from?",
+      "correct_answer": "Glera",
+      "incorrect_answers": [
+        "Chardonnay",
+        "Pinot Grigio",
+        "Moscato"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the enzymatic browning that occurs when you cut an apple?",
+      "correct_answer": "Oxidation (polyphenol oxidase reacting with oxygen)",
+      "incorrect_answers": [
+        "Maillard reaction",
+        "Caramelization",
+        "Fermentation"
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}
