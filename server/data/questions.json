@@ -10,6 +10,7 @@
     {"id": 2008,  "name": "Bingeworthy",       "file": "tv_shows_questions.json"},
     {"id": 2009,  "name": "Mixed Bag",        "file": "mixed_bag_questions.json"},
     {"id": 2010,  "name": "Flags & Capitals", "file": "flags_questions.json"},
-    {"id": 2011,  "name": "Food & Drinks",   "file": "food_drinks_questions.json"}
+    {"id": 2011,  "name": "Food & Drinks",   "file": "food_drinks_questions.json"},
+    {"id": 2012,  "name": "Blockbusters",    "file": "blockbusters_questions.json"}
   ]
 }

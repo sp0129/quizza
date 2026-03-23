@@ -1,0 +1,2006 @@
+{
+  "category": "Blockbusters",
+  "category_id": 2012,
+  "questions": [
+    {
+      "question": "Who played Jack in 'Titanic'?",
+      "correct_answer": "Leonardo DiCaprio",
+      "incorrect_answers": [
+        "Brad Pitt",
+        "Matt Damon",
+        "Tom Cruise"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the Joker in 'The Dark Knight'?",
+      "correct_answer": "Heath Ledger",
+      "incorrect_answers": [
+        "Joaquin Phoenix",
+        "Jack Nicholson",
+        "Jared Leto"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who stars as Iron Man in the Marvel Cinematic Universe?",
+      "correct_answer": "Robert Downey Jr.",
+      "incorrect_answers": [
+        "Chris Evans",
+        "Chris Hemsworth",
+        "Mark Ruffalo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Forrest Gump?",
+      "correct_answer": "Tom Hanks",
+      "incorrect_answers": [
+        "Robin Williams",
+        "Jim Carrey",
+        "Bill Murray"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the lead in 'The Wolf of Wall Street'?",
+      "correct_answer": "Leonardo DiCaprio",
+      "incorrect_answers": [
+        "Brad Pitt",
+        "Christian Bale",
+        "Matthew McConaughey"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Elle Woods in 'Legally Blonde'?",
+      "correct_answer": "Reese Witherspoon",
+      "incorrect_answers": [
+        "Cameron Diaz",
+        "Drew Barrymore",
+        "Jennifer Aniston"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Miranda Priestly in 'The Devil Wears Prada'?",
+      "correct_answer": "Meryl Streep",
+      "incorrect_answers": [
+        "Cate Blanchett",
+        "Helen Mirren",
+        "Tilda Swinton"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the Terminator?",
+      "correct_answer": "Arnold Schwarzenegger",
+      "incorrect_answers": [
+        "Sylvester Stallone",
+        "Bruce Willis",
+        "Harrison Ford"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Katniss in 'The Hunger Games'?",
+      "correct_answer": "Jennifer Lawrence",
+      "incorrect_answers": [
+        "Emma Stone",
+        "Shailene Woodley",
+        "Scarlett Johansson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who voiced Woody in 'Toy Story'?",
+      "correct_answer": "Tom Hanks",
+      "incorrect_answers": [
+        "Tim Allen",
+        "Billy Crystal",
+        "Robin Williams"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Neo in 'The Matrix'?",
+      "correct_answer": "Keanu Reeves",
+      "incorrect_answers": [
+        "Brad Pitt",
+        "Nicolas Cage",
+        "Will Smith"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Regina George in 'Mean Girls'?",
+      "correct_answer": "Rachel McAdams",
+      "incorrect_answers": [
+        "Lindsay Lohan",
+        "Amanda Seyfried",
+        "Lacey Chabert"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Captain Jack Sparrow?",
+      "correct_answer": "Johnny Depp",
+      "incorrect_answers": [
+        "Orlando Bloom",
+        "Geoffrey Rush",
+        "Javier Bardem"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the lead in 'Gladiator'?",
+      "correct_answer": "Russell Crowe",
+      "incorrect_answers": [
+        "Gerard Butler",
+        "Brad Pitt",
+        "Christian Bale"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Black Widow in the Avengers?",
+      "correct_answer": "Scarlett Johansson",
+      "incorrect_answers": [
+        "Gal Gadot",
+        "Brie Larson",
+        "Elizabeth Olsen"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the Grinch in the 2000 live-action movie?",
+      "correct_answer": "Jim Carrey",
+      "incorrect_answers": [
+        "Mike Myers",
+        "Adam Sandler",
+        "Will Ferrell"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Cher in 'Clueless'?",
+      "correct_answer": "Alicia Silverstone",
+      "incorrect_answers": [
+        "Reese Witherspoon",
+        "Drew Barrymore",
+        "Sarah Michelle Gellar"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Batman in 'The Dark Knight'?",
+      "correct_answer": "Christian Bale",
+      "incorrect_answers": [
+        "Ben Affleck",
+        "Robert Pattinson",
+        "George Clooney"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who voiced Elsa in 'Frozen'?",
+      "correct_answer": "Idina Menzel",
+      "incorrect_answers": [
+        "Kristen Bell",
+        "Mandy Moore",
+        "Amy Adams"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Bella in 'Twilight'?",
+      "correct_answer": "Kristen Stewart",
+      "incorrect_answers": [
+        "Emma Watson",
+        "Amanda Seyfried",
+        "Dakota Fanning"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'I'm the king of the world!' is a quote from which movie?",
+      "correct_answer": "Titanic",
+      "incorrect_answers": [
+        "The Lion King",
+        "Gladiator",
+        "Braveheart"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'I'll be back' is a famous line from which movie?",
+      "correct_answer": "The Terminator",
+      "incorrect_answers": [
+        "Die Hard",
+        "Predator",
+        "RoboCop"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'May the Force be with you' is from which franchise?",
+      "correct_answer": "Star Wars",
+      "incorrect_answers": [
+        "Star Trek",
+        "The Lord of the Rings",
+        "Harry Potter"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'You can't sit with us!' is from which movie?",
+      "correct_answer": "Mean Girls",
+      "incorrect_answers": [
+        "Clueless",
+        "Legally Blonde",
+        "Heathers"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'To infinity and beyond!' is from which movie?",
+      "correct_answer": "Toy Story",
+      "incorrect_answers": [
+        "Up",
+        "WALL-E",
+        "Monsters, Inc."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Here's looking at you, kid' is from which classic film?",
+      "correct_answer": "Casablanca",
+      "incorrect_answers": [
+        "Gone with the Wind",
+        "Citizen Kane",
+        "The Wizard of Oz"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Life is like a box of chocolates' is from which movie?",
+      "correct_answer": "Forrest Gump",
+      "incorrect_answers": [
+        "The Shawshank Redemption",
+        "Good Will Hunting",
+        "Cast Away"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Why so serious?' is from which movie?",
+      "correct_answer": "The Dark Knight",
+      "incorrect_answers": [
+        "Joker",
+        "Batman Begins",
+        "Suicide Squad"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'I see dead people' is from which movie?",
+      "correct_answer": "The Sixth Sense",
+      "incorrect_answers": [
+        "The Others",
+        "Ghost",
+        "Poltergeist"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Just keep swimming' is from which movie?",
+      "correct_answer": "Finding Nemo",
+      "incorrect_answers": [
+        "Finding Dory",
+        "The Little Mermaid",
+        "Moana"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'That's so fetch' is from which movie?",
+      "correct_answer": "Mean Girls",
+      "incorrect_answers": [
+        "Legally Blonde",
+        "Clueless",
+        "Bring It On"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'You're gonna need a bigger boat' is from which movie?",
+      "correct_answer": "Jaws",
+      "incorrect_answers": [
+        "The Perfect Storm",
+        "Titanic",
+        "Cast Away"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'I'm gonna make him an offer he can't refuse' is from which movie?",
+      "correct_answer": "The Godfather",
+      "incorrect_answers": [
+        "Scarface",
+        "Goodfellas",
+        "The Departed"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Wakanda Forever' is associated with which movie?",
+      "correct_answer": "Black Panther",
+      "incorrect_answers": [
+        "Avengers: Endgame",
+        "Thor: Ragnarok",
+        "Captain America: Civil War"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'After all this time? Always.' is from which franchise?",
+      "correct_answer": "Harry Potter",
+      "incorrect_answers": [
+        "Twilight",
+        "The Lord of the Rings",
+        "The Hunger Games"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the highest-grossing movie of all time (worldwide)?",
+      "correct_answer": "Avatar (2009)",
+      "incorrect_answers": [
+        "Avengers: Endgame",
+        "Titanic",
+        "Star Wars: The Force Awakens"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Lion King', what is Simba's father's name?",
+      "correct_answer": "Mufasa",
+      "incorrect_answers": [
+        "Scar",
+        "Rafiki",
+        "Zazu"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the fictional country in 'Black Panther'?",
+      "correct_answer": "Wakanda",
+      "incorrect_answers": [
+        "Genosha",
+        "Latveria",
+        "Zamunda"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Jurassic Park', what are the main creatures?",
+      "correct_answer": "Dinosaurs",
+      "incorrect_answers": [
+        "Aliens",
+        "Robots",
+        "Monsters"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What sport is 'Rocky' about?",
+      "correct_answer": "Boxing",
+      "incorrect_answers": [
+        "Wrestling",
+        "MMA",
+        "Kickboxing"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What city does Batman protect?",
+      "correct_answer": "Gotham City",
+      "incorrect_answers": [
+        "Metropolis",
+        "Star City",
+        "Central City"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Finding Nemo', what type of fish is Nemo?",
+      "correct_answer": "Clownfish",
+      "incorrect_answers": [
+        "Goldfish",
+        "Angelfish",
+        "Betta fish"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the ring in 'Lord of the Rings'?",
+      "correct_answer": "The One Ring",
+      "incorrect_answers": [
+        "The Ring of Power",
+        "The Dark Ring",
+        "Sauron's Ring"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Frozen', what power does Elsa have?",
+      "correct_answer": "Ice and snow powers",
+      "incorrect_answers": [
+        "Fire powers",
+        "Flying",
+        "Super strength"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the ship in 'Titanic'?",
+      "correct_answer": "RMS Titanic",
+      "incorrect_answers": [
+        "HMS Victory",
+        "SS Britannic",
+        "RMS Lusitania"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Wizard of Oz', what does Dorothy want to find?",
+      "correct_answer": "A way back home to Kansas",
+      "incorrect_answers": [
+        "A pot of gold",
+        "The Emerald City forever",
+        "The Wizard's powers"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal is Simba in 'The Lion King'?",
+      "correct_answer": "Lion",
+      "incorrect_answers": [
+        "Tiger",
+        "Cheetah",
+        "Leopard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Up', what lifts Carl's house into the sky?",
+      "correct_answer": "Balloons",
+      "incorrect_answers": [
+        "A tornado",
+        "Rockets",
+        "Magic"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What school do the characters attend in 'Mean Girls'?",
+      "correct_answer": "North Shore High School",
+      "incorrect_answers": [
+        "West Beverly High",
+        "Rydell High",
+        "Shermer High"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the island in 'Jurassic Park'?",
+      "correct_answer": "Isla Nublar",
+      "incorrect_answers": [
+        "Skull Island",
+        "Monster Island",
+        "Dinosaur Island"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Titanic' and 'Avatar'?",
+      "correct_answer": "James Cameron",
+      "incorrect_answers": [
+        "Steven Spielberg",
+        "Christopher Nolan",
+        "Ridley Scott"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Jaws' and 'Jurassic Park'?",
+      "correct_answer": "Steven Spielberg",
+      "incorrect_answers": [
+        "James Cameron",
+        "George Lucas",
+        "Ridley Scott"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'The Dark Knight' trilogy?",
+      "correct_answer": "Christopher Nolan",
+      "incorrect_answers": [
+        "Zack Snyder",
+        "Tim Burton",
+        "Matt Reeves"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Pulp Fiction'?",
+      "correct_answer": "Quentin Tarantino",
+      "incorrect_answers": [
+        "Martin Scorsese",
+        "David Fincher",
+        "Guy Ritchie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Get Out' and 'Us'?",
+      "correct_answer": "Jordan Peele",
+      "incorrect_answers": [
+        "Ari Aster",
+        "James Wan",
+        "M. Night Shyamalan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'The Godfather'?",
+      "correct_answer": "Francis Ford Coppola",
+      "incorrect_answers": [
+        "Martin Scorsese",
+        "Brian De Palma",
+        "Sergio Leone"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Inception' and 'Interstellar'?",
+      "correct_answer": "Christopher Nolan",
+      "incorrect_answers": [
+        "Denis Villeneuve",
+        "Ridley Scott",
+        "James Cameron"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed the original 'Star Wars' trilogy?",
+      "correct_answer": "George Lucas",
+      "incorrect_answers": [
+        "Steven Spielberg",
+        "James Cameron",
+        "Ridley Scott"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many 'Fast and Furious' main films are there as of 2023?",
+      "correct_answer": "10",
+      "incorrect_answers": [
+        "8",
+        "9",
+        "12"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the final movie in the original 'Avengers' saga?",
+      "correct_answer": "Avengers: Endgame",
+      "incorrect_answers": [
+        "Avengers: Infinity War",
+        "Avengers: Age of Ultron",
+        "Spider-Man: Far From Home"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many 'Toy Story' movies are there?",
+      "correct_answer": "4",
+      "incorrect_answers": [
+        "3",
+        "5",
+        "2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie is the sequel to 'The Lion King'?",
+      "correct_answer": "The Lion King II: Simba's Pride",
+      "incorrect_answers": [
+        "The Lion Guard",
+        "The Lion King 1\u00bd",
+        "Simba's Return"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the prequel trilogy in Star Wars?",
+      "correct_answer": "Episodes I, II, III (The Phantom Menace, Attack of the Clones, Revenge of the Sith)",
+      "incorrect_answers": [
+        "Episodes IV, V, VI",
+        "The Sequel Trilogy",
+        "The Anthology Series"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many 'Harry Potter' movies are there?",
+      "correct_answer": "8",
+      "incorrect_answers": [
+        "7",
+        "9",
+        "6"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the sequel to 'Frozen'?",
+      "correct_answer": "Frozen II",
+      "incorrect_answers": [
+        "Frozen: Elsa's Journey",
+        "Frozen: The Snow Queen",
+        "Frozen Forever"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many original 'Jurassic Park' movies were made before 'Jurassic World'?",
+      "correct_answer": "3",
+      "incorrect_answers": [
+        "2",
+        "4",
+        "1"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie won Best Picture at the 2020 Oscars, making history as the first non-English-language film to win?",
+      "correct_answer": "Parasite",
+      "incorrect_answers": [
+        "1917",
+        "Joker",
+        "Once Upon a Time in Hollywood"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie won the most Oscars in history (11)?",
+      "correct_answer": "Titanic (tied with Ben-Hur and Lord of the Rings: Return of the King)",
+      "incorrect_answers": [
+        "Avatar",
+        "The Godfather",
+        "Schindler's List"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who has won the most Best Actress Oscars?",
+      "correct_answer": "Katharine Hepburn (4 wins)",
+      "incorrect_answers": [
+        "Meryl Streep",
+        "Cate Blanchett",
+        "Frances McDormand"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which animated film won Best Picture at the Oscars?",
+      "correct_answer": "No fully animated film has won Best Picture",
+      "incorrect_answers": [
+        "Toy Story 3",
+        "Up",
+        "Spirited Away"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which film won Best Picture at the 2024 Oscars?",
+      "correct_answer": "Oppenheimer",
+      "incorrect_answers": [
+        "Barbie",
+        "Killers of the Flower Moon",
+        "Poor Things"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2023 movie is about the inventor of the atomic bomb?",
+      "correct_answer": "Oppenheimer",
+      "incorrect_answers": [
+        "The Creator",
+        "Napoleon",
+        "Killers of the Flower Moon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2023 movie stars Margot Robbie as a famous doll?",
+      "correct_answer": "Barbie",
+      "incorrect_answers": [
+        "Poor Things",
+        "Asteroid City",
+        "May December"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 2022 movie features fighter pilots and is a sequel to a 1986 film?",
+      "correct_answer": "Top Gun: Maverick",
+      "incorrect_answers": [
+        "The Batman",
+        "Black Panther: Wakanda Forever",
+        "Avatar: The Way of Water"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the 2019 movie where Joaquin Phoenix plays a famous villain?",
+      "correct_answer": "Joker",
+      "incorrect_answers": [
+        "The Dark Knight",
+        "Suicide Squad",
+        "Birds of Prey"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 2018 movie features a Black superhero from Marvel?",
+      "correct_answer": "Black Panther",
+      "incorrect_answers": [
+        "Spider-Man: Into the Spider-Verse",
+        "Aquaman",
+        "Venom"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie did the 'Barbenheimer' meme refer to in 2023?",
+      "correct_answer": "Barbie and Oppenheimer releasing on the same day",
+      "incorrect_answers": [
+        "A real person named Barbenheimer",
+        "A new Pixar movie",
+        "A documentary"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 2017 horror movie features a sunken place?",
+      "correct_answer": "Get Out",
+      "incorrect_answers": [
+        "It",
+        "A Quiet Place",
+        "Hereditary"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is 'Everything Everywhere All at Once' about?",
+      "correct_answer": "A woman who discovers she can access parallel universes",
+      "incorrect_answers": [
+        "Time travel",
+        "Alien invasion",
+        "A heist across dimensions"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie introduced the character of Baby Yoda (Grogu)?",
+      "correct_answer": "The Mandalorian (TV series, not a movie)",
+      "incorrect_answers": [
+        "Star Wars: The Rise of Skywalker",
+        "Rogue One",
+        "Solo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2021 movie is about a family with magical powers in Colombia?",
+      "correct_answer": "Encanto",
+      "incorrect_answers": [
+        "Coco",
+        "Luca",
+        "Turning Red"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1975 movie made people afraid to go in the water?",
+      "correct_answer": "Jaws",
+      "incorrect_answers": [
+        "The Poseidon Adventure",
+        "Deep Blue Sea",
+        "Piranha"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1994 movie is about a man wrongly imprisoned at Shawshank?",
+      "correct_answer": "The Shawshank Redemption",
+      "incorrect_answers": [
+        "The Green Mile",
+        "Escape from Alcatraz",
+        "Cool Hand Luke"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1993 movie features a dinosaur theme park gone wrong?",
+      "correct_answer": "Jurassic Park",
+      "incorrect_answers": [
+        "The Lost World",
+        "King Kong",
+        "Godzilla"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1977 movie started the Star Wars franchise?",
+      "correct_answer": "Star Wars: Episode IV \u2014 A New Hope",
+      "incorrect_answers": [
+        "The Empire Strikes Back",
+        "Return of the Jedi",
+        "The Phantom Menace"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1972 movie is about the Corleone crime family?",
+      "correct_answer": "The Godfather",
+      "incorrect_answers": [
+        "Goodfellas",
+        "Scarface",
+        "The Departed"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1982 movie features a boy who befriends an alien?",
+      "correct_answer": "E.T. the Extra-Terrestrial",
+      "incorrect_answers": [
+        "Close Encounters of the Third Kind",
+        "Mac and Me",
+        "Flight of the Navigator"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1985 movie features time travel in a DeLorean?",
+      "correct_answer": "Back to the Future",
+      "incorrect_answers": [
+        "The Terminator",
+        "Bill & Ted's Excellent Adventure",
+        "Groundhog Day"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1999 movie features the line 'I see dead people'?",
+      "correct_answer": "The Sixth Sense",
+      "incorrect_answers": [
+        "The Others",
+        "Stir of Echoes",
+        "What Lies Beneath"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1997 movie features Will Smith fighting aliens?",
+      "correct_answer": "Men in Black",
+      "incorrect_answers": [
+        "Independence Day",
+        "Enemy of the State",
+        "Wild Wild West"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1990 movie features a boy left home alone during Christmas?",
+      "correct_answer": "Home Alone",
+      "incorrect_answers": [
+        "Jingle All the Way",
+        "A Christmas Story",
+        "Elf"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actor has appeared in the most Marvel Cinematic Universe films?",
+      "correct_answer": "Robert Downey Jr. (or Samuel L. Jackson)",
+      "incorrect_answers": [
+        "Chris Evans",
+        "Chris Hemsworth",
+        "Scarlett Johansson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is known as 'The Rock'?",
+      "correct_answer": "Dwayne Johnson",
+      "incorrect_answers": [
+        "Vin Diesel",
+        "Jason Statham",
+        "John Cena"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actress played Hermione in Harry Potter?",
+      "correct_answer": "Emma Watson",
+      "incorrect_answers": [
+        "Emma Stone",
+        "Emma Roberts",
+        "Emma Thompson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Thor in the Marvel movies?",
+      "correct_answer": "Chris Hemsworth",
+      "incorrect_answers": [
+        "Chris Evans",
+        "Chris Pratt",
+        "Chris Pine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actor is famous for 'Mission: Impossible'?",
+      "correct_answer": "Tom Cruise",
+      "incorrect_answers": [
+        "Matt Damon",
+        "Jason Bourne",
+        "Daniel Craig"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the lead in 'Wonder Woman'?",
+      "correct_answer": "Gal Gadot",
+      "incorrect_answers": [
+        "Brie Larson",
+        "Scarlett Johansson",
+        "Margot Robbie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actor played Wolverine?",
+      "correct_answer": "Hugh Jackman",
+      "incorrect_answers": [
+        "Russell Crowe",
+        "Christian Bale",
+        "Ryan Reynolds"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played James Bond most recently before Daniel Craig?",
+      "correct_answer": "Pierce Brosnan",
+      "incorrect_answers": [
+        "Timothy Dalton",
+        "Roger Moore",
+        "Sean Connery"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actress starred in 'The Hunger Games' and 'Silver Linings Playbook'?",
+      "correct_answer": "Jennifer Lawrence",
+      "incorrect_answers": [
+        "Emma Stone",
+        "Natalie Portman",
+        "Anne Hathaway"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Deadpool?",
+      "correct_answer": "Ryan Reynolds",
+      "incorrect_answers": [
+        "Ryan Gosling",
+        "Chris Pratt",
+        "Jake Gyllenhaal"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Pixar movie is about emotions inside a girl's head?",
+      "correct_answer": "Inside Out",
+      "incorrect_answers": [
+        "Soul",
+        "Coco",
+        "Onward"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Disney movie features a magic carpet ride?",
+      "correct_answer": "Aladdin",
+      "incorrect_answers": [
+        "The Little Mermaid",
+        "Beauty and the Beast",
+        "Mulan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Shrek', what type of creature is the main character?",
+      "correct_answer": "Ogre",
+      "incorrect_answers": [
+        "Troll",
+        "Giant",
+        "Goblin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Pixar movie is set in the Mexican Land of the Dead?",
+      "correct_answer": "Coco",
+      "incorrect_answers": [
+        "The Book of Life",
+        "Soul",
+        "Encanto"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animated movie features a rat who wants to be a chef?",
+      "correct_answer": "Ratatouille",
+      "incorrect_answers": [
+        "Flushed Away",
+        "Stuart Little",
+        "Chef"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Disney movie features a princess with really long hair?",
+      "correct_answer": "Tangled",
+      "incorrect_answers": [
+        "Brave",
+        "Moana",
+        "Frozen"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Incredibles', what is the family's last name?",
+      "correct_answer": "Parr",
+      "incorrect_answers": [
+        "Super",
+        "Powers",
+        "Strong"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animated movie features a house flying with balloons?",
+      "correct_answer": "Up",
+      "incorrect_answers": [
+        "Inside Out",
+        "WALL-E",
+        "Monsters, Inc."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the snowman in 'Frozen'?",
+      "correct_answer": "Olaf",
+      "incorrect_answers": [
+        "Sven",
+        "Kristoff",
+        "Hans"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Pixar movie is about a robot left alone on Earth?",
+      "correct_answer": "WALL-E",
+      "incorrect_answers": [
+        "Big Hero 6",
+        "Robots",
+        "The Iron Giant"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 'Avengers' movie made over $2 billion worldwide?",
+      "correct_answer": "Avengers: Endgame",
+      "incorrect_answers": [
+        "Avengers: Infinity War",
+        "Avengers: Age of Ultron",
+        "The Avengers"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What was the first movie to gross $1 billion worldwide?",
+      "correct_answer": "Titanic",
+      "incorrect_answers": [
+        "Jurassic Park",
+        "Star Wars",
+        "The Lord of the Rings"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Spider-Man movie features three Spider-Men?",
+      "correct_answer": "Spider-Man: No Way Home",
+      "incorrect_answers": [
+        "Spider-Man: Far From Home",
+        "Spider-Man: Homecoming",
+        "The Amazing Spider-Man 2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the highest-grossing animated movie of all time?",
+      "correct_answer": "Frozen II",
+      "incorrect_answers": [
+        "The Lion King (2019)",
+        "Incredibles 2",
+        "Toy Story 4"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie franchise has grossed the most total worldwide?",
+      "correct_answer": "Marvel Cinematic Universe",
+      "incorrect_answers": [
+        "Star Wars",
+        "Harry Potter",
+        "James Bond"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the fictional mineral in 'Avatar'?",
+      "correct_answer": "Unobtanium",
+      "incorrect_answers": [
+        "Vibranium",
+        "Kryptonite",
+        "Adamantium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Hangover', where do the characters wake up after their wild night?",
+      "correct_answer": "A hotel room in Las Vegas",
+      "incorrect_answers": [
+        "A beach in Mexico",
+        "A hospital",
+        "A police station"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color is Shrek?",
+      "correct_answer": "Green",
+      "incorrect_answers": [
+        "Brown",
+        "Blue",
+        "Purple"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Notebook', what does Noah build for Allie?",
+      "correct_answer": "A house",
+      "incorrect_answers": [
+        "A boat",
+        "A garden",
+        "A bridge"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the lion in 'The Chronicles of Narnia'?",
+      "correct_answer": "Aslan",
+      "incorrect_answers": [
+        "Mufasa",
+        "Simba",
+        "Scar"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In which movie does a shark terrorize a beach town called Amity Island?",
+      "correct_answer": "Jaws",
+      "incorrect_answers": [
+        "Deep Blue Sea",
+        "The Meg",
+        "47 Meters Down"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Buzz Lightyear's famous catchphrase?",
+      "correct_answer": "To infinity and beyond!",
+      "incorrect_answers": [
+        "You've got a friend in me!",
+        "Reach for the sky!",
+        "There's a snake in my boot!"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Clueless', what is Cher's last name?",
+      "correct_answer": "Horowitz",
+      "incorrect_answers": [
+        "Hamilton",
+        "Hartford",
+        "Henderson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ET stand for?",
+      "correct_answer": "Extra-Terrestrial",
+      "incorrect_answers": [
+        "Electronic Technology",
+        "Earth Traveler",
+        "Eternal Time"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Devil Wears Prada', what magazine does Miranda Priestly edit?",
+      "correct_answer": "Runway",
+      "incorrect_answers": [
+        "Vogue",
+        "Elle",
+        "Glamour"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the highest-grossing R-rated movie of all time?",
+      "correct_answer": "Joker (2019)",
+      "incorrect_answers": [
+        "Deadpool",
+        "The Matrix",
+        "It"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Grease', what is the name of the high school?",
+      "correct_answer": "Rydell High",
+      "incorrect_answers": [
+        "Shermer High",
+        "West Beverly",
+        "Bayside High"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie features the quote 'Houston, we have a problem'?",
+      "correct_answer": "Apollo 13",
+      "incorrect_answers": [
+        "Gravity",
+        "Interstellar",
+        "The Martian"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Willy Wonka', what is the golden prize hidden in?",
+      "correct_answer": "A chocolate bar",
+      "incorrect_answers": [
+        "A candy cane",
+        "A lollipop",
+        "A cookie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie features a nanny who flies in with an umbrella?",
+      "correct_answer": "Mary Poppins",
+      "incorrect_answers": [
+        "The Sound of Music",
+        "Nanny McPhee",
+        "Enchanted"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2014 movie features a raccoon and a tree as heroes?",
+      "correct_answer": "Guardians of the Galaxy",
+      "incorrect_answers": [
+        "The Avengers",
+        "Thor",
+        "Ant-Man"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie features a sinking luxury cruise ship in 1912?",
+      "correct_answer": "Titanic",
+      "incorrect_answers": [
+        "Poseidon",
+        "The Perfect Storm",
+        "Dunkirk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Schindler's List'?",
+      "correct_answer": "Steven Spielberg",
+      "incorrect_answers": [
+        "Martin Scorsese",
+        "Ridley Scott",
+        "Francis Ford Coppola"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie features a superhero named T'Challa?",
+      "correct_answer": "Black Panther",
+      "incorrect_answers": [
+        "Black Adam",
+        "Blade",
+        "Luke Cage"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Truman Show', what is Truman unaware of?",
+      "correct_answer": "His entire life is a TV show",
+      "incorrect_answers": [
+        "He's adopted",
+        "He's an alien",
+        "He's in a simulation"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color lightsaber does Luke Skywalker use in 'Return of the Jedi'?",
+      "correct_answer": "Green",
+      "incorrect_answers": [
+        "Blue",
+        "Red",
+        "Purple"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Ethan Hunt in 'Mission: Impossible'?",
+      "correct_answer": "Tom Cruise",
+      "incorrect_answers": [
+        "Matt Damon",
+        "Daniel Craig",
+        "Keanu Reeves"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the dinosaur theme park in 'Jurassic World'?",
+      "correct_answer": "Jurassic World",
+      "incorrect_answers": [
+        "Jurassic Park",
+        "Dino Land",
+        "Prehistoric World"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the lead in 'John Wick'?",
+      "correct_answer": "Keanu Reeves",
+      "incorrect_answers": [
+        "Liam Neeson",
+        "Jason Statham",
+        "Denzel Washington"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animated movie features a fish searching for his son?",
+      "correct_answer": "Finding Nemo",
+      "incorrect_answers": [
+        "Shark Tale",
+        "The Little Mermaid",
+        "Moana"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Parasite'?",
+      "correct_answer": "Bong Joon-ho",
+      "incorrect_answers": [
+        "Park Chan-wook",
+        "Wong Kar-wai",
+        "Akira Kurosawa"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the spaceship in 'Alien'?",
+      "correct_answer": "Nostromo",
+      "incorrect_answers": [
+        "Enterprise",
+        "Millennium Falcon",
+        "Discovery One"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Ghostbusters', what do they say when they catch a ghost?",
+      "correct_answer": "Who you gonna call? Ghostbusters!",
+      "incorrect_answers": [
+        "Ghost caught!",
+        "Spirit contained!",
+        "Phantom secured!"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the kingdom in 'Frozen'?",
+      "correct_answer": "Arendelle",
+      "incorrect_answers": [
+        "Corona",
+        "Genovia",
+        "DunBroch"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Lara Croft in the 2018 'Tomb Raider'?",
+      "correct_answer": "Alicia Vikander",
+      "incorrect_answers": [
+        "Angelina Jolie",
+        "Gal Gadot",
+        "Daisy Ridley"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2016 movie features Disney princesses meeting online?",
+      "correct_answer": "Ralph Breaks the Internet",
+      "incorrect_answers": [
+        "Wreck-It Ralph",
+        "Emoji Movie",
+        "Ready Player One"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Interstellar', what are the astronauts looking for?",
+      "correct_answer": "A new habitable planet for humanity",
+      "incorrect_answers": [
+        "Alien life",
+        "A black hole",
+        "Lost astronauts"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the Joker in the 2019 movie 'Joker'?",
+      "correct_answer": "Joaquin Phoenix",
+      "incorrect_answers": [
+        "Heath Ledger",
+        "Jared Leto",
+        "Jack Nicholson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2015 Pixar movie takes place inside a girl's mind?",
+      "correct_answer": "Inside Out",
+      "incorrect_answers": [
+        "Soul",
+        "Coco",
+        "Brave"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the Genie in the 2019 live-action 'Aladdin'?",
+      "correct_answer": "Will Smith",
+      "incorrect_answers": [
+        "Robin Williams",
+        "Kevin Hart",
+        "Jack Black"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie franchise is about a hobbit named Frodo?",
+      "correct_answer": "The Lord of the Rings",
+      "incorrect_answers": [
+        "The Hobbit",
+        "Chronicles of Narnia",
+        "Game of Thrones"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'La La Land'?",
+      "correct_answer": "Damien Chazelle",
+      "incorrect_answers": [
+        "Greta Gerwig",
+        "Wes Anderson",
+        "Denis Villeneuve"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What superhero does Tobey Maguire play?",
+      "correct_answer": "Spider-Man",
+      "incorrect_answers": [
+        "Superman",
+        "Batman",
+        "Daredevil"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Princess Diaries', what country is Mia princess of?",
+      "correct_answer": "Genovia",
+      "incorrect_answers": [
+        "Monaco",
+        "Liechtenstein",
+        "Luxembourg"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the highest-grossing movie of 2023?",
+      "correct_answer": "Barbie",
+      "incorrect_answers": [
+        "Oppenheimer",
+        "The Super Mario Bros. Movie",
+        "Guardians of the Galaxy Vol. 3"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Willy Wonka in the 2023 movie 'Wonka'?",
+      "correct_answer": "Timoth\u00e9e Chalamet",
+      "incorrect_answers": [
+        "Tom Holland",
+        "Robert Pattinson",
+        "Harry Styles"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'A Quiet Place', what kills you if you make noise?",
+      "correct_answer": "Aliens/creatures that hunt by sound",
+      "incorrect_answers": [
+        "Ghosts",
+        "Zombies",
+        "Government drones"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the fictional world in 'Avatar'?",
+      "correct_answer": "Pandora",
+      "incorrect_answers": [
+        "Naboo",
+        "Krypton",
+        "Arrakis"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who stars in 'The Martian' as an astronaut stranded on Mars?",
+      "correct_answer": "Matt Damon",
+      "incorrect_answers": [
+        "Brad Pitt",
+        "Ryan Gosling",
+        "Chris Pratt"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What franchise features 'Hogwarts Express'?",
+      "correct_answer": "Harry Potter",
+      "incorrect_answers": [
+        "The Lord of the Rings",
+        "Narnia",
+        "Percy Jackson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Inception', what do characters enter?",
+      "correct_answer": "Dreams within dreams",
+      "incorrect_answers": [
+        "Parallel universes",
+        "Virtual reality",
+        "Time loops"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Harley Quinn in the DC movies?",
+      "correct_answer": "Margot Robbie",
+      "incorrect_answers": [
+        "Lady Gaga",
+        "Cara Delevingne",
+        "Megan Fox"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 1990s movie features a giant asteroid heading toward Earth?",
+      "correct_answer": "Armageddon",
+      "incorrect_answers": [
+        "Deep Impact",
+        "Independence Day",
+        "The Day After Tomorrow"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the Bride in 'Kill Bill'?",
+      "correct_answer": "Uma Thurman",
+      "incorrect_answers": [
+        "Angelina Jolie",
+        "Milla Jovovich",
+        "Charlize Theron"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Coco', what is Miguel's dream?",
+      "correct_answer": "To be a musician",
+      "incorrect_answers": [
+        "To be an artist",
+        "To be a chef",
+        "To be an explorer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2003 movie features Will Ferrell as a man raised by elves?",
+      "correct_answer": "Elf",
+      "incorrect_answers": [
+        "The Santa Clause",
+        "Polar Express",
+        "Home Alone 2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Dominic Toretto in 'Fast and Furious'?",
+      "correct_answer": "Vin Diesel",
+      "incorrect_answers": [
+        "Dwayne Johnson",
+        "Paul Walker",
+        "Jason Statham"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2009 movie made 3D movies popular again?",
+      "correct_answer": "Avatar",
+      "incorrect_answers": [
+        "Transformers",
+        "Up",
+        "Star Trek"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Moana', what does Moana need to restore?",
+      "correct_answer": "The heart of Te Fiti",
+      "incorrect_answers": [
+        "Her father's throne",
+        "The ocean's magic",
+        "A stolen gem"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Sherlock Holmes in the 2009 film?",
+      "correct_answer": "Robert Downey Jr.",
+      "incorrect_answers": [
+        "Benedict Cumberbatch",
+        "Henry Cavill",
+        "Jude Law"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the first Pixar feature film?",
+      "correct_answer": "Toy Story (1995)",
+      "incorrect_answers": [
+        "A Bug's Life",
+        "Monsters, Inc.",
+        "Finding Nemo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Thanos in the Avengers movies?",
+      "correct_answer": "Josh Brolin",
+      "incorrect_answers": [
+        "James Brolin",
+        "Mark Ruffalo",
+        "Karl Urban"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is 'Knives Out' about?",
+      "correct_answer": "A murder mystery in a wealthy family's estate",
+      "incorrect_answers": [
+        "A cooking competition",
+        "A spy thriller",
+        "A horror movie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Dune' (2021)?",
+      "correct_answer": "Denis Villeneuve",
+      "incorrect_answers": [
+        "Christopher Nolan",
+        "Ridley Scott",
+        "David Lynch"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Legally Blonde', what school does Elle go to?",
+      "correct_answer": "Harvard Law School",
+      "incorrect_answers": [
+        "Yale Law School",
+        "Stanford",
+        "Columbia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie features the line 'With great power comes great responsibility'?",
+      "correct_answer": "Spider-Man (2002)",
+      "incorrect_answers": [
+        "Batman Begins",
+        "Superman",
+        "X-Men"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the young Simba's singing voice in the original 'Lion King'?",
+      "correct_answer": "Jason Weaver",
+      "incorrect_answers": [
+        "Jonathan Taylor Thomas",
+        "Matthew Broderick",
+        "Jeremy Irons"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What 2006 movie features Sacha Baron Cohen as a Kazakh journalist?",
+      "correct_answer": "Borat",
+      "incorrect_answers": [
+        "Br\u00fcno",
+        "The Dictator",
+        "Ali G Indahouse"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie features a bus that can't go below 50 mph?",
+      "correct_answer": "Speed",
+      "incorrect_answers": [
+        "Die Hard",
+        "The Italian Job",
+        "Fast Five"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Doctor Strange in the MCU?",
+      "correct_answer": "Benedict Cumberbatch",
+      "incorrect_answers": [
+        "Tom Hiddleston",
+        "Oscar Isaac",
+        "Jeremy Renner"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Batman's butler?",
+      "correct_answer": "Alfred",
+      "incorrect_answers": [
+        "Jarvis",
+        "Edwin",
+        "Watson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'The Revenant'?",
+      "correct_answer": "Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu",
+      "incorrect_answers": [
+        "Martin Scorsese",
+        "Ridley Scott",
+        "David Fincher"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie won Leonardo DiCaprio his first Oscar?",
+      "correct_answer": "The Revenant",
+      "incorrect_answers": [
+        "The Wolf of Wall Street",
+        "Inception",
+        "The Departed"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Jumanji: Welcome to the Jungle', where do the characters get trapped?",
+      "correct_answer": "Inside a video game",
+      "incorrect_answers": [
+        "A board game",
+        "A dream",
+        "An alternate dimension"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Aquaman?",
+      "correct_answer": "Jason Momoa",
+      "incorrect_answers": [
+        "Chris Hemsworth",
+        "Dwayne Johnson",
+        "Dave Bautista"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the highest-grossing horror movie of all time?",
+      "correct_answer": "It (2017)",
+      "incorrect_answers": [
+        "The Exorcist",
+        "A Quiet Place",
+        "Get Out"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Wizard of Oz', what color are Dorothy's iconic shoes?",
+      "correct_answer": "Ruby red",
+      "incorrect_answers": [
+        "Silver",
+        "Gold",
+        "Glass"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie stars Sandra Bullock as an FBI agent going undercover at a beauty pageant?",
+      "correct_answer": "Miss Congeniality",
+      "incorrect_answers": [
+        "The Heat",
+        "The Proposal",
+        "Gravity"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 2021 movie features Timoth\u00e9e Chalamet on a desert planet?",
+      "correct_answer": "Dune",
+      "incorrect_answers": [
+        "The Martian",
+        "Interstellar",
+        "Star Wars"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Monsters, Inc.', what powers the city?",
+      "correct_answer": "Children's screams (later laughter)",
+      "incorrect_answers": [
+        "Electricity",
+        "Magic crystals",
+        "Solar power"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the theme park in 'Jurassic World'?",
+      "correct_answer": "Jurassic World",
+      "incorrect_answers": [
+        "Isla Sorna Resort",
+        "DinoWorld",
+        "Prehistoric Park"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who stars in 'The Greatest Showman'?",
+      "correct_answer": "Hugh Jackman",
+      "incorrect_answers": [
+        "Ryan Gosling",
+        "Bradley Cooper",
+        "Chris Pratt"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie features the quote 'I am Groot'?",
+      "correct_answer": "Guardians of the Galaxy",
+      "incorrect_answers": [
+        "Avatar",
+        "Thor",
+        "Doctor Strange"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Zootopia', what type of animal is the main character Judy?",
+      "correct_answer": "Rabbit",
+      "incorrect_answers": [
+        "Fox",
+        "Mouse",
+        "Cat"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What romantic comedy features Julia Roberts as a woman hired to be a date?",
+      "correct_answer": "Pretty Woman",
+      "incorrect_answers": [
+        "My Best Friend's Wedding",
+        "Notting Hill",
+        "Runaway Bride"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the first 'Pirates of the Caribbean' movie called?",
+      "correct_answer": "The Curse of the Black Pearl",
+      "incorrect_answers": [
+        "Dead Man's Chest",
+        "At World's End",
+        "On Stranger Tides"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the lead in 'Bohemian Rhapsody'?",
+      "correct_answer": "Rami Malek",
+      "incorrect_answers": [
+        "Taron Egerton",
+        "Austin Butler",
+        "Timoth\u00e9e Chalamet"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What superhero wears a red cape and has an 'S' on their chest?",
+      "correct_answer": "Superman",
+      "incorrect_answers": [
+        "Thor",
+        "Doctor Strange",
+        "Vision"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What movie franchise features 'The Death Star'?",
+      "correct_answer": "Star Wars",
+      "incorrect_answers": [
+        "Star Trek",
+        "Guardians of the Galaxy",
+        "Dune"
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -46,6 +46,7 @@ const ID_MAP: Record<number, CategoryTheme> = {
   2009: { gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)', accent: '#7c3aed', emoji: '🎲' },
   2010: { gradient: 'linear-gradient(135deg, #10b981 0%, #065f46 100%)', accent: '#10B981', emoji: '🏳️' },
   2011: { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' },
+  2012: { gradient: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)', accent: '#dc2626', emoji: '🎬' },
 };
 
 const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
@@ -88,6 +89,7 @@ const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
   ['board game',      { gradient: 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)', accent: '#1945a4', emoji: '🎲' }],
   ['food',            { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' }],
   ['drink',           { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' }],
+  ['blockbuster',     { gradient: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)', accent: '#dc2626', emoji: '🎬' }],
 ];
 
 export function cleanCategoryName(name: string): string {
@@ -143,6 +145,7 @@ export const CATEGORY_SORT_ORDER: number[] = [
   19,    // Mathematics
   28,    // Vehicles
   2011,  // Food & Drinks
+  2012,  // Blockbusters
 ];
 
 export function getCategoryTheme(categoryName: string, categoryId?: number): CategoryTheme {
