@@ -112,10 +112,12 @@ export const CATEGORY_SORT_ORDER: number[] = [
   2006,  // Pop Music
   2008,  // Bingeworthy
   27,    // Animals
+  2012,  // Blockbusters
   23,    // History
   22,    // Geography
   20,    // Mythology
   2010,  // Flags & Capitals
+  2011,  // Food & Drinks
   // Entertainment (deeper)
   14,    // Television
   11,    // Film
@@ -144,8 +146,6 @@ export const CATEGORY_SORT_ORDER: number[] = [
   30,    // Gadgets
   19,    // Mathematics
   28,    // Vehicles
-  2011,  // Food & Drinks
-  2012,  // Blockbusters
 ];
 
 export function getCategoryTheme(categoryName: string, categoryId?: number): CategoryTheme {
