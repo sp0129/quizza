@@ -254,7 +254,7 @@
     },
     {
       "question": "What does 'SOS' stand for in an emergency?",
-      "correct_answer": "It doesn't stand for anything — it's a Morse code distress signal",
+      "correct_answer": "It doesn't stand for anything \u2014 it's a Morse code distress signal",
       "incorrect_answers": [
         "Save Our Souls",
         "Save Our Ship",
@@ -344,11 +344,11 @@
     },
     {
       "question": "What is the boiling point of water in Celsius?",
-      "correct_answer": "100°C",
+      "correct_answer": "100\u00b0C",
       "incorrect_answers": [
-        "90°C",
-        "110°C",
-        "120°C"
+        "90\u00b0C",
+        "110\u00b0C",
+        "120\u00b0C"
       ],
       "difficulty": "easy"
     },
@@ -564,11 +564,11 @@
     },
     {
       "question": "What is the standard temperature of a healthy human body in Fahrenheit?",
-      "correct_answer": "98.6°F",
+      "correct_answer": "98.6\u00b0F",
       "incorrect_answers": [
-        "97.6°F",
-        "99.6°F",
-        "100°F"
+        "97.6\u00b0F",
+        "99.6\u00b0F",
+        "100\u00b0F"
       ],
       "difficulty": "easy"
     },
@@ -758,13 +758,13 @@
       "incorrect_answers": [
         "Claude Monet",
         "Pablo Picasso",
-        "Salvador Dalí"
+        "Salvador Dal\u00ed"
       ],
       "difficulty": "easy"
     },
     {
       "question": "Who painted 'The Persistence of Memory' (the melting clocks)?",
-      "correct_answer": "Salvador Dalí",
+      "correct_answer": "Salvador Dal\u00ed",
       "incorrect_answers": [
         "Pablo Picasso",
         "Claude Monet",
@@ -954,11 +954,11 @@
     },
     {
       "question": "What is the freezing point of water in Fahrenheit?",
-      "correct_answer": "32°F",
+      "correct_answer": "32\u00b0F",
       "incorrect_answers": [
-        "0°F",
-        "28°F",
-        "40°F"
+        "0\u00b0F",
+        "28\u00b0F",
+        "40\u00b0F"
       ],
       "difficulty": "easy"
     },
@@ -1183,7 +1183,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "Which famous physicist is known for the equation E=mc²?",
+      "question": "Which famous physicist is known for the equation E=mc\u00b2?",
       "correct_answer": "Albert Einstein",
       "incorrect_answers": [
         "Isaac Newton",
@@ -1594,10 +1594,10 @@
     },
     {
       "question": "What is the capital of Brazil?",
-      "correct_answer": "Brasília",
+      "correct_answer": "Bras\u00edlia",
       "incorrect_answers": [
         "Rio de Janeiro",
-        "São Paulo",
+        "S\u00e3o Paulo",
         "Salvador"
       ],
       "difficulty": "medium"
@@ -1736,7 +1736,7 @@
       "question": "What is the capital of Mexico?",
       "correct_answer": "Mexico City",
       "incorrect_answers": [
-        "Cancún",
+        "Canc\u00fan",
         "Guadalajara",
         "Monterrey"
       ],
@@ -1748,7 +1748,7 @@
       "incorrect_answers": [
         "Santiago",
         "Lima",
-        "Bogotá"
+        "Bogot\u00e1"
       ],
       "difficulty": "easy"
     },
@@ -1836,9 +1836,9 @@
       "question": "What is the longest river in South America?",
       "correct_answer": "Amazon River",
       "incorrect_answers": [
-        "Paraná River",
+        "Paran\u00e1 River",
         "Orinoco River",
-        "São Francisco River"
+        "S\u00e3o Francisco River"
       ],
       "difficulty": "easy"
     },
@@ -1938,7 +1938,7 @@
       "incorrect_answers": [
         "Shanghai",
         "Mumbai",
-        "São Paulo"
+        "S\u00e3o Paulo"
       ],
       "difficulty": "medium"
     },
@@ -3107,7 +3107,7 @@
       "correct_answer": "Cristiano Ronaldo",
       "incorrect_answers": [
         "Carlos Reyes",
-        "César Ramos",
+        "C\u00e9sar Ramos",
         "Claudio Ranieri"
       ],
       "difficulty": "easy"
@@ -3928,7 +3928,7 @@
       "incorrect_answers": [
         "Britney Spears",
         "Lady Gaga",
-        "Beyoncé"
+        "Beyonc\u00e9"
       ],
       "difficulty": "easy"
     },
@@ -4038,7 +4038,7 @@
       "incorrect_answers": [
         "Taylor Swift",
         "Rihanna",
-        "Beyoncé"
+        "Beyonc\u00e9"
       ],
       "difficulty": "easy"
     },
@@ -4194,7 +4194,7 @@
     },
     {
       "question": "Who released the album 'Lemonade'?",
-      "correct_answer": "Beyoncé",
+      "correct_answer": "Beyonc\u00e9",
       "incorrect_answers": [
         "Rihanna",
         "Taylor Swift",
@@ -4204,7 +4204,7 @@
     },
     {
       "question": "Who sang 'Halo'?",
-      "correct_answer": "Beyoncé",
+      "correct_answer": "Beyonc\u00e9",
       "incorrect_answers": [
         "Rihanna",
         "Adele",
@@ -4216,7 +4216,7 @@
       "question": "Who sang 'Umbrella'?",
       "correct_answer": "Rihanna",
       "incorrect_answers": [
-        "Beyoncé",
+        "Beyonc\u00e9",
         "Alicia Keys",
         "Mary J. Blige"
       ],
@@ -4293,10 +4293,10 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the name of Beyoncé's alter ego?",
+      "question": "What is the name of Beyonc\u00e9's alter ego?",
       "correct_answer": "Sasha Fierce",
       "incorrect_answers": [
-        "Yoncé",
+        "Yonc\u00e9",
         "Queen B",
         "Lemonade"
       ],
@@ -7356,8 +7356,8 @@
       "question": "Who wrote Pride and Prejudice?",
       "correct_answer": "Jane Austen",
       "incorrect_answers": [
-        "Charlotte Brontë",
-        "Emily Brontë",
+        "Charlotte Bront\u00eb",
+        "Emily Bront\u00eb",
         "Virginia Woolf"
       ],
       "difficulty": "easy"
@@ -7378,7 +7378,7 @@
       "incorrect_answers": [
         "Claude Monet",
         "Pablo Picasso",
-        "Salvador Dalí"
+        "Salvador Dal\u00ed"
       ],
       "difficulty": "easy"
     },
@@ -7413,7 +7413,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the art style known for melting clocks by Salvador Dalí?",
+      "question": "What is the art style known for melting clocks by Salvador Dal\u00ed?",
       "correct_answer": "Surrealism",
       "incorrect_answers": [
         "Cubism",
@@ -7926,7 +7926,7 @@
       "question": "Who wrote The Alchemist?",
       "correct_answer": "Paulo Coelho",
       "incorrect_answers": [
-        "Gabriel García Márquez",
+        "Gabriel Garc\u00eda M\u00e1rquez",
         "Isabel Allende",
         "Jorge Luis Borges"
       ],
@@ -7954,7 +7954,7 @@
     },
     {
       "question": "Who wrote The Little Prince?",
-      "correct_answer": "Antoine de Saint-Exupéry",
+      "correct_answer": "Antoine de Saint-Exup\u00e9ry",
       "incorrect_answers": [
         "Victor Hugo",
         "Jules Verne",
@@ -7967,7 +7967,7 @@
       "correct_answer": "In Search of Lost Time",
       "incorrect_answers": [
         "War and Peace",
-        "Les Misérables",
+        "Les Mis\u00e9rables",
         "Don Quixote"
       ],
       "difficulty": "medium"
@@ -8077,7 +8077,7 @@
       "correct_answer": "Margaret Mitchell",
       "incorrect_answers": [
         "Jane Austen",
-        "Charlotte Brontë",
+        "Charlotte Bront\u00eb",
         "Daphne du Maurier"
       ],
       "difficulty": "medium"
@@ -8231,6 +8231,512 @@
         "Glazing"
       ],
       "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of Hagrid's baby dragon in the first book?",
+      "correct_answer": "Norbert",
+      "incorrect_answers": [
+        "Norberta",
+        "Fluffy",
+        "Fawkes"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Roar' in 2013?",
+      "correct_answer": "Katy Perry",
+      "incorrect_answers": [
+        "Pink",
+        "Kelly Clarkson",
+        "Demi Lovato"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical formula for table sugar (sucrose)?",
+      "correct_answer": "C12H22O11",
+      "incorrect_answers": [
+        "C6H12O6",
+        "CH4",
+        "C2H6O"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Lima is the capital of which country?",
+      "correct_answer": "Peru",
+      "incorrect_answers": [
+        "Chile",
+        "Ecuador",
+        "Bolivia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Name the capital:\n\n\ud83c\udde8\ud83c\uddff",
+      "correct_answer": "Prague",
+      "incorrect_answers": [
+        "Warsaw",
+        "Budapest",
+        "Vienna"
+      ],
+      "difficulty": "easy",
+      "display_hint": "flag"
+    },
+    {
+      "question": "What does Felix Felicis do?",
+      "correct_answer": "Makes the drinker lucky",
+      "incorrect_answers": [
+        "Makes the drinker invisible",
+        "Gives the drinker strength",
+        "Makes the drinker tell the truth"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What spell makes a light appear at the tip of a wand?",
+      "correct_answer": "Lumos",
+      "incorrect_answers": [
+        "Nox",
+        "Incendio",
+        "Alohomora"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released the album 'Positions'?",
+      "correct_answer": "Ariana Grande",
+      "incorrect_answers": [
+        "Doja Cat",
+        "Dua Lipa",
+        "Cardi B"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between NoSQL and SQL databases?",
+      "correct_answer": "SQL databases use structured tables with fixed schemas; NoSQL databases use flexible schemas like documents, key-value pairs, or graphs",
+      "incorrect_answers": [
+        "NoSQL is always faster than SQL",
+        "SQL databases cannot handle large data",
+        "NoSQL databases always use tables"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who sang 'Jump' in 1984?",
+      "correct_answer": "Van Halen",
+      "incorrect_answers": [
+        "Def Leppard",
+        "Bon Jovi",
+        "Whitesnake"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'Creep' in 1992?",
+      "correct_answer": "Radiohead",
+      "incorrect_answers": [
+        "Nirvana",
+        "The Smashing Pumpkins",
+        "Oasis"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Greedy' in 2023?",
+      "correct_answer": "Tate McRae",
+      "incorrect_answers": [
+        "Dua Lipa",
+        "Olivia Rodrigo",
+        "Sabrina Carpenter"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Name this country:\n\n\ud83c\udde8\ud83c\uddfa",
+      "correct_answer": "Cuba",
+      "incorrect_answers": [
+        "Puerto Rico",
+        "Chile",
+        "Costa Rica"
+      ],
+      "difficulty": "easy",
+      "display_hint": "flag"
+    },
+    {
+      "question": "Name this country:\n\n\ud83c\uddfb\ud83c\uddea",
+      "correct_answer": "Venezuela",
+      "incorrect_answers": [
+        "Colombia",
+        "Ecuador",
+        "Guyana"
+      ],
+      "difficulty": "medium",
+      "display_hint": "flag"
+    },
+    {
+      "question": "In Friends, who plays Rachel Green?",
+      "correct_answer": "Jennifer Aniston",
+      "incorrect_answers": [
+        "Courteney Cox",
+        "Lisa Kudrow",
+        "Julia Roberts"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who sang 'With or Without You' in 1987?",
+      "correct_answer": "U2",
+      "incorrect_answers": [
+        "INXS",
+        "Simple Minds",
+        "The Cure"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who kills Oberyn Martell?",
+      "correct_answer": "The Mountain",
+      "incorrect_answers": [
+        "Tywin Lannister",
+        "Cersei Lannister",
+        "The Hound"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a priority queue?",
+      "correct_answer": "A data structure where each element has a priority and the highest-priority element is dequeued first",
+      "incorrect_answers": [
+        "A queue that processes elements alphabetically",
+        "A queue limited to a fixed number of elements",
+        "A queue that removes the oldest element first"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Name the capital:\n\n\ud83c\uddeb\ud83c\uddee",
+      "correct_answer": "Helsinki",
+      "incorrect_answers": [
+        "Stockholm",
+        "Oslo",
+        "Copenhagen"
+      ],
+      "difficulty": "easy",
+      "display_hint": "flag"
+    },
+    {
+      "question": "Who kills Thanos in the beginning of 'Avengers: Endgame'?",
+      "correct_answer": "Thor",
+      "incorrect_answers": [
+        "Captain Marvel",
+        "Iron Man",
+        "Nebula"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Radium?",
+      "correct_answer": "Ra",
+      "incorrect_answers": [
+        "R",
+        "Rd",
+        "Rm"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist sang 'Call Me Maybe'?",
+      "correct_answer": "Carly Rae Jepsen",
+      "incorrect_answers": [
+        "Rebecca Black",
+        "Meghan Trainor",
+        "Olivia Rodrigo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who kills Tywin Lannister?",
+      "correct_answer": "Tyrion Lannister",
+      "incorrect_answers": [
+        "Jaime Lannister",
+        "Cersei Lannister",
+        "Arya Stark"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a memory leak?",
+      "correct_answer": "When a program allocates memory but fails to release it after it is no longer needed, causing increasing memory consumption",
+      "incorrect_answers": [
+        "When memory is corrupted by a virus",
+        "When RAM physically deteriorates",
+        "When a program uses too much CPU"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which animal is the tallest in the world?",
+      "correct_answer": "Giraffe",
+      "incorrect_answers": [
+        "Elephant",
+        "Ostrich",
+        "Camel"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chemical symbol for Uranium?",
+      "correct_answer": "U",
+      "incorrect_answers": [
+        "Ur",
+        "Un",
+        "Ul"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who becomes King of the Six Kingdoms at the end of the series?",
+      "correct_answer": "Bran Stark",
+      "incorrect_answers": [
+        "Jon Snow",
+        "Tyrion Lannister",
+        "Sansa Stark"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Name this country:\n\n\ud83c\udde8\ud83c\uddf4",
+      "correct_answer": "Colombia",
+      "incorrect_answers": [
+        "Ecuador",
+        "Venezuela",
+        "Romania"
+      ],
+      "difficulty": "easy",
+      "display_hint": "flag"
+    },
+    {
+      "question": "What are baby frogs called?",
+      "correct_answer": "Tadpoles",
+      "incorrect_answers": [
+        "Larvae",
+        "Fry",
+        "Pups"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What platform does the Hogwarts Express depart from?",
+      "correct_answer": "Platform 9\u00be",
+      "incorrect_answers": [
+        "Platform 10",
+        "Platform 9",
+        "Platform 7\u00bd"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which artist released 'Last Night' that topped charts in 2023?",
+      "correct_answer": "Morgan Wallen",
+      "incorrect_answers": [
+        "Luke Combs",
+        "Chris Stapleton",
+        "Jason Aldean"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ROM stand for?",
+      "correct_answer": "Read-Only Memory",
+      "incorrect_answers": [
+        "Random Operating Memory",
+        "Readable Output Memory",
+        "Run-Only Memory"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who released 'Easy On Me'?",
+      "correct_answer": "Adele",
+      "incorrect_answers": [
+        "Sam Smith",
+        "Lewis Capaldi",
+        "Ed Sheeran"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the only mammal that can fly?",
+      "correct_answer": "Bat",
+      "incorrect_answers": [
+        "Flying squirrel",
+        "Sugar glider",
+        "Eagle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What muscle helps you breathe by moving up and down?",
+      "correct_answer": "Diaphragm",
+      "incorrect_answers": [
+        "Heart",
+        "Ribcage",
+        "Lungs"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which gas is known as 'laughing gas'?",
+      "correct_answer": "Nitrous oxide",
+      "incorrect_answers": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Helium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which song did Sin\u00e9ad O'Connor famously perform while tearing up a photo of the Pope on SNL?",
+      "correct_answer": "War",
+      "incorrect_answers": [
+        "Nothing Compares 2 U",
+        "Mandinka",
+        "The Emperor's New Clothes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character was the first to use the term 'Avengers Initiative'?",
+      "correct_answer": "Nick Fury",
+      "incorrect_answers": [
+        "Tony Stark",
+        "Peggy Carter",
+        "Alexander Pierce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In Money Heist, what is the Professor's relationship to Berlin?",
+      "correct_answer": "Brothers",
+      "incorrect_answers": [
+        "Father and son",
+        "Cousins",
+        "No relation"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What did Dumbledore see when he looked in the Mirror of Erised?",
+      "correct_answer": "Thick woolen socks",
+      "incorrect_answers": [
+        "His family alive",
+        "Himself as Minister",
+        "Grindelwald defeated"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the first index of an array in most programming languages?",
+      "correct_answer": "0",
+      "incorrect_answers": [
+        "1",
+        "-1",
+        "2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which song was Shawn Mendes' first #1 hit?",
+      "correct_answer": "Stitches",
+      "incorrect_answers": [
+        "Treat You Better",
+        "There's Nothing Holdin' Me Back",
+        "In My Blood"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the chemical symbol for Thorium?",
+      "correct_answer": "Th",
+      "incorrect_answers": [
+        "T",
+        "Tr",
+        "To"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do we call the layer of fat under the skin?",
+      "correct_answer": "Blubber",
+      "incorrect_answers": [
+        "Cartilage",
+        "Muscle",
+        "Marrow"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the last person Arya kills on her list?",
+      "correct_answer": "The Night King",
+      "incorrect_answers": [
+        "Cersei Lannister",
+        "Walder Frey",
+        "Meryn Trant"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who collaborated with Cardi B on 'WAP'?",
+      "correct_answer": "Megan Thee Stallion",
+      "incorrect_answers": [
+        "Nicki Minaj",
+        "Doja Cat",
+        "Lizzo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Taylor Swift album did she re-record first as a 'Taylor's Version'?",
+      "correct_answer": "Fearless",
+      "incorrect_answers": [
+        "Red",
+        "Speak Now",
+        "1989"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Name this country:\n\n\ud83c\uddea\ud83c\uddf9",
+      "correct_answer": "Ethiopia",
+      "incorrect_answers": [
+        "Ghana",
+        "Jamaica",
+        "Bolivia"
+      ],
+      "difficulty": "medium",
+      "display_hint": "flag"
+    },
+    {
+      "question": "What element's symbol comes from the Latin word 'plumbum'?",
+      "correct_answer": "Lead",
+      "incorrect_answers": [
+        "Platinum",
+        "Plutonium",
+        "Phosphorus"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which country is BTS from?",
+      "correct_answer": "South Korea",
+      "incorrect_answers": [
+        "Japan",
+        "China",
+        "Thailand"
+      ],
+      "difficulty": "easy"
     }
   ]
 }
