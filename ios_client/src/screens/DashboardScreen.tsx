@@ -554,37 +554,7 @@ export default function DashboardScreen({ navigation }: Props) {
           </Animated.View>
         )}
 
-        {/* ═══ QUICK PLAY (State B only) ═══ */}
-        {isStateB && lastPlayedCategory && (
-          <QuickPlayBar
-            category={lastPlayedCategory}
-            onPress={async () => {
-              try {
-                const qc = lastPlayedQuestionCount;
-                const r = await api.post<{ gameId: string; questionSetId: string }>(
-                  '/games/solo', { category: lastPlayedCategory, questionCount: qc }
-                );
-                navigation.navigate('Game', {
-                  gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
-                  category: lastPlayedCategory!, timer: 30, questionCount: qc,
-                });
-              } catch {}
-            }}
-            delay={400}
-          />
-        )}
-
-        {/* ═══ PROGRESS SECTION (State B only) ═══ */}
-        {isStateB && (
-          <ProgressSection
-            dailyStreak={dailyStreak}
-            bestScore={bestScore}
-            gamesPlayed={gamesPlayedTotal ?? 0}
-            delay={500}
-          />
-        )}
-
-        {/* ═══ FRIEND REQUESTS ═══ */}
+        {/* ═══ FRIEND REQUESTS (shown in all states, right after mode cards) ═══ */}
         {!isGuest && friendRequests.length > 0 && (
           <Animated.View entering={FadeInDown.delay(350).duration(400)} style={styles.challengeSection}>
             <View style={styles.sectionHeader}>
@@ -625,6 +595,36 @@ export default function DashboardScreen({ navigation }: Props) {
               })}
             </View>
           </Animated.View>
+        )}
+
+        {/* ═══ QUICK PLAY (State B only) ═══ */}
+        {isStateB && lastPlayedCategory && (
+          <QuickPlayBar
+            category={lastPlayedCategory}
+            onPress={async () => {
+              try {
+                const qc = lastPlayedQuestionCount;
+                const r = await api.post<{ gameId: string; questionSetId: string }>(
+                  '/games/solo', { category: lastPlayedCategory, questionCount: qc }
+                );
+                navigation.navigate('Game', {
+                  gameId: r.gameId, mode: 'solo', questionSetId: r.questionSetId,
+                  category: lastPlayedCategory!, timer: 30, questionCount: qc,
+                });
+              } catch {}
+            }}
+            delay={400}
+          />
+        )}
+
+        {/* ═══ PROGRESS SECTION (State B only) ═══ */}
+        {isStateB && (
+          <ProgressSection
+            dailyStreak={dailyStreak}
+            bestScore={bestScore}
+            gamesPlayed={gamesPlayedTotal ?? 0}
+            delay={500}
+          />
         )}
 
         {/* ═══ INCOMING CHALLENGES ═══ */}
