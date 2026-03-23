@@ -13331,6 +13331,656 @@
         "France"
       ],
       "difficulty": "medium"
+    },
+    {
+      "question": "What movie features a nanny who flies in with an umbrella?",
+      "correct_answer": "Mary Poppins",
+      "incorrect_answers": [
+        "The Sound of Music",
+        "Nanny McPhee",
+        "Enchanted"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Dominic Toretto in 'Fast and Furious'?",
+      "correct_answer": "Vin Diesel",
+      "incorrect_answers": [
+        "Dwayne Johnson",
+        "Paul Walker",
+        "Jason Statham"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Disney movie features a magic carpet ride?",
+      "correct_answer": "Aladdin",
+      "incorrect_answers": [
+        "The Little Mermaid",
+        "Beauty and the Beast",
+        "Mulan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ET stand for?",
+      "correct_answer": "Extra-Terrestrial",
+      "incorrect_answers": [
+        "Electronic Technology",
+        "Earth Traveler",
+        "Eternal Time"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actress starred in 'The Hunger Games' and 'Silver Linings Playbook'?",
+      "correct_answer": "Jennifer Lawrence",
+      "incorrect_answers": [
+        "Emma Stone",
+        "Natalie Portman",
+        "Anne Hathaway"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the final movie in the original 'Avengers' saga?",
+      "correct_answer": "Avengers: Endgame",
+      "incorrect_answers": [
+        "Avengers: Infinity War",
+        "Avengers: Age of Ultron",
+        "Spider-Man: Far From Home"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played the Genie in the 2019 live-action 'Aladdin'?",
+      "correct_answer": "Will Smith",
+      "incorrect_answers": [
+        "Robin Williams",
+        "Kevin Hart",
+        "Jack Black"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who composed the music for 'The Lord of the Rings' trilogy?",
+      "correct_answer": "Howard Shore",
+      "incorrect_answers": [
+        "John Williams",
+        "Hans Zimmer",
+        "Danny Elfman"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Blade Runner', what year is the movie set in?",
+      "correct_answer": "2019",
+      "incorrect_answers": [
+        "2029",
+        "2049",
+        "2001"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Buzz Lightyear's famous catchphrase?",
+      "correct_answer": "To infinity and beyond!",
+      "incorrect_answers": [
+        "You've got a friend in me!",
+        "Reach for the sky!",
+        "There's a snake in my boot!"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which 2018 movie features a Black superhero from Marvel?",
+      "correct_answer": "Black Panther",
+      "incorrect_answers": [
+        "Spider-Man: Into the Spider-Verse",
+        "Aquaman",
+        "Venom"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Batman's car?",
+      "correct_answer": "The Batmobile",
+      "incorrect_answers": [
+        "The Dark Machine",
+        "The Knight Rider",
+        "The Bat Cruiser"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What movie features the quote 'You talking to me?'?",
+      "correct_answer": "Taxi Driver",
+      "incorrect_answers": [
+        "Scarface",
+        "The Godfather",
+        "Goodfellas"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who played the Joker in 'The Dark Knight'?",
+      "correct_answer": "Heath Ledger",
+      "incorrect_answers": [
+        "Joaquin Phoenix",
+        "Jack Nicholson",
+        "Jared Leto"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the kingdom in 'Frozen'?",
+      "correct_answer": "Arendelle",
+      "incorrect_answers": [
+        "Corona",
+        "Genovia",
+        "DunBroch"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Black Widow in the Avengers?",
+      "correct_answer": "Scarlett Johansson",
+      "incorrect_answers": [
+        "Gal Gadot",
+        "Brie Larson",
+        "Elizabeth Olsen"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the chronological order of the Star Wars prequel trilogy?",
+      "correct_answer": "The Phantom Menace, Attack of the Clones, Revenge of the Sith",
+      "incorrect_answers": [
+        "Attack of the Clones, The Phantom Menace, Revenge of the Sith",
+        "Revenge of the Sith, The Phantom Menace, Attack of the Clones",
+        "The Phantom Menace, Revenge of the Sith, Attack of the Clones"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What 1997 movie features Will Smith fighting aliens?",
+      "correct_answer": "Men in Black",
+      "incorrect_answers": [
+        "Independence Day",
+        "Enemy of the State",
+        "Wild Wild West"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played James Bond most recently before Daniel Craig?",
+      "correct_answer": "Pierce Brosnan",
+      "incorrect_answers": [
+        "Timothy Dalton",
+        "Roger Moore",
+        "Sean Connery"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Prestige', what are the two rival magicians' names?",
+      "correct_answer": "Robert Angier and Alfred Borden",
+      "incorrect_answers": [
+        "Harry Houdini and David Copperfield",
+        "Penn and Teller",
+        "Carter and Blackstone"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year was the original 'Jurassic Park' released?",
+      "correct_answer": "1993",
+      "incorrect_answers": [
+        "1991",
+        "1995",
+        "1990"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who plays Thor in the Marvel movies?",
+      "correct_answer": "Chris Hemsworth",
+      "incorrect_answers": [
+        "Chris Evans",
+        "Chris Pratt",
+        "Chris Pine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Sherlock Holmes in the 2009 film?",
+      "correct_answer": "Robert Downey Jr.",
+      "incorrect_answers": [
+        "Benedict Cumberbatch",
+        "Henry Cavill",
+        "Jude Law"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Coco', what is Miguel's dream?",
+      "correct_answer": "To be a musician",
+      "incorrect_answers": [
+        "To be an artist",
+        "To be a chef",
+        "To be an explorer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which movie is the sequel to 'The Lion King'?",
+      "correct_answer": "The Lion King II: Simba's Pride",
+      "incorrect_answers": [
+        "The Lion Guard",
+        "The Lion King 1\u00bd",
+        "Simba's Return"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the ship in 'Titanic'?",
+      "correct_answer": "RMS Titanic",
+      "incorrect_answers": [
+        "HMS Victory",
+        "SS Britannic",
+        "RMS Lusitania"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Titanic', what is the name of the necklace?",
+      "correct_answer": "The Heart of the Ocean",
+      "incorrect_answers": [
+        "The Star of Africa",
+        "The Hope Diamond",
+        "The Blue Sapphire"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which movie features a superhero named T'Challa?",
+      "correct_answer": "Black Panther",
+      "incorrect_answers": [
+        "Black Adam",
+        "Blade",
+        "Luke Cage"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Catch Me If You Can', who does Leonardo DiCaprio impersonate?",
+      "correct_answer": "A pilot, doctor, and lawyer (Frank Abagnale Jr.)",
+      "incorrect_answers": [
+        "A spy",
+        "A president",
+        "A celebrity"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who voices Donkey in 'Shrek'?",
+      "correct_answer": "Eddie Murphy",
+      "incorrect_answers": [
+        "Chris Rock",
+        "Kevin Hart",
+        "Martin Lawrence"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What animated movie features a rat who wants to be a chef?",
+      "correct_answer": "Ratatouille",
+      "incorrect_answers": [
+        "Flushed Away",
+        "Stuart Little",
+        "Chef"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the fictional mineral in 'Avatar'?",
+      "correct_answer": "Unobtanium",
+      "incorrect_answers": [
+        "Vibranium",
+        "Kryptonite",
+        "Adamantium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Lion King', what is Simba's father's name?",
+      "correct_answer": "Mufasa",
+      "incorrect_answers": [
+        "Scar",
+        "Rafiki",
+        "Zazu"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Finding Nemo', what type of fish is Nemo?",
+      "correct_answer": "Clownfish",
+      "incorrect_answers": [
+        "Goldfish",
+        "Angelfish",
+        "Betta fish"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Shrek', what type of creature is the main character?",
+      "correct_answer": "Ogre",
+      "incorrect_answers": [
+        "Troll",
+        "Giant",
+        "Goblin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'Gone Girl'?",
+      "correct_answer": "David Fincher",
+      "incorrect_answers": [
+        "Denis Villeneuve",
+        "Darren Aronofsky",
+        "David Lynch"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the fictional metal in 'Black Panther'?",
+      "correct_answer": "Vibranium",
+      "incorrect_answers": [
+        "Adamantium",
+        "Unobtanium",
+        "Kryptonite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who plays the villain Killmonger in 'Black Panther'?",
+      "correct_answer": "Michael B. Jordan",
+      "incorrect_answers": [
+        "Chadwick Boseman",
+        "Daniel Kaluuya",
+        "John Boyega"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What sport is 'Rocky' about?",
+      "correct_answer": "Boxing",
+      "incorrect_answers": [
+        "Wrestling",
+        "MMA",
+        "Kickboxing"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'The Dark Knight' trilogy?",
+      "correct_answer": "Christopher Nolan",
+      "incorrect_answers": [
+        "Zack Snyder",
+        "Tim Burton",
+        "Matt Reeves"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the snowman in 'Frozen'?",
+      "correct_answer": "Olaf",
+      "incorrect_answers": [
+        "Sven",
+        "Kristoff",
+        "Hans"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'Moana', what does Moana need to restore?",
+      "correct_answer": "The heart of Te Fiti",
+      "incorrect_answers": [
+        "Her father's throne",
+        "The ocean's magic",
+        "A stolen gem"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What school do the characters attend in 'Mean Girls'?",
+      "correct_answer": "North Shore High School",
+      "incorrect_answers": [
+        "West Beverly High",
+        "Rydell High",
+        "Shermer High"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the spaceship in 'Alien' franchise's sequel?",
+      "correct_answer": "Sulaco (in Aliens)",
+      "incorrect_answers": [
+        "Nostromo",
+        "Prometheus",
+        "Covenant"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'No Country for Old Men', what weapon does Anton Chigurh use?",
+      "correct_answer": "A captive bolt pistol (cattle gun)",
+      "incorrect_answers": [
+        "A silenced pistol",
+        "A shotgun",
+        "A knife"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What city does Batman protect?",
+      "correct_answer": "Gotham City",
+      "incorrect_answers": [
+        "Metropolis",
+        "Star City",
+        "Central City"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'The Godfather'?",
+      "correct_answer": "Francis Ford Coppola",
+      "incorrect_answers": [
+        "Martin Scorsese",
+        "Brian De Palma",
+        "Sergio Leone"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animated movie features a fish searching for his son?",
+      "correct_answer": "Finding Nemo",
+      "incorrect_answers": [
+        "Shark Tale",
+        "The Little Mermaid",
+        "Moana"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What language is 'Parasite' in?",
+      "correct_answer": "Korean",
+      "incorrect_answers": [
+        "Japanese",
+        "Mandarin",
+        "Thai"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many 'Harry Potter' movies are there?",
+      "correct_answer": "8",
+      "incorrect_answers": [
+        "7",
+        "9",
+        "6"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Doctor Strange in the MCU?",
+      "correct_answer": "Benedict Cumberbatch",
+      "incorrect_answers": [
+        "Tom Hiddleston",
+        "Oscar Isaac",
+        "Jeremy Renner"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played M in the Daniel Craig James Bond films?",
+      "correct_answer": "Judi Dench (and later Ralph Fiennes)",
+      "incorrect_answers": [
+        "Helen Mirren",
+        "Maggie Smith",
+        "Ian McKellen"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "'I see dead people' is from which movie?",
+      "correct_answer": "The Sixth Sense",
+      "incorrect_answers": [
+        "The Others",
+        "Ghost",
+        "Poltergeist"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed 'The Shining'?",
+      "correct_answer": "Stanley Kubrick",
+      "incorrect_answers": [
+        "Alfred Hitchcock",
+        "David Lynch",
+        "Wes Craven"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Grease', what is the name of the high school?",
+      "correct_answer": "Rydell High",
+      "incorrect_answers": [
+        "Shermer High",
+        "West Beverly",
+        "Bayside High"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Spider-Man movie features three Spider-Men?",
+      "correct_answer": "Spider-Man: No Way Home",
+      "incorrect_answers": [
+        "Spider-Man: Far From Home",
+        "Spider-Man: Homecoming",
+        "The Amazing Spider-Man 2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What Wes Anderson movie is set on a fictional island of exiled dogs?",
+      "correct_answer": "Isle of Dogs",
+      "incorrect_answers": [
+        "Fantastic Mr. Fox",
+        "The Life Aquatic",
+        "Moonrise Kingdom"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Good Will Hunting', what university does Will work at as a janitor?",
+      "correct_answer": "MIT",
+      "incorrect_answers": [
+        "Harvard",
+        "Yale",
+        "Princeton"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What 2023 movie is about the inventor of the atomic bomb?",
+      "correct_answer": "Oppenheimer",
+      "incorrect_answers": [
+        "The Creator",
+        "Napoleon",
+        "Killers of the Flower Moon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What superhero wears a red cape and has an 'S' on their chest?",
+      "correct_answer": "Superman",
+      "incorrect_answers": [
+        "Thor",
+        "Doctor Strange",
+        "Vision"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Miranda Priestly in 'The Devil Wears Prada'?",
+      "correct_answer": "Meryl Streep",
+      "incorrect_answers": [
+        "Cate Blanchett",
+        "Helen Mirren",
+        "Tilda Swinton"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who played Batman in 'The Dark Knight'?",
+      "correct_answer": "Christian Bale",
+      "incorrect_answers": [
+        "Ben Affleck",
+        "Robert Pattinson",
+        "George Clooney"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Life is like a box of chocolates' is from which movie?",
+      "correct_answer": "Forrest Gump",
+      "incorrect_answers": [
+        "The Shawshank Redemption",
+        "Good Will Hunting",
+        "Cast Away"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "In 'The Social Network', who does Jesse Eisenberg play?",
+      "correct_answer": "Mark Zuckerberg",
+      "incorrect_answers": [
+        "Elon Musk",
+        "Steve Jobs",
+        "Bill Gates"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "'I'm the king of the world!' is a quote from which movie?",
+      "correct_answer": "Titanic",
+      "incorrect_answers": [
+        "The Lion King",
+        "Gladiator",
+        "Braveheart"
+      ],
+      "difficulty": "easy"
     }
   ]
 }
