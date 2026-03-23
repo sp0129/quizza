@@ -12731,6 +12731,606 @@
         "Rifle"
       ],
       "difficulty": "medium"
+    },
+    {
+      "question": "What is the smoke point of olive oil approximately?",
+      "correct_answer": "Around 375\u00b0F (190\u00b0C)",
+      "incorrect_answers": [
+        "Around 500\u00b0F",
+        "Around 250\u00b0F",
+        "Around 600\u00b0F"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What grape is Champagne primarily made from?",
+      "correct_answer": "Chardonnay, Pinot Noir, and Pinot Meunier",
+      "incorrect_answers": [
+        "Only Chardonnay",
+        "Sauvignon Blanc",
+        "Riesling"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the most widely eaten food in the world?",
+      "correct_answer": "Rice",
+      "incorrect_answers": [
+        "Wheat",
+        "Corn",
+        "Potatoes"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is raita?",
+      "correct_answer": "An Indian yogurt condiment with cucumber and spices",
+      "incorrect_answers": [
+        "A type of bread",
+        "A rice dish",
+        "A curry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is wasabi?",
+      "correct_answer": "A spicy Japanese condiment made from a plant root",
+      "incorrect_answers": [
+        "A type of seaweed",
+        "Fermented soybean paste",
+        "Green chili sauce"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is gelato?",
+      "correct_answer": "Italian-style ice cream",
+      "incorrect_answers": [
+        "Frozen yogurt",
+        "Sorbet",
+        "Custard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country produces the most coffee in the world?",
+      "correct_answer": "Brazil",
+      "incorrect_answers": [
+        "Colombia",
+        "Ethiopia",
+        "Vietnam"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is curry most associated with?",
+      "correct_answer": "India",
+      "incorrect_answers": [
+        "Thailand",
+        "Japan",
+        "China"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in pad thai?",
+      "correct_answer": "Rice noodles",
+      "incorrect_answers": [
+        "Egg noodles",
+        "Ramen noodles",
+        "Glass noodles"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is sake originally from?",
+      "correct_answer": "Japan",
+      "incorrect_answers": [
+        "China",
+        "Korea",
+        "Thailand"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a pretzel traditionally shaped like?",
+      "correct_answer": "A knot or twisted loop",
+      "incorrect_answers": [
+        "A circle",
+        "A stick",
+        "A star"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a gyro?",
+      "correct_answer": "Greek meat cooked on a vertical rotisserie, served in pita",
+      "incorrect_answers": [
+        "A type of sushi",
+        "An Italian sandwich",
+        "A French cr\u00eape"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main difference between bourbon and whiskey?",
+      "correct_answer": "Bourbon must be made from at least 51% corn and aged in new charred oak barrels",
+      "incorrect_answers": [
+        "Bourbon is from Scotland",
+        "Bourbon uses wheat only",
+        "There is no difference"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What country is the origin of the cocktail 'Caipirinha'?",
+      "correct_answer": "Brazil",
+      "incorrect_answers": [
+        "Cuba",
+        "Mexico",
+        "Portugal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main spirit in a Negroni?",
+      "correct_answer": "Gin",
+      "incorrect_answers": [
+        "Vodka",
+        "Rum",
+        "Whiskey"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is garam masala?",
+      "correct_answer": "A blend of ground spices used in Indian cooking",
+      "incorrect_answers": [
+        "A single spice",
+        "A type of curry paste",
+        "A fermented condiment"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What pastry is an \u00e9clair?",
+      "correct_answer": "A choux pastry filled with cream and topped with chocolate",
+      "incorrect_answers": [
+        "A flaky pie",
+        "A fried doughnut",
+        "A layered cake"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is gochujang?",
+      "correct_answer": "Korean fermented red chili paste",
+      "incorrect_answers": [
+        "Japanese soy paste",
+        "Thai curry paste",
+        "Chinese hoisin sauce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the national drink of India?",
+      "correct_answer": "Chai (tea)",
+      "incorrect_answers": [
+        "Lassi",
+        "Coconut water",
+        "Coffee"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the five mother sauces in French cuisine?",
+      "correct_answer": "B\u00e9chamel, Velout\u00e9, Espagnole, Hollandaise, Tomato",
+      "incorrect_answers": [
+        "Marinara, Alfredo, Pesto, Ranch, BBQ",
+        "Ketchup, Mustard, Mayo, Soy, Hot Sauce",
+        "Gravy, Cream, Cheese, Brown, White"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a bisque and a chowder?",
+      "correct_answer": "Bisque is smooth and creamy; chowder is chunky",
+      "incorrect_answers": [
+        "They're the same",
+        "Bisque is chunky",
+        "Chowder has no cream"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is prosciutto?",
+      "correct_answer": "Dry-cured Italian ham",
+      "incorrect_answers": [
+        "Italian sausage",
+        "Smoked bacon",
+        "Cooked ham"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main difference between puff pastry and phyllo dough?",
+      "correct_answer": "Puff pastry has butter folded in; phyllo is paper-thin and brushed with butter",
+      "incorrect_answers": [
+        "They are the same",
+        "Phyllo has more butter",
+        "Puff pastry is healthier"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is matcha?",
+      "correct_answer": "Finely ground green tea powder",
+      "incorrect_answers": [
+        "A type of coffee",
+        "Dried herbs",
+        "A chocolate substitute"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a macaron?",
+      "correct_answer": "A French meringue-based sandwich cookie",
+      "incorrect_answers": [
+        "A coconut cookie (that's a macaroon)",
+        "A chocolate truffle",
+        "A cream puff"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What fruit is traditionally used to make wine?",
+      "correct_answer": "Grapes",
+      "incorrect_answers": [
+        "Apples",
+        "Berries",
+        "Plums"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is an empanada?",
+      "correct_answer": "A filled pastry turnover",
+      "incorrect_answers": [
+        "A type of taco",
+        "A Mexican soup",
+        "A fried rice ball"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is granola?",
+      "correct_answer": "Baked oats mixed with honey, nuts, and dried fruit",
+      "incorrect_answers": [
+        "A type of cereal grain",
+        "Ground wheat",
+        "A protein bar ingredient"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What cut of beef is a T-bone steak?",
+      "correct_answer": "A cut containing both strip and tenderloin separated by a T-shaped bone",
+      "incorrect_answers": [
+        "Pure tenderloin",
+        "Ribeye with bone",
+        "Sirloin with bone"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a reduction in cooking?",
+      "correct_answer": "A sauce thickened by simmering to evaporate liquid",
+      "incorrect_answers": [
+        "Cutting food into small pieces",
+        "Lowering the oven temperature",
+        "Removing fat from meat"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a pestle used with?",
+      "correct_answer": "A mortar (for grinding spices)",
+      "incorrect_answers": [
+        "A cutting board",
+        "A strainer",
+        "A rolling pin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the most popular cookie in America?",
+      "correct_answer": "Chocolate chip",
+      "incorrect_answers": [
+        "Oreo",
+        "Sugar cookie",
+        "Oatmeal raisin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which country is fish and chips associated with?",
+      "correct_answer": "England",
+      "incorrect_answers": [
+        "Scotland",
+        "Australia",
+        "Ireland"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of flour is typically used for making pasta?",
+      "correct_answer": "Semolina (durum wheat)",
+      "incorrect_answers": [
+        "All-purpose flour",
+        "Bread flour",
+        "Cake flour"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between Mezcal and Tequila?",
+      "correct_answer": "Tequila is only from blue agave; Mezcal can use any agave species",
+      "incorrect_answers": [
+        "Mezcal is stronger",
+        "Tequila is smoky",
+        "They're the same"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Italian term for 'before the meal' appetizers?",
+      "correct_answer": "Antipasto",
+      "incorrect_answers": [
+        "Primo",
+        "Secondo",
+        "Dolce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is dim sum?",
+      "correct_answer": "Small Chinese dishes served with tea",
+      "incorrect_answers": [
+        "A type of sushi",
+        "Thai street food",
+        "Korean BBQ"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Scoville scale used to measure?",
+      "correct_answer": "The heat of chili peppers",
+      "incorrect_answers": [
+        "Sweetness of fruit",
+        "Acidity of wine",
+        "Saltiness of food"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main ingredient in a Mojito besides rum?",
+      "correct_answer": "Mint",
+      "incorrect_answers": [
+        "Basil",
+        "Cilantro",
+        "Rosemary"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the proper way to store fresh basil?",
+      "correct_answer": "In a glass of water at room temperature",
+      "incorrect_answers": [
+        "In the refrigerator",
+        "In a sealed plastic bag",
+        "In the freezer"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an amuse-bouche?",
+      "correct_answer": "A small complimentary appetizer from the chef",
+      "incorrect_answers": [
+        "A dessert course",
+        "A type of cocktail",
+        "The main course"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What cheese has holes and is from Switzerland?",
+      "correct_answer": "Emmental",
+      "incorrect_answers": [
+        "Gruy\u00e8re",
+        "Appenzeller",
+        "Raclette"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What cheese is Parmigiano-Reggiano?",
+      "correct_answer": "A hard Italian cheese aged at least 12 months",
+      "incorrect_answers": [
+        "A soft French cheese",
+        "A Dutch semi-hard cheese",
+        "A Greek crumbly cheese"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a bain-marie?",
+      "correct_answer": "A water bath for gentle heating",
+      "incorrect_answers": [
+        "A French knife technique",
+        "A type of oven",
+        "A serving dish"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the world's most popular spice?",
+      "correct_answer": "Black pepper",
+      "incorrect_answers": [
+        "Salt",
+        "Cinnamon",
+        "Cumin"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What herb is traditionally used in a Bloody Mary?",
+      "correct_answer": "Celery (as garnish) with horseradish and Worcestershire",
+      "incorrect_answers": [
+        "Basil",
+        "Rosemary",
+        "Thyme"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What vegetable is the main ingredient in coleslaw?",
+      "correct_answer": "Cabbage",
+      "incorrect_answers": [
+        "Lettuce",
+        "Kale",
+        "Spinach"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the filling in a traditional cannoli?",
+      "correct_answer": "Ricotta cheese",
+      "incorrect_answers": [
+        "Cream cheese",
+        "Mascarpone",
+        "Custard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a quesadilla?",
+      "correct_answer": "A tortilla filled with cheese and grilled",
+      "incorrect_answers": [
+        "A fried taco",
+        "A type of burrito",
+        "A Mexican soup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of pasta is shaped like a bow tie?",
+      "correct_answer": "Farfalle",
+      "incorrect_answers": [
+        "Penne",
+        "Rigatoni",
+        "Fusilli"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main ingredient in risotto?",
+      "correct_answer": "Arborio rice",
+      "incorrect_answers": [
+        "Basmati rice",
+        "Jasmine rice",
+        "Wild rice"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What bean is used to make coffee?",
+      "correct_answer": "Coffee bean (seed of the coffee cherry)",
+      "incorrect_answers": [
+        "Cacao bean",
+        "Vanilla bean",
+        "Soybean"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a sommelier?",
+      "correct_answer": "A wine expert",
+      "incorrect_answers": [
+        "A pastry chef",
+        "A butcher",
+        "A food critic"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main ingredient in a margarita besides tequila?",
+      "correct_answer": "Lime juice",
+      "incorrect_answers": [
+        "Orange juice",
+        "Lemon juice",
+        "Grapefruit juice"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of milk is used in a traditional London Fog latte?",
+      "correct_answer": "Steamed milk (any kind)",
+      "incorrect_answers": [
+        "Only oat milk",
+        "Only coconut milk",
+        "Only almond milk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the base spirit in an Old Fashioned?",
+      "correct_answer": "Bourbon or rye whiskey",
+      "incorrect_answers": [
+        "Scotch",
+        "Brandy",
+        "Rum"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What pasta shape means 'little ears' in Italian?",
+      "correct_answer": "Orecchiette",
+      "incorrect_answers": [
+        "Conchiglie",
+        "Rotini",
+        "Campanelle"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What vegetable do you traditionally carve on Halloween?",
+      "correct_answer": "Pumpkin",
+      "incorrect_answers": [
+        "Squash",
+        "Watermelon",
+        "Turnip"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of food is a dumpling?",
+      "correct_answer": "Dough wrapped around a filling",
+      "incorrect_answers": [
+        "A type of bread",
+        "A fried rice ball",
+        "A noodle soup"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country does feta cheese come from?",
+      "correct_answer": "Greece",
+      "incorrect_answers": [
+        "Turkey",
+        "Italy",
+        "France"
+      ],
+      "difficulty": "medium"
     }
   ]
 }
