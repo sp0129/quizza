@@ -14481,6 +14481,1006 @@
         "A shadow creature"
       ],
       "difficulty": "hard"
+    },
+    {
+      "question": "Which song was TikTok's most-used sound in 2020?",
+      "correct_answer": "Savage Love \u2014 Jawsh 685 & Jason Derulo",
+      "incorrect_answers": [
+        "Blinding Lights \u2014 The Weeknd",
+        "WAP \u2014 Cardi B",
+        "Toosie Slide \u2014 Drake"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the electrode at which reduction occurs called?",
+      "correct_answer": "Cathode",
+      "incorrect_answers": [
+        "Anode",
+        "Electrode",
+        "Terminal"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the editing technique that cuts between two different scenes happening simultaneously?",
+      "correct_answer": "Cross-cutting (or parallel editing)",
+      "incorrect_answers": [
+        "Jump cut",
+        "Montage",
+        "Match cut"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the orphanage where Tom Riddle grew up?",
+      "correct_answer": "Wool's Orphanage",
+      "incorrect_answers": [
+        "St. Brutus's",
+        "Stonewall",
+        "Mrs. Cole's Home"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the hybridization of carbon in acetylene (C2H2)?",
+      "correct_answer": "sp",
+      "incorrect_answers": [
+        "sp2",
+        "sp3",
+        "sp3d"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What film was shot entirely in a single apartment?",
+      "correct_answer": "Rope (1948) by Alfred Hitchcock",
+      "incorrect_answers": [
+        "12 Angry Men",
+        "Rear Window",
+        "Buried"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Kendrick Lamar album was the first hip-hop album to win the Pulitzer Prize for Music?",
+      "correct_answer": "DAMN.",
+      "incorrect_answers": [
+        "To Pimp a Butterfly",
+        "good kid, m.A.A.d city",
+        "Mr. Morale & The Big Steppers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Fast Fourier Transform (FFT) used for?",
+      "correct_answer": "Efficiently computing the Discrete Fourier Transform, reducing the complexity from O(n\u00b2) to O(n log n), used in signal processing and polynomial multiplication",
+      "incorrect_answers": [
+        "Sorting arrays of floating point numbers",
+        "Encrypting data for secure transfer",
+        "Compressing images using lossy encoding"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Succession, what media company does the Roy family compete against?",
+      "correct_answer": "Pierce Global Media (PGM)",
+      "incorrect_answers": [
+        "Waystar Global",
+        "Atlas Media",
+        "Shire Media"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In That '70s Show, what is the name of the fictional town?",
+      "correct_answer": "Point Place",
+      "incorrect_answers": [
+        "Green Bay",
+        "Milwaukee",
+        "Madison"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a suffix tree?",
+      "correct_answer": "A compressed trie of all suffixes of a string, enabling fast substring search, longest repeated substring, and other string operations",
+      "incorrect_answers": [
+        "A binary tree storing file extensions",
+        "A tree where only leaf nodes store data",
+        "A balanced tree for numeric data"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is cache coherence in multi-processor systems?",
+      "correct_answer": "The problem of ensuring that multiple CPU caches reflecting the same memory location remain consistent when one processor modifies the data",
+      "incorrect_answers": [
+        "Organizing the browser cache efficiently",
+        "Making sure CDN caches have the same content",
+        "A database caching strategy"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the capital of Bhutan?",
+      "correct_answer": "Thimphu",
+      "incorrect_answers": [
+        "Paro",
+        "Punakha",
+        "Bumthang"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the knife cut that produces 1/8 inch cubes?",
+      "correct_answer": "Brunoise",
+      "incorrect_answers": [
+        "Julienne",
+        "Chiffonade",
+        "Paysanne"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is 'dashi' in Japanese cooking?",
+      "correct_answer": "A stock made from kelp and bonito flakes",
+      "incorrect_answers": [
+        "Soy sauce",
+        "Rice vinegar",
+        "Miso paste"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between Kruskal's and Prim's algorithms?",
+      "correct_answer": "Both find minimum spanning trees, but Kruskal's adds the shortest edge that doesn't form a cycle, while Prim's grows the MST from a starting vertex by adding the nearest neighbor",
+      "incorrect_answers": [
+        "Kruskal's finds shortest paths; Prim's finds spanning trees",
+        "They produce different trees for the same graph",
+        "Prim's is always faster than Kruskal's"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Desperate Housewives, who is revealed as the narrator and is actually dead?",
+      "correct_answer": "Mary Alice Young",
+      "incorrect_answers": [
+        "Bree Van de Kamp",
+        "Edie Britt",
+        "Katherine Mayfair"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the A* search algorithm?",
+      "correct_answer": "A graph search algorithm that finds the shortest path using both actual cost from the start and a heuristic estimate to the goal",
+      "incorrect_answers": [
+        "An improved version of bubble sort",
+        "A brute-force search through all paths",
+        "A random walk algorithm"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the process used to manufacture nitric acid?",
+      "correct_answer": "Ostwald process",
+      "incorrect_answers": [
+        "Haber process",
+        "Contact process",
+        "Solvay process"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the proper serving temperature for white Burgundy?",
+      "correct_answer": "Around 50-55\u00b0F (10-13\u00b0C)",
+      "incorrect_answers": [
+        "Ice cold (35\u00b0F)",
+        "Room temperature (70\u00b0F)",
+        "Warm (65\u00b0F)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which album by Prince was originally released with an unpronounceable symbol as his name?",
+      "correct_answer": "Come",
+      "incorrect_answers": [
+        "Gold",
+        "Emancipation",
+        "The Gold Experience"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the core of Draco Malfoy's wand?",
+      "correct_answer": "Unicorn hair",
+      "incorrect_answers": [
+        "Dragon heartstring",
+        "Phoenix feather",
+        "Thestral tail hair"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which capital city sits at the highest elevation?",
+      "correct_answer": "La Paz, Bolivia",
+      "incorrect_answers": [
+        "Quito, Ecuador",
+        "Bogot\u00e1, Colombia",
+        "Addis Ababa, Ethiopia"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The Sopranos, what is the name of the restaurant where key meetings happen?",
+      "correct_answer": "Vesuvio",
+      "incorrect_answers": [
+        "Satriale's",
+        "The Bing",
+        "Nuovo Vesuvio"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the graph coloring problem and how does it relate to register allocation?",
+      "correct_answer": "Graph coloring assigns colors to vertices so no adjacent vertices share a color; in register allocation, variables are vertices, interferences are edges, and colors are registers",
+      "incorrect_answers": [
+        "Graph coloring is used to optimize database queries",
+        "It determines the color scheme of a GUI",
+        "It has no relation to register allocation"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What movie was the first to earn over $100 million at the box office?",
+      "correct_answer": "Jaws (1975)",
+      "incorrect_answers": [
+        "Star Wars (1977)",
+        "The Godfather (1972)",
+        "The Exorcist (1973)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which songwriter has written or co-written 25 Billboard #1 hits, including for Britney Spears, Katy Perry, and Taylor Swift?",
+      "correct_answer": "Max Martin",
+      "incorrect_answers": [
+        "Dr. Luke",
+        "Benny Blanco",
+        "Shellback"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the P vs NP problem?",
+      "correct_answer": "The unsolved question of whether every problem whose solution can be verified quickly (NP) can also be solved quickly (P)",
+      "incorrect_answers": [
+        "The question of whether parallel computing is faster",
+        "Whether Python is better than Node.js",
+        "Whether all problems have polynomial solutions"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What year was Hogwarts founded?",
+      "correct_answer": "Around 990 AD",
+      "incorrect_answers": [
+        "Around 1100 AD",
+        "Around 800 AD",
+        "Around 1200 AD"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Eyes Wide Shut', what was unique about the production timeline?",
+      "correct_answer": "It holds the Guinness record for the longest continuous film shoot (400 days)",
+      "incorrect_answers": [
+        "It was filmed in one take",
+        "It was shot entirely at night",
+        "No scripts were used"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Frank Ocean album was preceded by a 45-minute visual film called 'Endless'?",
+      "correct_answer": "Blonde",
+      "incorrect_answers": [
+        "Channel Orange",
+        "Nostalgia, Ultra",
+        "In My Room"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who holds the record for most on-screen deaths in movie history?",
+      "correct_answer": "Danny Trejo",
+      "incorrect_answers": [
+        "Sean Bean",
+        "John Hurt",
+        "Christopher Lee"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the term for cooking an egg in its shell at a precise low temperature?",
+      "correct_answer": "Onsen tamago",
+      "incorrect_answers": [
+        "Poaching",
+        "Coddling",
+        "Shirring"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What chemical compound gives chili peppers their heat?",
+      "correct_answer": "Capsaicin",
+      "incorrect_answers": [
+        "Piperine",
+        "Allicin",
+        "Gingerol"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Phil Collins song from 1981 was allegedly inspired by witnessing a drowning and not helping?",
+      "correct_answer": "In the Air Tonight",
+      "incorrect_answers": [
+        "Against All Odds",
+        "Another Day in Paradise",
+        "One More Night"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the process where an ester is broken down by a base?",
+      "correct_answer": "Saponification",
+      "incorrect_answers": [
+        "Esterification",
+        "Hydrolysis",
+        "Fermentation"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the plant that screams when uprooted?",
+      "correct_answer": "Mandrake",
+      "incorrect_answers": [
+        "Venomous Tentacula",
+        "Devil's Snare",
+        "Whomping Willow"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Grey's Anatomy, what was the original name of the hospital?",
+      "correct_answer": "Seattle Grace Hospital",
+      "incorrect_answers": [
+        "Grey Memorial Hospital",
+        "Seattle General",
+        "Mercy West"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are the names of Jojen and Meera's father?",
+      "correct_answer": "Howland Reed",
+      "incorrect_answers": [
+        "Rickard Reed",
+        "Benjen Reed",
+        "Willam Reed"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the colligative property that lowers the freezing point?",
+      "correct_answer": "Freezing point depression",
+      "incorrect_answers": [
+        "Boiling point elevation",
+        "Osmotic pressure",
+        "Vapor pressure lowering"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the term for the Dothraki temple of the Dosh Khaleen?",
+      "correct_answer": "Dosh Khaleen",
+      "incorrect_answers": [
+        "Khal's Keep",
+        "The Horse Gate",
+        "Vaes Khaleen"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Tori Amos album features the song 'Cornflake Girl' and was released in 1994?",
+      "correct_answer": "Under the Pink",
+      "incorrect_answers": [
+        "Little Earthquakes",
+        "Boys for Pele",
+        "From the Choirgirl Hotel"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the term for the splitting of spectral lines in a magnetic field?",
+      "correct_answer": "Zeeman effect",
+      "incorrect_answers": [
+        "Stark effect",
+        "Doppler effect",
+        "Compton effect"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Compare-and-Swap (CAS) operation?",
+      "correct_answer": "An atomic instruction that compares a memory location's current value with an expected value and, if they match, replaces it with a new value",
+      "incorrect_answers": [
+        "A sorting algorithm that compares and swaps adjacent elements",
+        "A memory deallocation technique",
+        "A file comparison utility"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Sherlock (BBC), what is Moriarty's first name?",
+      "correct_answer": "Jim",
+      "incorrect_answers": [
+        "James",
+        "John",
+        "Sebastian"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the brothel owner in King's Landing allied with Littlefinger?",
+      "correct_answer": "Ros",
+      "incorrect_answers": [
+        "Shae",
+        "Olyvar",
+        "Chataya"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What type of selection favors the average phenotype?",
+      "correct_answer": "Stabilizing",
+      "incorrect_answers": [
+        "Directional",
+        "Disruptive",
+        "Sexual"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The Office (US), what fake disease does Dwight create?",
+      "correct_answer": "Count Choculitis",
+      "incorrect_answers": [
+        "Spontaneous Dental Hydroplosion",
+        "Hot Dog Fingers",
+        "Paper Lung"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Gilmore Girls, what is the name of Luke's diner?",
+      "correct_answer": "Luke's Diner",
+      "incorrect_answers": [
+        "Luke's Coffee Shop",
+        "William's Diner",
+        "The Stars Hollow Diner"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does it mean for a problem to be NP-complete?",
+      "correct_answer": "It is in NP (solutions can be verified in polynomial time) and every other NP problem can be reduced to it in polynomial time",
+      "incorrect_answers": [
+        "It can be solved in polynomial time",
+        "It has no known solution",
+        "It can only be solved using quantum computers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which artist's 1991 album 'Achtung Baby' marked a dramatic shift from anthemic rock to electronic experimentation?",
+      "correct_answer": "U2",
+      "incorrect_answers": [
+        "R.E.M.",
+        "Depeche Mode",
+        "The Cure"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of Aragog's wife?",
+      "correct_answer": "Mosag",
+      "incorrect_answers": [
+        "Shelob",
+        "Arachne",
+        "Nagini"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Modern Family, what song does Phil Dunphy want played at his funeral?",
+      "correct_answer": "In the Arms of an Angel",
+      "incorrect_answers": [
+        "My Way",
+        "Wind Beneath My Wings",
+        "Tears in Heaven"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What potion smells different to each person, reflecting what attracts them?",
+      "correct_answer": "Amortentia",
+      "incorrect_answers": [
+        "Felix Felicis",
+        "Veritaserum",
+        "Draught of Living Death"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The Office (US), what is the full name of Michael Scott's movie?",
+      "correct_answer": "Threat Level Midnight",
+      "incorrect_answers": [
+        "Danger Zone",
+        "Secret Agent Michael Scarn",
+        "Golden Face"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Valyrian steel swords does Tywin Lannister have forged from Ice?",
+      "correct_answer": "Two",
+      "incorrect_answers": [
+        "One",
+        "Three",
+        "Four"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In House, what is Dr. Wilson's first name?",
+      "correct_answer": "James",
+      "incorrect_answers": [
+        "Robert",
+        "Eric",
+        "Chris"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the charm placed on the Weasley tent at the Quidditch World Cup to make it bigger inside?",
+      "correct_answer": "Undetectable Extension Charm",
+      "incorrect_answers": [
+        "Engorgement Charm",
+        "Enlarging Spell",
+        "Capacious Charm"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between a compiler's front end and back end?",
+      "correct_answer": "The front end handles lexical analysis, parsing, and semantic analysis; the back end handles code optimization and target code generation",
+      "incorrect_answers": [
+        "The front end generates machine code; the back end parses source code",
+        "The front end runs on the client; the back end runs on the server",
+        "There is no distinction in modern compilers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The Office (US), what is Kevin Malone's famous chili incident called by fans?",
+      "correct_answer": "Kevin's Famous Chili",
+      "incorrect_answers": [
+        "The Chili Disaster",
+        "Malone's Mess",
+        "The Big Spill"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Fiona Apple album has a 90-word title that is often abbreviated to 'When the Pawn'?",
+      "correct_answer": "When the Pawn...",
+      "incorrect_answers": [
+        "Tidal",
+        "Extraordinary Machine",
+        "The Idler Wheel"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the final electron acceptor in aerobic respiration?",
+      "correct_answer": "Oxygen",
+      "incorrect_answers": [
+        "Carbon dioxide",
+        "Water",
+        "NADH"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which director holds the record for most Best Director Oscar nominations?",
+      "correct_answer": "William Wyler (12 nominations)",
+      "incorrect_answers": [
+        "Steven Spielberg",
+        "Martin Scorsese",
+        "John Ford"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of Oberyn Martell's paramour?",
+      "correct_answer": "Ellaria Sand",
+      "incorrect_answers": [
+        "Tyene Sand",
+        "Obara Sand",
+        "Arianne Martell"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What organic functional group has the formula -OH?",
+      "correct_answer": "Hydroxyl group",
+      "incorrect_answers": [
+        "Carboxyl group",
+        "Carbonyl group",
+        "Amino group"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the reaction that turns onions brown when caramelized?",
+      "correct_answer": "Both Maillard reaction and caramelization occur simultaneously",
+      "incorrect_answers": [
+        "Only the Maillard reaction",
+        "Only caramelization",
+        "Oxidation"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Bellman-Ford algorithm, and how does it differ from Dijkstra's?",
+      "correct_answer": "Bellman-Ford finds shortest paths and can handle negative edge weights, unlike Dijkstra's, but runs in O(V*E) instead of O((V+E) log V)",
+      "incorrect_answers": [
+        "Bellman-Ford is always faster than Dijkstra's",
+        "Bellman-Ford only works on unweighted graphs",
+        "Dijkstra's handles negative weights; Bellman-Ford does not"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the capital of Nigeria?",
+      "correct_answer": "Abuja",
+      "incorrect_answers": [
+        "Lagos",
+        "Kano",
+        "Ibadan"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Vikings, which son of Ragnar is known as 'the Boneless'?",
+      "correct_answer": "Ivar",
+      "incorrect_answers": [
+        "Bjorn",
+        "Ubbe",
+        "Hvitserk"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is an epsilon transition in finite automata?",
+      "correct_answer": "A state transition that occurs without consuming any input symbol, allowing the automaton to change state spontaneously",
+      "incorrect_answers": [
+        "A transition that consumes all remaining input",
+        "A transition that resets the automaton",
+        "A transition that only occurs on numeric input"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the first Black woman to win Best Actress at the Oscars?",
+      "correct_answer": "Halle Berry (Monster's Ball, 2002)",
+      "incorrect_answers": [
+        "Whoopi Goldberg",
+        "Viola Davis",
+        "Lupita Nyong'o"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In the TV series, what was Hodor's real name before his accident?",
+      "correct_answer": "Wylis",
+      "incorrect_answers": [
+        "Walder",
+        "Horys",
+        "Myrys"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a context-free grammar (CFG)?",
+      "correct_answer": "A formal grammar where every production rule has a single non-terminal on the left side, commonly used to define programming language syntax",
+      "incorrect_answers": [
+        "A grammar that requires no context to understand",
+        "A grammar used only for natural languages",
+        "A grammar with no production rules"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the max-flow min-cut theorem?",
+      "correct_answer": "In a flow network, the maximum amount of flow from source to sink equals the minimum capacity of edges that, if removed, would disconnect source from sink",
+      "incorrect_answers": [
+        "The maximum flow always equals the number of edges",
+        "The minimum cut always equals the number of vertices",
+        "Maximum flow and minimum cut are unrelated"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Before becoming a judge on 'American Idol', which artist had a 1988 hit with 'Straight Up'?",
+      "correct_answer": "Paula Abdul",
+      "incorrect_answers": [
+        "Janet Jackson",
+        "Taylor Dayne",
+        "Debbie Gibson"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Hardy-Weinberg principle about?",
+      "correct_answer": "Allele frequency",
+      "incorrect_answers": [
+        "Natural selection",
+        "Genetic drift",
+        "Gene flow"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Blade Runner 2049', who plays the lead character Officer K?",
+      "correct_answer": "Ryan Gosling",
+      "incorrect_answers": [
+        "Harrison Ford",
+        "Jared Leto",
+        "Dave Bautista"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is instruction pipelining in CPUs?",
+      "correct_answer": "A technique where multiple instruction stages (fetch, decode, execute, etc.) overlap so different instructions are in different stages simultaneously",
+      "incorrect_answers": [
+        "Executing instructions in reverse order",
+        "A method for sending instructions over a network",
+        "Storing all instructions in cache before execution"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What pseudonym did Sia use when she wrote 'Diamonds' for Rihanna before her own solo career took off?",
+      "correct_answer": "She used her real name, Sia Furler",
+      "incorrect_answers": [
+        "Sydney Skye",
+        "Aurora Bloom",
+        "Maddie Chandelier"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is speculative execution in CPUs?",
+      "correct_answer": "A technique where the CPU predicts the path of a branch and executes instructions ahead of time, discarding results if the prediction is wrong",
+      "incorrect_answers": [
+        "Running code in a sandbox for security testing",
+        "Executing code without compiling it first",
+        "A debugging mode that guesses variable values"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the term for the minimum energy required to start a chemical reaction?",
+      "correct_answer": "Activation energy",
+      "incorrect_answers": [
+        "Ionization energy",
+        "Bond energy",
+        "Kinetic energy"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the street address of the Riddle House?",
+      "correct_answer": "Little Hangleton",
+      "incorrect_answers": [
+        "Great Hangleton",
+        "Spinner's End",
+        "Godric's Hollow"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The X-Files, what is Scully's first name?",
+      "correct_answer": "Dana",
+      "incorrect_answers": [
+        "Sarah",
+        "Monica",
+        "Diane"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the Three-Eyed Raven before Bran?",
+      "correct_answer": "Brynden Rivers",
+      "incorrect_answers": [
+        "Jojen Reed",
+        "The Night King",
+        "Maester Aemon"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which song was the most-streamed on Spotify in 2022?",
+      "correct_answer": "As It Was \u2014 Harry Styles",
+      "incorrect_answers": [
+        "Heat Waves \u2014 Glass Animals",
+        "Stay \u2014 Kid LAROI & Justin Bieber",
+        "Enemy \u2014 Imagine Dragons"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the VSEPR shape of SF6?",
+      "correct_answer": "Octahedral",
+      "incorrect_answers": [
+        "Tetrahedral",
+        "Trigonal bipyramidal",
+        "Square planar"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the real name of Jaqen H'ghar's organization?",
+      "correct_answer": "The Faceless Men",
+      "incorrect_answers": [
+        "The Nameless",
+        "The Many Faced",
+        "The Shadow Guild"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the rule that states each orbital in a subshell gets one electron before any gets a second?",
+      "correct_answer": "Hund's rule",
+      "incorrect_answers": [
+        "Pauli exclusion principle",
+        "Aufbau principle",
+        "Heisenberg principle"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Lost, what is Sawyer's real name?",
+      "correct_answer": "James Ford",
+      "incorrect_answers": [
+        "Tom Sawyer",
+        "Jack Ford",
+        "James Sawyer"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which member of the Night's Watch kills Jeor Mormont during the mutiny at Craster's Keep?",
+      "correct_answer": "Karl Tanner",
+      "incorrect_answers": [
+        "Rast",
+        "Olly",
+        "Alliser Thorne"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ideal internal temperature for a medium-rare steak?",
+      "correct_answer": "130-135\u00b0F (54-57\u00b0C)",
+      "incorrect_answers": [
+        "120\u00b0F (49\u00b0C)",
+        "145\u00b0F (63\u00b0C)",
+        "160\u00b0F (71\u00b0C)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the most traded spice in the world by volume?",
+      "correct_answer": "Black pepper",
+      "incorrect_answers": [
+        "Cinnamon",
+        "Cumin",
+        "Turmeric"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Abuja is the capital of which country?",
+      "correct_answer": "Nigeria",
+      "incorrect_answers": [
+        "Ghana",
+        "Cameroon",
+        "Senegal"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does Dumbledore see in the Mirror of Erised?",
+      "correct_answer": "Himself holding thick woolen socks",
+      "incorrect_answers": [
+        "His family alive",
+        "Himself as Minister of Magic",
+        "A bowl of lemon drops"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the convex hull problem?",
+      "correct_answer": "Finding the smallest convex polygon that contains all points in a given set of 2D points",
+      "incorrect_answers": [
+        "Finding the largest circle inside a polygon",
+        "Sorting points by distance from the origin",
+        "Finding the minimum spanning tree of points"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the King-Beyond-the-Wall who invaded Westeros with giants?",
+      "correct_answer": "Mance Rayder",
+      "incorrect_answers": [
+        "Tormund Giantsbane",
+        "The Night King",
+        "Rattleshirt"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In what year did Billie Eilish win her first Grammy?",
+      "correct_answer": "2020",
+      "incorrect_answers": [
+        "2019",
+        "2021",
+        "2018"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the name of the supergroup formed by Jack White, Brendan Benson, and members of The Greenhornes?",
+      "correct_answer": "The Raconteurs",
+      "incorrect_answers": [
+        "The Dead Weather",
+        "The White Stripes",
+        "Broken Boy Soldiers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the proper temperature to serve red Burgundy wine?",
+      "correct_answer": "Around 60-65\u00b0F (15-18\u00b0C)",
+      "incorrect_answers": [
+        "Room temperature (72\u00b0F)",
+        "Chilled (45\u00b0F)",
+        "Warm (80\u00b0F)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Bridgerton, who is Lady Whistledown?",
+      "correct_answer": "Penelope Featherington",
+      "incorrect_answers": [
+        "Eloise Bridgerton",
+        "Queen Charlotte",
+        "Cressida Cowper"
+      ],
+      "difficulty": "hard"
     }
   ]
 }
