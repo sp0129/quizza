@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
-  View, Text, TouchableOpacity, StyleSheet,
+  View, Text, TouchableOpacity, StyleSheet, Image,
   ScrollView, Share, ActivityIndicator, Dimensions,
 } from 'react-native';
 import Animated, {
@@ -188,6 +188,11 @@ function ReadySteadyGo({ onDone }: { onDone: () => void }) {
 
   return (
     <LinearGradient colors={gradients.game} style={countdownStyles.container}>
+      <Image
+        source={require('../assets/mascot/excited-explorer.png')}
+        style={countdownStyles.mascot}
+        resizeMode="contain"
+      />
       <Animated.Text style={[countdownStyles.word, { color: word.color }, animStyle]}>
         {word.text}
       </Animated.Text>
@@ -200,6 +205,11 @@ const countdownStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  mascot: {
+    width: 140,
+    height: 140,
+    marginBottom: 24,
   },
   word: {
     fontSize: 64,
