@@ -103,10 +103,10 @@ async function storeLocalQuestionSet(category: string, categoryId: number, quest
   let questionPool = allQuestions;
   if (difficulty && difficulty !== 'all') {
     const filtered = allQuestions.filter(q => q.difficulty === difficulty);
-    if (filtered.length > 0) {
+    if (filtered.length >= 10) {
       questionPool = filtered;
     }
-    // else: fall back to all difficulties silently
+    // else: not enough questions for this difficulty, fall back to all
   }
   if (!questionPool.length) {
     throw new Error(`No questions found for this category`);
