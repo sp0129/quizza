@@ -112,7 +112,7 @@ router.post('/signup', async (req: Request, res: Response): Promise<void> => {
     const token = jwt.sign({ userId }, process.env.JWT_SECRET!, { expiresIn: '30d' });
     res.status(201).json({
       token,
-      user: { id: userId, username, email: email.toLowerCase() },
+      user: { id: userId, username, email: email.toLowerCase(), avatar_id: avatarId },
     });
   } catch (err: any) {
     if (err.code === '23505') {
@@ -390,7 +390,7 @@ router.post('/guest', async (req: Request, res: Response): Promise<void> => {
     const result = await pool.query(
       `INSERT INTO users (id, username, email, password_hash, is_guest, is_verified, avatar_id)
        VALUES ($1, $2, $3, $4, TRUE, TRUE, $5)
-       RETURNING id, email, created_at`,
+       RETURNING id, email, avatar_id, created_at`,
       [id, internalUsername, email, passwordHash, avatarId]
     );
     const row = result.rows[0];
