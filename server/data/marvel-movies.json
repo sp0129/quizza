@@ -2,606 +2,2005 @@
   "category": "Marvel Movies",
   "category_id": 2005,
   "questions": [
-  {
-    "question": "What is the real name of the hero known as Iron Man?",
-    "correct_answer": "Tony Stark",
-    "incorrect_answers": ["Steve Rogers", "Bruce Banner", "Peter Parker"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is Captain America's shield made out of?",
-    "correct_answer": "Vibranium",
-    "incorrect_answers": ["Adamantium", "Titanium", "Steel"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the 'God of Mischief' in the MCU?",
-    "correct_answer": "Loki",
-    "incorrect_answers": ["Thor", "Odin", "Heimdall"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which fictional African nation is the home of Black Panther?",
-    "correct_answer": "Wakanda",
-    "incorrect_answers": ["Genosha", "Latveria", "Sokovia"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "How many Infinity Stones are there in total?",
-    "correct_answer": "6",
-    "incorrect_answers": ["5", "7", "10"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of Thor's enchanted hammer?",
-    "correct_answer": "Mjolnir",
-    "incorrect_answers": ["Stormbreaker", "Gungnir", "Aegis"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is Peter Parker's aunt?",
-    "correct_answer": "Aunt May",
-    "incorrect_answers": ["Aunt Peggy", "Aunt Sharon", "Aunt Natasha"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What color is the Time Stone?",
-    "correct_answer": "Green",
-    "incorrect_answers": ["Blue", "Red", "Purple"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which actor plays the role of Nick Fury?",
-    "correct_answer": "Samuel L. Jackson",
-    "incorrect_answers": ["Morgan Freeman", "Denzel Washington", "Laurence Fishburne"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What was the name of the first MCU movie ever released?",
-    "correct_answer": "Iron Man",
-    "incorrect_answers": ["Captain America: The First Avenger", "The Incredible Hulk", "Thor"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What food do the Avengers eat in the post-credits scene of the first Avengers movie?",
-    "correct_answer": "Shawarma",
-    "incorrect_answers": ["Pizza", "Tacos", "Cheeseburgers"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the Winter Soldier?",
-    "correct_answer": "Bucky Barnes",
-    "incorrect_answers": ["Sam Wilson", "Clint Barton", "Phil Coulson"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of Tony Stark's daughter?",
-    "correct_answer": "Morgan Stark",
-    "incorrect_answers": ["May Stark", "Cassie Stark", "Pepper Stark"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which eye does Nick Fury wear his eye patch over?",
-    "correct_answer": "Left",
-    "incorrect_answers": ["Right", "Both", "Neither"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What video game is Thor playing in 'Avengers: Endgame'?",
-    "correct_answer": "Fortnite",
-    "incorrect_answers": ["Call of Duty", "Minecraft", "Halo"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is T'Challa's younger sister?",
-    "correct_answer": "Shuri",
-    "incorrect_answers": ["Okoye", "Nakia", "Ramonda"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which Infinity Stone is located inside the Tesseract?",
-    "correct_answer": "Space Stone",
-    "incorrect_answers": ["Mind Stone", "Reality Stone", "Power Stone"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the main villain in 'Avengers: Age of Ultron'?",
-    "correct_answer": "Ultron",
-    "incorrect_answers": ["Thanos", "Loki", "Red Skull"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What type of doctor is Stephen Strange?",
-    "correct_answer": "Neurosurgeon",
-    "incorrect_answers": ["Cardiologist", "Pediatrician", "Dentist"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who rescued Tony Stark and Nebula from space in 'Endgame'?",
-    "correct_answer": "Captain Marvel",
-    "incorrect_answers": ["Thor", "Rocket Raccoon", "Doctor Strange"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is Peter Quill's alter ego?",
-    "correct_answer": "Star-Lord",
-    "incorrect_answers": ["Space-King", "Nova-Prime", "Sun-Lord"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which planet is the Soul Stone found on?",
-    "correct_answer": "Vormir",
-    "incorrect_answers": ["Titan", "Xandar", "Asgard"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What kind of animal is Rocket?",
-    "correct_answer": "Raccoon",
-    "incorrect_answers": ["Badger", "Red Panda", "Hamster"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of Scott Lang's daughter?",
-    "correct_answer": "Cassie",
-    "incorrect_answers": ["Maggie", "Hope", "Janet"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which Avenger does Natasha Romanoff sacrifice herself for?",
-    "correct_answer": "Hawkeye",
-    "incorrect_answers": ["Captain America", "Hulk", "Iron Man"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of Thor's home planet?",
-    "correct_answer": "Asgard",
-    "incorrect_answers": ["Midgard", "Jotunheim", "Sakaar"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What does S.H.I.E.L.D. stand for?",
-    "correct_answer": "Strategic Homeland Intervention, Enforcement and Logistics Division",
-    "incorrect_answers": ["Special Heroic International Enforcement and Law Division", "Secret Homeland Intelligence and Espionage Liaison Department", "Superhuman Intelligence and Emergency Logistics Division"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the primary villain of 'Captain America: The First Avenger'?",
-    "correct_answer": "Red Skull",
-    "incorrect_answers": ["Baron Zemo", "Crossbones", "Alexander Pierce"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the AI that replaces J.A.R.V.I.S.?",
-    "correct_answer": "F.R.I.D.A.Y.",
-    "incorrect_answers": ["K.A.R.E.N.", "E.D.I.T.H.", "A.I.D.A."],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which eye does Thor lose in 'Thor: Ragnarok'?",
-    "correct_answer": "Right",
-    "incorrect_answers": ["Left", "Both", "None"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the alien race that invades New York in the first Avengers?",
-    "correct_answer": "Chitauri",
-    "incorrect_answers": ["Kree", "Skrulls", "Outriders"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the father of Thor and Loki?",
-    "correct_answer": "Odin",
-    "incorrect_answers": ["Bor", "Laufey", "Heimdall"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What city do the Avengers fight in during 'Age of Ultron'?",
-    "correct_answer": "Sokovia",
-    "incorrect_answers": ["New York", "London", "Seoul"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the tiny universe Ant-Man travels to?",
-    "correct_answer": "Quantum Realm",
-    "incorrect_answers": ["Micro-Verse", "Atomic Zone", "Negative Zone"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the King of the Nine Realms?",
-    "correct_answer": "Odin",
-    "incorrect_answers": ["Thor", "Loki", "Malekith"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which actor plays Spider-Man in the MCU?",
-    "correct_answer": "Tom Holland",
-    "incorrect_answers": ["Andrew Garfield", "Tobey Maguire", "Jake Gyllenhaal"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the artifact Doctor Strange wears around his neck?",
-    "correct_answer": "Eye of Agamotto",
-    "incorrect_answers": ["Orb of Agamotto", "Cloak of Levitation", "Scepter of Strange"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who kills Thanos in the beginning of 'Avengers: Endgame'?",
-    "correct_answer": "Thor",
-    "incorrect_answers": ["Captain Marvel", "Iron Man", "Nebula"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What color is the Power Stone?",
-    "correct_answer": "Purple",
-    "incorrect_answers": ["Yellow", "Red", "Blue"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What animal does Carol Danvers have as a pet?",
-    "correct_answer": "Cat (Flerken)",
-    "incorrect_answers": ["Dog", "Hamster", "Bird"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the mentor of Doctor Strange?",
-    "correct_answer": "The Ancient One",
-    "incorrect_answers": ["Wong", "Mordo", "Kaecilius"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the metal that makes up Wolverine's claws in the X-Men (and Deadpool & Wolverine)?",
-    "correct_answer": "Adamantium",
-    "incorrect_answers": ["Vibranium", "Uru", "Titanium"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What landmark does Spider-Man save his friends on in 'Homecoming'?",
-    "correct_answer": "Washington Monument",
-    "incorrect_answers": ["Empire State Building", "Statue of Liberty", "Eiffel Tower"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the biological father of Star-Lord?",
-    "correct_answer": "Ego the Living Planet",
-    "incorrect_answers": ["Yondu Udonta", "Thanos", "The Collector"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the cat-like alien in 'Captain Marvel'?",
-    "correct_answer": "Goose",
-    "incorrect_answers": ["Duck", "Swan", "Maverick"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the organization that created the Winter Soldier?",
-    "correct_answer": "HYDRA",
-    "incorrect_answers": ["A.I.M.", "The Hand", "The Ten Rings"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "How many years was Steve Rogers frozen in ice?",
-    "correct_answer": "Nearly 70 years",
-    "incorrect_answers": ["20 years", "50 years", "100 years"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Which hero says 'I can do this all day'?",
-    "correct_answer": "Captain America",
-    "incorrect_answers": ["Iron Man", "Thor", "Black Widow"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the battle in 'Avengers: Endgame'?",
-    "correct_answer": "Battle of Earth",
-    "incorrect_answers": ["Battle of New York", "Battle of Wakanda", "Battle of Titan"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "Who is the voice of Rocket Raccoon?",
-    "correct_answer": "Bradley Cooper",
-    "incorrect_answers": ["Vin Diesel", "Chris Pratt", "Sean Gunn"],
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the name of the German scientist who created the Super Soldier Serum?",
-    "correct_answer": "Abraham Erskine",
-    "incorrect_answers": ["Arnim Zola", "Howard Stark", "Johann Schmidt"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What species is Ronan the Accuser from 'Guardians of the Galaxy'?",
-    "correct_answer": "Kree",
-    "incorrect_answers": ["Skrull", "Xandarian", "Chitauri"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'Captain America: The Winter Soldier', what are the names of the three Helicarriers launched by Project Insight?",
-    "correct_answer": "Insight Helicarriers",
-    "incorrect_answers": ["Stark Carriers", "Valiant Carriers", "Sentinel Carriers"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the multidimensional city seen in 'Ant-Man and the Wasp: Quantumania'?",
-    "correct_answer": "Axia",
-    "incorrect_answers": ["Chronopolis", "Knowhere", "The Void"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which MCU character has a pet alligator that is a variant of himself?",
-    "correct_answer": "Loki",
-    "incorrect_answers": ["Thor", "Sylvie", "Mobius"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the organization that John Walker (U.S. Agent) works for in 'The Falcon and the Winter Soldier'?",
-    "correct_answer": "GRC (Global Repatriation Council)",
-    "incorrect_answers": ["S.H.I.E.L.D.", "H.Y.D.R.A.", "The Power Broker"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What was the name of the fake town Wanda Maximoff created in Westview?",
-    "correct_answer": "The Hex",
-    "incorrect_answers": ["The Bubble", "The Rift", "The Mirage"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which song does Peter Quill dance to at the beginning of 'Guardians of the Galaxy'?",
-    "correct_answer": "Come and Get Your Love",
-    "incorrect_answers": ["Hooked on a Feeling", "O-o-h Child", "Spirit in the Sky"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the protocol Tony Stark initiates to destroy all his suits in 'Iron Man 3'?",
-    "correct_answer": "Clean Slate Protocol",
-    "incorrect_answers": ["House Party Protocol", "Self-Destruct Alpha", "Endgame Sequence"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Who was the previous owner of the Mind Stone before it was given to Loki in 'The Avengers'?",
-    "correct_answer": "Thanos",
-    "incorrect_answers": ["The Collector", "The Other", "Ronan"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the dwarf king who forged Stormbreaker?",
-    "correct_answer": "Eitri",
-    "incorrect_answers": ["Brokk", "Sindri", "Buri"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'Spider-Man: Far From Home', what does the acronym E.D.I.T.H. stand for?",
-    "correct_answer": "Even Dead, I'm The Hero",
-    "incorrect_answers": ["Every Day I Trust Him", "Electronic Digital Intelligent Tech Hub", "Ever Digital Integrated Tactical Helmet"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which character is the leader of the Ten Rings as seen in 'Shang-Chi'?",
-    "correct_answer": "Xu Wenwu",
-    "incorrect_answers": ["Trevor Slattery", "The Mandarin", "Razor Fist"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the sovereign planet where the Guardians meet Ayesha?",
-    "correct_answer": "Sovereign",
-    "incorrect_answers": ["Xandar", "Contraxia", "Berhert"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'Black Widow', what is the name of the 'Red Room' leader?",
-    "correct_answer": "Dreykov",
-    "incorrect_answers": ["Alexei", "Taskmaster", "Melina"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the moon Thanos throws at the Avengers in 'Infinity War'?",
-    "correct_answer": "Titan's Moon",
-    "incorrect_answers": ["Europa", "Phobos", "Mimas"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which character did Matt Damon play in the Asgardian play in 'Thor: Ragnarok'?",
-    "correct_answer": "Actor Loki",
-    "incorrect_answers": ["Actor Thor", "Actor Odin", "Actor Hela"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the ancient eternal who leads the team in 'Eternals'?",
-    "correct_answer": "Ajak",
-    "incorrect_answers": ["Ikaris", "Thena", "Sersi"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What kind of particles allow Ant-Man to change size?",
-    "correct_answer": "Pym Particles",
-    "incorrect_answers": ["Quantum Particles", "Stark Particles", "Alpha Particles"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'The Winter Soldier', where was the secret H.Y.D.R.A. base containing Arnim Zola's consciousness?",
-    "correct_answer": "Camp Lehigh",
-    "incorrect_answers": ["The Triskelion", "The Hub", "Siberia"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Who was the first person to be 'dusted' on screen during the Snap?",
-    "correct_answer": "Bucky Barnes",
-    "incorrect_answers": ["Black Panther", "Groot", "Spider-Man"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the celestial whose head became the mining colony 'Knowhere'?",
-    "correct_answer": "The head of a dead Celestial",
-    "incorrect_answers": ["Ego", "Arishem", "Tiamut"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the alias used by Natasha Romanoff when she first meets Tony Stark in 'Iron Man 2'?",
-    "correct_answer": "Natalie Rushman",
-    "incorrect_answers": ["Natalia Alianovna", "Laura Barton", "Yelena Belova"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the vibranium-detecting device in 'Black Panther: Wakanda Forever'?",
-    "correct_answer": "The Vibranium Detector",
-    "incorrect_answers": ["The Sonic Spear", "The Kimoyo Bead", "The Ore-Seer"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which Avenger has a background as a circus performer in the comics (referenced by his accuracy)?",
-    "correct_answer": "Hawkeye",
-    "incorrect_answers": ["Falcon", "Ant-Man", "Winter Soldier"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'Captain Marvel', what is the real name of the Flerken known as Goose?",
-    "correct_answer": "Goose",
-    "incorrect_answers": ["Chewie", "Jonesy", "Flerky"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the primary material used to build the Iron Monger suit?",
-    "correct_answer": "Iron",
-    "incorrect_answers": ["Gold-Titanium Alloy", "Steel", "Vibranium"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Who is the 'He Who Remains' variant seen at the end of 'Loki' Season 1?",
-    "correct_answer": "Kang the Conqueror",
-    "incorrect_answers": ["Immortus", "Rama-Tut", "The Scarlet Centurion"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the Valkyrie's horse in 'Thor: Love and Thunder'?",
-    "correct_answer": "Warsong",
-    "incorrect_answers": ["Arion", "Pegasus", "Cloud"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which character was the first to use the term 'Avengers Initiative'?",
-    "correct_answer": "Nick Fury",
-    "incorrect_answers": ["Tony Stark", "Peggy Carter", "Alexander Pierce"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the secret society M.O.D.O.K. leads in the Quantum Realm?",
-    "correct_answer": "He is a hunter for Kang",
-    "incorrect_answers": ["A.I.M.", "The Mechanized", "The Seekers"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'Guardians of the Galaxy Vol. 2', what is the name of the plant Ego uses to expand himself?",
-    "correct_answer": "The Seedlings",
-    "incorrect_answers": ["The Spores", "The Ego-Root", "The Pulse"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the Norse world that is home to the Dark Elves?",
-    "correct_answer": "Svartalfheim",
-    "incorrect_answers": ["Niflheim", "Muspelheim", "Vanaheim"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Who created the suit worn by Sam Wilson when he became Captain America?",
-    "correct_answer": "The Wakandans",
-    "incorrect_answers": ["Tony Stark", "S.H.I.E.L.D.", "The U.S. Air Force"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the dragon that Shang-Chi fights alongside?",
-    "correct_answer": "The Great Protector",
-    "incorrect_answers": ["Fin Fang Foom", "Shou-Lao", "The Dweller-in-Darkness"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What color is the Mind Stone after it is removed from the Scepter?",
-    "correct_answer": "Yellow",
-    "incorrect_answers": ["Blue", "Orange", "White"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which film features the first appearance of the character Val (Valentina Allegra de Fontaine)?",
-    "correct_answer": "The Falcon and the Winter Soldier",
-    "incorrect_answers": ["Black Widow", "Black Panther: Wakanda Forever", "Hawkeye"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the radioactive isotope Tony Stark creates in 'Iron Man 2'?",
-    "correct_answer": "Badassium",
-    "incorrect_answers": ["Vibranium", "Adamantium", "Starkium"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which character does Russell Crowe play in 'Thor: Love and Thunder'?",
-    "correct_answer": "Zeus",
-    "incorrect_answers": ["Hercules", "Odin", "Ares"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'Doctor Strange in the Multiverse of Madness', what is the name of the book of dark magic used by Wanda?",
-    "correct_answer": "The Darkhold",
-    "incorrect_answers": ["The Book of Cagliostro", "The Vishanti", "The Necronomicon"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the Kree capital city?",
-    "correct_answer": "Hala",
-    "incorrect_answers": ["Kree-Lar", "Sakar", "Xandar"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which Infinity Stone was hidden inside the Orb?",
-    "correct_answer": "Power Stone",
-    "incorrect_answers": ["Space Stone", "Reality Stone", "Soul Stone"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the bartender who helps Thor and Rocket in 'Endgame' (Asgard scene)?",
-    "correct_answer": "He is not named, but they encounter Frigga",
-    "incorrect_answers": ["Stan", "Hogun", "Volstagg"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Who is the main villain of 'Ant-Man and the Wasp'?",
-    "correct_answer": "Ghost",
-    "incorrect_answers": ["Yellowjacket", "Sonny Burch", "Kang"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the Skrull leader in 'Captain Marvel'?",
-    "correct_answer": "Talos",
-    "incorrect_answers": ["Soren", "Kl'rt", "Gravik"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What kind of car does Tony Stark drive in the first 'Iron Man' movie?",
-    "correct_answer": "Audi R8",
-    "incorrect_answers": ["Acura NSX", "Tesla Roadster", "Ford Shelby"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the AI in Peter Parker's first Stark-made suit?",
-    "correct_answer": "Karen",
-    "incorrect_answers": ["Friday", "Edith", "Jarvis"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "In 'Black Panther', what is the name of the ritual challenge where T'Challa loses his powers?",
-    "correct_answer": "Ritual Combat",
-    "incorrect_answers": ["The Wild Hunt", "Trial by Fire", "King's Ascension"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "Who killed the parents of Tony Stark?",
-    "correct_answer": "The Winter Soldier",
-    "incorrect_answers": ["Obadiah Stane", "Baron Zemo", "Alexander Pierce"],
-    "difficulty": "medium"
-  },
-  {
-    "question": "What is the name of the cat-like creature that scratches Nick Fury's eye?",
-    "correct_answer": "Goose",
-    "incorrect_answers": ["Chewie", "Spot", "Lucky"],
-    "difficulty": "medium"
-  }
-]
+    {
+      "question": "What is the real name of the hero known as Iron Man?",
+      "correct_answer": "Tony Stark",
+      "incorrect_answers": [
+        "Steve Rogers",
+        "Bruce Banner",
+        "Peter Parker"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Captain America's shield made out of?",
+      "correct_answer": "Vibranium",
+      "incorrect_answers": [
+        "Adamantium",
+        "Titanium",
+        "Steel"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the 'God of Mischief' in the MCU?",
+      "correct_answer": "Loki",
+      "incorrect_answers": [
+        "Thor",
+        "Odin",
+        "Heimdall"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which fictional African nation is the home of Black Panther?",
+      "correct_answer": "Wakanda",
+      "incorrect_answers": [
+        "Genosha",
+        "Latveria",
+        "Sokovia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many Infinity Stones are there in total?",
+      "correct_answer": "6",
+      "incorrect_answers": [
+        "5",
+        "7",
+        "10"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Thor's enchanted hammer?",
+      "correct_answer": "Mjolnir",
+      "incorrect_answers": [
+        "Stormbreaker",
+        "Gungnir",
+        "Aegis"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Peter Parker's aunt?",
+      "correct_answer": "Aunt May",
+      "incorrect_answers": [
+        "Aunt Peggy",
+        "Aunt Sharon",
+        "Aunt Natasha"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color is the Time Stone?",
+      "correct_answer": "Green",
+      "incorrect_answers": [
+        "Blue",
+        "Red",
+        "Purple"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actor plays the role of Nick Fury?",
+      "correct_answer": "Samuel L. Jackson",
+      "incorrect_answers": [
+        "Morgan Freeman",
+        "Denzel Washington",
+        "Laurence Fishburne"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What was the name of the first MCU movie ever released?",
+      "correct_answer": "Iron Man",
+      "incorrect_answers": [
+        "Captain America: The First Avenger",
+        "The Incredible Hulk",
+        "Thor"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What food do the Avengers eat in the post-credits scene of the first Avengers movie?",
+      "correct_answer": "Shawarma",
+      "incorrect_answers": [
+        "Pizza",
+        "Tacos",
+        "Cheeseburgers"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the Winter Soldier?",
+      "correct_answer": "Bucky Barnes",
+      "incorrect_answers": [
+        "Sam Wilson",
+        "Clint Barton",
+        "Phil Coulson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Tony Stark's daughter?",
+      "correct_answer": "Morgan Stark",
+      "incorrect_answers": [
+        "May Stark",
+        "Cassie Stark",
+        "Pepper Stark"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which eye does Nick Fury wear his eye patch over?",
+      "correct_answer": "Left",
+      "incorrect_answers": [
+        "Right",
+        "Both",
+        "Neither"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What video game is Thor playing in 'Avengers: Endgame'?",
+      "correct_answer": "Fortnite",
+      "incorrect_answers": [
+        "Call of Duty",
+        "Minecraft",
+        "Halo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is T'Challa's younger sister?",
+      "correct_answer": "Shuri",
+      "incorrect_answers": [
+        "Okoye",
+        "Nakia",
+        "Ramonda"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Infinity Stone is located inside the Tesseract?",
+      "correct_answer": "Space Stone",
+      "incorrect_answers": [
+        "Mind Stone",
+        "Reality Stone",
+        "Power Stone"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the main villain in 'Avengers: Age of Ultron'?",
+      "correct_answer": "Ultron",
+      "incorrect_answers": [
+        "Thanos",
+        "Loki",
+        "Red Skull"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What type of doctor is Stephen Strange?",
+      "correct_answer": "Neurosurgeon",
+      "incorrect_answers": [
+        "Cardiologist",
+        "Pediatrician",
+        "Dentist"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who rescued Tony Stark and Nebula from space in 'Endgame'?",
+      "correct_answer": "Captain Marvel",
+      "incorrect_answers": [
+        "Thor",
+        "Rocket Raccoon",
+        "Doctor Strange"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Peter Quill's alter ego?",
+      "correct_answer": "Star-Lord",
+      "incorrect_answers": [
+        "Space-King",
+        "Nova-Prime",
+        "Sun-Lord"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which planet is the Soul Stone found on?",
+      "correct_answer": "Vormir",
+      "incorrect_answers": [
+        "Titan",
+        "Xandar",
+        "Asgard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What kind of animal is Rocket?",
+      "correct_answer": "Raccoon",
+      "incorrect_answers": [
+        "Badger",
+        "Red Panda",
+        "Hamster"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Scott Lang's daughter?",
+      "correct_answer": "Cassie",
+      "incorrect_answers": [
+        "Maggie",
+        "Hope",
+        "Janet"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Avenger does Natasha Romanoff sacrifice herself for?",
+      "correct_answer": "Hawkeye",
+      "incorrect_answers": [
+        "Captain America",
+        "Hulk",
+        "Iron Man"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Thor's home planet?",
+      "correct_answer": "Asgard",
+      "incorrect_answers": [
+        "Midgard",
+        "Jotunheim",
+        "Sakaar"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does S.H.I.E.L.D. stand for?",
+      "correct_answer": "Strategic Homeland Intervention, Enforcement and Logistics Division",
+      "incorrect_answers": [
+        "Special Heroic International Enforcement and Law Division",
+        "Secret Homeland Intelligence and Espionage Liaison Department",
+        "Superhuman Intelligence and Emergency Logistics Division"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the primary villain of 'Captain America: The First Avenger'?",
+      "correct_answer": "Red Skull",
+      "incorrect_answers": [
+        "Baron Zemo",
+        "Crossbones",
+        "Alexander Pierce"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the AI that replaces J.A.R.V.I.S.?",
+      "correct_answer": "F.R.I.D.A.Y.",
+      "incorrect_answers": [
+        "K.A.R.E.N.",
+        "E.D.I.T.H.",
+        "A.I.D.A."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which eye does Thor lose in 'Thor: Ragnarok'?",
+      "correct_answer": "Right",
+      "incorrect_answers": [
+        "Left",
+        "Both",
+        "None"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the alien race that invades New York in the first Avengers?",
+      "correct_answer": "Chitauri",
+      "incorrect_answers": [
+        "Kree",
+        "Skrulls",
+        "Outriders"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the father of Thor and Loki?",
+      "correct_answer": "Odin",
+      "incorrect_answers": [
+        "Bor",
+        "Laufey",
+        "Heimdall"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What city do the Avengers fight in during 'Age of Ultron'?",
+      "correct_answer": "Sokovia",
+      "incorrect_answers": [
+        "New York",
+        "London",
+        "Seoul"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the tiny universe Ant-Man travels to?",
+      "correct_answer": "Quantum Realm",
+      "incorrect_answers": [
+        "Micro-Verse",
+        "Atomic Zone",
+        "Negative Zone"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the King of the Nine Realms?",
+      "correct_answer": "Odin",
+      "incorrect_answers": [
+        "Thor",
+        "Loki",
+        "Malekith"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which actor plays Spider-Man in the MCU?",
+      "correct_answer": "Tom Holland",
+      "incorrect_answers": [
+        "Andrew Garfield",
+        "Tobey Maguire",
+        "Jake Gyllenhaal"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the artifact Doctor Strange wears around his neck?",
+      "correct_answer": "Eye of Agamotto",
+      "incorrect_answers": [
+        "Orb of Agamotto",
+        "Cloak of Levitation",
+        "Scepter of Strange"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who kills Thanos in the beginning of 'Avengers: Endgame'?",
+      "correct_answer": "Thor",
+      "incorrect_answers": [
+        "Captain Marvel",
+        "Iron Man",
+        "Nebula"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color is the Power Stone?",
+      "correct_answer": "Purple",
+      "incorrect_answers": [
+        "Yellow",
+        "Red",
+        "Blue"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal does Carol Danvers have as a pet?",
+      "correct_answer": "Cat (Flerken)",
+      "incorrect_answers": [
+        "Dog",
+        "Hamster",
+        "Bird"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the mentor of Doctor Strange?",
+      "correct_answer": "The Ancient One",
+      "incorrect_answers": [
+        "Wong",
+        "Mordo",
+        "Kaecilius"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the metal that makes up Wolverine's claws in the X-Men (and Deadpool & Wolverine)?",
+      "correct_answer": "Adamantium",
+      "incorrect_answers": [
+        "Vibranium",
+        "Uru",
+        "Titanium"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What landmark does Spider-Man save his friends on in 'Homecoming'?",
+      "correct_answer": "Washington Monument",
+      "incorrect_answers": [
+        "Empire State Building",
+        "Statue of Liberty",
+        "Eiffel Tower"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the biological father of Star-Lord?",
+      "correct_answer": "Ego the Living Planet",
+      "incorrect_answers": [
+        "Yondu Udonta",
+        "Thanos",
+        "The Collector"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the cat-like alien in 'Captain Marvel'?",
+      "correct_answer": "Goose",
+      "incorrect_answers": [
+        "Duck",
+        "Swan",
+        "Maverick"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the organization that created the Winter Soldier?",
+      "correct_answer": "HYDRA",
+      "incorrect_answers": [
+        "A.I.M.",
+        "The Hand",
+        "The Ten Rings"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many years was Steve Rogers frozen in ice?",
+      "correct_answer": "Nearly 70 years",
+      "incorrect_answers": [
+        "20 years",
+        "50 years",
+        "100 years"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which hero says 'I can do this all day'?",
+      "correct_answer": "Captain America",
+      "incorrect_answers": [
+        "Iron Man",
+        "Thor",
+        "Black Widow"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the battle in 'Avengers: Endgame'?",
+      "correct_answer": "Battle of Earth",
+      "incorrect_answers": [
+        "Battle of New York",
+        "Battle of Wakanda",
+        "Battle of Titan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the voice of Rocket Raccoon?",
+      "correct_answer": "Bradley Cooper",
+      "incorrect_answers": [
+        "Vin Diesel",
+        "Chris Pratt",
+        "Sean Gunn"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the German scientist who created the Super Soldier Serum?",
+      "correct_answer": "Abraham Erskine",
+      "incorrect_answers": [
+        "Arnim Zola",
+        "Howard Stark",
+        "Johann Schmidt"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What species is Ronan the Accuser from 'Guardians of the Galaxy'?",
+      "correct_answer": "Kree",
+      "incorrect_answers": [
+        "Skrull",
+        "Xandarian",
+        "Chitauri"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Captain America: The Winter Soldier', what are the names of the three Helicarriers launched by Project Insight?",
+      "correct_answer": "Insight Helicarriers",
+      "incorrect_answers": [
+        "Stark Carriers",
+        "Valiant Carriers",
+        "Sentinel Carriers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the multidimensional city seen in 'Ant-Man and the Wasp: Quantumania'?",
+      "correct_answer": "Axia",
+      "incorrect_answers": [
+        "Chronopolis",
+        "Knowhere",
+        "The Void"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which MCU character has a pet alligator that is a variant of himself?",
+      "correct_answer": "Loki",
+      "incorrect_answers": [
+        "Thor",
+        "Sylvie",
+        "Mobius"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the organization that John Walker (U.S. Agent) works for in 'The Falcon and the Winter Soldier'?",
+      "correct_answer": "GRC (Global Repatriation Council)",
+      "incorrect_answers": [
+        "S.H.I.E.L.D.",
+        "H.Y.D.R.A.",
+        "The Power Broker"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the name of the fake town Wanda Maximoff created in Westview?",
+      "correct_answer": "The Hex",
+      "incorrect_answers": [
+        "The Bubble",
+        "The Rift",
+        "The Mirage"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which song does Peter Quill dance to at the beginning of 'Guardians of the Galaxy'?",
+      "correct_answer": "Come and Get Your Love",
+      "incorrect_answers": [
+        "Hooked on a Feeling",
+        "O-o-h Child",
+        "Spirit in the Sky"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the protocol Tony Stark initiates to destroy all his suits in 'Iron Man 3'?",
+      "correct_answer": "Clean Slate Protocol",
+      "incorrect_answers": [
+        "House Party Protocol",
+        "Self-Destruct Alpha",
+        "Endgame Sequence"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who was the previous owner of the Mind Stone before it was given to Loki in 'The Avengers'?",
+      "correct_answer": "Thanos",
+      "incorrect_answers": [
+        "The Collector",
+        "The Other",
+        "Ronan"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the dwarf king who forged Stormbreaker?",
+      "correct_answer": "Eitri",
+      "incorrect_answers": [
+        "Brokk",
+        "Sindri",
+        "Buri"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Spider-Man: Far From Home', what does the acronym E.D.I.T.H. stand for?",
+      "correct_answer": "Even Dead, I'm The Hero",
+      "incorrect_answers": [
+        "Every Day I Trust Him",
+        "Electronic Digital Intelligent Tech Hub",
+        "Ever Digital Integrated Tactical Helmet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character is the leader of the Ten Rings as seen in 'Shang-Chi'?",
+      "correct_answer": "Xu Wenwu",
+      "incorrect_answers": [
+        "Trevor Slattery",
+        "The Mandarin",
+        "Razor Fist"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the sovereign planet where the Guardians meet Ayesha?",
+      "correct_answer": "Sovereign",
+      "incorrect_answers": [
+        "Xandar",
+        "Contraxia",
+        "Berhert"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Black Widow', what is the name of the 'Red Room' leader?",
+      "correct_answer": "Dreykov",
+      "incorrect_answers": [
+        "Alexei",
+        "Taskmaster",
+        "Melina"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the moon Thanos throws at the Avengers in 'Infinity War'?",
+      "correct_answer": "Titan's Moon",
+      "incorrect_answers": [
+        "Europa",
+        "Phobos",
+        "Mimas"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character did Matt Damon play in the Asgardian play in 'Thor: Ragnarok'?",
+      "correct_answer": "Actor Loki",
+      "incorrect_answers": [
+        "Actor Thor",
+        "Actor Odin",
+        "Actor Hela"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the ancient eternal who leads the team in 'Eternals'?",
+      "correct_answer": "Ajak",
+      "incorrect_answers": [
+        "Ikaris",
+        "Thena",
+        "Sersi"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What kind of particles allow Ant-Man to change size?",
+      "correct_answer": "Pym Particles",
+      "incorrect_answers": [
+        "Quantum Particles",
+        "Stark Particles",
+        "Alpha Particles"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'The Winter Soldier', where was the secret H.Y.D.R.A. base containing Arnim Zola's consciousness?",
+      "correct_answer": "Camp Lehigh",
+      "incorrect_answers": [
+        "The Triskelion",
+        "The Hub",
+        "Siberia"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who was the first person to be 'dusted' on screen during the Snap?",
+      "correct_answer": "Bucky Barnes",
+      "incorrect_answers": [
+        "Black Panther",
+        "Groot",
+        "Spider-Man"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the celestial whose head became the mining colony 'Knowhere'?",
+      "correct_answer": "The head of a dead Celestial",
+      "incorrect_answers": [
+        "Ego",
+        "Arishem",
+        "Tiamut"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the alias used by Natasha Romanoff when she first meets Tony Stark in 'Iron Man 2'?",
+      "correct_answer": "Natalie Rushman",
+      "incorrect_answers": [
+        "Natalia Alianovna",
+        "Laura Barton",
+        "Yelena Belova"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the vibranium-detecting device in 'Black Panther: Wakanda Forever'?",
+      "correct_answer": "The Vibranium Detector",
+      "incorrect_answers": [
+        "The Sonic Spear",
+        "The Kimoyo Bead",
+        "The Ore-Seer"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Avenger has a background as a circus performer in the comics (referenced by his accuracy)?",
+      "correct_answer": "Hawkeye",
+      "incorrect_answers": [
+        "Falcon",
+        "Ant-Man",
+        "Winter Soldier"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Captain Marvel', what is the real name of the Flerken known as Goose?",
+      "correct_answer": "Goose",
+      "incorrect_answers": [
+        "Chewie",
+        "Jonesy",
+        "Flerky"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary material used to build the Iron Monger suit?",
+      "correct_answer": "Iron",
+      "incorrect_answers": [
+        "Gold-Titanium Alloy",
+        "Steel",
+        "Vibranium"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the 'He Who Remains' variant seen at the end of 'Loki' Season 1?",
+      "correct_answer": "Kang the Conqueror",
+      "incorrect_answers": [
+        "Immortus",
+        "Rama-Tut",
+        "The Scarlet Centurion"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Valkyrie's horse in 'Thor: Love and Thunder'?",
+      "correct_answer": "Warsong",
+      "incorrect_answers": [
+        "Arion",
+        "Pegasus",
+        "Cloud"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character was the first to use the term 'Avengers Initiative'?",
+      "correct_answer": "Nick Fury",
+      "incorrect_answers": [
+        "Tony Stark",
+        "Peggy Carter",
+        "Alexander Pierce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the secret society M.O.D.O.K. leads in the Quantum Realm?",
+      "correct_answer": "He is a hunter for Kang",
+      "incorrect_answers": [
+        "A.I.M.",
+        "The Mechanized",
+        "The Seekers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Guardians of the Galaxy Vol. 2', what is the name of the plant Ego uses to expand himself?",
+      "correct_answer": "The Seedlings",
+      "incorrect_answers": [
+        "The Spores",
+        "The Ego-Root",
+        "The Pulse"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Norse world that is home to the Dark Elves?",
+      "correct_answer": "Svartalfheim",
+      "incorrect_answers": [
+        "Niflheim",
+        "Muspelheim",
+        "Vanaheim"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who created the suit worn by Sam Wilson when he became Captain America?",
+      "correct_answer": "The Wakandans",
+      "incorrect_answers": [
+        "Tony Stark",
+        "S.H.I.E.L.D.",
+        "The U.S. Air Force"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the dragon that Shang-Chi fights alongside?",
+      "correct_answer": "The Great Protector",
+      "incorrect_answers": [
+        "Fin Fang Foom",
+        "Shou-Lao",
+        "The Dweller-in-Darkness"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What color is the Mind Stone after it is removed from the Scepter?",
+      "correct_answer": "Yellow",
+      "incorrect_answers": [
+        "Blue",
+        "Orange",
+        "White"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which film features the first appearance of the character Val (Valentina Allegra de Fontaine)?",
+      "correct_answer": "The Falcon and the Winter Soldier",
+      "incorrect_answers": [
+        "Black Widow",
+        "Black Panther: Wakanda Forever",
+        "Hawkeye"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the radioactive isotope Tony Stark creates in 'Iron Man 2'?",
+      "correct_answer": "Badassium",
+      "incorrect_answers": [
+        "Vibranium",
+        "Adamantium",
+        "Starkium"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which character does Russell Crowe play in 'Thor: Love and Thunder'?",
+      "correct_answer": "Zeus",
+      "incorrect_answers": [
+        "Hercules",
+        "Odin",
+        "Ares"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Doctor Strange in the Multiverse of Madness', what is the name of the book of dark magic used by Wanda?",
+      "correct_answer": "The Darkhold",
+      "incorrect_answers": [
+        "The Book of Cagliostro",
+        "The Vishanti",
+        "The Necronomicon"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Kree capital city?",
+      "correct_answer": "Hala",
+      "incorrect_answers": [
+        "Kree-Lar",
+        "Sakar",
+        "Xandar"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which Infinity Stone was hidden inside the Orb?",
+      "correct_answer": "Power Stone",
+      "incorrect_answers": [
+        "Space Stone",
+        "Reality Stone",
+        "Soul Stone"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the bartender who helps Thor and Rocket in 'Endgame' (Asgard scene)?",
+      "correct_answer": "He is not named, but they encounter Frigga",
+      "incorrect_answers": [
+        "Stan",
+        "Hogun",
+        "Volstagg"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who is the main villain of 'Ant-Man and the Wasp'?",
+      "correct_answer": "Ghost",
+      "incorrect_answers": [
+        "Yellowjacket",
+        "Sonny Burch",
+        "Kang"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the Skrull leader in 'Captain Marvel'?",
+      "correct_answer": "Talos",
+      "incorrect_answers": [
+        "Soren",
+        "Kl'rt",
+        "Gravik"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What kind of car does Tony Stark drive in the first 'Iron Man' movie?",
+      "correct_answer": "Audi R8",
+      "incorrect_answers": [
+        "Acura NSX",
+        "Tesla Roadster",
+        "Ford Shelby"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the AI in Peter Parker's first Stark-made suit?",
+      "correct_answer": "Karen",
+      "incorrect_answers": [
+        "Friday",
+        "Edith",
+        "Jarvis"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In 'Black Panther', what is the name of the ritual challenge where T'Challa loses his powers?",
+      "correct_answer": "Ritual Combat",
+      "incorrect_answers": [
+        "The Wild Hunt",
+        "Trial by Fire",
+        "King's Ascension"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Who killed the parents of Tony Stark?",
+      "correct_answer": "The Winter Soldier",
+      "incorrect_answers": [
+        "Obadiah Stane",
+        "Baron Zemo",
+        "Alexander Pierce"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the name of the cat-like creature that scratches Nick Fury's eye?",
+      "correct_answer": "Goose",
+      "incorrect_answers": [
+        "Chewie",
+        "Spot",
+        "Lucky"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Captain America's real name?",
+      "correct_answer": "Steve Rogers",
+      "incorrect_answers": [
+        "Bucky Barnes",
+        "Tony Stark",
+        "Sam Wilson"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What color is the Hulk?",
+      "correct_answer": "Green",
+      "incorrect_answers": [
+        "Red",
+        "Blue",
+        "Purple"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the god of thunder in the MCU?",
+      "correct_answer": "Thor",
+      "incorrect_answers": [
+        "Loki",
+        "Odin",
+        "Zeus"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Thor's hammer?",
+      "correct_answer": "Mjolnir",
+      "incorrect_answers": [
+        "Stormbreaker",
+        "Gungnir",
+        "Hofund"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Spider-Man's alter ego in the MCU?",
+      "correct_answer": "Peter Parker",
+      "incorrect_answers": [
+        "Miles Morales",
+        "Ben Reilly",
+        "Miguel O'Hara"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Iron Man's AI assistant?",
+      "correct_answer": "JARVIS",
+      "incorrect_answers": [
+        "FRIDAY",
+        "KAREN",
+        "EDITH"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who snaps to defeat Thanos in 'Endgame'?",
+      "correct_answer": "Tony Stark",
+      "incorrect_answers": [
+        "Thor",
+        "Captain America",
+        "Hulk"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Black Panther's real name?",
+      "correct_answer": "T'Challa",
+      "incorrect_answers": [
+        "N'Jadaka",
+        "M'Baku",
+        "W'Kabi"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Avenger is a master archer?",
+      "correct_answer": "Hawkeye (Clint Barton)",
+      "incorrect_answers": [
+        "Black Widow",
+        "Falcon",
+        "War Machine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does Thanos collect in 'Infinity War'?",
+      "correct_answer": "The Infinity Stones",
+      "incorrect_answers": [
+        "Vibranium",
+        "Asgardian weapons",
+        "Celestial energy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Groot?",
+      "correct_answer": "A tree-like creature who can only say 'I am Groot'",
+      "incorrect_answers": [
+        "A shapeshifting alien",
+        "A robot",
+        "A giant insect"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What country is Black Panther from?",
+      "correct_answer": "Wakanda",
+      "incorrect_answers": [
+        "Sokovia",
+        "Genosha",
+        "Latveria"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Captain America in the MCU?",
+      "correct_answer": "Chris Evans",
+      "incorrect_answers": [
+        "Chris Hemsworth",
+        "Chris Pratt",
+        "Chris Pine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the raccoon in Guardians of the Galaxy?",
+      "correct_answer": "Rocket",
+      "incorrect_answers": [
+        "Groot",
+        "Drax",
+        "Yondu"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Wanda Maximoff also known as?",
+      "correct_answer": "Scarlet Witch",
+      "incorrect_answers": [
+        "Black Widow",
+        "Captain Marvel",
+        "Wasp"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What object does Captain America carry?",
+      "correct_answer": "A shield",
+      "incorrect_answers": [
+        "A sword",
+        "A hammer",
+        "A bow"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the villain in the first Avengers movie?",
+      "correct_answer": "Loki",
+      "incorrect_answers": [
+        "Thanos",
+        "Ultron",
+        "Hela"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Tony Stark's company called?",
+      "correct_answer": "Stark Industries",
+      "incorrect_answers": [
+        "Stark Enterprises",
+        "Stark Corp",
+        "Stark Tech"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Star-Lord?",
+      "correct_answer": "Peter Quill",
+      "incorrect_answers": [
+        "Gamora",
+        "Drax",
+        "Rocket"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What planet is Thor from?",
+      "correct_answer": "Asgard",
+      "incorrect_answers": [
+        "Jotunheim",
+        "Vanaheim",
+        "Midgard"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who killed Tony Stark's parents?",
+      "correct_answer": "The Winter Soldier (Bucky Barnes, while brainwashed)",
+      "incorrect_answers": [
+        "Thanos",
+        "Loki",
+        "Hydra agents"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Doctor Strange's magical cloak?",
+      "correct_answer": "Cloak of Levitation",
+      "incorrect_answers": [
+        "Cape of Vishanti",
+        "Mantle of Power",
+        "Cloak of Agamotto"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Pepper Potts?",
+      "correct_answer": "Tony Stark's partner and CEO of Stark Industries",
+      "incorrect_answers": [
+        "A S.H.I.E.L.D. agent",
+        "Thor's love interest",
+        "A scientist at Avengers HQ"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What weapon does Thor get in 'Infinity War' to replace Mjolnir?",
+      "correct_answer": "Stormbreaker",
+      "incorrect_answers": [
+        "Gungnir",
+        "Hofund",
+        "Jarnbjorn"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who says 'I can do this all day'?",
+      "correct_answer": "Captain America",
+      "incorrect_answers": [
+        "Iron Man",
+        "Spider-Man",
+        "Thor"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the Tesseract?",
+      "correct_answer": "A cube containing the Space Stone",
+      "incorrect_answers": [
+        "A weapon made by Tony Stark",
+        "An Asgardian energy source",
+        "A Kree artifact"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Gamora's adoptive father?",
+      "correct_answer": "Thanos",
+      "incorrect_answers": [
+        "Ego",
+        "Ronan",
+        "The Collector"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What animal is the symbol of Spider-Man?",
+      "correct_answer": "Spider",
+      "incorrect_answers": [
+        "Scorpion",
+        "Ant",
+        "Beetle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who becomes Captain America after Steve Rogers?",
+      "correct_answer": "Sam Wilson (Falcon)",
+      "incorrect_answers": [
+        "Bucky Barnes",
+        "John Walker",
+        "Isaiah Bradley"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of Ant-Man's real identity?",
+      "correct_answer": "Scott Lang",
+      "incorrect_answers": [
+        "Hank Pym",
+        "Luis",
+        "Jimmy Woo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Black Panther?",
+      "correct_answer": "Chadwick Boseman",
+      "incorrect_answers": [
+        "Michael B. Jordan",
+        "Daniel Kaluuya",
+        "John Boyega"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Nick Fury's eye patch covering?",
+      "correct_answer": "His missing left eye",
+      "incorrect_answers": [
+        "A cybernetic implant",
+        "An Infinity Stone",
+        "Nothing \u2014 it's decorative"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What superhero team does Spider-Man join?",
+      "correct_answer": "The Avengers",
+      "incorrect_answers": [
+        "The X-Men",
+        "The Fantastic Four",
+        "The Defenders"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the strongest Avenger according to Thor?",
+      "correct_answer": "Thor (he claims it himself)",
+      "incorrect_answers": [
+        "Hulk",
+        "Captain Marvel",
+        "Scarlet Witch"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Vision made from?",
+      "correct_answer": "Vibranium and the Mind Stone",
+      "incorrect_answers": [
+        "Adamantium",
+        "Uru metal",
+        "Chitauri technology"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Shuri?",
+      "correct_answer": "T'Challa's sister and Wakandan tech genius",
+      "incorrect_answers": [
+        "A Dora Milaje warrior",
+        "Killmonger's ally",
+        "An Asgardian princess"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does S.H.I.E.L.D. stand for?",
+      "correct_answer": "Strategic Homeland Intervention, Enforcement and Logistics Division",
+      "incorrect_answers": [
+        "Supreme Headquarters International Espionage Law-enforcement Division",
+        "Strategic Hazard Intervention Espionage Logistics Directorate",
+        "Special Hero Intelligence and Enforcement Logistics Division"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who plays Spider-Man in the MCU?",
+      "correct_answer": "Tom Holland",
+      "incorrect_answers": [
+        "Andrew Garfield",
+        "Tobey Maguire",
+        "Jake Gyllenhaal"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What infinity stone is in Loki's scepter?",
+      "correct_answer": "The Mind Stone",
+      "incorrect_answers": [
+        "The Space Stone",
+        "The Power Stone",
+        "The Soul Stone"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the Hulk's human form?",
+      "correct_answer": "Bruce Banner",
+      "incorrect_answers": [
+        "Clint Barton",
+        "Stephen Strange",
+        "Scott Lang"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the dark elf villain in 'Thor: The Dark World'?",
+      "correct_answer": "Malekith",
+      "incorrect_answers": [
+        "Surtur",
+        "Hela",
+        "Kurse"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who directed most of the Avengers movies?",
+      "correct_answer": "Joss Whedon (1 & 2) and the Russo Brothers (3 & 4)",
+      "incorrect_answers": [
+        "James Gunn",
+        "Taika Waititi",
+        "Jon Favreau"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Captain Marvel's real name?",
+      "correct_answer": "Carol Danvers",
+      "incorrect_answers": [
+        "Maria Rambeau",
+        "Monica Rambeau",
+        "Kamala Khan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who says 'We have a Hulk'?",
+      "correct_answer": "Tony Stark",
+      "incorrect_answers": [
+        "Nick Fury",
+        "Thor",
+        "Loki"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does Ant-Man's suit allow him to do?",
+      "correct_answer": "Shrink and grow in size",
+      "incorrect_answers": [
+        "Turn invisible",
+        "Fly without wings",
+        "Control time"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which MCU movie introduced the multiverse concept?",
+      "correct_answer": "Doctor Strange in the Multiverse of Madness (though hinted earlier)",
+      "incorrect_answers": [
+        "Avengers: Endgame",
+        "Loki (TV series)",
+        "Spider-Man: Far From Home"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is Nebula's sister?",
+      "correct_answer": "Gamora",
+      "incorrect_answers": [
+        "Mantis",
+        "Hela",
+        "Valkyrie"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What did Thanos do with the Infinity Gauntlet?",
+      "correct_answer": "Snapped away half of all life in the universe",
+      "incorrect_answers": [
+        "Destroyed all the Avengers",
+        "Created a new universe",
+        "Traveled back in time"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Who is the villain in 'Spider-Man: Homecoming'?",
+      "correct_answer": "Vulture (Adrian Toomes)",
+      "incorrect_answers": [
+        "Mysterio",
+        "Green Goblin",
+        "Doc Ock"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Wakanda's most valuable resource?",
+      "correct_answer": "Vibranium",
+      "incorrect_answers": [
+        "Gold",
+        "Adamantium",
+        "Uru"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the planet where the Soul Stone is found?",
+      "correct_answer": "Vormir",
+      "incorrect_answers": [
+        "Morag",
+        "Knowhere",
+        "Ego"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the Celestial that is Peter Quill's father?",
+      "correct_answer": "Ego",
+      "incorrect_answers": [
+        "Arishem",
+        "Tiamut",
+        "Eson"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the organization that experimented on Wanda and Pietro?",
+      "correct_answer": "HYDRA (using the Mind Stone)",
+      "incorrect_answers": [
+        "A.I.M.",
+        "S.W.O.R.D.",
+        "The Hand"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In what year is 'Captain America: The First Avenger' primarily set?",
+      "correct_answer": "1943",
+      "incorrect_answers": [
+        "1941",
+        "1945",
+        "1939"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the real name of the villain Killmonger?",
+      "correct_answer": "N'Jadaka (Erik Stevens)",
+      "incorrect_answers": [
+        "T'Chaka",
+        "W'Kabi",
+        "M'Baku"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Infinity Stone was hidden on Morag?",
+      "correct_answer": "The Power Stone",
+      "incorrect_answers": [
+        "The Space Stone",
+        "The Reality Stone",
+        "The Time Stone"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the AI that becomes Ultron?",
+      "correct_answer": "Tony Stark's peacekeeping program using the Mind Stone",
+      "incorrect_answers": [
+        "JARVIS",
+        "FRIDAY",
+        "EDITH"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the original Ant-Man?",
+      "correct_answer": "Hank Pym",
+      "incorrect_answers": [
+        "Scott Lang",
+        "Eric O'Grady",
+        "Bill Foster"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Quantum Realm?",
+      "correct_answer": "A subatomic dimension accessible by shrinking beyond atomic scale",
+      "incorrect_answers": [
+        "An alternate universe",
+        "A pocket dimension created by Doctor Strange",
+        "A virtual reality simulation"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who plays Kang the Conqueror?",
+      "correct_answer": "Jonathan Majors",
+      "incorrect_answers": [
+        "Oscar Isaac",
+        "Mahershala Ali",
+        "Tenoch Huerta"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are the names of all six Infinity Stones?",
+      "correct_answer": "Space, Mind, Reality, Power, Time, Soul",
+      "incorrect_answers": [
+        "Space, Mind, Reality, Energy, Time, Death",
+        "Space, Mind, Reality, Power, Time, Life",
+        "Space, Mind, Reality, Power, Light, Soul"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Vibranium's origin in the MCU?",
+      "correct_answer": "It came from a meteorite that crashed in Wakanda",
+      "incorrect_answers": [
+        "It was created by Stark Industries",
+        "It came from Asgard",
+        "It was synthesized by HYDRA"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who forged Stormbreaker?",
+      "correct_answer": "Eitri the dwarf on Nidavellir",
+      "incorrect_answers": [
+        "Odin on Asgard",
+        "Tony Stark",
+        "The Collector"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the dark dimension's ruler that Doctor Strange bargains with?",
+      "correct_answer": "Dormammu",
+      "incorrect_answers": [
+        "Mephisto",
+        "Nightmare",
+        "Shuma-Gorath"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'Avengers: Endgame', what year do the Avengers travel to for the Space Stone?",
+      "correct_answer": "1970 (Camp Lehigh)",
+      "incorrect_answers": [
+        "2012 (Battle of New York)",
+        "1945 (WWII)",
+        "2014 (Morag)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the treaty that divided the Avengers in 'Civil War'?",
+      "correct_answer": "The Sokovia Accords",
+      "incorrect_answers": [
+        "The Avengers Protocol",
+        "The SHIELD Act",
+        "The Superhero Registration Act"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the first MCU character to appear on screen?",
+      "correct_answer": "Tony Stark (in Iron Man, 2008)",
+      "incorrect_answers": [
+        "Nick Fury",
+        "Captain America",
+        "Phil Coulson"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of Thanos's home planet?",
+      "correct_answer": "Titan",
+      "incorrect_answers": [
+        "Xandar",
+        "Sakaar",
+        "Hala"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Project Insight in 'Captain America: The Winter Soldier'?",
+      "correct_answer": "HYDRA's plan to use helicarriers to eliminate threats preemptively",
+      "incorrect_answers": [
+        "A super soldier program",
+        "A mind control initiative",
+        "A space defense system"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the Collector?",
+      "correct_answer": "Taneleer Tivan, an Elder of the Universe who collects rare artifacts",
+      "incorrect_answers": [
+        "A Celestial",
+        "A Kree warlord",
+        "An Asgardian exile"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Darkhold?",
+      "correct_answer": "A book of dark magic also known as the Book of the Damned",
+      "incorrect_answers": [
+        "Dormammu's weapon",
+        "A Hydra file",
+        "An Infinity Stone container"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who played the Red Skull in 'Captain America: The First Avenger'?",
+      "correct_answer": "Hugo Weaving",
+      "incorrect_answers": [
+        "Ross Marquand",
+        "Mads Mikkelsen",
+        "Daniel Br\u00fchl"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the TVA in the MCU?",
+      "correct_answer": "The Time Variance Authority \u2014 monitors the timeline",
+      "incorrect_answers": [
+        "Thanos's Vanguard Army",
+        "The Temporal Void Alliance",
+        "Transdimensional Variant Agency"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In what MCU movie does the concept of the multiverse first get mentioned?",
+      "correct_answer": "Doctor Strange (2016) \u2014 the Ancient One mentions it",
+      "incorrect_answers": [
+        "Avengers: Endgame",
+        "Spider-Man: Far From Home",
+        "Ant-Man and the Wasp"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Yelena Belova's relationship to Natasha Romanoff?",
+      "correct_answer": "Adopted sister (both raised in the Red Room)",
+      "incorrect_answers": [
+        "Biological sister",
+        "Daughter",
+        "Mentor"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the sword that can destroy the Ten Rings?",
+      "correct_answer": "There is no such sword \u2014 this is a trick question",
+      "incorrect_answers": [
+        "The Ebony Blade",
+        "Grasscutter",
+        "Dragonfang"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which MCU movie has the lowest Rotten Tomatoes score?",
+      "correct_answer": "Eternals",
+      "incorrect_answers": [
+        "Thor: The Dark World",
+        "The Incredible Hulk",
+        "Iron Man 2"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What species is Drax the Destroyer?",
+      "correct_answer": "He appears humanoid but his species is not named in the MCU",
+      "incorrect_answers": [
+        "Kree",
+        "Skrull",
+        "Xandarian"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Wakandan special forces?",
+      "correct_answer": "Dora Milaje",
+      "incorrect_answers": [
+        "Hatut Zeraze",
+        "War Dogs",
+        "Border Tribe"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who directed 'Thor: Ragnarok'?",
+      "correct_answer": "Taika Waititi",
+      "incorrect_answers": [
+        "Kenneth Branagh",
+        "Alan Taylor",
+        "The Russo Brothers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Adamantium in Marvel comics (not present in MCU)?",
+      "correct_answer": "An indestructible metal alloy bonded to Wolverine's skeleton",
+      "incorrect_answers": [
+        "The metal of Captain America's shield",
+        "Thanos's gauntlet material",
+        "A Wakandan resource"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Blip?",
+      "correct_answer": "The name given to the 5-year period when half the population was snapped away",
+      "incorrect_answers": [
+        "The name for Thanos's snap itself",
+        "A S.H.I.E.L.D. operation",
+        "The time travel event in Endgame"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is He Who Remains?",
+      "correct_answer": "A variant of Kang who created the TVA to prevent a multiversal war",
+      "incorrect_answers": [
+        "The One Above All",
+        "A future version of Tony Stark",
+        "The first Celestial"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What Earth designation is the main MCU universe?",
+      "correct_answer": "Earth-616",
+      "incorrect_answers": [
+        "Earth-199999",
+        "Earth-1610",
+        "Earth-838"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In 'WandaVision', what is the name of the town Wanda takes over?",
+      "correct_answer": "Westview",
+      "incorrect_answers": [
+        "Eastview",
+        "Pleasantville",
+        "Greendale"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the first MCU movie to gross over $2 billion?",
+      "correct_answer": "Avengers: Endgame",
+      "incorrect_answers": [
+        "Avengers: Infinity War",
+        "Black Panther",
+        "Spider-Man: No Way Home"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who composed the main Avengers theme?",
+      "correct_answer": "Alan Silvestri",
+      "incorrect_answers": [
+        "Hans Zimmer",
+        "John Williams",
+        "Danny Elfman"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Ten Rings organization?",
+      "correct_answer": "A terrorist group led by the Mandarin (Xu Wenwu) for 1,000 years",
+      "incorrect_answers": [
+        "A group of ten magical rings",
+        "A SHIELD black ops division",
+        "A Kree cult"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the Power Broker in 'The Falcon and the Winter Soldier'?",
+      "correct_answer": "Sharon Carter",
+      "incorrect_answers": [
+        "Baron Zemo",
+        "John Walker",
+        "Valentina Allegra de Fontaine"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What year did the MCU's Phase One begin?",
+      "correct_answer": "2008 (with Iron Man)",
+      "incorrect_answers": [
+        "2006",
+        "2010",
+        "2012"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who plays Xu Wenwu (the real Mandarin) in 'Shang-Chi'?",
+      "correct_answer": "Tony Leung",
+      "incorrect_answers": [
+        "Simu Liu",
+        "Benedict Wong",
+        "Donnie Yen"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the significance of the number 3000 in the MCU?",
+      "correct_answer": "Morgan Stark says 'I love you 3000' to Tony",
+      "incorrect_answers": [
+        "It's the number of Avengers members",
+        "It's how many years the Time Stone spans",
+        "It's Thanos's army count"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are Pym Particles?",
+      "correct_answer": "Subatomic particles discovered by Hank Pym that allow size manipulation",
+      "incorrect_answers": [
+        "Quantum energy units",
+        "Vibranium atoms",
+        "Infinity Stone fragments"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Infinity Stone does Doctor Strange protect?",
+      "correct_answer": "The Time Stone (Eye of Agamotto)",
+      "incorrect_answers": [
+        "The Mind Stone",
+        "The Soul Stone",
+        "The Reality Stone"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the realm of the dead in Thor mythology (MCU)?",
+      "correct_answer": "Hel",
+      "incorrect_answers": [
+        "Valhalla",
+        "Niffleheim",
+        "Muspelheim"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the first female superhero to get a solo MCU movie?",
+      "correct_answer": "Captain Marvel (Carol Danvers, 2019)",
+      "incorrect_answers": [
+        "Black Widow (2021)",
+        "Scarlet Witch",
+        "Wasp"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Raft in the MCU?",
+      "correct_answer": "An underwater prison for enhanced individuals",
+      "incorrect_answers": [
+        "A helicarrier",
+        "A space station",
+        "A Hydra base"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does E.D.I.T.H. stand for in Spider-Man: Far From Home?",
+      "correct_answer": "Even Dead I'm The Hero",
+      "incorrect_answers": [
+        "Electronic Defense Intelligence Tactical Hub",
+        "Enhanced Drone Intelligence Targeting Hardware",
+        "Emergency Defense and Infiltration Technology Hub"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which MCU character has appeared in the most movies?",
+      "correct_answer": "Nick Fury (Samuel L. Jackson)",
+      "incorrect_answers": [
+        "Tony Stark",
+        "Steve Rogers",
+        "Thor"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who killed T'Chaka (Black Panther's father)?",
+      "correct_answer": "Helmut Zemo (via a bombing)",
+      "incorrect_answers": [
+        "Killmonger",
+        "Ulysses Klaue",
+        "Crossbones"
+      ],
+      "difficulty": "hard"
+    }
+  ]
 }
-
