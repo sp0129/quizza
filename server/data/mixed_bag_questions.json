@@ -13981,6 +13981,506 @@
         "Braveheart"
       ],
       "difficulty": "easy"
+    },
+    {
+      "question": "What is the 'terroir' of wine?",
+      "correct_answer": "The environmental factors (soil, climate, terrain) that affect grape character",
+      "incorrect_answers": [
+        "The age of the wine",
+        "The grape variety",
+        "The winemaker's technique"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the conjugate base of water?",
+      "correct_answer": "Hydroxide ion (OH-)",
+      "incorrect_answers": [
+        "Hydronium ion (H3O+)",
+        "Hydrogen (H2)",
+        "Oxide ion (O2-)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the VSEPR shape of a molecule with 3 bonding pairs and 1 lone pair?",
+      "correct_answer": "Trigonal pyramidal",
+      "incorrect_answers": [
+        "Tetrahedral",
+        "Trigonal planar",
+        "Bent"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ABA problem in concurrent programming?",
+      "correct_answer": "When a CAS operation succeeds because a value changed from A to B and back to A, making the change undetectable despite intervening modifications",
+      "incorrect_answers": [
+        "A deadlock between three processes named A, B, and A",
+        "A memory allocation error in C",
+        "A naming conflict between three variables"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the traditional method for making authentic balsamic vinegar?",
+      "correct_answer": "Aged in wooden barrels for at least 12 years",
+      "incorrect_answers": [
+        "Distilled from wine in 6 months",
+        "Fermented grapes for 1 year",
+        "Boiled grape juice cooled overnight"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the chemical name for Plaster of Paris?",
+      "correct_answer": "Calcium sulfate hemihydrate",
+      "incorrect_answers": [
+        "Calcium carbonate",
+        "Calcium hydroxide",
+        "Calcium oxide"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What country consumes the most cheese per capita?",
+      "correct_answer": "France",
+      "incorrect_answers": [
+        "Italy",
+        "United States",
+        "Switzerland"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Rice's theorem?",
+      "correct_answer": "Any non-trivial semantic property of programs is undecidable \u2014 you cannot write a general algorithm to determine whether an arbitrary program has a given property",
+      "incorrect_answers": [
+        "A theorem about rice sorting algorithms",
+        "A theorem proving all programs eventually terminate",
+        "A theorem about optimal data compression"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the Mad King that Jaime Lannister killed?",
+      "correct_answer": "Aerys II Targaryen",
+      "incorrect_answers": [
+        "Aegon IV Targaryen",
+        "Maegor Targaryen",
+        "Baelor Targaryen"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The Good Place, how many times is Eleanor's neighborhood rebooted?",
+      "correct_answer": "Over 800 times",
+      "incorrect_answers": [
+        "12 times",
+        "100 times",
+        "Over 500 times"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Black family house-elf?",
+      "correct_answer": "Kreacher",
+      "incorrect_answers": [
+        "Dobby",
+        "Winky",
+        "Hokey"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In what year was the Chamber of Secrets first opened?",
+      "correct_answer": "1943",
+      "incorrect_answers": [
+        "1945",
+        "1938",
+        "1950"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Breaking Bad, what is the maximum purity Walt achieves for his meth?",
+      "correct_answer": "99.1%",
+      "incorrect_answers": [
+        "96%",
+        "97.5%",
+        "100%"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who is the gamekeeper at Hogwarts before Hagrid?",
+      "correct_answer": "Ogg",
+      "incorrect_answers": [
+        "Filch",
+        "Apollyon Pringle",
+        "Herbert Beery"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the RSA algorithm based on?",
+      "correct_answer": "The practical difficulty of factoring the product of two large prime numbers",
+      "incorrect_answers": [
+        "The difficulty of computing square roots",
+        "The complexity of sorting large arrays",
+        "The difficulty of finding shortest paths in graphs"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the Valyrian steel sword that Tywin Lannister has reforged from Ice?",
+      "correct_answer": "Widow's Wail",
+      "incorrect_answers": [
+        "Brightroar",
+        "Oathkeeper",
+        "Longclaw"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The Sopranos, what animal does Tony become attached to at his pool?",
+      "correct_answer": "Ducks",
+      "incorrect_answers": [
+        "A cat",
+        "A dog",
+        "A deer"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which album sold the most copies in its first week in 2023?",
+      "correct_answer": "Midnights \u2014 Taylor Swift",
+      "incorrect_answers": [
+        "SOS \u2014 SZA",
+        "One Thing at a Time \u2014 Morgan Wallen",
+        "Endless Summer Vacation \u2014 Miley Cyrus"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the first actor to refuse an Academy Award?",
+      "correct_answer": "George C. Scott (for Patton, 1971)",
+      "incorrect_answers": [
+        "Marlon Brando",
+        "Woody Allen",
+        "Katherine Hepburn"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which artist has spent the most total weeks on the Billboard Hot 100?",
+      "correct_answer": "Drake",
+      "incorrect_answers": [
+        "Taylor Swift",
+        "The Weeknd",
+        "Post Malone"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What condition results from having three copies of chromosome 21?",
+      "correct_answer": "Down syndrome",
+      "incorrect_answers": [
+        "Turner syndrome",
+        "Klinefelter syndrome",
+        "Cri du chat"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What 1998 film famously won 11 Oscars tying the all-time record?",
+      "correct_answer": "Titanic",
+      "incorrect_answers": [
+        "Saving Private Ryan",
+        "Shakespeare in Love",
+        "Life is Beautiful"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What cycle describes the stages of cellular respiration in mitochondria?",
+      "correct_answer": "Krebs cycle",
+      "incorrect_answers": [
+        "Calvin cycle",
+        "Water cycle",
+        "Cell cycle"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Ozark, what is the name of the local crime family the Byrdes deal with?",
+      "correct_answer": "The Snells",
+      "incorrect_answers": [
+        "The Langmores",
+        "The Cosgroves",
+        "The Navarro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What film's budget was so over-inflated it nearly bankrupted 20th Century Fox?",
+      "correct_answer": "Cleopatra (1963)",
+      "incorrect_answers": [
+        "Ben-Hur",
+        "Waterworld",
+        "Heaven's Gate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In The Office (US), what was the name of Michael Scott's screenplay?",
+      "correct_answer": "Threat Level Midnight",
+      "incorrect_answers": [
+        "Agent Michael Scarn",
+        "The Negotiator",
+        "Dunder Mifflin Infinity"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the secret passage beneath the Red Keep?",
+      "correct_answer": "The Dragon Skulls passage",
+      "incorrect_answers": [
+        "The Black Cells",
+        "The Serpent's Walk",
+        "The King's Way"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What enzyme unwinds DNA during replication?",
+      "correct_answer": "Helicase",
+      "incorrect_answers": [
+        "Polymerase",
+        "Ligase",
+        "Primase"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a 'foley artist' in filmmaking?",
+      "correct_answer": "A person who creates everyday sound effects for movies (footsteps, doors, etc.)",
+      "incorrect_answers": [
+        "A stunt coordinator",
+        "A special effects designer",
+        "A dialect coach"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the core of the Elder Wand?",
+      "correct_answer": "Thestral tail hair",
+      "incorrect_answers": [
+        "Phoenix feather",
+        "Dragon heartstring",
+        "Unicorn hair"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What type of bond holds the two strands of DNA together?",
+      "correct_answer": "Hydrogen bonds",
+      "incorrect_answers": [
+        "Covalent bonds",
+        "Ionic bonds",
+        "Peptide bonds"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In Friends, what is the name of the apartment building's superintendent?",
+      "correct_answer": "Mr. Treeger",
+      "incorrect_answers": [
+        "Mr. Heckles",
+        "Mr. Zelner",
+        "Mr. Waltham"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who holds the record for most #1 debuts on the Billboard Hot 100?",
+      "correct_answer": "Drake",
+      "incorrect_answers": [
+        "Taylor Swift",
+        "BTS",
+        "Ariana Grande"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Who was the High Sparrow before becoming the leader of the Faith?",
+      "correct_answer": "A cobbler",
+      "incorrect_answers": [
+        "A septon",
+        "A blacksmith",
+        "A beggar"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the equation PV = nRT?",
+      "correct_answer": "Ideal gas law",
+      "incorrect_answers": [
+        "Boyle's law",
+        "Charles's law",
+        "Dalton's law"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name for organisms that thrive in extreme heat?",
+      "correct_answer": "Thermophiles",
+      "incorrect_answers": [
+        "Halophiles",
+        "Acidophiles",
+        "Psychrophiles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the VSEPR shape of XeF4?",
+      "correct_answer": "Square planar",
+      "incorrect_answers": [
+        "Tetrahedral",
+        "Octahedral",
+        "See-saw"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Nearly Headless Nick's full name?",
+      "correct_answer": "Sir Nicholas de Mimsy-Porpington",
+      "incorrect_answers": [
+        "Sir Nicholas de Mimsy-Paddington",
+        "Sir Nicholas de Mimsy-Porchester",
+        "Sir Nicholas de Mimsy-Burlington"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Nernst equation used to calculate?",
+      "correct_answer": "Cell potential under non-standard conditions",
+      "incorrect_answers": [
+        "Reaction rate",
+        "Equilibrium constant",
+        "pH of a buffer"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Readers-Writers Problem?",
+      "correct_answer": "A synchronization problem where multiple readers can access a resource simultaneously, but writers need exclusive access",
+      "incorrect_answers": [
+        "A file permission issue in Unix",
+        "A problem with concurrent database writes",
+        "A challenge in compiling multi-file programs"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a memory barrier (fence)?",
+      "correct_answer": "A CPU instruction that enforces an ordering constraint on memory operations, preventing the compiler and CPU from reordering reads and writes across the barrier",
+      "incorrect_answers": [
+        "A hardware device that limits RAM access",
+        "A firewall for memory access",
+        "A garbage collection boundary"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the longest movie to win Best Picture?",
+      "correct_answer": "Gone with the Wind (3 hours 58 minutes)",
+      "incorrect_answers": [
+        "The Lord of the Rings: Return of the King",
+        "Ben-Hur",
+        "Lawrence of Arabia"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between a mandoline and a mandolin?",
+      "correct_answer": "A mandoline is a kitchen slicing tool; a mandolin is a musical instrument",
+      "incorrect_answers": [
+        "They're the same thing",
+        "A mandoline is Italian",
+        "A mandolin is used for cheese"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Y combinator in lambda calculus?",
+      "correct_answer": "A higher-order function that enables recursion in languages that don't natively support named self-reference",
+      "incorrect_answers": [
+        "A startup accelerator",
+        "A sorting algorithm",
+        "A garbage collection technique"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a quorum in distributed systems?",
+      "correct_answer": "The minimum number of nodes that must agree on an operation for it to be considered successful, typically a majority",
+      "incorrect_answers": [
+        "The total number of nodes in the cluster",
+        "A single designated leader node",
+        "The maximum latency allowed for a request"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the name of the house-elf who belonged to Hepzibah Smith?",
+      "correct_answer": "Hokey",
+      "incorrect_answers": [
+        "Winky",
+        "Kreacher",
+        "Dobby"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which artist released the experimental album 'Vespertine' in 2001, featuring harps, music boxes, and microbeats?",
+      "correct_answer": "Bj\u00f6rk",
+      "incorrect_answers": [
+        "Sigur R\u00f3s",
+        "Radiohead",
+        "Portishead"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the oxidation state of manganese in KMnO4?",
+      "correct_answer": "+7",
+      "incorrect_answers": [
+        "+4",
+        "+5",
+        "+6"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the fluid-filled space inside the chloroplast?",
+      "correct_answer": "Stroma",
+      "incorrect_answers": [
+        "Thylakoid",
+        "Matrix",
+        "Lumen"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What type of creature does Qyburn create from the Mountain?",
+      "correct_answer": "A reanimated corpse (Robert Strong)",
+      "incorrect_answers": [
+        "A wight",
+        "A golem",
+        "A shadow creature"
+      ],
+      "difficulty": "hard"
     }
   ]
 }
