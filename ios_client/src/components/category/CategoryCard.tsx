@@ -194,12 +194,12 @@ const s = StyleSheet.create({
   },
   featuredBadge: {
     position: 'absolute',
-    bottom: 8,
-    right: 8,
+    top: 8,
+    left: 8,
     zIndex: 10,
   },
   featuredText: {
-    fontSize: 14,
+    fontSize: 16,
   },
   emoji: {
     fontSize: 40,

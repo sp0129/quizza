@@ -57,6 +57,8 @@ const CATEGORY_PALETTE: Record<number, CategoryCardColors> = {
   2008: { bg: 'rgba(99,102,241,0.12)',  accent: '#6366F1', emoji: '📺' },   // Bingeworthy
   2009: { bg: 'rgba(124,58,237,0.12)',  accent: '#7C3AED', emoji: '🎲' },   // Mixed Bag
   2010: { bg: 'rgba(16,185,129,0.12)',  accent: '#10B981', emoji: '🏳️' },   // Flags & Capitals
+  2011: { bg: 'rgba(249,115,22,0.12)', accent: '#F97316', emoji: '🍕' },   // Food & Drinks
+  2012: { bg: 'rgba(220,38,38,0.12)',  accent: '#DC2626', emoji: '🎬' },   // Blockbusters
 };
 
 // Keyword-based fallback for categories not in the ID map
@@ -85,6 +87,9 @@ const KEYWORD_COLORS: Array<[string, CategoryCardColors]> = [
   ['celebrit',   { bg: 'rgba(245,158,11,0.12)',  accent: '#F59E0B', emoji: '⭐' }],
   ['vehicle',    { bg: 'rgba(100,116,139,0.12)', accent: '#64748B', emoji: '🚗' }],
   ['gadget',     { bg: 'rgba(6,182,212,0.12)',   accent: '#06B6D4', emoji: '📡' }],
+  ['food',       { bg: 'rgba(249,115,22,0.12)', accent: '#F97316', emoji: '🍕' }],
+  ['drink',      { bg: 'rgba(249,115,22,0.12)', accent: '#F97316', emoji: '🍕' }],
+  ['blockbuster',{ bg: 'rgba(220,38,38,0.12)',  accent: '#DC2626', emoji: '🎬' }],
 ];
 
 const DEFAULT_COLORS: CategoryCardColors = {
@@ -122,7 +127,7 @@ export const FILTER_CHIPS = [
 export const FILTER_CATEGORY_IDS: Record<string, number[]> = {
   science:       [17, 2001, 2002, 19, 27],
   history:       [23, 20, 22, 24, 9],
-  entertainment: [11, 14, 12, 2006, 13, 15, 16, 29, 31, 32, 2003, 2004, 2005],
+  entertainment: [11, 14, 12, 2006, 13, 15, 16, 29, 31, 32, 2003, 2004, 2005, 2012],
   sports:        [21, 28],
   arts:          [25, 10, 26],
   tech:          [18, 2007, 30],
