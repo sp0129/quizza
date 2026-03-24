@@ -14,6 +14,7 @@ import { useFavoritesStore } from '../../stores/favorites';
 interface Category {
   id: number;
   name: string;
+  featured?: boolean;
 }
 
 interface CategoryCardProps {
@@ -118,6 +119,13 @@ function CategoryCardInner({ item, index, isSelected, onSelect }: CategoryCardPr
             </Animated.Text>
           </Pressable>
 
+          {/* Featured badge */}
+          {item.featured && (
+            <View style={s.featuredBadge}>
+              <Text style={s.featuredText}>✨</Text>
+            </View>
+          )}
+
           {/* Content */}
           <Text style={s.emoji}>{colors.emoji}</Text>
           <Text style={[s.name, { color: colors.accent }]} numberOfLines={2}>
@@ -183,6 +191,15 @@ const s = StyleSheet.create({
   starText: {
     fontSize: 18,
     color: '#F59E0B',
+  },
+  featuredBadge: {
+    position: 'absolute',
+    bottom: 8,
+    right: 8,
+    zIndex: 10,
+  },
+  featuredText: {
+    fontSize: 14,
   },
   emoji: {
     fontSize: 40,
