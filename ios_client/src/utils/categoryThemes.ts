@@ -90,6 +90,9 @@ const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
   ['food',            { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' }],
   ['drink',           { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' }],
   ['blockbuster',     { gradient: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)', accent: '#dc2626', emoji: '🎬' }],
+  ['christmas',       { gradient: 'linear-gradient(135deg, #16a34a 0%, #991b1b 100%)', accent: '#16a34a', emoji: '🎄' }],
+  ['halloween',       { gradient: 'linear-gradient(135deg, #f97316 0%, #7c2d12 100%)', accent: '#f97316', emoji: '🎃' }],
+  ['special event',   { gradient: 'linear-gradient(135deg, #eab308 0%, #a16207 100%)', accent: '#eab308', emoji: '🎆' }],
 ];
 
 export function cleanCategoryName(name: string): string {
