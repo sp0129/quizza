@@ -33,11 +33,11 @@ interface LocalQuestionBank {
 }
 
 interface CategoryIndex {
-  categories: { id: number; name: string; file: string }[];
+  categories: { id: number; name: string; file: string; featured?: boolean }[];
 }
 
 export interface LocalData {
-  categories: { id: number; name: string }[];
+  categories: { id: number; name: string; featured?: boolean }[];
   question_banks: LocalQuestionBank[];
 }
 
@@ -86,7 +86,7 @@ export function loadLocalData(): LocalData {
   }
 
   return {
-    categories: index.categories.map(c => ({ id: c.id, name: c.name })),
+    categories: index.categories.map(c => ({ id: c.id, name: c.name, ...(c.featured ? { featured: true } : {}) })),
     question_banks,
   };
 }

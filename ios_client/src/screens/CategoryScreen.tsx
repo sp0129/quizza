@@ -21,7 +21,7 @@ import type { RootStackParamList } from '../../App';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Category'>;
 
-interface Category { id: number; name: string; }
+interface Category { id: number; name: string; featured?: boolean; }
 
 const { width: SCREEN_W } = Dimensions.get('window');
 const BOTTOM_BAR_COLLAPSED = 80;   // just the button
@@ -73,6 +73,9 @@ export default function CategoryScreen({ route, navigation }: Props) {
       .then((raw) => {
         const cleaned = raw.map((c) => ({ ...c, name: cleanCategoryName(c.name) }));
         cleaned.sort((a, b) => {
+          // Featured categories always come first
+          if (a.featured && !b.featured) return -1;
+          if (!a.featured && b.featured) return 1;
           const ia = CATEGORY_SORT_ORDER.indexOf(a.id);
           const ib = CATEGORY_SORT_ORDER.indexOf(b.id);
           if (ia === -1 && ib === -1) return a.name.localeCompare(b.name);
