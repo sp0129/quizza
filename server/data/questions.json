@@ -3,7 +3,7 @@
     { "id": 2001, "name": "Chemistry",       "file": "chemistry_questions.json" },
     { "id": 2002, "name": "Biology",         "file": "biology_questions.json" },
     { "id": 2003, "name": "Harry Potter",    "file": "harry_potter_questions.json" },
-    { "id": 2004, "name": "Game of Thrones", "file": "game_of_thrones_questions.json", "featured": true },
+    { "id": 2004, "name": "Game of Thrones", "file": "game_of_thrones_questions.json" },
     { "id": 2005, "name": "Marvel Movies",   "file": "marvel-movies.json" },
     {"id": 2006,  "name": "Pop Music",        "file": "pop_music_questions.json"},
     {"id": 2007,  "name": "Computer Science", "file": "computer_science_questions.json"},
