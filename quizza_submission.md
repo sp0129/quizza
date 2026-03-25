@@ -136,3 +136,187 @@
 - [ ] Post in r/indiegaming, r/trivia, r/iosgaming
 - [ ] Monitor Sentry dashboard and App Store reviews in real time
 - [ ] Respond to every review within 24 hours
+
+# Quizza — ASO Growth Plan
+
+## Current Status (Launch Day)
+
+All foundational ASO is complete:
+
+- App name with keywords in title ✅
+- Subtitle with high-intent terms ✅
+- Keyword field at 99/100 characters ✅
+- Description with natural keyword language ✅
+- Screenshots optimized for conversion ✅
+- Preview video uploaded ✅
+- In-app review prompt after wins ✅
+
+---
+
+## Keyword Field (Current — v1.0)
+
+```
+multiplayer,pub quiz,general knowledge,quiz night,trivia night,party,IQ,blitz,speed,battle,1v1,brain
+```
+
+**Rules:**
+- Never use: free, best, top, new, #1 (Apple bans these)
+- Never repeat words already in title or subtitle
+- Update every 4-6 weeks based on ranking data
+- Target keywords ranking 6-15 — these are the optimization sweet spot
+
+---
+
+## Priority Timeline
+
+### Week 1-2 — Respond and Monitor
+
+- Respond to every App Store review within 24 hours
+- Especially respond to negative reviews — shows Apple you are engaged
+- Monitor crash reports daily
+- Watch for any review patterns suggesting UX issues
+
+### Week 3-4 — First Keyword Check
+
+- Sign up for **AppFollow** (free tier) or **AppFigures** (free for indie)
+- Check which keywords Quizza is actually ranking for
+- Identify keywords ranking 6-15 — update keyword field to push these higher
+- Drop any keywords where you rank below 50 — replace with new candidates
+
+### Month 2 — In-App Events + Conversion Data
+
+- Create first **In-App Event** in App Store Connect
+  - Example: "Launch Week Challenge" or "Weekend Trivia Tournament"
+  - In-App Events appear directly in App Store search results
+  - Massively underused by indie developers — free additional exposure
+- Start **Apple Search Ads** at $5-10/day to get conversion rate data
+  - Target: conversion rate above 25-30% for a game
+  - If below — screenshots or description need iteration
+- Review keyword rankings again and make second round of updates
+
+### Month 2-3 — Product Page Optimization
+
+- Available once you have sufficient traffic (few hundred page visits/day)
+- Go to App Store Connect → Growth & Marketing → **Product Page Optimization**
+- Create A/B test with alternate screenshots or preview video
+- Run for minimum 7 days before reading results
+- Keep winner, discard loser, repeat
+
+### Month 3 — Localization
+
+Translating metadata into other languages gives you completely separate keyword fields — 100 additional characters of keywords per language. Free organic reach.
+
+**Priority languages:**
+
+| Language | Market | Why |
+|---|---|---|
+| Spanish | US Hispanic + Latin America | Massive App Store market |
+| Portuguese | Brazil | Fastest growing mobile market |
+| French | France + Canada | High App Store spend per user |
+| German | Germany + Austria | High conversion rates |
+
+**What to translate:**
+- App name
+- Subtitle
+- Description
+- Keywords (research native search terms — don't just translate English keywords)
+
+**Tools:**
+- ChatGPT for natural translation of description
+- AppFollow for keyword research in each language
+- Native speaker review if possible before submitting
+
+### Month 3+ — Custom Product Pages
+
+- Available at App Store Connect → Growth & Marketing → **Custom Product Pages**
+- Create up to 35 alternate versions of your listing
+- Each can have different screenshots, preview video, and promotional text
+- Use for targeted campaigns — e.g. a page specifically for pub quiz searchers
+- Link your social media ads directly to the relevant custom page
+
+---
+
+## Rating Velocity — The Most Important ASO Factor
+
+Apple's algorithm heavily weights:
+- Average star rating
+- Number of ratings
+- Recency of ratings
+
+**Your in-app prompt is already configured to fire after wins. This is your #1 ASO lever.**
+
+Additional tactics:
+- Ask beta testers to leave reviews on launch day
+- Respond to every review — positive and negative
+- Never incentivize reviews (Apple guideline violation)
+- Re-prompt users after major app updates (throttle to 60 days)
+
+**Targets:**
+- 15+ reviews before public launch (from beta testers)
+- 4.5+ average rating in first 30 days
+- Maintain response rate of 100% on all reviews in first 90 days
+
+---
+
+## Tools to Use
+
+| Tool | Purpose | Cost |
+|---|---|---|
+| AppFollow | Keyword tracking, review monitoring | Free tier available |
+| AppFigures | Rankings, keyword data | Free for indie |
+| Sensor Tower | Competitor keyword research | Limited free tier |
+| Apple Search Ads | Conversion rate data, keyword validation | Pay per click |
+| App Store Connect Analytics | Impressions, page views, conversion | Free — built in |
+
+---
+
+## Metrics to Track
+
+| Metric | Target | Where to Find |
+|---|---|---|
+| Impressions | Growing week over week | App Store Connect Analytics |
+| Product page views | Growing week over week | App Store Connect Analytics |
+| Conversion rate | 25-30%+ | App Store Connect Analytics |
+| Average rating | 4.5+ | App Store Connect |
+| Total ratings | 15+ in first 30 days | App Store listing |
+| Keyword rankings | Track top 20 keywords | AppFollow |
+
+---
+
+## Promotional Text (Update Anytime — No Review Required)
+
+Current:
+> Think fast. Play with friends. Flex your score. 20,000+ questions across 35+ categories — solo, 1v1, or live with the squad.
+
+Update this for:
+- Community events and challenges
+- Seasonal moments (Super Bowl trivia, Oscars night, etc.)
+- Milestones ("Join 1,000+ players")
+- New feature launches
+
+---
+
+## Screenshots and Video (Update Anytime — No Review Required)
+
+Current sequence:
+1. Video preview (30s)
+2. Dashboard — "Challenges Incoming. Are You Ready?" — purple
+3. Gameplay — "Think Fast. Every Second Counts." — orange/red
+4. Live Rooms — "Live Rooms. Real-Time Trivia." — yellow/orange
+5. Categories — "35+ Categories. Find Your Obsession." — teal/green
+6. VS Screen — "Pick a Friend. Pick a Category. Settle It." — yellow/pink
+
+**A/B test ideas for month 2-3:**
+- Lead with gameplay screenshot instead of dashboard
+- Test different caption copy on screenshot 2
+- Add image-based share card screenshot once that feature ships
+
+---
+
+## Notes
+
+- Keywords, description, screenshots, promotional text, and preview video can all be updated without a new app submission
+- Only code changes require a new binary and full review cycle
+- Always make keyword changes based on data — not guesswork
+- The 6-15 ranking range is where optimization moves the needle most
+- Localization is the single most underused ASO lever for indie developers
