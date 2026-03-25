@@ -11,7 +11,7 @@ function getResend(): Resend {
   return _resend;
 }
 
-const FROM = 'Quizza <noreply@quizza.online>';
+const FROM = 'Quizza <noreply@playquizza.online>';
 
 export async function sendVerificationEmail(to: string, token: string): Promise<void> {
   const deepLink = `quizza://verify?token=${token}`;
