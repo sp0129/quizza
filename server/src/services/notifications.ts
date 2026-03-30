@@ -1,7 +1,16 @@
-import { Expo, ExpoPushMessage, ExpoPushTicket } from 'expo-server-sdk';
 import pool from '../db';
 
-const expo = new Expo();
+let _expo: any = null;
+let _Expo: any = null;
+
+async function getExpo() {
+  if (!_expo) {
+    const mod = await import('expo-server-sdk');
+    _Expo = mod.Expo ?? mod.default?.Expo ?? mod.default;
+    _expo = new _Expo();
+  }
+  return { expo: _expo, Expo: _Expo };
+}
 
 export async function sendPushNotification(
   pushToken: string,
@@ -9,26 +18,25 @@ export async function sendPushNotification(
   body: string,
   data?: Record<string, unknown>,
 ): Promise<void> {
+  const { expo, Expo } = await getExpo();
+
   if (!Expo.isExpoPushToken(pushToken)) {
     console.warn('[push] invalid token, removing:', pushToken);
     await pool.query('UPDATE users SET push_token = NULL WHERE push_token = $1', [pushToken]);
     return;
   }
 
-  const message: ExpoPushMessage = {
-    to: pushToken,
-    sound: 'default',
-    title,
-    body,
-    data: data ?? {},
-  };
-
   try {
-    const [ticket] = await expo.sendPushNotificationsAsync([message]);
-    if ((ticket as any).status === 'error') {
-      const err = ticket as any;
-      console.error('[push] error:', err.message);
-      if (err.details?.error === 'DeviceNotRegistered') {
+    const [ticket] = await expo.sendPushNotificationsAsync([{
+      to: pushToken,
+      sound: 'default' as const,
+      title,
+      body,
+      data: data ?? {},
+    }]);
+    if (ticket.status === 'error') {
+      console.error('[push] error:', ticket.message);
+      if (ticket.details?.error === 'DeviceNotRegistered') {
         await pool.query('UPDATE users SET push_token = NULL WHERE push_token = $1', [pushToken]);
       }
     }
