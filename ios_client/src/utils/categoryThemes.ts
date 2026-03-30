@@ -47,6 +47,7 @@ const ID_MAP: Record<number, CategoryTheme> = {
   2010: { gradient: 'linear-gradient(135deg, #10b981 0%, #065f46 100%)', accent: '#10B981', emoji: '🏳️' },
   2011: { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' },
   2012: { gradient: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)', accent: '#dc2626', emoji: '🎬' },
+  2013: { gradient: 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)', accent: '#f59e0b', emoji: '🎥' },
 };
 
 const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
@@ -90,6 +91,8 @@ const KEYWORD_MAP: Array<[string, CategoryTheme]> = [
   ['food',            { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' }],
   ['drink',           { gradient: 'linear-gradient(135deg, #f97316 0%, #c2410c 100%)', accent: '#f97316', emoji: '🍕' }],
   ['blockbuster',     { gradient: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)', accent: '#dc2626', emoji: '🎬' }],
+  ['bollyzone',       { gradient: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)', accent: '#ec4899', emoji: '💃' }],
+  ['bollywood',       { gradient: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)', accent: '#ec4899', emoji: '💃' }],
   ['christmas',       { gradient: 'linear-gradient(135deg, #16a34a 0%, #991b1b 100%)', accent: '#16a34a', emoji: '🎄' }],
   ['halloween',       { gradient: 'linear-gradient(135deg, #f97316 0%, #7c2d12 100%)', accent: '#f97316', emoji: '🎃' }],
   ['special event',   { gradient: 'linear-gradient(135deg, #eab308 0%, #a16207 100%)', accent: '#eab308', emoji: '🎆' }],
@@ -116,6 +119,7 @@ export const CATEGORY_SORT_ORDER: number[] = [
   2008,  // Bingeworthy
   27,    // Animals
   2012,  // Blockbusters
+  2013,  // BollyZone
   23,    // History
   22,    // Geography
   20,    // Mythology

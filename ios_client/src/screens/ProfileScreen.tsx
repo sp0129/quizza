@@ -379,33 +379,7 @@ export default function ProfileScreen({ navigation }: Props) {
           </View>
         </View>
 
-        {/* Tip Jar */}
-        <TouchableOpacity
-          style={s.tipBtn}
-          onPress={async () => {
-            try {
-              const IAP = await import('expo-in-app-purchases');
-              await IAP.connectAsync();
-              const { results } = await IAP.getProductsAsync(['com.quizza.app.tip']);
-              if (!results || results.length === 0) {
-                Alert.alert('Not Available', 'Tip jar is not available right now.');
-                await IAP.disconnectAsync();
-                return;
-              }
-              await IAP.purchaseItemAsync('com.quizza.app.tip');
-              Alert.alert('Thank you! 🎉', "You're awesome. This keeps Quizza ad-free.");
-              await IAP.disconnectAsync();
-            } catch (err: any) {
-              if (err.code !== 'E_USER_CANCELLED') {
-                Alert.alert('Error', err.message || 'Purchase failed');
-              }
-            }
-          }}
-          activeOpacity={0.8}
-        >
-          <Text style={s.tipBtnText}>🍕 Buy us a slice — $2.99</Text>
-          <Text style={s.tipBtnSub}>Keep Quizza ad-free</Text>
-        </TouchableOpacity>
+        {/* Tip Jar — coming in v1.1 with expo-iap */}
 
         {/* Logout */}
         <TouchableOpacity
