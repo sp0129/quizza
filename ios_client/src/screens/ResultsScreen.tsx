@@ -194,12 +194,10 @@ export default function ResultsScreen({ route, navigation }: Props) {
     if (skip) return;
     (async () => {
       try {
-        const { isAvailableAsync, requestReview } = await import('expo-store-review');
-        if (!(await isAvailableAsync())) return;
         const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
         const GAMES_KEY = 'quizza_review_games';
         const LAST_KEY = 'quizza_review_last';
-        // Count ALL completed games, not just wins
+        // Count ALL completed games unconditionally
         const games = parseInt(await AsyncStorage.getItem(GAMES_KEY) ?? '0') + 1;
         await AsyncStorage.setItem(GAMES_KEY, String(games));
         const pct = (correctCount != null && totalQuestions != null && totalQuestions > 0) ? correctCount / totalQuestions : 0;
@@ -209,6 +207,8 @@ export default function ResultsScreen({ route, navigation }: Props) {
         if (!shouldPrompt) return;
         const last = parseInt(await AsyncStorage.getItem(LAST_KEY) ?? '0');
         if (Date.now() - last < 60 * 24 * 60 * 60 * 1000) return;
+        const { isAvailableAsync, requestReview } = await import('expo-store-review');
+        if (!(await isAvailableAsync())) return;
         await AsyncStorage.setItem(LAST_KEY, String(Date.now()));
         setTimeout(() => requestReview(), 2500);
       } catch {}
