@@ -8,8 +8,18 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import * as Linking from 'expo-linking';
+import * as Notifications from 'expo-notifications';
 import { Alert } from 'react-native';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
+// Show notifications even when app is in foreground
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false,
+  }),
+});
 import { AuthProvider, useAuth } from './src/hooks/useAuth';
 import AnimatedSplash from './src/components/AnimatedSplash';
 import { colors } from './src/theme';
@@ -116,6 +126,12 @@ const linking: LinkingOptions<RootStackParamList> = {
       EmailVerification: 'verify',
       // Deep links: quizza://reset?token=ABC → ResetPassword screen
       ResetPassword: 'reset',
+      // Deep links: /share → Friends tab
+      MainTabs: {
+        screens: {
+          Friends: 'share',
+        },
+      },
     },
   },
 };
@@ -229,12 +245,23 @@ initSoundSetting();
 
 function AppRoot() {
   const [splashDone, setSplashDone] = useState(false);
+  const navigationRef = useRef<any>(null);
+
+  useEffect(() => {
+    const sub = Notifications.addNotificationResponseReceivedListener(response => {
+      const data = response.notification.request.content.data;
+      if (data?.type === 'challenge' && navigationRef.current) {
+        navigationRef.current.navigate('MainTabs', { screen: 'OpenChallenges' });
+      }
+    });
+    return () => sub.remove();
+  }, []);
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <AuthProvider>
-          <NavigationContainer linking={linking}>
+          <NavigationContainer ref={navigationRef} linking={linking}>
             <StatusBar style="light" />
             <RootNavigator />
           </NavigationContainer>

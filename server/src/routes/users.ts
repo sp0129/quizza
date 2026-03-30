@@ -253,4 +253,22 @@ router.delete('/me', requireAuth, async (req: AuthRequest, res: Response): Promi
   }
 });
 
+// PUT /users/push-token — register or update Expo push token
+router.put('/push-token', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const { token } = req.body;
+  if (!token || typeof token !== 'string') {
+    res.status(400).json({ error: 'token is required' });
+    return;
+  }
+  try {
+    // Clear this token from any other user first (device switched accounts)
+    await pool.query('UPDATE users SET push_token = NULL WHERE push_token = $1 AND id != $2', [token, req.userId]);
+    await pool.query('UPDATE users SET push_token = $1 WHERE id = $2', [token, req.userId]);
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 export default router;

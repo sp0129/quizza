@@ -167,19 +167,17 @@ export default function FriendsScreen({ navigation }: Props) {
 
   const shareInviteLink = useCallback(async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    const inviteLink = `https://quizza.app/invite/${user?.username ?? 'friend'}`;
+    const appLink = 'https://quizza-eta.vercel.app/share';
+    const handle = user?.username ? `@${user.username}` : '';
     try {
       const result = await Share.share({
-        message: `Join me on Quizza! Let's play trivia together. ${inviteLink}`,
-        url: inviteLink,
+        message: `Hey! Add me on Quizza and challenge me to a trivia duel 🍕🧠 My handle is ${handle}\n\n${appLink}`,
       });
       if (result.action === Share.dismissedAction) return;
-      // Also copy to clipboard
-      await Clipboard.setStringAsync(inviteLink);
+      await Clipboard.setStringAsync(appLink);
     } catch {
-      // Fallback: just copy to clipboard
-      await Clipboard.setStringAsync(inviteLink);
-      Alert.alert('Copied!', 'Invite link copied to clipboard.');
+      await Clipboard.setStringAsync(appLink);
+      Alert.alert('Copied!', 'App link copied to clipboard.');
     }
   }, [user?.username]);
 

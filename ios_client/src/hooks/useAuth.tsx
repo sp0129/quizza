@@ -1,8 +1,26 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
 import * as AppleAuthentication from 'expo-apple-authentication';
+import * as Notifications from 'expo-notifications';
+import { Platform } from 'react-native';
 import { api, setAuthToken, onAuthExpired } from '../api/client';
 import ErrorOverlay from '../components/ErrorOverlay';
+
+async function registerPushToken(): Promise<void> {
+  try {
+    const { status: existing } = await Notifications.getPermissionsAsync();
+    let finalStatus = existing;
+    if (existing !== 'granted') {
+      const { status } = await Notifications.requestPermissionsAsync();
+      finalStatus = status;
+    }
+    if (finalStatus !== 'granted') return;
+    const tokenData = await Notifications.getExpoPushTokenAsync({ projectId: '0f7738f4-08c1-49bf-b9c7-70b6560f8c05' });
+    await api.put('/users/push-token', { token: tokenData.data });
+  } catch (err) {
+    console.warn('[push] registration failed:', err);
+  }
+}
 
 export interface User {
   id: string;
@@ -49,6 +67,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (token && userStr) {
           setAuthToken(token);
           setUser(JSON.parse(userStr));
+          registerPushToken();
         }
       } catch {
         // ignore corrupt storage
@@ -68,6 +87,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await SecureStore.setItemAsync('user', JSON.stringify(u));
     setAuthToken(token);
     setUser(u);
+    registerPushToken();
   };
 
   const login = async (email: string, password: string) => {

@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import pool from '../db';
 import { requireAuth, AuthRequest } from '../middleware/auth';
 import { fetchAndStoreQuestionSet } from '../services/questions';
+import { sendPushNotification } from '../services/notifications';
 
 const router = Router();
 const CHALLENGE_EXPIRY_HOURS = 24;
@@ -20,7 +21,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
   try {
     // Find target user
     const targetResult = await pool.query(
-      'SELECT id FROM users WHERE username = $1',
+      'SELECT id, push_token FROM users WHERE username = $1',
       [targetUsername]
     );
     if (!targetResult.rows[0]) {
@@ -28,6 +29,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
       return;
     }
     const targetId: string = targetResult.rows[0].id;
+    const targetPushToken: string | null = targetResult.rows[0].push_token;
 
     if (targetId === me) {
       res.status(400).json({ error: 'Cannot challenge yourself' });
@@ -51,6 +53,18 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
        VALUES ($1, $2, $3, $4, $5, $6)`,
       [invId, me, targetId, category, gameId, expiresAt]
     );
+
+    // Notify the target user (fire-and-forget)
+    if (targetPushToken) {
+      const challengerResult = await pool.query('SELECT username FROM users WHERE id = $1', [me]);
+      const challengerName = challengerResult.rows[0]?.username ?? 'Someone';
+      sendPushNotification(
+        targetPushToken,
+        '🍕 New Challenge!',
+        `@${challengerName} challenged you to ${category} trivia!`,
+        { type: 'challenge', invitationId: invId },
+      ).catch(err => console.error('[push] challenge notify failed:', err));
+    }
 
     res.json({ gameId, questionSetId });
   } catch (err) {
