@@ -5,7 +5,7 @@ let _Expo: any = null;
 
 async function getExpo() {
   if (!_expo) {
-    const mod = await import('expo-server-sdk');
+    const mod: any = await import('expo-server-sdk');
     _Expo = mod.Expo ?? mod.default?.Expo ?? mod.default;
     _expo = new _Expo();
   }
