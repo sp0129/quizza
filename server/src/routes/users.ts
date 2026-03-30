@@ -208,6 +208,24 @@ router.put('/me', requireAuth, async (req: AuthRequest, res: Response): Promise<
 });
 
 // PUT /users/:userId — legacy update (kept for compatibility)
+// PUT /users/push-token — register or update Expo push token
+router.put('/push-token', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
+  const { token } = req.body;
+  if (!token || typeof token !== 'string') {
+    res.status(400).json({ error: 'token is required' });
+    return;
+  }
+  try {
+    // Clear this token from any other user first (device switched accounts)
+    await pool.query('UPDATE users SET push_token = NULL WHERE push_token = $1 AND id != $2', [token, req.userId]);
+    await pool.query('UPDATE users SET push_token = $1 WHERE id = $2', [token, req.userId]);
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 router.put('/:userId', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
   if (req.params.userId !== req.userId) {
     res.status(403).json({ error: 'Forbidden' }); return;
@@ -247,24 +265,6 @@ router.delete('/me', requireAuth, async (req: AuthRequest, res: Response): Promi
     await pool.query('DELETE FROM verification_tokens WHERE user_id = $1', [me]);
     await pool.query('DELETE FROM users WHERE id = $1', [me]);
     res.json({ success: true });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Server error' });
-  }
-});
-
-// PUT /users/push-token — register or update Expo push token
-router.put('/push-token', requireAuth, async (req: AuthRequest, res: Response): Promise<void> => {
-  const { token } = req.body;
-  if (!token || typeof token !== 'string') {
-    res.status(400).json({ error: 'token is required' });
-    return;
-  }
-  try {
-    // Clear this token from any other user first (device switched accounts)
-    await pool.query('UPDATE users SET push_token = NULL WHERE push_token = $1 AND id != $2', [token, req.userId]);
-    await pool.query('UPDATE users SET push_token = $1 WHERE id = $2', [token, req.userId]);
-    res.json({ ok: true });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
