@@ -203,7 +203,7 @@ export default function ResultsScreen({ route, navigation }: Props) {
         const games = parseInt(await AsyncStorage.getItem(GAMES_KEY) ?? '0') + 1;
         await AsyncStorage.setItem(GAMES_KEY, String(games));
         const pct = (correctCount != null && totalQuestions != null && totalQuestions > 0) ? correctCount / totalQuestions : 0;
-        const isGreatGame = pct >= 0.8;
+        const isGreatGame = pct >= 0.6;
         // Trigger on: 80%+ score after at least 2 games, or every 5th game
         const shouldPrompt = (isGreatGame && games >= 2) || games % 5 === 0;
         if (!shouldPrompt) return;
