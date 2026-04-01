@@ -1,6 +1,7 @@
 import { Router, Response } from 'express';
 import pool from '../db';
 import { requireAuth, AuthRequest } from '../middleware/auth';
+import { sendPushNotification } from '../services/notifications';
 
 const router = Router();
 
@@ -46,6 +47,21 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
        ON CONFLICT (user_a_id, user_b_id) DO NOTHING`,
       [a, b, req.userId]
     );
+
+    // Notify the target user
+    const targetToken = await pool.query('SELECT push_token FROM users WHERE id = $1', [friendId]);
+    const pushToken = targetToken.rows[0]?.push_token;
+    if (pushToken) {
+      const senderResult = await pool.query('SELECT username FROM users WHERE id = $1', [req.userId]);
+      const senderName = senderResult.rows[0]?.username ?? 'Someone';
+      sendPushNotification(
+        pushToken,
+        '👋 Friend Request!',
+        `@${senderName} wants to be your friend on Quizza!`,
+        { type: 'friend_request' },
+      ).catch(err => console.error('[push] friend request notify failed:', err));
+    }
+
     res.json({ success: true, friendId });
   } catch (err) {
     console.error(err);
@@ -65,6 +81,21 @@ router.post('/by-id', requireAuth, async (req: AuthRequest, res: Response): Prom
        ON CONFLICT (user_a_id, user_b_id) DO NOTHING`,
       [a, b, req.userId]
     );
+
+    // Notify the target user
+    const targetToken = await pool.query('SELECT push_token FROM users WHERE id = $1', [friendId]);
+    const pushToken = targetToken.rows[0]?.push_token;
+    if (pushToken) {
+      const senderResult = await pool.query('SELECT username FROM users WHERE id = $1', [req.userId]);
+      const senderName = senderResult.rows[0]?.username ?? 'Someone';
+      sendPushNotification(
+        pushToken,
+        '👋 Friend Request!',
+        `@${senderName} wants to be your friend on Quizza!`,
+        { type: 'friend_request' },
+      ).catch(err => console.error('[push] friend request notify failed:', err));
+    }
+
     res.json({ success: true });
   } catch (err) {
     console.error(err);
