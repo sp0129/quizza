@@ -119,7 +119,6 @@ export const CATEGORY_SORT_ORDER: number[] = [
   2008,  // Bingeworthy
   27,    // Animals
   2012,  // Blockbusters
-  2013,  // BollyZone
   23,    // History
   22,    // Geography
   20,    // Mythology
@@ -150,6 +149,7 @@ export const CATEGORY_SORT_ORDER: number[] = [
   2002,  // Biology
   2007,  // Computer Science
   18,    // Computers
+  2013,  // BollyZone
   30,    // Gadgets
   19,    // Mathematics
   28,    // Vehicles
