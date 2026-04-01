@@ -137,6 +137,7 @@ export const CATEGORY_SORT_ORDER: number[] = [
   13,    // Musicals & Theatre
   31,    // Anime & Manga
   32,    // Cartoons
+  2013,  // BollyZone
   16,    // Board Games
   // Culture & knowledge
   29,    // Books
@@ -149,7 +150,6 @@ export const CATEGORY_SORT_ORDER: number[] = [
   2002,  // Biology
   2007,  // Computer Science
   18,    // Computers
-  2013,  // BollyZone
   30,    // Gadgets
   19,    // Mathematics
   28,    // Vehicles
