@@ -55,6 +55,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response): Promise<v
     );
 
     // Notify the target user (fire-and-forget)
+    console.log('[push] target push token:', targetPushToken ? 'exists' : 'null');
     if (targetPushToken) {
       const challengerResult = await pool.query('SELECT username FROM users WHERE id = $1', [me]);
       const challengerName = challengerResult.rows[0]?.username ?? 'Someone';
