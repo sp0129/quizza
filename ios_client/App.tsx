@@ -25,6 +25,7 @@ import AnimatedSplash from './src/components/AnimatedSplash';
 import { colors } from './src/theme';
 import BottomNav from './src/components/dashboard/BottomNav';
 import { initSoundSetting } from './src/utils/sounds';
+import { setDashboardNeedsRefresh } from './src/utils/refreshFlag';
 
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
@@ -249,7 +250,7 @@ function AppRoot() {
 
   useEffect(() => {
     const sub = Notifications.addNotificationResponseReceivedListener(response => {
-      const data = response.notification.request.content.data;
+      setDashboardNeedsRefresh();
       if (navigationRef.current) {
         navigationRef.current.navigate('MainTabs', { screen: 'Home' });
       }
