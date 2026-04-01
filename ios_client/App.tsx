@@ -251,11 +251,7 @@ function AppRoot() {
     const sub = Notifications.addNotificationResponseReceivedListener(response => {
       const data = response.notification.request.content.data;
       if (navigationRef.current) {
-        if (data?.type === 'challenge') {
-          navigationRef.current.navigate('MainTabs', { screen: 'Home' });
-        } else if (data?.type === 'friend_request') {
-          navigationRef.current.navigate('MainTabs', { screen: 'Friends' });
-        }
+        navigationRef.current.navigate('MainTabs', { screen: 'Home' });
       }
     });
     return () => sub.remove();
