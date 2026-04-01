@@ -250,8 +250,12 @@ function AppRoot() {
   useEffect(() => {
     const sub = Notifications.addNotificationResponseReceivedListener(response => {
       const data = response.notification.request.content.data;
-      if (data?.type === 'challenge' && navigationRef.current) {
-        navigationRef.current.navigate('MainTabs', { screen: 'OpenChallenges' });
+      if (navigationRef.current) {
+        if (data?.type === 'challenge') {
+          navigationRef.current.navigate('MainTabs', { screen: 'Home' });
+        } else if (data?.type === 'friend_request') {
+          navigationRef.current.navigate('MainTabs', { screen: 'Friends' });
+        }
       }
     });
     return () => sub.remove();
