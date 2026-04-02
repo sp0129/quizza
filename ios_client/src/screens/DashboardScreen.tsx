@@ -214,10 +214,12 @@ export default function DashboardScreen({ navigation }: Props) {
     const interval = setInterval(() => {
       if (consumeDashboardRefresh()) {
         fetchStats();
+        fetchChallenges();
+        fetchFriendRequests();
       }
     }, 500);
     return () => clearInterval(interval);
-  }, [fetchStats]);
+  }, [fetchStats, fetchChallenges, fetchFriendRequests]);
 
   // Fetch friend requests
   const fetchFriendRequests = useCallback(async () => {
