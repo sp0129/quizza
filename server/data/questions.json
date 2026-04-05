@@ -13,6 +13,6 @@
     {"id": 2011,  "name": "Food & Drinks",   "file": "food_drinks_questions.json"},
     {"id": 2012,  "name": "Blockbusters",    "file": "blockbusters_questions.json"},
     {"id": 2013,  "name": "BollyZone",      "file": "bollyzone_questions.json"},
-    {"id": 2014,  "name": "Jet Set Go!",        "file": "airlines_questions.json", "featured": true},
+    {"id": 2014,  "name": "Jet Set Go!",        "file": "airlines_questions.json", "featured": true}
   ]
 }
