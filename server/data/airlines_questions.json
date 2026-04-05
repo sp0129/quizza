@@ -1,0 +1,6006 @@
+{
+  "category": "Jet Set Go!",
+  "category_id": 2014,
+  "questions": [
+    {
+      "question": "Which manufacturer produces the 737 family of aircraft?",
+      "correct_answer": "Boeing",
+      "incorrect_answers": [
+        "Airbus",
+        "Embraer",
+        "Bombardier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the 'A' stand for in A320?",
+      "correct_answer": "Airbus",
+      "incorrect_answers": [
+        "American",
+        "Advanced",
+        "Aviation"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline alliance is United Airlines a member of?",
+      "correct_answer": "Star Alliance",
+      "incorrect_answers": [
+        "SkyTeam",
+        "Oneworld",
+        "Wings Alliance"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for London Heathrow?",
+      "correct_answer": "LHR",
+      "incorrect_answers": [
+        "LGW",
+        "LTN",
+        "STN"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft manufacturer is based in Toulouse, France?",
+      "correct_answer": "Airbus",
+      "incorrect_answers": [
+        "Boeing",
+        "Embraer",
+        "Bombardier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the largest passenger aircraft in the world?",
+      "correct_answer": "Airbus A380",
+      "incorrect_answers": [
+        "Boeing 747",
+        "Boeing 777",
+        "Airbus A350"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is the flag carrier of Germany?",
+      "correct_answer": "Lufthansa",
+      "incorrect_answers": [
+        "Air Berlin",
+        "Condor",
+        "Eurowings"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does JFK airport code stand for?",
+      "correct_answer": "John F Kennedy",
+      "incorrect_answers": [
+        "Jersey Flight Key",
+        "Joint Flight Koordination",
+        "Jamaica Field Kansas"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which part of the aircraft provides lift?",
+      "correct_answer": "Wings",
+      "incorrect_answers": [
+        "Fuselage",
+        "Tail",
+        "Engines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main hub for Emirates airline?",
+      "correct_answer": "Dubai",
+      "incorrect_answers": [
+        "Abu Dhabi",
+        "Doha",
+        "Riyadh"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing aircraft is known as the 'Jumbo Jet'?",
+      "correct_answer": "Boeing 747",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Boeing 787",
+        "Boeing 767"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'widebody' refer to in aircraft?",
+      "correct_answer": "Twin-aisle aircraft",
+      "incorrect_answers": [
+        "Heavy aircraft",
+        "Wide wingspan",
+        "Large cargo hold"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline alliance is Delta Air Lines part of?",
+      "correct_answer": "SkyTeam",
+      "incorrect_answers": [
+        "Star Alliance",
+        "Oneworld",
+        "Value Alliance"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Los Angeles International?",
+      "correct_answer": "LAX",
+      "incorrect_answers": [
+        "LAS",
+        "LAI",
+        "LOS"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft has the nickname 'Dreamliner'?",
+      "correct_answer": "Boeing 787",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Airbus A350",
+        "Airbus A380"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier airline of France?",
+      "correct_answer": "Air France",
+      "incorrect_answers": [
+        "French Airways",
+        "Transavia",
+        "Corsair"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which control surface helps an aircraft turn?",
+      "correct_answer": "Rudder",
+      "incorrect_answers": [
+        "Elevator",
+        "Flaps",
+        "Spoilers"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ORD airport code represent?",
+      "correct_answer": "Chicago O'Hare",
+      "incorrect_answers": [
+        "Orlando",
+        "Omaha Regional",
+        "Oakland"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which manufacturer makes the A350 aircraft?",
+      "correct_answer": "Airbus",
+      "incorrect_answers": [
+        "Boeing",
+        "Embraer",
+        "Bombardier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main competitor to the Boeing 737?",
+      "correct_answer": "Airbus A320",
+      "incorrect_answers": [
+        "Airbus A330",
+        "Boeing 757",
+        "Embraer E195"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is known by the IATA code 'AA'?",
+      "correct_answer": "American Airlines",
+      "incorrect_answers": [
+        "Alaska Airlines",
+        "Avianca",
+        "Aegean Airlines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Singapore Changi?",
+      "correct_answer": "SIN",
+      "incorrect_answers": [
+        "SGP",
+        "SNG",
+        "SCG"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline alliance is British Airways a member of?",
+      "correct_answer": "Oneworld",
+      "incorrect_answers": [
+        "Star Alliance",
+        "SkyTeam",
+        "Wings Alliance"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ATL airport code stand for?",
+      "correct_answer": "Atlanta",
+      "incorrect_answers": [
+        "Atlantic City",
+        "Austin Texas Local",
+        "Albany"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which part of the aircraft houses passengers and cargo?",
+      "correct_answer": "Fuselage",
+      "incorrect_answers": [
+        "Wings",
+        "Empennage",
+        "Nacelle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Australia?",
+      "correct_answer": "Qantas",
+      "incorrect_answers": [
+        "Virgin Australia",
+        "Jetstar",
+        "Regional Express"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing aircraft is known as the 'Triple Seven'?",
+      "correct_answer": "Boeing 777",
+      "incorrect_answers": [
+        "Boeing 767",
+        "Boeing 787",
+        "Boeing 757"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does DXB airport code represent?",
+      "correct_answer": "Dubai International",
+      "incorrect_answers": [
+        "Dhaka",
+        "Dallas Executive",
+        "Doha"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which control surfaces are on the wing's trailing edge?",
+      "correct_answer": "Flaps",
+      "incorrect_answers": [
+        "Slats",
+        "Rudder",
+        "Elevator"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main hub for Singapore Airlines?",
+      "correct_answer": "Singapore",
+      "incorrect_answers": [
+        "Hong Kong",
+        "Bangkok",
+        "Kuala Lumpur"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which manufacturer produces the E-Jet family?",
+      "correct_answer": "Embraer",
+      "incorrect_answers": [
+        "Boeing",
+        "Airbus",
+        "Bombardier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Tokyo Haneda?",
+      "correct_answer": "HND",
+      "incorrect_answers": [
+        "NRT",
+        "TYO",
+        "TKO"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is the flag carrier of the Netherlands?",
+      "correct_answer": "KLM",
+      "incorrect_answers": [
+        "Transavia",
+        "Martinair",
+        "Corendon"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'narrowbody' refer to?",
+      "correct_answer": "Single-aisle aircraft",
+      "incorrect_answers": [
+        "Small aircraft",
+        "Short-haul aircraft",
+        "Regional jets"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft is Airbus's competitor to the Boeing 787?",
+      "correct_answer": "Airbus A350",
+      "incorrect_answers": [
+        "Airbus A330",
+        "Airbus A340",
+        "Airbus A380"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Lufthansa?",
+      "correct_answer": "LH",
+      "incorrect_answers": [
+        "LF",
+        "DL",
+        "LU"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for Turkish Airlines?",
+      "correct_answer": "Istanbul",
+      "incorrect_answers": [
+        "Ankara",
+        "Antalya",
+        "Izmir"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does SFO airport code represent?",
+      "correct_answer": "San Francisco",
+      "incorrect_answers": [
+        "Santa Fe",
+        "San Fernando",
+        "South Florida"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which part provides directional stability at the rear?",
+      "correct_answer": "Vertical stabilizer",
+      "incorrect_answers": [
+        "Horizontal stabilizer",
+        "Rudder",
+        "Elevator"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Canada?",
+      "correct_answer": "Air Canada",
+      "incorrect_answers": [
+        "WestJet",
+        "Porter Airlines",
+        "Flair Airlines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing model was the first commercial jetliner?",
+      "correct_answer": "Boeing 707",
+      "incorrect_answers": [
+        "Boeing 727",
+        "Boeing 737",
+        "Boeing 747"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Frankfurt?",
+      "correct_answer": "FRA",
+      "incorrect_answers": [
+        "FRK",
+        "FFM",
+        "FRT"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is known for its double-decker A380 fleet?",
+      "correct_answer": "Emirates",
+      "incorrect_answers": [
+        "Etihad",
+        "Qatar Airways",
+        "Singapore Airlines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'ETOPS' relate to?",
+      "correct_answer": "Twin-engine operations",
+      "incorrect_answers": [
+        "Emergency procedures",
+        "Engine testing",
+        "Electronic systems"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which manufacturer is based in Brazil?",
+      "correct_answer": "Embraer",
+      "incorrect_answers": [
+        "Bombardier",
+        "Airbus",
+        "Boeing"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Emirates?",
+      "correct_answer": "EK",
+      "incorrect_answers": [
+        "EM",
+        "EA",
+        "ET"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for Cathay Pacific?",
+      "correct_answer": "Hong Kong",
+      "incorrect_answers": [
+        "Singapore",
+        "Taipei",
+        "Bangkok"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does MIA airport code stand for?",
+      "correct_answer": "Miami",
+      "incorrect_answers": [
+        "Milwaukee",
+        "Minneapolis",
+        "Montana"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which control surface controls pitch?",
+      "correct_answer": "Elevator",
+      "incorrect_answers": [
+        "Rudder",
+        "Ailerons",
+        "Flaps"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Japan?",
+      "correct_answer": "Japan Airlines",
+      "incorrect_answers": [
+        "All Nippon Airways",
+        "Peach Aviation",
+        "Jetstar Japan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing aircraft has a distinctive hump?",
+      "correct_answer": "Boeing 747",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Boeing 767",
+        "Boeing 787"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Paris Charles de Gaulle?",
+      "correct_answer": "CDG",
+      "incorrect_answers": [
+        "ORY",
+        "PAR",
+        "CGD"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline alliance has the most member airlines?",
+      "correct_answer": "Star Alliance",
+      "incorrect_answers": [
+        "Oneworld",
+        "SkyTeam",
+        "Value Alliance"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'V1' refer to?",
+      "correct_answer": "Takeoff decision speed",
+      "incorrect_answers": [
+        "Landing speed",
+        "Cruising speed",
+        "Stall speed"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing model has folding wingtips?",
+      "correct_answer": "Boeing 777X",
+      "incorrect_answers": [
+        "Boeing 787",
+        "Boeing 747-8",
+        "Boeing 767"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for United Airlines?",
+      "correct_answer": "UA",
+      "incorrect_answers": [
+        "UN",
+        "US",
+        "UT"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for Southwest Airlines?",
+      "correct_answer": "Dallas",
+      "incorrect_answers": [
+        "Houston",
+        "Phoenix",
+        "Las Vegas"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does LAS airport code stand for?",
+      "correct_answer": "Las Vegas",
+      "incorrect_answers": [
+        "Los Angeles South",
+        "Louisiana",
+        "Lansing"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which instrument shows airspeed?",
+      "correct_answer": "Airspeed indicator",
+      "incorrect_answers": [
+        "Altimeter",
+        "Variometer",
+        "Tachometer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of China?",
+      "correct_answer": "Air China",
+      "incorrect_answers": [
+        "China Eastern",
+        "China Southern",
+        "Hainan Airlines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft is known as the 'Queen of the Skies'?",
+      "correct_answer": "Boeing 747",
+      "incorrect_answers": [
+        "Airbus A380",
+        "Boeing 777",
+        "Airbus A350"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Toronto Pearson?",
+      "correct_answer": "YYZ",
+      "incorrect_answers": [
+        "YTO",
+        "TOR",
+        "YTZ"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is the flag carrier of Ireland?",
+      "correct_answer": "Aer Lingus",
+      "incorrect_answers": [
+        "Ryanair",
+        "CityJet",
+        "Stobart Air"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does IFR stand for in aviation?",
+      "correct_answer": "Instrument Flight Rules",
+      "incorrect_answers": [
+        "International Flight Regulations",
+        "In-Flight Refueling",
+        "Internal Fuel Range"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which manufacturer is headquartered in Seattle?",
+      "correct_answer": "Boeing",
+      "incorrect_answers": [
+        "Airbus",
+        "Embraer",
+        "Bombardier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Turkish Airlines?",
+      "correct_answer": "TK",
+      "incorrect_answers": [
+        "TR",
+        "TA",
+        "TU"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for Lufthansa?",
+      "correct_answer": "Frankfurt",
+      "incorrect_answers": [
+        "Munich",
+        "Berlin",
+        "Hamburg"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does DTW airport code represent?",
+      "correct_answer": "Detroit",
+      "incorrect_answers": [
+        "Dallas",
+        "Dayton",
+        "Des Moines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which surface increases drag during descent?",
+      "correct_answer": "Spoilers",
+      "incorrect_answers": [
+        "Flaps",
+        "Slats",
+        "Ailerons"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of India?",
+      "correct_answer": "Air India",
+      "incorrect_answers": [
+        "IndiGo",
+        "Vistara",
+        "SpiceJet"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing aircraft first flew in 2009?",
+      "correct_answer": "Boeing 787",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Boeing 747-8",
+        "Boeing 737 MAX"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Sydney Kingsford Smith?",
+      "correct_answer": "SYD",
+      "incorrect_answers": [
+        "SDY",
+        "SYN",
+        "SKS"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is based in Atlanta?",
+      "correct_answer": "Delta Air Lines",
+      "incorrect_answers": [
+        "United Airlines",
+        "American Airlines",
+        "Southwest Airlines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does VFR stand for in aviation?",
+      "correct_answer": "Visual Flight Rules",
+      "incorrect_answers": [
+        "Variable Flight Range",
+        "Vertical Flight Reference",
+        "Visual Fuel Reading"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Airbus model has the longest range?",
+      "correct_answer": "Airbus A350",
+      "incorrect_answers": [
+        "Airbus A320",
+        "Airbus A330",
+        "Airbus A380"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Japan Airlines?",
+      "correct_answer": "JL",
+      "incorrect_answers": [
+        "JA",
+        "JP",
+        "NH"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for Air Canada?",
+      "correct_answer": "Toronto",
+      "incorrect_answers": [
+        "Montreal",
+        "Vancouver",
+        "Calgary"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does CLT airport code stand for?",
+      "correct_answer": "Charlotte",
+      "incorrect_answers": [
+        "Cleveland",
+        "Columbia",
+        "College Station"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which part houses the landing gear?",
+      "correct_answer": "Fuselage",
+      "incorrect_answers": [
+        "Wings",
+        "Tail",
+        "Nacelle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Singapore?",
+      "correct_answer": "Singapore Airlines",
+      "incorrect_answers": [
+        "Scoot",
+        "Jetstar Asia",
+        "Tiger Airways"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft type is the 737 MAX?",
+      "correct_answer": "Narrow-body",
+      "incorrect_answers": [
+        "Wide-body",
+        "Regional jet",
+        "Turboprop"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Barcelona El Prat?",
+      "correct_answer": "BCN",
+      "incorrect_answers": [
+        "BAR",
+        "BRC",
+        "BNA"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline operates the most 737s?",
+      "correct_answer": "Southwest Airlines",
+      "incorrect_answers": [
+        "American Airlines",
+        "United Airlines",
+        "Ryanair"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ETA stand for in aviation?",
+      "correct_answer": "Estimated Time of Arrival",
+      "incorrect_answers": [
+        "Engine Thrust Adjuster",
+        "Electronic Travel Aid",
+        "Emergency Technical Assistance"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which manufacturer makes the A220?",
+      "correct_answer": "Airbus",
+      "incorrect_answers": [
+        "Boeing",
+        "Bombardier",
+        "Embraer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Cathay Pacific?",
+      "correct_answer": "CX",
+      "incorrect_answers": [
+        "CP",
+        "CA",
+        "CT"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does IAH airport code represent?",
+      "correct_answer": "Houston",
+      "incorrect_answers": [
+        "Indianapolis",
+        "Iowa",
+        "Idaho"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which system controls aircraft direction?",
+      "correct_answer": "Flight controls",
+      "incorrect_answers": [
+        "Hydraulics",
+        "Avionics",
+        "Pneumatics"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Thailand?",
+      "correct_answer": "Thai Airways",
+      "incorrect_answers": [
+        "Bangkok Airways",
+        "Thai AirAsia",
+        "Nok Air"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing model succeeded the 727?",
+      "correct_answer": "Boeing 737",
+      "incorrect_answers": [
+        "Boeing 757",
+        "Boeing 767",
+        "Boeing 717"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Brussels?",
+      "correct_answer": "BRU",
+      "incorrect_answers": [
+        "BRS",
+        "BRL",
+        "BEL"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline alliance is Air Canada part of?",
+      "correct_answer": "Star Alliance",
+      "incorrect_answers": [
+        "Oneworld",
+        "SkyTeam",
+        "Wings Alliance"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'ceiling' refer to?",
+      "correct_answer": "Cloud height",
+      "incorrect_answers": [
+        "Maximum altitude",
+        "Cabin height",
+        "Engine power"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Airbus model entered service in 2007?",
+      "correct_answer": "Airbus A380",
+      "incorrect_answers": [
+        "Airbus A350",
+        "Airbus A330",
+        "Airbus A320"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Etihad Airways?",
+      "correct_answer": "EY",
+      "incorrect_answers": [
+        "ET",
+        "EH",
+        "EA"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for KLM?",
+      "correct_answer": "Amsterdam",
+      "incorrect_answers": [
+        "Rotterdam",
+        "The Hague",
+        "Eindhoven"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does PHL airport code stand for?",
+      "correct_answer": "Philadelphia",
+      "incorrect_answers": [
+        "Phoenix",
+        "Portland",
+        "Pittsburgh"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which device measures engine power?",
+      "correct_answer": "Tachometer",
+      "incorrect_answers": [
+        "Altimeter",
+        "Airspeed indicator",
+        "Variometer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Malaysia?",
+      "correct_answer": "Malaysia Airlines",
+      "incorrect_answers": [
+        "AirAsia",
+        "Malindo Air",
+        "Firefly"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft is a regional jet?",
+      "correct_answer": "Embraer E175",
+      "incorrect_answers": [
+        "Boeing 737",
+        "Airbus A320",
+        "Boeing 787"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Istanbul?",
+      "correct_answer": "IST",
+      "incorrect_answers": [
+        "ISB",
+        "ITL",
+        "IKA"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is known for the shamrock livery?",
+      "correct_answer": "Aer Lingus",
+      "incorrect_answers": [
+        "Ryanair",
+        "British Airways",
+        "KLM"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does TCAS stand for in aviation?",
+      "correct_answer": "Traffic Collision Avoidance System",
+      "incorrect_answers": [
+        "Terminal Control Approach System",
+        "Tactical Command Air Support",
+        "Thrust Control Adjustment System"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which manufacturer makes the Q400?",
+      "correct_answer": "De Havilland Canada",
+      "incorrect_answers": [
+        "ATR",
+        "Embraer",
+        "Bombardier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Qatar Airways?",
+      "correct_answer": "QR",
+      "incorrect_answers": [
+        "QA",
+        "QT",
+        "QW"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for Iberia?",
+      "correct_answer": "Madrid",
+      "incorrect_answers": [
+        "Barcelona",
+        "Seville",
+        "Valencia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does MSP airport code represent?",
+      "correct_answer": "Minneapolis",
+      "incorrect_answers": [
+        "Mississippi",
+        "Missouri",
+        "Michigan"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which surface increases lift during takeoff?",
+      "correct_answer": "Flaps",
+      "incorrect_answers": [
+        "Spoilers",
+        "Rudder",
+        "Elevator"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of New Zealand?",
+      "correct_answer": "Air New Zealand",
+      "incorrect_answers": [
+        "Jetstar",
+        "Virgin Australia",
+        "Qantas"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing aircraft has three engines?",
+      "correct_answer": "Boeing 727",
+      "incorrect_answers": [
+        "Boeing 737",
+        "Boeing 757",
+        "Boeing 767"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Melbourne Tullamarine?",
+      "correct_answer": "MEL",
+      "incorrect_answers": [
+        "MLB",
+        "MEP",
+        "TUL"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline alliance is Lufthansa part of?",
+      "correct_answer": "Star Alliance",
+      "incorrect_answers": [
+        "Oneworld",
+        "SkyTeam",
+        "Wings Alliance"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'yaw' refer to?",
+      "correct_answer": "Rotation around vertical axis",
+      "incorrect_answers": [
+        "Rotation around lateral axis",
+        "Rotation around longitudinal axis",
+        "Forward motion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Airbus model is a single-aisle aircraft?",
+      "correct_answer": "Airbus A320",
+      "incorrect_answers": [
+        "Airbus A330",
+        "Airbus A340",
+        "Airbus A350"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for All Nippon Airways?",
+      "correct_answer": "NH",
+      "incorrect_answers": [
+        "AN",
+        "NA",
+        "JL"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city is the main hub for Qatar Airways?",
+      "correct_answer": "Doha",
+      "incorrect_answers": [
+        "Dubai",
+        "Abu Dhabi",
+        "Riyadh"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does EWR airport code stand for?",
+      "correct_answer": "Newark",
+      "incorrect_answers": [
+        "East Windsor",
+        "Edison",
+        "Elizabeth"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which component generates electrical power?",
+      "correct_answer": "Generator",
+      "incorrect_answers": [
+        "APU",
+        "Inverter",
+        "Battery"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Mexico?",
+      "correct_answer": "Aeromexico",
+      "incorrect_answers": [
+        "Volaris",
+        "Interjet",
+        "VivaAerobus"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft manufacturer was founded in 1916?",
+      "correct_answer": "Boeing",
+      "incorrect_answers": [
+        "Airbus",
+        "Embraer",
+        "Bombardier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Zurich?",
+      "correct_answer": "ZRH",
+      "incorrect_answers": [
+        "ZUR",
+        "ZUH",
+        "ZCH"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is the flag carrier of Austria?",
+      "correct_answer": "Austrian Airlines",
+      "incorrect_answers": [
+        "Edelweiss",
+        "Lauda",
+        "Eurowings"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main hub for American Airlines?",
+      "correct_answer": "Dallas-Fort Worth",
+      "incorrect_answers": [
+        "Chicago",
+        "Miami",
+        "New York"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Boeing model is also used as Air Force One?",
+      "correct_answer": "Boeing 747",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Boeing 787",
+        "Boeing 767"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Denver International?",
+      "correct_answer": "DEN",
+      "incorrect_answers": [
+        "DVR",
+        "DNV",
+        "DIV"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does ATC stand for in aviation?",
+      "correct_answer": "Air Traffic Control",
+      "incorrect_answers": [
+        "Aircraft Technical Center",
+        "Aviation Training Command",
+        "Automated Tracking Computer"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is the largest low-cost carrier in Europe?",
+      "correct_answer": "Ryanair",
+      "incorrect_answers": [
+        "EasyJet",
+        "Wizz Air",
+        "Vueling"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Dubai Al Maktoum?",
+      "correct_answer": "DWC",
+      "incorrect_answers": [
+        "DXB",
+        "DMK",
+        "DAM"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Airbus model has four engines and a double deck?",
+      "correct_answer": "Airbus A380",
+      "incorrect_answers": [
+        "Airbus A340",
+        "Airbus A350",
+        "Airbus A330"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the black box actually record?",
+      "correct_answer": "Flight data and cockpit voice",
+      "incorrect_answers": [
+        "Only voice",
+        "Only GPS data",
+        "Passenger information"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline has a red kangaroo as its logo?",
+      "correct_answer": "Qantas",
+      "incorrect_answers": [
+        "Virgin Australia",
+        "Air New Zealand",
+        "Jetstar"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary purpose of an aircraft's rudder?",
+      "correct_answer": "Control yaw",
+      "incorrect_answers": [
+        "Control pitch",
+        "Control roll",
+        "Control speed"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which city has the busiest airport in the world by passenger traffic?",
+      "correct_answer": "Atlanta",
+      "incorrect_answers": [
+        "Dubai",
+        "London",
+        "Beijing"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Delta Air Lines?",
+      "correct_answer": "DL",
+      "incorrect_answers": [
+        "DA",
+        "DE",
+        "DT"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which type of engine powers most commercial jets?",
+      "correct_answer": "Turbofan",
+      "incorrect_answers": [
+        "Turbojet",
+        "Turboprop",
+        "Ramjet"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'roll' refer to in aircraft movement?",
+      "correct_answer": "Rotation around longitudinal axis",
+      "incorrect_answers": [
+        "Rotation around vertical axis",
+        "Rotation around lateral axis",
+        "Forward motion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Seoul Incheon?",
+      "correct_answer": "ICN",
+      "incorrect_answers": [
+        "SEL",
+        "SIC",
+        "INC"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which is the longest-range narrow-body aircraft?",
+      "correct_answer": "Airbus A321XLR",
+      "incorrect_answers": [
+        "Boeing 737 MAX 8",
+        "Airbus A320neo",
+        "Boeing 757-200"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'pitch' refer to in aircraft movement?",
+      "correct_answer": "Nose up or down movement",
+      "incorrect_answers": [
+        "Side-to-side movement",
+        "Rolling movement",
+        "Speed change"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Turkey?",
+      "correct_answer": "Turkish Airlines",
+      "incorrect_answers": [
+        "Pegasus Airlines",
+        "SunExpress",
+        "Onur Air"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which part of a jet engine takes in air?",
+      "correct_answer": "Fan",
+      "incorrect_answers": [
+        "Combustion chamber",
+        "Turbine",
+        "Nozzle"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the IATA code for Southwest Airlines?",
+      "correct_answer": "WN",
+      "incorrect_answers": [
+        "SW",
+        "SA",
+        "SO"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is the flag carrier of Portugal?",
+      "correct_answer": "TAP Air Portugal",
+      "incorrect_answers": [
+        "SATA",
+        "Azores Airlines",
+        "Portugalia"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the airport code for Beijing Capital?",
+      "correct_answer": "PEK",
+      "incorrect_answers": [
+        "BEI",
+        "BJG",
+        "BJS"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of the United Arab Emirates besides Emirates?",
+      "correct_answer": "Etihad Airways",
+      "incorrect_answers": [
+        "FlyDubai",
+        "Air Arabia",
+        "Gulf Air"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which aircraft feature reduces fuel consumption at the wingtips?",
+      "correct_answer": "Winglets",
+      "incorrect_answers": [
+        "Spoilers",
+        "Flaps",
+        "Slats"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does GPS stand for in aviation navigation?",
+      "correct_answer": "Global Positioning System",
+      "incorrect_answers": [
+        "General Purpose Satellite",
+        "Ground Proximity Sensor",
+        "Guided Pilot System"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which airline is the largest in the United States by fleet size?",
+      "correct_answer": "American Airlines",
+      "incorrect_answers": [
+        "Delta Air Lines",
+        "United Airlines",
+        "Southwest Airlines"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of leading edge slats?",
+      "correct_answer": "Increase lift at low speeds",
+      "incorrect_answers": [
+        "Reduce drag",
+        "Increase speed",
+        "Improve fuel efficiency"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does UTC stand for in aviation time?",
+      "correct_answer": "Coordinated Universal Time",
+      "incorrect_answers": [
+        "Universal Time Constant",
+        "United Time Code",
+        "Universal Terminal Clock"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a red-eye flight?",
+      "correct_answer": "An overnight flight that arrives early morning",
+      "incorrect_answers": [
+        "A flight with red warning lights",
+        "An emergency medical flight",
+        "A flight delayed due to visibility"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does LCC stand for in airline business models?",
+      "correct_answer": "Low-Cost Carrier",
+      "incorrect_answers": [
+        "Long Course Carrier",
+        "Licensed Commercial Carrier",
+        "Limited Capacity Carrier"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What letter represents the number 9 in the aviation phonetic alphabet?",
+      "correct_answer": "Niner",
+      "incorrect_answers": [
+        "November",
+        "Nine",
+        "Nina"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the most premium passenger class typically called?",
+      "correct_answer": "First Class",
+      "incorrect_answers": [
+        "Premium Class",
+        "Executive Class",
+        "Elite Class"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What were the names of the famous aviation pioneers who achieved the first powered flight in 1903?",
+      "correct_answer": "The Wright Brothers",
+      "incorrect_answers": [
+        "The Boeing Brothers",
+        "The Lindbergh Brothers",
+        "The Curtiss Brothers"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is turbulence in aviation?",
+      "correct_answer": "Irregular air movement causing bumpy flight",
+      "incorrect_answers": [
+        "Engine malfunction",
+        "Rapid descent",
+        "Communication interference"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a hub airport?",
+      "correct_answer": "A central airport where an airline routes most flights through",
+      "incorrect_answers": [
+        "An airport with circular runways",
+        "A cargo-only airport",
+        "An airport in a city center"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the galley refer to on an aircraft?",
+      "correct_answer": "The kitchen area",
+      "incorrect_answers": [
+        "The cargo hold",
+        "The cockpit entrance",
+        "The lavatory section"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the typical economy class seating configuration on a Boeing 777?",
+      "correct_answer": "3-3-3",
+      "incorrect_answers": [
+        "2-4-2",
+        "3-4-3",
+        "2-3-2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is wind shear?",
+      "correct_answer": "A sudden change in wind direction or speed",
+      "incorrect_answers": [
+        "Strong crosswinds during landing",
+        "Wind caused by propellers",
+        "Circular wind patterns"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'Bravo' represent in the aviation phonetic alphabet?",
+      "correct_answer": "B",
+      "incorrect_answers": [
+        "V",
+        "P",
+        "D"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a domestic flight?",
+      "correct_answer": "A flight within the same country",
+      "incorrect_answers": [
+        "A short-haul flight",
+        "A flight under 2 hours",
+        "A flight within the same state"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Business Class typically positioned between?",
+      "correct_answer": "Economy and First Class",
+      "incorrect_answers": [
+        "Premium Economy and Economy",
+        "First Class and Crew Seats",
+        "Economy and Premium Economy"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the white lines painted on airport runways called?",
+      "correct_answer": "Runway markings",
+      "incorrect_answers": [
+        "Guide stripes",
+        "Landing lines",
+        "Taxi markers"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a legacy carrier?",
+      "correct_answer": "A traditional full-service airline",
+      "incorrect_answers": [
+        "An airline over 100 years old",
+        "A retired airline brand",
+        "A government-owned airline"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main cargo area of an aircraft called?",
+      "correct_answer": "The hold",
+      "incorrect_answers": [
+        "The bay",
+        "The vault",
+        "The container"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is Premium Economy?",
+      "correct_answer": "A cabin class between Economy and Business",
+      "incorrect_answers": [
+        "The front rows of Economy",
+        "Economy with free meals",
+        "Business class on short flights"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a focus city for an airline?",
+      "correct_answer": "An airport with significant operations but not a full hub",
+      "incorrect_answers": [
+        "The airline's headquarters location",
+        "A city targeted for expansion",
+        "A secondary hub"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a crosswind in aviation?",
+      "correct_answer": "Wind blowing perpendicular to the runway",
+      "incorrect_answers": [
+        "Wind from multiple directions",
+        "Wind during takeoff only",
+        "Wind above the clouds"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the jump seat typically used for?",
+      "correct_answer": "Cabin crew seating during takeoff and landing",
+      "incorrect_answers": [
+        "Emergency passenger seating",
+        "Pilot rest area",
+        "Flight attendant training"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the typical narrow-body aircraft seating configuration?",
+      "correct_answer": "3-3",
+      "incorrect_answers": [
+        "2-2",
+        "3-4",
+        "4-4"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is an international flight?",
+      "correct_answer": "A flight between two different countries",
+      "incorrect_answers": [
+        "A flight over 6 hours",
+        "A flight crossing an ocean",
+        "A flight requiring a passport"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a taxiway?",
+      "correct_answer": "A path for aircraft to move between runways and gates",
+      "incorrect_answers": [
+        "A runway for small aircraft",
+        "A parking area for planes",
+        "An emergency landing strip"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What was Amelia Earhart famous for?",
+      "correct_answer": "Being a pioneering female aviator",
+      "incorrect_answers": [
+        "Founding the first airline",
+        "Designing aircraft",
+        "Inventing autopilot"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a jetway?",
+      "correct_answer": "An enclosed bridge connecting the terminal to the aircraft",
+      "incorrect_answers": [
+        "A high-speed taxiway",
+        "A runway for jets only",
+        "A cargo loading system"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are ULDs in cargo operations?",
+      "correct_answer": "Unit Load Devices for containerized cargo",
+      "incorrect_answers": [
+        "Ultra Light Deliveries",
+        "Unloading Lift Devices",
+        "Universal Loading Docks"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a regional jet typically used for?",
+      "correct_answer": "Short to medium-haul routes",
+      "incorrect_answers": [
+        "International flights",
+        "Cargo transport only",
+        "Military operations"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'final approach' mean?",
+      "correct_answer": "The last phase of flight before landing",
+      "incorrect_answers": [
+        "The last flight of the day",
+        "Emergency landing procedure",
+        "Boarding completion"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a bulkhead seat?",
+      "correct_answer": "A seat directly behind a dividing wall or curtain",
+      "incorrect_answers": [
+        "A seat in the cargo area",
+        "An emergency exit seat",
+        "A seat with extra storage"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is clear air turbulence?",
+      "correct_answer": "Turbulence occurring without visible clouds",
+      "incorrect_answers": [
+        "Light turbulence only",
+        "Turbulence at low altitude",
+        "Turbulence during clear weather"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a spoke airport in hub-and-spoke networks?",
+      "correct_answer": "A destination airport connected to a hub",
+      "incorrect_answers": [
+        "A small regional airport",
+        "A cargo-only facility",
+        "An international gateway"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does 'Zulu time' refer to in aviation?",
+      "correct_answer": "UTC or Greenwich Mean Time",
+      "incorrect_answers": [
+        "African time zones",
+        "Military flight time",
+        "Zero visibility time"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does APU stand for in aviation?",
+      "correct_answer": "Auxiliary Power Unit",
+      "incorrect_answers": [
+        "Auto Pilot Unit",
+        "Air Pressure Unit",
+        "Advanced Processing Unit"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of South Korea?",
+      "correct_answer": "Korean Air",
+      "incorrect_answers": [
+        "Asiana Airlines",
+        "Jin Air",
+        "Air Seoul"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which Airbus model has four engines?",
+      "correct_answer": "Airbus A340",
+      "incorrect_answers": [
+        "Airbus A330",
+        "Airbus A350",
+        "Airbus A320"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of the United Kingdom?",
+      "correct_answer": "British Airways",
+      "incorrect_answers": [
+        "Virgin Atlantic",
+        "EasyJet",
+        "Ryanair"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Switzerland?",
+      "correct_answer": "Swiss International",
+      "incorrect_answers": [
+        "Edelweiss",
+        "Helvetic Airways",
+        "Air Alps"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the flag carrier of Spain?",
+      "correct_answer": "Iberia",
+      "incorrect_answers": [
+        "Vueling",
+        "Air Europa",
+        "Binter"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'knots' measure?",
+      "correct_answer": "Speed",
+      "incorrect_answers": [
+        "Distance",
+        "Altitude",
+        "Weight"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which flight deck instrument shows altitude?",
+      "correct_answer": "Altimeter",
+      "incorrect_answers": [
+        "Airspeed indicator",
+        "Attitude indicator",
+        "Heading indicator"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'range' refer to in aviation?",
+      "correct_answer": "Maximum flight distance",
+      "incorrect_answers": [
+        "Cruising altitude",
+        "Speed capability",
+        "Passenger capacity"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'Mach' refer to?",
+      "correct_answer": "Speed of sound",
+      "incorrect_answers": [
+        "Engine power",
+        "Altitude",
+        "Air pressure"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'payload' refer to?",
+      "correct_answer": "Passengers and cargo",
+      "incorrect_answers": [
+        "Fuel load",
+        "Aircraft weight",
+        "Engine power"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is priority boarding typically offered to?",
+      "correct_answer": "Premium cabin passengers and elite status members",
+      "incorrect_answers": [
+        "All passengers alphabetically",
+        "Window seat passengers",
+        "Passengers with children only"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the primary purpose of a control tower at an airport?",
+      "correct_answer": "To direct aircraft movements on the ground and in nearby airspace",
+      "incorrect_answers": [
+        "To repair aircraft engines",
+        "To sell tickets to passengers",
+        "To store luggage and cargo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is a hangar used for in aviation?",
+      "correct_answer": "A building where aircraft are stored and maintained",
+      "incorrect_answers": [
+        "A waiting area for passengers",
+        "A device to measure wind speed",
+        "A type of aircraft engine"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which type of aircraft uses jet engines for propulsion?",
+      "correct_answer": "Jet aircraft",
+      "incorrect_answers": [
+        "Propeller aircraft",
+        "Gliders",
+        "Helicopters only"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do airline logos typically appear on?",
+      "correct_answer": "Aircraft fuselage and tail",
+      "incorrect_answers": [
+        "Only boarding passes",
+        "Only pilot uniforms",
+        "Only airport terminals"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main purpose of seatbelts in aircraft cabins?",
+      "correct_answer": "To keep passengers secure during turbulence and emergencies",
+      "incorrect_answers": [
+        "To prevent passengers from standing up",
+        "To measure passenger weight",
+        "To provide comfort during sleep"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between a propeller aircraft and a jet aircraft?",
+      "correct_answer": "Propeller aircraft use spinning blades while jets use engine thrust",
+      "incorrect_answers": [
+        "Propeller aircraft are always smaller",
+        "Jet aircraft cannot fly at night",
+        "Propeller aircraft use nuclear power"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What engine option is exclusive to the Boeing 737 MAX family?",
+      "correct_answer": "CFM LEAP-1B",
+      "incorrect_answers": [
+        "CFM56-7B",
+        "PW1100G",
+        "GE90-115B"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline uses the callsign 'Speedbird'?",
+      "correct_answer": "British Airways",
+      "incorrect_answers": [
+        "Virgin Atlantic",
+        "Lufthansa",
+        "Air France"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum seating capacity of the Airbus A380 in an all-economy configuration?",
+      "correct_answer": "853 passengers",
+      "incorrect_answers": [
+        "615 passengers",
+        "440 passengers",
+        "525 passengers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft manufacturer produces the C-Series, now rebranded as the A220?",
+      "correct_answer": "Bombardier",
+      "incorrect_answers": [
+        "Embraer",
+        "Sukhoi",
+        "Comac"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine manufacturer produces the Trent XWB exclusively for the A350?",
+      "correct_answer": "Rolls-Royce",
+      "incorrect_answers": [
+        "Pratt & Whitney",
+        "General Electric",
+        "CFM International"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does TCAS stand for in aviation safety systems?",
+      "correct_answer": "Traffic Collision Avoidance System",
+      "incorrect_answers": [
+        "Terminal Control Approach System",
+        "Tactical Course Alignment System",
+        "Turbulence Communication Alert System"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline is the launch customer for the Boeing 777X?",
+      "correct_answer": "Emirates",
+      "incorrect_answers": [
+        "Qatar Airways",
+        "Singapore Airlines",
+        "Lufthansa"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical range of the Airbus A321neo in nautical miles?",
+      "correct_answer": "4,000 nm",
+      "incorrect_answers": [
+        "2,500 nm",
+        "5,500 nm",
+        "3,000 nm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which regulatory body oversees civil aviation in Europe?",
+      "correct_answer": "EASA",
+      "incorrect_answers": [
+        "FAA",
+        "CAA",
+        "IATA"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the ICAO code for Delta Air Lines?",
+      "correct_answer": "DAL",
+      "incorrect_answers": [
+        "DLT",
+        "DEL",
+        "DTA"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft series uses the Pratt & Whitney GTF engine as an option?",
+      "correct_answer": "Airbus A320neo family",
+      "incorrect_answers": [
+        "Boeing 737 MAX",
+        "Boeing 787",
+        "Airbus A330neo"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did Pan Am cease operations?",
+      "correct_answer": "1991",
+      "incorrect_answers": [
+        "1985",
+        "1997",
+        "2001"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline merged with United Airlines in 2010?",
+      "correct_answer": "Continental Airlines",
+      "incorrect_answers": [
+        "US Airways",
+        "Northwest Airlines",
+        "TWA"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the wingspan of the Boeing 777-300ER?",
+      "correct_answer": "64.8 meters",
+      "incorrect_answers": [
+        "60.9 meters",
+        "68.4 meters",
+        "71.8 meters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does GPWS stand for in aviation?",
+      "correct_answer": "Ground Proximity Warning System",
+      "incorrect_answers": [
+        "Global Positioning Warning System",
+        "Glide Path Warning System",
+        "General Purpose Weather System"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum takeoff weight of the Airbus A350-1000?",
+      "correct_answer": "319 tonnes",
+      "incorrect_answers": [
+        "280 tonnes",
+        "350 tonnes",
+        "298 tonnes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft was involved in the 'Miracle on the Hudson' in 2009?",
+      "correct_answer": "Airbus A320",
+      "incorrect_answers": [
+        "Boeing 737-800",
+        "Airbus A319",
+        "Boeing 757"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the cruise speed of the Boeing 787 Dreamliner in Mach?",
+      "correct_answer": "Mach 0.85",
+      "incorrect_answers": [
+        "Mach 0.78",
+        "Mach 0.92",
+        "Mach 0.80"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline uses the callsign 'Shamrock'?",
+      "correct_answer": "Aer Lingus",
+      "incorrect_answers": [
+        "Ryanair",
+        "British Airways",
+        "KLM"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type uses the GEnx engine?",
+      "correct_answer": "Boeing 787",
+      "incorrect_answers": [
+        "Boeing 777X",
+        "Airbus A350",
+        "Boeing 737 MAX"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the 'neo' designation mean in Airbus aircraft?",
+      "correct_answer": "New Engine Option",
+      "incorrect_answers": [
+        "Next Evolution Optimization",
+        "New Efficiency Option",
+        "Next Engine Optimization"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline acquired AirTran Airways in 2011?",
+      "correct_answer": "Southwest Airlines",
+      "incorrect_answers": [
+        "JetBlue",
+        "Spirit Airlines",
+        "Frontier Airlines"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical seating capacity of a Boeing 737-800 in a two-class configuration?",
+      "correct_answer": "160-189 passengers",
+      "incorrect_answers": [
+        "130-150 passengers",
+        "200-220 passengers",
+        "140-155 passengers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the ICAO code for American Airlines?",
+      "correct_answer": "AAL",
+      "incorrect_answers": [
+        "AMR",
+        "AAR",
+        "AMA"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which widebody aircraft features folding wingtips?",
+      "correct_answer": "Boeing 777X",
+      "incorrect_answers": [
+        "Airbus A350",
+        "Boeing 787",
+        "Airbus A380"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the range of the Airbus A330-900neo?",
+      "correct_answer": "7,200 nm",
+      "incorrect_answers": [
+        "5,600 nm",
+        "8,500 nm",
+        "6,100 nm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline operates the world's longest non-stop commercial flight?",
+      "correct_answer": "Singapore Airlines",
+      "incorrect_answers": [
+        "Qantas",
+        "Emirates",
+        "United Airlines"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ETOPS certification allow aircraft to do?",
+      "correct_answer": "Fly extended routes over water",
+      "incorrect_answers": [
+        "Land in extreme weather",
+        "Carry extra fuel tanks",
+        "Operate at higher altitudes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type is the McDonnell Douglas MD-11 derived from?",
+      "correct_answer": "DC-10",
+      "incorrect_answers": [
+        "DC-9",
+        "MD-80",
+        "DC-8"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine powers the Boeing 737-800?",
+      "correct_answer": "CFM56-7B",
+      "incorrect_answers": [
+        "CFM LEAP-1B",
+        "PW4000",
+        "GE90"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the cabin pressure altitude maintained in the Boeing 787?",
+      "correct_answer": "6,000 feet",
+      "incorrect_answers": [
+        "8,000 feet",
+        "5,000 feet",
+        "7,000 feet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline uses the callsign 'Cactus'?",
+      "correct_answer": "American Airlines (former US Airways)",
+      "incorrect_answers": [
+        "Southwest Airlines",
+        "Spirit Airlines",
+        "Frontier Airlines"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum range of the Boeing 777-200LR?",
+      "correct_answer": "8,555 nm",
+      "incorrect_answers": [
+        "7,370 nm",
+        "9,200 nm",
+        "6,890 nm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the Concorde make its final commercial flight?",
+      "correct_answer": "2003",
+      "incorrect_answers": [
+        "1999",
+        "2006",
+        "2001"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary composite material used in the Boeing 787 fuselage?",
+      "correct_answer": "Carbon fiber reinforced polymer",
+      "incorrect_answers": [
+        "Aluminum lithium alloy",
+        "Titanium composite",
+        "Fiberglass polymer"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ICAO stand for?",
+      "correct_answer": "International Civil Aviation Organization",
+      "incorrect_answers": [
+        "International Commercial Airline Organization",
+        "Interstate Civil Aviation Office",
+        "International Carrier Aviation Order"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline merged with American Airlines in 2013?",
+      "correct_answer": "US Airways",
+      "incorrect_answers": [
+        "TWA",
+        "Continental Airlines",
+        "America West"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical cruise altitude for most commercial jets?",
+      "correct_answer": "35,000-41,000 feet",
+      "incorrect_answers": [
+        "25,000-30,000 feet",
+        "45,000-50,000 feet",
+        "30,000-33,000 feet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type was retired by British Airways in 2020 due to COVID-19?",
+      "correct_answer": "Boeing 747-400",
+      "incorrect_answers": [
+        "Airbus A380",
+        "Boeing 777-200",
+        "Airbus A340"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine manufacturer produces the PW1000G geared turbofan?",
+      "correct_answer": "Pratt & Whitney",
+      "incorrect_answers": [
+        "General Electric",
+        "Rolls-Royce",
+        "CFM International"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft was the first fly-by-wire commercial airliner?",
+      "correct_answer": "Airbus A320",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Airbus A310",
+        "Boeing 767"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does RVSM stand for in aviation?",
+      "correct_answer": "Reduced Vertical Separation Minimum",
+      "incorrect_answers": [
+        "Regional Vertical Speed Monitoring",
+        "Restricted Visibility Safety Margin",
+        "Revised Visual Separation Method"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline uses the callsign 'Dynasty'?",
+      "correct_answer": "China Airlines",
+      "incorrect_answers": [
+        "Air China",
+        "China Eastern",
+        "China Southern"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine option is available for the Airbus A330neo?",
+      "correct_answer": "Rolls-Royce Trent 7000",
+      "incorrect_answers": [
+        "GE90",
+        "Trent XWB",
+        "PW4000"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the Boeing 737 MAX enter commercial service?",
+      "correct_answer": "2017",
+      "incorrect_answers": [
+        "2015",
+        "2018",
+        "2016"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline is the largest operator of the Airbus A380?",
+      "correct_answer": "Emirates",
+      "incorrect_answers": [
+        "Singapore Airlines",
+        "Qantas",
+        "British Airways"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does SELCAL stand for in aviation communications?",
+      "correct_answer": "Selective Calling",
+      "incorrect_answers": [
+        "Selected Call Alert",
+        "Selective Calibration",
+        "Secure Electronic Calling"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the ICAO code for Southwest Airlines?",
+      "correct_answer": "SWA",
+      "incorrect_answers": [
+        "SWT",
+        "SOW",
+        "SWE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical fuel capacity of a Boeing 777-300ER?",
+      "correct_answer": "181,280 liters",
+      "incorrect_answers": [
+        "145,000 liters",
+        "210,000 liters",
+        "165,000 liters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline merged with Delta Air Lines in 2008?",
+      "correct_answer": "Northwest Airlines",
+      "incorrect_answers": [
+        "Continental Airlines",
+        "US Airways",
+        "Western Airlines"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ACARS stand for in aviation?",
+      "correct_answer": "Aircraft Communications Addressing and Reporting System",
+      "incorrect_answers": [
+        "Automatic Control and Response System",
+        "Aircraft Coordination and Routing System",
+        "Air Communication and Recording System"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum seating capacity of the Boeing 737 MAX 10?",
+      "correct_answer": "230 passengers",
+      "incorrect_answers": [
+        "189 passengers",
+        "210 passengers",
+        "250 passengers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the cruise speed of the Airbus A320 family?",
+      "correct_answer": "Mach 0.78",
+      "incorrect_answers": [
+        "Mach 0.85",
+        "Mach 0.72",
+        "Mach 0.82"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type uses the GP7200 engine as an option?",
+      "correct_answer": "Airbus A380",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Airbus A350",
+        "Boeing 747-8"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which regulatory body oversees civil aviation in the United States?",
+      "correct_answer": "FAA",
+      "incorrect_answers": [
+        "NTSB",
+        "EASA",
+        "CAA"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the Airbus A380 enter commercial service?",
+      "correct_answer": "2007",
+      "incorrect_answers": [
+        "2005",
+        "2009",
+        "2006"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft manufacturer produces the Superjet 100?",
+      "correct_answer": "Sukhoi",
+      "incorrect_answers": [
+        "Tupolev",
+        "Ilyushin",
+        "Antonov"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does PBN stand for in modern navigation?",
+      "correct_answer": "Performance Based Navigation",
+      "incorrect_answers": [
+        "Precision Based Navigation",
+        "Parallel Based Navigation",
+        "Pilot Based Navigation"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline uses the callsign 'Springbok'?",
+      "correct_answer": "South African Airways",
+      "incorrect_answers": [
+        "Kenya Airways",
+        "Ethiopian Airlines",
+        "Air Namibia"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum range of the Boeing 787-9?",
+      "correct_answer": "7,635 nm",
+      "incorrect_answers": [
+        "6,430 nm",
+        "8,500 nm",
+        "7,000 nm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type is the Airbus A220-300 formerly known as?",
+      "correct_answer": "Bombardier CS300",
+      "incorrect_answers": [
+        "Bombardier CRJ-900",
+        "Embraer E195",
+        "Bombardier CS100"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine manufacturer is a joint venture between GE and Safran?",
+      "correct_answer": "CFM International",
+      "incorrect_answers": [
+        "Engine Alliance",
+        "International Aero Engines",
+        "PowerJet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical seating capacity of the Boeing 777-200ER?",
+      "correct_answer": "301-314 passengers",
+      "incorrect_answers": [
+        "250-270 passengers",
+        "340-365 passengers",
+        "280-290 passengers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does HUD stand for in modern cockpits?",
+      "correct_answer": "Head-Up Display",
+      "incorrect_answers": [
+        "Horizontal Unit Display",
+        "Heads Up Data",
+        "High Utility Display"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft has the IATA type code '77W'?",
+      "correct_answer": "Boeing 777-300ER",
+      "incorrect_answers": [
+        "Boeing 777-200ER",
+        "Boeing 767-300",
+        "Boeing 787-9"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum takeoff weight of the Airbus A321neo?",
+      "correct_answer": "97 tonnes",
+      "incorrect_answers": [
+        "89 tonnes",
+        "105 tonnes",
+        "93 tonnes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the cabin altitude in most commercial aircraft?",
+      "correct_answer": "8,000 feet",
+      "incorrect_answers": [
+        "6,000 feet",
+        "10,000 feet",
+        "5,000 feet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which regulatory agency investigates aviation accidents in the US?",
+      "correct_answer": "NTSB",
+      "incorrect_answers": [
+        "FAA",
+        "TSA",
+        "DOT"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the Boeing 787 enter commercial service?",
+      "correct_answer": "2011",
+      "incorrect_answers": [
+        "2009",
+        "2013",
+        "2010"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline has the ICAO code 'UAE'?",
+      "correct_answer": "Emirates",
+      "incorrect_answers": [
+        "Etihad Airways",
+        "Air Arabia",
+        "FlyDubai"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the fuselage width of the Boeing 777?",
+      "correct_answer": "6.19 meters",
+      "incorrect_answers": [
+        "5.74 meters",
+        "6.50 meters",
+        "5.95 meters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft manufacturer produces the MC-21?",
+      "correct_answer": "Irkut Corporation",
+      "incorrect_answers": [
+        "Sukhoi",
+        "Tupolev",
+        "Comac"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does RNP stand for in aviation navigation?",
+      "correct_answer": "Required Navigation Performance",
+      "incorrect_answers": [
+        "Regional Navigation Protocol",
+        "Required Navigational Precision",
+        "Radio Navigation Performance"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum range of the Airbus A350-900?",
+      "correct_answer": "8,100 nm",
+      "incorrect_answers": [
+        "7,200 nm",
+        "9,000 nm",
+        "7,600 nm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type was converted into the NASA Shuttle Carrier?",
+      "correct_answer": "Boeing 747",
+      "incorrect_answers": [
+        "Boeing 777",
+        "Boeing 767",
+        "Lockheed C-5"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine powers the Airbus A320ceo?",
+      "correct_answer": "CFM56-5B or IAE V2500",
+      "incorrect_answers": [
+        "CFM LEAP-1A",
+        "PW1100G",
+        "Trent 700"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline merged with Iberia in 2011?",
+      "correct_answer": "British Airways",
+      "incorrect_answers": [
+        "Air France",
+        "Lufthansa",
+        "Alitalia"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does FANS stand for in aviation?",
+      "correct_answer": "Future Air Navigation System",
+      "incorrect_answers": [
+        "Flight Automated Navigation System",
+        "Federal Air Navigation Standard",
+        "Forward Air Navigation Service"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft has the IATA type code '789'?",
+      "correct_answer": "Boeing 787-9",
+      "incorrect_answers": [
+        "Boeing 787-8",
+        "Airbus A350-900",
+        "Boeing 777-9"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the range of the Boeing 737 MAX 8?",
+      "correct_answer": "3,550 nm",
+      "incorrect_answers": [
+        "2,950 nm",
+        "4,200 nm",
+        "3,100 nm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft manufacturer produces the ARJ21?",
+      "correct_answer": "Comac",
+      "incorrect_answers": [
+        "Mitsubishi",
+        "Sukhoi",
+        "Irkut"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the Airbus A350 enter commercial service?",
+      "correct_answer": "2015",
+      "incorrect_answers": [
+        "2013",
+        "2016",
+        "2014"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the wingspan of the Airbus A380?",
+      "correct_answer": "79.75 meters",
+      "incorrect_answers": [
+        "73.5 meters",
+        "84.2 meters",
+        "68.4 meters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does VNAV stand for in flight management?",
+      "correct_answer": "Vertical Navigation",
+      "incorrect_answers": [
+        "Visual Navigation",
+        "Variable Navigation",
+        "Verified Navigation"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline uses the callsign 'Brickyard'?",
+      "correct_answer": "Republic Airways",
+      "incorrect_answers": [
+        "United Airlines",
+        "American Airlines",
+        "SkyWest"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type was developed into the P-8 Poseidon?",
+      "correct_answer": "Boeing 737-800",
+      "incorrect_answers": [
+        "Boeing 767",
+        "Boeing 757",
+        "Airbus A320"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine option is exclusive to the Airbus A320neo family?",
+      "correct_answer": "PW1100G or LEAP-1A",
+      "incorrect_answers": [
+        "CFM56-5B",
+        "Trent 700",
+        "GE90"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does LNAV stand for in flight management?",
+      "correct_answer": "Lateral Navigation",
+      "incorrect_answers": [
+        "Linear Navigation",
+        "Local Navigation",
+        "Limited Navigation"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft has the IATA type code '359'?",
+      "correct_answer": "Airbus A350-900",
+      "incorrect_answers": [
+        "Airbus A350-1000",
+        "Airbus A330-900neo",
+        "Boeing 787-9"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum takeoff weight of the Boeing 787-9?",
+      "correct_answer": "254 tonnes",
+      "incorrect_answers": [
+        "228 tonnes",
+        "280 tonnes",
+        "245 tonnes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the cruise speed of the Boeing 747-8?",
+      "correct_answer": "Mach 0.86",
+      "incorrect_answers": [
+        "Mach 0.78",
+        "Mach 0.92",
+        "Mach 0.82"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type features split scimitar winglets?",
+      "correct_answer": "Boeing 737NG",
+      "incorrect_answers": [
+        "Boeing 737 MAX",
+        "Airbus A320",
+        "Boeing 787"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which regulatory body certifies aircraft in Brazil?",
+      "correct_answer": "ANAC",
+      "incorrect_answers": [
+        "FAA",
+        "EASA",
+        "CAAC"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the Boeing 777 enter commercial service?",
+      "correct_answer": "1995",
+      "incorrect_answers": [
+        "1993",
+        "1997",
+        "1996"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline has the ICAO code 'CPA'?",
+      "correct_answer": "Cathay Pacific",
+      "incorrect_answers": [
+        "China Pacific",
+        "Continental Airlines",
+        "Canadian Pacific"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the fuselage width of the Airbus A350?",
+      "correct_answer": "5.96 meters",
+      "incorrect_answers": [
+        "5.74 meters",
+        "6.19 meters",
+        "5.50 meters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft manufacturer produces the SpaceJet (formerly MRJ)?",
+      "correct_answer": "Mitsubishi Aircraft",
+      "incorrect_answers": [
+        "Kawasaki",
+        "Honda",
+        "Subaru"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does EICAS stand for in Boeing aircraft?",
+      "correct_answer": "Engine Indication and Crew Alerting System",
+      "incorrect_answers": [
+        "Electronic Instrument Control and Alert System",
+        "Engine Information and Crew Alert Service",
+        "Electronic Indication Control Alert System"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum range of the Airbus A220-300?",
+      "correct_answer": "3,450 nm",
+      "incorrect_answers": [
+        "2,850 nm",
+        "4,000 nm",
+        "3,100 nm"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type was developed into the E-3 Sentry AWACS?",
+      "correct_answer": "Boeing 707",
+      "incorrect_answers": [
+        "Boeing 767",
+        "Boeing 747",
+        "Douglas DC-8"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine option powers the Boeing 777-300ER?",
+      "correct_answer": "GE90-115B",
+      "incorrect_answers": [
+        "Trent 800",
+        "PW4000",
+        "GEnx"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline merged with KLM in 2004?",
+      "correct_answer": "Air France",
+      "incorrect_answers": [
+        "British Airways",
+        "Lufthansa",
+        "Alitalia"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does MCAS stand for in the Boeing 737 MAX?",
+      "correct_answer": "Maneuvering Characteristics Augmentation System",
+      "incorrect_answers": [
+        "Maximum Control Assist System",
+        "Mechanical Control Adjustment System",
+        "Multi-Computer Alert System"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft has the IATA type code '32N'?",
+      "correct_answer": "Airbus A320neo",
+      "incorrect_answers": [
+        "Airbus A321neo",
+        "Airbus A319neo",
+        "Boeing 737 MAX 8"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the cabin humidity level in the Boeing 787 compared to traditional aircraft?",
+      "correct_answer": "Higher (15% vs 4%)",
+      "incorrect_answers": [
+        "Lower",
+        "Same",
+        "Slightly lower"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which regulatory body certifies aircraft in China?",
+      "correct_answer": "CAAC",
+      "incorrect_answers": [
+        "FAA",
+        "EASA",
+        "CASA"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What year did the Airbus A320 enter commercial service?",
+      "correct_answer": "1988",
+      "incorrect_answers": [
+        "1986",
+        "1990",
+        "1987"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the wingspan of the Boeing 737 MAX 8?",
+      "correct_answer": "35.9 meters",
+      "incorrect_answers": [
+        "34.3 meters",
+        "38.1 meters",
+        "32.5 meters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ECAM stand for in Airbus aircraft?",
+      "correct_answer": "Electronic Centralized Aircraft Monitor",
+      "incorrect_answers": [
+        "Engine Control and Monitoring",
+        "Electronic Control Alert Management",
+        "Engine Centralized Alert Monitor"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does FMS stand for in aviation?",
+      "correct_answer": "Flight Management System",
+      "incorrect_answers": [
+        "Fuel Monitoring System",
+        "Flight Maintenance System",
+        "Forward Motion Sensor"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline acquired Virgin America in 2016?",
+      "correct_answer": "Alaska Airlines",
+      "incorrect_answers": [
+        "JetBlue",
+        "Southwest Airlines",
+        "United Airlines"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type was the first twin-engine widebody?",
+      "correct_answer": "Airbus A300",
+      "incorrect_answers": [
+        "Boeing 767",
+        "Airbus A310",
+        "Boeing 757"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which engine manufacturer produces the Trent 900 for the A380?",
+      "correct_answer": "Rolls-Royce",
+      "incorrect_answers": [
+        "General Electric",
+        "Pratt & Whitney",
+        "CFM International"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary difference between the 737 MAX 8 and MAX 9?",
+      "correct_answer": "Fuselage length",
+      "incorrect_answers": [
+        "Engine type",
+        "Wing design",
+        "Cockpit configuration"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the approximate weight penalty of a full paint livery on a Boeing 747?",
+      "correct_answer": "500-600 pounds",
+      "incorrect_answers": [
+        "150-200 pounds",
+        "1000-1200 pounds",
+        "2000-2500 pounds"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which fuel type is most commonly used in modern commercial jet aircraft?",
+      "correct_answer": "Jet A-1",
+      "incorrect_answers": [
+        "Jet A",
+        "Avgas 100LL",
+        "Jet B"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the minimum runway length typically required for a Boeing 777-300ER at maximum takeoff weight?",
+      "correct_answer": "10,000 feet",
+      "incorrect_answers": [
+        "7,500 feet",
+        "12,500 feet",
+        "15,000 feet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does a 'D-check' maintenance interval typically involve for commercial aircraft?",
+      "correct_answer": "Complete structural overhaul and inspection",
+      "incorrect_answers": [
+        "Engine oil change",
+        "Tire replacement",
+        "Avionics software update"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the standard seat width in economy class on a Boeing 777 in a 3-3-3 configuration?",
+      "correct_answer": "18-18.5 inches",
+      "incorrect_answers": [
+        "16-17 inches",
+        "19-20 inches",
+        "21-22 inches"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airport holds the record for highest elevation served by commercial airlines?",
+      "correct_answer": "Daocheng Yading Airport, China",
+      "incorrect_answers": [
+        "La Paz El Alto Airport, Bolivia",
+        "Lhasa Gonggar Airport, Tibet",
+        "Cusco International Airport, Peru"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical interval for an 'A-check' maintenance on commercial aircraft?",
+      "correct_answer": "400-600 flight hours",
+      "incorrect_answers": [
+        "50-100 flight hours",
+        "1,500-2,000 flight hours",
+        "5,000-8,000 flight hours"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the minimum freezing point specification for Jet A-1 fuel?",
+      "correct_answer": "-47 degrees Celsius",
+      "incorrect_answers": [
+        "-40 degrees Celsius",
+        "-54 degrees Celsius",
+        "-60 degrees Celsius"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of de-icing fluid is typically orange in color and provides longer protection?",
+      "correct_answer": "Type II",
+      "incorrect_answers": [
+        "Type I",
+        "Type III",
+        "Type IV"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many flight hours are typically required to obtain an Airline Transport Pilot license in the US?",
+      "correct_answer": "1,500 hours",
+      "incorrect_answers": [
+        "250 hours",
+        "500 hours",
+        "3,000 hours"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which terminal design features gates arranged perpendicular to a central corridor?",
+      "correct_answer": "Pier terminal",
+      "incorrect_answers": [
+        "Satellite terminal",
+        "Linear terminal",
+        "Radial terminal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What weather minimum visibility is required for Category I ILS approaches?",
+      "correct_answer": "550 meters or 1,800 feet",
+      "incorrect_answers": [
+        "200 meters or 600 feet",
+        "1,000 meters or 3,000 feet",
+        "75 meters or 250 feet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical duration of a 'C-check' maintenance for a narrow-body aircraft?",
+      "correct_answer": "2-4 weeks",
+      "incorrect_answers": [
+        "2-3 days",
+        "6-8 months",
+        "12-18 months"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the standard seat pitch in economy class on most modern narrow-body aircraft?",
+      "correct_answer": "30-32 inches",
+      "incorrect_answers": [
+        "26-28 inches",
+        "34-36 inches",
+        "38-40 inches"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which rating allows pilots to fly in instrument meteorological conditions?",
+      "correct_answer": "Instrument rating",
+      "incorrect_answers": [
+        "Multi-engine rating",
+        "Type rating",
+        "Commercial rating"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary difference between Jet A and Jet A-1 fuel?",
+      "correct_answer": "Freezing point temperature",
+      "incorrect_answers": [
+        "Octane rating",
+        "Color additive",
+        "Sulfur content"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airport terminal design minimizes walking distance by clustering gates around a central area?",
+      "correct_answer": "Satellite terminal",
+      "incorrect_answers": [
+        "Linear terminal",
+        "Pier terminal",
+        "Midfield terminal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline has the most extensive route network in Africa?",
+      "correct_answer": "Ethiopian Airlines",
+      "incorrect_answers": [
+        "South African Airways",
+        "Kenya Airways",
+        "Royal Air Maroc"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the minimum decision height for Category II ILS approaches?",
+      "correct_answer": "100 feet",
+      "incorrect_answers": [
+        "200 feet",
+        "50 feet",
+        "0 feet"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical C-check interval for modern commercial jets?",
+      "correct_answer": "18-24 months",
+      "incorrect_answers": [
+        "6-9 months",
+        "36-48 months",
+        "72-96 months"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which fuel is primarily used in piston-engine aircraft?",
+      "correct_answer": "Avgas 100LL",
+      "incorrect_answers": [
+        "Jet A-1",
+        "Jet B",
+        "Diesel"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which frequent flyer program uses 'Avios' as its currency?",
+      "correct_answer": "British Airways Executive Club",
+      "incorrect_answers": [
+        "Air France Flying Blue",
+        "Lufthansa Miles & More",
+        "KLM Flying Blue"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical D-check interval for commercial aircraft?",
+      "correct_answer": "6-10 years",
+      "incorrect_answers": [
+        "2-3 years",
+        "12-15 years",
+        "18-20 years"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which airline operates the world's shortest scheduled commercial flight?",
+      "correct_answer": "Loganair",
+      "incorrect_answers": [
+        "Air New Zealand",
+        "Qantas",
+        "Swiss International"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which codeshare arrangement allows the deepest level of cooperation including revenue sharing?",
+      "correct_answer": "Joint venture",
+      "incorrect_answers": [
+        "Traditional codeshare",
+        "Interline agreement",
+        "Blocked space agreement"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type rating is required to fly both Boeing 757 and 767?",
+      "correct_answer": "Common type rating (757/767)",
+      "incorrect_answers": [
+        "Separate ratings required",
+        "Wide-body endorsement only",
+        "Boeing family rating"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which terminal design features gates arranged in a straight line along one side?",
+      "correct_answer": "Linear terminal",
+      "incorrect_answers": [
+        "Satellite terminal",
+        "Pier terminal",
+        "Radial terminal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical holdover time for Type I de-icing fluid?",
+      "correct_answer": "5-15 minutes",
+      "incorrect_answers": [
+        "30-45 minutes",
+        "60-90 minutes",
+        "1-3 minutes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type is known as the 'Super Guppy'?",
+      "correct_answer": "Modified Boeing Stratocruiser",
+      "incorrect_answers": [
+        "Modified C-130",
+        "Modified Boeing 747",
+        "Airbus Beluga"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum takeoff weight of the Boeing 747-8?",
+      "correct_answer": "448 tonnes",
+      "incorrect_answers": [
+        "413 tonnes",
+        "485 tonnes",
+        "395 tonnes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft features the largest commercial jet engines ever built?",
+      "correct_answer": "Boeing 777X (GE9X)",
+      "incorrect_answers": [
+        "Airbus A380 (GP7200)",
+        "Boeing 747-8 (GEnx)",
+        "Boeing 777-300ER (GE90)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the ICAO code for Lufthansa?",
+      "correct_answer": "DLH",
+      "incorrect_answers": [
+        "LHA",
+        "LFT",
+        "GER"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type uses the Trent 1000 engine?",
+      "correct_answer": "Boeing 787",
+      "incorrect_answers": [
+        "Airbus A350",
+        "Boeing 777",
+        "Airbus A330neo"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical seating capacity of an Airbus A320neo?",
+      "correct_answer": "150-180 passengers",
+      "incorrect_answers": [
+        "120-140 passengers",
+        "190-210 passengers",
+        "130-145 passengers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft features the longest fuselage of any single-aisle jet?",
+      "correct_answer": "Airbus A321",
+      "incorrect_answers": [
+        "Boeing 757",
+        "Boeing 737 MAX 10",
+        "Airbus A220-300"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What color is Type I de-icing fluid typically?",
+      "correct_answer": "Clear or light straw",
+      "incorrect_answers": [
+        "Orange",
+        "Green",
+        "Pink"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum cargo volume of the Boeing 747-8F?",
+      "correct_answer": "858 cubic meters",
+      "incorrect_answers": [
+        "735 cubic meters",
+        "912 cubic meters",
+        "671 cubic meters"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which aircraft type was the first twin-engine widebody aircraft?",
+      "correct_answer": "Airbus A300",
+      "incorrect_answers": [
+        "Boeing 767",
+        "Airbus A310",
+        "Boeing 757"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which de-icing fluid type is typically green in color?",
+      "correct_answer": "Type IV",
+      "incorrect_answers": [
+        "Type I",
+        "Type II",
+        "Type III"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical duration of a D-check for a wide-body aircraft?",
+      "correct_answer": "1-2 months",
+      "incorrect_answers": [
+        "1-2 weeks",
+        "6-12 months",
+        "3-4 days"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was Delta Air Lines founded?",
+      "correct_answer": "1924",
+      "incorrect_answers": [
+        "1935",
+        "1919",
+        "1946"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many stripes does a captain typically wear on their airline uniform?",
+      "correct_answer": "Four stripes",
+      "incorrect_answers": [
+        "Three stripes",
+        "Five stripes",
+        "Two stripes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does Chapter 4 noise certification indicate for aircraft?",
+      "correct_answer": "Stricter noise limits than Chapter 3",
+      "incorrect_answers": [
+        "Louder than Chapter 3 aircraft",
+        "No noise restrictions apply",
+        "Only applies to propeller aircraft"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many passenger doors does a Boeing 737-800 typically have?",
+      "correct_answer": "8 doors (4 per side)",
+      "incorrect_answers": [
+        "6 doors (3 per side)",
+        "10 doors (5 per side)",
+        "4 doors (2 per side)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which company is one of the largest MRO providers globally?",
+      "correct_answer": "Lufthansa Technik",
+      "incorrect_answers": [
+        "McDonald's Aviation Services",
+        "Tesla Aircraft Maintenance",
+        "Amazon Air Repair"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical maximum age for commercial passenger aircraft in service?",
+      "correct_answer": "25-30 years depending on maintenance and cycles",
+      "incorrect_answers": [
+        "10 years maximum by regulation",
+        "50 years is standard",
+        "5 years before mandatory retirement"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does load factor measure in airline economics?",
+      "correct_answer": "Percentage of available seats that are filled with passengers",
+      "incorrect_answers": [
+        "The weight of cargo on board",
+        "The cost of fuel per flight",
+        "The number of crew members needed"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does CASM stand for in airline economics?",
+      "correct_answer": "Cost per Available Seat Mile",
+      "incorrect_answers": [
+        "Commercial Aviation Safety Metric",
+        "Cargo and Storage Management",
+        "Crew Assignment Scheduling Method"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What are airport slots?",
+      "correct_answer": "Allocated times for takeoff and landing at congested airports",
+      "incorrect_answers": [
+        "Parking spaces for aircraft at gates",
+        "Storage areas for baggage",
+        "Seating assignments in the terminal"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an interline agreement between airlines?",
+      "correct_answer": "An agreement allowing airlines to issue tickets on each other's flights",
+      "incorrect_answers": [
+        "A merger between two airlines",
+        "A fuel-sharing arrangement",
+        "A pilot exchange program"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a sale-leaseback in aircraft financing?",
+      "correct_answer": "Airline sells aircraft to lessor then leases it back",
+      "incorrect_answers": [
+        "Airline buys aircraft and immediately sells it to passengers",
+        "Government provides free aircraft to airlines",
+        "Airline trades aircraft with another carrier"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of insurance covers aircraft hull damage?",
+      "correct_answer": "Hull insurance",
+      "incorrect_answers": [
+        "Passenger liability only",
+        "Cargo insurance",
+        "Terminal insurance"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is ground handling in aviation?",
+      "correct_answer": "Services provided to aircraft while on the ground including loading and refueling",
+      "incorrect_answers": [
+        "Flying aircraft at low altitudes",
+        "Training pilots on simulators",
+        "Building airport runways"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the maximum evacuation time required for aircraft certification?",
+      "correct_answer": "90 seconds for all passengers and crew",
+      "incorrect_answers": [
+        "5 minutes for all passengers",
+        "30 seconds for all passengers",
+        "3 minutes for all passengers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was American Airlines founded?",
+      "correct_answer": "1930",
+      "incorrect_answers": [
+        "1945",
+        "1920",
+        "1938"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many stripes does a first officer typically wear?",
+      "correct_answer": "Three stripes",
+      "incorrect_answers": [
+        "Four stripes",
+        "Two stripes",
+        "Five stripes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is Stage 3 noise certification equivalent to in ICAO terms?",
+      "correct_answer": "Chapter 3",
+      "incorrect_answers": [
+        "Chapter 1",
+        "Chapter 5",
+        "Chapter 7"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many passenger doors does an Airbus A380 have?",
+      "correct_answer": "16 doors (8 per side)",
+      "incorrect_answers": [
+        "12 doors (6 per side)",
+        "20 doors (10 per side)",
+        "8 doors (4 per side)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does RASM stand for in airline revenue metrics?",
+      "correct_answer": "Revenue per Available Seat Mile",
+      "incorrect_answers": [
+        "Revenue and Safety Management",
+        "Route Assignment System Metric",
+        "Repair and Service Maintenance"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was Singapore Airlines founded?",
+      "correct_answer": "1947",
+      "incorrect_answers": [
+        "1960",
+        "1935",
+        "1972"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the primary cost component for most airlines?",
+      "correct_answer": "Fuel costs",
+      "incorrect_answers": [
+        "Pilot salaries",
+        "Airport fees",
+        "In-flight meal expenses"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which MRO company is a subsidiary of ST Engineering?",
+      "correct_answer": "ST Aerospace",
+      "incorrect_answers": [
+        "Boeing Global Services",
+        "Airbus Services",
+        "Delta TechOps"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is an operating lease in aircraft financing?",
+      "correct_answer": "Airline leases aircraft for a period without ownership option",
+      "incorrect_answers": [
+        "Airline buys aircraft outright with cash",
+        "Airline receives free aircraft from manufacturers",
+        "Airline shares aircraft with competitors"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does hull war insurance cover?",
+      "correct_answer": "Aircraft damage from war, terrorism, and hijacking",
+      "incorrect_answers": [
+        "Only passenger injuries during war",
+        "Only cargo loss during conflicts",
+        "Only fuel costs during wartime"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was Cathay Pacific founded?",
+      "correct_answer": "1946",
+      "incorrect_answers": [
+        "1955",
+        "1938",
+        "1960"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is pushback in ground handling operations?",
+      "correct_answer": "Moving aircraft backward from the gate using a tug vehicle",
+      "incorrect_answers": [
+        "Loading cargo into the aircraft hold",
+        "Refueling the aircraft",
+        "Cleaning the aircraft cabin"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many emergency exits must be operable for aircraft evacuation certification?",
+      "correct_answer": "Only half of the total exits are required to be used",
+      "incorrect_answers": [
+        "All exits must be used",
+        "Only one exit is required",
+        "75% of all exits must be used"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was Air France founded?",
+      "correct_answer": "1933",
+      "incorrect_answers": [
+        "1920",
+        "1945",
+        "1928"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many passenger doors does a Boeing 747-400 have?",
+      "correct_answer": "10 doors (5 per side)",
+      "incorrect_answers": [
+        "8 doors (4 per side)",
+        "12 doors (6 per side)",
+        "16 doors (8 per side)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is de-icing in ground handling?",
+      "correct_answer": "Removing ice and snow from aircraft surfaces before flight",
+      "incorrect_answers": [
+        "Cooling the cabin temperature",
+        "Freezing food for in-flight service",
+        "Testing aircraft refrigeration systems"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical fuel cost as a percentage of airline operating expenses?",
+      "correct_answer": "25-35% of total operating costs",
+      "incorrect_answers": [
+        "5-10% of total operating costs",
+        "50-60% of total operating costs",
+        "70-80% of total operating costs"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was Lufthansa founded?",
+      "correct_answer": "1926",
+      "incorrect_answers": [
+        "1945",
+        "1935",
+        "1950"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a finance lease in aircraft financing?",
+      "correct_answer": "Airline leases aircraft with option to purchase at end of term",
+      "incorrect_answers": [
+        "Airline receives aircraft for free",
+        "Airline sells aircraft to passengers",
+        "Airline borrows pilots from other carriers"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does liability insurance cover for airlines?",
+      "correct_answer": "Third-party injuries and property damage",
+      "incorrect_answers": [
+        "Only aircraft mechanical failures",
+        "Only pilot medical expenses",
+        "Only fuel price fluctuations"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was British Airways founded?",
+      "correct_answer": "1974",
+      "incorrect_answers": [
+        "1946",
+        "1960",
+        "1985"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is catering in ground handling operations?",
+      "correct_answer": "Loading food and beverages onto the aircraft",
+      "incorrect_answers": [
+        "Refueling the aircraft",
+        "Repairing aircraft engines",
+        "Cleaning aircraft exteriors"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was Emirates founded?",
+      "correct_answer": "1985",
+      "incorrect_answers": [
+        "1970",
+        "1990",
+        "1975"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between wet leasing and dry leasing in aviation?",
+      "correct_answer": "Wet leasing includes aircraft, crew, maintenance, and insurance; dry leasing is aircraft only",
+      "incorrect_answers": [
+        "Wet leasing is for short-term rentals; dry leasing is for long-term rentals",
+        "Wet leasing includes fuel costs; dry leasing does not",
+        "Wet leasing is only for cargo aircraft; dry leasing is for passenger aircraft"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ACMI stand for in aircraft leasing?",
+      "correct_answer": "Aircraft, Crew, Maintenance, and Insurance",
+      "incorrect_answers": [
+        "Aviation Charter Management International",
+        "Aircraft Configuration and Maintenance Index",
+        "Airline Capacity Management Initiative"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical break-even load factor for most airlines?",
+      "correct_answer": "Between 70% and 80%",
+      "incorrect_answers": [
+        "Between 50% and 60%",
+        "Between 85% and 95%",
+        "Between 60% and 65%"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does yield management refer to in airline revenue management?",
+      "correct_answer": "The practice of optimizing prices to maximize revenue per available seat",
+      "incorrect_answers": [
+        "The total revenue generated from cargo operations",
+        "The process of managing employee productivity and efficiency",
+        "The annual profit margin target set by airline executives"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical turnaround time for a narrow-body aircraft at an airport?",
+      "correct_answer": "30 to 45 minutes",
+      "incorrect_answers": [
+        "15 to 20 minutes",
+        "60 to 90 minutes",
+        "90 to 120 minutes"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what year was Turkish Airlines founded?",
+      "correct_answer": "1933",
+      "incorrect_answers": [
+        "1923",
+        "1945",
+        "1950"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "When was Etihad Airways founded?",
+      "correct_answer": "2003",
+      "incorrect_answers": [
+        "1995",
+        "1999",
+        "2007"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the typical lifespan of a commercial aircraft engine before requiring a major overhaul?",
+      "correct_answer": "15,000 to 25,000 flight hours",
+      "incorrect_answers": [
+        "5,000 to 10,000 flight hours",
+        "30,000 to 40,000 flight hours",
+        "50,000 to 60,000 flight hours"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a ferry flight in aviation?",
+      "correct_answer": "A flight without passengers or cargo, typically for repositioning or maintenance",
+      "incorrect_answers": [
+        "A short-haul flight between two islands connected by ferry services",
+        "A flight that carries only cargo and no passengers",
+        "A training flight for new pilots with no commercial purpose"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the bypass ratio of the Rolls-Royce Trent 7000 engine?",
+      "correct_answer": "10:1",
+      "incorrect_answers": [
+        "8.5:1",
+        "11.3:1",
+        "9.2:1"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 747-8F freighters were delivered to Cargolux?",
+      "correct_answer": "14",
+      "incorrect_answers": [
+        "10",
+        "18",
+        "22"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Transavia France?",
+      "correct_answer": "TVF",
+      "incorrect_answers": [
+        "TVS",
+        "TRA",
+        "TRV"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which factory produces the Airbus A220?",
+      "correct_answer": "Mirabel, Quebec",
+      "incorrect_answers": [
+        "Mobile, Alabama",
+        "Toulouse, France",
+        "Hamburg, Germany"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the service ceiling of the Embraer E195-E2?",
+      "correct_answer": "41,000 feet",
+      "incorrect_answers": [
+        "39,000 feet",
+        "43,000 feet",
+        "37,000 feet"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What type of winglets does the Boeing 737 MAX use?",
+      "correct_answer": "Split scimitar winglets",
+      "incorrect_answers": [
+        "Blended winglets",
+        "Raked wingtips",
+        "Sharklets"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Airbus A350-1000 receive its type certificate?",
+      "correct_answer": "November 2017",
+      "incorrect_answers": [
+        "March 2018",
+        "September 2016",
+        "June 2017"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MTOW of the Airbus A330-900neo?",
+      "correct_answer": "251,000 kg",
+      "incorrect_answers": [
+        "242,000 kg",
+        "268,000 kg",
+        "235,000 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many McDonnell Douglas MD-11s were produced in total?",
+      "correct_answer": "200",
+      "incorrect_answers": [
+        "183",
+        "224",
+        "167"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the thrust rating of the GE9X engine?",
+      "correct_answer": "110,000 lbf",
+      "incorrect_answers": [
+        "105,000 lbf",
+        "115,000 lbf",
+        "100,000 lbf"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the launch customer for the Boeing 787-10?",
+      "correct_answer": "Singapore Airlines",
+      "incorrect_answers": [
+        "United Airlines",
+        "Etihad Airways",
+        "All Nippon Airways"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum range of the Airbus A321LR?",
+      "correct_answer": "4,000 nautical miles",
+      "incorrect_answers": [
+        "3,500 nautical miles",
+        "4,500 nautical miles",
+        "3,200 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Air Austral?",
+      "correct_answer": "UU",
+      "incorrect_answers": [
+        "AU",
+        "AS",
+        "AA"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many passenger seats does the Airbus A380 have in Emirates' three-class configuration?",
+      "correct_answer": "517",
+      "incorrect_answers": [
+        "489",
+        "544",
+        "471"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which engine powers the Bombardier CRJ1000?",
+      "correct_answer": "GE CF34-8C5",
+      "incorrect_answers": [
+        "Pratt & Whitney PW1500G",
+        "CFM56-7B",
+        "GE CF34-10E"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ETOPS rating of the Boeing 787-9?",
+      "correct_answer": "330 minutes",
+      "incorrect_answers": [
+        "240 minutes",
+        "180 minutes",
+        "370 minutes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the first Airbus A320neo enter commercial service?",
+      "correct_answer": "January 2016",
+      "incorrect_answers": [
+        "September 2015",
+        "May 2016",
+        "November 2015"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the fuel capacity of the Boeing 777-200LR?",
+      "correct_answer": "181,283 liters",
+      "incorrect_answers": [
+        "171,176 liters",
+        "197,976 liters",
+        "145,538 liters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wingspan of the Airbus A350-1000?",
+      "correct_answer": "64.75 meters",
+      "incorrect_answers": [
+        "60.30 meters",
+        "68.40 meters",
+        "58.80 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 717s were produced before production ended?",
+      "correct_answer": "156",
+      "incorrect_answers": [
+        "189",
+        "134",
+        "212"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO airport code for Beijing Daxing International Airport?",
+      "correct_answer": "ZBAD",
+      "incorrect_answers": [
+        "ZBAA",
+        "ZSPD",
+        "ZGGG"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum cargo payload of the Boeing 777F?",
+      "correct_answer": "102,010 kg",
+      "incorrect_answers": [
+        "96,800 kg",
+        "109,500 kg",
+        "88,300 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which Airbus assembly line produces the A320 family for North American customers?",
+      "correct_answer": "Mobile, Alabama",
+      "incorrect_answers": [
+        "Hamburg, Germany",
+        "Tianjin, China",
+        "Toulouse, France"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Lockheed L-1011 TriStars were built?",
+      "correct_answer": "250",
+      "incorrect_answers": [
+        "301",
+        "198",
+        "278"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline operates the most Boeing 767-300ERs?",
+      "correct_answer": "United Airlines",
+      "incorrect_answers": [
+        "Delta Air Lines",
+        "American Airlines",
+        "FedEx Express"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the bypass ratio of the Pratt & Whitney PW1100G-JM engine?",
+      "correct_answer": "12:1",
+      "incorrect_answers": [
+        "9.5:1",
+        "10.5:1",
+        "14:1"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Boeing 747-400 make its first flight?",
+      "correct_answer": "April 29, 1988",
+      "incorrect_answers": [
+        "June 12, 1987",
+        "February 18, 1989",
+        "October 5, 1988"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Concorde aircraft were built for commercial service?",
+      "correct_answer": "14",
+      "incorrect_answers": [
+        "16",
+        "12",
+        "20"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Wizz Air?",
+      "correct_answer": "WZZ",
+      "incorrect_answers": [
+        "WIZ",
+        "WAI",
+        "WZA"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum takeoff weight of the ATR 72-600?",
+      "correct_answer": "23,000 kg",
+      "incorrect_answers": [
+        "21,500 kg",
+        "25,200 kg",
+        "19,800 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the first to operate the Airbus A350-900?",
+      "correct_answer": "Qatar Airways",
+      "incorrect_answers": [
+        "Singapore Airlines",
+        "Finnair",
+        "Cathay Pacific"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the fuselage diameter of the Boeing 787?",
+      "correct_answer": "5.74 meters",
+      "incorrect_answers": [
+        "5.03 meters",
+        "6.20 meters",
+        "4.88 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 737-200s were produced?",
+      "correct_answer": "1,114",
+      "incorrect_answers": [
+        "987",
+        "1,289",
+        "842"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the thrust rating of a single CFM56-7B27 engine?",
+      "correct_answer": "27,300 lbf",
+      "incorrect_answers": [
+        "24,200 lbf",
+        "30,100 lbf",
+        "21,800 lbf"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many engines does the Antonov An-225 Mriya have?",
+      "correct_answer": "6",
+      "incorrect_answers": [
+        "4",
+        "8",
+        "5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Azerbaijan Airlines?",
+      "correct_answer": "J2",
+      "incorrect_answers": [
+        "AZ",
+        "ZA",
+        "AJ"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the cabin width of the Airbus A320?",
+      "correct_answer": "3.70 meters",
+      "incorrect_answers": [
+        "3.54 meters",
+        "3.95 meters",
+        "3.28 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Airbus A340-600s were built?",
+      "correct_answer": "97",
+      "incorrect_answers": [
+        "124",
+        "78",
+        "112"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ETOPS rating of the Airbus A330-200?",
+      "correct_answer": "240 minutes",
+      "incorrect_answers": [
+        "180 minutes",
+        "330 minutes",
+        "120 minutes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline has the largest Boeing 777 fleet?",
+      "correct_answer": "Emirates",
+      "incorrect_answers": [
+        "United Airlines",
+        "American Airlines",
+        "Qatar Airways"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the length of the Boeing 747-8I?",
+      "correct_answer": "76.3 meters",
+      "incorrect_answers": [
+        "70.7 meters",
+        "73.9 meters",
+        "79.2 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Airbus A300 make its maiden flight?",
+      "correct_answer": "October 28, 1972",
+      "incorrect_answers": [
+        "March 15, 1973",
+        "June 22, 1971",
+        "December 9, 1972"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 757-300s were produced?",
+      "correct_answer": "55",
+      "incorrect_answers": [
+        "72",
+        "43",
+        "89"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Flydubai?",
+      "correct_answer": "FDB",
+      "incorrect_answers": [
+        "FDU",
+        "FLY",
+        "DXB"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wing area of the Boeing 777-300ER?",
+      "correct_answer": "427.8 square meters",
+      "incorrect_answers": [
+        "391.6 square meters",
+        "465.2 square meters",
+        "358.9 square meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the cruise speed of the Bombardier Dash 8 Q400?",
+      "correct_answer": "360 knots",
+      "incorrect_answers": [
+        "320 knots",
+        "410 knots",
+        "285 knots"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Airbus A318s were produced?",
+      "correct_answer": "80",
+      "incorrect_answers": [
+        "112",
+        "63",
+        "98"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MTOW of the Boeing 767-400ER?",
+      "correct_answer": "204,117 kg",
+      "incorrect_answers": [
+        "186,880 kg",
+        "217,725 kg",
+        "175,540 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline operates the Airbus A350-900ULR variant?",
+      "correct_answer": "Singapore Airlines",
+      "incorrect_answers": [
+        "Qantas",
+        "Emirates",
+        "Air New Zealand"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What year did the McDonnell Douglas DC-10 enter service?",
+      "correct_answer": "1971",
+      "incorrect_answers": [
+        "1969",
+        "1973",
+        "1975"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 727s were built in total?",
+      "correct_answer": "1,832",
+      "incorrect_answers": [
+        "1,567",
+        "2,043",
+        "1,291"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Saudia?",
+      "correct_answer": "SV",
+      "incorrect_answers": [
+        "SA",
+        "SR",
+        "SU"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the fan diameter of the Rolls-Royce Trent 1000 engine?",
+      "correct_answer": "2.85 meters",
+      "incorrect_answers": [
+        "3.10 meters",
+        "2.47 meters",
+        "3.35 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the launch customer for the Boeing 737 MAX 9?",
+      "correct_answer": "Lion Air",
+      "incorrect_answers": [
+        "United Airlines",
+        "Alaska Airlines",
+        "Southwest Airlines"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the service ceiling of the Boeing 747-8?",
+      "correct_answer": "43,100 feet",
+      "incorrect_answers": [
+        "41,000 feet",
+        "45,000 feet",
+        "39,800 feet"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Airbus A310s were produced?",
+      "correct_answer": "255",
+      "incorrect_answers": [
+        "298",
+        "217",
+        "189"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for IndiGo Airlines?",
+      "correct_answer": "IGO",
+      "incorrect_answers": [
+        "IND",
+        "IDG",
+        "INO"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum range of the Boeing 777-200ER?",
+      "correct_answer": "7,725 nautical miles",
+      "incorrect_answers": [
+        "6,890 nautical miles",
+        "8,555 nautical miles",
+        "5,995 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which engine powers the Airbus A220-300?",
+      "correct_answer": "Pratt & Whitney PW1500G",
+      "incorrect_answers": [
+        "CFM LEAP-1A",
+        "GE CF34-10A",
+        "Rolls-Royce BR715"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many de Havilland Comet 4s were built?",
+      "correct_answer": "74",
+      "incorrect_answers": [
+        "91",
+        "58",
+        "112"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MTOW of the Embraer E190-E2?",
+      "correct_answer": "56,400 kg",
+      "incorrect_answers": [
+        "51,800 kg",
+        "60,200 kg",
+        "48,500 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the launch customer for the Airbus A330-800neo?",
+      "correct_answer": "Kuwait Airways",
+      "incorrect_answers": [
+        "Hawaiian Airlines",
+        "Air Mauritius",
+        "Garuda Indonesia"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Boeing 777X make its first flight?",
+      "correct_answer": "January 25, 2020",
+      "incorrect_answers": [
+        "March 15, 2019",
+        "September 8, 2020",
+        "November 11, 2019"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the length of the Airbus A321neo?",
+      "correct_answer": "44.51 meters",
+      "incorrect_answers": [
+        "41.32 meters",
+        "47.89 meters",
+        "38.74 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Fokker F28 Fellowship aircraft were built?",
+      "correct_answer": "241",
+      "incorrect_answers": [
+        "189",
+        "278",
+        "312"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Eurowings?",
+      "correct_answer": "EWG",
+      "incorrect_answers": [
+        "EWI",
+        "EUR",
+        "EWN"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which aircraft leasing company has the largest fleet globally?",
+      "correct_answer": "AerCap",
+      "incorrect_answers": [
+        "GECAS",
+        "Air Lease Corporation",
+        "SMBC Aviation Capital"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wing sweep angle of the Boeing 787?",
+      "correct_answer": "32.2 degrees",
+      "incorrect_answers": [
+        "28.5 degrees",
+        "35.7 degrees",
+        "25.0 degrees"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Airbus A340-200s were built?",
+      "correct_answer": "28",
+      "incorrect_answers": [
+        "42",
+        "19",
+        "36"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Vistara?",
+      "correct_answer": "UK",
+      "incorrect_answers": [
+        "VI",
+        "VS",
+        "VT"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum payload of the Airbus A330-200F?",
+      "correct_answer": "70 tonnes",
+      "incorrect_answers": [
+        "64 tonnes",
+        "77 tonnes",
+        "58 tonnes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which year did Eastern Air Lines cease operations?",
+      "correct_answer": "1991",
+      "incorrect_answers": [
+        "1989",
+        "1993",
+        "1987"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the range of the Boeing 767-300F?",
+      "correct_answer": "3,255 nautical miles",
+      "incorrect_answers": [
+        "2,870 nautical miles",
+        "3,685 nautical miles",
+        "2,490 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Pegasus Airlines?",
+      "correct_answer": "PGT",
+      "incorrect_answers": [
+        "PEG",
+        "PGA",
+        "PCG"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the cabin altitude of the Boeing 787 at cruise?",
+      "correct_answer": "6,000 feet",
+      "incorrect_answers": [
+        "8,000 feet",
+        "5,000 feet",
+        "7,500 feet"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline operates the most Airbus A320neo family aircraft?",
+      "correct_answer": "IndiGo",
+      "incorrect_answers": [
+        "American Airlines",
+        "Wizz Air",
+        "JetBlue Airways"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MTOW of the Bombardier CRJ900?",
+      "correct_answer": "38,329 kg",
+      "incorrect_answers": [
+        "34,472 kg",
+        "41,868 kg",
+        "30,221 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Airbus A330 enter commercial service?",
+      "correct_answer": "January 1994",
+      "incorrect_answers": [
+        "November 1992",
+        "June 1995",
+        "September 1993"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wingspan of the Airbus A380?",
+      "correct_answer": "79.75 meters",
+      "incorrect_answers": [
+        "73.90 meters",
+        "84.20 meters",
+        "68.45 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 707s were produced?",
+      "correct_answer": "1,010",
+      "incorrect_answers": [
+        "878",
+        "1,245",
+        "742"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Hainan Airlines?",
+      "correct_answer": "HU",
+      "incorrect_answers": [
+        "HA",
+        "HN",
+        "HI"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the bypass ratio of the CFM LEAP-1B engine?",
+      "correct_answer": "9:1",
+      "incorrect_answers": [
+        "11:1",
+        "7.5:1",
+        "10.3:1"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the launch customer for the Boeing 777-300ER?",
+      "correct_answer": "Air France",
+      "incorrect_answers": [
+        "Singapore Airlines",
+        "Emirates",
+        "Cathay Pacific"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the length of the Boeing 777-200LR?",
+      "correct_answer": "63.7 meters",
+      "incorrect_answers": [
+        "59.8 meters",
+        "67.4 meters",
+        "56.1 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Douglas DC-8s were built?",
+      "correct_answer": "556",
+      "incorrect_answers": [
+        "612",
+        "498",
+        "721"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Frontier Airlines?",
+      "correct_answer": "FFT",
+      "incorrect_answers": [
+        "FNT",
+        "FRO",
+        "FRT"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum range of the Embraer E195-E2?",
+      "correct_answer": "2,600 nautical miles",
+      "incorrect_answers": [
+        "2,280 nautical miles",
+        "2,950 nautical miles",
+        "2,050 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the fuselage length of the Airbus A350-900?",
+      "correct_answer": "66.8 meters",
+      "incorrect_answers": [
+        "63.1 meters",
+        "70.5 meters",
+        "59.4 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 737-100s were produced?",
+      "correct_answer": "30",
+      "incorrect_answers": [
+        "52",
+        "18",
+        "44"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Copa Airlines?",
+      "correct_answer": "CM",
+      "incorrect_answers": [
+        "CO",
+        "CP",
+        "CA"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wing area of the Airbus A320?",
+      "correct_answer": "122.6 square meters",
+      "incorrect_answers": [
+        "134.8 square meters",
+        "108.2 square meters",
+        "145.5 square meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the cruise speed of the ATR 42-600?",
+      "correct_answer": "275 knots",
+      "incorrect_answers": [
+        "310 knots",
+        "245 knots",
+        "335 knots"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Jet2.com?",
+      "correct_answer": "EXS",
+      "incorrect_answers": [
+        "JET",
+        "JT2",
+        "EXT"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MTOW of the Boeing 737 MAX 7?",
+      "correct_answer": "80,286 kg",
+      "incorrect_answers": [
+        "75,124 kg",
+        "85,789 kg",
+        "70,352 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the first to operate the Boeing 787-8?",
+      "correct_answer": "All Nippon Airways",
+      "incorrect_answers": [
+        "United Airlines",
+        "Japan Airlines",
+        "Qatar Airways"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum seating capacity of the Airbus A319?",
+      "correct_answer": "160 passengers",
+      "incorrect_answers": [
+        "145 passengers",
+        "178 passengers",
+        "132 passengers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Boeing 737 make its first flight?",
+      "correct_answer": "April 9, 1967",
+      "incorrect_answers": [
+        "February 15, 1968",
+        "June 28, 1966",
+        "November 12, 1967"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the range of the Airbus A330-900neo?",
+      "correct_answer": "7,200 nautical miles",
+      "incorrect_answers": [
+        "6,550 nautical miles",
+        "7,850 nautical miles",
+        "5,900 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Ilyushin Il-96 aircraft were built?",
+      "correct_answer": "30",
+      "incorrect_answers": [
+        "47",
+        "22",
+        "58"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Air Transat?",
+      "correct_answer": "TS",
+      "incorrect_answers": [
+        "AT",
+        "TR",
+        "AS"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the thrust rating of the Rolls-Royce Trent 900 engine?",
+      "correct_answer": "70,000 lbf",
+      "incorrect_answers": [
+        "76,500 lbf",
+        "64,200 lbf",
+        "82,100 lbf"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline operates the largest Airbus A350 fleet?",
+      "correct_answer": "Singapore Airlines",
+      "incorrect_answers": [
+        "Qatar Airways",
+        "Cathay Pacific",
+        "Delta Air Lines"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wingspan of the Boeing 787-10?",
+      "correct_answer": "60.1 meters",
+      "incorrect_answers": [
+        "56.7 meters",
+        "64.8 meters",
+        "52.4 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Air Arabia?",
+      "correct_answer": "ABY",
+      "incorrect_answers": [
+        "ARA",
+        "AAB",
+        "ARB"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which year did the Airbus A340 enter service?",
+      "correct_answer": "1993",
+      "incorrect_answers": [
+        "1991",
+        "1995",
+        "1989"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the range of the Boeing 777-8?",
+      "correct_answer": "8,730 nautical miles",
+      "incorrect_answers": [
+        "7,950 nautical miles",
+        "9,485 nautical miles",
+        "7,140 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Tupolev Tu-144 supersonic aircraft were built?",
+      "correct_answer": "16",
+      "incorrect_answers": [
+        "23",
+        "11",
+        "28"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Nok Air?",
+      "correct_answer": "DD",
+      "incorrect_answers": [
+        "NK",
+        "NO",
+        "NA"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the fan diameter of the GE9X engine?",
+      "correct_answer": "3.4 meters",
+      "incorrect_answers": [
+        "3.0 meters",
+        "3.8 meters",
+        "2.9 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the launch customer for the Airbus A380?",
+      "correct_answer": "Singapore Airlines",
+      "incorrect_answers": [
+        "Emirates",
+        "Qantas",
+        "Air France"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the length of the Embraer E175?",
+      "correct_answer": "31.68 meters",
+      "incorrect_answers": [
+        "29.34 meters",
+        "34.12 meters",
+        "27.85 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 720s were produced?",
+      "correct_answer": "154",
+      "incorrect_answers": [
+        "189",
+        "127",
+        "206"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Scoot?",
+      "correct_answer": "TGW",
+      "incorrect_answers": [
+        "SCO",
+        "SCT",
+        "SOT"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum cargo payload of the Airbus A321P2F?",
+      "correct_answer": "28 tonnes",
+      "incorrect_answers": [
+        "24 tonnes",
+        "32 tonnes",
+        "21 tonnes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which factory produces the Boeing 767?",
+      "correct_answer": "Everett, Washington",
+      "incorrect_answers": [
+        "Renton, Washington",
+        "North Charleston, South Carolina",
+        "Seattle, Washington"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the cruise altitude of the Bombardier Global 7500?",
+      "correct_answer": "51,000 feet",
+      "incorrect_answers": [
+        "47,000 feet",
+        "45,000 feet",
+        "49,000 feet"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for WestJet?",
+      "correct_answer": "WS",
+      "incorrect_answers": [
+        "WJ",
+        "WE",
+        "WT"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MTOW of the Airbus A319neo?",
+      "correct_answer": "75,500 kg",
+      "incorrect_answers": [
+        "68,900 kg",
+        "81,200 kg",
+        "64,300 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline operates the Boeing 747-8I variant?",
+      "correct_answer": "Lufthansa",
+      "incorrect_answers": [
+        "Korean Air",
+        "Air China",
+        "Cathay Pacific"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Boeing 777 make its first flight?",
+      "correct_answer": "June 12, 1994",
+      "incorrect_answers": [
+        "March 8, 1993",
+        "September 15, 1994",
+        "November 22, 1993"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the range of the Boeing 787-8?",
+      "correct_answer": "7,355 nautical miles",
+      "incorrect_answers": [
+        "6,720 nautical miles",
+        "7,985 nautical miles",
+        "6,140 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Convair 880s were built?",
+      "correct_answer": "65",
+      "incorrect_answers": [
+        "89",
+        "47",
+        "112"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Spring Airlines?",
+      "correct_answer": "CQH",
+      "incorrect_answers": [
+        "SPR",
+        "SPA",
+        "CHS"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the launch customer for the Boeing 757?",
+      "correct_answer": "Eastern Air Lines",
+      "incorrect_answers": [
+        "Delta Air Lines",
+        "British Airways",
+        "American Airlines"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wingspan of the Airbus A330-300?",
+      "correct_answer": "60.3 meters",
+      "incorrect_answers": [
+        "56.8 meters",
+        "64.7 meters",
+        "52.4 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for AirAsia X?",
+      "correct_answer": "D7",
+      "incorrect_answers": [
+        "AX",
+        "AA",
+        "XA"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which year did the Airbus A321 enter commercial service?",
+      "correct_answer": "1994",
+      "incorrect_answers": [
+        "1992",
+        "1996",
+        "1990"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the range of the Embraer E190-E2?",
+      "correct_answer": "2,850 nautical miles",
+      "incorrect_answers": [
+        "2,520 nautical miles",
+        "3,180 nautical miles",
+        "2,210 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Vickers VC10 aircraft were built?",
+      "correct_answer": "54",
+      "incorrect_answers": [
+        "72",
+        "41",
+        "89"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Pobeda Airlines?",
+      "correct_answer": "PBD",
+      "incorrect_answers": [
+        "POB",
+        "PBA",
+        "PBE"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the bypass ratio of the GEnx-1B engine?",
+      "correct_answer": "8.6:1",
+      "incorrect_answers": [
+        "10.2:1",
+        "7.4:1",
+        "9.8:1"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline operates the most Boeing 787 aircraft?",
+      "correct_answer": "United Airlines",
+      "incorrect_answers": [
+        "All Nippon Airways",
+        "American Airlines",
+        "British Airways"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the length of the Boeing 737 MAX 10?",
+      "correct_answer": "43.8 meters",
+      "incorrect_answers": [
+        "40.5 meters",
+        "46.9 meters",
+        "38.2 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 747-100s were produced?",
+      "correct_answer": "205",
+      "incorrect_answers": [
+        "167",
+        "248",
+        "289"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for LATAM Airlines?",
+      "correct_answer": "LA",
+      "incorrect_answers": [
+        "LT",
+        "LM",
+        "TA"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the cruise speed of the Boeing 767-300ER?",
+      "correct_answer": "Mach 0.80",
+      "incorrect_answers": [
+        "Mach 0.78",
+        "Mach 0.84",
+        "Mach 0.75"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Airbus A340-500s were built?",
+      "correct_answer": "34",
+      "incorrect_answers": [
+        "52",
+        "24",
+        "68"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Norwegian Air Shuttle?",
+      "correct_answer": "NAX",
+      "incorrect_answers": [
+        "NOR",
+        "NWG",
+        "NAS"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wing sweep angle of the Boeing 777?",
+      "correct_answer": "31.6 degrees",
+      "incorrect_answers": [
+        "28.2 degrees",
+        "35.1 degrees",
+        "26.8 degrees"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which airline was the launch customer for the Boeing 737 MAX 8?",
+      "correct_answer": "Malindo Air",
+      "incorrect_answers": [
+        "Southwest Airlines",
+        "Norwegian Air Shuttle",
+        "Ryanair"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the MTOW of the Airbus A220-100?",
+      "correct_answer": "60,800 kg",
+      "incorrect_answers": [
+        "56,200 kg",
+        "65,400 kg",
+        "52,600 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When did the Airbus A380 make its maiden flight?",
+      "correct_answer": "April 27, 2005",
+      "incorrect_answers": [
+        "June 15, 2004",
+        "February 8, 2006",
+        "November 22, 2005"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the range of the Boeing 737-700?",
+      "correct_answer": "3,010 nautical miles",
+      "incorrect_answers": [
+        "2,650 nautical miles",
+        "3,425 nautical miles",
+        "2,280 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Sud Aviation Caravelle aircraft were built?",
+      "correct_answer": "282",
+      "incorrect_answers": [
+        "315",
+        "247",
+        "198"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the IATA code for Ural Airlines?",
+      "correct_answer": "U6",
+      "incorrect_answers": [
+        "UR",
+        "UA",
+        "UL"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the thrust rating of the IAE V2500-A5 engine?",
+      "correct_answer": "33,000 lbf",
+      "incorrect_answers": [
+        "29,500 lbf",
+        "36,800 lbf",
+        "26,200 lbf"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What aircraft registration prefix is used by the Cayman Islands?",
+      "correct_answer": "VP-C",
+      "incorrect_answers": [
+        "VQ-C",
+        "V5-C",
+        "VR-C"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under ICAO wake turbulence categories, what is the minimum weight threshold for a 'Heavy' aircraft?",
+      "correct_answer": "136,000 kg",
+      "incorrect_answers": [
+        "120,000 kg",
+        "150,000 kg",
+        "100,000 kg"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the standard Type A aircraft door opening dimension?",
+      "correct_answer": "42 inches wide by 72 inches high",
+      "incorrect_answers": [
+        "48 inches wide by 72 inches high",
+        "42 inches wide by 66 inches high",
+        "36 inches wide by 72 inches high"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the typical maximum cabin differential pressure for a Boeing 787 Dreamliner?",
+      "correct_answer": "9.4 PSI",
+      "incorrect_answers": [
+        "8.6 PSI",
+        "8.9 PSI",
+        "9.1 PSI"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How often are AIRAC navigation database cycles updated?",
+      "correct_answer": "Every 28 days",
+      "incorrect_answers": [
+        "Every 14 days",
+        "Every 30 days",
+        "Every 21 days"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What distinguishes an Airbus A320-214 from an A320-232?",
+      "correct_answer": "Engine type (CFM56-5B4 vs IAE V2527-A5)",
+      "incorrect_answers": [
+        "Fuselage length",
+        "Maximum takeoff weight",
+        "Wing span"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which company manufactures the popular SL3510 slimline aircraft seat?",
+      "correct_answer": "Recaro",
+      "incorrect_answers": [
+        "Collins Aerospace",
+        "Safran",
+        "Zodiac Aerospace"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "In what year was Qantas Airways founded?",
+      "correct_answer": "1920",
+      "incorrect_answers": [
+        "1919",
+        "1922",
+        "1918"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What landing gear configuration does the Boeing B-52 Stratofortress use?",
+      "correct_answer": "Bicycle (tandem) with outrigger wheels",
+      "incorrect_answers": [
+        "Tricycle with dual bogies",
+        "Quadricycle",
+        "Tailwheel with outriggers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What aircraft registration prefix does Bermuda use?",
+      "correct_answer": "VP-B",
+      "incorrect_answers": [
+        "VQ-B",
+        "G-B",
+        "BM-"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO wake turbulence category designation 'J' reserved for?",
+      "correct_answer": "Super aircraft (A380)",
+      "incorrect_answers": [
+        "Jumbo jets over 400,000 kg",
+        "Aircraft with unique vortex characteristics",
+        "Jets with more than 4 engines"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the elevation of El Alto International Airport in Bolivia?",
+      "correct_answer": "13,325 feet",
+      "incorrect_answers": [
+        "12,850 feet",
+        "14,100 feet",
+        "13,780 feet"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum cabin differential pressure for most Boeing 737 variants?",
+      "correct_answer": "8.35 PSI",
+      "incorrect_answers": [
+        "8.6 PSI",
+        "7.8 PSI",
+        "9.1 PSI"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What differentiates a Boeing 737-8200 from a standard 737-8?",
+      "correct_answer": "Higher passenger capacity with denser seating configuration",
+      "incorrect_answers": [
+        "Longer fuselage",
+        "Different engine variant",
+        "Extended range capability"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which company owns the Collins Aerospace seating division?",
+      "correct_answer": "RTX Corporation",
+      "incorrect_answers": [
+        "Boeing",
+        "Airbus",
+        "Safran"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the typical fuel burn difference between a Boeing 737-800 and 737 MAX 8?",
+      "correct_answer": "Approximately 14-17% reduction in the MAX 8",
+      "incorrect_answers": [
+        "Approximately 8-10% reduction",
+        "Approximately 20-22% reduction",
+        "Approximately 5-7% reduction"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When was KLM Royal Dutch Airlines founded?",
+      "correct_answer": "1919",
+      "incorrect_answers": [
+        "1920",
+        "1918",
+        "1921"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many main landing gear wheels does an Airbus A380 have?",
+      "correct_answer": "20",
+      "incorrect_answers": [
+        "16",
+        "18",
+        "24"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What aircraft registration prefix is used by Ireland?",
+      "correct_answer": "EI-",
+      "incorrect_answers": [
+        "IR-",
+        "IE-",
+        "EL-"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wake turbulence separation minimum behind a Super aircraft for a Heavy aircraft?",
+      "correct_answer": "6 nautical miles",
+      "incorrect_answers": [
+        "5 nautical miles",
+        "7 nautical miles",
+        "8 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO location indicator for London Heathrow Airport?",
+      "correct_answer": "EGLL",
+      "incorrect_answers": [
+        "EGLH",
+        "EGKK",
+        "EGGW"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What aircraft registration prefix does South Africa use?",
+      "correct_answer": "ZS-",
+      "incorrect_answers": [
+        "SA-",
+        "ZA-",
+        "9Y-"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which treaty preceded the Montreal Convention for international air carrier liability?",
+      "correct_answer": "Warsaw Convention (1929)",
+      "incorrect_answers": [
+        "Chicago Convention (1944)",
+        "Paris Convention (1919)",
+        "Rome Convention (1952)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which company acquired Zodiac Aerospace's seat manufacturing division?",
+      "correct_answer": "Safran",
+      "incorrect_answers": [
+        "Collins Aerospace",
+        "Recaro",
+        "Thompson Aero Seating"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When was Czech Airlines (CSA) founded?",
+      "correct_answer": "1923",
+      "incorrect_answers": [
+        "1920",
+        "1925",
+        "1919"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many wheels are on the nose landing gear of a Boeing 747?",
+      "correct_answer": "2 wheels",
+      "incorrect_answers": [
+        "4 wheels",
+        "1 wheel",
+        "3 wheels"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What aircraft registration prefix is used by Aruba?",
+      "correct_answer": "P4-",
+      "incorrect_answers": [
+        "AW-",
+        "AR-",
+        "PJ-"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the RECAT-EU wake turbulence category for the Airbus A380?",
+      "correct_answer": "Category A (Super Heavy)",
+      "incorrect_answers": [
+        "Category J",
+        "Category S",
+        "Category 1"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the seating capacity of the Airbus A220-300 in typical configuration?",
+      "correct_answer": "135-160 passengers",
+      "incorrect_answers": [
+        "115-130 passengers",
+        "160-180 passengers",
+        "95-110 passengers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum fuel capacity of the Airbus A321XLR?",
+      "correct_answer": "32,900 liters",
+      "incorrect_answers": [
+        "28,400 liters",
+        "35,700 liters",
+        "24,210 liters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the production rate target for the Boeing 737 MAX as of 2024?",
+      "correct_answer": "38 per month",
+      "incorrect_answers": [
+        "42 per month",
+        "31 per month",
+        "47 per month"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum fuel capacity of the Airbus A350-1000?",
+      "correct_answer": "156,000 liters",
+      "incorrect_answers": [
+        "138,000 liters",
+        "171,000 liters",
+        "125,000 liters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which conversion company performs Airbus A320/A321 P2F conversions?",
+      "correct_answer": "EFW",
+      "incorrect_answers": [
+        "IAI",
+        "Precision Conversions",
+        "PEMCO"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When was Avianca founded?",
+      "correct_answer": "1919",
+      "incorrect_answers": [
+        "1920",
+        "1921",
+        "1918"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the typical seating capacity of the Boeing 737 MAX 10?",
+      "correct_answer": "230 passengers",
+      "incorrect_answers": [
+        "204 passengers",
+        "189 passengers",
+        "253 passengers"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the range of the Airbus A220-100?",
+      "correct_answer": "3,450 nautical miles",
+      "incorrect_answers": [
+        "2,950 nautical miles",
+        "3,900 nautical miles",
+        "2,600 nautical miles"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum cargo volume of the Boeing 777F?",
+      "correct_answer": "653 cubic meters",
+      "incorrect_answers": [
+        "587 cubic meters",
+        "721 cubic meters",
+        "512 cubic meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the cargo capacity of the Airbus A350-900F?",
+      "correct_answer": "109 tonnes",
+      "incorrect_answers": [
+        "96 tonnes",
+        "118 tonnes",
+        "87 tonnes"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the thrust of the GE CF6-80C2B1F engine?",
+      "correct_answer": "62,100 lbf",
+      "incorrect_answers": [
+        "57,900 lbf",
+        "67,500 lbf",
+        "53,200 lbf"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the wingspan of the Boeing 737 MAX 8?",
+      "correct_answer": "35.9 meters",
+      "incorrect_answers": [
+        "33.6 meters",
+        "38.4 meters",
+        "31.2 meters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which engine manufacturer produces the PW4000 series?",
+      "correct_answer": "Pratt & Whitney",
+      "incorrect_answers": [
+        "General Electric",
+        "Rolls-Royce",
+        "CFM International"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the thrust rating of the Pratt & Whitney PW4077 engine?",
+      "correct_answer": "77,200 lbf",
+      "incorrect_answers": [
+        "71,800 lbf",
+        "83,500 lbf",
+        "68,400 lbf"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the specific fuel consumption range for a CFM56-7B engine?",
+      "correct_answer": "0.58-0.62 lb/lbf/hr",
+      "incorrect_answers": [
+        "0.52-0.56 lb/lbf/hr",
+        "0.64-0.68 lb/lbf/hr",
+        "0.48-0.52 lb/lbf/hr"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the maximum fuel capacity of the Boeing 737 MAX 9?",
+      "correct_answer": "25,814 liters",
+      "incorrect_answers": [
+        "22,678 liters",
+        "28,945 liters",
+        "19,532 liters"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Airbus A300B4s were built?",
+      "correct_answer": "361",
+      "incorrect_answers": [
+        "298",
+        "417",
+        "245"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What percentage of the Airbus A350 structure is made of carbon fiber composite materials?",
+      "correct_answer": "53%",
+      "incorrect_answers": [
+        "25%",
+        "75%",
+        "10%"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the specific fuel consumption of the GE90-115B engine?",
+      "correct_answer": "Approximately 0.52 lb/lbf/hr",
+      "incorrect_answers": [
+        "Approximately 0.35 lb/lbf/hr",
+        "Approximately 0.75 lb/lbf/hr",
+        "Approximately 0.90 lb/lbf/hr"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Air Astana?",
+      "correct_answer": "KZR",
+      "incorrect_answers": [
+        "AST",
+        "AAN",
+        "KAZ"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "How many Boeing 747-8 Freighters were produced?",
+      "correct_answer": "Approximately 107 aircraft",
+      "incorrect_answers": [
+        "Approximately 250 aircraft",
+        "Approximately 50 aircraft",
+        "Approximately 500 aircraft"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the overall pressure ratio of the Rolls-Royce Trent XWB-97 engine?",
+      "correct_answer": "52:1",
+      "incorrect_answers": [
+        "35:1",
+        "70:1",
+        "25:1"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What percentage of the Boeing 787 structure is made of composite materials?",
+      "correct_answer": "50%",
+      "incorrect_answers": [
+        "30%",
+        "70%",
+        "15%"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO code for Azul Brazilian Airlines?",
+      "correct_answer": "AZU",
+      "incorrect_answers": [
+        "AZL",
+        "BRZ",
+        "ABR"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the overall pressure ratio of the CFM LEAP-1A engine?",
+      "correct_answer": "11:1",
+      "incorrect_answers": [
+        "22:1",
+        "33:1",
+        "40:1"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the ICAO airline code for Cebu Pacific?",
+      "correct_answer": "CEB",
+      "incorrect_answers": [
+        "CEP",
+        "CPH",
+        "CPC"
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}
