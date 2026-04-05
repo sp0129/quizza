@@ -534,10 +534,10 @@
     },
     {
       "question": "What does the term 'V1' refer to?",
-      "correct_answer": "Takeoff decision speed",
+      "correct_answer": "Decision speed",
       "incorrect_answers": [
         "Landing speed",
-        "Cruising speed",
+        "Cruise speed",
         "Stall speed"
       ],
       "difficulty": "easy"
@@ -584,11 +584,11 @@
     },
     {
       "question": "Which instrument shows airspeed?",
-      "correct_answer": "Airspeed indicator",
+      "correct_answer": "Airspeed dial",
       "incorrect_answers": [
-        "Altimeter",
-        "Variometer",
-        "Tachometer"
+        "Altitude dial",
+        "Climb-rate dial",
+        "Heading dial"
       ],
       "difficulty": "easy"
     },
@@ -986,9 +986,9 @@
       "question": "What is the flag carrier of Malaysia?",
       "correct_answer": "Malaysia Airlines",
       "incorrect_answers": [
-        "AirAsia",
-        "Malindo Air",
-        "Firefly"
+        "Thai Airways",
+        "Garuda Indonesia",
+        "Vietnam Airlines"
       ],
       "difficulty": "easy"
     },
@@ -1034,11 +1034,11 @@
     },
     {
       "question": "Which manufacturer makes the Q400?",
-      "correct_answer": "De Havilland Canada",
+      "correct_answer": "De Havilland",
       "incorrect_answers": [
-        "ATR",
-        "Embraer",
-        "Bombardier"
+        "ATR France",
+        "Embraer Brazil",
+        "Airbus Regional"
       ],
       "difficulty": "easy"
     },
@@ -1216,19 +1216,19 @@
       "question": "Which airline is the flag carrier of Austria?",
       "correct_answer": "Austrian Airlines",
       "incorrect_answers": [
-        "Edelweiss",
-        "Lauda",
-        "Eurowings"
+        "Edelweiss Air",
+        "Tyrolean Sky",
+        "Lauda Europe"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is the main hub for American Airlines?",
-      "correct_answer": "Dallas-Fort Worth",
+      "correct_answer": "Dallas",
       "incorrect_answers": [
         "Chicago",
         "Miami",
-        "New York"
+        "Phoenix"
       ],
       "difficulty": "easy"
     },
@@ -1294,11 +1294,11 @@
     },
     {
       "question": "What does the black box actually record?",
-      "correct_answer": "Flight data and cockpit voice",
+      "correct_answer": "Flight and voice data",
       "incorrect_answers": [
-        "Only voice",
-        "Only GPS data",
-        "Passenger information"
+        "GPS track only",
+        "Voice audio only",
+        "Passenger list"
       ],
       "difficulty": "easy"
     },
@@ -1384,11 +1384,11 @@
     },
     {
       "question": "What does the term 'pitch' refer to in aircraft movement?",
-      "correct_answer": "Nose up or down movement",
+      "correct_answer": "Nose up/down",
       "incorrect_answers": [
-        "Side-to-side movement",
-        "Rolling movement",
-        "Speed change"
+        "Side-to-side",
+        "Rolling",
+        "Speeding"
       ],
       "difficulty": "easy"
     },
@@ -1484,11 +1484,11 @@
     },
     {
       "question": "What is the purpose of leading edge slats?",
-      "correct_answer": "Increase lift at low speeds",
+      "correct_answer": "More lift",
       "incorrect_answers": [
-        "Reduce drag",
-        "Increase speed",
-        "Improve fuel efficiency"
+        "Less drag",
+        "Less noise",
+        "Less fuel"
       ],
       "difficulty": "easy"
     },
@@ -1504,11 +1504,11 @@
     },
     {
       "question": "What is a red-eye flight?",
-      "correct_answer": "An overnight flight that arrives early morning",
+      "correct_answer": "Overnight flight",
       "incorrect_answers": [
-        "A flight with red warning lights",
-        "An emergency medical flight",
-        "A flight delayed due to visibility"
+        "Medical flight",
+        "Weather delay",
+        "Warning lights"
       ],
       "difficulty": "easy"
     },
@@ -1554,21 +1554,21 @@
     },
     {
       "question": "What is turbulence in aviation?",
-      "correct_answer": "Irregular air movement causing bumpy flight",
+      "correct_answer": "Bumpy air flow",
       "incorrect_answers": [
-        "Engine malfunction",
+        "Engine problem",
         "Rapid descent",
-        "Communication interference"
+        "Comms loss"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is a hub airport?",
-      "correct_answer": "A central airport where an airline routes most flights through",
+      "question": "A hub airport is one where an airline does what?",
+      "correct_answer": "Routes most flights",
       "incorrect_answers": [
-        "An airport with circular runways",
-        "A cargo-only airport",
-        "An airport in a city center"
+        "Only parks planes",
+        "Only loads cargo",
+        "Trains pilots"
       ],
       "difficulty": "easy"
     },
@@ -1594,11 +1594,11 @@
     },
     {
       "question": "What is wind shear?",
-      "correct_answer": "A sudden change in wind direction or speed",
+      "correct_answer": "Sudden wind change",
       "incorrect_answers": [
-        "Strong crosswinds during landing",
-        "Wind caused by propellers",
-        "Circular wind patterns"
+        "Strong crosswind",
+        "Propeller wash",
+        "Circular wind"
       ],
       "difficulty": "easy"
     },
@@ -1614,11 +1614,11 @@
     },
     {
       "question": "What is a domestic flight?",
-      "correct_answer": "A flight within the same country",
+      "correct_answer": "Flight within one country",
       "incorrect_answers": [
-        "A short-haul flight",
-        "A flight under 2 hours",
-        "A flight within the same state"
+        "Flight under 2 hours",
+        "Flight within a state",
+        "Short-haul only"
       ],
       "difficulty": "easy"
     },
@@ -1664,41 +1664,41 @@
     },
     {
       "question": "What is Premium Economy?",
-      "correct_answer": "A cabin class between Economy and Business",
+      "correct_answer": "Cabin above Economy",
       "incorrect_answers": [
-        "The front rows of Economy",
-        "Economy with free meals",
-        "Business class on short flights"
+        "Front of Economy",
+        "Economy with meals",
+        "Short-haul Business"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is a focus city for an airline?",
-      "correct_answer": "An airport with significant operations but not a full hub",
+      "question": "A focus city is like a hub but on a...?",
+      "correct_answer": "Smaller scale",
       "incorrect_answers": [
-        "The airline's headquarters location",
-        "A city targeted for expansion",
-        "A secondary hub"
+        "Cargo only",
+        "Headquarters",
+        "Gateway hub"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is a crosswind in aviation?",
-      "correct_answer": "Wind blowing perpendicular to the runway",
+      "correct_answer": "Wind across runway",
       "incorrect_answers": [
-        "Wind from multiple directions",
-        "Wind during takeoff only",
-        "Wind above the clouds"
+        "Wind from multiple dirs",
+        "Takeoff-only wind",
+        "Cloud-top wind"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is the jump seat typically used for?",
-      "correct_answer": "Cabin crew seating during takeoff and landing",
+      "correct_answer": "Crew takeoff seat",
       "incorrect_answers": [
-        "Emergency passenger seating",
-        "Pilot rest area",
-        "Flight attendant training"
+        "Overflow passenger",
+        "Pilot rest spot",
+        "Training seat"
       ],
       "difficulty": "easy"
     },
@@ -1714,47 +1714,47 @@
     },
     {
       "question": "What is an international flight?",
-      "correct_answer": "A flight between two different countries",
+      "correct_answer": "Flight between countries",
       "incorrect_answers": [
-        "A flight over 6 hours",
-        "A flight crossing an ocean",
-        "A flight requiring a passport"
+        "Flight over 6 hours",
+        "Ocean crossing",
+        "Passport-required trip"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is a taxiway?",
-      "correct_answer": "A path for aircraft to move between runways and gates",
+      "correct_answer": "Runway-to-gate path",
       "incorrect_answers": [
-        "A runway for small aircraft",
-        "A parking area for planes",
-        "An emergency landing strip"
+        "Small runway",
+        "Parking area",
+        "Emergency strip"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What was Amelia Earhart famous for?",
-      "correct_answer": "Being a pioneering female aviator",
+      "correct_answer": "Pioneer female aviator",
       "incorrect_answers": [
-        "Founding the first airline",
-        "Designing aircraft",
-        "Inventing autopilot"
+        "Airline founder",
+        "Aircraft designer",
+        "Autopilot inventor"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is a jetway?",
-      "correct_answer": "An enclosed bridge connecting the terminal to the aircraft",
+      "correct_answer": "Terminal bridge",
       "incorrect_answers": [
-        "A high-speed taxiway",
-        "A runway for jets only",
-        "A cargo loading system"
+        "Fast taxiway",
+        "Jet runway",
+        "Cargo ramp"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What are ULDs in cargo operations?",
-      "correct_answer": "Unit Load Devices for containerized cargo",
+      "correct_answer": "Unit Load Devices",
       "incorrect_answers": [
         "Ultra Light Deliveries",
         "Unloading Lift Devices",
@@ -1764,61 +1764,61 @@
     },
     {
       "question": "What is a regional jet typically used for?",
-      "correct_answer": "Short to medium-haul routes",
+      "correct_answer": "Short-haul routes",
       "incorrect_answers": [
-        "International flights",
-        "Cargo transport only",
-        "Military operations"
+        "Long international",
+        "Cargo transport",
+        "Military ops"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What does the term 'final approach' mean?",
-      "correct_answer": "The last phase of flight before landing",
+      "correct_answer": "Last landing phase",
       "incorrect_answers": [
-        "The last flight of the day",
-        "Emergency landing procedure",
-        "Boarding completion"
+        "Last daily flight",
+        "Emergency descent",
+        "Boarding close"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is a bulkhead seat?",
-      "correct_answer": "A seat directly behind a dividing wall or curtain",
+      "correct_answer": "Seat behind a divider",
       "incorrect_answers": [
-        "A seat in the cargo area",
-        "An emergency exit seat",
-        "A seat with extra storage"
+        "Cargo area seat",
+        "Exit row seat",
+        "Extra storage seat"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is clear air turbulence?",
-      "correct_answer": "Turbulence occurring without visible clouds",
+      "correct_answer": "Cloudless turbulence",
       "incorrect_answers": [
-        "Light turbulence only",
-        "Turbulence at low altitude",
-        "Turbulence during clear weather"
+        "Light bumps only",
+        "Low altitude only",
+        "Weather bumps"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is a spoke airport in hub-and-spoke networks?",
-      "correct_answer": "A destination airport connected to a hub",
+      "correct_answer": "Destination linked to hub",
       "incorrect_answers": [
-        "A small regional airport",
-        "A cargo-only facility",
-        "An international gateway"
+        "Small regional field",
+        "Cargo-only field",
+        "International gateway"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What does 'Zulu time' refer to in aviation?",
-      "correct_answer": "UTC or Greenwich Mean Time",
+      "correct_answer": "UTC time",
       "incorrect_answers": [
-        "African time zones",
-        "Military flight time",
-        "Zero visibility time"
+        "Local time",
+        "Military time",
+        "Eastern time"
       ],
       "difficulty": "easy"
     },
@@ -1934,31 +1934,31 @@
     },
     {
       "question": "What is priority boarding typically offered to?",
-      "correct_answer": "Premium cabin passengers and elite status members",
+      "correct_answer": "Premium and elite flyers",
       "incorrect_answers": [
-        "All passengers alphabetically",
-        "Window seat passengers",
-        "Passengers with children only"
+        "All alphabetically",
+        "Window seat flyers",
+        "Flyers with children"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is the primary purpose of a control tower at an airport?",
-      "correct_answer": "To direct aircraft movements on the ground and in nearby airspace",
+      "question": "The primary purpose of a control tower is what?",
+      "correct_answer": "Directs aircraft",
       "incorrect_answers": [
-        "To repair aircraft engines",
-        "To sell tickets to passengers",
-        "To store luggage and cargo"
+        "Repairs engines",
+        "Sells tickets",
+        "Stores cargo"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is a hangar used for in aviation?",
-      "correct_answer": "A building where aircraft are stored and maintained",
+      "correct_answer": "Plane storage",
       "incorrect_answers": [
-        "A waiting area for passengers",
-        "A device to measure wind speed",
-        "A type of aircraft engine"
+        "Passenger lounge",
+        "Wind sensor",
+        "Engine type"
       ],
       "difficulty": "easy"
     },
@@ -1983,22 +1983,22 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the main purpose of seatbelts in aircraft cabins?",
-      "correct_answer": "To keep passengers secure during turbulence and emergencies",
+      "question": "Seatbelts in aircraft cabins mainly protect against what?",
+      "correct_answer": "Turbulence",
       "incorrect_answers": [
-        "To prevent passengers from standing up",
-        "To measure passenger weight",
-        "To provide comfort during sleep"
+        "Cabin noise",
+        "Cold air",
+        "Dry air"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is the difference between a propeller aircraft and a jet aircraft?",
-      "correct_answer": "Propeller aircraft use spinning blades while jets use engine thrust",
+      "question": "Which aircraft type uses spinning blades for thrust?",
+      "correct_answer": "Propeller",
       "incorrect_answers": [
-        "Propeller aircraft are always smaller",
-        "Jet aircraft cannot fly at night",
-        "Propeller aircraft use nuclear power"
+        "Jet",
+        "Turbofan",
+        "Ramjet"
       ],
       "difficulty": "easy"
     },
@@ -2103,12 +2103,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "Which aircraft series uses the Pratt & Whitney GTF engine as an option?",
-      "correct_answer": "Airbus A320neo family",
+      "question": "The Pratt & Whitney GTF is an option for which family?",
+      "correct_answer": "A320neo",
       "incorrect_answers": [
-        "Boeing 737 MAX",
-        "Boeing 787",
-        "Airbus A330neo"
+        "737 MAX",
+        "787",
+        "A330neo"
       ],
       "difficulty": "medium"
     },
@@ -2314,7 +2314,7 @@
     },
     {
       "question": "Which airline uses the callsign 'Cactus'?",
-      "correct_answer": "American Airlines (former US Airways)",
+      "correct_answer": "American Airlines",
       "incorrect_answers": [
         "Southwest Airlines",
         "Spirit Airlines",
@@ -2344,10 +2344,10 @@
     },
     {
       "question": "What is the primary composite material used in the Boeing 787 fuselage?",
-      "correct_answer": "Carbon fiber reinforced polymer",
+      "correct_answer": "Carbon fiber polymer",
       "incorrect_answers": [
-        "Aluminum lithium alloy",
-        "Titanium composite",
+        "Aluminum alloy",
+        "Titanium mesh",
         "Fiberglass polymer"
       ],
       "difficulty": "medium"
@@ -2434,7 +2434,7 @@
     },
     {
       "question": "Which engine option is available for the Airbus A330neo?",
-      "correct_answer": "Rolls-Royce Trent 7000",
+      "correct_answer": "Trent 7000",
       "incorrect_answers": [
         "GE90",
         "Trent XWB",
@@ -2503,12 +2503,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does ACARS stand for in aviation?",
-      "correct_answer": "Aircraft Communications Addressing and Reporting System",
+      "question": "ACARS in aviation handles what?",
+      "correct_answer": "Aircraft communications",
       "incorrect_answers": [
-        "Automatic Control and Response System",
-        "Aircraft Coordination and Routing System",
-        "Air Communication and Recording System"
+        "Engine control",
+        "Cabin entertainment",
+        "Fuel delivery"
       ],
       "difficulty": "medium"
     },
@@ -2714,7 +2714,7 @@
     },
     {
       "question": "Which aircraft manufacturer produces the MC-21?",
-      "correct_answer": "Irkut Corporation",
+      "correct_answer": "Irkut",
       "incorrect_answers": [
         "Sukhoi",
         "Tupolev",
@@ -2753,10 +2753,10 @@
       "difficulty": "medium"
     },
     {
-      "question": "Which engine powers the Airbus A320ceo?",
-      "correct_answer": "CFM56-5B or IAE V2500",
+      "question": "Which older engine powered the Airbus A320ceo?",
+      "correct_answer": "CFM56-5B",
       "incorrect_answers": [
-        "CFM LEAP-1A",
+        "LEAP-1A",
         "PW1100G",
         "Trent 700"
       ],
@@ -2863,8 +2863,8 @@
       "difficulty": "medium"
     },
     {
-      "question": "Which engine option is exclusive to the Airbus A320neo family?",
-      "correct_answer": "PW1100G or LEAP-1A",
+      "question": "Which newer engine is exclusive to the A320neo family?",
+      "correct_answer": "LEAP-1A",
       "incorrect_answers": [
         "CFM56-5B",
         "Trent 700",
@@ -2964,7 +2964,7 @@
     },
     {
       "question": "Which aircraft manufacturer produces the SpaceJet (formerly MRJ)?",
-      "correct_answer": "Mitsubishi Aircraft",
+      "correct_answer": "Mitsubishi",
       "incorrect_answers": [
         "Kawasaki",
         "Honda",
@@ -2973,12 +2973,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does EICAS stand for in Boeing aircraft?",
-      "correct_answer": "Engine Indication and Crew Alerting System",
+      "question": "EICAS is Boeing's system for what?",
+      "correct_answer": "Engine/crew alerts",
       "incorrect_answers": [
-        "Electronic Instrument Control and Alert System",
-        "Engine Information and Crew Alert Service",
-        "Electronic Indication Control Alert System"
+        "Navigation only",
+        "Autopilot only",
+        "Radar display"
       ],
       "difficulty": "medium"
     },
@@ -3023,12 +3023,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does MCAS stand for in the Boeing 737 MAX?",
-      "correct_answer": "Maneuvering Characteristics Augmentation System",
+      "question": "MCAS is the 737 MAX's system for what?",
+      "correct_answer": "Flight handling",
       "incorrect_answers": [
-        "Maximum Control Assist System",
-        "Mechanical Control Adjustment System",
-        "Multi-Computer Alert System"
+        "Engine control",
+        "Landing gear",
+        "Cabin pressure"
       ],
       "difficulty": "medium"
     },
@@ -3043,12 +3043,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the cabin humidity level in the Boeing 787 compared to traditional aircraft?",
-      "correct_answer": "Higher (15% vs 4%)",
+      "question": "Is cabin humidity in the 787 higher or lower than traditional jets?",
+      "correct_answer": "Higher",
       "incorrect_answers": [
         "Lower",
         "Same",
-        "Slightly lower"
+        "Variable"
       ],
       "difficulty": "medium"
     },
@@ -3174,11 +3174,11 @@
     },
     {
       "question": "What does a 'D-check' maintenance interval typically involve for commercial aircraft?",
-      "correct_answer": "Complete structural overhaul and inspection",
+      "correct_answer": "Complete overhaul",
       "incorrect_answers": [
-        "Engine oil change",
-        "Tire replacement",
-        "Avionics software update"
+        "Oil change",
+        "Tire swap",
+        "Software update"
       ],
       "difficulty": "medium"
     },
@@ -3294,11 +3294,11 @@
     },
     {
       "question": "What is the primary difference between Jet A and Jet A-1 fuel?",
-      "correct_answer": "Freezing point temperature",
+      "correct_answer": "Freezing",
       "incorrect_answers": [
-        "Octane rating",
-        "Color additive",
-        "Sulfur content"
+        "Octane",
+        "Coloring",
+        "Sulfuring"
       ],
       "difficulty": "medium"
     },
@@ -3354,11 +3354,11 @@
     },
     {
       "question": "Which frequent flyer program uses 'Avios' as its currency?",
-      "correct_answer": "British Airways Executive Club",
+      "correct_answer": "British Airways",
       "incorrect_answers": [
-        "Air France Flying Blue",
-        "Lufthansa Miles & More",
-        "KLM Flying Blue"
+        "Air France",
+        "Lufthansa",
+        "KLM"
       ],
       "difficulty": "medium"
     },
@@ -3424,10 +3424,10 @@
     },
     {
       "question": "Which aircraft type is known as the 'Super Guppy'?",
-      "correct_answer": "Modified Boeing Stratocruiser",
+      "correct_answer": "Stratocruiser",
       "incorrect_answers": [
-        "Modified C-130",
-        "Modified Boeing 747",
+        "Hercules C-130",
+        "Boeing 747",
         "Airbus Beluga"
       ],
       "difficulty": "medium"
@@ -3494,7 +3494,7 @@
     },
     {
       "question": "What color is Type I de-icing fluid typically?",
-      "correct_answer": "Clear or light straw",
+      "correct_answer": "Clear/straw",
       "incorrect_answers": [
         "Orange",
         "Green",
@@ -3563,12 +3563,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does Chapter 4 noise certification indicate for aircraft?",
-      "correct_answer": "Stricter noise limits than Chapter 3",
+      "question": "Chapter 4 noise certification is what vs Chapter 3?",
+      "correct_answer": "Stricter",
       "incorrect_answers": [
-        "Louder than Chapter 3 aircraft",
-        "No noise restrictions apply",
-        "Only applies to propeller aircraft"
+        "Louder",
+        "Unchanged",
+        "Propeller-only"
       ],
       "difficulty": "medium"
     },
@@ -3593,22 +3593,22 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the typical maximum age for commercial passenger aircraft in service?",
-      "correct_answer": "25-30 years depending on maintenance and cycles",
+      "question": "Typical retirement age of a commercial airliner?",
+      "correct_answer": "25-30 years",
       "incorrect_answers": [
-        "10 years maximum by regulation",
-        "50 years is standard",
-        "5 years before mandatory retirement"
+        "10 years",
+        "50 years",
+        "5 years"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What does load factor measure in airline economics?",
-      "correct_answer": "Percentage of available seats that are filled with passengers",
+      "correct_answer": "Seat fill %",
       "incorrect_answers": [
-        "The weight of cargo on board",
-        "The cost of fuel per flight",
-        "The number of crew members needed"
+        "Cargo weight",
+        "Fuel cost",
+        "Crew count"
       ],
       "difficulty": "medium"
     },
@@ -3623,32 +3623,32 @@
       "difficulty": "medium"
     },
     {
-      "question": "What are airport slots?",
-      "correct_answer": "Allocated times for takeoff and landing at congested airports",
+      "question": "'Slots' at congested airports allocate what?",
+      "correct_answer": "Takeoff times",
       "incorrect_answers": [
-        "Parking spaces for aircraft at gates",
-        "Storage areas for baggage",
-        "Seating assignments in the terminal"
+        "Gate spots",
+        "Bag storage",
+        "Lounge seats"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is an interline agreement between airlines?",
-      "correct_answer": "An agreement allowing airlines to issue tickets on each other's flights",
+      "question": "An interline agreement lets airlines do what?",
+      "correct_answer": "Shared ticketing",
       "incorrect_answers": [
-        "A merger between two airlines",
-        "A fuel-sharing arrangement",
-        "A pilot exchange program"
+        "Full merger",
+        "Fuel sharing",
+        "Pilot swap"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is a sale-leaseback in aircraft financing?",
-      "correct_answer": "Airline sells aircraft to lessor then leases it back",
+      "correct_answer": "Sell plane, lease back",
       "incorrect_answers": [
-        "Airline buys aircraft and immediately sells it to passengers",
-        "Government provides free aircraft to airlines",
-        "Airline trades aircraft with another carrier"
+        "Buy then resell",
+        "Receive free plane",
+        "Swap with rival"
       ],
       "difficulty": "medium"
     },
@@ -3664,21 +3664,21 @@
     },
     {
       "question": "What is ground handling in aviation?",
-      "correct_answer": "Services provided to aircraft while on the ground including loading and refueling",
+      "correct_answer": "Ground servicing",
       "incorrect_answers": [
-        "Flying aircraft at low altitudes",
-        "Training pilots on simulators",
-        "Building airport runways"
+        "Low-altitude flight",
+        "Sim training",
+        "Runway build"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is the maximum evacuation time required for aircraft certification?",
-      "correct_answer": "90 seconds for all passengers and crew",
+      "correct_answer": "90 seconds",
       "incorrect_answers": [
-        "5 minutes for all passengers",
-        "30 seconds for all passengers",
-        "3 minutes for all passengers"
+        "5 minutes",
+        "30 seconds",
+        "3 minutes"
       ],
       "difficulty": "medium"
     },
@@ -3764,21 +3764,21 @@
     },
     {
       "question": "What is an operating lease in aircraft financing?",
-      "correct_answer": "Airline leases aircraft for a period without ownership option",
+      "correct_answer": "Lease without buy option",
       "incorrect_answers": [
-        "Airline buys aircraft outright with cash",
-        "Airline receives free aircraft from manufacturers",
-        "Airline shares aircraft with competitors"
+        "Outright cash purchase",
+        "Free from maker",
+        "Shared with rivals"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What does hull war insurance cover?",
-      "correct_answer": "Aircraft damage from war, terrorism, and hijacking",
+      "correct_answer": "Damage from war/terror",
       "incorrect_answers": [
-        "Only passenger injuries during war",
-        "Only cargo loss during conflicts",
-        "Only fuel costs during wartime"
+        "Passenger injuries",
+        "Cargo loss only",
+        "Fuel costs only"
       ],
       "difficulty": "medium"
     },
@@ -3794,21 +3794,21 @@
     },
     {
       "question": "What is pushback in ground handling operations?",
-      "correct_answer": "Moving aircraft backward from the gate using a tug vehicle",
+      "correct_answer": "Tow from gate",
       "incorrect_answers": [
-        "Loading cargo into the aircraft hold",
-        "Refueling the aircraft",
-        "Cleaning the aircraft cabin"
+        "Load the hold",
+        "Refueling",
+        "Cabin clean"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "How many emergency exits must be operable for aircraft evacuation certification?",
-      "correct_answer": "Only half of the total exits are required to be used",
+      "question": "What fraction of exits must be usable in certification evacuation?",
+      "correct_answer": "Half",
       "incorrect_answers": [
-        "All exits must be used",
-        "Only one exit is required",
-        "75% of all exits must be used"
+        "All",
+        "One",
+        "Three quarters"
       ],
       "difficulty": "medium"
     },
@@ -3834,11 +3834,11 @@
     },
     {
       "question": "What is de-icing in ground handling?",
-      "correct_answer": "Removing ice and snow from aircraft surfaces before flight",
+      "correct_answer": "Ice removal",
       "incorrect_answers": [
-        "Cooling the cabin temperature",
-        "Freezing food for in-flight service",
-        "Testing aircraft refrigeration systems"
+        "Cabin cooling",
+        "Food freezing",
+        "Fridge testing"
       ],
       "difficulty": "medium"
     },
@@ -3864,21 +3864,21 @@
     },
     {
       "question": "What is a finance lease in aircraft financing?",
-      "correct_answer": "Airline leases aircraft with option to purchase at end of term",
+      "correct_answer": "Lease-to-own",
       "incorrect_answers": [
-        "Airline receives aircraft for free",
-        "Airline sells aircraft to passengers",
-        "Airline borrows pilots from other carriers"
+        "Free plane",
+        "Passenger sale",
+        "Pilot loan"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What does liability insurance cover for airlines?",
-      "correct_answer": "Third-party injuries and property damage",
+      "correct_answer": "Injury and damage",
       "incorrect_answers": [
-        "Only aircraft mechanical failures",
-        "Only pilot medical expenses",
-        "Only fuel price fluctuations"
+        "Only engine failure",
+        "Only pilot health",
+        "Only fuel cost"
       ],
       "difficulty": "medium"
     },
@@ -3894,11 +3894,11 @@
     },
     {
       "question": "What is catering in ground handling operations?",
-      "correct_answer": "Loading food and beverages onto the aircraft",
+      "correct_answer": "Loading food on plane",
       "incorrect_answers": [
-        "Refueling the aircraft",
-        "Repairing aircraft engines",
-        "Cleaning aircraft exteriors"
+        "Fueling the plane",
+        "Repairing engines",
+        "Washing exterior"
       ],
       "difficulty": "medium"
     },
@@ -3913,12 +3913,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the difference between wet leasing and dry leasing in aviation?",
-      "correct_answer": "Wet leasing includes aircraft, crew, maintenance, and insurance; dry leasing is aircraft only",
+      "question": "Which lease includes aircraft AND crew?",
+      "correct_answer": "Wet lease",
       "incorrect_answers": [
-        "Wet leasing is for short-term rentals; dry leasing is for long-term rentals",
-        "Wet leasing includes fuel costs; dry leasing does not",
-        "Wet leasing is only for cargo aircraft; dry leasing is for passenger aircraft"
+        "Dry lease",
+        "Damp lease",
+        "Half lease"
       ],
       "difficulty": "medium"
     },
@@ -3943,12 +3943,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does yield management refer to in airline revenue management?",
-      "correct_answer": "The practice of optimizing prices to maximize revenue per available seat",
+      "question": "Yield management optimizes what?",
+      "correct_answer": "Pricing",
       "incorrect_answers": [
-        "The total revenue generated from cargo operations",
-        "The process of managing employee productivity and efficiency",
-        "The annual profit margin target set by airline executives"
+        "Routes",
+        "Staffing",
+        "Fuel use"
       ],
       "difficulty": "medium"
     },
@@ -3994,11 +3994,11 @@
     },
     {
       "question": "What is a ferry flight in aviation?",
-      "correct_answer": "A flight without passengers or cargo, typically for repositioning or maintenance",
+      "correct_answer": "No-passenger flight",
       "incorrect_answers": [
-        "A short-haul flight between two islands connected by ferry services",
-        "A flight that carries only cargo and no passengers",
-        "A training flight for new pilots with no commercial purpose"
+        "Island hop",
+        "Cargo-only run",
+        "Training trip"
       ],
       "difficulty": "medium"
     },
@@ -4054,7 +4054,7 @@
     },
     {
       "question": "What type of winglets does the Boeing 737 MAX use?",
-      "correct_answer": "Split scimitar winglets",
+      "correct_answer": "Split scimitars",
       "incorrect_answers": [
         "Blended winglets",
         "Raked wingtips",
@@ -4584,11 +4584,11 @@
     },
     {
       "question": "Which engine powers the Airbus A220-300?",
-      "correct_answer": "Pratt & Whitney PW1500G",
+      "correct_answer": "Pratt PW1500G",
       "incorrect_answers": [
         "CFM LEAP-1A",
         "GE CF34-10A",
-        "Rolls-Royce BR715"
+        "Rolls BR715"
       ],
       "difficulty": "hard"
     },
@@ -5094,7 +5094,7 @@
     },
     {
       "question": "Which airline was the launch customer for the Airbus A380?",
-      "correct_answer": "Singapore Airlines",
+      "correct_answer": "Singapore Air",
       "incorrect_answers": [
         "Emirates",
         "Qantas",
@@ -5483,12 +5483,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the standard Type A aircraft door opening dimension?",
-      "correct_answer": "42 inches wide by 72 inches high",
+      "question": "A Type A aircraft door is 42 inches wide by how tall?",
+      "correct_answer": "72 inches",
       "incorrect_answers": [
-        "48 inches wide by 72 inches high",
-        "42 inches wide by 66 inches high",
-        "36 inches wide by 72 inches high"
+        "66 inches",
+        "60 inches",
+        "78 inches"
       ],
       "difficulty": "hard"
     },
@@ -5514,10 +5514,10 @@
     },
     {
       "question": "What distinguishes an Airbus A320-214 from an A320-232?",
-      "correct_answer": "Engine type (CFM56-5B4 vs IAE V2527-A5)",
+      "correct_answer": "Engine type",
       "incorrect_answers": [
         "Fuselage length",
-        "Maximum takeoff weight",
+        "Max takeoff weight",
         "Wing span"
       ],
       "difficulty": "hard"
@@ -5544,11 +5544,11 @@
     },
     {
       "question": "What landing gear configuration does the Boeing B-52 Stratofortress use?",
-      "correct_answer": "Bicycle (tandem) with outrigger wheels",
+      "correct_answer": "Bicycle tandem",
       "incorrect_answers": [
-        "Tricycle with dual bogies",
+        "Tricycle dual",
         "Quadricycle",
-        "Tailwheel with outriggers"
+        "Tailwheel"
       ],
       "difficulty": "hard"
     },
@@ -5594,17 +5594,17 @@
     },
     {
       "question": "What differentiates a Boeing 737-8200 from a standard 737-8?",
-      "correct_answer": "Higher passenger capacity with denser seating configuration",
+      "correct_answer": "Higher capacity",
       "incorrect_answers": [
         "Longer fuselage",
-        "Different engine variant",
-        "Extended range capability"
+        "Different engine",
+        "Extended range"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Which company owns the Collins Aerospace seating division?",
-      "correct_answer": "RTX Corporation",
+      "correct_answer": "RTX Corp",
       "incorrect_answers": [
         "Boeing",
         "Airbus",
@@ -5614,11 +5614,11 @@
     },
     {
       "question": "What is the typical fuel burn difference between a Boeing 737-800 and 737 MAX 8?",
-      "correct_answer": "Approximately 14-17% reduction in the MAX 8",
+      "correct_answer": "14-17% less",
       "incorrect_answers": [
-        "Approximately 8-10% reduction",
-        "Approximately 20-22% reduction",
-        "Approximately 5-7% reduction"
+        "8-10% less",
+        "20-22% less",
+        "5-7% less"
       ],
       "difficulty": "hard"
     },
@@ -5734,7 +5734,7 @@
     },
     {
       "question": "What is the RECAT-EU wake turbulence category for the Airbus A380?",
-      "correct_answer": "Category A (Super Heavy)",
+      "correct_answer": "Category A",
       "incorrect_answers": [
         "Category J",
         "Category S",
