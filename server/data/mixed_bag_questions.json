@@ -253,12 +253,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What does 'SOS' stand for in an emergency?",
-      "correct_answer": "It doesn't stand for anything \u2014 it's a Morse code distress signal",
+      "question": "What is true about 'SOS' as an acronym?",
+      "correct_answer": "It means nothing",
       "incorrect_answers": [
         "Save Our Souls",
         "Save Our Ship",
-        "Send Out Signals"
+        "Send Out Signal"
       ],
       "difficulty": "medium"
     },
@@ -344,11 +344,11 @@
     },
     {
       "question": "What is the boiling point of water in Celsius?",
-      "correct_answer": "100\u00b0C",
+      "correct_answer": "100°C",
       "incorrect_answers": [
-        "90\u00b0C",
-        "110\u00b0C",
-        "120\u00b0C"
+        "90°C",
+        "110°C",
+        "120°C"
       ],
       "difficulty": "easy"
     },
@@ -564,11 +564,11 @@
     },
     {
       "question": "What is the standard temperature of a healthy human body in Fahrenheit?",
-      "correct_answer": "98.6\u00b0F",
+      "correct_answer": "98.6°F",
       "incorrect_answers": [
-        "97.6\u00b0F",
-        "99.6\u00b0F",
-        "100\u00b0F"
+        "97.6°F",
+        "99.6°F",
+        "100°F"
       ],
       "difficulty": "easy"
     },
@@ -758,13 +758,13 @@
       "incorrect_answers": [
         "Claude Monet",
         "Pablo Picasso",
-        "Salvador Dal\u00ed"
+        "Salvador Dalí"
       ],
       "difficulty": "easy"
     },
     {
       "question": "Who painted 'The Persistence of Memory' (the melting clocks)?",
-      "correct_answer": "Salvador Dal\u00ed",
+      "correct_answer": "Salvador Dalí",
       "incorrect_answers": [
         "Pablo Picasso",
         "Claude Monet",
@@ -954,11 +954,11 @@
     },
     {
       "question": "What is the freezing point of water in Fahrenheit?",
-      "correct_answer": "32\u00b0F",
+      "correct_answer": "32°F",
       "incorrect_answers": [
-        "0\u00b0F",
-        "28\u00b0F",
-        "40\u00b0F"
+        "0°F",
+        "28°F",
+        "40°F"
       ],
       "difficulty": "easy"
     },
@@ -1183,7 +1183,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "Which famous physicist is known for the equation E=mc\u00b2?",
+      "question": "Which famous physicist is known for the equation E=mc²?",
       "correct_answer": "Albert Einstein",
       "incorrect_answers": [
         "Isaac Newton",
@@ -1594,10 +1594,10 @@
     },
     {
       "question": "What is the capital of Brazil?",
-      "correct_answer": "Bras\u00edlia",
+      "correct_answer": "Brasília",
       "incorrect_answers": [
         "Rio de Janeiro",
-        "S\u00e3o Paulo",
+        "São Paulo",
         "Salvador"
       ],
       "difficulty": "medium"
@@ -1736,7 +1736,7 @@
       "question": "What is the capital of Mexico?",
       "correct_answer": "Mexico City",
       "incorrect_answers": [
-        "Canc\u00fan",
+        "Cancún",
         "Guadalajara",
         "Monterrey"
       ],
@@ -1748,7 +1748,7 @@
       "incorrect_answers": [
         "Santiago",
         "Lima",
-        "Bogot\u00e1"
+        "Bogotá"
       ],
       "difficulty": "easy"
     },
@@ -1836,9 +1836,9 @@
       "question": "What is the longest river in South America?",
       "correct_answer": "Amazon River",
       "incorrect_answers": [
-        "Paran\u00e1 River",
+        "Paraná River",
         "Orinoco River",
-        "S\u00e3o Francisco River"
+        "São Francisco River"
       ],
       "difficulty": "easy"
     },
@@ -1938,7 +1938,7 @@
       "incorrect_answers": [
         "Shanghai",
         "Mumbai",
-        "S\u00e3o Paulo"
+        "São Paulo"
       ],
       "difficulty": "medium"
     },
@@ -3107,7 +3107,7 @@
       "correct_answer": "Cristiano Ronaldo",
       "incorrect_answers": [
         "Carlos Reyes",
-        "C\u00e9sar Ramos",
+        "César Ramos",
         "Claudio Ranieri"
       ],
       "difficulty": "easy"
@@ -3928,7 +3928,7 @@
       "incorrect_answers": [
         "Britney Spears",
         "Lady Gaga",
-        "Beyonc\u00e9"
+        "Beyoncé"
       ],
       "difficulty": "easy"
     },
@@ -4038,7 +4038,7 @@
       "incorrect_answers": [
         "Taylor Swift",
         "Rihanna",
-        "Beyonc\u00e9"
+        "Beyoncé"
       ],
       "difficulty": "easy"
     },
@@ -4194,7 +4194,7 @@
     },
     {
       "question": "Who released the album 'Lemonade'?",
-      "correct_answer": "Beyonc\u00e9",
+      "correct_answer": "Beyoncé",
       "incorrect_answers": [
         "Rihanna",
         "Taylor Swift",
@@ -4204,7 +4204,7 @@
     },
     {
       "question": "Who sang 'Halo'?",
-      "correct_answer": "Beyonc\u00e9",
+      "correct_answer": "Beyoncé",
       "incorrect_answers": [
         "Rihanna",
         "Adele",
@@ -4216,7 +4216,7 @@
       "question": "Who sang 'Umbrella'?",
       "correct_answer": "Rihanna",
       "incorrect_answers": [
-        "Beyonc\u00e9",
+        "Beyoncé",
         "Alicia Keys",
         "Mary J. Blige"
       ],
@@ -4293,10 +4293,10 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the name of Beyonc\u00e9's alter ego?",
+      "question": "What is the name of Beyoncé's alter ego?",
       "correct_answer": "Sasha Fierce",
       "incorrect_answers": [
-        "Yonc\u00e9",
+        "Yoncé",
         "Queen B",
         "Lemonade"
       ],
@@ -7356,8 +7356,8 @@
       "question": "Who wrote Pride and Prejudice?",
       "correct_answer": "Jane Austen",
       "incorrect_answers": [
-        "Charlotte Bront\u00eb",
-        "Emily Bront\u00eb",
+        "Charlotte Brontë",
+        "Emily Brontë",
         "Virginia Woolf"
       ],
       "difficulty": "easy"
@@ -7378,7 +7378,7 @@
       "incorrect_answers": [
         "Claude Monet",
         "Pablo Picasso",
-        "Salvador Dal\u00ed"
+        "Salvador Dalí"
       ],
       "difficulty": "easy"
     },
@@ -7413,7 +7413,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the art style known for melting clocks by Salvador Dal\u00ed?",
+      "question": "What is the art style known for melting clocks by Salvador Dalí?",
       "correct_answer": "Surrealism",
       "incorrect_answers": [
         "Cubism",
@@ -7926,7 +7926,7 @@
       "question": "Who wrote The Alchemist?",
       "correct_answer": "Paulo Coelho",
       "incorrect_answers": [
-        "Gabriel Garc\u00eda M\u00e1rquez",
+        "Gabriel García Márquez",
         "Isabel Allende",
         "Jorge Luis Borges"
       ],
@@ -7954,7 +7954,7 @@
     },
     {
       "question": "Who wrote The Little Prince?",
-      "correct_answer": "Antoine de Saint-Exup\u00e9ry",
+      "correct_answer": "Antoine de Saint-Exupéry",
       "incorrect_answers": [
         "Victor Hugo",
         "Jules Verne",
@@ -7967,7 +7967,7 @@
       "correct_answer": "In Search of Lost Time",
       "incorrect_answers": [
         "War and Peace",
-        "Les Mis\u00e9rables",
+        "Les Misérables",
         "Don Quixote"
       ],
       "difficulty": "medium"
@@ -8077,7 +8077,7 @@
       "correct_answer": "Margaret Mitchell",
       "incorrect_answers": [
         "Jane Austen",
-        "Charlotte Bront\u00eb",
+        "Charlotte Brontë",
         "Daphne du Maurier"
       ],
       "difficulty": "medium"
@@ -8276,7 +8276,7 @@
       "question": "Who released the 2023 album 'Midnights'?",
       "correct_answer": "Taylor Swift",
       "incorrect_answers": [
-        "Beyonc\u00e9",
+        "Beyoncé",
         "SZA",
         "Miley Cyrus"
       ],
@@ -8343,7 +8343,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "Who featured on 'Se\u00f1orita' with Shawn Mendes?",
+      "question": "Who featured on 'Señorita' with Shawn Mendes?",
       "correct_answer": "Camila Cabello",
       "incorrect_answers": [
         "Dua Lipa",
@@ -8367,7 +8367,7 @@
       "correct_answer": "Katy Perry",
       "incorrect_answers": [
         "Lady Gaga",
-        "Beyonc\u00e9",
+        "Beyoncé",
         "Shakira"
       ],
       "difficulty": "medium"
@@ -8484,7 +8484,7 @@
     },
     {
       "question": "Who featured on 'Savage Remix' with Megan Thee Stallion?",
-      "correct_answer": "Beyonc\u00e9",
+      "correct_answer": "Beyoncé",
       "incorrect_answers": [
         "Nicki Minaj",
         "Cardi B",
@@ -8516,7 +8516,7 @@
       "question": "In the song 'Empire State of Mind', Jay-Z features which female singer on the chorus?",
       "correct_answer": "Alicia Keys",
       "incorrect_answers": [
-        "Beyonc\u00e9",
+        "Beyoncé",
         "Rihanna",
         "Mary J. Blige"
       ],
@@ -9374,7 +9374,7 @@
     },
     {
       "question": "Who says 'A Lannister always pays his debts'?",
-      "correct_answer": "Multiple Lannisters \u2014 it's their unofficial motto",
+      "correct_answer": "Multiple Lannisters — it's their unofficial motto",
       "incorrect_answers": [
         "Only Tyrion",
         "Only Tywin",
@@ -9818,7 +9818,7 @@
       "incorrect_answers": [
         "Debrecen",
         "Szeged",
-        "P\u00e9cs"
+        "Pécs"
       ],
       "difficulty": "easy"
     },
@@ -9847,13 +9847,13 @@
       "correct_answer": "Stockholm",
       "incorrect_answers": [
         "Gothenburg",
-        "Malm\u00f6",
+        "Malmö",
         "Uppsala"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "Bras\u00edlia is the capital of which country?",
+      "question": "Brasília is the capital of which country?",
       "correct_answer": "Brazil",
       "incorrect_answers": [
         "Argentina",
@@ -9867,8 +9867,8 @@
       "correct_answer": "Bucharest",
       "incorrect_answers": [
         "Cluj-Napoca",
-        "Timi\u0219oara",
-        "Bra\u0219ov"
+        "Timișoara",
+        "Brașov"
       ],
       "difficulty": "medium"
     },
@@ -9903,7 +9903,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "Bogot\u00e1 is the capital of which country?",
+      "question": "Bogotá is the capital of which country?",
       "correct_answer": "Colombia",
       "incorrect_answers": [
         "Venezuela",
@@ -9946,17 +9946,17 @@
       "question": "What is the capital of Chile?",
       "correct_answer": "Santiago",
       "incorrect_answers": [
-        "Valpara\u00edso",
-        "Concepci\u00f3n",
+        "Valparaíso",
+        "Concepción",
         "Antofagasta"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is the capital of Colombia?",
-      "correct_answer": "Bogot\u00e1",
+      "correct_answer": "Bogotá",
       "incorrect_answers": [
-        "Medell\u00edn",
+        "Medellín",
         "Cartagena",
         "Cali"
       ],
@@ -11273,42 +11273,42 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is a service mesh?",
-      "correct_answer": "An infrastructure layer that handles service-to-service communication, providing features like load balancing, encryption, and observability",
+      "question": "In microservices, what is a service mesh?",
+      "correct_answer": "Service communication layer",
       "incorrect_answers": [
-        "A type of Wi-Fi network",
-        "A database replication strategy",
-        "A front-end component library"
+        "Wi-Fi network",
+        "Database replication",
+        "UI framework"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What does the CAP theorem state for distributed systems?",
-      "correct_answer": "A distributed system can guarantee at most two of: Consistency, Availability, and Partition tolerance",
+      "question": "CAP theorem says you can guarantee at most how many of C, A, P?",
+      "correct_answer": "Two",
       "incorrect_answers": [
-        "All distributed systems must be consistent and available",
-        "Partition tolerance is always sacrificed",
-        "Consistency and availability are mutually exclusive"
+        "One",
+        "Three",
+        "All"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the Liskov Substitution Principle?",
-      "correct_answer": "Objects of a subclass should be replaceable with objects of their superclass without altering the correctness of the program",
+      "question": "Which SOLID principle says subclasses must be substitutable?",
+      "correct_answer": "Liskov Substitution",
       "incorrect_answers": [
-        "A class should have only one reason to change",
-        "Code should depend on abstractions, not concretions",
-        "Classes should be open for extension but closed for modification"
+        "Open/Closed",
+        "Interface Segregation",
+        "Single Responsibility"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the purpose of hashing a password before storing it?",
-      "correct_answer": "To convert the password into a fixed-length irreversible string so the original password cannot be recovered if the database is compromised",
+      "question": "Why hash passwords before storing them?",
+      "correct_answer": "Irreversibility",
       "incorrect_answers": [
-        "To compress the password to save storage space",
-        "To encrypt the password so it can be decrypted later",
-        "To validate the password length"
+        "Compression",
+        "Speed",
+        "Sorting"
       ],
       "difficulty": "medium"
     },
@@ -11343,22 +11343,22 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the difference between optimistic and pessimistic locking?",
-      "correct_answer": "Optimistic locking assumes conflicts are rare and checks at commit time; pessimistic locking acquires locks upfront to prevent conflicts",
+      "question": "Which locking assumes conflicts are rare?",
+      "correct_answer": "Optimistic",
       "incorrect_answers": [
-        "They are the same technique with different names",
-        "Optimistic locking always uses database locks",
-        "Pessimistic locking never prevents concurrent access"
+        "Pessimistic",
+        "Exclusive",
+        "Mandatory"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is a callback function?",
-      "correct_answer": "A function passed as an argument to another function and invoked at a later time",
+      "question": "A function passed as an argument to run later is a...?",
+      "correct_answer": "Callback",
       "incorrect_answers": [
-        "A function that returns another function",
-        "A function that runs before main",
-        "A function that only runs on errors"
+        "Closure",
+        "Coroutine",
+        "Generator"
       ],
       "difficulty": "medium"
     },
@@ -11373,12 +11373,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is a Scrum sprint?",
-      "correct_answer": "A fixed time period (usually 2-4 weeks) during which a team completes a set of planned work items",
+      "question": "How long is a typical Scrum sprint?",
+      "correct_answer": "2-4 weeks",
       "incorrect_answers": [
-        "A quick one-day coding session",
-        "A debugging session after deployment",
-        "A performance benchmark test"
+        "1 day",
+        "6 months",
+        "1 year"
       ],
       "difficulty": "medium"
     },
@@ -11403,12 +11403,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is a binary tree?",
-      "correct_answer": "A tree data structure where each node has at most two children",
+      "question": "A tree where each node has at most two children is a...?",
+      "correct_answer": "Binary tree",
       "incorrect_answers": [
-        "A tree stored as binary data on disk",
-        "A tree with exactly two levels",
-        "A sorted list of binary numbers"
+        "B-tree",
+        "Trie",
+        "Heap"
       ],
       "difficulty": "medium"
     },
@@ -11424,7 +11424,7 @@
     },
     {
       "question": "What does HTTP status code 500 indicate?",
-      "correct_answer": "Internal Server Error \u2014 something went wrong on the server",
+      "correct_answer": "Internal Server Error — something went wrong on the server",
       "incorrect_answers": [
         "Request not found",
         "Unauthorized access",
@@ -11433,12 +11433,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does CIDR notation (e.g., /24) represent?",
-      "correct_answer": "The number of bits in the network prefix of an IP address, defining the subnet size",
+      "question": "What does /24 in CIDR notation represent?",
+      "correct_answer": "Prefix length",
       "incorrect_answers": [
-        "The number of devices on a network",
-        "The speed of the network in Mbps",
-        "The number of available ports"
+        "Host count",
+        "Port number",
+        "Hop count"
       ],
       "difficulty": "medium"
     },
@@ -11453,12 +11453,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is a deadlock in operating systems?",
-      "correct_answer": "A state where two or more processes each wait for the other to release a resource",
+      "question": "What's it called when processes wait for each other's resources?",
+      "correct_answer": "Deadlock",
       "incorrect_answers": [
-        "A program that crashes due to a null pointer",
-        "An infinite loop with no exit condition",
-        "A memory leak in a process"
+        "Race condition",
+        "Starvation",
+        "Livelock"
       ],
       "difficulty": "medium"
     },
@@ -11473,22 +11473,22 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the difference between a container and a virtual machine?",
-      "correct_answer": "Containers share the host OS kernel and are lighter; VMs include a full guest OS and are more isolated",
+      "question": "Which is heavier and includes a full guest OS?",
+      "correct_answer": "Virtual machine",
       "incorrect_answers": [
-        "VMs are lighter than containers",
-        "Containers require their own OS",
-        "There is no meaningful difference"
+        "Container",
+        "Process",
+        "Thread"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is XSS (Cross-Site Scripting)?",
-      "correct_answer": "An attack where malicious scripts are injected into trusted websites and executed in a victim's browser",
+      "question": "Which attack injects scripts into trusted websites?",
+      "correct_answer": "XSS",
       "incorrect_answers": [
-        "A technique for secure data sharing between sites",
-        "A type of database encryption",
-        "A network protocol for cross-domain requests"
+        "SQL injection",
+        "CSRF",
+        "DDoS"
       ],
       "difficulty": "medium"
     },
@@ -11503,22 +11503,22 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is duck typing?",
-      "correct_answer": "A principle where an object's suitability is determined by its methods and properties rather than its type",
+      "question": "What determines suitability by methods, not declared type?",
+      "correct_answer": "Duck typing",
       "incorrect_answers": [
-        "A debugging technique using print statements",
-        "A pattern for copying objects",
-        "A form of strong static typing"
+        "Strong typing",
+        "Static typing",
+        "Type inference"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is method overriding?",
-      "correct_answer": "Redefining a method inherited from a parent class in a subclass with a new implementation",
+      "question": "What redefines a parent class method in a subclass?",
+      "correct_answer": "Overriding",
       "incorrect_answers": [
-        "Defining multiple methods with the same name but different parameters",
-        "Calling a parent method from a child class",
-        "Making a method private in a subclass"
+        "Overloading",
+        "Shadowing",
+        "Hiding"
       ],
       "difficulty": "medium"
     },
@@ -11533,62 +11533,62 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is tail recursion?",
-      "correct_answer": "A form of recursion where the recursive call is the very last operation in the function, allowing stack optimization",
+      "question": "When is the recursive call the function's last operation?",
+      "correct_answer": "Tail recursion",
       "incorrect_answers": [
-        "A recursion that always reaches its base case immediately",
-        "Recursion that starts from the end of a list",
-        "A loop disguised as recursion"
+        "Head recursion",
+        "Mutual recursion",
+        "Nested recursion"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is MapReduce?",
-      "correct_answer": "A programming model for processing large data sets in parallel by mapping a function over data and then reducing the results",
+      "question": "Which model processes big data via map and reduce steps?",
+      "correct_answer": "MapReduce",
       "incorrect_answers": [
-        "A sorting algorithm",
-        "A JavaScript array method only",
-        "A database indexing technique"
+        "MapFilter",
+        "ScanReduce",
+        "FoldMap"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is Big O notation used for?",
-      "correct_answer": "Describing the time or space complexity of an algorithm in terms of input size",
+      "question": "Which notation describes algorithmic complexity?",
+      "correct_answer": "Big O",
       "incorrect_answers": [
-        "Measuring actual execution time in milliseconds",
-        "Comparing memory usage between two computers",
-        "Specifying network bandwidth requirements"
+        "Big Theta",
+        "Little o",
+        "Omega"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the difference between a deep copy and a shallow copy?",
-      "correct_answer": "A deep copy recursively copies all nested objects; a shallow copy copies only references to nested objects",
+      "question": "Which copy duplicates nested objects recursively?",
+      "correct_answer": "Deep copy",
       "incorrect_answers": [
-        "A shallow copy is always slower",
-        "A deep copy and shallow copy are identical for primitive types and objects",
-        "A shallow copy creates a new object with all new data"
+        "Shallow copy",
+        "Lazy copy",
+        "Reference copy"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is event-driven programming?",
-      "correct_answer": "A paradigm where the program flow is determined by events such as user actions or messages",
+      "question": "Which paradigm is driven by user actions or messages?",
+      "correct_answer": "Event-driven",
       "incorrect_answers": [
-        "Programming that runs on a fixed timer",
-        "Programming without loops",
-        "A style that avoids using functions"
+        "Imperative",
+        "Declarative",
+        "Logic-based"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the purpose of load balancing?",
-      "correct_answer": "To distribute incoming network traffic across multiple servers to ensure no single server is overwhelmed",
+      "question": "What distributes traffic across multiple servers?",
+      "correct_answer": "Load balancer",
       "incorrect_answers": [
-        "To compress data before sending it",
-        "To encrypt traffic between client and server",
-        "To cache static content near users"
+        "Firewall",
+        "Proxy cache",
+        "DNS resolver"
       ],
       "difficulty": "medium"
     },
@@ -11633,32 +11633,32 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is static memory allocation?",
-      "correct_answer": "Memory allocated at compile time with a fixed size that cannot change at runtime",
+      "question": "Which memory allocation happens at compile time?",
+      "correct_answer": "Static",
       "incorrect_answers": [
-        "Memory allocated on the heap",
-        "Memory shared between processes",
-        "Memory that persists after the program exits"
+        "Dynamic",
+        "Heap",
+        "Automatic"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the difference between GET and POST HTTP methods?",
-      "correct_answer": "GET retrieves data and sends parameters in the URL; POST submits data in the request body",
+      "question": "Which HTTP method sends data in the request body?",
+      "correct_answer": "POST",
       "incorrect_answers": [
-        "GET is more secure than POST",
-        "POST can only send text data",
-        "GET modifies server data; POST retrieves it"
+        "GET",
+        "HEAD",
+        "OPTIONS"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the difference between a soft link and a hard link in Unix?",
-      "correct_answer": "A soft link is a pointer to a file name and breaks if the target is deleted; a hard link is a direct reference to the inode and persists",
+      "question": "Which Unix link breaks if the target file is deleted?",
+      "correct_answer": "Soft link",
       "incorrect_answers": [
-        "They are the same thing with different names",
-        "A hard link works across filesystems; a soft link does not",
-        "A soft link consumes more disk space than a hard link"
+        "Hard link",
+        "Junction",
+        "Shortcut"
       ],
       "difficulty": "medium"
     },
@@ -11683,12 +11683,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is a hash table?",
-      "correct_answer": "A data structure that maps keys to values using a hash function",
+      "question": "Which structure maps keys to values via hashing?",
+      "correct_answer": "Hash table",
       "incorrect_answers": [
-        "A sorted list of numbers",
-        "A type of binary tree",
-        "A graph of connected nodes"
+        "Linked list",
+        "Binary tree",
+        "Priority queue"
       ],
       "difficulty": "medium"
     },
@@ -11703,22 +11703,22 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is an IP subnet?",
-      "correct_answer": "A logical subdivision of an IP network that groups devices and controls traffic routing",
+      "question": "A logical subdivision of an IP network is a...?",
+      "correct_answer": "Subnet",
       "incorrect_answers": [
-        "A backup internet connection",
-        "A type of network cable",
-        "A wireless access point"
+        "Gateway",
+        "Router",
+        "Proxy"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is a buffer overflow?",
-      "correct_answer": "A vulnerability where more data is written to a buffer than it can hold, overwriting adjacent memory",
+      "question": "Which bug writes past a buffer's limit?",
+      "correct_answer": "Buffer overflow",
       "incorrect_answers": [
-        "A network error caused by too many connections",
-        "A database error from too many rows",
-        "A UI bug caused by too much text"
+        "Stack underflow",
+        "Null dereference",
+        "Memory leak"
       ],
       "difficulty": "medium"
     },
@@ -12734,11 +12734,11 @@
     },
     {
       "question": "What is the smoke point of olive oil approximately?",
-      "correct_answer": "Around 375\u00b0F (190\u00b0C)",
+      "correct_answer": "Around 375°F (190°C)",
       "incorrect_answers": [
-        "Around 500\u00b0F",
-        "Around 250\u00b0F",
-        "Around 600\u00b0F"
+        "Around 500°F",
+        "Around 250°F",
+        "Around 600°F"
       ],
       "difficulty": "medium"
     },
@@ -12848,17 +12848,17 @@
       "incorrect_answers": [
         "A type of sushi",
         "An Italian sandwich",
-        "A French cr\u00eape"
+        "A French crêpe"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is the main difference between bourbon and whiskey?",
-      "correct_answer": "Bourbon must be made from at least 51% corn and aged in new charred oak barrels",
+      "question": "Bourbon must be at least 51% of which grain?",
+      "correct_answer": "Corn",
       "incorrect_answers": [
-        "Bourbon is from Scotland",
-        "Bourbon uses wheat only",
-        "There is no difference"
+        "Rye",
+        "Wheat",
+        "Barley"
       ],
       "difficulty": "medium"
     },
@@ -12893,7 +12893,7 @@
       "difficulty": "medium"
     },
     {
-      "question": "What pastry is an \u00e9clair?",
+      "question": "What pastry is an éclair?",
       "correct_answer": "A choux pastry filled with cream and topped with chocolate",
       "incorrect_answers": [
         "A flaky pie",
@@ -12924,7 +12924,7 @@
     },
     {
       "question": "What are the five mother sauces in French cuisine?",
-      "correct_answer": "B\u00e9chamel, Velout\u00e9, Espagnole, Hollandaise, Tomato",
+      "correct_answer": "Béchamel, Velouté, Espagnole, Hollandaise, Tomato",
       "incorrect_answers": [
         "Marinara, Alfredo, Pesto, Ranch, BBQ",
         "Ketchup, Mustard, Mayo, Soy, Hot Sauce",
@@ -12953,12 +12953,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the main difference between puff pastry and phyllo dough?",
-      "correct_answer": "Puff pastry has butter folded in; phyllo is paper-thin and brushed with butter",
+      "question": "Which pastry is paper-thin, brushed with butter?",
+      "correct_answer": "Phyllo",
       "incorrect_answers": [
-        "They are the same",
-        "Phyllo has more butter",
-        "Puff pastry is healthier"
+        "Puff",
+        "Choux",
+        "Shortcrust"
       ],
       "difficulty": "medium"
     },
@@ -13013,12 +13013,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What cut of beef is a T-bone steak?",
-      "correct_answer": "A cut containing both strip and tenderloin separated by a T-shaped bone",
+      "question": "A T-bone steak has a strip and which other cut?",
+      "correct_answer": "Tenderloin",
       "incorrect_answers": [
-        "Pure tenderloin",
-        "Ribeye with bone",
-        "Sirloin with bone"
+        "Ribeye",
+        "Sirloin",
+        "Brisket"
       ],
       "difficulty": "medium"
     },
@@ -13073,12 +13073,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the difference between Mezcal and Tequila?",
-      "correct_answer": "Tequila is only from blue agave; Mezcal can use any agave species",
+      "question": "Which spirit can be made from any agave species?",
+      "correct_answer": "Mezcal",
       "incorrect_answers": [
-        "Mezcal is stronger",
-        "Tequila is smoky",
-        "They're the same"
+        "Tequila",
+        "Pisco",
+        "Cachaça"
       ],
       "difficulty": "medium"
     },
@@ -13146,7 +13146,7 @@
       "question": "What cheese has holes and is from Switzerland?",
       "correct_answer": "Emmental",
       "incorrect_answers": [
-        "Gruy\u00e8re",
+        "Gruyère",
         "Appenzeller",
         "Raclette"
       ],
@@ -13493,12 +13493,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the chronological order of the Star Wars prequel trilogy?",
-      "correct_answer": "The Phantom Menace, Attack of the Clones, Revenge of the Sith",
+      "question": "Which film comes FIRST in the Star Wars prequel trilogy?",
+      "correct_answer": "The Phantom Menace",
       "incorrect_answers": [
-        "Attack of the Clones, The Phantom Menace, Revenge of the Sith",
-        "Revenge of the Sith, The Phantom Menace, Attack of the Clones",
-        "The Phantom Menace, Revenge of the Sith, Attack of the Clones"
+        "Attack of the Clones",
+        "Revenge of the Sith",
+        "A New Hope"
       ],
       "difficulty": "medium"
     },
@@ -13577,7 +13577,7 @@
       "correct_answer": "The Lion King II: Simba's Pride",
       "incorrect_answers": [
         "The Lion Guard",
-        "The Lion King 1\u00bd",
+        "The Lion King 1½",
         "Simba's Return"
       ],
       "difficulty": "easy"
@@ -14013,12 +14013,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the ABA problem in concurrent programming?",
-      "correct_answer": "When a CAS operation succeeds because a value changed from A to B and back to A, making the change undetectable despite intervening modifications",
+      "question": "Which concurrency bug hides an A→B→A value change?",
+      "correct_answer": "ABA problem",
       "incorrect_answers": [
-        "A deadlock between three processes named A, B, and A",
-        "A memory allocation error in C",
-        "A naming conflict between three variables"
+        "Deadlock",
+        "Livelock",
+        "Priority inversion"
       ],
       "difficulty": "hard"
     },
@@ -14053,12 +14053,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is Rice's theorem?",
-      "correct_answer": "Any non-trivial semantic property of programs is undecidable \u2014 you cannot write a general algorithm to determine whether an arbitrary program has a given property",
+      "question": "Which theorem says non-trivial semantic properties are undecidable?",
+      "correct_answer": "Rice's",
       "incorrect_answers": [
-        "A theorem about rice sorting algorithms",
-        "A theorem proving all programs eventually terminate",
-        "A theorem about optimal data compression"
+        "Cook's",
+        "Gödel's",
+        "Turing's"
       ],
       "difficulty": "hard"
     },
@@ -14123,12 +14123,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the RSA algorithm based on?",
-      "correct_answer": "The practical difficulty of factoring the product of two large prime numbers",
+      "question": "RSA's security relies on the difficulty of what?",
+      "correct_answer": "Factoring large primes",
       "incorrect_answers": [
-        "The difficulty of computing square roots",
-        "The complexity of sorting large arrays",
-        "The difficulty of finding shortest paths in graphs"
+        "Discrete log",
+        "Elliptic curves",
+        "Lattice reduction"
       ],
       "difficulty": "hard"
     },
@@ -14154,11 +14154,11 @@
     },
     {
       "question": "Which album sold the most copies in its first week in 2023?",
-      "correct_answer": "Midnights \u2014 Taylor Swift",
+      "correct_answer": "Midnights — Taylor Swift",
       "incorrect_answers": [
-        "SOS \u2014 SZA",
-        "One Thing at a Time \u2014 Morgan Wallen",
-        "Endless Summer Vacation \u2014 Miley Cyrus"
+        "SOS — SZA",
+        "One Thing at a Time — Morgan Wallen",
+        "Endless Summer Vacation — Miley Cyrus"
       ],
       "difficulty": "hard"
     },
@@ -14263,12 +14263,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is a 'foley artist' in filmmaking?",
-      "correct_answer": "A person who creates everyday sound effects for movies (footsteps, doors, etc.)",
+      "question": "A 'foley artist' in filmmaking creates what?",
+      "correct_answer": "Sound effects",
       "incorrect_answers": [
-        "A stunt coordinator",
-        "A special effects designer",
-        "A dialect coach"
+        "Stunt choreography",
+        "Visual effects",
+        "Dialect coaching"
       ],
       "difficulty": "hard"
     },
@@ -14373,22 +14373,22 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the Readers-Writers Problem?",
-      "correct_answer": "A synchronization problem where multiple readers can access a resource simultaneously, but writers need exclusive access",
+      "question": "In which problem do many readers share but writers need exclusivity?",
+      "correct_answer": "Readers-Writers",
       "incorrect_answers": [
-        "A file permission issue in Unix",
-        "A problem with concurrent database writes",
-        "A challenge in compiling multi-file programs"
+        "Producers-Consumers",
+        "Dining Philosophers",
+        "Sleeping Barber"
       ],
       "difficulty": "hard"
     },
     {
-      "question": "What is a memory barrier (fence)?",
-      "correct_answer": "A CPU instruction that enforces an ordering constraint on memory operations, preventing the compiler and CPU from reordering reads and writes across the barrier",
+      "question": "What enforces ordering on memory reads and writes?",
+      "correct_answer": "Memory barrier",
       "incorrect_answers": [
-        "A hardware device that limits RAM access",
-        "A firewall for memory access",
-        "A garbage collection boundary"
+        "Mutex",
+        "Semaphore",
+        "Cache fence"
       ],
       "difficulty": "hard"
     },
@@ -14403,32 +14403,32 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the difference between a mandoline and a mandolin?",
-      "correct_answer": "A mandoline is a kitchen slicing tool; a mandolin is a musical instrument",
+      "question": "Which is the kitchen slicing tool?",
+      "correct_answer": "Mandoline",
       "incorrect_answers": [
-        "They're the same thing",
-        "A mandoline is Italian",
-        "A mandolin is used for cheese"
+        "Mandolin",
+        "Bandoneon",
+        "Mellotron"
       ],
       "difficulty": "hard"
     },
     {
-      "question": "What is the Y combinator in lambda calculus?",
-      "correct_answer": "A higher-order function that enables recursion in languages that don't natively support named self-reference",
+      "question": "Which combinator enables recursion without named self-reference?",
+      "correct_answer": "Y combinator",
       "incorrect_answers": [
-        "A startup accelerator",
-        "A sorting algorithm",
-        "A garbage collection technique"
+        "K combinator",
+        "S combinator",
+        "I combinator"
       ],
       "difficulty": "hard"
     },
     {
-      "question": "What is a quorum in distributed systems?",
-      "correct_answer": "The minimum number of nodes that must agree on an operation for it to be considered successful, typically a majority",
+      "question": "What's the minimum node agreement for a distributed operation?",
+      "correct_answer": "Quorum",
       "incorrect_answers": [
-        "The total number of nodes in the cluster",
-        "A single designated leader node",
-        "The maximum latency allowed for a request"
+        "Consensus",
+        "Majority lock",
+        "Leader vote"
       ],
       "difficulty": "hard"
     },
@@ -14444,9 +14444,9 @@
     },
     {
       "question": "Which artist released the experimental album 'Vespertine' in 2001, featuring harps, music boxes, and microbeats?",
-      "correct_answer": "Bj\u00f6rk",
+      "correct_answer": "Björk",
       "incorrect_answers": [
-        "Sigur R\u00f3s",
+        "Sigur Rós",
         "Radiohead",
         "Portishead"
       ],
@@ -14484,11 +14484,11 @@
     },
     {
       "question": "Which song was TikTok's most-used sound in 2020?",
-      "correct_answer": "Savage Love \u2014 Jawsh 685 & Jason Derulo",
+      "correct_answer": "Savage Love — Jawsh 685 & Jason Derulo",
       "incorrect_answers": [
-        "Blinding Lights \u2014 The Weeknd",
-        "WAP \u2014 Cardi B",
-        "Toosie Slide \u2014 Drake"
+        "Blinding Lights — The Weeknd",
+        "WAP — Cardi B",
+        "Toosie Slide — Drake"
       ],
       "difficulty": "hard"
     },
@@ -14553,12 +14553,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the Fast Fourier Transform (FFT) used for?",
-      "correct_answer": "Efficiently computing the Discrete Fourier Transform, reducing the complexity from O(n\u00b2) to O(n log n), used in signal processing and polynomial multiplication",
+      "question": "Which algorithm computes DFT in O(n log n)?",
+      "correct_answer": "FFT",
       "incorrect_answers": [
-        "Sorting arrays of floating point numbers",
-        "Encrypting data for secure transfer",
-        "Compressing images using lossy encoding"
+        "DCT",
+        "Hough",
+        "Wavelet"
       ],
       "difficulty": "hard"
     },
@@ -14583,22 +14583,22 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is a suffix tree?",
-      "correct_answer": "A compressed trie of all suffixes of a string, enabling fast substring search, longest repeated substring, and other string operations",
+      "question": "Which tree stores all suffixes of a string?",
+      "correct_answer": "Suffix tree",
       "incorrect_answers": [
-        "A binary tree storing file extensions",
-        "A tree where only leaf nodes store data",
-        "A balanced tree for numeric data"
+        "Trie",
+        "B-tree",
+        "Segment tree"
       ],
       "difficulty": "hard"
     },
     {
-      "question": "What is cache coherence in multi-processor systems?",
-      "correct_answer": "The problem of ensuring that multiple CPU caches reflecting the same memory location remain consistent when one processor modifies the data",
+      "question": "What keeps multiple CPU caches in sync?",
+      "correct_answer": "Cache coherence",
       "incorrect_answers": [
-        "Organizing the browser cache efficiently",
-        "Making sure CDN caches have the same content",
-        "A database caching strategy"
+        "Cache invalidation",
+        "Cache eviction",
+        "Memory barrier"
       ],
       "difficulty": "hard"
     },
@@ -14633,12 +14633,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the difference between Kruskal's and Prim's algorithms?",
-      "correct_answer": "Both find minimum spanning trees, but Kruskal's adds the shortest edge that doesn't form a cycle, while Prim's grows the MST from a starting vertex by adding the nearest neighbor",
+      "question": "Both Kruskal's and Prim's algorithms find what?",
+      "correct_answer": "Minimum spanning tree",
       "incorrect_answers": [
-        "Kruskal's finds shortest paths; Prim's finds spanning trees",
-        "They produce different trees for the same graph",
-        "Prim's is always faster than Kruskal's"
+        "Shortest path",
+        "Max flow",
+        "Min cut"
       ],
       "difficulty": "hard"
     },
@@ -14653,12 +14653,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the A* search algorithm?",
-      "correct_answer": "A graph search algorithm that finds the shortest path using both actual cost from the start and a heuristic estimate to the goal",
+      "question": "Which search combines actual cost with a heuristic?",
+      "correct_answer": "A*",
       "incorrect_answers": [
-        "An improved version of bubble sort",
-        "A brute-force search through all paths",
-        "A random walk algorithm"
+        "Dijkstra",
+        "BFS",
+        "DFS"
       ],
       "difficulty": "hard"
     },
@@ -14674,11 +14674,11 @@
     },
     {
       "question": "What is the proper serving temperature for white Burgundy?",
-      "correct_answer": "Around 50-55\u00b0F (10-13\u00b0C)",
+      "correct_answer": "Around 50-55°F (10-13°C)",
       "incorrect_answers": [
-        "Ice cold (35\u00b0F)",
-        "Room temperature (70\u00b0F)",
-        "Warm (65\u00b0F)"
+        "Ice cold (35°F)",
+        "Room temperature (70°F)",
+        "Warm (65°F)"
       ],
       "difficulty": "hard"
     },
@@ -14707,7 +14707,7 @@
       "correct_answer": "La Paz, Bolivia",
       "incorrect_answers": [
         "Quito, Ecuador",
-        "Bogot\u00e1, Colombia",
+        "Bogotá, Colombia",
         "Addis Ababa, Ethiopia"
       ],
       "difficulty": "hard"
@@ -14723,12 +14723,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the graph coloring problem and how does it relate to register allocation?",
-      "correct_answer": "Graph coloring assigns colors to vertices so no adjacent vertices share a color; in register allocation, variables are vertices, interferences are edges, and colors are registers",
+      "question": "In register allocation, 'colors' correspond to what?",
+      "correct_answer": "Registers",
       "incorrect_answers": [
-        "Graph coloring is used to optimize database queries",
-        "It determines the color scheme of a GUI",
-        "It has no relation to register allocation"
+        "Variables",
+        "Instructions",
+        "Memory slots"
       ],
       "difficulty": "hard"
     },
@@ -14753,12 +14753,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the P vs NP problem?",
-      "correct_answer": "The unsolved question of whether every problem whose solution can be verified quickly (NP) can also be solved quickly (P)",
+      "question": "P vs NP asks whether verifying quickly implies what?",
+      "correct_answer": "Solving quickly",
       "incorrect_answers": [
-        "The question of whether parallel computing is faster",
-        "Whether Python is better than Node.js",
-        "Whether all problems have polynomial solutions"
+        "Proving easily",
+        "Parallelizing",
+        "Terminating"
       ],
       "difficulty": "hard"
     },
@@ -14773,12 +14773,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "In 'Eyes Wide Shut', what was unique about the production timeline?",
-      "correct_answer": "It holds the Guinness record for the longest continuous film shoot (400 days)",
+      "question": "What Guinness record does 'Eyes Wide Shut' hold?",
+      "correct_answer": "Longest film shoot",
       "incorrect_answers": [
-        "It was filmed in one take",
-        "It was shot entirely at night",
-        "No scripts were used"
+        "Shortest script",
+        "Most retakes",
+        "Smallest cast"
       ],
       "difficulty": "hard"
     },
@@ -14913,12 +14913,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the Compare-and-Swap (CAS) operation?",
-      "correct_answer": "An atomic instruction that compares a memory location's current value with an expected value and, if they match, replaces it with a new value",
+      "question": "Which atomic op updates only if the current value matches?",
+      "correct_answer": "Compare-and-swap",
       "incorrect_answers": [
-        "A sorting algorithm that compares and swaps adjacent elements",
-        "A memory deallocation technique",
-        "A file comparison utility"
+        "Test-and-set",
+        "Fetch-and-add",
+        "Load-link"
       ],
       "difficulty": "hard"
     },
@@ -14973,12 +14973,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What does it mean for a problem to be NP-complete?",
-      "correct_answer": "It is in NP (solutions can be verified in polynomial time) and every other NP problem can be reduced to it in polynomial time",
+      "question": "Besides being in NP, an NP-complete problem is also...?",
+      "correct_answer": "NP-hard",
       "incorrect_answers": [
-        "It can be solved in polynomial time",
-        "It has no known solution",
-        "It can only be solved using quantum computers"
+        "In P",
+        "Undecidable",
+        "Polynomial"
       ],
       "difficulty": "hard"
     },
@@ -15063,12 +15063,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the difference between a compiler's front end and back end?",
-      "correct_answer": "The front end handles lexical analysis, parsing, and semantic analysis; the back end handles code optimization and target code generation",
+      "question": "Which compiler stage handles parsing and semantic analysis?",
+      "correct_answer": "Front end",
       "incorrect_answers": [
-        "The front end generates machine code; the back end parses source code",
-        "The front end runs on the client; the back end runs on the server",
-        "There is no distinction in modern compilers"
+        "Back end",
+        "Middle end",
+        "Linker"
       ],
       "difficulty": "hard"
     },
@@ -15143,12 +15143,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the Bellman-Ford algorithm, and how does it differ from Dijkstra's?",
-      "correct_answer": "Bellman-Ford finds shortest paths and can handle negative edge weights, unlike Dijkstra's, but runs in O(V*E) instead of O((V+E) log V)",
+      "question": "Which shortest-path algorithm handles negative edge weights?",
+      "correct_answer": "Bellman-Ford",
       "incorrect_answers": [
-        "Bellman-Ford is always faster than Dijkstra's",
-        "Bellman-Ford only works on unweighted graphs",
-        "Dijkstra's handles negative weights; Bellman-Ford does not"
+        "Dijkstra",
+        "BFS",
+        "DFS"
       ],
       "difficulty": "hard"
     },
@@ -15173,12 +15173,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is an epsilon transition in finite automata?",
-      "correct_answer": "A state transition that occurs without consuming any input symbol, allowing the automaton to change state spontaneously",
+      "question": "Which automaton transition consumes no input?",
+      "correct_answer": "Epsilon",
       "incorrect_answers": [
-        "A transition that consumes all remaining input",
-        "A transition that resets the automaton",
-        "A transition that only occurs on numeric input"
+        "Null",
+        "Void",
+        "Terminal"
       ],
       "difficulty": "hard"
     },
@@ -15203,22 +15203,22 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is a context-free grammar (CFG)?",
-      "correct_answer": "A formal grammar where every production rule has a single non-terminal on the left side, commonly used to define programming language syntax",
+      "question": "Which grammar has one non-terminal per production left side?",
+      "correct_answer": "Context-free",
       "incorrect_answers": [
-        "A grammar that requires no context to understand",
-        "A grammar used only for natural languages",
-        "A grammar with no production rules"
+        "Regular",
+        "Context-sensitive",
+        "Unrestricted"
       ],
       "difficulty": "hard"
     },
     {
-      "question": "What is the max-flow min-cut theorem?",
-      "correct_answer": "In a flow network, the maximum amount of flow from source to sink equals the minimum capacity of edges that, if removed, would disconnect source from sink",
+      "question": "Max flow from source to sink equals what?",
+      "correct_answer": "Min cut capacity",
       "incorrect_answers": [
-        "The maximum flow always equals the number of edges",
-        "The minimum cut always equals the number of vertices",
-        "Maximum flow and minimum cut are unrelated"
+        "Edge count",
+        "Vertex count",
+        "Graph diameter"
       ],
       "difficulty": "hard"
     },
@@ -15253,12 +15253,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is instruction pipelining in CPUs?",
-      "correct_answer": "A technique where multiple instruction stages (fetch, decode, execute, etc.) overlap so different instructions are in different stages simultaneously",
+      "question": "What overlaps CPU instruction stages for throughput?",
+      "correct_answer": "Pipelining",
       "incorrect_answers": [
-        "Executing instructions in reverse order",
-        "A method for sending instructions over a network",
-        "Storing all instructions in cache before execution"
+        "Branch prediction",
+        "Caching",
+        "Parallelism"
       ],
       "difficulty": "hard"
     },
@@ -15273,12 +15273,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is speculative execution in CPUs?",
-      "correct_answer": "A technique where the CPU predicts the path of a branch and executes instructions ahead of time, discarding results if the prediction is wrong",
+      "question": "Which CPU technique executes ahead of branch resolution?",
+      "correct_answer": "Speculative execution",
       "incorrect_answers": [
-        "Running code in a sandbox for security testing",
-        "Executing code without compiling it first",
-        "A debugging mode that guesses variable values"
+        "Out-of-order execution",
+        "Pipelining",
+        "Superscalar"
       ],
       "difficulty": "hard"
     },
@@ -15324,11 +15324,11 @@
     },
     {
       "question": "Which song was the most-streamed on Spotify in 2022?",
-      "correct_answer": "As It Was \u2014 Harry Styles",
+      "correct_answer": "As It Was — Harry Styles",
       "incorrect_answers": [
-        "Heat Waves \u2014 Glass Animals",
-        "Stay \u2014 Kid LAROI & Justin Bieber",
-        "Enemy \u2014 Imagine Dragons"
+        "Heat Waves — Glass Animals",
+        "Stay — Kid LAROI & Justin Bieber",
+        "Enemy — Imagine Dragons"
       ],
       "difficulty": "hard"
     },
@@ -15384,11 +15384,11 @@
     },
     {
       "question": "What is the ideal internal temperature for a medium-rare steak?",
-      "correct_answer": "130-135\u00b0F (54-57\u00b0C)",
+      "correct_answer": "130-135°F (54-57°C)",
       "incorrect_answers": [
-        "120\u00b0F (49\u00b0C)",
-        "145\u00b0F (63\u00b0C)",
-        "160\u00b0F (71\u00b0C)"
+        "120°F (49°C)",
+        "145°F (63°C)",
+        "160°F (71°C)"
       ],
       "difficulty": "hard"
     },
@@ -15423,12 +15423,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the convex hull problem?",
-      "correct_answer": "Finding the smallest convex polygon that contains all points in a given set of 2D points",
+      "question": "Which problem finds the smallest polygon enclosing 2D points?",
+      "correct_answer": "Convex hull",
       "incorrect_answers": [
-        "Finding the largest circle inside a polygon",
-        "Sorting points by distance from the origin",
-        "Finding the minimum spanning tree of points"
+        "Closest pair",
+        "Voronoi diagram",
+        "Delaunay triangulation"
       ],
       "difficulty": "hard"
     },
@@ -15464,11 +15464,11 @@
     },
     {
       "question": "What is the proper temperature to serve red Burgundy wine?",
-      "correct_answer": "Around 60-65\u00b0F (15-18\u00b0C)",
+      "correct_answer": "Around 60-65°F (15-18°C)",
       "incorrect_answers": [
-        "Room temperature (72\u00b0F)",
-        "Chilled (45\u00b0F)",
-        "Warm (80\u00b0F)"
+        "Room temperature (72°F)",
+        "Chilled (45°F)",
+        "Warm (80°F)"
       ],
       "difficulty": "hard"
     },

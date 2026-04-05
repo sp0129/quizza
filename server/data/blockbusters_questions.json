@@ -6,9 +6,9 @@
       "question": "Who played Jack in 'Titanic'?",
       "correct_answer": "Leonardo DiCaprio",
       "incorrect_answers": [
-        "Brad Pitt",
-        "Matt Damon",
-        "Tom Cruise"
+        "Johnny Depp",
+        "Matthew McConaughey",
+        "Christian Bale"
       ],
       "difficulty": "easy"
     },
@@ -214,7 +214,7 @@
     },
     {
       "question": "'I'll be back' is a famous line from which movie?",
-      "correct_answer": "The Terminator",
+      "correct_answer": "Terminator",
       "incorrect_answers": [
         "Die Hard",
         "Predator",
@@ -434,11 +434,11 @@
     },
     {
       "question": "In 'Frozen', what power does Elsa have?",
-      "correct_answer": "Ice and snow powers",
+      "correct_answer": "Ice",
       "incorrect_answers": [
-        "Fire powers",
+        "Fire",
         "Flying",
-        "Super strength"
+        "Strength"
       ],
       "difficulty": "easy"
     },
@@ -454,11 +454,11 @@
     },
     {
       "question": "In 'The Wizard of Oz', what does Dorothy want to find?",
-      "correct_answer": "A way back home to Kansas",
+      "correct_answer": "Return to Kansas",
       "incorrect_answers": [
-        "A pot of gold",
-        "The Emerald City forever",
-        "The Wizard's powers"
+        "Pot of gold",
+        "Emerald City",
+        "Wizard's power"
       ],
       "difficulty": "easy"
     },
@@ -484,9 +484,9 @@
     },
     {
       "question": "What school do the characters attend in 'Mean Girls'?",
-      "correct_answer": "North Shore High School",
+      "correct_answer": "North Shore High",
       "incorrect_answers": [
-        "West Beverly High",
+        "West Beverly",
         "Rydell High",
         "Shermer High"
       ],
@@ -526,9 +526,9 @@
       "question": "Who directed 'The Dark Knight' trilogy?",
       "correct_answer": "Christopher Nolan",
       "incorrect_answers": [
-        "Zack Snyder",
-        "Tim Burton",
-        "Matt Reeves"
+        "Matthew Vaughn",
+        "Dennis Villeneuve",
+        "Christopher McQuarrie"
       ],
       "difficulty": "easy"
     },
@@ -614,21 +614,21 @@
     },
     {
       "question": "Which movie is the sequel to 'The Lion King'?",
-      "correct_answer": "The Lion King II: Simba's Pride",
+      "correct_answer": "Simba's Pride",
       "incorrect_answers": [
         "The Lion Guard",
-        "The Lion King 1\u00bd",
+        "Lion King 1½",
         "Simba's Return"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is the name of the prequel trilogy in Star Wars?",
-      "correct_answer": "Episodes I, II, III (The Phantom Menace, Attack of the Clones, Revenge of the Sith)",
+      "correct_answer": "Episodes I, II, III",
       "incorrect_answers": [
         "Episodes IV, V, VI",
-        "The Sequel Trilogy",
-        "The Anthology Series"
+        "Sequel Trilogy",
+        "Anthology Series"
       ],
       "difficulty": "easy"
     },
@@ -674,7 +674,7 @@
     },
     {
       "question": "Which movie won the most Oscars in history (11)?",
-      "correct_answer": "Titanic (tied with Ben-Hur and Lord of the Rings: Return of the King)",
+      "correct_answer": "Titanic",
       "incorrect_answers": [
         "Avatar",
         "The Godfather",
@@ -684,7 +684,7 @@
     },
     {
       "question": "Who has won the most Best Actress Oscars?",
-      "correct_answer": "Katharine Hepburn (4 wins)",
+      "correct_answer": "Katharine Hepburn",
       "incorrect_answers": [
         "Meryl Streep",
         "Cate Blanchett",
@@ -694,7 +694,7 @@
     },
     {
       "question": "Which animated film won Best Picture at the Oscars?",
-      "correct_answer": "No fully animated film has won Best Picture",
+      "correct_answer": "None ever has",
       "incorrect_answers": [
         "Toy Story 3",
         "Up",
@@ -763,12 +763,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What movie did the 'Barbenheimer' meme refer to in 2023?",
-      "correct_answer": "Barbie and Oppenheimer releasing on the same day",
+      "question": "Barbenheimer refers to Barbie's joint 2023 release with which film?",
+      "correct_answer": "Oppenheimer",
       "incorrect_answers": [
-        "A real person named Barbenheimer",
-        "A new Pixar movie",
-        "A documentary"
+        "Dune Part Two",
+        "Asteroid City",
+        "Tenet"
       ],
       "difficulty": "easy"
     },
@@ -784,19 +784,19 @@
     },
     {
       "question": "What is 'Everything Everywhere All at Once' about?",
-      "correct_answer": "A woman who discovers she can access parallel universes",
+      "correct_answer": "Parallel universes",
       "incorrect_answers": [
         "Time travel",
         "Alien invasion",
-        "A heist across dimensions"
+        "Dimension heist"
       ],
       "difficulty": "easy"
     },
     {
       "question": "Which movie introduced the character of Baby Yoda (Grogu)?",
-      "correct_answer": "The Mandalorian (TV series, not a movie)",
+      "correct_answer": "The Mandalorian",
       "incorrect_answers": [
-        "Star Wars: The Rise of Skywalker",
+        "Rise of Skywalker",
         "Rogue One",
         "Solo"
       ],
@@ -844,11 +844,11 @@
     },
     {
       "question": "What 1977 movie started the Star Wars franchise?",
-      "correct_answer": "Star Wars: Episode IV \u2014 A New Hope",
+      "correct_answer": "A New Hope",
       "incorrect_answers": [
-        "The Empire Strikes Back",
+        "Empire Strikes Back",
         "Return of the Jedi",
-        "The Phantom Menace"
+        "Phantom Menace"
       ],
       "difficulty": "easy"
     },
@@ -914,7 +914,7 @@
     },
     {
       "question": "Which actor has appeared in the most Marvel Cinematic Universe films?",
-      "correct_answer": "Robert Downey Jr. (or Samuel L. Jackson)",
+      "correct_answer": "Robert Downey Jr.",
       "incorrect_answers": [
         "Chris Evans",
         "Chris Hemsworth",
@@ -1154,7 +1154,7 @@
     },
     {
       "question": "Which movie franchise has grossed the most total worldwide?",
-      "correct_answer": "Marvel Cinematic Universe",
+      "correct_answer": "Marvel MCU",
       "incorrect_answers": [
         "Star Wars",
         "Harry Potter",
@@ -1174,11 +1174,11 @@
     },
     {
       "question": "In 'The Hangover', where do the characters wake up after their wild night?",
-      "correct_answer": "A hotel room in Las Vegas",
+      "correct_answer": "Las Vegas hotel",
       "incorrect_answers": [
-        "A beach in Mexico",
-        "A hospital",
-        "A police station"
+        "Mexican beach",
+        "Hospital",
+        "Police station"
       ],
       "difficulty": "easy"
     },
@@ -1313,12 +1313,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What 2014 movie features a raccoon and a tree as heroes?",
-      "correct_answer": "Guardians of the Galaxy",
+      "question": "Rocket and Groot are heroes in which 2014 Marvel film?",
+      "correct_answer": "Guardians",
       "incorrect_answers": [
-        "The Avengers",
+        "Avengers",
         "Thor",
-        "Ant-Man"
+        "Doctor Strange"
       ],
       "difficulty": "easy"
     },
@@ -1354,11 +1354,11 @@
     },
     {
       "question": "In 'The Truman Show', what is Truman unaware of?",
-      "correct_answer": "His entire life is a TV show",
+      "correct_answer": "It's a TV show",
       "incorrect_answers": [
         "He's adopted",
         "He's an alien",
-        "He's in a simulation"
+        "He's in a coma"
       ],
       "difficulty": "easy"
     },
@@ -1434,11 +1434,11 @@
     },
     {
       "question": "In 'Ghostbusters', what do they say when they catch a ghost?",
-      "correct_answer": "Who you gonna call? Ghostbusters!",
+      "correct_answer": "Who you gonna call?",
       "incorrect_answers": [
-        "Ghost caught!",
-        "Spirit contained!",
-        "Phantom secured!"
+        "Ghost caught, folks!",
+        "Spirit contained now!",
+        "Phantom secured, out!"
       ],
       "difficulty": "easy"
     },
@@ -1464,17 +1464,17 @@
     },
     {
       "question": "What 2016 movie features Disney princesses meeting online?",
-      "correct_answer": "Ralph Breaks the Internet",
+      "correct_answer": "Ralph Breaks Internet",
       "incorrect_answers": [
         "Wreck-It Ralph",
-        "Emoji Movie",
+        "The Emoji Movie",
         "Ready Player One"
       ],
       "difficulty": "easy"
     },
     {
       "question": "In 'Interstellar', what are the astronauts looking for?",
-      "correct_answer": "A new habitable planet for humanity",
+      "correct_answer": "Habitable planet",
       "incorrect_answers": [
         "Alien life",
         "A black hole",
@@ -1514,7 +1514,7 @@
     },
     {
       "question": "What movie franchise is about a hobbit named Frodo?",
-      "correct_answer": "The Lord of the Rings",
+      "correct_answer": "Lord of the Rings",
       "incorrect_answers": [
         "The Hobbit",
         "Chronicles of Narnia",
@@ -1564,7 +1564,7 @@
     },
     {
       "question": "Who played Willy Wonka in the 2023 movie 'Wonka'?",
-      "correct_answer": "Timoth\u00e9e Chalamet",
+      "correct_answer": "Timothée Chalamet",
       "incorrect_answers": [
         "Tom Holland",
         "Robert Pattinson",
@@ -1574,11 +1574,11 @@
     },
     {
       "question": "In 'A Quiet Place', what kills you if you make noise?",
-      "correct_answer": "Aliens/creatures that hunt by sound",
+      "correct_answer": "Aliens",
       "incorrect_answers": [
         "Ghosts",
         "Zombies",
-        "Government drones"
+        "Demons"
       ],
       "difficulty": "easy"
     },
@@ -1694,10 +1694,10 @@
     },
     {
       "question": "In 'Moana', what does Moana need to restore?",
-      "correct_answer": "The heart of Te Fiti",
+      "correct_answer": "Heart of Te Fiti",
       "incorrect_answers": [
-        "Her father's throne",
-        "The ocean's magic",
+        "Father's throne",
+        "Ocean's magic",
         "A stolen gem"
       ],
       "difficulty": "easy"
@@ -1734,11 +1734,11 @@
     },
     {
       "question": "What is 'Knives Out' about?",
-      "correct_answer": "A murder mystery in a wealthy family's estate",
+      "correct_answer": "A murder mystery",
       "incorrect_answers": [
-        "A cooking competition",
-        "A spy thriller",
-        "A horror movie"
+        "Cooking competition",
+        "Spy thriller",
+        "Horror film"
       ],
       "difficulty": "easy"
     },
@@ -1786,7 +1786,7 @@
       "question": "What 2006 movie features Sacha Baron Cohen as a Kazakh journalist?",
       "correct_answer": "Borat",
       "incorrect_answers": [
-        "Br\u00fcno",
+        "Brüno",
         "The Dictator",
         "Ali G Indahouse"
       ],
@@ -1806,9 +1806,9 @@
       "question": "Who plays Doctor Strange in the MCU?",
       "correct_answer": "Benedict Cumberbatch",
       "incorrect_answers": [
-        "Tom Hiddleston",
-        "Oscar Isaac",
-        "Jeremy Renner"
+        "Eddie Redmayne",
+        "Matthew McConaughey",
+        "Joaquin Phoenix"
       ],
       "difficulty": "easy"
     },
@@ -1824,11 +1824,11 @@
     },
     {
       "question": "Who directed 'The Revenant'?",
-      "correct_answer": "Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu",
+      "correct_answer": "Iñárritu",
       "incorrect_answers": [
-        "Martin Scorsese",
-        "Ridley Scott",
-        "David Fincher"
+        "Scorsese",
+        "Scott",
+        "Fincher"
       ],
       "difficulty": "easy"
     },
@@ -1893,7 +1893,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "Which 2021 movie features Timoth\u00e9e Chalamet on a desert planet?",
+      "question": "Which 2021 movie features Timothée Chalamet on a desert planet?",
       "correct_answer": "Dune",
       "incorrect_answers": [
         "The Martian",
@@ -1904,7 +1904,7 @@
     },
     {
       "question": "In 'Monsters, Inc.', what powers the city?",
-      "correct_answer": "Children's screams (later laughter)",
+      "correct_answer": "Children's screams",
       "incorrect_answers": [
         "Electricity",
         "Magic crystals",
@@ -1934,7 +1934,7 @@
     },
     {
       "question": "What movie features the quote 'I am Groot'?",
-      "correct_answer": "Guardians of the Galaxy",
+      "correct_answer": "Guardians",
       "incorrect_answers": [
         "Avatar",
         "Thor",
@@ -1964,7 +1964,7 @@
     },
     {
       "question": "What is the first 'Pirates of the Caribbean' movie called?",
-      "correct_answer": "The Curse of the Black Pearl",
+      "correct_answer": "Black Pearl curse",
       "incorrect_answers": [
         "Dead Man's Chest",
         "At World's End",
@@ -1978,7 +1978,7 @@
       "incorrect_answers": [
         "Taron Egerton",
         "Austin Butler",
-        "Timoth\u00e9e Chalamet"
+        "Timothée Chalamet"
       ],
       "difficulty": "easy"
     },
@@ -2064,7 +2064,7 @@
     },
     {
       "question": "In 'Pulp Fiction', what does Marcellus Wallace's briefcase glow?",
-      "correct_answer": "Gold/orange light \u2014 its contents are never revealed",
+      "correct_answer": "Gold light",
       "incorrect_answers": [
         "Diamonds",
         "A soul",
@@ -2074,11 +2074,11 @@
     },
     {
       "question": "What is the twist ending of 'Fight Club'?",
-      "correct_answer": "The narrator and Tyler Durden are the same person",
+      "correct_answer": "Tyler is the narrator",
       "incorrect_answers": [
-        "Tyler dies in the explosion",
-        "Marla is imaginary",
-        "It was all a dream"
+        "Tyler dies",
+        "Marla is imagined",
+        "It's a dream"
       ],
       "difficulty": "medium"
     },
@@ -2104,11 +2104,11 @@
     },
     {
       "question": "In 'Inception', what object does Cobb use to test if he's dreaming?",
-      "correct_answer": "A spinning top",
+      "correct_answer": "Spinning top",
       "incorrect_answers": [
-        "A coin",
-        "A watch",
-        "A dice"
+        "Silver coin",
+        "Gold watch",
+        "Red dice"
       ],
       "difficulty": "medium"
     },
@@ -2174,11 +2174,11 @@
     },
     {
       "question": "In 'Gladiator', what is Maximus's full name?",
-      "correct_answer": "Maximus Decimus Meridius",
+      "correct_answer": "Decimus Meridius",
       "incorrect_answers": [
-        "Maximus Aurelius",
-        "Maximus Spartacus",
-        "Maximus Tiberius"
+        "Marcus Aurelius",
+        "Gaius Tiberius",
+        "Lucius Valerius"
       ],
       "difficulty": "medium"
     },
@@ -2194,11 +2194,11 @@
     },
     {
       "question": "What real event is 'Dunkirk' based on?",
-      "correct_answer": "The evacuation of Allied soldiers from Dunkirk beach in WWII",
+      "correct_answer": "WWII Allied evacuation",
       "incorrect_answers": [
-        "The D-Day invasion",
-        "The Battle of Britain",
-        "The fall of Berlin"
+        "D-Day invasion",
+        "Battle of Britain",
+        "Fall of Berlin"
       ],
       "difficulty": "medium"
     },
@@ -2244,11 +2244,11 @@
     },
     {
       "question": "What movie won Best Picture the same year 'Saving Private Ryan' lost?",
-      "correct_answer": "Shakespeare in Love (1999 ceremony)",
+      "correct_answer": "Shakespeare in Love",
       "incorrect_answers": [
         "Titanic",
         "American Beauty",
-        "The English Patient"
+        "English Patient"
       ],
       "difficulty": "medium"
     },
@@ -2284,11 +2284,11 @@
     },
     {
       "question": "In 'Shutter Island', what twist is revealed at the end?",
-      "correct_answer": "Teddy Daniels is actually a patient at the asylum",
+      "correct_answer": "Teddy is a patient",
       "incorrect_answers": [
-        "The island is imaginary",
-        "His partner is the killer",
-        "He's been dead the whole time"
+        "Island is imagined",
+        "Partner is killer",
+        "He is dead"
       ],
       "difficulty": "medium"
     },
@@ -2337,16 +2337,16 @@
       "correct_answer": "Christoph Waltz",
       "incorrect_answers": [
         "Michael Fassbender",
-        "Daniel Br\u00fchl",
+        "Daniel Brühl",
         "Til Schweiger"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is the twist in 'The Usual Suspects'?",
-      "correct_answer": "Verbal Kint is Keyser S\u00f6ze",
+      "correct_answer": "Verbal Kint is Keyser Söze",
       "incorrect_answers": [
-        "Keyser S\u00f6ze doesn't exist",
+        "Keyser Söze doesn't exist",
         "The detective is the villain",
         "It was all a dream"
       ],
@@ -2364,7 +2364,7 @@
     },
     {
       "question": "Which actor has played both The Joker and a Roman emperor on screen?",
-      "correct_answer": "Joaquin Phoenix (Joker and Commodus in Gladiator)",
+      "correct_answer": "Joaquin Phoenix",
       "incorrect_answers": [
         "Heath Ledger",
         "Jack Nicholson",
@@ -2384,11 +2384,11 @@
     },
     {
       "question": "In 'No Country for Old Men', what weapon does Anton Chigurh use?",
-      "correct_answer": "A captive bolt pistol (cattle gun)",
+      "correct_answer": "Captive bolt pistol",
       "incorrect_answers": [
-        "A silenced pistol",
-        "A shotgun",
-        "A knife"
+        "Silenced pistol",
+        "Shotgun",
+        "Hunting knife"
       ],
       "difficulty": "medium"
     },
@@ -2444,11 +2444,11 @@
     },
     {
       "question": "What is the twist in 'Planet of the Apes' (1968)?",
-      "correct_answer": "The planet is actually Earth in the future",
+      "correct_answer": "Earth in the future",
       "incorrect_answers": [
-        "The apes are robots",
-        "It's all a simulation",
-        "The humans created the apes"
+        "Apes are robots",
+        "It's a simulation",
+        "Humans made apes"
       ],
       "difficulty": "medium"
     },
@@ -2484,10 +2484,10 @@
     },
     {
       "question": "In 'Memento', what condition does the main character have?",
-      "correct_answer": "Short-term memory loss (anterograde amnesia)",
+      "correct_answer": "Short-term memory loss",
       "incorrect_answers": [
         "Blindness",
-        "Multiple personality disorder",
+        "Split personality",
         "Sleepwalking"
       ],
       "difficulty": "medium"
@@ -2563,18 +2563,18 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the chronological order of the Star Wars prequel trilogy?",
-      "correct_answer": "The Phantom Menace, Attack of the Clones, Revenge of the Sith",
+      "question": "Which Star Wars prequel comes FIRST chronologically?",
+      "correct_answer": "The Phantom Menace",
       "incorrect_answers": [
-        "Attack of the Clones, The Phantom Menace, Revenge of the Sith",
-        "Revenge of the Sith, The Phantom Menace, Attack of the Clones",
-        "The Phantom Menace, Revenge of the Sith, Attack of the Clones"
+        "Attack of the Clones",
+        "Revenge of the Sith",
+        "Return of the Jedi"
       ],
       "difficulty": "medium"
     },
     {
       "question": "Who plays Pennywise in the 2017 version of 'It'?",
-      "correct_answer": "Bill Skarsg\u00e5rd",
+      "correct_answer": "Bill Skarsgård",
       "incorrect_answers": [
         "Tim Curry",
         "Robert Englund",
@@ -2724,7 +2724,7 @@
     },
     {
       "question": "In 'Schindler's List', what does Oskar Schindler's factory produce?",
-      "correct_answer": "Enamelware (pots and pans)",
+      "correct_answer": "Enamelware",
       "incorrect_answers": [
         "Weapons",
         "Uniforms",
@@ -2734,7 +2734,7 @@
     },
     {
       "question": "Who played M in the Daniel Craig James Bond films?",
-      "correct_answer": "Judi Dench (and later Ralph Fiennes)",
+      "correct_answer": "Judi Dench",
       "incorrect_answers": [
         "Helen Mirren",
         "Maggie Smith",
@@ -2754,11 +2754,11 @@
     },
     {
       "question": "In 'Catch Me If You Can', who does Leonardo DiCaprio impersonate?",
-      "correct_answer": "A pilot, doctor, and lawyer (Frank Abagnale Jr.)",
+      "correct_answer": "Pilot and doctor",
       "incorrect_answers": [
-        "A spy",
-        "A president",
-        "A celebrity"
+        "Secret spy",
+        "US president",
+        "Music celebrity"
       ],
       "difficulty": "medium"
     },
@@ -2766,9 +2766,9 @@
       "question": "What animated movie features the line 'Ohana means family'?",
       "correct_answer": "Lilo & Stitch",
       "incorrect_answers": [
-        "Moana",
-        "Coco",
-        "Encanto"
+        "Moana waves",
+        "Coco music",
+        "Encanto magic"
       ],
       "difficulty": "medium"
     },
@@ -2784,7 +2784,7 @@
     },
     {
       "question": "What is the highest-grossing film directed by a woman?",
-      "correct_answer": "Frozen II (Jennifer Lee) or Barbie (Greta Gerwig)",
+      "correct_answer": "Barbie",
       "incorrect_answers": [
         "Wonder Woman",
         "Captain Marvel",
@@ -2793,12 +2793,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "In 'Se7en', what are the seven sins the killer uses?",
-      "correct_answer": "Gluttony, greed, sloth, lust, pride, envy, wrath",
+      "question": "How many deadly sins does the killer in 'Se7en' use?",
+      "correct_answer": "Seven",
       "incorrect_answers": [
-        "Lying, stealing, cheating, killing, jealousy, anger, hate",
-        "7 random crimes",
-        "7 deadly animals"
+        "Five",
+        "Eight",
+        "Ten"
       ],
       "difficulty": "medium"
     },
@@ -2894,17 +2894,17 @@
     },
     {
       "question": "What animated film was the first to be nominated for Best Picture at the Oscars?",
-      "correct_answer": "Beauty and the Beast (1991)",
+      "correct_answer": "Beauty Beast",
       "incorrect_answers": [
+        "Aladdin",
         "Toy Story",
-        "The Lion King",
-        "Up"
+        "Shrek"
       ],
       "difficulty": "medium"
     },
     {
       "question": "In 'Zodiac', what real-life case is the movie about?",
-      "correct_answer": "The Zodiac Killer in San Francisco",
+      "correct_answer": "Zodiac Killer",
       "incorrect_answers": [
         "Jack the Ripper",
         "The Unabomber",
@@ -2964,7 +2964,7 @@
     },
     {
       "question": "In 'Eternal Sunshine of the Spotless Mind', what procedure do the characters undergo?",
-      "correct_answer": "Memory erasure of their relationship",
+      "correct_answer": "Memory erasure",
       "incorrect_answers": [
         "Time travel",
         "Dream manipulation",
@@ -2974,7 +2974,7 @@
     },
     {
       "question": "What is the name of the spaceship in 'Alien' franchise's sequel?",
-      "correct_answer": "Sulaco (in Aliens)",
+      "correct_answer": "Sulaco",
       "incorrect_answers": [
         "Nostromo",
         "Prometheus",
@@ -3014,7 +3014,7 @@
     },
     {
       "question": "Who was originally cast as the Terminator before Arnold Schwarzenegger?",
-      "correct_answer": "O.J. Simpson was considered",
+      "correct_answer": "O.J. Simpson",
       "incorrect_answers": [
         "Sylvester Stallone",
         "Kurt Russell",
@@ -3024,11 +3024,11 @@
     },
     {
       "question": "What is the only sequel to win Best Picture without the original winning?",
-      "correct_answer": "The Godfather Part II",
+      "correct_answer": "Godfather Part II",
       "incorrect_answers": [
-        "The Lord of the Rings: Return of the King",
-        "Aliens",
-        "The Dark Knight"
+        "Return of the King",
+        "Aliens sequel",
+        "Dark Knight Rises"
       ],
       "difficulty": "hard"
     },
@@ -3044,7 +3044,7 @@
     },
     {
       "question": "What actor has been nominated for the most Oscars without winning?",
-      "correct_answer": "Peter O'Toole (8 nominations)",
+      "correct_answer": "Peter O'Toole",
       "incorrect_answers": [
         "Leonardo DiCaprio",
         "Glenn Close",
@@ -3084,9 +3084,9 @@
     },
     {
       "question": "What is the longest movie to win Best Picture?",
-      "correct_answer": "Gone with the Wind (3 hours 58 minutes)",
+      "correct_answer": "Gone with the Wind",
       "incorrect_answers": [
-        "The Lord of the Rings: Return of the King",
+        "Return of the King",
         "Ben-Hur",
         "Lawrence of Arabia"
       ],
@@ -3094,11 +3094,11 @@
     },
     {
       "question": "In 'Citizen Kane', what is Rosebud?",
-      "correct_answer": "Charles Foster Kane's childhood sled",
+      "correct_answer": "Childhood sled",
       "incorrect_answers": [
-        "His mother's name",
-        "A secret love affair",
-        "His first newspaper"
+        "Mother's name",
+        "Love affair",
+        "First newspaper"
       ],
       "difficulty": "hard"
     },
@@ -3114,7 +3114,7 @@
     },
     {
       "question": "Who was the first Black woman to win Best Actress at the Oscars?",
-      "correct_answer": "Halle Berry (Monster's Ball, 2002)",
+      "correct_answer": "Halle Berry",
       "incorrect_answers": [
         "Whoopi Goldberg",
         "Viola Davis",
@@ -3124,9 +3124,9 @@
     },
     {
       "question": "What is the name of the technique used to age/de-age actors digitally in Marvel films?",
-      "correct_answer": "Digital de-aging (using visual effects and machine learning)",
+      "correct_answer": "Digital de-aging",
       "incorrect_answers": [
-        "Practical makeup only",
+        "Practical makeup",
         "Body doubles",
         "Stop-motion compositing"
       ],
@@ -3164,9 +3164,9 @@
     },
     {
       "question": "What is the MacGuffin in 'Pulp Fiction'?",
-      "correct_answer": "The briefcase (its contents are never revealed)",
+      "correct_answer": "The briefcase",
       "incorrect_answers": [
-        "Marsellus Wallace's soul",
+        "Wallace's soul",
         "A golden watch",
         "Diamonds"
       ],
@@ -3184,7 +3184,7 @@
     },
     {
       "question": "What is the name of the cinematography technique where the camera zooms in while dollying out?",
-      "correct_answer": "Dolly zoom (or Vertigo effect)",
+      "correct_answer": "Dolly zoom",
       "incorrect_answers": [
         "Hitchcock pan",
         "Kubrick stare",
@@ -3214,7 +3214,7 @@
     },
     {
       "question": "Which director holds the record for most Best Director Oscar nominations?",
-      "correct_answer": "William Wyler (12 nominations)",
+      "correct_answer": "William Wyler",
       "incorrect_answers": [
         "Steven Spielberg",
         "Martin Scorsese",
@@ -3234,27 +3234,27 @@
     },
     {
       "question": "In '2001: A Space Odyssey', what famous classical piece plays during the opening?",
-      "correct_answer": "Also sprach Zarathustra by Richard Strauss",
+      "correct_answer": "Also sprach Zarathustra",
       "incorrect_answers": [
-        "Moonlight Sonata by Beethoven",
-        "Ride of the Valkyries by Wagner",
-        "The Planets by Holst"
+        "Moonlight Sonata",
+        "Ride of the Valkyries",
+        "The Planets"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the only horror film to win the Best Picture Oscar?",
-      "correct_answer": "The Silence of the Lambs (1992)",
+      "correct_answer": "Silence of Lambs",
       "incorrect_answers": [
         "The Exorcist",
-        "Get Out",
-        "Parasite"
+        "Get Out now",
+        "Parasite 2019"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Who was the youngest person to win Best Director at the Oscars?",
-      "correct_answer": "Damien Chazelle (age 32 for La La Land)",
+      "correct_answer": "Damien Chazelle",
       "incorrect_answers": [
         "Steven Spielberg",
         "Orson Welles",
@@ -3264,7 +3264,7 @@
     },
     {
       "question": "What is the name of the editing technique that cuts between two different scenes happening simultaneously?",
-      "correct_answer": "Cross-cutting (or parallel editing)",
+      "correct_answer": "Cross-cutting",
       "incorrect_answers": [
         "Jump cut",
         "Montage",
@@ -3304,7 +3304,7 @@
     },
     {
       "question": "What is the longest single take in a major Hollywood movie?",
-      "correct_answer": "1917 (appears as one continuous shot using hidden cuts)",
+      "correct_answer": "1917",
       "incorrect_answers": [
         "Birdman",
         "Rope",
@@ -3324,7 +3324,7 @@
     },
     {
       "question": "What Akira Kurosawa film inspired 'Star Wars'?",
-      "correct_answer": "The Hidden Fortress",
+      "correct_answer": "Hidden Fortress",
       "incorrect_answers": [
         "Seven Samurai",
         "Rashomon",
@@ -3334,11 +3334,11 @@
     },
     {
       "question": "What film technique did 'Birdman' use to appear as one continuous shot?",
-      "correct_answer": "Long takes stitched together with hidden cuts (digital and practical)",
+      "correct_answer": "Hidden cuts",
       "incorrect_answers": [
-        "It was actually one take",
-        "Stop-motion compositing",
-        "Time-lapse photography"
+        "Single take",
+        "Stop-motion",
+        "Time-lapse"
       ],
       "difficulty": "hard"
     },
@@ -3354,7 +3354,7 @@
     },
     {
       "question": "What was the budget of the original 'Mad Max' (1979)?",
-      "correct_answer": "Around $400,000 (AUD)",
+      "correct_answer": "$400,000 AUD",
       "incorrect_answers": [
         "$5 million",
         "$20 million",
@@ -3384,7 +3384,7 @@
     },
     {
       "question": "In 'The Prestige', what science fiction element is revealed at the end?",
-      "correct_answer": "Nikola Tesla's cloning machine",
+      "correct_answer": "Cloning machine",
       "incorrect_answers": [
         "Time travel",
         "Teleportation",
@@ -3394,11 +3394,11 @@
     },
     {
       "question": "What is the Bechdel test?",
-      "correct_answer": "A test asking if a movie has two named women who talk to each other about something other than a man",
+      "correct_answer": "Women talking to women",
       "incorrect_answers": [
-        "A box office prediction formula",
-        "An audience satisfaction rating",
-        "A cinematography quality scale"
+        "Box office metric",
+        "Audience rating",
+        "Quality scale"
       ],
       "difficulty": "hard"
     },
@@ -3414,11 +3414,11 @@
     },
     {
       "question": "Who was the first actor to refuse an Academy Award?",
-      "correct_answer": "George C. Scott (for Patton, 1971)",
+      "correct_answer": "George C. Scott",
       "incorrect_answers": [
         "Marlon Brando",
         "Woody Allen",
-        "Katherine Hepburn"
+        "Katharine Hepburn"
       ],
       "difficulty": "hard"
     },
@@ -3434,17 +3434,17 @@
     },
     {
       "question": "In 'Eyes Wide Shut', what was unique about the production timeline?",
-      "correct_answer": "It holds the Guinness record for the longest continuous film shoot (400 days)",
+      "correct_answer": "Longest film shoot",
       "incorrect_answers": [
-        "It was filmed in one take",
-        "It was shot entirely at night",
-        "No scripts were used"
+        "One-take film",
+        "All-night shoot",
+        "No script used"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What movie's marketing campaign included the fake missing persons posters for its cast?",
-      "correct_answer": "The Blair Witch Project",
+      "correct_answer": "Blair Witch Project",
       "incorrect_answers": [
         "Paranormal Activity",
         "Cloverfield",
@@ -3454,7 +3454,7 @@
     },
     {
       "question": "Which actor has the most Best Actor Oscar wins?",
-      "correct_answer": "Daniel Day-Lewis (3 wins)",
+      "correct_answer": "Daniel Day-Lewis",
       "incorrect_answers": [
         "Jack Nicholson",
         "Tom Hanks",
@@ -3464,7 +3464,7 @@
     },
     {
       "question": "What movie coined the term 'blockbuster'?",
-      "correct_answer": "Jaws (1975) is widely credited with creating the summer blockbuster concept",
+      "correct_answer": "Jaws",
       "incorrect_answers": [
         "Star Wars",
         "The Godfather",
@@ -3474,11 +3474,11 @@
     },
     {
       "question": "What is the 'Wilhelm scream'?",
-      "correct_answer": "A stock sound effect scream used in hundreds of movies since 1951",
+      "correct_answer": "A stock scream",
       "incorrect_answers": [
-        "A specific acting technique",
-        "A type of camera angle",
-        "A horror movie trope"
+        "Acting technique",
+        "Camera angle",
+        "Horror trope"
       ],
       "difficulty": "hard"
     },
@@ -3494,7 +3494,7 @@
     },
     {
       "question": "What film was shot entirely in a single apartment?",
-      "correct_answer": "Rope (1948) by Alfred Hitchcock",
+      "correct_answer": "Rope",
       "incorrect_answers": [
         "12 Angry Men",
         "Rear Window",
@@ -3504,57 +3504,57 @@
     },
     {
       "question": "Who holds the record for most appearances as the same character in movies?",
-      "correct_answer": "Samuel L. Jackson as Nick Fury (11+ MCU appearances)",
+      "correct_answer": "Samuel L. Jackson",
       "incorrect_answers": [
-        "Robert Downey Jr. as Iron Man",
-        "Hugh Jackman as Wolverine",
-        "Sean Connery as James Bond"
+        "Robert Downey Jr.",
+        "Hugh Jackman",
+        "Sean Connery"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What movie pioneered the use of motion capture for a main character?",
-      "correct_answer": "The Lord of the Rings: The Two Towers (Gollum)",
+      "correct_answer": "The Two Towers",
       "incorrect_answers": [
         "Avatar",
-        "The Polar Express",
-        "King Kong (2005)"
+        "Polar Express",
+        "King Kong 2005"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the most expensive movie ever made (adjusted for inflation)?",
-      "correct_answer": "Pirates of the Caribbean: On Stranger Tides (~$379M)",
+      "correct_answer": "Pirates 4",
       "incorrect_answers": [
         "Avatar",
-        "Avengers: Endgame",
+        "Endgame",
         "Titanic"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is a 'foley artist' in filmmaking?",
-      "correct_answer": "A person who creates everyday sound effects for movies (footsteps, doors, etc.)",
+      "correct_answer": "Sound effects",
       "incorrect_answers": [
-        "A stunt coordinator",
-        "A special effects designer",
-        "A dialect coach"
+        "Stunt coordinator",
+        "VFX designer",
+        "Dialect coach"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the Kuleshov effect?",
-      "correct_answer": "A film editing effect where viewers derive meaning from the juxtaposition of two shots",
+      "correct_answer": "Editing juxtaposition",
       "incorrect_answers": [
-        "A camera lens distortion",
-        "A lighting technique",
-        "A sound design method"
+        "Lens distortion",
+        "Lighting technique",
+        "Sound design"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Which movie features the longest fight scene in cinema history?",
-      "correct_answer": "They Live (1988) \u2014 a 5+ minute alley fight",
+      "correct_answer": "They Live",
       "incorrect_answers": [
         "Kill Bill Vol. 1",
         "The Raid",
@@ -3564,7 +3564,7 @@
     },
     {
       "question": "What was the first movie streamed on Netflix?",
-      "correct_answer": "Netflix started streaming in 2007; their first original film was 'Beasts of No Nation' (2015)",
+      "correct_answer": "Beasts of No Nation",
       "incorrect_answers": [
         "House of Cards",
         "The Irishman",
@@ -3584,57 +3584,57 @@
     },
     {
       "question": "What is the term for the final shot of a movie before the credits roll?",
-      "correct_answer": "The closing shot (or final frame)",
+      "correct_answer": "Closing shot",
       "incorrect_answers": [
-        "The stinger",
-        "The denouement shot",
-        "The cutaway"
+        "Stinger",
+        "Denouement",
+        "Cutaway"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Who was the first person of Asian descent to win Best Director at the Oscars?",
-      "correct_answer": "Ang Lee (Brokeback Mountain, 2006)",
+      "correct_answer": "Ang Lee",
       "incorrect_answers": [
         "Bong Joon-ho",
-        "Chlo\u00e9 Zhao",
+        "Chloé Zhao",
         "Hayao Miyazaki"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What Martin Scorsese movie holds the record for most uses of the F-word?",
-      "correct_answer": "The Wolf of Wall Street (569 times)",
+      "correct_answer": "Wolf of Wall St",
       "incorrect_answers": [
-        "Goodfellas",
-        "Casino",
+        "Goodfellas Pt 2",
+        "Casino royale",
         "The Departed"
       ],
       "difficulty": "hard"
     },
     {
       "question": "In the original script of 'Pretty Woman', how did the movie end?",
-      "correct_answer": "Vivian is left on the street \u2014 it was a dark drama, not a rom-com",
+      "correct_answer": "Dark drama ending",
       "incorrect_answers": [
-        "She marries Edward immediately",
-        "She becomes a businesswoman",
+        "She marries Edward",
+        "Becomes a mogul",
         "Edward dies"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the 180-degree rule in filmmaking?",
-      "correct_answer": "A guideline that keeps two characters in a scene on the same side of an imaginary axis",
+      "correct_answer": "Same-side axis rule",
       "incorrect_answers": [
-        "The camera must rotate 180 degrees per scene",
-        "Actors must face the camera at all times",
-        "Lighting must come from one direction"
+        "Camera rotation rule",
+        "Face camera rule",
+        "Single-light rule"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What film inspired the term 'gaslighting'?",
-      "correct_answer": "Gaslight (1944)",
+      "correct_answer": "Gaslight",
       "incorrect_answers": [
         "Psycho",
         "Vertigo",
@@ -3654,11 +3654,11 @@
     },
     {
       "question": "What is the 'Spielberg Face'?",
-      "correct_answer": "A shot of a character staring in wide-eyed wonder, often lit from below",
+      "correct_answer": "Wide-eyed wonder shot",
       "incorrect_answers": [
-        "A close-up on a villain",
-        "A reaction shot during an explosion",
-        "A lens flare technique"
+        "Villain close-up",
+        "Explosion reaction",
+        "Lens flare"
       ],
       "difficulty": "hard"
     },
@@ -3673,12 +3673,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is a 'stinger' or 'post-credits scene' \u2014 and which franchise popularized them?",
-      "correct_answer": "A scene after the credits \u2014 popularized by the MCU (first in Iron Man 2008)",
+      "question": "What is a 'stinger' or 'post-credits scene' — and which franchise popularized them?",
+      "correct_answer": "Marvel MCU",
       "incorrect_answers": [
-        "Invented by Pixar",
-        "Started with James Bond",
-        "Created by Christopher Nolan"
+        "Pixar originals",
+        "James Bond",
+        "Nolan films"
       ],
       "difficulty": "hard"
     }
