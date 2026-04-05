@@ -164,7 +164,7 @@
     },
     {
       "question": "What does 'FAQ' stand for?",
-      "correct_answer": "Frequently Asked Questions",
+      "correct_answer": "Frequently Asked Qs",
       "incorrect_answers": [
         "First Aid Quick",
         "Fast Answers Quickly",
@@ -444,7 +444,7 @@
     },
     {
       "question": "What color is the 'M' in McDonald's logo?",
-      "correct_answer": "Yellow (Golden)",
+      "correct_answer": "Yellow",
       "incorrect_answers": [
         "Red",
         "White",
@@ -594,7 +594,7 @@
     },
     {
       "question": "What legendary creature is said to live in Loch Ness?",
-      "correct_answer": "Nessie (Loch Ness Monster)",
+      "correct_answer": "Nessie",
       "incorrect_answers": [
         "Bigfoot",
         "Yeti",
@@ -664,7 +664,7 @@
     },
     {
       "question": "What is the most visited theme park in the world?",
-      "correct_answer": "Magic Kingdom (Walt Disney World)",
+      "correct_answer": "Magic Kingdom",
       "incorrect_answers": [
         "Disneyland",
         "Universal Studios",
@@ -904,7 +904,7 @@
     },
     {
       "question": "What does the Richter scale measure?",
-      "correct_answer": "Earthquake magnitude",
+      "correct_answer": "Earthquakes",
       "incorrect_answers": [
         "Wind speed",
         "Temperature",
@@ -1084,7 +1084,7 @@
     },
     {
       "question": "What famous civil rights leader gave the 'I Have a Dream' speech?",
-      "correct_answer": "Martin Luther King Jr.",
+      "correct_answer": "MLK Jr.",
       "incorrect_answers": [
         "Malcolm X",
         "Rosa Parks",
@@ -1114,11 +1114,11 @@
     },
     {
       "question": "What major event happened on September 11, 2001?",
-      "correct_answer": "Terrorist attacks on the World Trade Center and Pentagon",
+      "correct_answer": "WTC/Pentagon attacks",
       "incorrect_answers": [
         "Hurricane Katrina",
-        "The Iraq War began",
-        "The dot-com bubble burst"
+        "Iraq War",
+        "Dot-com crash"
       ],
       "difficulty": "easy"
     },
@@ -1234,7 +1234,7 @@
     },
     {
       "question": "What is the name of the longest wall ever built?",
-      "correct_answer": "The Great Wall of China",
+      "correct_answer": "Great Wall",
       "incorrect_answers": [
         "Hadrian's Wall",
         "Berlin Wall",
@@ -1264,7 +1264,7 @@
     },
     {
       "question": "What color are the stars on the European Union flag?",
-      "correct_answer": "Gold (Yellow)",
+      "correct_answer": "Gold",
       "incorrect_answers": [
         "White",
         "Silver",
@@ -1304,7 +1304,7 @@
     },
     {
       "question": "What is the longest running Broadway musical?",
-      "correct_answer": "The Phantom of the Opera",
+      "correct_answer": "The Phantom",
       "incorrect_answers": [
         "Hamilton",
         "The Lion King",
@@ -2094,7 +2094,7 @@
     },
     {
       "question": "What gas do plants absorb from the atmosphere?",
-      "correct_answer": "Carbon dioxide",
+      "correct_answer": "CO₂",
       "incorrect_answers": [
         "Oxygen",
         "Nitrogen",
@@ -2224,7 +2224,7 @@
     },
     {
       "question": "What gas do humans exhale?",
-      "correct_answer": "Carbon dioxide",
+      "correct_answer": "CO₂",
       "incorrect_answers": [
         "Oxygen",
         "Nitrogen",
@@ -2334,7 +2334,7 @@
     },
     {
       "question": "What is the smallest bone in the human body?",
-      "correct_answer": "Stapes (stirrup bone)",
+      "correct_answer": "Stapes",
       "incorrect_answers": [
         "Femur",
         "Ulna",
@@ -2454,7 +2454,7 @@
     },
     {
       "question": "What gas makes soda fizzy?",
-      "correct_answer": "Carbon dioxide",
+      "correct_answer": "CO₂",
       "incorrect_answers": [
         "Oxygen",
         "Nitrogen",
@@ -2644,7 +2644,7 @@
     },
     {
       "question": "What is the most commonly broken bone in the human body?",
-      "correct_answer": "Collarbone (Clavicle)",
+      "correct_answer": "Collarbone",
       "incorrect_answers": [
         "Wrist",
         "Ankle",
@@ -2794,7 +2794,7 @@
     },
     {
       "question": "Which sport is known as 'the beautiful game'?",
-      "correct_answer": "Soccer (Football)",
+      "correct_answer": "Soccer",
       "incorrect_answers": [
         "Basketball",
         "Cricket",
@@ -2874,7 +2874,7 @@
     },
     {
       "question": "Which sport is Lionel Messi famous for?",
-      "correct_answer": "Soccer (Football)",
+      "correct_answer": "Football",
       "incorrect_answers": [
         "Tennis",
         "Basketball",
@@ -2884,7 +2884,7 @@
     },
     {
       "question": "What sport does Cristiano Ronaldo play?",
-      "correct_answer": "Soccer (Football)",
+      "correct_answer": "Football",
       "incorrect_answers": [
         "Basketball",
         "Tennis",
@@ -2934,7 +2934,7 @@
     },
     {
       "question": "What sport does Usain Bolt compete in?",
-      "correct_answer": "Sprinting (Track and Field)",
+      "correct_answer": "Sprinting",
       "incorrect_answers": [
         "Swimming",
         "Long jump",
@@ -3224,7 +3224,7 @@
     },
     {
       "question": "What color is the center of a target in archery?",
-      "correct_answer": "Gold (Yellow)",
+      "correct_answer": "Gold",
       "incorrect_answers": [
         "Red",
         "Black",
@@ -3366,15 +3366,15 @@
       "question": "Who played Jack in the movie Titanic?",
       "correct_answer": "Leonardo DiCaprio",
       "incorrect_answers": [
-        "Brad Pitt",
-        "Matt Damon",
-        "Tom Cruise"
+        "Johnny Depp",
+        "Matthew McConaughey",
+        "Christian Bale"
       ],
       "difficulty": "easy"
     },
     {
       "question": "Which movie features the quote 'I'll be back'?",
-      "correct_answer": "The Terminator",
+      "correct_answer": "Terminator",
       "incorrect_answers": [
         "Die Hard",
         "Predator",
@@ -3766,9 +3766,9 @@
       "question": "Who plays Eleven in Stranger Things?",
       "correct_answer": "Millie Bobby Brown",
       "incorrect_answers": [
-        "Sadie Sink",
-        "Natalia Dyer",
-        "Winona Ryder"
+        "Saoirse Ronan",
+        "Florence Pugh",
+        "Kaitlyn Dever"
       ],
       "difficulty": "easy"
     },
@@ -3876,9 +3876,9 @@
       "question": "What TV show follows a high school teacher who starts cooking meth?",
       "correct_answer": "Breaking Bad",
       "incorrect_answers": [
-        "Ozark",
-        "Narcos",
-        "Weeds"
+        "Better Call Saul",
+        "Narcos Mexico",
+        "Weeds Showtime"
       ],
       "difficulty": "easy"
     },
@@ -3984,7 +3984,7 @@
     },
     {
       "question": "Who sang 'Uptown Funk'?",
-      "correct_answer": "Bruno Mars (feat. Mark Ronson)",
+      "correct_answer": "Bruno Mars",
       "incorrect_answers": [
         "Justin Timberlake",
         "Pharrell Williams",
@@ -4264,7 +4264,7 @@
     },
     {
       "question": "Who released the hit 'Despacito'?",
-      "correct_answer": "Luis Fonsi (feat. Daddy Yankee)",
+      "correct_answer": "Luis Fonsi",
       "incorrect_answers": [
         "J Balvin",
         "Maluma",
@@ -4324,7 +4324,7 @@
     },
     {
       "question": "What type of music is Taylor Swift primarily known for?",
-      "correct_answer": "Pop and country",
+      "correct_answer": "Pop/country",
       "incorrect_answers": [
         "Rock",
         "R&B",
@@ -4494,7 +4494,7 @@
     },
     {
       "question": "What is the currency of the United Kingdom?",
-      "correct_answer": "Pound sterling",
+      "correct_answer": "Pound",
       "incorrect_answers": [
         "Euro",
         "Dollar",
@@ -4534,7 +4534,7 @@
     },
     {
       "question": "What is the currency of China?",
-      "correct_answer": "Yuan (Renminbi)",
+      "correct_answer": "Yuan",
       "incorrect_answers": [
         "Yen",
         "Won",
@@ -4694,7 +4694,7 @@
     },
     {
       "question": "What is the main ingredient in Japanese miso soup?",
-      "correct_answer": "Soybean paste",
+      "correct_answer": "Soybean",
       "incorrect_answers": [
         "Rice",
         "Seaweed",
@@ -4874,9 +4874,9 @@
     },
     {
       "question": "What is the traditional New Year dish in Spain involving grapes?",
-      "correct_answer": "Eating 12 grapes at midnight",
+      "correct_answer": "12 grapes",
       "incorrect_answers": [
-        "Grape wine toast",
+        "Wine toast",
         "Grape pie",
         "Grape salad"
       ],
@@ -4974,7 +4974,7 @@
     },
     {
       "question": "What is the most spoken language in the world by native speakers?",
-      "correct_answer": "Mandarin Chinese",
+      "correct_answer": "Mandarin",
       "incorrect_answers": [
         "English",
         "Spanish",
@@ -5414,7 +5414,7 @@
     },
     {
       "question": "What is the fastest bird in the world?",
-      "correct_answer": "Peregrine falcon",
+      "correct_answer": "Peregrine",
       "incorrect_answers": [
         "Eagle",
         "Hawk",
@@ -5517,8 +5517,8 @@
       "correct_answer": "Bee hummingbird",
       "incorrect_answers": [
         "Goldcrest",
-        "Wren",
-        "Sparrow"
+        "Common wren",
+        "House sparrow"
       ],
       "difficulty": "medium"
     },
@@ -5544,7 +5544,7 @@
     },
     {
       "question": "What is the slowest animal in the world?",
-      "correct_answer": "Three-toed sloth",
+      "correct_answer": "Sloth",
       "incorrect_answers": [
         "Snail",
         "Tortoise",
@@ -5644,7 +5644,7 @@
     },
     {
       "question": "What do koalas primarily eat?",
-      "correct_answer": "Eucalyptus leaves",
+      "correct_answer": "Eucalyptus",
       "incorrect_answers": [
         "Bamboo",
         "Grass",
@@ -5844,7 +5844,7 @@
     },
     {
       "question": "What is the most venomous spider in the world?",
-      "correct_answer": "Brazilian wandering spider",
+      "correct_answer": "Brazilian wanderer",
       "incorrect_answers": [
         "Black widow",
         "Brown recluse",
@@ -5964,7 +5964,7 @@
     },
     {
       "question": "What color is a flamingo when it's born?",
-      "correct_answer": "White or gray",
+      "correct_answer": "Gray",
       "incorrect_answers": [
         "Pink",
         "Orange",
@@ -6054,7 +6054,7 @@
     },
     {
       "question": "Which animal can hold its breath the longest?",
-      "correct_answer": "Cuvier's beaked whale",
+      "correct_answer": "Cuvier's whale",
       "incorrect_answers": [
         "Sperm whale",
         "Elephant seal",
@@ -6254,7 +6254,7 @@
     },
     {
       "question": "What is a baby rabbit called?",
-      "correct_answer": "Kit or kitten",
+      "correct_answer": "Kit",
       "incorrect_answers": [
         "Bunny",
         "Pup",
@@ -6264,7 +6264,7 @@
     },
     {
       "question": "Which bird has the largest wingspan?",
-      "correct_answer": "Wandering albatross",
+      "correct_answer": "Albatross",
       "incorrect_answers": [
         "Condor",
         "Bald eagle",
@@ -6426,9 +6426,9 @@
       "question": "What is a baby alligator called?",
       "correct_answer": "Hatchling",
       "incorrect_answers": [
-        "Pup",
-        "Cub",
-        "Fry"
+        "Crocling",
+        "Gatorling",
+        "Waterling"
       ],
       "difficulty": "medium"
     },
@@ -6444,7 +6444,7 @@
     },
     {
       "question": "What type of animal is Dory in Finding Nemo?",
-      "correct_answer": "Blue tang fish",
+      "correct_answer": "Blue tang",
       "incorrect_answers": [
         "Clownfish",
         "Angelfish",
@@ -6564,7 +6564,7 @@
     },
     {
       "question": "What is the Greek underworld ruled by Hades called?",
-      "correct_answer": "The Underworld (Hades)",
+      "correct_answer": "Underworld",
       "incorrect_answers": [
         "Olympus",
         "Tartarus",
@@ -6844,7 +6844,7 @@
     },
     {
       "question": "Who was the Trojan War fought over?",
-      "correct_answer": "Helen of Troy",
+      "correct_answer": "Helen",
       "incorrect_answers": [
         "Aphrodite",
         "Athena",
@@ -7444,10 +7444,10 @@
     },
     {
       "question": "What famous painting shows melting clocks in a desert?",
-      "correct_answer": "The Persistence of Memory",
+      "correct_answer": "Persistence of Memory",
       "incorrect_answers": [
         "The Starry Night",
-        "Guernica",
+        "Guernica piece",
         "The Scream"
       ],
       "difficulty": "medium"
@@ -7604,9 +7604,9 @@
     },
     {
       "question": "Thomas and his friends are characters from which children's series?",
-      "correct_answer": "Thomas the Tank Engine",
+      "correct_answer": "Tank Engine",
       "incorrect_answers": [
-        "Bob the Builder",
+        "The Builder",
         "Fireman Sam",
         "Postman Pat"
       ],
@@ -7914,7 +7914,7 @@
     },
     {
       "question": "What is Banksy known for?",
-      "correct_answer": "Street art / graffiti",
+      "correct_answer": "Street art",
       "incorrect_answers": [
         "Sculpture",
         "Oil painting",
@@ -7954,7 +7954,7 @@
     },
     {
       "question": "Who wrote The Little Prince?",
-      "correct_answer": "Antoine de Saint-Exupéry",
+      "correct_answer": "Saint-Exupéry",
       "incorrect_answers": [
         "Victor Hugo",
         "Jules Verne",
@@ -7964,7 +7964,7 @@
     },
     {
       "question": "What is the longest novel ever written?",
-      "correct_answer": "In Search of Lost Time",
+      "correct_answer": "Proust's epic",
       "incorrect_answers": [
         "War and Peace",
         "Les Misérables",
@@ -8154,7 +8154,7 @@
     },
     {
       "question": "Who wrote Treasure Island?",
-      "correct_answer": "Robert Louis Stevenson",
+      "correct_answer": "R. L. Stevenson",
       "incorrect_answers": [
         "Mark Twain",
         "Daniel Defoe",
@@ -8184,11 +8184,11 @@
     },
     {
       "question": "What is a haiku?",
-      "correct_answer": "A Japanese poem with 3 lines",
+      "correct_answer": "3-line poem",
       "incorrect_answers": [
-        "A Chinese painting style",
-        "A type of sculpture",
-        "A dance form"
+        "Painting style",
+        "Stone sculpture",
+        "Folk dance"
       ],
       "difficulty": "easy"
     },
@@ -8304,7 +8304,7 @@
     },
     {
       "question": "Which artist sang 'SexyBack' in 2006?",
-      "correct_answer": "Justin Timberlake",
+      "correct_answer": "JT",
       "incorrect_answers": [
         "Usher",
         "Ne-Yo",
@@ -8804,10 +8804,10 @@
     },
     {
       "question": "How do students get to Hogwarts in their first year?",
-      "correct_answer": "Boats across the lake",
+      "correct_answer": "Lake boats",
       "incorrect_answers": [
-        "Thestral-drawn carriages",
-        "Flying broomsticks",
+        "Carriages",
+        "Broomsticks",
         "Floo Network"
       ],
       "difficulty": "medium"
@@ -9024,10 +9024,10 @@
     },
     {
       "question": "What sweet has flavors like earwax and vomit?",
-      "correct_answer": "Bertie Bott's Every Flavour Beans",
+      "correct_answer": "Bertie Botts",
       "incorrect_answers": [
-        "Chocolate Frogs",
-        "Drooble's Gum",
+        "Choc Frogs",
+        "Drooble Gum",
         "Acid Pops"
       ],
       "difficulty": "easy"
@@ -9204,7 +9204,7 @@
     },
     {
       "question": "What object is a Portkey that takes Harry to the graveyard in book four?",
-      "correct_answer": "The Triwizard Cup",
+      "correct_answer": "Triwizard Cup",
       "incorrect_answers": [
         "A boot",
         "A newspaper",
@@ -9374,7 +9374,7 @@
     },
     {
       "question": "Who says 'A Lannister always pays his debts'?",
-      "correct_answer": "Multiple Lannisters — it's their unofficial motto",
+      "correct_answer": "All Lannisters",
       "incorrect_answers": [
         "Only Tyrion",
         "Only Tywin",
@@ -9454,11 +9454,11 @@
     },
     {
       "question": "What event is referred to as 'The Red Wedding'?",
-      "correct_answer": "Massacre of Robb Stark at the Twins",
+      "correct_answer": "Robb Stark's massacre",
       "incorrect_answers": [
-        "Joffrey's poisoning at his wedding",
-        "Daenerys's wedding to Khal Drogo",
-        "Sansa's wedding to Tyrion"
+        "Joffrey's poisoning",
+        "Daenerys's wedding",
+        "Sansa's wedding"
       ],
       "difficulty": "medium"
     },
@@ -9483,12 +9483,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the Night's Watch oath called?",
-      "correct_answer": "The Oath of the Night's Watch",
+      "question": "The Night's Watch oath begins with 'Night gathers, and now my...?'",
+      "correct_answer": "Watch begins",
       "incorrect_answers": [
-        "The Black Vow",
-        "The Wall's Pledge",
-        "The Oath of the Crow"
+        "Duty calls",
+        "Sword draws",
+        "End comes"
       ],
       "difficulty": "medium"
     },
@@ -9614,11 +9614,11 @@
     },
     {
       "question": "What is the unofficial motto associated with the Lannisters?",
-      "correct_answer": "A Lannister always pays his debts",
+      "correct_answer": "Pays his debts",
       "incorrect_answers": [
         "Hear Me Roar",
-        "Gold buys all",
-        "Lions never kneel"
+        "Lions never kneel",
+        "Gold buys all"
       ],
       "difficulty": "easy"
     },
@@ -9644,11 +9644,11 @@
     },
     {
       "question": "What is the Citadel?",
-      "correct_answer": "The headquarters of the Order of Maesters",
+      "correct_answer": "Maesters' HQ",
       "incorrect_answers": [
-        "The Iron Bank's fortress",
-        "The Faceless Men's temple",
-        "The king's library"
+        "Iron Bank fortress",
+        "Faceless Men temple",
+        "King's library"
       ],
       "difficulty": "medium"
     },
@@ -9774,7 +9774,7 @@
     },
     {
       "question": "What is the capital of Israel?",
-      "correct_answer": "Jerusalem (declared)",
+      "correct_answer": "Jerusalem",
       "incorrect_answers": [
         "Tel Aviv",
         "Haifa",
@@ -10014,7 +10014,7 @@
     },
     {
       "question": "Riyadh is the capital of which country?",
-      "correct_answer": "Saudi Arabia",
+      "correct_answer": "Saudi",
       "incorrect_answers": [
         "UAE",
         "Iraq",
@@ -10154,7 +10154,7 @@
     },
     {
       "question": "Abu Dhabi is the capital of which country?",
-      "correct_answer": "United Arab Emirates",
+      "correct_answer": "UAE",
       "incorrect_answers": [
         "Saudi Arabia",
         "Qatar",
@@ -10464,7 +10464,7 @@
     },
     {
       "question": "Which gas is produced during respiration?",
-      "correct_answer": "Carbon dioxide",
+      "correct_answer": "CO₂",
       "incorrect_answers": [
         "Oxygen",
         "Nitrogen",
@@ -10624,7 +10624,7 @@
     },
     {
       "question": "Which gas is used in fire extinguishers?",
-      "correct_answer": "Carbon dioxide",
+      "correct_answer": "CO₂",
       "incorrect_answers": [
         "Oxygen",
         "Nitrogen",
@@ -10684,11 +10684,11 @@
     },
     {
       "question": "What is the law that states mass cannot be created or destroyed in a chemical reaction?",
-      "correct_answer": "Law of Conservation of Mass",
+      "correct_answer": "Mass Conservation",
       "incorrect_answers": [
-        "Newton's First Law",
+        "Newton's First",
         "Boyle's Law",
-        "Law of Gravity"
+        "Gravity Law"
       ],
       "difficulty": "easy"
     },
@@ -11243,22 +11243,22 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is a JWT (JSON Web Token) used for?",
-      "correct_answer": "Securely transmitting information between parties, commonly used for authentication",
+      "question": "Which token format is commonly used for stateless auth?",
+      "correct_answer": "JWT",
       "incorrect_answers": [
-        "Formatting API responses as JSON",
-        "Storing user data in the browser's local storage",
-        "Encrypting database passwords"
+        "CSV",
+        "XML",
+        "JSON Schema"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What does the 'cd' command do in a terminal?",
-      "correct_answer": "Changes the current directory",
+      "question": "Which terminal command changes directory?",
+      "correct_answer": "cd",
       "incorrect_answers": [
-        "Creates a new directory",
-        "Copies a file",
-        "Clears the screen"
+        "ls",
+        "cp",
+        "mv"
       ],
       "difficulty": "easy"
     },
@@ -11273,12 +11273,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "In microservices, what is a service mesh?",
-      "correct_answer": "Service communication layer",
+      "question": "What handles service-to-service communication in microservices?",
+      "correct_answer": "Service mesh",
       "incorrect_answers": [
-        "Wi-Fi network",
-        "Database replication",
-        "UI framework"
+        "Load balancer",
+        "API gateway",
+        "Reverse proxy"
       ],
       "difficulty": "medium"
     },
@@ -11313,12 +11313,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What does CRUD stand for and what SQL operation maps to 'Create'?",
-      "correct_answer": "CRUD is Create, Read, Update, Delete; 'Create' maps to INSERT",
+      "question": "Which SQL operation maps to 'Create' in CRUD?",
+      "correct_answer": "INSERT",
       "incorrect_answers": [
-        "CRUD is Copy, Retrieve, Update, Delete; 'Create' maps to ADD",
-        "CRUD is Create, Read, Update, Drop; 'Create' maps to NEW",
-        "CRUD is Copy, Read, Undo, Delete; 'Create' maps to PUT"
+        "SELECT",
+        "UPDATE",
+        "DELETE"
       ],
       "difficulty": "medium"
     },
@@ -11363,12 +11363,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the primary function of a compiler?",
-      "correct_answer": "Translates source code into machine code",
+      "question": "Which tool converts source code to machine code?",
+      "correct_answer": "Compiler",
       "incorrect_answers": [
-        "Runs code line by line",
-        "Debugs the program",
-        "Stores program data"
+        "Debugger",
+        "Linker",
+        "Editor"
       ],
       "difficulty": "easy"
     },
@@ -11393,12 +11393,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is a bug in programming?",
-      "correct_answer": "An error or flaw in a program",
+      "question": "In programming, what is a 'bug'?",
+      "correct_answer": "A defect",
       "incorrect_answers": [
-        "A type of comment",
-        "A security feature",
-        "A variable declaration"
+        "A feature",
+        "A comment",
+        "A keyword"
       ],
       "difficulty": "easy"
     },
@@ -11413,22 +11413,22 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the purpose of Kubernetes?",
-      "correct_answer": "To automate the deployment, scaling, and management of containerized applications",
+      "question": "Which tool orchestrates containerized applications?",
+      "correct_answer": "Kubernetes",
       "incorrect_answers": [
-        "To write containerized applications",
-        "To build Docker images",
-        "To replace virtual machines entirely"
+        "Docker",
+        "Terraform",
+        "Ansible"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What does HTTP status code 500 indicate?",
-      "correct_answer": "Internal Server Error — something went wrong on the server",
+      "correct_answer": "Server Error",
       "incorrect_answers": [
-        "Request not found",
-        "Unauthorized access",
-        "Request timed out"
+        "Not Found",
+        "Unauthorized",
+        "Bad Request"
       ],
       "difficulty": "medium"
     },
@@ -11474,7 +11474,7 @@
     },
     {
       "question": "Which is heavier and includes a full guest OS?",
-      "correct_answer": "Virtual machine",
+      "correct_answer": "VM",
       "incorrect_answers": [
         "Container",
         "Process",
@@ -11493,12 +11493,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is a comment in code?",
-      "correct_answer": "Text that is ignored during execution, used for documentation",
+      "question": "Which is text ignored during code execution?",
+      "correct_answer": "Comment",
       "incorrect_answers": [
-        "A type of variable",
-        "A function return value",
-        "An error message"
+        "Keyword",
+        "String",
+        "Literal"
       ],
       "difficulty": "easy"
     },
@@ -11744,7 +11744,7 @@
     },
     {
       "question": "Who is the mentor of Doctor Strange?",
-      "correct_answer": "The Ancient One",
+      "correct_answer": "Ancient One",
       "incorrect_answers": [
         "Wong",
         "Mordo",
@@ -12034,10 +12034,10 @@
     },
     {
       "question": "Which film features the first appearance of the character Val (Valentina Allegra de Fontaine)?",
-      "correct_answer": "The Falcon and the Winter Soldier",
+      "correct_answer": "Falcon series",
       "incorrect_answers": [
-        "Black Widow",
-        "Black Panther: Wakanda Forever",
+        "WandaVision",
+        "Loki series",
         "Hawkeye"
       ],
       "difficulty": "medium"
@@ -12054,11 +12054,11 @@
     },
     {
       "question": "What is the name of the celestial whose head became the mining colony 'Knowhere'?",
-      "correct_answer": "The head of a dead Celestial",
+      "correct_answer": "A Celestial",
       "incorrect_answers": [
-        "Ego",
-        "Arishem",
-        "Tiamut"
+        "An Eternal",
+        "A Kree",
+        "A Skrull"
       ],
       "difficulty": "medium"
     },
@@ -12084,21 +12084,21 @@
     },
     {
       "question": "What is the name of the secret society M.O.D.O.K. leads in the Quantum Realm?",
-      "correct_answer": "He is a hunter for Kang",
+      "correct_answer": "Kang",
       "incorrect_answers": [
-        "A.I.M.",
-        "The Mechanized",
-        "The Seekers"
+        "Thanos",
+        "Loki",
+        "Ultron"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What does S.H.I.E.L.D. stand for?",
-      "correct_answer": "Strategic Homeland Intervention, Enforcement and Logistics Division",
+      "question": "What does the 'S' in S.H.I.E.L.D. stand for?",
+      "correct_answer": "Strategic",
       "incorrect_answers": [
-        "Special Heroic International Enforcement and Law Division",
-        "Secret Homeland Intelligence and Espionage Liaison Department",
-        "Superhuman Intelligence and Emergency Logistics Division"
+        "Secret",
+        "Supreme",
+        "Superhuman"
       ],
       "difficulty": "easy"
     },
@@ -12134,11 +12134,11 @@
     },
     {
       "question": "Who is the biological father of Star-Lord?",
-      "correct_answer": "Ego the Living Planet",
+      "correct_answer": "Ego",
       "incorrect_answers": [
-        "Yondu Udonta",
+        "Yondu",
         "Thanos",
-        "The Collector"
+        "Collector"
       ],
       "difficulty": "easy"
     },
@@ -12294,7 +12294,7 @@
     },
     {
       "question": "In The Office (US), who replaces Michael Scott as regional manager?",
-      "correct_answer": "Andy Bernard (then Dwight)",
+      "correct_answer": "Andy Bernard",
       "incorrect_answers": [
         "Jim Halpert",
         "Robert California",
@@ -12386,9 +12386,9 @@
       "question": "In Fleabag, who created and stars in the show?",
       "correct_answer": "Phoebe Waller-Bridge",
       "incorrect_answers": [
-        "Olivia Colman",
-        "Jodie Comer",
-        "Sandra Oh"
+        "Michaela Coel",
+        "Sharon Horgan",
+        "Sally Wainwright"
       ],
       "difficulty": "easy"
     },
@@ -12414,11 +12414,11 @@
     },
     {
       "question": "In Succession, what type of company is Waystar Royco?",
-      "correct_answer": "Media and entertainment conglomerate",
+      "correct_answer": "Media",
       "incorrect_answers": [
-        "Tech company",
-        "Oil company",
-        "Banking firm"
+        "Tech",
+        "Oil",
+        "Banking"
       ],
       "difficulty": "easy"
     },
@@ -12474,11 +12474,11 @@
     },
     {
       "question": "In Breaking Bad, what does 'Better Call Saul' refer to?",
-      "correct_answer": "A criminal lawyer's advertising slogan",
+      "correct_answer": "Lawyer's slogan",
       "incorrect_answers": [
-        "A phone hotline",
-        "A radio show",
-        "A restaurant name"
+        "Phone hotline",
+        "Radio show",
+        "Restaurant"
       ],
       "difficulty": "easy"
     },
@@ -12564,11 +12564,11 @@
     },
     {
       "question": "In Arrested Development, what business does the Bluth family run?",
-      "correct_answer": "A real estate development company",
+      "correct_answer": "Real estate",
       "incorrect_answers": [
-        "A banana stand chain",
-        "A law firm",
-        "A magic shop"
+        "Banana stands",
+        "Law firm",
+        "Magic shop"
       ],
       "difficulty": "easy"
     },
@@ -12624,7 +12624,7 @@
     },
     {
       "question": "In The Big Bang Theory, what is Penny's last name?",
-      "correct_answer": "It was never revealed (before marriage)",
+      "correct_answer": "Unknown",
       "incorrect_answers": [
         "Johnson",
         "Smith",
@@ -12634,7 +12634,7 @@
     },
     {
       "question": "In Dexter, what does Dexter call his urge to kill?",
-      "correct_answer": "The Dark Passenger",
+      "correct_answer": "Dark Passenger",
       "incorrect_answers": [
         "The Shadow",
         "The Beast",
@@ -12734,21 +12734,21 @@
     },
     {
       "question": "What is the smoke point of olive oil approximately?",
-      "correct_answer": "Around 375°F (190°C)",
+      "correct_answer": "About 375°F",
       "incorrect_answers": [
-        "Around 500°F",
-        "Around 250°F",
-        "Around 600°F"
+        "About 500°F",
+        "About 250°F",
+        "About 600°F"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What grape is Champagne primarily made from?",
-      "correct_answer": "Chardonnay, Pinot Noir, and Pinot Meunier",
+      "question": "Which grape is used in Champagne?",
+      "correct_answer": "Pinot Noir",
       "incorrect_answers": [
-        "Only Chardonnay",
         "Sauvignon Blanc",
-        "Riesling"
+        "Riesling",
+        "Syrah"
       ],
       "difficulty": "medium"
     },
@@ -12763,32 +12763,32 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is raita?",
-      "correct_answer": "An Indian yogurt condiment with cucumber and spices",
+      "question": "Raita is an Indian dip made from what?",
+      "correct_answer": "Yogurt",
       "incorrect_answers": [
-        "A type of bread",
-        "A rice dish",
-        "A curry"
+        "Chickpeas",
+        "Tamarind",
+        "Coconut"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is wasabi?",
-      "correct_answer": "A spicy Japanese condiment made from a plant root",
+      "question": "Wasabi is traditionally made from what?",
+      "correct_answer": "A plant root",
       "incorrect_answers": [
-        "A type of seaweed",
-        "Fermented soybean paste",
-        "Green chili sauce"
+        "Seaweed",
+        "Soybeans",
+        "Green chili"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is gelato?",
-      "correct_answer": "Italian-style ice cream",
+      "question": "Which frozen dessert originated in Italy?",
+      "correct_answer": "Gelato",
       "incorrect_answers": [
-        "Frozen yogurt",
         "Sorbet",
-        "Custard"
+        "Sherbet",
+        "Frozen yogurt"
       ],
       "difficulty": "easy"
     },
@@ -12834,21 +12834,21 @@
     },
     {
       "question": "What is a pretzel traditionally shaped like?",
-      "correct_answer": "A knot or twisted loop",
+      "correct_answer": "A knot",
       "incorrect_answers": [
         "A circle",
-        "A stick",
-        "A star"
+        "A star",
+        "A spiral"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What is a gyro?",
-      "correct_answer": "Greek meat cooked on a vertical rotisserie, served in pita",
+      "question": "In a gyro, the meat is cooked how?",
+      "correct_answer": "On a rotisserie",
       "incorrect_answers": [
-        "A type of sushi",
-        "An Italian sandwich",
-        "A French crêpe"
+        "In a pot",
+        "Deep-fried",
+        "Sun-dried"
       ],
       "difficulty": "easy"
     },
@@ -12884,31 +12884,31 @@
     },
     {
       "question": "What is garam masala?",
-      "correct_answer": "A blend of ground spices used in Indian cooking",
+      "correct_answer": "Indian spice blend",
       "incorrect_answers": [
-        "A single spice",
-        "A type of curry paste",
-        "A fermented condiment"
+        "Single spice",
+        "Curry paste",
+        "Fermented sauce"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What pastry is an éclair?",
-      "correct_answer": "A choux pastry filled with cream and topped with chocolate",
+      "question": "An éclair is made from which pastry?",
+      "correct_answer": "Choux",
       "incorrect_answers": [
-        "A flaky pie",
-        "A fried doughnut",
-        "A layered cake"
+        "Puff",
+        "Phyllo",
+        "Shortcrust"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is gochujang?",
-      "correct_answer": "Korean fermented red chili paste",
+      "correct_answer": "Korean chili paste",
       "incorrect_answers": [
-        "Japanese soy paste",
-        "Thai curry paste",
-        "Chinese hoisin sauce"
+        "Japanese soy",
+        "Thai curry",
+        "Chinese hoisin"
       ],
       "difficulty": "medium"
     },
@@ -12923,32 +12923,32 @@
       "difficulty": "easy"
     },
     {
-      "question": "What are the five mother sauces in French cuisine?",
-      "correct_answer": "Béchamel, Velouté, Espagnole, Hollandaise, Tomato",
+      "question": "How many 'mother sauces' are in French cuisine?",
+      "correct_answer": "Five",
       "incorrect_answers": [
-        "Marinara, Alfredo, Pesto, Ranch, BBQ",
-        "Ketchup, Mustard, Mayo, Soy, Hot Sauce",
-        "Gravy, Cream, Cheese, Brown, White"
+        "Three",
+        "Four",
+        "Seven"
       ],
       "difficulty": "medium"
     },
     {
-      "question": "What is the difference between a bisque and a chowder?",
-      "correct_answer": "Bisque is smooth and creamy; chowder is chunky",
+      "question": "Which soup is smooth and creamy, not chunky?",
+      "correct_answer": "Bisque",
       "incorrect_answers": [
-        "They're the same",
-        "Bisque is chunky",
-        "Chowder has no cream"
+        "Chowder",
+        "Minestrone",
+        "Stew"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is prosciutto?",
-      "correct_answer": "Dry-cured Italian ham",
+      "correct_answer": "Italian cured ham",
       "incorrect_answers": [
         "Italian sausage",
-        "Smoked bacon",
-        "Cooked ham"
+        "German bacon",
+        "French pâté"
       ],
       "difficulty": "medium"
     },
@@ -12964,11 +12964,11 @@
     },
     {
       "question": "What is matcha?",
-      "correct_answer": "Finely ground green tea powder",
+      "correct_answer": "Green tea powder",
       "incorrect_answers": [
-        "A type of coffee",
+        "Coffee powder",
         "Dried herbs",
-        "A chocolate substitute"
+        "Cocoa substitute"
       ],
       "difficulty": "easy"
     },
@@ -12994,21 +12994,21 @@
     },
     {
       "question": "What is an empanada?",
-      "correct_answer": "A filled pastry turnover",
+      "correct_answer": "Pastry turnover",
       "incorrect_answers": [
-        "A type of taco",
-        "A Mexican soup",
-        "A fried rice ball"
+        "Fried taco",
+        "Mexican soup",
+        "Rice ball"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is granola?",
-      "correct_answer": "Baked oats mixed with honey, nuts, and dried fruit",
+      "correct_answer": "Baked oat mixture",
       "incorrect_answers": [
-        "A type of cereal grain",
+        "Cereal grain",
         "Ground wheat",
-        "A protein bar ingredient"
+        "Protein bar"
       ],
       "difficulty": "easy"
     },
@@ -13023,18 +13023,18 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is a reduction in cooking?",
-      "correct_answer": "A sauce thickened by simmering to evaporate liquid",
+      "question": "A 'reduction' sauce is thickened by what?",
+      "correct_answer": "Simmering",
       "incorrect_answers": [
-        "Cutting food into small pieces",
-        "Lowering the oven temperature",
-        "Removing fat from meat"
+        "Straining",
+        "Whisking",
+        "Chilling"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is a pestle used with?",
-      "correct_answer": "A mortar (for grinding spices)",
+      "correct_answer": "A mortar",
       "incorrect_answers": [
         "A cutting board",
         "A strainer",
@@ -13094,9 +13094,9 @@
     },
     {
       "question": "What is dim sum?",
-      "correct_answer": "Small Chinese dishes served with tea",
+      "correct_answer": "Chinese small dishes",
       "incorrect_answers": [
-        "A type of sushi",
+        "Japanese sushi",
         "Thai street food",
         "Korean BBQ"
       ],
@@ -13104,11 +13104,11 @@
     },
     {
       "question": "What is the Scoville scale used to measure?",
-      "correct_answer": "The heat of chili peppers",
+      "correct_answer": "Chili heat",
       "incorrect_answers": [
-        "Sweetness of fruit",
-        "Acidity of wine",
-        "Saltiness of food"
+        "Wine acidity",
+        "Food saltiness",
+        "Fruit sweetness"
       ],
       "difficulty": "medium"
     },
@@ -13123,22 +13123,22 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the proper way to store fresh basil?",
-      "correct_answer": "In a glass of water at room temperature",
+      "question": "Fresh basil is best stored where?",
+      "correct_answer": "In water",
       "incorrect_answers": [
-        "In the refrigerator",
-        "In a sealed plastic bag",
-        "In the freezer"
+        "In the fridge",
+        "In the freezer",
+        "In a bag"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is an amuse-bouche?",
-      "correct_answer": "A small complimentary appetizer from the chef",
+      "correct_answer": "Free appetizer",
       "incorrect_answers": [
-        "A dessert course",
-        "A type of cocktail",
-        "The main course"
+        "Main course",
+        "Full dessert",
+        "Cocktail"
       ],
       "difficulty": "medium"
     },
@@ -13154,21 +13154,21 @@
     },
     {
       "question": "What cheese is Parmigiano-Reggiano?",
-      "correct_answer": "A hard Italian cheese aged at least 12 months",
+      "correct_answer": "Hard Italian cheese",
       "incorrect_answers": [
-        "A soft French cheese",
-        "A Dutch semi-hard cheese",
-        "A Greek crumbly cheese"
+        "Soft French cheese",
+        "Dutch semi-hard",
+        "Greek crumbly"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is a bain-marie?",
-      "correct_answer": "A water bath for gentle heating",
+      "correct_answer": "Water bath",
       "incorrect_answers": [
-        "A French knife technique",
-        "A type of oven",
-        "A serving dish"
+        "Steam oven",
+        "Salt crust",
+        "Hot plate"
       ],
       "difficulty": "medium"
     },
@@ -13184,7 +13184,7 @@
     },
     {
       "question": "What herb is traditionally used in a Bloody Mary?",
-      "correct_answer": "Celery (as garnish) with horseradish and Worcestershire",
+      "correct_answer": "Celery",
       "incorrect_answers": [
         "Basil",
         "Rosemary",
@@ -13214,11 +13214,11 @@
     },
     {
       "question": "What is a quesadilla?",
-      "correct_answer": "A tortilla filled with cheese and grilled",
+      "correct_answer": "Cheese tortilla",
       "incorrect_answers": [
-        "A fried taco",
-        "A type of burrito",
-        "A Mexican soup"
+        "Fried taco",
+        "Burrito type",
+        "Mexican soup"
       ],
       "difficulty": "easy"
     },
@@ -13243,12 +13243,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What bean is used to make coffee?",
-      "correct_answer": "Coffee bean (seed of the coffee cherry)",
+      "question": "Coffee comes from seeds of which fruit?",
+      "correct_answer": "Coffee cherry",
       "incorrect_answers": [
-        "Cacao bean",
-        "Vanilla bean",
-        "Soybean"
+        "Cacao pod",
+        "Vanilla pod",
+        "Mango"
       ],
       "difficulty": "easy"
     },
@@ -13274,20 +13274,20 @@
     },
     {
       "question": "What type of milk is used in a traditional London Fog latte?",
-      "correct_answer": "Steamed milk (any kind)",
+      "correct_answer": "Steamed milk",
       "incorrect_answers": [
-        "Only oat milk",
-        "Only coconut milk",
-        "Only almond milk"
+        "Oat milk only",
+        "Coconut milk only",
+        "Almond milk only"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What is the base spirit in an Old Fashioned?",
-      "correct_answer": "Bourbon or rye whiskey",
+      "correct_answer": "Rye whiskey",
       "incorrect_answers": [
-        "Scotch",
         "Brandy",
+        "Scotch",
         "Rum"
       ],
       "difficulty": "medium"
@@ -13313,12 +13313,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What type of food is a dumpling?",
-      "correct_answer": "Dough wrapped around a filling",
+      "question": "A dumpling is typically dough wrapped around what?",
+      "correct_answer": "A filling",
       "incorrect_answers": [
-        "A type of bread",
-        "A fried rice ball",
-        "A noodle soup"
+        "A bone",
+        "A seed",
+        "A sauce"
       ],
       "difficulty": "easy"
     },
@@ -13574,10 +13574,10 @@
     },
     {
       "question": "Which movie is the sequel to 'The Lion King'?",
-      "correct_answer": "The Lion King II: Simba's Pride",
+      "correct_answer": "Simba's Pride",
       "incorrect_answers": [
         "The Lion Guard",
-        "The Lion King 1½",
+        "Lion King 1½",
         "Simba's Return"
       ],
       "difficulty": "easy"
@@ -13614,11 +13614,11 @@
     },
     {
       "question": "In 'Catch Me If You Can', who does Leonardo DiCaprio impersonate?",
-      "correct_answer": "A pilot, doctor, and lawyer (Frank Abagnale Jr.)",
+      "correct_answer": "Pilot and doctor",
       "incorrect_answers": [
-        "A spy",
-        "A president",
-        "A celebrity"
+        "Secret spy",
+        "US president",
+        "Music celebrity"
       ],
       "difficulty": "medium"
     },
@@ -13726,9 +13726,9 @@
       "question": "Who directed 'The Dark Knight' trilogy?",
       "correct_answer": "Christopher Nolan",
       "incorrect_answers": [
-        "Zack Snyder",
-        "Tim Burton",
-        "Matt Reeves"
+        "Matthew Vaughn",
+        "Dennis Villeneuve",
+        "Christopher McQuarrie"
       ],
       "difficulty": "easy"
     },
@@ -13744,19 +13744,19 @@
     },
     {
       "question": "In 'Moana', what does Moana need to restore?",
-      "correct_answer": "The heart of Te Fiti",
+      "correct_answer": "Heart of Te Fiti",
       "incorrect_answers": [
-        "Her father's throne",
-        "The ocean's magic",
+        "Father's throne",
+        "Ocean's magic",
         "A stolen gem"
       ],
       "difficulty": "easy"
     },
     {
       "question": "What school do the characters attend in 'Mean Girls'?",
-      "correct_answer": "North Shore High School",
+      "correct_answer": "North Shore High",
       "incorrect_answers": [
-        "West Beverly High",
+        "West Beverly",
         "Rydell High",
         "Shermer High"
       ],
@@ -13764,7 +13764,7 @@
     },
     {
       "question": "What is the name of the spaceship in 'Alien' franchise's sequel?",
-      "correct_answer": "Sulaco (in Aliens)",
+      "correct_answer": "Sulaco",
       "incorrect_answers": [
         "Nostromo",
         "Prometheus",
@@ -13774,11 +13774,11 @@
     },
     {
       "question": "In 'No Country for Old Men', what weapon does Anton Chigurh use?",
-      "correct_answer": "A captive bolt pistol (cattle gun)",
+      "correct_answer": "Captive bolt pistol",
       "incorrect_answers": [
-        "A silenced pistol",
-        "A shotgun",
-        "A knife"
+        "Silenced pistol",
+        "Hunting knife",
+        "Sniper rifle"
       ],
       "difficulty": "medium"
     },
@@ -13836,15 +13836,15 @@
       "question": "Who plays Doctor Strange in the MCU?",
       "correct_answer": "Benedict Cumberbatch",
       "incorrect_answers": [
-        "Tom Hiddleston",
-        "Oscar Isaac",
-        "Jeremy Renner"
+        "Eddie Redmayne",
+        "Matthew McConaughey",
+        "Joaquin Phoenix"
       ],
       "difficulty": "easy"
     },
     {
       "question": "Who played M in the Daniel Craig James Bond films?",
-      "correct_answer": "Judi Dench (and later Ralph Fiennes)",
+      "correct_answer": "Judi Dench",
       "incorrect_answers": [
         "Helen Mirren",
         "Maggie Smith",
@@ -13984,11 +13984,11 @@
     },
     {
       "question": "What is the 'terroir' of wine?",
-      "correct_answer": "The environmental factors (soil, climate, terrain) that affect grape character",
+      "correct_answer": "Soil and climate",
       "incorrect_answers": [
-        "The age of the wine",
-        "The grape variety",
-        "The winemaker's technique"
+        "Wine age",
+        "Grape variety",
+        "Winemaker skill"
       ],
       "difficulty": "hard"
     },
@@ -14023,18 +14023,18 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the traditional method for making authentic balsamic vinegar?",
-      "correct_answer": "Aged in wooden barrels for at least 12 years",
+      "question": "Traditional balsamic vinegar is aged at least how long?",
+      "correct_answer": "12 years",
       "incorrect_answers": [
-        "Distilled from wine in 6 months",
-        "Fermented grapes for 1 year",
-        "Boiled grape juice cooled overnight"
+        "6 months",
+        "1 year",
+        "3 years"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the chemical name for Plaster of Paris?",
-      "correct_answer": "Calcium sulfate hemihydrate",
+      "correct_answer": "Calcium sulfate",
       "incorrect_answers": [
         "Calcium carbonate",
         "Calcium hydroxide",
@@ -14153,22 +14153,22 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which album sold the most copies in its first week in 2023?",
-      "correct_answer": "Midnights — Taylor Swift",
+      "question": "What was Taylor Swift's 2022 album called?",
+      "correct_answer": "Midnights",
       "incorrect_answers": [
-        "SOS — SZA",
-        "One Thing at a Time — Morgan Wallen",
-        "Endless Summer Vacation — Miley Cyrus"
+        "Folklore",
+        "Evermore",
+        "Reputation"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Who was the first actor to refuse an Academy Award?",
-      "correct_answer": "George C. Scott (for Patton, 1971)",
+      "correct_answer": "George C. Scott",
       "incorrect_answers": [
         "Marlon Brando",
         "Woody Allen",
-        "Katherine Hepburn"
+        "Katharine Hepburn"
       ],
       "difficulty": "hard"
     },
@@ -14244,11 +14244,11 @@
     },
     {
       "question": "What is the name of the secret passage beneath the Red Keep?",
-      "correct_answer": "The Dragon Skulls passage",
+      "correct_answer": "Dragon Skulls",
       "incorrect_answers": [
         "The Black Cells",
-        "The Serpent's Walk",
-        "The King's Way"
+        "Serpent's Walk",
+        "King's Way"
       ],
       "difficulty": "hard"
     },
@@ -14364,11 +14364,11 @@
     },
     {
       "question": "What is the Nernst equation used to calculate?",
-      "correct_answer": "Cell potential under non-standard conditions",
+      "correct_answer": "Cell potential",
       "incorrect_answers": [
         "Reaction rate",
         "Equilibrium constant",
-        "pH of a buffer"
+        "pH of buffer"
       ],
       "difficulty": "hard"
     },
@@ -14394,10 +14394,10 @@
     },
     {
       "question": "What is the longest movie to win Best Picture?",
-      "correct_answer": "Gone with the Wind (3 hours 58 minutes)",
+      "correct_answer": "Gone with the Wind",
       "incorrect_answers": [
-        "The Lord of the Rings: Return of the King",
-        "Ben-Hur",
+        "Return of King",
+        "Ben-Hur epic",
         "Lawrence of Arabia"
       ],
       "difficulty": "hard"
@@ -14474,21 +14474,21 @@
     },
     {
       "question": "What type of creature does Qyburn create from the Mountain?",
-      "correct_answer": "A reanimated corpse (Robert Strong)",
+      "correct_answer": "Reanimated corpse",
       "incorrect_answers": [
         "A wight",
         "A golem",
-        "A shadow creature"
+        "Shadow creature"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Which song was TikTok's most-used sound in 2020?",
-      "correct_answer": "Savage Love — Jawsh 685 & Jason Derulo",
+      "correct_answer": "Savage Love",
       "incorrect_answers": [
-        "Blinding Lights — The Weeknd",
-        "WAP — Cardi B",
-        "Toosie Slide — Drake"
+        "Blinding Lights",
+        "WAP",
+        "Toosie Slide"
       ],
       "difficulty": "hard"
     },
@@ -14504,7 +14504,7 @@
     },
     {
       "question": "What is the name of the editing technique that cuts between two different scenes happening simultaneously?",
-      "correct_answer": "Cross-cutting (or parallel editing)",
+      "correct_answer": "Cross-cutting",
       "incorrect_answers": [
         "Jump cut",
         "Montage",
@@ -14534,7 +14534,7 @@
     },
     {
       "question": "What film was shot entirely in a single apartment?",
-      "correct_answer": "Rope (1948) by Alfred Hitchcock",
+      "correct_answer": "Rope",
       "incorrect_answers": [
         "12 Angry Men",
         "Rear Window",
@@ -14564,7 +14564,7 @@
     },
     {
       "question": "In Succession, what media company does the Roy family compete against?",
-      "correct_answer": "Pierce Global Media (PGM)",
+      "correct_answer": "Pierce Global Media",
       "incorrect_answers": [
         "Waystar Global",
         "Atlas Media",
@@ -14624,17 +14624,17 @@
     },
     {
       "question": "What is 'dashi' in Japanese cooking?",
-      "correct_answer": "A stock made from kelp and bonito flakes",
+      "correct_answer": "Kelp stock",
       "incorrect_answers": [
-        "Soy sauce",
-        "Rice vinegar",
-        "Miso paste"
+        "Fish sauce",
+        "Miso paste",
+        "Rice vinegar"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Both Kruskal's and Prim's algorithms find what?",
-      "correct_answer": "Minimum spanning tree",
+      "correct_answer": "Min spanning tree",
       "incorrect_answers": [
         "Shortest path",
         "Max flow",
@@ -15004,10 +15004,10 @@
     },
     {
       "question": "In Modern Family, what song does Phil Dunphy want played at his funeral?",
-      "correct_answer": "In the Arms of an Angel",
+      "correct_answer": "Arms of an Angel",
       "incorrect_answers": [
         "My Way",
-        "Wind Beneath My Wings",
+        "Beneath My Wings",
         "Tears in Heaven"
       ],
       "difficulty": "hard"
@@ -15054,7 +15054,7 @@
     },
     {
       "question": "What is the name of the charm placed on the Weasley tent at the Quidditch World Cup to make it bigger inside?",
-      "correct_answer": "Undetectable Extension Charm",
+      "correct_answer": "Extension Charm",
       "incorrect_answers": [
         "Engorgement Charm",
         "Enlarging Spell",
@@ -15104,7 +15104,7 @@
     },
     {
       "question": "Which director holds the record for most Best Director Oscar nominations?",
-      "correct_answer": "William Wyler (12 nominations)",
+      "correct_answer": "William Wyler",
       "incorrect_answers": [
         "Steven Spielberg",
         "Martin Scorsese",
@@ -15133,12 +15133,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the name of the reaction that turns onions brown when caramelized?",
-      "correct_answer": "Both Maillard reaction and caramelization occur simultaneously",
+      "question": "Browning onions involves Maillard reaction and what?",
+      "correct_answer": "Caramelization",
       "incorrect_answers": [
-        "Only the Maillard reaction",
-        "Only caramelization",
-        "Oxidation"
+        "Fermentation",
+        "Oxidation",
+        "Hydrolysis"
       ],
       "difficulty": "hard"
     },
@@ -15184,7 +15184,7 @@
     },
     {
       "question": "Who was the first Black woman to win Best Actress at the Oscars?",
-      "correct_answer": "Halle Berry (Monster's Ball, 2002)",
+      "correct_answer": "Halle Berry",
       "incorrect_answers": [
         "Whoopi Goldberg",
         "Viola Davis",
@@ -15263,12 +15263,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What pseudonym did Sia use when she wrote 'Diamonds' for Rihanna before her own solo career took off?",
-      "correct_answer": "She used her real name, Sia Furler",
+      "question": "Did Sia use a pseudonym when writing 'Diamonds' for Rihanna?",
+      "correct_answer": "No",
       "incorrect_answers": [
-        "Sydney Skye",
-        "Aurora Bloom",
-        "Maddie Chandelier"
+        "Yes, Sydney Skye",
+        "Yes, Aurora Bloom",
+        "Yes, Maddie C."
       ],
       "difficulty": "hard"
     },
@@ -15323,12 +15323,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which song was the most-streamed on Spotify in 2022?",
-      "correct_answer": "As It Was — Harry Styles",
+      "question": "Which song was Spotify's most-streamed in 2022?",
+      "correct_answer": "As It Was",
       "incorrect_answers": [
-        "Heat Waves — Glass Animals",
-        "Stay — Kid LAROI & Justin Bieber",
-        "Enemy — Imagine Dragons"
+        "Heat Waves",
+        "Stay",
+        "Enemy"
       ],
       "difficulty": "hard"
     },
@@ -15384,11 +15384,11 @@
     },
     {
       "question": "What is the ideal internal temperature for a medium-rare steak?",
-      "correct_answer": "130-135°F (54-57°C)",
+      "correct_answer": "130-135°F",
       "incorrect_answers": [
-        "120°F (49°C)",
-        "145°F (63°C)",
-        "160°F (71°C)"
+        "120°F",
+        "145°F",
+        "160°F"
       ],
       "difficulty": "hard"
     },
@@ -15414,11 +15414,11 @@
     },
     {
       "question": "What does Dumbledore see in the Mirror of Erised?",
-      "correct_answer": "Himself holding thick woolen socks",
+      "correct_answer": "Woolen socks",
       "incorrect_answers": [
-        "His family alive",
-        "Himself as Minister of Magic",
-        "A bowl of lemon drops"
+        "Family alive",
+        "Minister hat",
+        "Lemon drops"
       ],
       "difficulty": "hard"
     },

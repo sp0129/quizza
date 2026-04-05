@@ -4,7 +4,7 @@
   "questions": [
     {
       "question": "Which Shah Rukh Khan movie features the iconic train scene where Simran grabs Raj's hand?",
-      "correct_answer": "Dilwale Dulhania Le Jayenge",
+      "correct_answer": "DDLJ",
       "incorrect_answers": [
         "Kuch Kuch Hota Hai",
         "Dil To Pagal Hai",
@@ -194,7 +194,7 @@
     },
     {
       "question": "Which real-life wrestler's story is told in 'Dangal'?",
-      "correct_answer": "Mahavir Singh Phogat",
+      "correct_answer": "Mahavir Phogat",
       "incorrect_answers": [
         "Sushil Kumar",
         "Yogeshwar Dutt",
@@ -214,11 +214,11 @@
     },
     {
       "question": "What is the famous question asked at the end of 'Bahubali: The Beginning'?",
-      "correct_answer": "Why did Katappa kill Bahubali?",
+      "correct_answer": "Why Katappa killed",
       "incorrect_answers": [
-        "Who is the real king?",
-        "Where is the kingdom?",
-        "Why did Bahubali leave?"
+        "Who is king",
+        "Where is kingdom",
+        "Why Bahubali left"
       ],
       "difficulty": "easy"
     },
@@ -314,7 +314,7 @@
     },
     {
       "question": "Which 2001 Sunny Deol film has the famous dialogue 'Hand pump ukhad dunga'?",
-      "correct_answer": "Gadar: Ek Prem Katha",
+      "correct_answer": "Gadar",
       "incorrect_answers": [
         "Border",
         "Indian",
@@ -354,11 +354,11 @@
     },
     {
       "question": "Which trio stars in the comedy 'Hera Pheri'?",
-      "correct_answer": "Akshay Kumar, Suniel Shetty, Paresh Rawal",
+      "correct_answer": "Akshay, Suniel, Paresh",
       "incorrect_answers": [
-        "Salman Khan, Govinda, Paresh Rawal",
-        "Aamir Khan, Salman Khan, Shah Rukh Khan",
-        "Ajay Devgn, Rohit Shetty, Shreyas Talpade"
+        "Salman, Govinda, Paresh",
+        "Aamir, Salman, SRK",
+        "Ajay, Rohit, Shreyas"
       ],
       "difficulty": "easy"
     },
@@ -584,7 +584,7 @@
     },
     {
       "question": "Which 1995 film was Aditya Chopra's directorial debut?",
-      "correct_answer": "Dilwale Dulhania Le Jayenge",
+      "correct_answer": "DDLJ",
       "incorrect_answers": [
         "Mohabbatein",
         "Rab Ne Bana Di Jodi",
@@ -594,7 +594,7 @@
     },
     {
       "question": "In 'Munna Bhai M.B.B.S.', what method does Munna use to win people over?",
-      "correct_answer": "Jadoo ki Jhappi (Magic Hug)",
+      "correct_answer": "Jadoo Jhappi",
       "incorrect_answers": [
         "Dance",
         "Comedy",
@@ -694,9 +694,9 @@
     },
     {
       "question": "Which Hrithik Roshan film was his debut?",
-      "correct_answer": "Kaho Naa... Pyaar Hai",
+      "correct_answer": "Kaho Naa Pyaar",
       "incorrect_answers": [
-        "Koi... Mil Gaya",
+        "Koi Mil Gaya",
         "Krrish",
         "Lakshya"
       ],
@@ -704,7 +704,7 @@
     },
     {
       "question": "The song 'Ek Pal Ka Jeena' is from which Hrithik Roshan movie?",
-      "correct_answer": "Kaho Naa... Pyaar Hai",
+      "correct_answer": "Kaho Naa Pyaar",
       "incorrect_answers": [
         "Krrish",
         "Dhoom 2",
@@ -734,7 +734,7 @@
     },
     {
       "question": "'Bade bade deshon mein aisi chhoti chhoti baatein hoti rehti hain' is a dialogue from which film?",
-      "correct_answer": "Dilwale Dulhania Le Jayenge",
+      "correct_answer": "DDLJ",
       "incorrect_answers": [
         "Kuch Kuch Hota Hai",
         "Dil To Pagal Hai",
@@ -934,7 +934,7 @@
     },
     {
       "question": "Which Sanjay Leela Bhansali film features the characters Ram and Leela?",
-      "correct_answer": "Goliyon Ki Raasleela Ram-Leela",
+      "correct_answer": "Ram-Leela",
       "incorrect_answers": [
         "Padmaavat",
         "Bajirao Mastani",
@@ -984,7 +984,7 @@
     },
     {
       "question": "Which film features the song 'Senorita' picturized on Hrithik Roshan and Katrina Kaif?",
-      "correct_answer": "Zindagi Na Milegi Dobara",
+      "correct_answer": "ZNMD",
       "incorrect_answers": [
         "Bang Bang",
         "Dhoom 2",
@@ -1053,12 +1053,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "Which song from 'Dilwale Dulhania Le Jayenge' is played at Maratha Mandir theatre in Mumbai?",
-      "correct_answer": "Tujhe Dekha To Ye Jaana Sanam",
+      "question": "DDLJ was played at Maratha Mandir for how many years?",
+      "correct_answer": "25+ years",
       "incorrect_answers": [
-        "Mehndi Laga Ke Rakhna",
-        "Ruk Ja O Dil Deewane",
-        "Ho Gaya Hai Tujhko"
+        "5 years",
+        "10 years",
+        "Never"
       ],
       "difficulty": "easy"
     },
@@ -1104,7 +1104,7 @@
     },
     {
       "question": "Which film features the character Kabir Khan, an Indian cricket coach?",
-      "correct_answer": "Chak De! India",
+      "correct_answer": "Chak De!",
       "incorrect_answers": [
         "Lagaan",
         "Dangal",
@@ -1194,7 +1194,7 @@
     },
     {
       "question": "Which Bollywood film has the famous scene of a hero running on a mustard field?",
-      "correct_answer": "Dilwale Dulhania Le Jayenge",
+      "correct_answer": "DDLJ",
       "incorrect_answers": [
         "Veer-Zaara",
         "Mohabbatein",
@@ -1224,7 +1224,7 @@
     },
     {
       "question": "Which Imtiaz Ali film features Shah Rukh Khan and Anushka Sharma on a road trip?",
-      "correct_answer": "Jab Harry Met Sejal",
+      "correct_answer": "Harry Met Sejal",
       "incorrect_answers": [
         "Jab We Met",
         "Tamasha",
@@ -1244,11 +1244,11 @@
     },
     {
       "question": "Which film is Alia Bhatt's debut?",
-      "correct_answer": "Student of the Year",
+      "correct_answer": "SOTY",
       "incorrect_answers": [
-        "Highway",
+        "Kabhi Alvida",
         "2 States",
-        "Raazi"
+        "Highway"
       ],
       "difficulty": "easy"
     },
@@ -1273,12 +1273,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "Who composed the music for 'Aashiqui 2'?",
-      "correct_answer": "Mithoon, Jeet Gannguli, and Ankit Tiwari",
+      "question": "Aashiqui 2's soundtrack had how many composers?",
+      "correct_answer": "Three",
       "incorrect_answers": [
-        "A.R. Rahman",
-        "Pritam",
-        "Vishal-Shekhar"
+        "One",
+        "Two",
+        "Four"
       ],
       "difficulty": "easy"
     },
@@ -1324,7 +1324,7 @@
     },
     {
       "question": "Which film marked Ranveer Singh's Bollywood debut?",
-      "correct_answer": "Band Baaja Baaraat",
+      "correct_answer": "Band Baaja",
       "incorrect_answers": [
         "Lootera",
         "Ram-Leela",
@@ -1344,7 +1344,7 @@
     },
     {
       "question": "Which Akshay Kumar film became the first Bollywood movie about toilet building awareness?",
-      "correct_answer": "Toilet: Ek Prem Katha",
+      "correct_answer": "Toilet EPK",
       "incorrect_answers": [
         "Pad Man",
         "Gold",
@@ -1394,7 +1394,7 @@
     },
     {
       "question": "Which 2019 film stars Vicky Kaushal as an Indian Army officer during the 1971 war?",
-      "correct_answer": "Uri: The Surgical Strike",
+      "correct_answer": "Uri",
       "incorrect_answers": [
         "Raazi",
         "Shershaah",
@@ -1404,7 +1404,7 @@
     },
     {
       "question": "'How's the josh?' is a famous dialogue from which movie?",
-      "correct_answer": "Uri: The Surgical Strike",
+      "correct_answer": "Uri",
       "incorrect_answers": [
         "War",
         "Shershaah",
@@ -1574,7 +1574,7 @@
     },
     {
       "question": "Which film features the song 'Kajra Re'?",
-      "correct_answer": "Bunty Aur Babli",
+      "correct_answer": "Bunty Babli",
       "incorrect_answers": [
         "Dhoom 2",
         "Guru",
@@ -1594,7 +1594,7 @@
     },
     {
       "question": "Which Anurag Kashyap film is set across decades in the coal mafia of Dhanbad?",
-      "correct_answer": "Gangs of Wasseypur",
+      "correct_answer": "Wasseypur",
       "incorrect_answers": [
         "Dev.D",
         "Black Friday",
@@ -1604,11 +1604,11 @@
     },
     {
       "question": "Which singer performed 'Apna Time Aayega' from 'Gully Boy'?",
-      "correct_answer": "Ranveer Singh (with Divine)",
+      "correct_answer": "Ranveer Singh",
       "incorrect_answers": [
         "Arijit Singh",
         "Badshah",
-        "Yo Yo Honey Singh"
+        "Honey Singh"
       ],
       "difficulty": "easy"
     },
@@ -1634,7 +1634,7 @@
     },
     {
       "question": "In 'My Name Is Khan', what condition does the main character have?",
-      "correct_answer": "Asperger's Syndrome",
+      "correct_answer": "Asperger's",
       "incorrect_answers": [
         "Amnesia",
         "Autism",
@@ -1646,7 +1646,7 @@
       "question": "Which film features the iconic item number 'Sheila Ki Jawani'?",
       "correct_answer": "Tees Maar Khan",
       "incorrect_answers": [
-        "Dabangg",
+        "Dabangg 2",
         "Bodyguard",
         "Housefull"
       ],
@@ -1674,10 +1674,10 @@
     },
     {
       "question": "Which film's tagline is 'It's All About Loving Your Parents'?",
-      "correct_answer": "Kabhi Khushi Kabhie Gham",
+      "correct_answer": "K3G",
       "incorrect_answers": [
-        "Kuch Kuch Hota Hai",
-        "Kal Ho Naa Ho",
+        "KKHH",
+        "KHNH",
         "Baghban"
       ],
       "difficulty": "easy"
@@ -1824,7 +1824,7 @@
     },
     {
       "question": "Which Sridevi film from 2012 marked her comeback to Bollywood after 15 years?",
-      "correct_answer": "English Vinglish",
+      "correct_answer": "Eng Vinglish",
       "incorrect_answers": [
         "Mom",
         "Chandni",
@@ -1924,7 +1924,7 @@
     },
     {
       "question": "Which film features Aamir Khan playing a teacher who uses unconventional methods?",
-      "correct_answer": "Taare Zameen Par",
+      "correct_answer": "TZP",
       "incorrect_answers": [
         "3 Idiots",
         "Dangal",
@@ -1963,7 +1963,7 @@
       "difficulty": "easy"
     },
     {
-      "question": "Which Shah Rukh Khan film has him playing dual roles \u2014 a fan and a superstar?",
+      "question": "Which Shah Rukh Khan film has him playing dual roles — a fan and a superstar?",
       "correct_answer": "Fan",
       "incorrect_answers": [
         "Don 2",
@@ -1984,11 +1984,11 @@
     },
     {
       "question": "Who composed the music for 'Kabhi Khushi Kabhie Gham'?",
-      "correct_answer": "Jatin-Lalit and Sandesh Shandilya",
+      "correct_answer": "Jatin-Lalit",
       "incorrect_answers": [
-        "A.R. Rahman",
+        "Rahman",
         "Pritam",
-        "Shankar-Ehsaan-Loy"
+        "Ehsaan-Loy"
       ],
       "difficulty": "easy"
     },
@@ -2034,7 +2034,7 @@
     },
     {
       "question": "Who sang 'Roja Jaaneman' in the Hindi version of the film 'Roja'?",
-      "correct_answer": "S. P. Balasubrahmanyam",
+      "correct_answer": "S. P. Balu",
       "incorrect_answers": [
         "Kumar Sanu",
         "Hariharan",
@@ -2104,7 +2104,7 @@
     },
     {
       "question": "Who plays the role of Aisha in 'Ae Dil Hai Mushkil'?",
-      "correct_answer": "Aishwarya Rai Bachchan",
+      "correct_answer": "Aishwarya Rai",
       "incorrect_answers": [
         "Anushka Sharma",
         "Deepika Padukone",
@@ -2224,11 +2224,11 @@
     },
     {
       "question": "In 'Swades', what does Shah Rukh Khan's character build for the village?",
-      "correct_answer": "A small hydropower project for electricity",
+      "correct_answer": "Hydropower project",
       "incorrect_answers": [
-        "A water purification system",
-        "A school for children",
-        "A hospital"
+        "Water purifier",
+        "Village school",
+        "Village hospital"
       ],
       "difficulty": "medium"
     },
@@ -2804,9 +2804,9 @@
     },
     {
       "question": "In 'Bajirao Mastani', who composed the music?",
-      "correct_answer": "Sanjay Leela Bhansali",
+      "correct_answer": "SLB",
       "incorrect_answers": [
-        "A.R. Rahman",
+        "Rahman",
         "Pritam",
         "Vishal-Shekhar"
       ],
@@ -2924,7 +2924,7 @@
     },
     {
       "question": "Which film features Ayushmann Khurrana as a man with erectile dysfunction?",
-      "correct_answer": "Shubh Mangal Saavdhan",
+      "correct_answer": "Shubh Mangal",
       "incorrect_answers": [
         "Vicky Donor",
         "Badhaai Ho",
@@ -3454,7 +3454,7 @@
     },
     {
       "question": "In 'Brahmastra', what element is Shiva's superpower connected to?",
-      "correct_answer": "Fire (Agni Astra)",
+      "correct_answer": "Fire",
       "incorrect_answers": [
         "Water",
         "Wind",
@@ -3854,7 +3854,7 @@
     },
     {
       "question": "Which Bollywood film set during the 26/11 attacks is directed by Ram Gopal Varma?",
-      "correct_answer": "The Attacks of 26/11",
+      "correct_answer": "26/11 Attacks",
       "incorrect_answers": [
         "Hotel Mumbai",
         "A Wednesday",
@@ -4034,7 +4034,7 @@
     },
     {
       "question": "Which Anurag Kashyap film was selected for the Directors' Fortnight section at the 2012 Cannes Film Festival?",
-      "correct_answer": "Gangs of Wasseypur",
+      "correct_answer": "Wasseypur",
       "incorrect_answers": [
         "Dev.D",
         "Black Friday",
@@ -4103,12 +4103,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Who played the role of young Shivaji Maharaj in the 1994 Bollywood film 'Roja'?",
-      "correct_answer": "Roja did not feature young Shivaji Maharaj \u2014 the film is about a kidnapping in Kashmir",
+      "question": "Roja (1992) is about what?",
+      "correct_answer": "Kashmir kidnapping",
       "incorrect_answers": [
-        "Arvind Swami",
-        "Madhoo",
-        "Nana Patekar"
+        "Shivaji's youth",
+        "Partition drama",
+        "Cricket match"
       ],
       "difficulty": "hard"
     },
@@ -4133,12 +4133,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which specific Filmfare Award did 'Rang De Basanti' (2006) win \u2014 Best Film or Best Director?",
+      "question": "Which specific Filmfare Award did 'Rang De Basanti' (2006) win — Best Film or Best Director?",
       "correct_answer": "Best Film",
       "incorrect_answers": [
         "Best Director",
-        "Both Best Film and Best Director",
-        "Neither \u2014 it won Best Actor only"
+        "Best Actor",
+        "Best Music"
       ],
       "difficulty": "hard"
     },
@@ -4234,7 +4234,7 @@
     },
     {
       "question": "Which Indian film was the first to cross 2000 crore worldwide at the box office?",
-      "correct_answer": "Baahubali 2: The Conclusion",
+      "correct_answer": "Baahubali 2",
       "incorrect_answers": [
         "Dangal",
         "PK",
@@ -4244,11 +4244,11 @@
     },
     {
       "question": "Who was the costume designer for Sanjay Leela Bhansali's 'Padmaavat' (2018)?",
-      "correct_answer": "Rimple and Harpreet Narula",
+      "correct_answer": "Rimple & Harpreet",
       "incorrect_answers": [
         "Manish Malhotra",
         "Neeta Lulla",
-        "Sabyasachi Mukherjee"
+        "Sabyasachi"
       ],
       "difficulty": "hard"
     },
@@ -4284,11 +4284,11 @@
     },
     {
       "question": "In 'Haider' (2014), which real-life event forms the political backdrop of the film?",
-      "correct_answer": "The insurgency in Kashmir during the 1990s",
+      "correct_answer": "Kashmir insurgency",
       "incorrect_answers": [
-        "The 1971 Bangladesh Liberation War",
-        "The 1984 anti-Sikh riots",
-        "The 2002 Gujarat riots"
+        "Bangladesh war",
+        "Anti-Sikh riots",
+        "Gujarat riots"
       ],
       "difficulty": "hard"
     },
@@ -4314,7 +4314,7 @@
     },
     {
       "question": "Who played Maharani Jodha in Ashutosh Gowariker's 'Jodhaa Akbar' (2008)?",
-      "correct_answer": "Aishwarya Rai Bachchan",
+      "correct_answer": "Aishwarya Rai",
       "incorrect_answers": [
         "Deepika Padukone",
         "Rani Mukerji",
@@ -4343,8 +4343,8 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which Bollywood film was shot extensively at Mehrangarh Fort in Jodhpur?",
-      "correct_answer": "The Dark Knight Rises (not Bollywood) \u2014 'Thugs of Hindostan' used it",
+      "question": "Which Bollywood film used Mehrangarh Fort extensively?",
+      "correct_answer": "Thugs of Hindostan",
       "incorrect_answers": [
         "Jodhaa Akbar",
         "Bajirao Mastani",
@@ -4364,11 +4364,11 @@
     },
     {
       "question": "Which film featured Amitabh Bachchan's first on-screen death, which shocked audiences?",
-      "correct_answer": "Sholay (1975) \u2014 alternate ending",
+      "correct_answer": "Sholay",
       "incorrect_answers": [
-        "Deewaar (1975)",
-        "Trishul (1978)",
-        "Coolie (1983)"
+        "Deewaar",
+        "Trishul",
+        "Coolie"
       ],
       "difficulty": "hard"
     },
@@ -4483,8 +4483,8 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which Bollywood film was the first to be released on Netflix India on the same day as its theatrical release?",
-      "correct_answer": "Love Per Square Foot (2018) \u2014 it was a Netflix original, not theatrical",
+      "question": "Which 2018 film was Netflix India's first Hindi original?",
+      "correct_answer": "Love Per Sq Ft",
       "incorrect_answers": [
         "Ludo",
         "Bulbbul",
@@ -4533,12 +4533,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Who played the role of Silk Smitha's mother in 'The Dirty Picture' (2011)?",
-      "correct_answer": "Saranya Ponvannan did not play her mother \u2014 the film doesn't prominently feature the mother character",
+      "question": "Did 'The Dirty Picture' (2011) feature Silk Smitha's mother prominently?",
+      "correct_answer": "No",
       "incorrect_answers": [
-        "Supriya Pathak",
-        "Seema Biswas",
-        "Zarina Wahab"
+        "Yes, Supriya Pathak",
+        "Yes, Seema Biswas",
+        "Yes, Zarina Wahab"
       ],
       "difficulty": "hard"
     },
@@ -4554,21 +4554,21 @@
     },
     {
       "question": "Who wrote the lyrics for 'Lag Ja Gale' from the 1964 film 'Woh Kaun Thi?'?",
-      "correct_answer": "Raja Mehdi Ali Khan",
+      "correct_answer": "Raja Mehdi Khan",
       "incorrect_answers": [
         "Sahir Ludhianvi",
-        "Shailendra",
+        "Shailendra Mehta",
         "Majrooh Sultanpuri"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Which Bollywood film featured India's first underwater fight sequence?",
-      "correct_answer": "Bbuddah Hoga Terra Baap (2011)",
+      "correct_answer": "Bbuddah",
       "incorrect_answers": [
-        "Dhoom 2 (2006)",
-        "Ra.One (2011)",
-        "War (2019)"
+        "Dhoom 2",
+        "Ra.One",
+        "War"
       ],
       "difficulty": "hard"
     },
@@ -4653,12 +4653,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which specific National Film Award did Aamir Khan win for 'Lagaan' (2001)?",
-      "correct_answer": "He did not win a National Award for Lagaan \u2014 the film won Best Popular Film",
+      "question": "Did Aamir Khan win a National Award for 'Lagaan'?",
+      "correct_answer": "No",
       "incorrect_answers": [
-        "Best Actor",
-        "Best Director",
-        "Best Film"
+        "Yes, Best Actor",
+        "Yes, Best Director",
+        "Yes, Best Film"
       ],
       "difficulty": "hard"
     },
@@ -4733,7 +4733,7 @@
       "difficulty": "hard"
     },
     {
-      "question": "Who played Faizal Khan's wife Mohsina in 'Gangs of Wasseypur \u2014 Part 2'?",
+      "question": "Who played Faizal Khan's wife Mohsina in 'Gangs of Wasseypur — Part 2'?",
       "correct_answer": "Huma Qureshi",
       "incorrect_answers": [
         "Richa Chadha",
@@ -4796,9 +4796,9 @@
       "question": "Which Bimal Roy film won the Filmfare Award for Best Film in 1954?",
       "correct_answer": "Do Bigha Zamin",
       "incorrect_answers": [
-        "Devdas",
-        "Madhumati",
-        "Bandini"
+        "Devdas film",
+        "Madhumati film",
+        "Bandini film"
       ],
       "difficulty": "hard"
     },
@@ -4954,27 +4954,27 @@
     },
     {
       "question": "Which film was the directorial debut of Reema Kagti?",
-      "correct_answer": "Honeymoon Travels Pvt. Ltd. (2007)",
+      "correct_answer": "Honeymoon Travels",
       "incorrect_answers": [
-        "Talaash (2012)",
-        "Gold (2018)",
-        "Luck By Chance (2009)"
+        "Talaash 2012",
+        "Gold 2018",
+        "Luck By Chance"
       ],
       "difficulty": "hard"
     },
     {
       "question": "In 'Kapoor & Sons' (2016), which disease does the grandfather character suffer from?",
-      "correct_answer": "He has had a heart attack and is terminally ill",
+      "correct_answer": "Heart attack",
       "incorrect_answers": [
-        "Alzheimer's disease",
-        "Parkinson's disease",
+        "Alzheimer's",
+        "Parkinson's",
         "Cancer"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Who directed the 2010 film 'Peepli Live' that was India's Oscar entry?",
-      "correct_answer": "Aamir Khan Productions presented it \u2014 directed by Anusha Rizvi",
+      "correct_answer": "Anusha Rizvi",
       "incorrect_answers": [
         "Dibakar Banerjee",
         "Anurag Kashyap",
@@ -5064,11 +5064,11 @@
     },
     {
       "question": "In 'Piku' (2015), what is Bhaskor Banerjee's (Amitabh Bachchan) obsession?",
-      "correct_answer": "His bowel movements / constipation",
+      "correct_answer": "Constipation",
       "incorrect_answers": [
-        "His blood pressure",
-        "His diet",
-        "His daily walks"
+        "Blood pressure",
+        "Strict diet",
+        "Daily walks"
       ],
       "difficulty": "hard"
     },
@@ -5084,17 +5084,17 @@
     },
     {
       "question": "Which was the first Bollywood film to be shot in 3D stereoscopy?",
-      "correct_answer": "My Dear Kuttichathan (1984, Malayalam) \u2014 for Hindi, Chhota Chetan (1998)",
+      "correct_answer": "Chhota Chetan",
       "incorrect_answers": [
-        "Ra.One (2011)",
-        "Don 2 (2011)",
-        "Dhoom 3 (2013)"
+        "Ra.One 3D",
+        "Don 2 3D",
+        "Dhoom 3 3D"
       ],
       "difficulty": "hard"
     },
     {
-      "question": "Who played the role of young Sardar Khan in 'Gangs of Wasseypur \u2014 Part 1'?",
-      "correct_answer": "Nawazuddin Siddiqui played the adult role; Jaideep Ahlawat played the young Shahid Khan",
+      "question": "Who played young Shahid Khan in 'Gangs of Wasseypur'?",
+      "correct_answer": "Jaideep Ahlawat",
       "incorrect_answers": [
         "Rajkummar Rao",
         "Vicky Kaushal",
@@ -5104,10 +5104,10 @@
     },
     {
       "question": "Who was the production designer for 'Padmaavat' (2018)?",
-      "correct_answer": "Sanjay Leela Bhansali and Saloni Dhatrak",
+      "correct_answer": "SLB & Saloni",
       "incorrect_answers": [
         "Sabu Cyril",
-        "Nitin Chandrakant Desai",
+        "Nitin Desai",
         "Sharmishta Roy"
       ],
       "difficulty": "hard"
@@ -5313,12 +5313,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which Bollywood film was adapted from the Marathi play 'Natsamrat'?",
-      "correct_answer": "Natsamrat (2016, Marathi film) \u2014 the Hindi film was not made from the play",
+      "question": "Has 'Natsamrat' (Marathi play) been adapted into a Bollywood Hindi film?",
+      "correct_answer": "No",
       "incorrect_answers": [
-        "Agneepath",
-        "Sarkar",
-        "The Last Lear"
+        "Yes, as Agneepath",
+        "Yes, as Sarkar",
+        "Yes, as The Last Lear"
       ],
       "difficulty": "hard"
     },
@@ -5334,10 +5334,10 @@
     },
     {
       "question": "In 'Drishyam' (2015), what crime does Vijay Salgaonkar cover up?",
-      "correct_answer": "The accidental killing of a police officer's son by his family",
+      "correct_answer": "Accidental killing",
       "incorrect_answers": [
-        "A robbery gone wrong",
-        "A planned murder",
+        "A robbery",
+        "Planned murder",
         "A kidnapping"
       ],
       "difficulty": "hard"
@@ -5354,11 +5354,11 @@
     },
     {
       "question": "Which film festival first screened 'Masaan' (2015) where it won two awards?",
-      "correct_answer": "Cannes Film Festival (Un Certain Regard)",
+      "correct_answer": "Cannes",
       "incorrect_answers": [
-        "Venice Film Festival",
-        "Berlin Film Festival",
-        "Toronto International Film Festival"
+        "Venice",
+        "Berlin",
+        "Toronto"
       ],
       "difficulty": "hard"
     },
@@ -5374,7 +5374,7 @@
     },
     {
       "question": "In 'Udaan' (2010), the protagonist is an aspiring what?",
-      "correct_answer": "Writer / poet",
+      "correct_answer": "Writer",
       "incorrect_answers": [
         "Musician",
         "Filmmaker",
@@ -5414,11 +5414,11 @@
     },
     {
       "question": "In 'Lakshya' (2004), the protagonist transforms from an aimless youth to what?",
-      "correct_answer": "An Indian Army officer during the Kargil War",
+      "correct_answer": "Army officer",
       "incorrect_answers": [
-        "An IAS officer",
-        "A Navy officer",
-        "An Air Force pilot"
+        "IAS officer",
+        "Navy officer",
+        "Air Force pilot"
       ],
       "difficulty": "hard"
     },
@@ -5434,11 +5434,11 @@
     },
     {
       "question": "Which Shyam Benegal film featured Smita Patil in her debut role?",
-      "correct_answer": "Charandas Chor (1975)",
+      "correct_answer": "Charandas Chor",
       "incorrect_answers": [
-        "Ankur (1974)",
-        "Nishant (1975)",
-        "Manthan (1976)"
+        "Ankur film",
+        "Nishant film",
+        "Manthan film"
       ],
       "difficulty": "hard"
     },
@@ -5454,7 +5454,7 @@
     },
     {
       "question": "Which song from 'Rang De Basanti' features a rock arrangement with A.R. Rahman's composition?",
-      "correct_answer": "Rang De Basanti (title track)",
+      "correct_answer": "Title track",
       "incorrect_answers": [
         "Khoon Chala",
         "Roobaroo",
@@ -5503,12 +5503,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which 1990 Vidhu Vinod Chopra film was India's official Oscar entry?",
-      "correct_answer": "1900 (not 1990) \u2014 '1942: A Love Story' (1994) was Chopra's; 'Parinda' (1989) was the Oscar entry",
+      "question": "Which Vidhu Vinod Chopra film was India's 1989 Oscar entry?",
+      "correct_answer": "Parinda",
       "incorrect_answers": [
-        "Munna Bhai M.B.B.S.",
         "3 Idiots",
-        "Lage Raho Munna Bhai"
+        "Munna Bhai MBBS",
+        "Lage Raho Munna"
       ],
       "difficulty": "hard"
     },
@@ -5526,9 +5526,9 @@
       "question": "Which composer created the music for the 1955 classic 'Shree 420'?",
       "correct_answer": "Shankar-Jaikishan",
       "incorrect_answers": [
-        "S.D. Burman",
-        "Naushad",
-        "Madan Mohan"
+        "S. D. Burman",
+        "Naushad sahab",
+        "Madan Mohan ji"
       ],
       "difficulty": "hard"
     },
@@ -5704,7 +5704,7 @@
     },
     {
       "question": "In 'Paan Singh Tomar' (2012), which sport was the protagonist originally a champion in?",
-      "correct_answer": "Steeplechase (athletics)",
+      "correct_answer": "Steeplechase",
       "incorrect_answers": [
         "Marathon",
         "Wrestling",
@@ -5754,11 +5754,11 @@
     },
     {
       "question": "Which Bollywood film is a remake of the 2004 Spanish thriller 'The Body' (El Cuerpo)?",
-      "correct_answer": "The Body (2019, Hindi)",
+      "correct_answer": "The Body",
       "incorrect_answers": [
-        "Ittefaq (2017)",
-        "Badla (2019)",
-        "Kahaani 2 (2016)"
+        "Ittefaq",
+        "Badla",
+        "Kahaani 2"
       ],
       "difficulty": "hard"
     },
@@ -5784,11 +5784,11 @@
     },
     {
       "question": "In 'Gangs of Wasseypur', what is the profession of Sardar Khan's father Shahid Khan?",
-      "correct_answer": "A coal loader / laborer who becomes a dacoit",
+      "correct_answer": "Coal laborer",
       "incorrect_answers": [
-        "A politician",
-        "A police officer",
-        "A teacher"
+        "Politician",
+        "Police officer",
+        "Teacher"
       ],
       "difficulty": "hard"
     },
@@ -5803,12 +5803,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which Bollywood film was adapted from Rohinton Mistry's novel 'A Fine Balance'?",
-      "correct_answer": "No Bollywood film has been officially adapted from 'A Fine Balance'",
+      "question": "Has Rohinton Mistry's 'A Fine Balance' been adapted to Bollywood?",
+      "correct_answer": "No",
       "incorrect_answers": [
-        "Peepli Live",
-        "City of Joy",
-        "Masaan"
+        "Yes, Peepli Live",
+        "Yes, City of Joy",
+        "Yes, Masaan"
       ],
       "difficulty": "hard"
     },
@@ -5843,32 +5843,32 @@
       "difficulty": "hard"
     },
     {
-      "question": "Who was the screenwriter of 'Rang De Basanti' (2006)?",
-      "correct_answer": "Rakeysh Omprakash Mehra, Rensil D'Silva, Prasoon Joshi",
+      "question": "How many people wrote 'Rang De Basanti' (2006)?",
+      "correct_answer": "Three",
       "incorrect_answers": [
-        "Javed Akhtar alone",
-        "Aamir Khan and his team",
-        "A.R. Rahman"
+        "One",
+        "Two",
+        "Five"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Which Bollywood film is based on the 2008 Mumbai terrorist attacks and stars Nana Patekar?",
-      "correct_answer": "The Attacks of 26/11 (2013)",
+      "correct_answer": "26/11 Attacks",
       "incorrect_answers": [
-        "Hotel Mumbai (2018)",
-        "Tashkent Files (2019)",
-        "Baby (2015)"
+        "Hotel Mumbai",
+        "Tashkent Files",
+        "Baby"
       ],
       "difficulty": "hard"
     },
     {
-      "question": "In 'Dil Se' (1998), what are the seven stages of love that the film's structure follows?",
-      "correct_answer": "Attraction, infatuation, love, reverence, worship, obsession, death",
+      "question": "How many stages of love does 'Dil Se' (1998) follow?",
+      "correct_answer": "Seven",
       "incorrect_answers": [
-        "Hope, desire, passion, devotion, sacrifice, surrender, union",
-        "Innocence, longing, admiration, devotion, madness, separation, death",
-        "Meeting, attraction, courtship, union, bliss, conflict, resolution"
+        "Five",
+        "Six",
+        "Eight"
       ],
       "difficulty": "hard"
     },
@@ -5894,7 +5894,7 @@
     },
     {
       "question": "In 'Highway' (2014), where was the final climactic scene shot?",
-      "correct_answer": "Aru Valley, Kashmir",
+      "correct_answer": "Aru Valley",
       "incorrect_answers": [
         "Ladakh",
         "Manali",
@@ -5943,12 +5943,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "Which Bollywood film won the Golden Peacock at IFFI (International Film Festival of India) in 2012?",
-      "correct_answer": "Ship of Theseus did not win Golden Peacock \u2014 Paan Singh Tomar won the National Award that year",
+      "question": "Did 'Ship of Theseus' win the Golden Peacock at IFFI 2012?",
+      "correct_answer": "No",
       "incorrect_answers": [
-        "Barfi!",
-        "Gangs of Wasseypur",
-        "Kahaani"
+        "Yes",
+        "It won at Cannes",
+        "It won at Berlin"
       ],
       "difficulty": "hard"
     },
@@ -5964,11 +5964,11 @@
     },
     {
       "question": "In 'Mughal-E-Azam' (1960), which song was shot in color while the rest of the film was in black and white?",
-      "correct_answer": "Jab Pyar Kiya To Darna Kya (Sheesh Mahal sequence)",
+      "correct_answer": "Jab Pyar Kiya",
       "incorrect_answers": [
-        "Mohabbat Ki Jhooti Kahani",
+        "Mohabbat Ki Jhooti",
         "Ae Mohabbat Zindabad",
-        "Khuda Nigehbaan Ho Tumhara"
+        "Khuda Nigehbaan"
       ],
       "difficulty": "hard"
     },

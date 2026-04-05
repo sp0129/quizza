@@ -263,12 +263,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What does S.H.I.E.L.D. stand for?",
-      "correct_answer": "Strategic Homeland Intervention, Enforcement and Logistics Division",
+      "question": "What does the 'S' in S.H.I.E.L.D. stand for?",
+      "correct_answer": "Strategic",
       "incorrect_answers": [
-        "Special Heroic International Enforcement and Law Division",
-        "Secret Homeland Intelligence and Espionage Liaison Department",
-        "Superhuman Intelligence and Emergency Logistics Division"
+        "Secret",
+        "Supreme",
+        "Superhuman"
       ],
       "difficulty": "easy"
     },
@@ -394,7 +394,7 @@
     },
     {
       "question": "What animal does Carol Danvers have as a pet?",
-      "correct_answer": "Cat (Flerken)",
+      "correct_answer": "Flerken",
       "incorrect_answers": [
         "Dog",
         "Hamster",
@@ -404,7 +404,7 @@
     },
     {
       "question": "Who is the mentor of Doctor Strange?",
-      "correct_answer": "The Ancient One",
+      "correct_answer": "Ancient One",
       "incorrect_answers": [
         "Wong",
         "Mordo",
@@ -434,11 +434,11 @@
     },
     {
       "question": "Who is the biological father of Star-Lord?",
-      "correct_answer": "Ego the Living Planet",
+      "correct_answer": "Ego",
       "incorrect_answers": [
-        "Yondu Udonta",
+        "Yondu",
         "Thanos",
-        "The Collector"
+        "Collector"
       ],
       "difficulty": "easy"
     },
@@ -464,7 +464,7 @@
     },
     {
       "question": "How many years was Steve Rogers frozen in ice?",
-      "correct_answer": "Nearly 70 years",
+      "correct_answer": "~70 years",
       "incorrect_answers": [
         "20 years",
         "50 years",
@@ -553,12 +553,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the name of the organization that John Walker (U.S. Agent) works for in 'The Falcon and the Winter Soldier'?",
-      "correct_answer": "GRC (Global Repatriation Council)",
+      "question": "John Walker (U.S. Agent) works for which org in Falcon and the Winter Soldier?",
+      "correct_answer": "GRC",
       "incorrect_answers": [
-        "S.H.I.E.L.D.",
-        "H.Y.D.R.A.",
-        "The Power Broker"
+        "SHIELD",
+        "HYDRA",
+        "Power Broker"
       ],
       "difficulty": "medium"
     },
@@ -654,7 +654,7 @@
     },
     {
       "question": "What is the name of the moon Thanos throws at the Avengers in 'Infinity War'?",
-      "correct_answer": "Titan's Moon",
+      "correct_answer": "Titan",
       "incorrect_answers": [
         "Europa",
         "Phobos",
@@ -713,12 +713,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the name of the celestial whose head became the mining colony 'Knowhere'?",
-      "correct_answer": "The head of a dead Celestial",
+      "question": "Knowhere is built inside the head of what?",
+      "correct_answer": "A Celestial",
       "incorrect_answers": [
-        "Ego",
-        "Arishem",
-        "Tiamut"
+        "An Eternal",
+        "A Kree",
+        "A Skrull"
       ],
       "difficulty": "medium"
     },
@@ -734,11 +734,11 @@
     },
     {
       "question": "What is the name of the vibranium-detecting device in 'Black Panther: Wakanda Forever'?",
-      "correct_answer": "The Vibranium Detector",
+      "correct_answer": "Vibranium sensor",
       "incorrect_answers": [
-        "The Sonic Spear",
-        "The Kimoyo Bead",
-        "The Ore-Seer"
+        "Sonic spear",
+        "Kimoyo bead",
+        "Ore-seer"
       ],
       "difficulty": "medium"
     },
@@ -803,12 +803,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the name of the secret society M.O.D.O.K. leads in the Quantum Realm?",
-      "correct_answer": "He is a hunter for Kang",
+      "question": "In the Quantum Realm, M.O.D.O.K. works for which villain?",
+      "correct_answer": "Kang",
       "incorrect_answers": [
-        "A.I.M.",
-        "The Mechanized",
-        "The Seekers"
+        "Thanos",
+        "Loki",
+        "Ultron"
       ],
       "difficulty": "medium"
     },
@@ -863,11 +863,11 @@
       "difficulty": "medium"
     },
     {
-      "question": "Which film features the first appearance of the character Val (Valentina Allegra de Fontaine)?",
-      "correct_answer": "The Falcon and the Winter Soldier",
+      "question": "In which MCU series did Val (Valentina) first appear?",
+      "correct_answer": "Falcon series",
       "incorrect_answers": [
-        "Black Widow",
-        "Black Panther: Wakanda Forever",
+        "WandaVision",
+        "Loki series",
         "Hawkeye"
       ],
       "difficulty": "medium"
@@ -923,12 +923,12 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the name of the bartender who helps Thor and Rocket in 'Endgame' (Asgard scene)?",
-      "correct_answer": "He is not named, but they encounter Frigga",
+      "question": "In Endgame's Asgard scene, Thor and Rocket encounter who?",
+      "correct_answer": "Frigga",
       "incorrect_answers": [
-        "Stan",
-        "Hogun",
-        "Volstagg"
+        "Heimdall",
+        "Loki",
+        "Odin"
       ],
       "difficulty": "medium"
     },
@@ -1084,7 +1084,7 @@
     },
     {
       "question": "Which Avenger is a master archer?",
-      "correct_answer": "Hawkeye (Clint Barton)",
+      "correct_answer": "Hawkeye",
       "incorrect_answers": [
         "Black Widow",
         "Falcon",
@@ -1103,12 +1103,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "Who is Groot?",
-      "correct_answer": "A tree-like creature who can only say 'I am Groot'",
+      "question": "Groot can only say which phrase?",
+      "correct_answer": "I am Groot",
       "incorrect_answers": [
-        "A shapeshifting alien",
-        "A robot",
-        "A giant insect"
+        "I am here",
+        "Help me",
+        "Hello"
       ],
       "difficulty": "easy"
     },
@@ -1204,7 +1204,7 @@
     },
     {
       "question": "Who killed Tony Stark's parents?",
-      "correct_answer": "The Winter Soldier (Bucky Barnes, while brainwashed)",
+      "correct_answer": "Winter Soldier",
       "incorrect_answers": [
         "Thanos",
         "Loki",
@@ -1223,12 +1223,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "Who is Pepper Potts?",
-      "correct_answer": "Tony Stark's partner and CEO of Stark Industries",
+      "question": "Pepper Potts becomes CEO of which company?",
+      "correct_answer": "Stark Inc",
       "incorrect_answers": [
-        "A S.H.I.E.L.D. agent",
-        "Thor's love interest",
-        "A scientist at Avengers HQ"
+        "OsCorp",
+        "Roxxon",
+        "AIM Tech"
       ],
       "difficulty": "easy"
     },
@@ -1254,11 +1254,11 @@
     },
     {
       "question": "What is the Tesseract?",
-      "correct_answer": "A cube containing the Space Stone",
+      "correct_answer": "Space Stone container",
       "incorrect_answers": [
-        "A weapon made by Tony Stark",
-        "An Asgardian energy source",
-        "A Kree artifact"
+        "Stark weapon",
+        "Asgardian source",
+        "Kree artifact"
       ],
       "difficulty": "easy"
     },
@@ -1318,7 +1318,7 @@
       "incorrect_answers": [
         "A cybernetic implant",
         "An Infinity Stone",
-        "Nothing \u2014 it's decorative"
+        "Nothing — it's decorative"
       ],
       "difficulty": "easy"
     },
@@ -1334,7 +1334,7 @@
     },
     {
       "question": "Who is the strongest Avenger according to Thor?",
-      "correct_answer": "Thor (he claims it himself)",
+      "correct_answer": "Thor",
       "incorrect_answers": [
         "Hulk",
         "Captain Marvel",
@@ -1343,32 +1343,32 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is Vision made from?",
-      "correct_answer": "Vibranium and the Mind Stone",
+      "question": "Vision's body is built primarily from what metal?",
+      "correct_answer": "Vibranium",
       "incorrect_answers": [
         "Adamantium",
         "Uru metal",
-        "Chitauri technology"
+        "Chitauri tech"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "Who is Shuri?",
-      "correct_answer": "T'Challa's sister and Wakandan tech genius",
+      "question": "Shuri is T'Challa's what?",
+      "correct_answer": "Sister",
       "incorrect_answers": [
-        "A Dora Milaje warrior",
-        "Killmonger's ally",
-        "An Asgardian princess"
+        "Wife",
+        "Cousin",
+        "Aunt"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What does S.H.I.E.L.D. stand for?",
-      "correct_answer": "Strategic Homeland Intervention, Enforcement and Logistics Division",
+      "question": "What does the 'S' in S.H.I.E.L.D. stand for?",
+      "correct_answer": "Strategic",
       "incorrect_answers": [
-        "Supreme Headquarters International Espionage Law-enforcement Division",
-        "Strategic Hazard Intervention Espionage Logistics Directorate",
-        "Special Hero Intelligence and Enforcement Logistics Division"
+        "Supreme",
+        "Secret",
+        "Superhuman"
       ],
       "difficulty": "easy"
     },
@@ -1413,12 +1413,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "Who directed most of the Avengers movies?",
-      "correct_answer": "Joss Whedon (1 & 2) and the Russo Brothers (3 & 4)",
+      "question": "Who directed Avengers: Endgame and Infinity War?",
+      "correct_answer": "Russo Brothers",
       "incorrect_answers": [
+        "Joss Whedon",
         "James Gunn",
-        "Taika Waititi",
-        "Jon Favreau"
+        "Taika Waititi"
       ],
       "difficulty": "easy"
     },
@@ -1444,21 +1444,21 @@
     },
     {
       "question": "What does Ant-Man's suit allow him to do?",
-      "correct_answer": "Shrink and grow in size",
+      "correct_answer": "Shrink and grow",
       "incorrect_answers": [
         "Turn invisible",
-        "Fly without wings",
+        "Wingless flight",
         "Control time"
       ],
       "difficulty": "easy"
     },
     {
       "question": "Which MCU movie introduced the multiverse concept?",
-      "correct_answer": "Doctor Strange in the Multiverse of Madness (though hinted earlier)",
+      "correct_answer": "Doctor Strange 2",
       "incorrect_answers": [
-        "Avengers: Endgame",
-        "Loki (TV series)",
-        "Spider-Man: Far From Home"
+        "Endgame",
+        "Loki series",
+        "Far From Home"
       ],
       "difficulty": "easy"
     },
@@ -1474,17 +1474,17 @@
     },
     {
       "question": "What did Thanos do with the Infinity Gauntlet?",
-      "correct_answer": "Snapped away half of all life in the universe",
+      "correct_answer": "Erased half of life",
       "incorrect_answers": [
-        "Destroyed all the Avengers",
-        "Created a new universe",
-        "Traveled back in time"
+        "Destroyed Avengers",
+        "Created a universe",
+        "Traveled in time"
       ],
       "difficulty": "easy"
     },
     {
       "question": "Who is the villain in 'Spider-Man: Homecoming'?",
-      "correct_answer": "Vulture (Adrian Toomes)",
+      "correct_answer": "Vulture",
       "incorrect_answers": [
         "Mysterio",
         "Green Goblin",
@@ -1524,7 +1524,7 @@
     },
     {
       "question": "What is the name of the organization that experimented on Wanda and Pietro?",
-      "correct_answer": "HYDRA (using the Mind Stone)",
+      "correct_answer": "HYDRA",
       "incorrect_answers": [
         "A.I.M.",
         "S.W.O.R.D.",
@@ -1544,7 +1544,7 @@
     },
     {
       "question": "What is the real name of the villain Killmonger?",
-      "correct_answer": "N'Jadaka (Erik Stevens)",
+      "correct_answer": "N'Jadaka",
       "incorrect_answers": [
         "T'Chaka",
         "W'Kabi",
@@ -1563,12 +1563,12 @@
       "difficulty": "hard"
     },
     {
-      "question": "What is the name of the AI that becomes Ultron?",
-      "correct_answer": "Tony Stark's peacekeeping program using the Mind Stone",
+      "question": "Ultron was created from Tony Stark's what?",
+      "correct_answer": "Peacekeeping AI",
       "incorrect_answers": [
-        "JARVIS",
-        "FRIDAY",
-        "EDITH"
+        "Iron Man suit",
+        "JARVIS AI",
+        "Stone shard"
       ],
       "difficulty": "hard"
     },
@@ -1584,11 +1584,11 @@
     },
     {
       "question": "What is the Quantum Realm?",
-      "correct_answer": "A subatomic dimension accessible by shrinking beyond atomic scale",
+      "correct_answer": "Subatomic dimension",
       "incorrect_answers": [
-        "An alternate universe",
-        "A pocket dimension created by Doctor Strange",
-        "A virtual reality simulation"
+        "Alternate universe",
+        "Pocket dimension",
+        "VR simulation"
       ],
       "difficulty": "hard"
     },
@@ -1614,21 +1614,21 @@
     },
     {
       "question": "What is Vibranium's origin in the MCU?",
-      "correct_answer": "It came from a meteorite that crashed in Wakanda",
+      "correct_answer": "Meteorite in Wakanda",
       "incorrect_answers": [
-        "It was created by Stark Industries",
-        "It came from Asgard",
-        "It was synthesized by HYDRA"
+        "Stark lab creation",
+        "Asgard's forge",
+        "HYDRA synthesis"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Who forged Stormbreaker?",
-      "correct_answer": "Eitri the dwarf on Nidavellir",
+      "correct_answer": "Eitri",
       "incorrect_answers": [
-        "Odin on Asgard",
-        "Tony Stark",
-        "The Collector"
+        "Odin",
+        "Stark",
+        "Collector"
       ],
       "difficulty": "hard"
     },
@@ -1664,7 +1664,7 @@
     },
     {
       "question": "Who was the first MCU character to appear on screen?",
-      "correct_answer": "Tony Stark (in Iron Man, 2008)",
+      "correct_answer": "Tony Stark",
       "incorrect_answers": [
         "Nick Fury",
         "Captain America",
@@ -1684,31 +1684,31 @@
     },
     {
       "question": "What is Project Insight in 'Captain America: The Winter Soldier'?",
-      "correct_answer": "HYDRA's plan to use helicarriers to eliminate threats preemptively",
+      "correct_answer": "HYDRA helicarrier plan",
       "incorrect_answers": [
-        "A super soldier program",
-        "A mind control initiative",
-        "A space defense system"
+        "Super soldier program",
+        "Mind control project",
+        "Space defense grid"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Who is the Collector?",
-      "correct_answer": "Taneleer Tivan, an Elder of the Universe who collects rare artifacts",
+      "correct_answer": "Taneleer Tivan",
       "incorrect_answers": [
         "A Celestial",
-        "A Kree warlord",
-        "An Asgardian exile"
+        "Kree warlord",
+        "Asgardian exile"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the Darkhold?",
-      "correct_answer": "A book of dark magic also known as the Book of the Damned",
+      "correct_answer": "Dark magic book",
       "incorrect_answers": [
         "Dormammu's weapon",
         "A Hydra file",
-        "An Infinity Stone container"
+        "Stone container"
       ],
       "difficulty": "hard"
     },
@@ -1718,33 +1718,33 @@
       "incorrect_answers": [
         "Ross Marquand",
         "Mads Mikkelsen",
-        "Daniel Br\u00fchl"
+        "Daniel Brühl"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the TVA in the MCU?",
-      "correct_answer": "The Time Variance Authority \u2014 monitors the timeline",
+      "correct_answer": "Time Variance Authority",
       "incorrect_answers": [
-        "Thanos's Vanguard Army",
-        "The Temporal Void Alliance",
-        "Transdimensional Variant Agency"
+        "Thanos Vanguard Army",
+        "Temporal Void Alliance",
+        "Transdimensional Agency"
       ],
       "difficulty": "hard"
     },
     {
       "question": "In what MCU movie does the concept of the multiverse first get mentioned?",
-      "correct_answer": "Doctor Strange (2016) \u2014 the Ancient One mentions it",
+      "correct_answer": "Doctor Strange",
       "incorrect_answers": [
-        "Avengers: Endgame",
-        "Spider-Man: Far From Home",
-        "Ant-Man and the Wasp"
+        "Endgame",
+        "Far From Home",
+        "Ant-Man 2"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is Yelena Belova's relationship to Natasha Romanoff?",
-      "correct_answer": "Adopted sister (both raised in the Red Room)",
+      "correct_answer": "Adopted sister",
       "incorrect_answers": [
         "Biological sister",
         "Daughter",
@@ -1754,9 +1754,9 @@
     },
     {
       "question": "What is the name of the sword that can destroy the Ten Rings?",
-      "correct_answer": "There is no such sword \u2014 this is a trick question",
+      "correct_answer": "No such sword",
       "incorrect_answers": [
-        "The Ebony Blade",
+        "Ebony Blade",
         "Grasscutter",
         "Dragonfang"
       ],
@@ -1774,7 +1774,7 @@
     },
     {
       "question": "What species is Drax the Destroyer?",
-      "correct_answer": "He appears humanoid but his species is not named in the MCU",
+      "correct_answer": "Never named",
       "incorrect_answers": [
         "Kree",
         "Skrull",
@@ -1804,31 +1804,31 @@
     },
     {
       "question": "What is Adamantium in Marvel comics (not present in MCU)?",
-      "correct_answer": "An indestructible metal alloy bonded to Wolverine's skeleton",
+      "correct_answer": "Wolverine's metal",
       "incorrect_answers": [
-        "The metal of Captain America's shield",
-        "Thanos's gauntlet material",
-        "A Wakandan resource"
+        "Shield metal",
+        "Gauntlet alloy",
+        "Wakandan ore"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the Blip?",
-      "correct_answer": "The name given to the 5-year period when half the population was snapped away",
+      "correct_answer": "5-year snap aftermath",
       "incorrect_answers": [
-        "The name for Thanos's snap itself",
-        "A S.H.I.E.L.D. operation",
-        "The time travel event in Endgame"
+        "The snap itself",
+        "SHIELD operation",
+        "Endgame time travel"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Who is He Who Remains?",
-      "correct_answer": "A variant of Kang who created the TVA to prevent a multiversal war",
+      "correct_answer": "Kang variant",
       "incorrect_answers": [
-        "The One Above All",
-        "A future version of Tony Stark",
-        "The first Celestial"
+        "One Above All",
+        "Future Tony Stark",
+        "First Celestial"
       ],
       "difficulty": "hard"
     },
@@ -1874,11 +1874,11 @@
     },
     {
       "question": "What is the Ten Rings organization?",
-      "correct_answer": "A terrorist group led by the Mandarin (Xu Wenwu) for 1,000 years",
+      "correct_answer": "Terrorist group",
       "incorrect_answers": [
-        "A group of ten magical rings",
-        "A SHIELD black ops division",
-        "A Kree cult"
+        "Magical rings",
+        "SHIELD ops",
+        "Kree cult"
       ],
       "difficulty": "hard"
     },
@@ -1894,7 +1894,7 @@
     },
     {
       "question": "What year did the MCU's Phase One begin?",
-      "correct_answer": "2008 (with Iron Man)",
+      "correct_answer": "2008",
       "incorrect_answers": [
         "2006",
         "2010",
@@ -1914,31 +1914,31 @@
     },
     {
       "question": "What is the significance of the number 3000 in the MCU?",
-      "correct_answer": "Morgan Stark says 'I love you 3000' to Tony",
+      "correct_answer": "Morgan's 'I love you'",
       "incorrect_answers": [
-        "It's the number of Avengers members",
-        "It's how many years the Time Stone spans",
-        "It's Thanos's army count"
+        "Avengers count",
+        "Time Stone years",
+        "Thanos army count"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What are Pym Particles?",
-      "correct_answer": "Subatomic particles discovered by Hank Pym that allow size manipulation",
+      "correct_answer": "Size-changing particles",
       "incorrect_answers": [
         "Quantum energy units",
         "Vibranium atoms",
-        "Infinity Stone fragments"
+        "Stone fragments"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Which Infinity Stone does Doctor Strange protect?",
-      "correct_answer": "The Time Stone (Eye of Agamotto)",
+      "correct_answer": "Time Stone",
       "incorrect_answers": [
-        "The Mind Stone",
-        "The Soul Stone",
-        "The Reality Stone"
+        "Mind Stone",
+        "Soul Stone",
+        "Reality Stone"
       ],
       "difficulty": "hard"
     },
@@ -1954,17 +1954,17 @@
     },
     {
       "question": "Who was the first female superhero to get a solo MCU movie?",
-      "correct_answer": "Captain Marvel (Carol Danvers, 2019)",
+      "correct_answer": "Captain Marvel (2019)",
       "incorrect_answers": [
         "Black Widow (2021)",
         "Scarlet Witch",
-        "Wasp"
+        "The Wasp"
       ],
       "difficulty": "hard"
     },
     {
       "question": "What is the Raft in the MCU?",
-      "correct_answer": "An underwater prison for enhanced individuals",
+      "correct_answer": "Underwater prison",
       "incorrect_answers": [
         "A helicarrier",
         "A space station",
@@ -1984,7 +1984,7 @@
     },
     {
       "question": "Which MCU character has appeared in the most movies?",
-      "correct_answer": "Nick Fury (Samuel L. Jackson)",
+      "correct_answer": "Nick Fury",
       "incorrect_answers": [
         "Tony Stark",
         "Steve Rogers",
@@ -1994,7 +1994,7 @@
     },
     {
       "question": "Who killed T'Chaka (Black Panther's father)?",
-      "correct_answer": "Helmut Zemo (via a bombing)",
+      "correct_answer": "Helmut Zemo",
       "incorrect_answers": [
         "Killmonger",
         "Ulysses Klaue",

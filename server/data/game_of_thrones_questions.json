@@ -163,12 +163,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the unofficial motto associated with the Lannisters?",
-      "correct_answer": "A Lannister always pays his debts",
+      "question": "Which phrase is the unofficial Lannister motto?",
+      "correct_answer": "Pays his debts",
       "incorrect_answers": [
         "Hear Me Roar",
-        "Gold buys all",
-        "Lions never kneel"
+        "Lions never kneel",
+        "Gold buys all"
       ],
       "difficulty": "easy"
     },
@@ -824,7 +824,7 @@
     },
     {
       "question": "What sigil does House Targaryen use?",
-      "correct_answer": "A three-headed dragon",
+      "correct_answer": "Three-headed dragon",
       "incorrect_answers": [
         "A single dragon",
         "A flaming sword",
@@ -1024,11 +1024,11 @@
     },
     {
       "question": "What event is referred to as 'The Red Wedding'?",
-      "correct_answer": "Massacre of Robb Stark at the Twins",
+      "correct_answer": "Robb Stark's massacre",
       "incorrect_answers": [
-        "Joffrey's poisoning at his wedding",
-        "Daenerys's wedding to Khal Drogo",
-        "Sansa's wedding to Tyrion"
+        "Joffrey's poisoning",
+        "Daenerys's wedding",
+        "Sansa's wedding"
       ],
       "difficulty": "medium"
     },
@@ -1104,7 +1104,7 @@
     },
     {
       "question": "What is the name of the Valyrian steel dagger used in the attempt on Bran's life?",
-      "correct_answer": "The Catspaw dagger",
+      "correct_answer": "Catspaw",
       "incorrect_answers": [
         "Needle",
         "Dark Sister",
@@ -1164,11 +1164,11 @@
     },
     {
       "question": "Who created the White Walkers?",
-      "correct_answer": "The Children of the Forest",
+      "correct_answer": "Children of the Forest",
       "incorrect_answers": [
-        "The Night King",
-        "The Three-Eyed Raven",
-        "The First Men"
+        "Night King himself",
+        "Three-Eyed Raven",
+        "First Men explorers"
       ],
       "difficulty": "medium"
     },
@@ -1224,11 +1224,11 @@
     },
     {
       "question": "What is a warg?",
-      "correct_answer": "Someone who can enter an animal's mind",
+      "correct_answer": "Animal mind control",
       "incorrect_answers": [
-        "A type of White Walker",
-        "A wildling warrior",
-        "A giant wolf"
+        "White Walker type",
+        "Wildling warrior",
+        "Giant wolf"
       ],
       "difficulty": "medium"
     },
@@ -1287,8 +1287,8 @@
       "correct_answer": "Dracarys",
       "incorrect_answers": [
         "Valar Morghulis",
-        "Dovaog\u0113dy",
-        "Zaldr\u012bzes"
+        "Dovaogēdy",
+        "Zaldrīzes"
       ],
       "difficulty": "medium"
     },
@@ -1734,11 +1734,11 @@
     },
     {
       "question": "What substance is used to cure Jorah Mormont's greyscale?",
-      "correct_answer": "Sam surgically removes the infected skin",
+      "correct_answer": "Skin surgery",
       "incorrect_answers": [
-        "Dragonglass ointment",
+        "Dragonglass salve",
         "Wildfire",
-        "Milk of the poppy"
+        "Milk of poppy"
       ],
       "difficulty": "hard"
     },
@@ -1774,11 +1774,11 @@
     },
     {
       "question": "What is the name of the secret passage beneath the Red Keep?",
-      "correct_answer": "The Dragon Skulls passage",
+      "correct_answer": "Dragon Skulls",
       "incorrect_answers": [
         "The Black Cells",
-        "The Serpent's Walk",
-        "The King's Way"
+        "Serpent's Walk",
+        "King's Way"
       ],
       "difficulty": "hard"
     },
@@ -1814,11 +1814,11 @@
     },
     {
       "question": "What type of creature does Qyburn create from the Mountain?",
-      "correct_answer": "A reanimated corpse (Robert Strong)",
+      "correct_answer": "Reanimated corpse",
       "incorrect_answers": [
         "A wight",
         "A golem",
-        "A shadow creature"
+        "Shadow creature"
       ],
       "difficulty": "hard"
     },
@@ -1864,7 +1864,7 @@
     },
     {
       "question": "What phrase do the Ironborn say during their drowning ritual?",
-      "correct_answer": "What is dead may never die",
+      "correct_answer": "Dead may never die",
       "incorrect_answers": [
         "We do not sow",
         "Ours is the fury",
@@ -1874,11 +1874,11 @@
     },
     {
       "question": "How did Shireen Baratheon contract greyscale?",
-      "correct_answer": "From a contaminated doll",
+      "correct_answer": "Cursed doll",
       "incorrect_answers": [
-        "From a Stone Man",
-        "From her mother",
-        "From dirty water"
+        "Stone Man",
+        "Her mother",
+        "Dirty water"
       ],
       "difficulty": "hard"
     },
@@ -2114,11 +2114,11 @@
     },
     {
       "question": "What is wildfire?",
-      "correct_answer": "A volatile green substance that burns with extreme heat",
+      "correct_answer": "Volatile liquid",
       "incorrect_answers": [
-        "Dragon breath stored in jars",
-        "A type of poison",
-        "Magical lightning"
+        "Dragon breath",
+        "Targaryen poison",
+        "Magic lightning"
       ],
       "difficulty": "medium"
     },
@@ -2174,11 +2174,11 @@
     },
     {
       "question": "What is the Brotherhood Without Banners?",
-      "correct_answer": "An outlaw group led by Beric Dondarrion",
+      "correct_answer": "Beric's outlaws",
       "incorrect_answers": [
-        "The Night's Watch deserters",
-        "A Lannister special force",
-        "A Braavosi mercenary company"
+        "NW deserters",
+        "Lannister squad",
+        "Braavosi mercenaries"
       ],
       "difficulty": "medium"
     },
@@ -2384,7 +2384,7 @@
     },
     {
       "question": "What is Grey Worm's real name?",
-      "correct_answer": "He doesn't remember it",
+      "correct_answer": "Forgotten",
       "incorrect_answers": [
         "Torgo Nudho",
         "Marselen",
@@ -2414,21 +2414,21 @@
     },
     {
       "question": "Who is Missandei?",
-      "correct_answer": "Daenerys's translator and advisor",
+      "correct_answer": "Dany's translator",
       "incorrect_answers": [
         "A Red Priestess",
-        "An Unsullied commander",
-        "A Dothraki bloodrider"
+        "Unsullied commander",
+        "Dothraki bloodrider"
       ],
       "difficulty": "easy"
     },
     {
-      "question": "What happens at Hardhome?",
-      "correct_answer": "The Night King raises the dead after a battle",
+      "question": "What happens at Hardhome in Game of Thrones?",
+      "correct_answer": "Dead rise",
       "incorrect_answers": [
-        "Jon Snow is killed",
-        "Daenerys arrives with dragons",
-        "The Wall falls"
+        "Jon dies",
+        "Dragons arrive",
+        "Wall falls"
       ],
       "difficulty": "medium"
     },
@@ -2454,11 +2454,11 @@
     },
     {
       "question": "What is the Citadel?",
-      "correct_answer": "The headquarters of the Order of Maesters",
+      "correct_answer": "Maesters' headquarters",
       "incorrect_answers": [
-        "The Iron Bank's fortress",
-        "The Faceless Men's temple",
-        "The king's library"
+        "Iron Bank fortress",
+        "Faceless Men temple",
+        "King's library"
       ],
       "difficulty": "medium"
     },
@@ -2484,7 +2484,7 @@
     },
     {
       "question": "Who says 'A Lannister always pays his debts'?",
-      "correct_answer": "Multiple Lannisters \u2014 it's their unofficial motto",
+      "correct_answer": "All Lannisters",
       "incorrect_answers": [
         "Only Tyrion",
         "Only Tywin",
@@ -2554,7 +2554,7 @@
     },
     {
       "question": "What is the name of the wilding who helps Jon Snow?",
-      "correct_answer": "Tormund Giantsbane",
+      "correct_answer": "Tormund",
       "incorrect_answers": [
         "Mance Rayder",
         "Styr",
@@ -2594,39 +2594,39 @@
     },
     {
       "question": "What is the Doom of Valyria?",
-      "correct_answer": "A cataclysmic volcanic event that destroyed Valyria",
+      "correct_answer": "Volcanic cataclysm",
       "incorrect_answers": [
-        "A plague that killed all dragons",
-        "An invasion by White Walkers",
-        "A great flood"
+        "Dragon plague",
+        "Walker invasion",
+        "Great flood"
       ],
       "difficulty": "medium"
     },
     {
       "question": "Who created the Night King?",
-      "correct_answer": "The Children of the Forest",
+      "correct_answer": "Children of Forest",
       "incorrect_answers": [
         "The First Men",
         "The Targaryens",
-        "The Three-Eyed Raven"
+        "Three-Eyed Raven"
       ],
       "difficulty": "medium"
     },
     {
       "question": "What is Daenerys's title in full?",
-      "correct_answer": "Queen of the Andals, the Rhoynar, and the First Men",
+      "correct_answer": "Queen of the Andals",
       "incorrect_answers": [
-        "Queen of the Seven Kingdoms",
-        "Empress of Essos and Westeros",
-        "High Queen of Dragonstone"
+        "Queen of Seven Kingdoms",
+        "Empress of Essos",
+        "Queen of Dragonstone"
       ],
       "difficulty": "hard"
     },
     {
       "question": "Where is Jon Snow's true parentage revealed?",
-      "correct_answer": "The Tower of Joy",
+      "correct_answer": "Tower of Joy",
       "incorrect_answers": [
-        "Winterfell's crypts",
+        "Winterfell crypts",
         "The Citadel",
         "Castle Black"
       ],
@@ -2713,12 +2713,12 @@
       "difficulty": "easy"
     },
     {
-      "question": "What is the Night's Watch oath called?",
-      "correct_answer": "The Oath of the Night's Watch",
+      "question": "The Night's Watch oath begins with 'Night gathers, and now my...?'",
+      "correct_answer": "Watch begins",
       "incorrect_answers": [
-        "The Black Vow",
-        "The Wall's Pledge",
-        "The Oath of the Crow"
+        "Duty calls",
+        "Sword draws",
+        "End comes"
       ],
       "difficulty": "medium"
     },
@@ -2744,10 +2744,10 @@
     },
     {
       "question": "What does Cersei blow up with wildfire?",
-      "correct_answer": "The Great Sept of Baelor",
+      "correct_answer": "Sept of Baelor",
       "incorrect_answers": [
         "The Red Keep",
-        "King's Landing gates",
+        "Landing gates",
         "The Dragonpit"
       ],
       "difficulty": "medium"
@@ -2774,11 +2774,11 @@
     },
     {
       "question": "Who is Maester Aemon related to?",
-      "correct_answer": "The Targaryens \u2014 he is Aemon Targaryen",
+      "correct_answer": "Targaryens",
       "incorrect_answers": [
-        "The Starks",
-        "The Baratheons",
-        "The Lannisters"
+        "Starks",
+        "Baratheons",
+        "Lannisters"
       ],
       "difficulty": "medium"
     },
@@ -2814,21 +2814,21 @@
     },
     {
       "question": "What is Cleganebowl?",
-      "correct_answer": "The fight between The Mountain and The Hound",
+      "correct_answer": "Mountain vs Hound",
       "incorrect_answers": [
-        "A tournament in King's Landing",
-        "A drinking contest",
-        "A trial by combat"
+        "A tournament",
+        "Drinking contest",
+        "Trial by combat"
       ],
       "difficulty": "medium"
     },
     {
       "question": "Where do the Dothraki live?",
-      "correct_answer": "The Dothraki Sea (grass plains of Essos)",
+      "correct_answer": "Dothraki Sea",
       "incorrect_answers": [
-        "The Summer Isles",
+        "Summer Isles",
         "Sothoryos",
-        "The Jade Sea"
+        "Jade Sea"
       ],
       "difficulty": "medium"
     },
