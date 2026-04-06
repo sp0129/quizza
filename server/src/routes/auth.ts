@@ -11,6 +11,17 @@ import {
   sendPasswordResetConfirmation,
 } from '../services/email';
 
+// ─── Google auth helpers ─────────────────────────────────────────────
+
+async function verifyGoogleToken(idToken: string): Promise<{ sub: string; email?: string; name?: string }> {
+  const res = await fetch(`https://oauth2.googleapis.com/tokeninfo?id_token=${encodeURIComponent(idToken)}`);
+  if (!res.ok) throw new Error('Google token verification failed');
+  const payload = await res.json() as { sub: string; email?: string; name?: string; aud?: string };
+  const clientId = process.env.GOOGLE_CLIENT_ID;
+  if (clientId && payload.aud !== clientId) throw new Error('Google token audience mismatch');
+  return payload;
+}
+
 // ─── Apple auth helpers ──────────────────────────────────────────────
 
 async function verifyAppleToken(token: string): Promise<{ sub: string; email?: string }> {
@@ -443,6 +454,50 @@ router.post('/apple', async (req: Request, res: Response): Promise<void> => {
     console.error('Apple auth error:', err);
     if (err.code === '23505') res.status(409).json({ error: 'Account already exists' });
     else res.status(401).json({ error: 'Apple authentication failed' });
+  }
+});
+
+// ── POST /auth/google ────────────────────────────────────────────────
+
+router.post('/google', async (req: Request, res: Response): Promise<void> => {
+  const { idToken } = req.body;
+  if (!idToken) { res.status(400).json({ error: 'idToken required' }); return; }
+  try {
+    const claims = await verifyGoogleToken(idToken);
+    const googleId = claims.sub;
+
+    const existing = await pool.query(
+      `SELECT id, username, email, avatar_id, is_guest FROM users WHERE google_id = $1`,
+      [googleId]
+    );
+    if (existing.rows.length > 0) {
+      const u = existing.rows[0];
+      const token = jwt.sign({ userId: u.id }, process.env.JWT_SECRET!, { expiresIn: '30d' });
+      res.json({ token, user: u });
+      return;
+    }
+
+    const userId = uuidv4();
+    const username = claims.name
+      ? claims.name.replace(/[^a-zA-Z0-9]/g, '').slice(0, 12) + Math.floor(Math.random() * 900 + 100)
+      : generateFunUsername();
+    const userEmail = claims.email ?? `google_${googleId.slice(0, 8)}@google.local`;
+    const avatarId = randomAvatarId();
+
+    const inserted = await pool.query(
+      `INSERT INTO users (id, username, email, password_hash, google_id, is_guest, is_verified, avatar_id)
+       VALUES ($1, $2, $3, $4, $5, FALSE, TRUE, $6)
+       ON CONFLICT (google_id) DO UPDATE SET google_id = EXCLUDED.google_id
+       RETURNING id, username, email, avatar_id, is_guest`,
+      [userId, username, userEmail, uuidv4(), googleId, avatarId]
+    );
+    const newUser = inserted.rows[0];
+    const token = jwt.sign({ userId: newUser.id }, process.env.JWT_SECRET!, { expiresIn: '30d' });
+    res.status(201).json({ token, user: newUser });
+  } catch (err: any) {
+    console.error('Google auth error:', err);
+    if (err.code === '23505') res.status(409).json({ error: 'Account already exists' });
+    else res.status(401).json({ error: 'Google authentication failed' });
   }
 });
 

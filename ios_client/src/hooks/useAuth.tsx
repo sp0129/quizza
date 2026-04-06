@@ -1,8 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
 import * as AppleAuthentication from 'expo-apple-authentication';
+import * as Google from 'expo-auth-session/providers/google';
+import * as WebBrowser from 'expo-web-browser';
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
+
+WebBrowser.maybeCompleteAuthSession();
 import { api, setAuthToken, onAuthExpired } from '../api/client';
 import ErrorOverlay from '../components/ErrorOverlay';
 
@@ -38,6 +42,8 @@ interface AuthContextValue {
   signup: (username: string, email: string, password: string) => Promise<void>;
   loginAsGuest: (username?: string) => Promise<void>;
   loginWithApple: () => Promise<void>;
+  loginWithGoogle: () => Promise<void>;
+  googleRequest: any;
   refreshUser: (updated: Partial<User>) => void;
   logout: () => Promise<void>;
 }
@@ -58,6 +64,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [authExpired, setAuthExpired] = useState(false);
+
+  const [googleRequest, googleResponse, googlePromptAsync] = Google.useIdTokenAuthRequest({
+    androidClientId: '916040002149-p0lrq9p6g5digu7v9hrfhktm9gu2ff2d.apps.googleusercontent.com',
+  });
 
   useEffect(() => {
     (async () => {
@@ -120,6 +130,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await storeAuth(data.token, data.user);
   };
 
+  const loginWithGoogle = async () => {
+    const result = await googlePromptAsync();
+    if (result.type !== 'success') throw new Error('Google sign-in cancelled');
+    const idToken = result.params.id_token;
+    const data = await api.post<{ token: string; user: User }>('/auth/google', { idToken });
+    await storeAuth(data.token, data.user);
+  };
+
   const refreshUser = (updated: Partial<User>) => {
     setUser(prev => {
       if (!prev) return prev;
@@ -140,7 +158,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     <AuthContext.Provider value={{
       user, loading,
       isGuest: user?.is_guest === true,
-      login, signup, loginAsGuest, loginWithApple, refreshUser, logout,
+      login, signup, loginAsGuest, loginWithApple, loginWithGoogle, googleRequest, refreshUser, logout,
     }}>
       {children}
       <ErrorOverlay

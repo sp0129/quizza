@@ -25,7 +25,7 @@ const TAGLINES = [
 ];
 
 export default function LoginScreen({ navigation }: Props) {
-  const { login, loginWithApple, loginAsGuest } = useAuth();
+  const { login, loginWithApple, loginWithGoogle, googleRequest, loginAsGuest } = useAuth();
   const insets = useSafeAreaInsets();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -89,6 +89,19 @@ export default function LoginScreen({ navigation }: Props) {
       onSuccess();
     } catch (err: any) {
       if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogle = async () => {
+    setError('');
+    setLoading(true);
+    try {
+      await loginWithGoogle();
+      onSuccess();
+    } catch (err: any) {
+      if (!err.message?.includes('cancelled')) setError(err.message ?? 'Google sign-in failed');
     } finally {
       setLoading(false);
     }
@@ -176,13 +189,24 @@ export default function LoginScreen({ navigation }: Props) {
               <View style={s.dividerLine} />
             </View>
 
-            <AppleAuthentication.AppleAuthenticationButton
-              buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN}
-              buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
-              cornerRadius={14}
-              style={s.appleBtn}
-              onPress={handleApple}
-            />
+            {Platform.OS === 'ios' ? (
+              <AppleAuthentication.AppleAuthenticationButton
+                buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN}
+                buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
+                cornerRadius={14}
+                style={s.appleBtn}
+                onPress={handleApple}
+              />
+            ) : (
+              <TouchableOpacity
+                style={s.googleBtn}
+                onPress={handleGoogle}
+                disabled={!googleRequest || loading}
+                activeOpacity={0.8}
+              >
+                <Text style={s.googleBtnText}>Sign in with Google</Text>
+              </TouchableOpacity>
+            )}
 
             <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={s.signupLink}>
               <Text style={s.signupText}>
@@ -315,6 +339,21 @@ const s = StyleSheet.create({
     width: '100%',
     height: 52,
     marginBottom: 16,
+  },
+  // Google button
+  googleBtn: {
+    width: '100%',
+    height: 52,
+    backgroundColor: '#fff',
+    borderRadius: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  googleBtnText: {
+    color: '#1F1F1F',
+    fontSize: 17,
+    fontWeight: '600',
   },
 
   // Signup link

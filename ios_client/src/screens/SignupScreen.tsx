@@ -14,7 +14,7 @@ import type { RootStackParamList } from '../../App';
 type Props = NativeStackScreenProps<RootStackParamList, 'Signup'>;
 
 export default function SignupScreen({ navigation }: Props) {
-  const { signup, loginWithApple } = useAuth();
+  const { signup, loginWithApple, loginWithGoogle, googleRequest } = useAuth();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -112,19 +112,36 @@ export default function SignupScreen({ navigation }: Props) {
               <View style={s.dividerLine} />
             </View>
 
-            <AppleAuthentication.AppleAuthenticationButton
-              buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_UP}
-              buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
-              cornerRadius={12}
-              style={s.appleBtn}
-              onPress={async () => {
-                setError('');
-                setLoading(true);
-                try { await loginWithApple(); onAppleSuccess(); }
-                catch (err: any) { if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed'); }
-                finally { setLoading(false); }
-              }}
-            />
+            {Platform.OS === 'ios' ? (
+              <AppleAuthentication.AppleAuthenticationButton
+                buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_UP}
+                buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
+                cornerRadius={12}
+                style={s.appleBtn}
+                onPress={async () => {
+                  setError('');
+                  setLoading(true);
+                  try { await loginWithApple(); onAppleSuccess(); }
+                  catch (err: any) { if (err.code !== 'ERR_REQUEST_CANCELED') setError(err.message ?? 'Apple sign-in failed'); }
+                  finally { setLoading(false); }
+                }}
+              />
+            ) : (
+              <TouchableOpacity
+                style={s.googleBtn}
+                disabled={!googleRequest || loading}
+                activeOpacity={0.8}
+                onPress={async () => {
+                  setError('');
+                  setLoading(true);
+                  try { await loginWithGoogle(); onAppleSuccess(); }
+                  catch (err: any) { if (!err.message?.includes('cancelled')) setError(err.message ?? 'Google sign-in failed'); }
+                  finally { setLoading(false); }
+                }}
+              >
+                <Text style={s.googleBtnText}>Sign up with Google</Text>
+              </TouchableOpacity>
+            )}
 
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={s.link}>
               <Text style={s.linkText}>
@@ -164,6 +181,8 @@ const s = StyleSheet.create({
   dividerLine: { flex: 1, height: 1, backgroundColor: colors.border },
   dividerText: { color: colors.textMuted, fontSize: 13 },
   appleBtn: { width: '100%', height: 50, marginBottom: 4 },
+  googleBtn: { width: '100%', height: 50, backgroundColor: '#fff', borderRadius: 12, alignItems: 'center', justifyContent: 'center', marginBottom: 4 },
+  googleBtnText: { color: '#1F1F1F', fontSize: 16, fontWeight: '600' },
   error: { color: colors.red, fontSize: 14, marginBottom: 12 },
   btn: { borderRadius: 12, padding: 16, alignItems: 'center', marginTop: 4 },
   btnGreen: { backgroundColor: colors.green },

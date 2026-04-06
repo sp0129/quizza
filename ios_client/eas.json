@@ -23,6 +23,10 @@
       "ios": {
         "autoIncrement": true
       },
+      "android": {
+        "buildType": "app-bundle",
+        "autoIncrement": true
+      },
       "env": {
         "EXPO_PUBLIC_API_URL": "https://quizza-production.up.railway.app",
         "EXPO_PUBLIC_WS_URL": "wss://quizza-production.up.railway.app",

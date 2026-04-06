@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685365833892",
+    "project_id": "quizza-23df2",
+    "storage_bucket": "quizza-23df2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685365833892:android:165b61fdbb770639f4f631",
+        "android_client_info": {
+          "package_name": "com.quizza.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjQU5kOJkXTwaJtHTTtiZ-QVKDsvmqAxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

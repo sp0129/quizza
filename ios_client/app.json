@@ -32,13 +32,17 @@
         {
           "sounds": []
         }
-      ]
+      ],
+      "expo-web-browser"
     ],
     "android": {
       "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#0F172A"
       },
-      "package": "com.quizza.app"
+      "package": "com.quizza.app",
+      "versionCode": 1,
+      "googleServicesFile": "./google-services.json"
     },
     "scheme": "quizza",
     "extra": {
